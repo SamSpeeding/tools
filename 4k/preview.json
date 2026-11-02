@@ -1,0 +1,398 @@
+{
+  "_preview": {
+    "schema_version": 1,
+    "sample_only": true,
+    "prepared_at": "2026-09-29T14:51:26+08:00",
+    "source_site": "https://4kbt.org/",
+    "notes": [
+      "结构预览：movies 和 series 各一条；正式同步时分别输出 movies.json 和 series.json。",
+      "影视资料按来源站点整理，未独立核实；评分是来源网页上的快照，不是评分平台的实时结果。",
+      "title 保留网页标题，name 为中文片名，original_name 为原片名；站点标题、标签与资料有矛盾时均保留。",
+      "磁力地址取自对应详情页的公开资源模块，已核对资源名称及 BTIH 格式；未下载影片，也未验证种子活跃度。",
+      "封面 local_path 是拟定保存位置，尚未下载。",
+      "简介为简短改写；null 表示未提供或暂不能确定，空数组表示本次未提取到条目。",
+      "资源参数从资源名称整理，未读取视频文件验证；文件大小保留原始单位，不推算精确字节数。",
+      "sync 字段展示拟定同步结构，当前尚未运行正式同步。"
+    ],
+    "updated_at": "2026-09-29T14:59:27+08:00"
+  },
+  "movies": [
+    {
+      "id": 86406,
+      "type": "movie",
+      "title": "剧情电影《数到三》Keep.the.Beat.2026",
+      "name": "数到三",
+      "original_name": "Keep the Beat",
+      "aliases": [],
+      "original_url": "https://4kbt.org/86406.html",
+      "api_url": "https://4kbt.org/wp-json/wp/v2/posts/86406",
+      "year": 2026,
+      "countries": [
+        "中国大陆"
+      ],
+      "genres": [
+        "剧情",
+        "悬疑"
+      ],
+      "languages": [
+        "汉语普通话"
+      ],
+      "release_dates": [
+        {
+          "date": "2026-08-28",
+          "region": "中国大陆",
+          "raw": "2026-08-28(中国大陆)"
+        }
+      ],
+      "season_number": null,
+      "episode_count": null,
+      "duration_minutes": null,
+      "duration_scope": null,
+      "directors": [
+        "孙琳"
+      ],
+      "writers": [
+        "胡小帅",
+        "九银",
+        "申林",
+        "孙琳"
+      ],
+      "cast": [
+        "惠英红",
+        "张宥浩",
+        "潘斌龙",
+        "李健",
+        "黄子弘凡",
+        "兰西雅",
+        "郭晓婷",
+        "范明",
+        "马羚",
+        "彭杨",
+        "徐百慧",
+        "张磊",
+        "法老",
+        "杨凯程",
+        "高一栋",
+        "陈峥宇",
+        "魏允熙",
+        "萧李臻瑱",
+        "徐滨",
+        "于雷",
+        "药一樍",
+        "耿粲林"
+      ],
+      "synopsis": "一位失去儿子的舞蹈老师与接受儿子心脏移植的男孩相遇，逐渐发现相遇背后隐藏的安排与秘密。",
+      "synopsis_kind": "paraphrase",
+      "external_sources": {
+        "imdb": {
+          "id": "tt32643587",
+          "url": "https://www.imdb.com/title/tt32643587/",
+          "rating": null,
+          "rating_max": 10,
+          "vote_count": null
+        },
+        "douban": {
+          "id": "36931140",
+          "url": "https://movie.douban.com/subject/36931140/",
+          "rating": null,
+          "rating_max": 10,
+          "vote_count": null
+        }
+      },
+      "categories": [
+        {
+          "id": 1,
+          "name": "4K电影",
+          "slug": "movie"
+        }
+      ],
+      "tags": [
+        {
+          "id": 190,
+          "name": "中国大陆",
+          "slug": "%e4%b8%ad%e5%9b%bd%e5%a4%a7%e9%99%86"
+        },
+        {
+          "id": 5,
+          "name": "剧情",
+          "slug": "%e5%89%a7%e6%83%85"
+        },
+        {
+          "id": 6,
+          "name": "悬疑",
+          "slug": "%e6%82%ac%e7%96%91"
+        }
+      ],
+      "cover": {
+        "media_id": 86407,
+        "source_url": "https://4kbt.org/wp-content/uploads/4d65e7784a836d9-e1790512595573.webp",
+        "width": 540,
+        "height": 756,
+        "format": "webp",
+        "alt_text": "",
+        "local_path": "img/movie_86406_数到三.webp",
+        "downloaded": false
+      },
+      "magnet_links": [
+        {
+          "resource_name": "4K [高码版][国语配音/中文字幕].Keep.the.Beat.2026.2160p.HQ.WEB-DL.H265.DTS5.1-DreamHD 15.25GB",
+          "url": "magnet:?xt=urn:btih:4d6431ff35605e10ca4f4169b05c93ce8c030226",
+          "size_text": "15.25GB",
+          "size_bytes": null,
+          "video": {
+            "resolution": "2160p",
+            "source": "WEB-DL",
+            "codec": "H.265",
+            "dynamic_range_label": null,
+            "quality_labels": [
+              "高码版",
+              "HQ"
+            ]
+          },
+          "audio": [
+            {
+              "codec": "DTS",
+              "channels": "5.1",
+              "language_label": "国语配音",
+              "atmos": null
+            }
+          ],
+          "subtitle_labels": [
+            "中文字幕"
+          ],
+          "release_group": "DreamHD"
+        },
+        {
+          "resource_name": "4KHDR [国语配音/中文字幕].Keep.the.Beat.2026.2160p.WEB-DL.H.265.HDR.AAC2.0-PandaQT 9.31GB",
+          "url": "magnet:?xt=urn:btih:4b349c57314ca3567d015dc96c74dd541752f7d0",
+          "size_text": "9.31GB",
+          "size_bytes": null,
+          "video": {
+            "resolution": "2160p",
+            "source": "WEB-DL",
+            "codec": "H.265",
+            "dynamic_range_label": "HDR",
+            "quality_labels": []
+          },
+          "audio": [
+            {
+              "codec": "AAC",
+              "channels": "2.0",
+              "language_label": "国语配音",
+              "atmos": null
+            }
+          ],
+          "subtitle_labels": [
+            "中文字幕"
+          ],
+          "release_group": "PandaQT"
+        },
+        {
+          "resource_name": "4K [国语配音/中文字幕].Keep.the.Beat.2026.2160p.WEB-DL.H.265.EDR.AAC2.0-PandaQT 2.71GB",
+          "url": "magnet:?xt=urn:btih:1cb77421ab671906fbb6b135978ac0b57ade9bac",
+          "size_text": "2.71GB",
+          "size_bytes": null,
+          "video": {
+            "resolution": "2160p",
+            "source": "WEB-DL",
+            "codec": "H.265",
+            "dynamic_range_label": "EDR",
+            "quality_labels": []
+          },
+          "audio": [
+            {
+              "codec": "AAC",
+              "channels": "2.0",
+              "language_label": "国语配音",
+              "atmos": null
+            }
+          ],
+          "subtitle_labels": [
+            "中文字幕"
+          ],
+          "release_group": "PandaQT"
+        }
+      ],
+      "published_at": "2026-09-27T20:39:11+08:00",
+      "source_modified_at": "2026-09-27T20:39:11+08:00",
+      "sync": {
+        "status": "preview_only",
+        "first_seen_at": null,
+        "last_seen_at": null,
+        "last_fetched_at": null,
+        "remote_missing_since": null
+      },
+      "source_notes": []
+    }
+  ],
+  "series": [
+    {
+      "id": 59600,
+      "type": "series",
+      "title": "英剧《超人和露易丝 第一季》 Superman & Lois Season 1 (2021)",
+      "name": "超人和露易丝 第一季",
+      "original_name": "Superman & Lois Season 1",
+      "aliases": [
+        "Superman and Lois",
+        "超人与露易丝",
+        "超人和露易斯"
+      ],
+      "original_url": "https://4kbt.org/59600.html",
+      "api_url": "https://4kbt.org/wp-json/wp/v2/posts/59600",
+      "year": 2021,
+      "countries": [
+        "美国"
+      ],
+      "genres": [
+        "剧情",
+        "动作",
+        "科幻",
+        "冒险"
+      ],
+      "languages": [
+        "英语"
+      ],
+      "release_dates": [
+        {
+          "date": "2021-02-23",
+          "region": "美国",
+          "raw": "2021-02-23(美国)"
+        }
+      ],
+      "season_number": 1,
+      "episode_count": 15,
+      "duration_minutes": 45,
+      "duration_scope": "episode",
+      "directors": [
+        "詹姆斯·班福德 James Bamford",
+        "李·托兰·克里格 Lee Toland Krieger"
+      ],
+      "writers": [
+        "托德·赫布林 Todd Helbing",
+        "格里格·伯兰蒂 Greg Berlanti",
+        "乔·舒斯特 Joe Shuster",
+        "杰里·西格尔 Jerry Siegel"
+      ],
+      "cast": [
+        "泰勒·霍奇林 Tyler Hoechlin",
+        "比茜·图诺克 Bitsie Tulloch",
+        "亚历山大·加芬 Alexander Garfin",
+        "乔丹·阿尔萨斯 Jordan Elsass",
+        "亚当·雷纳 Adam Rayner",
+        "艾瑞克·瓦德兹 Erik Valdez",
+        "斯黛西 法波 Stacey Farber",
+        "沃尔·帕克斯 Wolé Parks",
+        "迪伦·沃尔什 Dylan Walsh",
+        "埃曼纽尔·施莱琪 Emmanuelle Chriqui",
+        "Inde Navarrette"
+      ],
+      "synopsis": "超人与露易丝在应对超级英雄危机的同时，面对婚姻与养育孩子的家庭挑战。",
+      "synopsis_kind": "paraphrase",
+      "external_sources": {
+        "imdb": {
+          "id": "tt11192306",
+          "url": "https://www.imdb.com/title/tt11192306/",
+          "rating": 7.9,
+          "rating_max": 10,
+          "vote_count": 25389
+        },
+        "douban": {
+          "id": "34881451",
+          "url": "https://movie.douban.com/subject/34881451/",
+          "rating": 8.0,
+          "rating_max": 10,
+          "vote_count": 3974
+        }
+      },
+      "categories": [
+        {
+          "id": 3,
+          "name": "4K剧集",
+          "slug": "episodes"
+        }
+      ],
+      "tags": [
+        {
+          "id": 11,
+          "name": "冒险",
+          "slug": "%e5%86%92%e9%99%a9"
+        },
+        {
+          "id": 5,
+          "name": "剧情",
+          "slug": "%e5%89%a7%e6%83%85"
+        },
+        {
+          "id": 13,
+          "name": "动作",
+          "slug": "%e5%8a%a8%e4%bd%9c"
+        },
+        {
+          "id": 20,
+          "name": "家庭",
+          "slug": "%e5%ae%b6%e5%ba%ad"
+        },
+        {
+          "id": 30,
+          "name": "科幻",
+          "slug": "%e7%a7%91%e5%b9%bb"
+        },
+        {
+          "id": 167,
+          "name": "英剧",
+          "slug": "%e8%8b%b1%e5%89%a7"
+        }
+      ],
+      "cover": {
+        "media_id": 59602,
+        "source_url": "https://4kbt.org/wp-content/uploads/imwprobot-3370c556e772b29e25e4e157fc2fb0d5.webp",
+        "width": 540,
+        "height": 675,
+        "format": "webp",
+        "alt_text": "",
+        "local_path": "img/series_59600_超人和露易丝_第一季.webp",
+        "downloaded": false
+      },
+      "magnet_links": [
+        {
+          "resource_name": "Superman.And.Lois.S01.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1【108.93 GB】",
+          "url": "magnet:?xt=urn:btih:411d56ee62e29569c15c5474247affad4949f858",
+          "size_text": "108.93 GB",
+          "size_bytes": null,
+          "video": {
+            "resolution": "1080p",
+            "source": "BluRay",
+            "codec": "AVC",
+            "dynamic_range_label": null,
+            "quality_labels": [
+              "REMUX"
+            ]
+          },
+          "audio": [
+            {
+              "codec": "DTS-HD MA",
+              "channels": "5.1",
+              "language_label": null,
+              "atmos": null
+            }
+          ],
+          "subtitle_labels": [],
+          "release_group": null
+        }
+      ],
+      "published_at": "2026-09-27T11:50:53+08:00",
+      "source_modified_at": "2026-09-27T11:51:06+08:00",
+      "sync": {
+        "status": "preview_only",
+        "first_seen_at": null,
+        "last_seen_at": null,
+        "last_fetched_at": null,
+        "remote_missing_since": null
+      },
+      "source_notes": [
+        "来源标题和标签写作英剧，但详情产地写作美国；此处分别保留。",
+        "所属分类名为4K剧集，但本页资源名称明确标注1080p。"
+      ]
+    }
+  ]
+}
