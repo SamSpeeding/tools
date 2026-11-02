@@ -1,0 +1,57 @@
+<?php
+declare(strict_types=1);
+
+// Hardcoded settings, included in version control for this private repository.
+return [
+    'access_password' => 'd3a7e7389f5c008001a7564e958715b3',
+    'rule_update_interval' => 86400,
+    'direct_domains' => [],
+    'proxy_domains' => [],
+    'reject_domains' => [],
+    'nodes' => [
+        [
+            'title' => 'Fast2-Reality',
+            'type' => 'VLESS',
+            'host' => 'fast2.autocap.cc',
+            'port' => '443',
+            'tls' => true,
+            'tlsProfile' => 'chrome',
+            'xtls' => 2,
+            'peer' => 'www.samsung.com',
+            'password' => '949f41ea-6d03-4103-bd53-8e0c5810012e',
+            'publicKey' => 'GiRyWgh8QJawohvtS9OV6fzX0wCG112VxEc3cnaRbQ0',
+            'shortId' => '93c3d0f750f2401f',
+        ],
+        [
+            'title' => 'Fast2-Hysteria2',
+            'type' => 'Hysteria2',
+            'host' => 'fast2.autocap.cc',
+            'port' => '443',
+            'peer' => 'fast2.autocap.cc',
+            'password' => '00e3d4ae72dfa7ca2316c2ff8c4bbacc',
+            'obfs' => 'none',
+        ],
+        [
+            'title' => 'SG-Reality',
+            'type' => 'VLESS',
+            'host' => 'fast.autocap.cc',
+            'port' => '443',
+            'tls' => true,
+            'tlsProfile' => 'chrome',
+            'xtls' => 2,
+            'peer' => 'www.cloudflare.com',
+            'password' => 'e01ac93f-6a35-41b6-afdc-45834ff13dbd',
+            'publicKey' => '-GkJm5R2Yni6_nujUzAVcjkYiUvJtGKfI-uVddt61E8',
+            'shortId' => '567d56a27fb11e25',
+        ],
+        [
+            'title' => 'SG-Hysteria2',
+            'type' => 'Hysteria2',
+            'host' => 'fast.autocap.cc',
+            'port' => '443',
+            'peer' => 'fast.autocap.cc',
+            'password' => '764a49ec56fa8a9a8b16b5dc959f6981c2358a31290d2882',
+            'obfs' => 'none',
+        ],
+    ],
+];
