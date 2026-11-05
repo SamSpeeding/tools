@@ -1,86 +1,167 @@
-# mihomo 订阅服务
+# mihomo 全量订阅服务
 
-PHP 8.1+，无需数据库、Composer 或额外 PHP 扩展。一个带密码的 GET 接口生成 mihomo 配置，可返回 YAML 或 JSON。
+PHP 8.1+，一个带密码的 GET 接口返回完整的 mihomo YAML 或 JSON 配置，包含节点、策略组、DNS、个人配置和 **8 组社区规则正文**。路由器获取这份配置后，无需再向 GitHub 下载规则文件。
 
-## 已配置的内容
+社区规则来自 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 和 [anti-AD](https://github.com/privacy-protection-tools/anti-AD)。PHP 服务端负责下载、校验和缓存，然后生成 `type: inline` 的 `rule-providers`。无需数据库、Composer、YAML 或 Zstandard 扩展。
 
-- 本机 `config.php` 已写入 4 个节点：Fast2-Reality、Fast2-Hysteria2、SG-Reality、SG-Hysteria2，以及随机生成的固定访问密码。
-- 主配置包含节点、策略组、个人规则、DNS 和社区规则集引用。
-- 分流规则来自 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)，广告规则来自 [anti-AD](https://github.com/privacy-protection-tools/anti-AD)。使用 MRS 格式，建议使用当前稳定版 mihomo。
-- PHP 每次 GET 根据本地配置生成订阅。**这一版不在 PHP 服务器上抓取、合并或镜像规则正文**；mihomo 根据返回的 `rule-providers` 自行下载规则，默认每 24 小时更新。支持通过配置的代理下载，PHP 主机无需访问 GitHub。
-- `format=json` 返回同一份 mihomo 配置结构；没有额外的 `data` 包装，不包含接口访问密码。它仍然引用远程规则文件。
+## 文件职责
 
-## 本地启动
+| 文件 | 用途 |
+| --- | --- |
+| `public/index.php` | 唯一 HTTP 入口，校验访问密码并输出订阅 |
+| `config.php` | 访问密码、4 个节点和服务端缓存设置 |
+| `custom.php` | 日常编辑的个人域名、额外规则、hosts 和配置覆盖 |
+| `config.example.php` | 不含真实凭证的配置示例 |
+| `src/subscription.php` | 节点转换、自定义配置合并、JSON/YAML 输出 |
+| `src/rules.php` | 固定社区来源、下载校验、完整快照缓存 |
+| `bin/refresh-rules.php` | CLI 预热或强制刷新社区规则缓存 |
+| `.cache/` | 自动生成的公共规则缓存，不含节点或订阅密码，已忽略 Git 提交 |
+
+## 部署与访问
+
+1. 上传整个目录，保留自己的 `config.php` 和 `custom.php`。网站文档根目录应指向 **`public/`**，或者将现有网站的对应路径映射到该目录。
+2. PHP 运行用户需要可读配置、可读写 `.cache/`；缓存目录放在 `public/` 外。CLI 预热和 Web PHP 最好使用同一系统用户，避免新缓存无法被另一方读取。
+3. PHP 服务器需要能通过 HTTPS 访问 `raw.githubusercontent.com`。支持 PHP cURL；没有 cURL 时使用 OpenSSL HTTPS streams，需要开启 `allow_url_fopen`。启用网站 HTTPS。
+4. 建议首次部署时先预热缓存，避免第一次 HTTP 请求等待全部下载：
+
+```bash
+php /你的部署目录/mihomo-subscription/bin/refresh-rules.php
+```
+
+CLI 强制刷新最多等待 180 秒；输出各规则集条数和更新时间，不输出节点凭证。更新失败返回非零退出码，同时保留原有完整缓存。
+
+部署路径和密码不变时，原订阅地址继续使用：
+
+```text
+https://你的域名/miwifi/public/index.php?password=你的访问密码
+https://你的域名/miwifi/public/index.php?password=你的访问密码&format=json
+```
+
+默认输出 YAML；`format=json` 输出相同的原生 mihomo 对象，没有 `data` 包装。二者均包含规则正文，不包含订阅访问密码。也支持 `Authorization: Bearer 你的访问密码`，请求头优先于查询参数。只接受带正确密码的 GET / HEAD，响应为 `Cache-Control: private, no-store`。
+
+现有 `config.php` 按本私有仓库的使用方式允许提交；从零部署时复制 `config.example.php` 并填写密码、节点即可。访问密码独立于节点密码。
+
+**如果 PHP 服务器也无法访问 GitHub**，需要先解决服务器的上游连通性；也可以在能访问 GitHub 的电脑运行刷新脚本，再上传 `.cache/rules-v1.json` 并设置读取权限。后者只是提供初始快照，后续更新仍需在能访问上游的环境执行。
+
+本地验证：
 
 ```bash
 cd /Users/tt/tools/mihomo-subscription
+php bin/refresh-rules.php
 php -S 127.0.0.1:8787 -t public
 ```
 
-查看 `config.php` 第 6 行的 `access_password`，将其替换到以下地址：
+访问 `http://127.0.0.1:8787/index.php?password=你的访问密码`。路由器应使用部署后的 HTTPS 地址。
 
-```text
-http://127.0.0.1:8787/index.php?password=你的访问密码
-http://127.0.0.1:8787/index.php?password=你的访问密码&format=json
+## 自定义配置
+
+日常只编辑 `custom.php`。文件返回 PHP 数组，例如：
+
+```php
+<?php
+return [
+    'direct_domains' => [
+        'tools.sangonsek.com', // 订阅域名直连
+        'example.cn',
+    ],
+    'proxy_domains' => ['example.com'],
+    'reject_domains' => ['ads.example.com'],
+    'rules' => [
+        'IP-CIDR,203.0.113.7/32,PROXY,no-resolve',
+    ],
+    'hosts' => [
+        'nas.home.arpa' => '192.168.31.100',
+    ],
+    'overrides' => [
+        'log-level' => 'warning',
+        'dns' => [
+            'nameserver-policy' => [
+                '+.internal.example.com' => ['192.168.31.1'],
+            ],
+        ],
+    ],
+];
 ```
 
-订阅客户端使用第一个地址。接口也支持 `Authorization: Bearer 你的访问密码`，便于支持请求头的客户端避免把密码放进 URL。密码有特殊字符时，查询参数须做 URL 编码。
+除实际订阅域名外，仓库里的示例均已注释，不会自动启用。
 
-`127.0.0.1` 只供本机验证。路由器订阅时使用部署后的 HTTPS 地址。
+- `direct_domains`、`proxy_domains`、`reject_domains`：分别强制直连、走代理、屏蔽。填写域名后缀，包含其子域名；不要填写 URL、端口或通配符。这些列表追加到 `config.php` 的原有例外之后。
+- `rules`：额外的原生 mihomo 规则，按填写顺序放在个人域名规则之后、社区规则之前。目标可用 `DIRECT`、`REJECT`、`PROXY`、`GOOGLE`、`YOUTUBE` 等已存在的策略组。不要随意添加 `MATCH`，否则后续社区规则不再匹配。PHP 检查基本格式，完整语义由 mihomo 校验。
+- `hosts`：DNS 映射；仅设置映射不等于选择直连或代理，按需同时添加域名规则。
+- `overrides`：原生 mihomo 设置，键值映射递归合并，列表整体替换，标量覆盖。可用于 DNS、日志级别等。禁止覆盖 `proxies`、`proxy-groups`、`rule-providers`、`rules`、`hosts`，以免丢失生成的节点或内嵌规则；节点继续在 `config.php` 中维护，规则和 hosts 使用专用字段。
 
-## 部署
+自定义内容每次请求重新读取，不受社区规则缓存有效期影响。修改后，路由器需要**重新下载并加载整份订阅**才生效。自定义文件缺失时使用默认配置；未知字段或明显格式错误返回 HTTP 500，不静默忽略。先运行 `php -l custom.php` 检查 PHP 语法，再校验生成的 mihomo 配置。
 
-1. 上传整个 `mihomo-subscription` 目录，网站文档根目录指向它的 **`public/` 子目录**；入口是 `index.php`。
-2. 随代码上传 `config.php`。此文件包含写死的访问密码和节点信息，按本私有仓库的使用方式允许纳入 Git 版本管理；提交后可随代码一起拉取部署。没有现成配置时，把 `config.example.php` 复制成 `config.php` 并修改。
-3. 确保 PHP 运行用户可读 `config.php`，网站启用 HTTPS。只有带正确密码的 GET / HEAD 会返回配置。
-4. 订阅 URL 为 `https://你的域名/index.php?password=你的访问密码`。若网站已有其他服务，可为本服务配置独立域名或将对应路径映射到 `public/`。
+## 分流顺序
 
-访问密码独立于各节点的认证密码，修改 `access_password` 只影响订阅获取。服务不需要可写缓存目录；响应使用 `Cache-Control: private, no-store`。用 URL 密码时，可在 Web 服务器访问日志中省略查询参数。
+1. 私有域名、私有 IP 直连。
+2. 个人直连、代理、屏蔽域名依次匹配；不要把同一域名放进多个列表。
+3. `custom.php` 的额外 `rules`。
+4. anti-AD 命中项交给 `ADS`，默认拦截；面板选择 `DIRECT` 可临时关闭这部分广告拦截。
+5. YouTube、Google、其他海外域名走代理。
+6. 国内域名、国内 IP 直连。
+7. 其他请求交给 `FINAL`，默认走代理，可切换为直连。
 
-## 分流与节点选择
+个人例外优先于社区广告、分流规则，但私有网络直连规则仍在最前。`PROXY` 默认选择 `AUTO`；AUTO 每 300 秒探测节点并按延迟选择，实际网站带宽需另测。规则过滤无法保证去掉与正常内容共用域名的视频广告。
 
-规则顺序如下：
+## 社区来源与缓存
 
-1. 私有域名和私有 IP 直连。
-2. `direct_domains`、`proxy_domains`、`reject_domains` 中的个人域名后缀例外，依次匹配。
-3. anti-AD 命中项交给 `ADS`，默认拦截；面板中选 `DIRECT` 可临时关闭广告拦截。
-4. YouTube、Google 和其他海外域名规则走代理。
-5. 国内域名、国内 IP 直连。
-6. 其他请求交给 `FINAL`，默认走代理，也可切换到直连。
+MetaCubeX 使用以下文本列表，基础地址为：
 
-`PROXY` 默认选择 `AUTO`。AUTO 每 300 秒对节点做探测，按探测延迟选择线路；也可在 PROXY、GOOGLE、YOUTUBE 中手动指定节点。探测延迟不是实际网站带宽。规则过滤无法保证去掉与正常内容共用域名的视频广告。
+```text
+https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/
+```
 
-需要固定直连的域名写入 `direct_domains`，例如 `example.com`；这也会放行其子域名。不要填写 URL、端口或逗号。遇到广告误拦时可在这里添加例外。避免在多个个人列表中重复配置同一域名。
+| 规则集 | 路径 |
+| --- | --- |
+| private-domain | geosite/private.list |
+| private-ip | geoip/private.list |
+| cn-domain | geosite/cn.list |
+| cn-ip | geoip/cn.list |
+| google | geosite/google.list |
+| youtube | geosite/youtube.list |
+| overseas | geosite/geolocation-!cn.list |
+
+广告列表来自 [anti-ad-clash.yaml](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml)。源地址固定在服务端，不接受请求参数指定下载地址。保留精确域名、`+.` 后缀和 IPv4/IPv6 CIDR 的原始匹配语义。
+
+- 缓存默认有效 24 小时，通过 `rule_update_interval` 调整。
+- 缓存过期后由一次请求刷新；HTTP 刷新总预算默认 25 秒，单次下载上限 15 秒，可在 `config.php` 调整。单个源限制 16 MiB。
+- 所有 8 组规则下载、解析和校验成功才原子替换缓存；空数据、HTML 错误页、无效条目或部分失败都不会覆盖旧快照。
+- 更新失败或其他请求正在更新时，继续输出上次完整规则；失败后 5 分钟内不重复触发普通刷新。CLI 强制刷新不受此退避限制。
+- 没有有效完整缓存且无法成功下载时返回 HTTP 503，不返回缺失规则的配置。
+- 响应头 `X-Rules-Updated-At` 表示快照更新时间；`X-Rules-Cache: fresh` / `stale` 表示是否过期。
+
+## 定时更新与路由器接入
+
+**改成内嵌规则后，路由器必须定期更新整份订阅，规则才会更新。** 建议 PHP 服务器每天定时执行 `bin/refresh-rules.php`，ShellCrash 或路由器脚本随后下载并重载订阅。响应头 `profile-update-interval: 24` 只是给兼容客户端的提示，不会自动给 mihomo 核心安排定时任务。
+
+更新流程应为：下载到临时文件 → 确认 HTTP 成功 → 用 mihomo `-t` 校验 → 替换并重载。下载或校验失败保留路由器上一次有效配置。
+
+本服务仍输出基础配置：代理监听 `127.0.0.1:7890`、DNS 监听 `127.0.0.1:1053`。BE7000 的防火墙、TUN、LAN DNS 劫持和开机服务由 ShellCrash 等设备管理工具按运行模式配置；`ipv6: false` 不等于关闭整个路由器或终端的 IPv6。
 
 ## 节点转换
 
-`nodes` 使用用户提供的导出字段格式；只转换所需字段：
+4 个现有节点及转换规则保持不变：
 
-- VLESS 的 `password` → mihomo 的 `uuid`；导出中的顶层 `uuid` 是客户端记录 ID，不作为认证值。
+- VLESS 的导出字段 `password` → mihomo `uuid`；导出顶层 `uuid` 是客户端记录 ID。
 - `xtls: 2` → `flow: xtls-rprx-vision`，`xtls: 0` 不设置 flow。
-- `peer` → VLESS 的 `servername` / Hysteria2 的 `sni`。
+- `peer` → VLESS `servername` / Hysteria2 `sni`。
 - `publicKey`、`shortId` → `reality-opts`；`tlsProfile` → `client-fingerprint`。
-- Hysteria2 的 `password` 原样使用；`obfs: none` 不生成混淆字段。
-- `created`、`updated`、`ping`、客户端记录 ID 等元数据不进入配置。
+- Hysteria2 密码原样使用；`obfs: none` 不生成混淆字段。保留 TLS 证书验证。
+- 时间、延迟等客户端记录元数据不进入最终配置。
 
-目前转换器支持 VLESS Reality TCP 和无混淆 Hysteria2，不能直接导入其他协议或传输方式。保留证书验证，不跳过 TLS 校验。
-
-## 更新与路由器接入
-
-社区规则的 24 小时更新由 mihomo 核心负责。更改本服务的节点、个人例外或分流结构，需要客户端重新获取**整份订阅并加载**；配置客户端的定时订阅更新，或由路由器管理工具执行下载、校验、替换和加载。响应头 `profile-update-interval: 24` 只是给兼容客户端的提示，不会自动替 mihomo 核心安排主配置更新。
-
-本服务输出可由 mihomo 读取的基础配置，默认本机代理端口为 `127.0.0.1:7890`、DNS 为 `127.0.0.1:1053`。**它不直接配置 BE7000 的防火墙、TUN、LAN DNS 劫持或开机服务**；这些交给 ShellCrash 等设备管理工具，并按设备情况调整入站及 DNS 设置。配置中的 `ipv6: false` 也不等于关闭路由器或终端的 IPv6。
-
-更新时应保留上一次有效主配置；下载或校验失败不覆盖旧文件。
+仅支持现有 VLESS Reality TCP 和无混淆 Hysteria2，其他协议需要扩展转换器。
 
 ## 验证
 
 ```bash
 php tests/run.php
 php -l public/index.php
-php -l src/subscription.php
+php -l custom.php
+php bin/refresh-rules.php
+mihomo -t -f 生成的配置.yaml -d 临时工作目录
 ```
 
-测试使用假节点，不访问真实代理。可另用 mihomo 的 `-t -f 配置文件路径 -d 工作目录` 检查生成文件；配置解析成功不代表节点已连通或路由器已经接管流量。
+自动测试使用假节点和上游样本，覆盖个人配置合并、认证、完整缓存、部分失败、并发刷新、失败退避和冷启动错误。刷新脚本会访问真实公共规则源；配置解析成功不代表真实节点已经连通或路由器已经接管流量。
 
-参考：[mihomo VLESS](https://wiki.metacubex.one/config/proxies/vless/)、[Hysteria2](https://wiki.metacubex.one/config/proxies/hysteria2/)、[规则集合](https://wiki.metacubex.one/config/rule-providers/)、[DNS](https://wiki.metacubex.one/config/dns/)。
+参考：[mihomo 内嵌规则集合](https://wiki.metacubex.one/config/rule-providers/)、[规则顺序](https://wiki.metacubex.one/config/rules/)、[hosts](https://wiki.metacubex.one/config/dns/hosts/)、[DNS](https://wiki.metacubex.one/config/dns/)。

@@ -1,8 +1,10 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/rules.php';
+
 /** HTTP handling is independent of config loading, so tests never need real secrets. */
-function subscriptionResponse(array $settings, array $server, array $query): array
+function subscriptionResponse(array $settings, array $server, array $query, ?callable $ruleLoader = null): array
 {
     $method = $server['REQUEST_METHOD'] ?? 'GET';
     if (!in_array($method, ['GET', 'HEAD'], true)) {
@@ -31,10 +33,15 @@ function subscriptionResponse(array $settings, array $server, array $query): arr
     }
 
     try {
-        $config = buildMihomoConfig($settings);
+        $snapshot = ($ruleLoader ?? 'loadCommunityRules')($settings);
+        $config = buildMihomoConfig($settings, $snapshot['payloads']);
         $body = $format === 'json'
             ? json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . "\n"
-            : "# Generated mihomo subscription. Community rules update independently.\n" . encodeYaml($config);
+            : "# Generated mihomo subscription. All community rules are embedded.\n" . encodeYaml($config);
+    } catch (RuleSourceUnavailable $error) {
+        $response = subscriptionError(503, 'Community rules unavailable. Warm the server cache and retry.');
+        $response['headers']['Retry-After'] = '300';
+        return $response;
     } catch (Throwable $error) {
         // Do not echo node values, exception messages or the request URL into logs.
         error_log('mihomo-subscription: invalid subscription settings');
@@ -46,8 +53,10 @@ function subscriptionResponse(array $settings, array $server, array $query): arr
         'headers' => subscriptionHeaders() + [
             'Content-Type' => $format === 'json' ? 'application/json; charset=utf-8' : 'application/yaml; charset=utf-8',
             'Content-Disposition' => 'inline; filename="mihomo.' . $format . '"',
-            // Client hint in hours; core rule providers use interval in seconds.
+            // Client hint in hours; inline rules update when the whole config is reloaded.
             'profile-update-interval' => '24',
+            'X-Rules-Updated-At' => gmdate('Y-m-d\TH:i:s\Z', $snapshot['updated_at']),
+            'X-Rules-Cache' => $snapshot['stale'] ? 'stale' : 'fresh',
         ],
         'body' => $body,
     ];
@@ -134,8 +143,9 @@ function convertNode(array $node): array
     return $result;
 }
 
-function buildMihomoConfig(array $settings): array
+function buildMihomoConfig(array $settings, ?array $payloads = null): array
 {
+    $settings = applyCustomSettings($settings);
     $nodes = $settings['nodes'] ?? [];
     if (!is_array($nodes) || $nodes === []) {
         throw new InvalidArgumentException('At least one node is required.');
@@ -150,23 +160,13 @@ function buildMihomoConfig(array $settings): array
     if (!is_int($interval) || $interval < 60) {
         throw new InvalidArgumentException('Rule interval must be at least 60 seconds.');
     }
-    $base = 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/';
-    $sources = [
-        'private-domain' => ['domain', $base . 'geosite/private.mrs'],
-        'private-ip' => ['ipcidr', $base . 'geoip/private.mrs'],
-        'cn-domain' => ['domain', $base . 'geosite/cn.mrs'],
-        'cn-ip' => ['ipcidr', $base . 'geoip/cn.mrs'],
-        'google' => ['domain', $base . 'geosite/google.mrs'],
-        'youtube' => ['domain', $base . 'geosite/youtube.mrs'],
-        'overseas' => ['domain', $base . 'geosite/geolocation-!cn.mrs'],
-        'ads' => ['domain', 'https://anti-ad.net/mihomo.mrs'],
-    ];
+    $payloads ??= loadCommunityRules($settings)['payloads'];
+    validateCommunityPayloads($payloads);
     $providers = [];
-    foreach ($sources as $name => [$behavior, $url]) {
+    foreach (communityRuleSources() as $name => $source) {
         $providers[$name] = [
-            'type' => 'http', 'behavior' => $behavior, 'format' => 'mrs',
-            'url' => $url, 'path' => './rules/' . $name . '.mrs',
-            'interval' => $interval, 'proxy' => 'PROXY',
+            'type' => 'inline', 'behavior' => $source['behavior'],
+            'payload' => $payloads[$name],
         ];
     }
 
@@ -182,6 +182,9 @@ function buildMihomoConfig(array $settings): array
             }
             $rules[] = 'DOMAIN-SUFFIX,' . strtolower($domain) . ',' . $target;
         }
+    }
+    foreach ($settings['custom']['rules'] ?? [] as $rule) {
+        $rules[] = $rule;
     }
     array_push($rules,
         'RULE-SET,ads,ADS',
@@ -206,7 +209,7 @@ function buildMihomoConfig(array $settings): array
         $dnsPolicy[$node['server']] = $domesticDns;
     }
 
-    return [
+    $config = [
         'mixed-port' => 7890,
         'allow-lan' => false,
         'bind-address' => '127.0.0.1',
@@ -241,6 +244,72 @@ function buildMihomoConfig(array $settings): array
         'rule-providers' => $providers,
         'rules' => $rules,
     ];
+    if (($settings['custom']['hosts'] ?? []) !== []) {
+        $config['hosts'] = $settings['custom']['hosts'];
+    }
+    return mergeMihomoOverrides($config, $settings['custom']['overrides'] ?? []);
+}
+
+/** Personal edits live separately from credentials and generated community data. */
+function applyCustomSettings(array $settings): array
+{
+    $custom = $settings['custom'] ?? [];
+    $allowed = ['direct_domains', 'proxy_domains', 'reject_domains', 'rules', 'hosts', 'overrides'];
+    if (!is_array($custom) || array_diff(array_keys($custom), $allowed)) {
+        throw new InvalidArgumentException('Unknown custom configuration field.');
+    }
+    foreach ($custom as $value) {
+        if (!is_array($value)) {
+            throw new InvalidArgumentException('Custom configuration fields must be arrays.');
+        }
+    }
+    foreach (['direct_domains', 'proxy_domains', 'reject_domains'] as $key) {
+        $base = $settings[$key] ?? [];
+        $extra = $custom[$key] ?? [];
+        if (!is_array($base) || !array_is_list($base) || !array_is_list($extra)) {
+            throw new InvalidArgumentException('Custom domains must be lists.');
+        }
+        $settings[$key] = array_merge($base, $extra);
+    }
+    if (!array_is_list($custom['rules'] ?? [])) {
+        throw new InvalidArgumentException('Custom rules must be a list.');
+    }
+    foreach ($custom['rules'] ?? [] as $rule) {
+        if (!is_string($rule) || $rule === '' || preg_match('/[\x00-\x1f]/', $rule) || !str_contains($rule, ',')) {
+            throw new InvalidArgumentException('Custom rules must use single-line mihomo rule syntax.');
+        }
+    }
+    foreach ($custom['hosts'] ?? [] as $host => $value) {
+        if (!is_string($host) || $host === '' || (!is_string($value) && !is_array($value))) {
+            throw new InvalidArgumentException('Invalid custom host mapping.');
+        }
+        if (is_array($value) && (!array_is_list($value) || $value === [] || count(array_filter($value, 'is_string')) !== count($value))) {
+            throw new InvalidArgumentException('Host address lists must contain strings.');
+        }
+    }
+    $overrides = $custom['overrides'] ?? [];
+    if (($overrides !== [] && array_is_list($overrides))
+        || array_intersect(array_keys($overrides), ['proxies', 'proxy-groups', 'rule-providers', 'rules', 'hosts'])) {
+        throw new InvalidArgumentException('Use the dedicated fields for nodes, rules and hosts.');
+    }
+    return $settings;
+}
+
+/** Maps merge recursively; lists and scalar values replace the existing value. */
+function mergeMihomoOverrides(array $base, array $overrides): array
+{
+    foreach ($overrides as $key => $value) {
+        if (!is_string($key) || $key === '') {
+            throw new InvalidArgumentException('Override map keys must be nonempty strings.');
+        }
+        if (is_array($value) && $value !== [] && !array_is_list($value)
+            && isset($base[$key]) && is_array($base[$key]) && !array_is_list($base[$key])) {
+            $base[$key] = mergeMihomoOverrides($base[$key], $value);
+        } else {
+            $base[$key] = $value;
+        }
+    }
+    return $base;
 }
 
 /** Serialize only the scalar/list/map subset used by this service; quote every string. */

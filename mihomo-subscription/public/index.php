@@ -9,6 +9,8 @@ try {
         throw new RuntimeException('Missing private settings.');
     }
     $settings = require dirname(__DIR__) . '/config.php';
+    $customPath = dirname(__DIR__) . '/custom.php';
+    $settings['custom'] = is_file($customPath) ? require $customPath : [];
     $response = subscriptionResponse($settings, $_SERVER, $_GET);
 } catch (Throwable $error) {
     error_log('mihomo-subscription: unable to load configuration');

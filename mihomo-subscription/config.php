@@ -5,6 +5,9 @@ declare(strict_types=1);
 return [
     'access_password' => 'd3a7e7389f5c008001a7564e958715b3',
     'rule_update_interval' => 86400,
+    'rule_cache_dir' => __DIR__ . '/.cache',
+    'rule_fetch_timeout' => 15,
+    'rule_refresh_budget' => 25,
     'direct_domains' => [],
     'proxy_domains' => [],
     'reject_domains' => [],
