@@ -5,10 +5,10 @@ declare(strict_types=1);
 return [
     'access_password' => 'CHANGE_ME',
     'rule_update_interval' => 86400,
-    // All rule contents are bundled into the response; only this server fetches upstreams.
+    // Rules are downloaded locally and bundled before publication.
     'rule_cache_dir' => __DIR__ . '/.cache',
     'rule_fetch_timeout' => 15,
-    'rule_refresh_budget' => 25,
+    'rule_refresh_budget' => 180,
     // Personal exceptions take precedence over community rules.
     'direct_domains' => [],
     'proxy_domains' => [],

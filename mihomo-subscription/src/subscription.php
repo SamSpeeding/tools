@@ -3,83 +3,6 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/rules.php';
 
-/** HTTP handling is independent of config loading, so tests never need real secrets. */
-function subscriptionResponse(array $settings, array $server, array $query, ?callable $ruleLoader = null): array
-{
-    $method = $server['REQUEST_METHOD'] ?? 'GET';
-    if (!in_array($method, ['GET', 'HEAD'], true)) {
-        $response = subscriptionError(405, 'Use GET or HEAD.');
-        $response['headers']['Allow'] = 'GET, HEAD';
-        return $response;
-    }
-
-    $expected = $settings['access_password'] ?? '';
-    if (!is_string($expected) || $expected === '' || $expected === 'CHANGE_ME') {
-        return subscriptionError(500, 'Set access_password in config.php first.');
-    }
-    $authorization = $server['HTTP_AUTHORIZATION'] ?? $server['REDIRECT_HTTP_AUTHORIZATION'] ?? null;
-    $provided = $query['password'] ?? null;
-    if ($authorization !== null) {
-        $provided = is_string($authorization) && preg_match('/^Bearer (\S+)$/iD', $authorization, $match)
-            ? $match[1] : null;
-    }
-    if (!is_string($provided) || !hash_equals($expected, $provided)) {
-        return subscriptionError(401, 'Missing or incorrect subscription password.');
-    }
-
-    $format = $query['format'] ?? 'yaml';
-    if (!in_array($format, ['yaml', 'json'], true)) {
-        return subscriptionError(400, 'format must be yaml or json.');
-    }
-
-    try {
-        $snapshot = ($ruleLoader ?? 'loadCommunityRules')($settings);
-        $config = buildMihomoConfig($settings, $snapshot['payloads']);
-        $body = $format === 'json'
-            ? json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR) . "\n"
-            : "# Generated mihomo subscription. All community rules are embedded.\n" . encodeYaml($config);
-    } catch (RuleSourceUnavailable $error) {
-        $response = subscriptionError(503, 'Community rules unavailable. Warm the server cache and retry.');
-        $response['headers']['Retry-After'] = '300';
-        return $response;
-    } catch (Throwable $error) {
-        // Do not echo node values, exception messages or the request URL into logs.
-        error_log('mihomo-subscription: invalid subscription settings');
-        return subscriptionError(500, 'Invalid subscription configuration.');
-    }
-
-    return [
-        'status' => 200,
-        'headers' => subscriptionHeaders() + [
-            'Content-Type' => $format === 'json' ? 'application/json; charset=utf-8' : 'application/yaml; charset=utf-8',
-            'Content-Disposition' => 'inline; filename="mihomo.' . $format . '"',
-            // Client hint in hours; inline rules update when the whole config is reloaded.
-            'profile-update-interval' => '24',
-            'X-Rules-Updated-At' => gmdate('Y-m-d\TH:i:s\Z', $snapshot['updated_at']),
-            'X-Rules-Cache' => $snapshot['stale'] ? 'stale' : 'fresh',
-        ],
-        'body' => $body,
-    ];
-}
-
-function subscriptionHeaders(): array
-{
-    return [
-        'Cache-Control' => 'private, no-store',
-        'X-Content-Type-Options' => 'nosniff',
-        'Referrer-Policy' => 'no-referrer',
-    ];
-}
-
-function subscriptionError(int $status, string $message): array
-{
-    return [
-        'status' => $status,
-        'headers' => subscriptionHeaders() + ['Content-Type' => 'application/json; charset=utf-8'],
-        'body' => json_encode(['error' => $message], JSON_THROW_ON_ERROR) . "\n",
-    ];
-}
-
 function requiredString(array $node, string $field): string
 {
     $value = $node[$field] ?? null;
@@ -155,10 +78,6 @@ function buildMihomoConfig(array $settings, ?array $payloads = null): array
     $reserved = ['PROXY', 'AUTO', 'GOOGLE', 'YOUTUBE', 'ADS', 'FINAL', 'DIRECT', 'REJECT', 'GLOBAL'];
     if (count(array_unique($names)) !== count($names) || array_intersect($names, $reserved)) {
         throw new InvalidArgumentException('Duplicate or reserved node names.');
-    }
-    $interval = $settings['rule_update_interval'] ?? 86400;
-    if (!is_int($interval) || $interval < 60) {
-        throw new InvalidArgumentException('Rule interval must be at least 60 seconds.');
     }
     $payloads ??= loadCommunityRules($settings)['payloads'];
     validateCommunityPayloads($payloads);

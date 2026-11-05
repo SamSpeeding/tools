@@ -231,7 +231,7 @@ function loadCommunityRules(array $settings, ?callable $fetch = null, bool $forc
 {
     $ttl = $settings['rule_update_interval'] ?? 86400;
     $timeout = $settings['rule_fetch_timeout'] ?? 15;
-    $budget = $settings['rule_refresh_budget'] ?? 25;
+    $budget = $settings['rule_refresh_budget'] ?? 180;
     $dir = $settings['rule_cache_dir'] ?? dirname(__DIR__) . '/.cache';
     if (!is_int($ttl) || $ttl < 60 || !is_int($timeout) || $timeout < 1 || $timeout > 60
         || !is_int($budget) || $budget < 1 || $budget > 300 || !is_string($dir) || $dir === '') {

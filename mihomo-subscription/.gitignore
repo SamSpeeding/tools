@@ -1,2 +1,6 @@
 /.cache/
+/.deploy.local.json
+/.build/
+/.deploy-backups/
+__pycache__/
 

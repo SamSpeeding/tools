@@ -7,7 +7,7 @@ return [
     'rule_update_interval' => 86400,
     'rule_cache_dir' => __DIR__ . '/.cache',
     'rule_fetch_timeout' => 15,
-    'rule_refresh_budget' => 25,
+    'rule_refresh_budget' => 180,
     'direct_domains' => [],
     'proxy_domains' => [],
     'reject_domains' => [],
