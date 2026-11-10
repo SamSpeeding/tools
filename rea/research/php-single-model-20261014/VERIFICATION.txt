@@ -1,0 +1,104 @@
+纯 PHP 单视频模型与流式 MP4 验证记录
+日期：2026-10-14
+
+交付目录：/Users/tt/Desktop/rea/HongguoPHP
+目录仅两个文件：video.php、play.php。
+原 HongguoCLI、HongguoDesktop、analysis 未修改。357 个原文件哈希校验无变化；
+完整检查清单在 before-hashes.json，结果在 preservation-results.json。
+
+运行与接口
+----------
+要求 PHP 8.1+ 64 位，curl、zlib、openssl 扩展（实测 PHP 8.3.30）。
+无需 Composer、GMP、FFI、Python、Java、原 JAR/SO 或任何签名服务。
+标准 PHP 扩展及其系统依赖仍需由 PHP 安装环境提供。
+
+启动：
+php -S 127.0.0.1:8080 -t /Users/tt/Desktop/rea/HongguoPHP
+
+模型 JSON：
+http://127.0.0.1:8080/video.php?vid=7689903116275174462
+播放：
+http://127.0.0.1:8080/play.php?vid=7689903116275174462
+下载完整 MP4：
+http://127.0.0.1:8080/play.php?vid=7689903116275174462&download=1
+可选 &quality=360p/480p/540p/720p/1080p，默认 1080p，未提供的清晰度明确报错。
+同一播放链接也可以另存为完整 MP4；download=1 只是改为附件响应。
+video.php 还能 php video.php VID 执行；play.php 用 HTTP 调用。
+
+模型处理
+--------
+直接 POST 官方 App 端点：
+https://api5-normal-sinfonlinec.fqnovel.com/novel/player/video_model/v1/
+仅 single video_model，不尝试 multi_video_model，不经过网页端/作者服务。
+原有 App 7.2.9.32 / aid 8662 固定设备档案内置在 hg_profile()。
+不注册/随机轮换设备；每次刷新 _rticket、时间戳与签名随机数。
+不是读取运行时固定 JSON，也不会缓存模型到文件。
+返回上游 JSON 外层原字段；data.video_model 由 JSON 字符串转成对象。
+无效输入 400，方法错误 405，上游请求/模型错误 502。
+
+签名实现边界
+------------
+Helios、Medusa v3：本项目已审计实现的纯 PHP 移植。
+SM3、协议特有加密轮、protobuf 与查找表均在 video.php。
+81936 字节表以 zlib/base64 内嵌；不是动态库或可执行文件。
+Gorgon：参考算法的 RC4 变体，KSA/输出阶段只覆盖 S[i]，不是标准 RC4 交换。
+Argus/Ladon：本端点已验证组合中的时间戳编码，不是完整原算法的逆向实现。
+不生成 Neptune/Soter；不声称完全复刻 JAR 八签名或覆盖所有平台接口。
+本次结果说明该单视频模型端点当前可以无 JAR/SO/Java 运行，
+不代表全平台所有端点或未来服务端策略下始终可用。
+
+无文件流式处理
+--------------
+play.php 直接调用同目录 video.php 的 hg_model()，不发自我 HTTP 请求。
+每次 HTTP GET/Range 请求重新获取模型与 CDN 地址；不跨请求持久缓存。
+1. 选择清晰度，用 spade_a 在内存解析 AES-128 密钥。
+2. CDN 按 256 KiB 请求 Range，最多缓存 4 块密文。
+3. 按顶层 box 长度跳过 mdat，定位 moov；尾部 moov 也无需先下载全部媒体。
+4. 读取样本位置、IV、子样本明文/密文跨度，验证首两个加密视频样本。
+5. 恢复 codec，原位将 sinf/senc/saio/saiz 替换为 free，保持大小与偏移。
+6. 按请求字节范围推进 AES-CTR 计数器，分段解密、echo、flush。
+7. 客户端断开时终止；开始输出后若上游失败，关闭不完整响应，不混入 JSON。
+完整响应 Content-Length 与 MP4 原长度相同；无转码、无 remux。
+未实现媒体文件/临时文件/JSON 磁盘缓存，服务端不调用 FFmpeg。
+只支持 CENC AES-CTR 非分片 MP4；不支持的结构明确报错。
+支持 GET、HEAD、单段 Range（前缀/后缀/开放结尾）；非法或多段 Range 为 416。
+未提供稳定验证器，带 If-Range 时返回完整表示。
+
+部署提示：PHP 内置服务适合本机验证。正式并发用 PHP-FPM。
+若有 Nginx/反向代理，必须关闭对应的 fastcgi_buffering/proxy_buffering、
+媒体缓存和 gzip，否则中间层可能缓冲或写临时文件；代码已发 X-Accel-Buffering: no。
+文件未转码；本次是 HEVC/H.265 + AAC，在线播放依赖浏览器/系统的编码支持。
+
+验证证据
+--------
+offline-results.json：124 项通过，包括 H/M 64 个黄金向量、Gorgon 5 个向量、
+SM3 已知结果、spade 已知结果、Range 边界及 AES-CTR NIST 非对齐位置测试。
+H/M 向量覆盖全部 4 个时间戳分支、16 个 f13 IV 选择器。
+test_offline.php + gorgon-vectors.json 可复现；不是项目运行依赖。
+
+http-results.json：20 项 HTTP 检查通过，模型请求覆盖 4 个不同 vid（重复 1 个）。
+所有实际请求都由 PHP 生成签名，返回 5 档清晰度。
+完整流 4,507,067 字节；首响应体前仅读取 262,144 字节 CDN 数据。
+FFmpeg 全片视频+音频解码成功：62.415011 秒 HEVC/AAC。
+流 SHA256：d41be261a5b7c3e7c2c06c4046e354c0bbc8a7f7b1ead1348f2af4d617b5bc96
+与此前 Python 流式解密的完整结果完全一致。
+首 2 字节、非 AES 对齐中段、跨 CDN 块中段、后缀和开放结尾范围
+均与完整输出对应切片逐字节一致；HEAD、416、400、405 符合预期。
+初次准备测试峰值 PHP 内存 4,194,304 字节（这集样本，不是全部媒体上限）。
+
+测试服务禁用了：exec,shell_exec,system,passthru,proc_open,popen,pcntl_exec,
+file_put_contents,fopen,tempnam,tmpfile,copy,rename,unlink,mkdir,symlink,link。
+禁用环境中完成模型、流式、下载和浏览器播放验证。
+实际只将两个 PHP 文件作为 web 根目录，不暴露 research 或其他项目。
+
+浏览器：Codex Mac 内置浏览器，直接打开最终 play.php 链接。
+最终采样 readyState=4，currentTime=36.623874，duration=62.415011，
+paused=false，videoWidth=1080，videoHeight=1920，error=null。
+浏览器原生控件按键跳转自动化超时，未将其记为 GUI 拖动通过；
+服务端任意位置 Range 已通过上述五组字节对比验证。
+
+test_http.py 仅作为开发客户端验收工具；其中 Python/FFmpeg 不属于 PHP 运行链路。
+全片文件只是客户端测试捕获，用于 FFmpeg 解码后已清除；无残留 MP4。
+初次模型原始 JSON 也已清理，只保留不含地址/密钥/签名的验收摘要。
+测试服务及临时浏览器页在交付前停止/关闭。
+长期稳定性未经过长期运行验证，不能以这次成功承诺永久稳定。

@@ -1,0 +1,185 @@
+{
+  "checked_at": "2026-10-13T10:44:02.190120+08:00",
+  "host": {
+    "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "vendor_manifest": [
+    {
+      "path": "sign/unidbg-sign.jar",
+      "expected_sha256": "bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b",
+      "actual_sha256": "bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b",
+      "match": true
+    },
+    {
+      "path": "capture/fq_oversea/libmetasec_ml.so",
+      "expected_sha256": "20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d",
+      "actual_sha256": "20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d",
+      "match": true
+    },
+    {
+      "path": "capture/fq_oversea/libc++_shared.so",
+      "expected_sha256": "e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0",
+      "actual_sha256": "e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0",
+      "match": true
+    },
+    {
+      "path": "capture/fq_oversea/ms_16777218.bin",
+      "expected_sha256": "c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c",
+      "actual_sha256": "c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c",
+      "match": true
+    },
+    {
+      "path": "decrypt/unwrap_spade.pyc",
+      "expected_sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7",
+      "actual_sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7",
+      "match": true
+    },
+    {
+      "path": "decrypt/oracle.pyc",
+      "expected_sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471",
+      "actual_sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471",
+      "match": true
+    },
+    {
+      "path": "decrypt/extract_keybox_pairs.pyc",
+      "expected_sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a",
+      "actual_sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a",
+      "match": true
+    },
+    {
+      "path": "decrypt/decutil.pyc",
+      "expected_sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7",
+      "actual_sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7",
+      "match": true
+    },
+    {
+      "path": "decrypt/unwrap_spade.py",
+      "expected_sha256": "8e9d804f4a62d8da63b533175396b4ccb22cff0ae32276b66c70fa403cab1a4b",
+      "actual_sha256": "8e9d804f4a62d8da63b533175396b4ccb22cff0ae32276b66c70fa403cab1a4b",
+      "match": true
+    },
+    {
+      "path": "decrypt/oracle.py",
+      "expected_sha256": "2b9fdd196357443660e592076253ba479b6ebab24c801080c14ca7b44c61bacc",
+      "actual_sha256": "2b9fdd196357443660e592076253ba479b6ebab24c801080c14ca7b44c61bacc",
+      "match": true
+    },
+    {
+      "path": "decrypt/decutil.py",
+      "expected_sha256": "e5781d94d804b6a04621d1ca059e1bbc26b3e7b524c5d3a4328b6399581e033d",
+      "actual_sha256": "e5781d94d804b6a04621d1ca059e1bbc26b3e7b524c5d3a4328b6399581e033d",
+      "match": true
+    },
+    {
+      "path": "decrypt/extract_keybox_pairs.py",
+      "expected_sha256": "151b4c1f0089e9a3c6688cf0adab2705f993c62155e7e1300406e8bb16ba6bd7",
+      "actual_sha256": "151b4c1f0089e9a3c6688cf0adab2705f993c62155e7e1300406e8bb16ba6bd7",
+      "match": true
+    }
+  ],
+  "media": [
+    {
+      "path": "HongguoCLI/downloads/我李长生重回八零，赶山狩猎养妻女_7686008653844859966/第001集_1080p.mp4",
+      "bytes": 8937561,
+      "sha256": "ad1deb93680ae5c704261dc27e5bc0dbb371d78dffe22994b562da5093db7ea4",
+      "validation_record": "HongguoCLI/downloads/我李长生重回八零，赶山狩猎养妻女_7686008653844859966/第001集_1080p.json",
+      "record": {
+        "encrypted_source": true,
+        "sample_validation": {
+          "vide": [
+            3329,
+            3329
+          ],
+          "soun": [
+            null,
+            4781
+          ]
+        },
+        "full_decode_validated": true,
+        "media": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "hevc",
+              "codec_type": "video",
+              "width": 1080,
+              "height": 1920,
+              "nb_frames": "3329"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "nb_frames": "4781"
+            }
+          ],
+          "format": {
+            "duration": "110.968005",
+            "size": "8937561"
+          }
+        },
+        "vid": "7686010748832582681",
+        "index": 1,
+        "quality": "1080p",
+        "series_id": "7686008653844859966",
+        "bytes": 8937561,
+        "sha256": "ad1deb93680ae5c704261dc27e5bc0dbb371d78dffe22994b562da5093db7ea4"
+      },
+      "hash_matches_record": true,
+      "size_matches_record": true,
+      "record_reports_full_decode": true
+    },
+    {
+      "path": "HongguoCLI/outputs/source-verification/坠崖捡个参娃娃_7689863296106646590/第002集_1080p.mp4",
+      "bytes": 4480838,
+      "sha256": "ffbfcfb34273e650cc4c02a2221959a69a33b8cc46685a62dec352edafdad794",
+      "validation_record": "HongguoCLI/outputs/source-verification/坠崖捡个参娃娃_7689863296106646590/第002集_1080p.json",
+      "record": {
+        "encrypted_source": true,
+        "sample_validation": {
+          "vide": [
+            1872,
+            1872
+          ],
+          "soun": [
+            null,
+            1348
+          ]
+        },
+        "full_decode_validated": true,
+        "media": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "hevc",
+              "codec_type": "video",
+              "width": 1080,
+              "height": 1920,
+              "nb_frames": "1872"
+            },
+            {
+              "codec_name": "aac",
+              "codec_type": "audio",
+              "nb_frames": "1348"
+            }
+          ],
+          "format": {
+            "duration": "62.415011",
+            "size": "4480838"
+          }
+        },
+        "vid": "7689903116275174462",
+        "index": 2,
+        "quality": "1080p",
+        "series_id": "7689863296106646590",
+        "bytes": 4480838,
+        "sha256": "ffbfcfb34273e650cc4c02a2221959a69a33b8cc46685a62dec352edafdad794"
+      },
+      "hash_matches_record": true,
+      "size_matches_record": true,
+      "record_reports_full_decode": true
+    }
+  ]
+}

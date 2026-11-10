@@ -1,0 +1,30 @@
+{
+  "python": "/Users/tt/Desktop/rea/HongguoCLI/.venv/bin/python3",
+  "vendor": "/Users/tt/Desktop/rea/HongguoCLI/vendor",
+  "api_module": "/Users/tt/Desktop/rea/HongguoCLI/hongguo_api.py",
+  "models": 0,
+  "response": [
+    {
+      "vids": [
+        "7689903116275174462"
+      ],
+      "response": {
+        "Code": 110001,
+        "Message": "未知异常",
+        "BaseResp": {
+          "StatusMessage": "unknown error",
+          "StatusCode": 110001
+        }
+      }
+    }
+  ],
+  "errors": [
+    {
+      "vids": [
+        "7689903116275174462"
+      ],
+      "error": "video_model is absent or not an object",
+      "raw_response": {}
+    }
+  ]
+}

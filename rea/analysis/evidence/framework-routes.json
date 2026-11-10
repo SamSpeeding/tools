@@ -1,0 +1,90 @@
+[
+  {
+    "method": "GET",
+    "path": "/openapi.json",
+    "handler": "openapi",
+    "source_line": 1108,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key_exempt",
+    "response_type": "application/json"
+  },
+  {
+    "method": "HEAD",
+    "path": "/openapi.json",
+    "handler": "openapi",
+    "source_line": 1108,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key_exempt",
+    "response_type": "application/json"
+  },
+  {
+    "method": "GET",
+    "path": "/docs",
+    "handler": "swagger_ui_html",
+    "source_line": 1123,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key_exempt",
+    "response_type": "text/html"
+  },
+  {
+    "method": "HEAD",
+    "path": "/docs",
+    "handler": "swagger_ui_html",
+    "source_line": 1123,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key_exempt",
+    "response_type": "text/html"
+  },
+  {
+    "method": "GET",
+    "path": "/docs/oauth2-redirect",
+    "handler": "swagger_ui_redirect",
+    "source_line": 1141,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key",
+    "response_type": "text/html"
+  },
+  {
+    "method": "HEAD",
+    "path": "/docs/oauth2-redirect",
+    "handler": "swagger_ui_redirect",
+    "source_line": 1141,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key",
+    "response_type": "text/html"
+  },
+  {
+    "method": "GET",
+    "path": "/redoc",
+    "handler": "redoc_html",
+    "source_line": 1151,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key_exempt",
+    "response_type": "text/html"
+  },
+  {
+    "method": "HEAD",
+    "path": "/redoc",
+    "handler": "redoc_html",
+    "source_line": 1151,
+    "source": "fastapi/applications.py",
+    "classification": "framework",
+    "packaged_allowed": false,
+    "auth": "api_key_exempt",
+    "response_type": "text/html"
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "scope": "same aid=8662, endpoint, signer and model body; replace only identity tuple",
+  "runs": [
+    {
+      "profile": "configured_device_0",
+      "identity_digest": "30b97a319da77d62210ed06391c481b9822e86bfdf7cdded75aa9075637bda30",
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 4.52
+    },
+    {
+      "profile": "fresh_registered_pair",
+      "identity_digest": "e68d06d15d943e25d4f2e4183dc0b5ad06d190ebb9276d0b6aa85b34312e43ac",
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 2.04
+    },
+    {
+      "profile": "configured_device_0_control",
+      "identity_digest": "30b97a319da77d62210ed06391c481b9822e86bfdf7cdded75aa9075637bda30",
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 1.04
+    }
+  ]
+}

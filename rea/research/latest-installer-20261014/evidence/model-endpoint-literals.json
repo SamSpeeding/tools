@@ -1,0 +1,42 @@
+{
+  "1.0.0.72": [
+    {
+      "file": "app/hongguo.pyc",
+      "function": "get_video_urls",
+      "source_line": 1964,
+      "value": "/novel/player/multi_video_model/v1/"
+    },
+    {
+      "file": "app/hongguo.pyc",
+      "function": "get_video_tracks",
+      "source_line": 2003,
+      "value": "/novel/player/multi_video_model/v1/"
+    },
+    {
+      "file": "app/offline_dl.pyc",
+      "function": "_video_model",
+      "source_line": 1516,
+      "value": "/novel/player/multi_video_model/v1/"
+    }
+  ],
+  "1.0.0.73": [
+    {
+      "file": "app/hongguo.pyc",
+      "function": "get_video_urls",
+      "source_line": 1964,
+      "value": "/novel/player/video_model/v1/"
+    },
+    {
+      "file": "app/hongguo.pyc",
+      "function": "get_video_tracks",
+      "source_line": 2003,
+      "value": "/novel/player/video_model/v1/"
+    },
+    {
+      "file": "app/offline_dl.pyc",
+      "function": "_video_model",
+      "source_line": 1522,
+      "value": "/novel/player/video_model/v1/"
+    }
+  ]
+}

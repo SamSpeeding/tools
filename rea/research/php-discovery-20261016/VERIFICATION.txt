@@ -1,0 +1,58 @@
+HongguoPHP 统一接口与说明页交付记录
+日期：2026-10-16
+
+对外入口
+--------
+index.php：静态接口说明，33 个带默认参数的可点击链接，无输入表单、不自动请求平台。
+api.php?action=search/rank/filters/category/latest/detail/episodes/video/play/download
+共10种action。找剧、详情、模型用GET；播放下载额外支持HEAD与单段Range。
+next_url、detail_url以及每集model_url/play_url/download_url统一指向api.php。
+
+文件组织
+--------
+HongguoPHP仅5个PHP文件：common.php、api.php、video.php、play.php、index.php。
+common.php共享签名、固定设备档案、平台请求与JSON输出；不依赖Java/JAR/原SO。
+video.php保留单模型逻辑及旧链接；play.php复用它并执行原有流式解密。
+crypto/设备档案从原video.php逐字节抽取一致，未重写签名算法。
+没有新增批量视频模型调用，不访问作者服务或网页接口。
+只需要PHP8.1+（64位），curl、zlib、openssl。
+
+数据与分页
+----------
+搜索完整展开普通短剧、lynx榜单、关联短剧三种已观察结果形态，按series_id去重。
+搜索使用平台passback/search_id/offset，不猜测下一页。
+榜单覆盖all/human/comic/ai与recommend/hot/new。
+分类、筛选面板、最新上架共用平台分类接口；支持真人、漫剧、AI剧。
+分类cursor使用原始返回行数，避免展示卡片去重后跳页。
+详情保留平台元数据，分集检查总数、编号、重复VID，提供complete/issues。
+公共ID以字符串输出，其他超JavaScript安全整数范围的整数也转为字符串。
+详情/分集只组装视频相关链接，未提前请求模型或下载媒体。
+错误输入返回400；不支持方法405；平台/处理失败502；非法Range416。
+
+验证
+----
+1. 五个PHP文件通过语法检查。
+2. 既有签名/解密离线检查124项全部通过，含H/M64向量、Gorgon、SM3、spade和CTR/Range。
+3. 46份已验证原始平台响应回放通过：PHP实际构造的方法、路径、额外query、body
+   与桌面请求契约相符，返回剧目ID、筛选项、完整集数、分页语义一致。
+4. 59项HTTP验收全部通过：说明页、所有默认JSON链接、4类真实next_url、旧video
+   链接、无效参数/方法、统一下载/播放/HEAD/Range和旧play链接。
+5. 统一下载示例集1080p共4,507,067字节，SHA256：
+   d41be261a5b7c3e7c2c06c4046e354c0bbc8a7f7b1ead1348f2af4d617b5bc96
+   与原已验证解密结果一致，FFmpeg全片音视频解码通过。首响应前上游读取262,144
+   字节，小于总长。非对齐跨块Range字节与完整文件一致；720p HEAD检查通过。
+   完整MP4只作为测试客户端捕获，验证后删除；PHP目录无MP4、缓存或运行日志。
+6. Codex内置浏览器已查看说明页布局，截图index-preview.jpg；内置浏览器直接导航
+   JSON时返回ERR_BLOCKED_BY_CLIENT，未把它记成UI导航通过。HTTP客户端逐个验证
+   说明页实际href，全部成功。JSON接口应在支持JSON页面的浏览器或API客户端使用。
+
+保护与运行
+----------
+原354文件基线中，只有HongguoPHP/video.php与play.php变化；其他352文件未变。
+play.php仅更新头部使用说明。Desktop、CLI、analysis不变。
+新增测试与证据仅在research/php-discovery-20261016，不作为运行依赖。
+before-hashes.json / verification.json / replay-results.json / http-results.json可复核。
+private/保存旧文件备份与回放索引，目录0700；不在PHP网站根目录内。
+本地预览服务监听127.0.0.1:8080，说明页http://127.0.0.1:8080/。
+重新启动：php -S 127.0.0.1:8080 -t /Users/tt/Desktop/rea/HongguoPHP
+生产部署仍需PHP-FPM，并关闭视频代理缓冲、缓存及gzip。

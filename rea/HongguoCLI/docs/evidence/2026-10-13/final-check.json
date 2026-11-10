@@ -1,0 +1,551 @@
+{
+  "checked_at": "2026-10-13T10:50:18.202061+08:00",
+  "protected_files": [
+    {
+      "path": "HongguoDownloader-Setup.exe",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/API文档.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/LOCAL_API.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/REMOTE_API.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/REQUEST_CHAIN.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/SIGNER_API.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/VIDEO_ENCRYPTION.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/FqTrace.javap.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/MetasecSign.javap.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/api-audit.md",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/apikeys.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/app.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/audited-routes.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/decutil.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/devicepool.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/downloader.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/downloader.inline.js",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/framework-routes.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/hongguo.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/inno-header1.bin",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/inno-header2.bin",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/installer-manifest.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/launcher.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/licensing.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/live-verification.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/local-routes.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/nettls.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/offline_decrypt.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/offline_dl.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/oracle.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/rea-evidence.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/remote-routes-audit.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/remote-routes.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/server.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/signed-search-probe.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/unwrap_spade.dis.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/video-encryption-observation.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/web-detail-probe.raw",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/web-search-probe.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/evidence/web-search-probe.raw",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/_buildinfo.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/_integrity.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/apikeys.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/capture/fq_oversea/libc++_shared.so",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/capture/fq_oversea/libmetasec_ml.so",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/capture/fq_oversea/ms_16777218.bin",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/config.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/devicepool.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/devices.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/downloader.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/frida/decutil.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/frida/extract_keybox_pairs.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/frida/offline_decrypt.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/frida/oracle.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/frida/unwrap_spade.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/hongguo.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/licensing.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/nettls.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/offline_dl.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/safeguards.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/server.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/sign/unidbg-sign.jar",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/supabase.json",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/version.txt",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/web/admin.html",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/web/downloader.html",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app/web/index.html",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/app.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/icon.ico",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/launcher.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/fastapi/applications.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/fastapi/routing.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/fastapi-0.141.1.dist-info/METADATA",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/starlette/routing.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/__pycache__/innoextract.cpython-314.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/audit_local_routes.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/build_api_document.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/decrypt_sample.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/download_sample.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/extract_local_routes.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/extract_selected.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/innoextract.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/probe_signer.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/render_local_api.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/tools/verify_export.py",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "analysis/ui/downloader.js",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/unwrap_spade.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/oracle.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/decutil.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/extract_keybox_pairs.pyc",
+      "exists": true,
+      "content_and_size_unchanged": true,
+      "mtime_unchanged": true
+    }
+  ],
+  "analysis_added": [],
+  "analysis_removed": [],
+  "all_protected_files_unchanged": true,
+  "vendor_all_match": true,
+  "media_records_match": true,
+  "tests_56_passed_without_skips": true
+}

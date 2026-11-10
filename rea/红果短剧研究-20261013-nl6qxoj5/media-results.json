@@ -1,0 +1,466 @@
+{
+  "cases": [
+    {
+      "case": "original_model_repeat_1",
+      "outcome": "returned",
+      "result": {
+        "tracks": 5
+      },
+      "seconds": 0.381
+    },
+    {
+      "case": "original_model_repeat_2",
+      "outcome": "error",
+      "error": "video_model 为空",
+      "seconds": 0.172
+    },
+    {
+      "case": "original_model_repeat_3",
+      "outcome": "error",
+      "error": "video_model 为空",
+      "seconds": 0.164
+    },
+    {
+      "case": "original_model_repeat_4",
+      "outcome": "error",
+      "error": "video_model 为空",
+      "seconds": 0.147
+    },
+    {
+      "case": "original_model_repeat_5",
+      "outcome": "error",
+      "error": "video_model 为空",
+      "seconds": 0.219
+    },
+    {
+      "case": "original_model_repeat_6",
+      "outcome": "error",
+      "error": "video_model 为空",
+      "seconds": 0.138
+    },
+    {
+      "case": "original_localProxy",
+      "outcome": "returned",
+      "result": {
+        "status": 500,
+        "bytes": 423,
+        "error": "hg localProxy failed: video_model 为空\nTraceback (most recent call last):\n  File \"/Users/tt/Downloads/红果短剧研究-20261013-nl6qxoj5/source.py\", line 4096, in localProxy\n    model = _video_model(vid, cfg)\n  File \"/Users/tt/Downloads/红果短剧研究-20261013-nl6qxoj5/source.py\", line 3436, in _video_model\n    raise HongguoPluginError(\"video_model 为空\")\nstudied_hongguo.HongguoPluginError: video_model 为空\n"
+      },
+      "seconds": 0.22
+    },
+    {
+      "case": "saved_model_replay_localProxy",
+      "outcome": "returned",
+      "result": {
+        "status": 200,
+        "bytes": 8412310,
+        "error": null
+      },
+      "seconds": 4.013
+    },
+    {
+      "case": "ffprobe",
+      "outcome": "returned",
+      "result": {
+        "exit_code": 0,
+        "data": {
+          "streams": [
+            {
+              "index": 0,
+              "codec_name": "hevc",
+              "codec_long_name": "H.265 / HEVC (High Efficiency Video Coding)",
+              "profile": "Main",
+              "codec_type": "video",
+              "codec_tag_string": "hvc1",
+              "codec_tag": "0x31637668",
+              "width": 1920,
+              "height": 1080,
+              "coded_width": 1920,
+              "coded_height": 1080,
+              "has_b_frames": 4,
+              "sample_aspect_ratio": "1:1",
+              "display_aspect_ratio": "16:9",
+              "pix_fmt": "yuv420p",
+              "level": 186,
+              "color_range": "tv",
+              "color_space": "bt709",
+              "color_transfer": "bt709",
+              "color_primaries": "bt709",
+              "chroma_location": "left",
+              "refs": 1,
+              "view_ids_available": "",
+              "view_pos_available": "",
+              "id": "0x1",
+              "r_frame_rate": "30/1",
+              "avg_frame_rate": "30/1",
+              "time_base": "1/15360",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 2336256,
+              "duration": "152.100000",
+              "bit_rate": "364916",
+              "nb_frames": "4563",
+              "extradata_size": 204,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "VideoHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            },
+            {
+              "index": 1,
+              "codec_name": "aac",
+              "codec_long_name": "AAC (Advanced Audio Coding)",
+              "profile": "LC",
+              "codec_type": "audio",
+              "codec_tag_string": "mp4a",
+              "codec_tag": "0x6134706d",
+              "sample_fmt": "fltp",
+              "sample_rate": "44100",
+              "channels": 2,
+              "channel_layout": "stereo",
+              "bits_per_sample": 0,
+              "initial_padding": 0,
+              "id": "0x2",
+              "r_frame_rate": "0/0",
+              "avg_frame_rate": "0/0",
+              "time_base": "1/44100",
+              "start_pts": 0,
+              "start_time": "0.000000",
+              "duration_ts": 6708227,
+              "duration": "152.113991",
+              "bit_rate": "64042",
+              "nb_frames": "6553",
+              "extradata_size": 2,
+              "disposition": {
+                "default": 1,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0,
+                "timed_thumbnails": 0,
+                "non_diegetic": 0,
+                "captions": 0,
+                "descriptions": 0,
+                "metadata": 0,
+                "dependent": 0,
+                "still_image": 0,
+                "multilayer": 0
+              },
+              "tags": {
+                "language": "und",
+                "handler_name": "SoundHandler",
+                "vendor_id": "[0][0][0][0]"
+              }
+            }
+          ],
+          "format": {
+            "filename": "/Users/tt/Downloads/红果短剧研究-20261013-nl6qxoj5/sample.mp4",
+            "nb_streams": 2,
+            "nb_programs": 0,
+            "nb_stream_groups": 0,
+            "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+            "format_long_name": "QuickTime / MOV",
+            "start_time": "0.000000",
+            "duration": "152.113991",
+            "size": "8412310",
+            "bit_rate": "442421",
+            "probe_score": 100,
+            "tags": {
+              "minor_version": "512",
+              "major_brand": "isom",
+              "compatible_brands": "isomiso2mp41",
+              "comment": "vid:v02ebeg10000dauh99vog65j7s95rhcg",
+              "encoder": "Lavf58.76.100"
+            }
+          }
+        },
+        "stderr": ""
+      },
+      "seconds": 0.12
+    },
+    {
+      "case": "ffmpeg_full_decode",
+      "outcome": "returned",
+      "result": {
+        "exit_code": 0,
+        "stderr": ""
+      },
+      "seconds": 2.585
+    },
+    {
+      "case": "cache_hit",
+      "outcome": "returned",
+      "result": {
+        "status": 200,
+        "bytes": 8412310,
+        "error": null,
+        "matches_full_file": true
+      },
+      "seconds": 0.002
+    },
+    {
+      "case": "saved_model_replay_playerContent",
+      "outcome": "returned",
+      "result": {
+        "parse": 0,
+        "host": "127.0.0.1"
+      },
+      "seconds": 0.007
+    },
+    {
+      "case": "saved_model_replay_HEAD",
+      "outcome": "returned",
+      "result": {
+        "status": 200,
+        "length": "8412310",
+        "ranges": "bytes"
+      },
+      "seconds": 0.431
+    },
+    {
+      "case": "saved_model_replay_Range_0",
+      "outcome": "returned",
+      "result": {
+        "status": 206,
+        "bytes": 65536,
+        "content_range": "bytes 0-65535/8412310",
+        "matches_decrypted_file": true
+      },
+      "seconds": 0.186
+    },
+    {
+      "case": "saved_model_replay_Range_1048593",
+      "outcome": "returned",
+      "result": {
+        "status": 206,
+        "bytes": 65509,
+        "content_range": "bytes 1048593-1114101/8412310",
+        "matches_decrypted_file": true
+      },
+      "seconds": 0.132
+    },
+    {
+      "case": "saved_model_replay_invalid_Range",
+      "outcome": "returned",
+      "result": {
+        "status": 416,
+        "content_range": "bytes */8412310"
+      },
+      "seconds": 0.003
+    }
+  ],
+  "network": [
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 24006,
+      "code": 0,
+      "message": "请求成功"
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 125,
+      "code": 110001,
+      "message": "未知异常"
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 125,
+      "code": 110001,
+      "message": "未知异常"
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 125,
+      "code": 110001,
+      "message": "未知异常"
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 125,
+      "code": 110001,
+      "message": "未知异常"
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 125,
+      "code": 110001,
+      "message": "未知异常"
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "post",
+      "range": null,
+      "status": 200,
+      "bytes": 125,
+      "code": 110001,
+      "message": "未知异常"
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "head",
+      "range": null,
+      "status": 200,
+      "bytes": 0
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=2097152-4194303",
+      "status": 206,
+      "bytes": 2097152
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=0-2097151",
+      "status": 206,
+      "bytes": 2097152
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=6291456-8388607",
+      "status": 206,
+      "bytes": 2097152
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=8388608-8412309",
+      "status": 206,
+      "bytes": 23702
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=4194304-6291455",
+      "status": 206,
+      "bytes": 2097152
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=0-65535",
+      "status": 206,
+      "bytes": 65536
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=28-256597",
+      "status": 206,
+      "bytes": 256570
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/hg.mp4",
+      "method": "head",
+      "range": null,
+      "status": 200,
+      "bytes": 0
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=0-65535",
+      "status": 206,
+      "bytes": 65536
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/hg.mp4",
+      "method": "get",
+      "range": "bytes=0-65535",
+      "status": 206,
+      "bytes": 65536
+    },
+    {
+      "host": "v5-gzb-zjnbtc-reading-video.qznovelvod.com",
+      "path": "/3ed66f076c8aad155707ec62ff4e2125/6ace5d80/video/tos/cn/tos-cn-v-6fcc8e/ok9ClkGtLQiPe3fNCmgyOE7vfMSQIIgeAqiiQI/",
+      "method": "get",
+      "range": "bytes=1048593-1114101",
+      "status": 206,
+      "bytes": 65509
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/hg.mp4",
+      "method": "get",
+      "range": "bytes=1048593-1114101",
+      "status": 206,
+      "bytes": 65509
+    },
+    {
+      "host": "127.0.0.1",
+      "path": "/hg.mp4",
+      "method": "get",
+      "range": "bytes=999999999-",
+      "status": 416,
+      "bytes": 0
+    }
+  ],
+  "scope": "Original live calls plus explicitly labelled saved-model replay; no source edits",
+  "sample_sha256": "8f25e6af2b6e5cfb8b679bc0be760f1376d9901e8503540edac07a004245003d"
+}

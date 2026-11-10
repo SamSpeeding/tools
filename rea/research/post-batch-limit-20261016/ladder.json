@@ -1,0 +1,551 @@
+{
+  "started": "2026-10-16T17:51:23+08:00",
+  "label": "ladder",
+  "endpoint": "/novel/player/multi_video_model/v1/",
+  "policy": "current",
+  "sizes": [
+    5,
+    15,
+    16,
+    20,
+    30,
+    50,
+    74,
+    100
+  ],
+  "reverse": false,
+  "offset": 0,
+  "device": "unchanged production devices.json[0]",
+  "signature_policy": "JAR other headers + unchanged production Python H/M v3",
+  "no_retry_fallback_rotation_cache": true,
+  "media_requests": 0,
+  "max_batch_count": 100,
+  "per_request_gap_seconds": 3,
+  "results": [
+    {
+      "id": "ladder-01-n5",
+      "policy": "current",
+      "endpoint": "old_post",
+      "requested_count": 5,
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903082863348798"
+      ],
+      "request_url_bytes": 674,
+      "request_target_bytes": 631,
+      "request_body_bytes": 378,
+      "started": "2026-10-16T17:51:27+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "aad4023c23420cc8903db618ce2f5d4ad7c68b8bf255bcbb2c461fa57047006e",
+      "body_md5": "53f44d13de7e21b3554256ee09f041a2",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903137095699518"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165887
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165887
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165887
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165887
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165887
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.237,
+      "response_bytes": 125595,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:51:27+08:00",
+      "returned_count": 5,
+      "valid_models": 5,
+      "missing_vids": [],
+      "unexpected_vids": [],
+      "exact_coverage": true
+    },
+    {
+      "id": "ladder-02-n15",
+      "policy": "current",
+      "endpoint": "old_post",
+      "requested_count": 15,
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903082863348798",
+        "7689903101611871294",
+        "7689903084457184318",
+        "7689903072495029310",
+        "7689903098600377406",
+        "7689903024185019454",
+        "7689903059454938174",
+        "7689903099875445822",
+        "7689903114047982654",
+        "7689903033924193342",
+        "7689903006069836862"
+      ],
+      "request_url_bytes": 674,
+      "request_target_bytes": 631,
+      "request_body_bytes": 598,
+      "started": "2026-10-16T17:51:30+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "d491eed71d25a7f910092c2bb463b231ee901590c199b42ee8170dbb752d8ae8",
+      "body_md5": "7faa5d948e07c4745e7776bcce4f3e31",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903006069836862",
+        "7689903024185019454",
+        "7689903030619081790",
+        "7689903033924193342",
+        "7689903059454938174",
+        "7689903072495029310",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903084457184318",
+        "7689903098600377406",
+        "7689903099875445822",
+        "7689903101611871294",
+        "7689903114047982654",
+        "7689903116275174462",
+        "7689903137095699518"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903101611871294": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903084457184318": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903072495029310": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903098600377406": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903024185019454": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903059454938174": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903099875445822": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903114047982654": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903033924193342": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        },
+        "7689903006069836862": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165891
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.242,
+      "response_bytes": 378103,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:51:31+08:00",
+      "returned_count": 15,
+      "valid_models": 15,
+      "missing_vids": [],
+      "unexpected_vids": [],
+      "exact_coverage": true
+    },
+    {
+      "id": "ladder-03-n16",
+      "policy": "current",
+      "endpoint": "old_post",
+      "requested_count": 16,
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903082863348798",
+        "7689903101611871294",
+        "7689903084457184318",
+        "7689903072495029310",
+        "7689903098600377406",
+        "7689903024185019454",
+        "7689903059454938174",
+        "7689903099875445822",
+        "7689903114047982654",
+        "7689903033924193342",
+        "7689903006069836862",
+        "7689903131911539774"
+      ],
+      "request_url_bytes": 674,
+      "request_target_bytes": 631,
+      "request_body_bytes": 620,
+      "started": "2026-10-16T17:51:34+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "900212d0b41bab1ed452ae5895a38bad57b623440de6bd6278e7f5536a920d2b",
+      "body_md5": "eeb3d14a8003216a99f78134b44f9f18",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903030619081790": {
+          "error": "missing requested VID"
+        },
+        "7689903116275174462": {
+          "error": "missing requested VID"
+        },
+        "7689903075380694078": {
+          "error": "missing requested VID"
+        },
+        "7689903137095699518": {
+          "error": "missing requested VID"
+        },
+        "7689903082863348798": {
+          "error": "missing requested VID"
+        },
+        "7689903101611871294": {
+          "error": "missing requested VID"
+        },
+        "7689903084457184318": {
+          "error": "missing requested VID"
+        },
+        "7689903072495029310": {
+          "error": "missing requested VID"
+        },
+        "7689903098600377406": {
+          "error": "missing requested VID"
+        },
+        "7689903024185019454": {
+          "error": "missing requested VID"
+        },
+        "7689903059454938174": {
+          "error": "missing requested VID"
+        },
+        "7689903099875445822": {
+          "error": "missing requested VID"
+        },
+        "7689903114047982654": {
+          "error": "missing requested VID"
+        },
+        "7689903033924193342": {
+          "error": "missing requested VID"
+        },
+        "7689903006069836862": {
+          "error": "missing requested VID"
+        },
+        "7689903131911539774": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.074,
+      "response_bytes": 233,
+      "codes": {
+        "code": 100001
+      },
+      "base_resp": {
+        "StatusCode": 100001,
+        "StatusMessage": "invalid param"
+      },
+      "message": "参数错误",
+      "finished": "2026-10-16T17:51:34+08:00",
+      "error": "API /novel/player/multi_video_model/v1/: code=100001 (参数错误)",
+      "returned_count": 0,
+      "valid_models": 0,
+      "missing_vids": [
+        "7689903006069836862",
+        "7689903024185019454",
+        "7689903030619081790",
+        "7689903033924193342",
+        "7689903059454938174",
+        "7689903072495029310",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903084457184318",
+        "7689903098600377406",
+        "7689903099875445822",
+        "7689903101611871294",
+        "7689903114047982654",
+        "7689903116275174462",
+        "7689903131911539774",
+        "7689903137095699518"
+      ],
+      "unexpected_vids": [],
+      "exact_coverage": false
+    }
+  ],
+  "signer_pid": 40751,
+  "stop_reason": "first incomplete/failure",
+  "finished": "2026-10-16T17:51:34+08:00",
+  "preservation": {
+    "checked_files": 354,
+    "changed": [],
+    "unchanged": true
+  },
+  "runtime_copy_removed": true
+}

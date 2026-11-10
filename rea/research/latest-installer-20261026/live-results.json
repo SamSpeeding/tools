@@ -1,0 +1,227 @@
+{
+  "started": "2026-10-26T10:29:07+08:00",
+  "source_version": "1.0.0.77",
+  "source_pyc_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+  "policy": "v77 signed=False; no signer code or signature headers; fixed existing device[0]",
+  "transport": "curl_cffi chrome; TLS verified; redirects disabled",
+  "scope": "8 requests / 2 rounds / 8 distinct VIDs from 2 series. No retry, fallback or media fetch.",
+  "results": [
+    {
+      "id": "01-r1-a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "started": "2026-10-26T10:29:09+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.26,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 23490,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:10+08:00"
+    },
+    {
+      "id": "02-r1-a_five",
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "started": "2026-10-26T10:29:12+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.353,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 116628,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:13+08:00"
+    },
+    {
+      "id": "03-r1-cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "started": "2026-10-26T10:29:15+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.44,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 113809,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:15+08:00"
+    },
+    {
+      "id": "04-r1-b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "started": "2026-10-26T10:29:18+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.287,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 21240,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:18+08:00"
+    },
+    {
+      "id": "05-r2-a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "started": "2026-10-26T10:29:41+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.185,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 23503,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:41+08:00"
+    },
+    {
+      "id": "06-r2-a_five",
+      "vids": [
+        "7689903130258983998",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "started": "2026-10-26T10:29:43+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.272,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 116725,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:44+08:00"
+    },
+    {
+      "id": "07-r2-cross_five",
+      "vids": [
+        "7694949018303990809",
+        "7694949024280874009",
+        "7689903130258983998",
+        "7689903082863348798",
+        "7689903116275174462"
+      ],
+      "started": "2026-10-26T10:29:46+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.361,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 114012,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:47+08:00"
+    },
+    {
+      "id": "08-r2-b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "started": "2026-10-26T10:29:49+08:00",
+      "success": false,
+      "signed": false,
+      "declared_max_retries": 2,
+      "http_status": 200,
+      "seconds": 0.278,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "code": 0,
+      "response_bytes": 21240,
+      "error": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x86 in position 0: invalid start byte",
+      "finished": "2026-10-26T10:29:49+08:00"
+    }
+  ],
+  "signer_calls": [],
+  "media_requests": 0,
+  "preservation": {
+    "checked_files": 357,
+    "changed": []
+  },
+  "finished": "2026-10-26T10:29:50+08:00",
+  "successes": 0,
+  "valid_models": 0
+}

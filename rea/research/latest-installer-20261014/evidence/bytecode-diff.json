@@ -1,0 +1,342 @@
+[
+  {
+    "path": "app/_buildinfo.pyc",
+    "old_sha256": "58a0b973341504a68870cd2ad647f3d0e14ba915e5cdc71e83173d7759b70e2f",
+    "new_sha256": "0191ee95b60cf6921e8867c66e38bd7584003f4691daadef1395d4620dc93da7",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\_buildinfo.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\_buildinfo.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 1,
+    "new_code_objects": 1,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/_integrity.pyc",
+    "old_sha256": "cbb38eb9ee60e407daef5409749ddce72397810d08e0082659cf69ec5b1d2e75",
+    "new_sha256": "a03a4034a910c5582136cf8c5d005d315d06349793e9560c89a4181cc13d14ef",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\_integrity.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\_integrity.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 1,
+    "new_code_objects": 1,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_consts"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      }
+    ]
+  },
+  {
+    "path": "app/apikeys.pyc",
+    "old_sha256": "d795f03648aaccfb5481eca6697ede686c61831461bd294bce8b791810cda862",
+    "new_sha256": "5613d5b4f10979cc97fed563e826cbafb02f1a3d702cdfabf8c48612be8c4895",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\apikeys.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\apikeys.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 16,
+    "new_code_objects": 16,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/devicepool.pyc",
+    "old_sha256": "85299d65916515c032b8e5c4b7920e4f52149099b23d74042aaa878a43c245ba",
+    "new_sha256": "51724b0fb15fdb89dff204d9e58adf2bd65b44ca40402ada48c1ac6e2a84cf0f",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\devicepool.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\devicepool.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 11,
+    "new_code_objects": 11,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/downloader.pyc",
+    "old_sha256": "6f104e671184ace99a5b88d9e969139ead60ea08dce5f256eb44466a471c5bed",
+    "new_sha256": "edbb88c479d1e9199490745b311f4fc29bd8889705243f3884d6677353f0831b",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\downloader.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\downloader.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 25,
+    "new_code_objects": 25,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/decutil.pyc",
+    "old_sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7",
+    "new_sha256": "b6277011e2015886c0dce44c3c8f625b05a5fcbc1f078fffe3b4bdb14822bf0d",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\frida\\decutil.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\decutil.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 13,
+    "new_code_objects": 13,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/extract_keybox_pairs.pyc",
+    "old_sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a",
+    "new_sha256": "efe86c9e11140681bd88d6c82677374b49d6f175b1313a00581f760bfcebdcb2",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\frida\\extract_keybox_pairs.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\extract_keybox_pairs.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 15,
+    "new_code_objects": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/offline_decrypt.pyc",
+    "old_sha256": "01d164943b8b36481ad4f877305c4721ce3e8b9fbebb4964e0adfe61c3e48263",
+    "new_sha256": "3c628f6fa1ffcd2fd374129e5331c97ce1698c3eda813453dfa783afe86cd457",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\frida\\offline_decrypt.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\offline_decrypt.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 4,
+    "new_code_objects": 4,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/oracle.pyc",
+    "old_sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471",
+    "new_sha256": "0012168e665ef790c2506bef7469dcdc1ad19f6ea95c8524dd3259ea6a0d4796",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\frida\\oracle.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\oracle.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 28,
+    "new_code_objects": 28,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/unwrap_spade.pyc",
+    "old_sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7",
+    "new_sha256": "9b87eb2d77c5949f741ec9590425137e18e10ae6a0f4d5b18af955d2b7efa7b4",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\frida\\unwrap_spade.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\unwrap_spade.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 8,
+    "new_code_objects": 8,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/hongguo.pyc",
+    "old_sha256": "42d0c2bcfffc346afe5b3b75d259261b787daf8f144298ceaa1bfa4897ad1312",
+    "new_sha256": "7a5b66a67dac3629c7d4c92a564ec1b4b90134e020670b1e7d348943b82be479",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\hongguo.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\hongguo.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 240,
+    "new_code_objects": 239,
+    "added": [],
+    "removed": [
+      "get_video_urls.<locals>.<listcomp>#1"
+    ],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_consts"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "get_video_tracks#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 2003,
+        "new_line": 2003
+      },
+      {
+        "function": "get_video_urls#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 1964,
+        "new_line": 1964
+      }
+    ]
+  },
+  {
+    "path": "app/licensing.pyc",
+    "old_sha256": "5bb605d3a10b56585342fa217eedc3d7f29689f185634af9d9b95363120db53f",
+    "new_sha256": "b9ac41e7e4e39f97b7fdeb0d46366ac091c909aa484fa608cbfb84832f5c7657",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\licensing.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\licensing.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 44,
+    "new_code_objects": 44,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/nettls.pyc",
+    "old_sha256": "08cd78be74d262714d63855c2b0899ee71322d5bca14f1f37bb7e9c726f8eb13",
+    "new_sha256": "3e741b356ee1521c8a32dc55fdf7beaeb3d315e17dd84ea70722b4201aa83b68",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\nettls.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\nettls.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 19,
+    "new_code_objects": 19,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/offline_dl.pyc",
+    "old_sha256": "5baef36f42386837def6afb6de7f66730538294e6d27995cb5deb6317151bbd2",
+    "new_sha256": "7e5c35f4713c7f14bc59249a5b380703705a5c3e53a26e4cde1094758942d438",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\offline_dl.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\offline_dl.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 474,
+    "new_code_objects": 474,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "function": "_hgdj_pv_episode#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 1336,
+        "new_line": 1336
+      },
+      {
+        "function": "_video_model#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 1516,
+        "new_line": 1522
+      }
+    ]
+  },
+  {
+    "path": "app/safeguards.pyc",
+    "old_sha256": "2fe27f2c9a95acb871c05fe0dd8b20844342ea7990853b9cad755a8ed28e3a9c",
+    "new_sha256": "c53f624343e40a66ec740d9a7bd7d46224e2208b5c9190ed74386ce1befe3d82",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\safeguards.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\safeguards.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 15,
+    "new_code_objects": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/server.pyc",
+    "old_sha256": "55118631849817f20088c30894d94a7c84bff79d03eebe7af4b545c478ee5b0c",
+    "new_sha256": "b84e074d9796f139671e82957d46aa745f90c64c4e8df6c1efa05394b21ae9d0",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app\\server.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\server.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 247,
+    "new_code_objects": 247,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app.pyc",
+    "old_sha256": "f8ccf3d849c0ee570b3bea96bdfb7a118da9e4f2e7ea27a5a72b2aa27377c990",
+    "new_sha256": "3a08a721a3d66553aaf794c3f62ca956c0bf9394e11c8c92cd70714d122be1b3",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\app.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 92,
+    "new_code_objects": 92,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "launcher.pyc",
+    "old_sha256": "0a8e89dc6c96d219e310ffd572f63b68720a68125f3b9a852ab00b0afdf3c29e",
+    "new_sha256": "2cfda9d434f86dc770ad3baf3af91d355221acf477962d946e1f2920d65a8a57",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage_172g\\launcher.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\launcher.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 13,
+    "new_code_objects": 13,
+    "added": [],
+    "removed": [],
+    "changed": []
+  }
+]

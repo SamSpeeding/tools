@@ -1,0 +1,1218 @@
+  0           0 RESUME                   0
+
+  2           2 NOP
+
+ 12           4 LOAD_CONST               0 (0)
+              6 LOAD_CONST               1 (('annotations',))
+              8 IMPORT_NAME              0 (__future__)
+             10 IMPORT_FROM              1 (annotations)
+             12 STORE_NAME               1 (annotations)
+             14 POP_TOP
+
+ 14          16 LOAD_CONST               0 (0)
+             18 LOAD_CONST               2 (None)
+             20 IMPORT_NAME              2 (argparse)
+             22 STORE_NAME               2 (argparse)
+
+ 15          24 LOAD_CONST               0 (0)
+             26 LOAD_CONST               2 (None)
+             28 IMPORT_NAME              3 (base64)
+             30 STORE_NAME               3 (base64)
+
+ 16          32 LOAD_CONST               0 (0)
+             34 LOAD_CONST               2 (None)
+             36 IMPORT_NAME              4 (json)
+             38 STORE_NAME               4 (json)
+
+ 17          40 LOAD_CONST               0 (0)
+             42 LOAD_CONST               2 (None)
+             44 IMPORT_NAME              5 (mmap)
+             46 STORE_NAME               5 (mmap)
+
+ 18          48 LOAD_CONST               0 (0)
+             50 LOAD_CONST               2 (None)
+             52 IMPORT_NAME              6 (re)
+             54 STORE_NAME               6 (re)
+
+ 19          56 LOAD_CONST               0 (0)
+             58 LOAD_CONST               3 (('Counter', 'defaultdict'))
+             60 IMPORT_NAME              7 (collections)
+             62 IMPORT_FROM              8 (Counter)
+             64 STORE_NAME               8 (Counter)
+             66 IMPORT_FROM              9 (defaultdict)
+             68 STORE_NAME               9 (defaultdict)
+             70 POP_TOP
+
+ 20          72 LOAD_CONST               0 (0)
+             74 LOAD_CONST               4 (('Path',))
+             76 IMPORT_NAME             10 (pathlib)
+             78 IMPORT_FROM             11 (Path)
+             80 STORE_NAME              11 (Path)
+             82 POP_TOP
+
+ 23          84 LOAD_CONST               5 (b'\x01\r\x01\x00\x00\x00')
+             86 STORE_NAME              12 (ENTRY_PREFIX)
+
+ 24          88 LOAD_CONST               6 (b'\x00\x00\x00\x00\x00\x00\x00\x00')
+             90 STORE_NAME              13 (ZERO8)
+
+ 27          92 LOAD_CONST              36 (('value', 'str', 'return', 'str'))
+             94 LOAD_CONST              10 (<code object clean_json_escape at 0x10ad4fee0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 27>)
+             96 MAKE_FUNCTION            4 (annotations)
+             98 STORE_NAME              14 (clean_json_escape)
+
+ 31         100 LOAD_CONST              37 (('value', 'bytes', 'return', 'str'))
+            102 LOAD_CONST              12 (<code object classify_value at 0x10abb2f70, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 31>)
+            104 MAKE_FUNCTION            4 (annotations)
+            106 STORE_NAME              15 (classify_value)
+
+ 41         108 LOAD_CONST              38 ((8192,))
+            110 LOAD_CONST              39 (('mm', 'mmap.mmap', 'back_window', 'int', 'return', 'dict[str, set[str]]'))
+            112 LOAD_CONST              19 (<code object extract_mkid_spade at 0x9c51d1500, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 41>)
+            114 MAKE_FUNCTION            5 (defaults, annotations)
+            116 STORE_NAME              16 (extract_mkid_spade)
+
+ 63         118 LOAD_CONST              40 (('mm', 'mmap.mmap'))
+            120 LOAD_CONST              20 (<code object iter_keybox_entries at 0x9c4e0c000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 63>)
+            122 MAKE_FUNCTION            4 (annotations)
+            124 STORE_NAME              17 (iter_keybox_entries)
+
+ 77         126 LOAD_CONST              41 (('entries', 'list[dict]', 'lookahead_bytes', 'int', 'iv_window', 'int'))
+            128 LOAD_CONST              25 (<code object extract_key_votes at 0x9c51cf800, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 77>)
+            130 MAKE_FUNCTION            4 (annotations)
+            132 STORE_NAME              18 (extract_key_votes)
+
+105         134 LOAD_CONST              42 (('spade', 'str', 'return', 'str | None'))
+            136 LOAD_CONST              28 (<code object decoded_spade_hex at 0x10ad33210, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 105>)
+            138 MAKE_FUNCTION            4 (annotations)
+            140 STORE_NAME              19 (decoded_spade_hex)
+
+112         142 LOAD_CONST              43 (('dump_path', 'Path', 'lookahead_bytes', 'int', 'iv_window', 'int', 'return', 'dict'))
+            144 LOAD_CONST              32 (<code object build_report at 0x9c52bc000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 112>)
+            146 MAKE_FUNCTION            4 (annotations)
+            148 STORE_NAME              20 (build_report)
+
+163         150 LOAD_CONST              44 (('return', 'None'))
+            152 LOAD_CONST              34 (<code object main at 0x9c51f9400, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 163>)
+            154 MAKE_FUNCTION            4 (annotations)
+            156 STORE_NAME              21 (main)
+
+190         158 LOAD_NAME               22 (__name__)
+            160 LOAD_CONST              35 ('__main__')
+            162 COMPARE_OP               2 (==)
+            168 POP_JUMP_FORWARD_IF_FALSE    12 (to 194)
+
+191         170 PUSH_NULL
+            172 LOAD_NAME               21 (main)
+            174 PRECALL                  0
+            178 CALL                     0
+            188 POP_TOP
+            190 LOAD_CONST               2 (None)
+            192 RETURN_VALUE
+
+190     >>  194 LOAD_CONST               2 (None)
+            196 RETURN_VALUE
+
+Disassembly of <code object clean_json_escape at 0x10ad4fee0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 27>:
+ 27           0 RESUME                   0
+
+ 28           2 LOAD_FAST                0 (value)
+              4 LOAD_METHOD              0 (replace)
+             26 LOAD_CONST               1 ('\\u003d')
+             28 LOAD_CONST               2 ('=')
+             30 PRECALL                  2
+             34 CALL                     2
+             44 LOAD_METHOD              0 (replace)
+             66 LOAD_CONST               3 ('\\/')
+             68 LOAD_CONST               4 ('/')
+             70 PRECALL                  2
+             74 CALL                     2
+             84 RETURN_VALUE
+
+Disassembly of <code object classify_value at 0x10abb2f70, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 31>:
+ 31           0 RESUME                   0
+
+ 32           2 LOAD_FAST                0 (value)
+              4 LOAD_METHOD              0 (endswith)
+             26 LOAD_CONST               1 (b'\xeb\xeb')
+             28 PRECALL                  1
+             32 CALL                     1
+             42 POP_JUMP_FORWARD_IF_FALSE     2 (to 48)
+
+ 33          44 LOAD_CONST               2 ('kid')
+             46 RETURN_VALUE
+
+ 34     >>   48 LOAD_FAST                0 (value)
+             50 LOAD_CONST               0 (None)
+             52 LOAD_CONST               3 (8)
+             54 BUILD_SLICE              2
+             56 BINARY_SUBSCR
+             66 LOAD_GLOBAL              2 (ZERO8)
+             78 COMPARE_OP               3 (!=)
+             84 POP_JUMP_FORWARD_IF_FALSE    21 (to 128)
+             86 LOAD_FAST                0 (value)
+             88 LOAD_CONST               3 (8)
+             90 LOAD_CONST               0 (None)
+             92 BUILD_SLICE              2
+             94 BINARY_SUBSCR
+            104 LOAD_GLOBAL              2 (ZERO8)
+            116 COMPARE_OP               2 (==)
+            122 POP_JUMP_FORWARD_IF_FALSE     2 (to 128)
+
+ 35         124 LOAD_CONST               4 ('iv')
+            126 RETURN_VALUE
+
+ 36     >>  128 LOAD_FAST                0 (value)
+            130 LOAD_CONST               5 (b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+            132 COMPARE_OP               3 (!=)
+            138 POP_JUMP_FORWARD_IF_FALSE    59 (to 258)
+            140 LOAD_GLOBAL              5 (NULL + len)
+            152 LOAD_GLOBAL              7 (NULL + set)
+            164 LOAD_FAST                0 (value)
+            166 PRECALL                  1
+            170 CALL                     1
+            180 PRECALL                  1
+            184 CALL                     1
+            194 LOAD_CONST               6 (10)
+            196 COMPARE_OP               5 (>=)
+            202 POP_JUMP_FORWARD_IF_FALSE    27 (to 258)
+            204 LOAD_FAST                0 (value)
+            206 LOAD_METHOD              4 (count)
+            228 LOAD_CONST               7 (0)
+            230 PRECALL                  1
+            234 CALL                     1
+            244 LOAD_CONST               8 (3)
+            246 COMPARE_OP               1 (<=)
+            252 POP_JUMP_FORWARD_IF_FALSE     2 (to 258)
+
+ 37         254 LOAD_CONST               9 ('key')
+            256 RETURN_VALUE
+
+ 38     >>  258 LOAD_CONST              10 ('other')
+            260 RETURN_VALUE
+
+Disassembly of <code object extract_mkid_spade at 0x9c51d1500, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 41>:
+ 41           0 RESUME                   0
+
+ 42           2 LOAD_GLOBAL              1 (NULL + defaultdict)
+             14 LOAD_GLOBAL              2 (set)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 STORE_FAST               2 (out)
+
+ 43          42 LOAD_CONST               1 (b'"mSpadea":"')
+             44 STORE_FAST               3 (needle)
+
+ 44          46 LOAD_CONST               2 (0)
+             48 STORE_FAST               4 (pos)
+
+ 45          50 NOP
+
+ 46     >>   52 LOAD_FAST                0 (mm)
+             54 LOAD_METHOD              2 (find)
+             76 LOAD_FAST                3 (needle)
+             78 LOAD_FAST                4 (pos)
+             80 PRECALL                  2
+             84 CALL                     2
+             94 STORE_FAST               5 (off)
+
+ 47          96 LOAD_FAST                5 (off)
+             98 LOAD_CONST               2 (0)
+            100 COMPARE_OP               0 (<)
+            106 POP_JUMP_FORWARD_IF_FALSE     1 (to 110)
+
+ 48         108 JUMP_FORWARD           198 (to 506)
+
+ 49     >>  110 LOAD_FAST                5 (off)
+            112 LOAD_GLOBAL              7 (NULL + len)
+            124 LOAD_FAST                3 (needle)
+            126 PRECALL                  1
+            130 CALL                     1
+            140 BINARY_OP                0 (+)
+            144 STORE_FAST               6 (value_start)
+
+ 50         146 LOAD_FAST                0 (mm)
+            148 LOAD_METHOD              2 (find)
+            170 LOAD_CONST               4 (b'"')
+            172 LOAD_FAST                6 (value_start)
+            174 PRECALL                  2
+            178 CALL                     2
+            188 STORE_FAST               7 (value_end)
+
+ 51         190 LOAD_FAST                7 (value_end)
+            192 LOAD_CONST               2 (0)
+            194 COMPARE_OP               0 (<)
+            200 POP_JUMP_FORWARD_IF_FALSE     1 (to 204)
+
+ 52         202 JUMP_FORWARD           151 (to 506)
+
+ 54     >>  204 LOAD_GLOBAL              9 (NULL + clean_json_escape)
+            216 LOAD_FAST                0 (mm)
+            218 LOAD_FAST                6 (value_start)
+            220 LOAD_FAST                7 (value_end)
+            222 BUILD_SLICE              2
+            224 BINARY_SUBSCR
+            234 LOAD_METHOD              5 (decode)
+            256 LOAD_CONST               5 ('ascii')
+            258 LOAD_CONST               6 ('ignore')
+            260 PRECALL                  2
+            264 CALL                     2
+            274 PRECALL                  1
+            278 CALL                     1
+            288 STORE_FAST               8 (spade)
+
+ 55         290 LOAD_FAST                0 (mm)
+            292 LOAD_GLOBAL             13 (NULL + max)
+            304 LOAD_CONST               2 (0)
+            306 LOAD_FAST                5 (off)
+            308 LOAD_FAST                1 (back_window)
+            310 BINARY_OP               10 (-)
+            314 PRECALL                  2
+            318 CALL                     2
+            328 LOAD_FAST                5 (off)
+            330 BUILD_SLICE              2
+            332 BINARY_SUBSCR
+            342 STORE_FAST               9 (window)
+
+ 56         344 LOAD_GLOBAL             15 (NULL + re)
+            356 LOAD_ATTR                8 (findall)
+            366 LOAD_CONST               7 (b'"mKid":"([0-9a-f]{32})"')
+            368 LOAD_FAST                9 (window)
+            370 PRECALL                  2
+            374 CALL                     2
+            384 STORE_FAST              10 (kids)
+
+ 57         386 LOAD_FAST               10 (kids)
+            388 POP_JUMP_FORWARD_IF_FALSE    52 (to 494)
+
+ 58         390 LOAD_FAST                2 (out)
+            392 LOAD_FAST               10 (kids)
+            394 LOAD_CONST               8 (-1)
+            396 BINARY_SUBSCR
+            406 LOAD_METHOD              5 (decode)
+            428 LOAD_CONST               5 ('ascii')
+            430 PRECALL                  1
+            434 CALL                     1
+            444 BINARY_SUBSCR
+            454 LOAD_METHOD              9 (add)
+            476 LOAD_FAST                8 (spade)
+            478 PRECALL                  1
+            482 CALL                     1
+            492 POP_TOP
+
+ 59     >>  494 LOAD_FAST                7 (value_end)
+            496 LOAD_CONST               9 (1)
+            498 BINARY_OP                0 (+)
+            502 STORE_FAST               4 (pos)
+
+ 45         504 JUMP_BACKWARD          227 (to 52)
+
+ 60     >>  506 LOAD_FAST                2 (out)
+            508 RETURN_VALUE
+
+Disassembly of <code object iter_keybox_entries at 0x9c4e0c000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 63>:
+ 63           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+
+ 64           6 LOAD_FAST                0 (mm)
+              8 LOAD_METHOD              0 (find)
+             30 LOAD_GLOBAL              2 (ENTRY_PREFIX)
+             42 PRECALL                  1
+             46 CALL                     1
+             56 STORE_FAST               1 (off)
+
+ 65          58 LOAD_FAST                1 (off)
+             60 LOAD_CONST               1 (0)
+             62 COMPARE_OP               5 (>=)
+             68 POP_JUMP_FORWARD_IF_FALSE   181 (to 432)
+
+ 66     >>   70 LOAD_FAST                1 (off)
+             72 LOAD_CONST               2 (32)
+             74 BINARY_OP                0 (+)
+             78 LOAD_GLOBAL              5 (NULL + len)
+             90 LOAD_FAST                0 (mm)
+             92 PRECALL                  1
+             96 CALL                     1
+            106 COMPARE_OP               1 (<=)
+            112 POP_JUMP_FORWARD_IF_FALSE   121 (to 356)
+            114 LOAD_FAST                0 (mm)
+            116 LOAD_FAST                1 (off)
+            118 LOAD_CONST               3 (8)
+            120 BINARY_OP                0 (+)
+            124 LOAD_FAST                1 (off)
+            126 LOAD_CONST               4 (16)
+            128 BINARY_OP                0 (+)
+            132 BUILD_SLICE              2
+            134 BINARY_SUBSCR
+            144 LOAD_GLOBAL              6 (ZERO8)
+            156 COMPARE_OP               2 (==)
+            162 POP_JUMP_FORWARD_IF_FALSE    96 (to 356)
+
+ 67         164 LOAD_GLOBAL              9 (NULL + bytes)
+            176 LOAD_FAST                0 (mm)
+            178 LOAD_FAST                1 (off)
+            180 LOAD_CONST               4 (16)
+            182 BINARY_OP                0 (+)
+            186 LOAD_FAST                1 (off)
+            188 LOAD_CONST               2 (32)
+            190 BINARY_OP                0 (+)
+            194 BUILD_SLICE              2
+            196 BINARY_SUBSCR
+            206 PRECALL                  1
+            210 CALL                     1
+            220 STORE_FAST               2 (value)
+
+ 69         222 LOAD_FAST                1 (off)
+
+ 70         224 LOAD_GLOBAL              9 (NULL + bytes)
+            236 LOAD_FAST                0 (mm)
+            238 LOAD_FAST                1 (off)
+            240 LOAD_CONST               5 (6)
+            242 BINARY_OP                0 (+)
+            246 LOAD_FAST                1 (off)
+            248 LOAD_CONST               3 (8)
+            250 BINARY_OP                0 (+)
+            254 BUILD_SLICE              2
+            256 BINARY_SUBSCR
+            266 PRECALL                  1
+            270 CALL                     1
+            280 LOAD_METHOD              5 (hex)
+            302 PRECALL                  0
+            306 CALL                     0
+
+ 71         316 LOAD_FAST                2 (value)
+
+ 72         318 LOAD_GLOBAL             13 (NULL + classify_value)
+            330 LOAD_FAST                2 (value)
+            332 PRECALL                  1
+            336 CALL                     1
+
+ 68         346 LOAD_CONST               6 (('offset', 'tag', 'value', 'kind'))
+            348 BUILD_CONST_KEY_MAP      4
+            350 YIELD_VALUE
+            352 RESUME                   1
+            354 POP_TOP
+
+ 74     >>  356 LOAD_FAST                0 (mm)
+            358 LOAD_METHOD              0 (find)
+            380 LOAD_GLOBAL              2 (ENTRY_PREFIX)
+            392 LOAD_FAST                1 (off)
+            394 LOAD_CONST               7 (1)
+            396 BINARY_OP                0 (+)
+            400 PRECALL                  2
+            404 CALL                     2
+            414 STORE_FAST               1 (off)
+
+ 65         416 LOAD_FAST                1 (off)
+            418 LOAD_CONST               1 (0)
+            420 COMPARE_OP               5 (>=)
+            426 POP_JUMP_BACKWARD_IF_TRUE   179 (to 70)
+            428 LOAD_CONST               0 (None)
+            430 RETURN_VALUE
+        >>  432 LOAD_CONST               0 (None)
+            434 RETURN_VALUE
+
+Disassembly of <code object extract_key_votes at 0x9c51cf800, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 77>:
+ 77           0 RESUME                   0
+
+ 78           2 LOAD_GLOBAL              1 (NULL + defaultdict)
+             14 LOAD_GLOBAL              2 (Counter)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 STORE_FAST               3 (key_votes)
+
+ 79          42 LOAD_GLOBAL              1 (NULL + defaultdict)
+             54 LOAD_GLOBAL              4 (set)
+             66 PRECALL                  1
+             70 CALL                     1
+             80 STORE_FAST               4 (key_offsets)
+
+ 80          82 LOAD_GLOBAL              1 (NULL + defaultdict)
+             94 LOAD_GLOBAL              2 (Counter)
+            106 PRECALL                  1
+            110 CALL                     1
+            120 STORE_FAST               5 (iv_candidates)
+
+ 82         122 LOAD_GLOBAL              7 (NULL + enumerate)
+            134 LOAD_FAST                0 (entries)
+            136 PRECALL                  1
+            140 CALL                     1
+            150 GET_ITER
+        >>  152 EXTENDED_ARG             1
+            154 FOR_ITER               315 (to 786)
+            156 UNPACK_SEQUENCE          2
+            160 STORE_FAST               6 (index)
+            162 STORE_FAST               7 (entry)
+
+ 83         164 LOAD_FAST                7 (entry)
+            166 LOAD_CONST               1 ('kind')
+            168 BINARY_SUBSCR
+            178 LOAD_CONST               2 ('kid')
+            180 COMPARE_OP               3 (!=)
+            186 POP_JUMP_FORWARD_IF_FALSE     1 (to 190)
+
+ 84         188 JUMP_BACKWARD           19 (to 152)
+
+ 85     >>  190 LOAD_FAST                7 (entry)
+            192 LOAD_CONST               3 ('value')
+            194 BINARY_SUBSCR
+            204 LOAD_METHOD              4 (hex)
+            226 PRECALL                  0
+            230 CALL                     0
+            240 STORE_FAST               8 (kid)
+
+ 86         242 LOAD_FAST                7 (entry)
+            244 LOAD_CONST               4 ('offset')
+            246 BINARY_SUBSCR
+            256 STORE_FAST               9 (kid_off)
+
+ 88         258 LOAD_FAST                0 (entries)
+            260 LOAD_FAST                6 (index)
+            262 LOAD_CONST               5 (1)
+            264 BINARY_OP                0 (+)
+            268 LOAD_FAST                6 (index)
+            270 LOAD_CONST               6 (16)
+            272 BINARY_OP                0 (+)
+            276 BUILD_SLICE              2
+            278 BINARY_SUBSCR
+            288 GET_ITER
+        >>  290 FOR_ITER               118 (to 528)
+            292 STORE_FAST              10 (other)
+
+ 89         294 LOAD_FAST               10 (other)
+            296 LOAD_CONST               4 ('offset')
+            298 BINARY_SUBSCR
+            308 LOAD_FAST                9 (kid_off)
+            310 BINARY_OP               10 (-)
+            314 STORE_FAST              11 (delta)
+
+ 90         316 LOAD_FAST               11 (delta)
+            318 LOAD_FAST                1 (lookahead_bytes)
+            320 COMPARE_OP               4 (>)
+            326 POP_JUMP_FORWARD_IF_FALSE     2 (to 332)
+
+ 91         328 POP_TOP
+            330 JUMP_FORWARD            98 (to 528)
+
+ 92     >>  332 LOAD_FAST               10 (other)
+            334 LOAD_CONST               1 ('kind')
+            336 BINARY_SUBSCR
+            346 LOAD_CONST               7 ('key')
+            348 COMPARE_OP               2 (==)
+            354 POP_JUMP_FORWARD_IF_FALSE    85 (to 526)
+
+ 93         356 LOAD_FAST               10 (other)
+            358 LOAD_CONST               3 ('value')
+            360 BINARY_SUBSCR
+            370 LOAD_METHOD              4 (hex)
+            392 PRECALL                  0
+            396 CALL                     0
+            406 STORE_FAST              12 (key_hex)
+
+ 94         408 LOAD_FAST                3 (key_votes)
+            410 LOAD_FAST                8 (kid)
+            412 BINARY_SUBSCR
+            422 LOAD_FAST               12 (key_hex)
+            424 COPY                     2
+            426 COPY                     2
+            428 BINARY_SUBSCR
+            438 LOAD_CONST               5 (1)
+            440 BINARY_OP               13 (+=)
+            444 SWAP                     3
+            446 SWAP                     2
+            448 STORE_SUBSCR
+
+ 95         452 LOAD_FAST                4 (key_offsets)
+            454 LOAD_FAST                8 (kid)
+            456 LOAD_FAST               12 (key_hex)
+            458 BUILD_TUPLE              2
+            460 BINARY_SUBSCR
+            470 LOAD_METHOD              5 (add)
+            492 LOAD_FAST               10 (other)
+            494 LOAD_CONST               4 ('offset')
+            496 BINARY_SUBSCR
+            506 PRECALL                  1
+            510 CALL                     1
+            520 POP_TOP
+
+ 96         522 POP_TOP
+            524 JUMP_FORWARD             1 (to 528)
+
+ 92     >>  526 JUMP_BACKWARD          119 (to 290)
+
+ 98     >>  528 LOAD_FAST                0 (entries)
+            530 LOAD_GLOBAL             13 (NULL + max)
+            542 LOAD_CONST               8 (0)
+            544 LOAD_FAST                6 (index)
+            546 LOAD_CONST               9 (64)
+            548 BINARY_OP               10 (-)
+            552 PRECALL                  2
+            556 CALL                     2
+            566 LOAD_FAST                6 (index)
+            568 LOAD_CONST              10 (65)
+            570 BINARY_OP                0 (+)
+            574 BUILD_SLICE              2
+            576 BINARY_SUBSCR
+            586 GET_ITER
+        >>  588 FOR_ITER                96 (to 782)
+            590 STORE_FAST              10 (other)
+
+ 99         592 LOAD_GLOBAL             15 (NULL + abs)
+            604 LOAD_FAST               10 (other)
+            606 LOAD_CONST               4 ('offset')
+            608 BINARY_SUBSCR
+            618 LOAD_FAST                9 (kid_off)
+            620 BINARY_OP               10 (-)
+            624 PRECALL                  1
+            628 CALL                     1
+            638 LOAD_FAST                2 (iv_window)
+            640 COMPARE_OP               1 (<=)
+            646 POP_JUMP_FORWARD_IF_FALSE    66 (to 780)
+            648 LOAD_FAST               10 (other)
+            650 LOAD_CONST               1 ('kind')
+            652 BINARY_SUBSCR
+            662 LOAD_CONST              11 ('iv')
+            664 COMPARE_OP               2 (==)
+            670 POP_JUMP_FORWARD_IF_FALSE    54 (to 780)
+
+100         672 LOAD_FAST                5 (iv_candidates)
+            674 LOAD_FAST                8 (kid)
+            676 BINARY_SUBSCR
+            686 LOAD_FAST               10 (other)
+            688 LOAD_CONST               3 ('value')
+            690 BINARY_SUBSCR
+            700 LOAD_CONST               0 (None)
+            702 LOAD_CONST              12 (8)
+            704 BUILD_SLICE              2
+            706 BINARY_SUBSCR
+            716 LOAD_METHOD              4 (hex)
+            738 PRECALL                  0
+            742 CALL                     0
+            752 COPY                     2
+            754 COPY                     2
+            756 BINARY_SUBSCR
+            766 LOAD_CONST               5 (1)
+            768 BINARY_OP               13 (+=)
+            772 SWAP                     3
+            774 SWAP                     2
+            776 STORE_SUBSCR
+        >>  780 JUMP_BACKWARD           97 (to 588)
+
+ 98     >>  782 EXTENDED_ARG             1
+            784 JUMP_BACKWARD          317 (to 152)
+
+102     >>  786 LOAD_FAST                3 (key_votes)
+            788 LOAD_FAST                4 (key_offsets)
+            790 LOAD_FAST                5 (iv_candidates)
+            792 BUILD_TUPLE              3
+            794 RETURN_VALUE
+
+Disassembly of <code object decoded_spade_hex at 0x10ad33210, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 105>:
+105           0 RESUME                   0
+
+106           2 NOP
+
+107           4 LOAD_GLOBAL              1 (NULL + base64)
+             16 LOAD_ATTR                1 (b64decode)
+             26 LOAD_FAST                0 (spade)
+             28 PRECALL                  1
+             32 CALL                     1
+             42 LOAD_METHOD              2 (hex)
+             64 PRECALL                  0
+             68 CALL                     0
+             78 RETURN_VALUE
+        >>   80 PUSH_EXC_INFO
+
+108          82 LOAD_GLOBAL              6 (Exception)
+             94 CHECK_EXC_MATCH
+             96 POP_JUMP_FORWARD_IF_FALSE     4 (to 106)
+             98 POP_TOP
+
+109         100 POP_EXCEPT
+            102 LOAD_CONST               0 (None)
+            104 RETURN_VALUE
+
+108     >>  106 RERAISE                  0
+        >>  108 COPY                     3
+            110 POP_EXCEPT
+            112 RERAISE                  1
+ExceptionTable:
+  4 to 76 -> 80 [0]
+  80 to 98 -> 108 [1] lasti
+  106 to 106 -> 108 [1] lasti
+
+Disassembly of <code object build_report at 0x9c52bc000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 112>:
+              0 MAKE_CELL               19 (pref)
+
+112           2 RESUME                   0
+
+113           4 LOAD_FAST                0 (dump_path)
+              6 LOAD_METHOD              0 (open)
+             28 LOAD_CONST               1 ('rb')
+             30 PRECALL                  1
+             34 CALL                     1
+             44 BEFORE_WITH
+             46 STORE_FAST               3 (f)
+
+114          48 LOAD_GLOBAL              3 (NULL + mmap)
+             60 LOAD_ATTR                1 (mmap)
+             70 LOAD_FAST                3 (f)
+             72 LOAD_METHOD              2 (fileno)
+             94 PRECALL                  0
+             98 CALL                     0
+            108 LOAD_CONST               2 (0)
+            110 LOAD_GLOBAL              2 (mmap)
+            122 LOAD_ATTR                3 (ACCESS_READ)
+            132 KW_NAMES                 3
+            134 PRECALL                  3
+            138 CALL                     3
+            148 STORE_FAST               4 (mm)
+
+115         150 LOAD_GLOBAL              9 (NULL + extract_mkid_spade)
+            162 LOAD_FAST                4 (mm)
+            164 PRECALL                  1
+            168 CALL                     1
+            178 STORE_FAST               5 (spades)
+
+116         180 LOAD_GLOBAL             11 (NULL + list)
+            192 LOAD_GLOBAL             13 (NULL + iter_keybox_entries)
+            204 LOAD_FAST                4 (mm)
+            206 PRECALL                  1
+            210 CALL                     1
+            220 PRECALL                  1
+            224 CALL                     1
+            234 STORE_FAST               6 (entries)
+
+117         236 LOAD_GLOBAL             15 (NULL + extract_key_votes)
+
+118         248 LOAD_FAST                6 (entries)
+            250 LOAD_FAST                1 (lookahead_bytes)
+            252 LOAD_FAST                2 (iv_window)
+
+117         254 KW_NAMES                 4
+            256 PRECALL                  3
+            260 CALL                     3
+            270 UNPACK_SEQUENCE          3
+            274 STORE_FAST               7 (key_votes)
+            276 STORE_FAST               8 (key_offsets)
+            278 STORE_FAST               9 (iv_candidates)
+
+113         280 LOAD_CONST               0 (None)
+            282 LOAD_CONST               0 (None)
+            284 LOAD_CONST               0 (None)
+            286 PRECALL                  2
+            290 CALL                     2
+            300 POP_TOP
+            302 JUMP_FORWARD            11 (to 326)
+        >>  304 PUSH_EXC_INFO
+            306 WITH_EXCEPT_START
+            308 POP_JUMP_FORWARD_IF_TRUE     4 (to 318)
+            310 RERAISE                  2
+        >>  312 COPY                     3
+            314 POP_EXCEPT
+            316 RERAISE                  1
+        >>  318 POP_TOP
+            320 POP_EXCEPT
+            322 POP_TOP
+            324 POP_TOP
+
+121     >>  326 BUILD_LIST               0
+            328 STORE_FAST              10 (joined)
+
+122         330 LOAD_GLOBAL             17 (NULL + sorted)
+            342 LOAD_GLOBAL             19 (NULL + set)
+            354 LOAD_FAST                5 (spades)
+            356 PRECALL                  1
+            360 CALL                     1
+            370 LOAD_GLOBAL             19 (NULL + set)
+            382 LOAD_FAST                7 (key_votes)
+            384 PRECALL                  1
+            388 CALL                     1
+            398 BINARY_OP                7 (|)
+            402 PRECALL                  1
+            406 CALL                     1
+            416 STORE_FAST              11 (all_kids)
+
+123         418 LOAD_FAST               11 (all_kids)
+            420 GET_ITER
+        >>  422 EXTENDED_ARG             1
+            424 FOR_ITER               329 (to 1084)
+            426 STORE_FAST              12 (kid)
+
+124         428 LOAD_GLOBAL             17 (NULL + sorted)
+            440 LOAD_FAST                5 (spades)
+            442 LOAD_METHOD             10 (get)
+            464 LOAD_FAST               12 (kid)
+            466 LOAD_CONST               5 (())
+            468 PRECALL                  2
+            472 CALL                     2
+            482 PRECALL                  1
+            486 CALL                     1
+            496 STORE_FAST              13 (spade_values)
+
+125         498 BUILD_LIST               0
+            500 STORE_FAST              14 (keys)
+
+126         502 LOAD_FAST                7 (key_votes)
+            504 LOAD_METHOD             10 (get)
+            526 LOAD_FAST               12 (kid)
+            528 LOAD_GLOBAL             23 (NULL + Counter)
+            540 PRECALL                  0
+            544 CALL                     0
+            554 PRECALL                  2
+            558 CALL                     2
+            568 LOAD_METHOD             12 (most_common)
+            590 PRECALL                  0
+            594 CALL                     0
+            604 GET_ITER
+        >>  606 FOR_ITER                48 (to 704)
+            608 UNPACK_SEQUENCE          2
+            612 STORE_FAST              15 (key_hex)
+            614 STORE_FAST              16 (count)
+
+127         616 LOAD_FAST               14 (keys)
+            618 LOAD_METHOD             13 (append)
+
+129         640 LOAD_FAST               15 (key_hex)
+
+130         642 LOAD_FAST               16 (count)
+
+131         644 LOAD_CONST               6 (<code object <listcomp> at 0x10adb0a80, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 131>)
+            646 MAKE_FUNCTION            0
+            648 LOAD_FAST                8 (key_offsets)
+            650 LOAD_FAST               12 (kid)
+            652 LOAD_FAST               15 (key_hex)
+            654 BUILD_TUPLE              2
+            656 BINARY_SUBSCR
+            666 GET_ITER
+            668 PRECALL                  0
+            672 CALL                     0
+
+128         682 LOAD_CONST               7 (('key', 'votes', 'offsets'))
+            684 BUILD_CONST_KEY_MAP      3
+
+127         686 PRECALL                  1
+            690 CALL                     1
+            700 POP_TOP
+            702 JUMP_BACKWARD           49 (to 606)
+
+134     >>  704 LOAD_FAST                9 (iv_candidates)
+            706 LOAD_METHOD             10 (get)
+            728 LOAD_FAST               12 (kid)
+            730 LOAD_GLOBAL             23 (NULL + Counter)
+            742 PRECALL                  0
+            746 CALL                     0
+            756 PRECALL                  2
+            760 CALL                     2
+            770 STORE_FAST              17 (ivc)
+
+136         772 LOAD_CONST               0 (None)
+            774 STORE_FAST              18 (base_iv64)
+
+137         776 LOAD_FAST               17 (ivc)
+            778 POP_JUMP_FORWARD_IF_FALSE    83 (to 946)
+
+138         780 LOAD_GLOBAL             23 (NULL + Counter)
+            792 LOAD_CONST               8 (<code object <genexpr> at 0x10adb0b70, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 138>)
+            794 MAKE_FUNCTION            0
+            796 LOAD_FAST               17 (ivc)
+            798 GET_ITER
+            800 PRECALL                  0
+            804 CALL                     0
+            814 PRECALL                  1
+            818 CALL                     1
+            828 LOAD_METHOD             12 (most_common)
+            850 LOAD_CONST               9 (1)
+            852 PRECALL                  1
+            856 CALL                     1
+            866 LOAD_CONST               2 (0)
+            868 BINARY_SUBSCR
+            878 LOAD_CONST               2 (0)
+            880 BINARY_SUBSCR
+            890 STORE_DEREF             19 (pref)
+
+139         892 LOAD_GLOBAL             29 (NULL + min)
+            904 LOAD_CLOSURE            19 (pref)
+            906 BUILD_TUPLE              1
+            908 LOAD_CONST              10 (<code object <genexpr> at 0x10adb0c60, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 139>)
+            910 MAKE_FUNCTION            8 (closure)
+            912 LOAD_FAST               17 (ivc)
+            914 GET_ITER
+            916 PRECALL                  0
+            920 CALL                     0
+            930 PRECALL                  1
+            934 CALL                     1
+            944 STORE_FAST              18 (base_iv64)
+
+140     >>  946 LOAD_FAST               10 (joined)
+            948 LOAD_METHOD             13 (append)
+
+142         970 LOAD_FAST               12 (kid)
+
+143         972 LOAD_FAST               13 (spade_values)
+
+144         974 LOAD_CONST              11 (<code object <listcomp> at 0x10adb0d50, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 144>)
+            976 MAKE_FUNCTION            0
+            978 LOAD_FAST               13 (spade_values)
+            980 GET_ITER
+            982 PRECALL                  0
+            986 CALL                     0
+
+145         996 LOAD_FAST               14 (keys)
+
+146         998 LOAD_FAST               18 (base_iv64)
+
+147        1000 LOAD_CONST              12 (<code object <listcomp> at 0x10acee790, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 147>)
+           1002 MAKE_FUNCTION            0
+
+149        1004 LOAD_FAST               17 (ivc)
+           1006 LOAD_METHOD             12 (most_common)
+           1028 LOAD_CONST              13 (16)
+           1030 PRECALL                  1
+           1034 CALL                     1
+
+147        1044 GET_ITER
+           1046 PRECALL                  0
+           1050 CALL                     0
+
+141        1060 LOAD_CONST              14 (('kid', 'spade_a', 'spade_bytes', 'keys', 'base_iv64', 'iv8_candidates'))
+           1062 BUILD_CONST_KEY_MAP      6
+
+140        1064 PRECALL                  1
+           1068 CALL                     1
+           1078 POP_TOP
+           1080 EXTENDED_ARG             1
+           1082 JUMP_BACKWARD          331 (to 422)
+
+155     >> 1084 LOAD_GLOBAL             31 (NULL + str)
+           1096 LOAD_FAST                0 (dump_path)
+           1098 PRECALL                  1
+           1102 CALL                     1
+
+156        1112 LOAD_GLOBAL             33 (NULL + dict)
+           1124 LOAD_GLOBAL             23 (NULL + Counter)
+           1136 LOAD_CONST              15 (<code object <genexpr> at 0x10aceecd0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 156>)
+           1138 MAKE_FUNCTION            0
+           1140 LOAD_FAST                6 (entries)
+           1142 GET_ITER
+           1144 PRECALL                  0
+           1148 CALL                     0
+           1158 PRECALL                  1
+           1162 CALL                     1
+           1172 PRECALL                  1
+           1176 CALL                     1
+
+157        1186 LOAD_GLOBAL             35 (NULL + len)
+           1198 LOAD_FAST                5 (spades)
+           1200 PRECALL                  1
+           1204 CALL                     1
+
+158        1214 LOAD_GLOBAL             35 (NULL + len)
+           1226 LOAD_FAST                7 (key_votes)
+           1228 PRECALL                  1
+           1232 CALL                     1
+
+159        1242 LOAD_FAST               10 (joined)
+
+154        1244 LOAD_CONST              16 (('dump', 'entry_counts', 'mspade_kids', 'keybox_kids', 'joined'))
+           1246 BUILD_CONST_KEY_MAP      5
+           1248 RETURN_VALUE
+ExceptionTable:
+  46 to 278 -> 304 [1] lasti
+  304 to 310 -> 312 [3] lasti
+  318 to 318 -> 312 [3] lasti
+
+Disassembly of <code object <listcomp> at 0x10adb0a80, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 131>:
+131           0 RESUME                   0
+              2 BUILD_LIST               0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                17 (to 42)
+              8 STORE_FAST               1 (x)
+             10 LOAD_GLOBAL              1 (NULL + hex)
+             22 LOAD_FAST                1 (x)
+             24 PRECALL                  1
+             28 CALL                     1
+             38 LIST_APPEND              2
+             40 JUMP_BACKWARD           18 (to 6)
+        >>   42 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10adb0b70, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 138>:
+138           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                14 (to 38)
+             10 STORE_FAST               1 (iv)
+             12 LOAD_FAST                1 (iv)
+             14 LOAD_CONST               0 (None)
+             16 LOAD_CONST               1 (12)
+             18 BUILD_SLICE              2
+             20 BINARY_SUBSCR
+             30 YIELD_VALUE
+             32 RESUME                   1
+             34 POP_TOP
+             36 JUMP_BACKWARD           15 (to 8)
+        >>   38 LOAD_CONST               0 (None)
+             40 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10adb0c60, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 139>:
+              0 COPY_FREE_VARS           1
+
+139           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                20 (to 52)
+             12 STORE_FAST               1 (iv)
+             14 LOAD_FAST                1 (iv)
+             16 LOAD_CONST               0 (None)
+             18 LOAD_CONST               1 (12)
+             20 BUILD_SLICE              2
+             22 BINARY_SUBSCR
+             32 LOAD_DEREF               2 (pref)
+             34 COMPARE_OP               2 (==)
+             40 POP_JUMP_BACKWARD_IF_FALSE    16 (to 10)
+             42 LOAD_FAST                1 (iv)
+             44 YIELD_VALUE
+             46 RESUME                   1
+             48 POP_TOP
+             50 JUMP_BACKWARD           21 (to 10)
+        >>   52 LOAD_CONST               0 (None)
+             54 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10adb0d50, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 144>:
+144           0 RESUME                   0
+              2 BUILD_LIST               0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                17 (to 42)
+              8 STORE_FAST               1 (x)
+             10 LOAD_GLOBAL              1 (NULL + decoded_spade_hex)
+             22 LOAD_FAST                1 (x)
+             24 PRECALL                  1
+             28 CALL                     1
+             38 LIST_APPEND              2
+             40 JUMP_BACKWARD           18 (to 6)
+        >>   42 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10acee790, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 147>:
+147           0 RESUME                   0
+              2 BUILD_LIST               0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                10 (to 28)
+
+149           8 UNPACK_SEQUENCE          2
+             12 STORE_FAST               1 (iv)
+             14 STORE_FAST               2 (count)
+
+148          16 LOAD_FAST                1 (iv)
+             18 LOAD_FAST                2 (count)
+             20 LOAD_CONST               0 (('iv8', 'votes'))
+             22 BUILD_CONST_KEY_MAP      2
+
+147          24 LIST_APPEND              2
+             26 JUMP_BACKWARD           11 (to 6)
+        >>   28 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10aceecd0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 156>:
+156           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                12 (to 34)
+             10 STORE_FAST               1 (e)
+             12 LOAD_FAST                1 (e)
+             14 LOAD_CONST               0 ('kind')
+             16 BINARY_SUBSCR
+             26 YIELD_VALUE
+             28 RESUME                   1
+             30 POP_TOP
+             32 JUMP_BACKWARD           13 (to 8)
+        >>   34 LOAD_CONST               1 (None)
+             36 RETURN_VALUE
+
+Disassembly of <code object main at 0x9c51f9400, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\extract_keybox_pairs.py", line 163>:
+163           0 RESUME                   0
+
+164           2 LOAD_GLOBAL              1 (NULL + argparse)
+             14 LOAD_ATTR                1 (ArgumentParser)
+             24 PRECALL                  0
+             28 CALL                     0
+             38 STORE_FAST               0 (parser)
+
+165          40 LOAD_FAST                0 (parser)
+             42 LOAD_METHOD              2 (add_argument)
+             64 LOAD_CONST               1 ('dump')
+             66 LOAD_CONST               2 ('?')
+             68 LOAD_CONST               3 ('capture/e4.bin')
+             70 KW_NAMES                 4
+             72 PRECALL                  3
+             76 CALL                     3
+             86 POP_TOP
+
+166          88 LOAD_FAST                0 (parser)
+             90 LOAD_METHOD              2 (add_argument)
+            112 LOAD_CONST               5 ('-o')
+            114 LOAD_CONST               6 ('--output')
+            116 LOAD_CONST               7 ('capture/spade_key_pairs.auto.json')
+            118 KW_NAMES                 8
+            120 PRECALL                  3
+            124 CALL                     3
+            134 POP_TOP
+
+167         136 LOAD_FAST                0 (parser)
+            138 LOAD_METHOD              2 (add_argument)
+            160 LOAD_CONST               9 ('--lookahead-bytes')
+            162 LOAD_GLOBAL              6 (int)
+            174 LOAD_CONST              10 (256)
+            176 KW_NAMES                11
+            178 PRECALL                  3
+            182 CALL                     3
+            192 POP_TOP
+
+168         194 LOAD_FAST                0 (parser)
+            196 LOAD_METHOD              2 (add_argument)
+            218 LOAD_CONST              12 ('--iv-window')
+            220 LOAD_GLOBAL              6 (int)
+            232 LOAD_CONST              13 (512)
+            234 KW_NAMES                11
+            236 PRECALL                  3
+            240 CALL                     3
+            250 POP_TOP
+
+169         252 LOAD_FAST                0 (parser)
+            254 LOAD_METHOD              4 (parse_args)
+            276 PRECALL                  0
+            280 CALL                     0
+            290 STORE_FAST               1 (args)
+
+171         292 LOAD_GLOBAL             11 (NULL + build_report)
+
+172         304 LOAD_GLOBAL             13 (NULL + Path)
+            316 LOAD_FAST                1 (args)
+            318 LOAD_ATTR                7 (dump)
+            328 PRECALL                  1
+            332 CALL                     1
+
+173         342 LOAD_FAST                1 (args)
+            344 LOAD_ATTR                8 (lookahead_bytes)
+
+174         354 LOAD_FAST                1 (args)
+            356 LOAD_ATTR                9 (iv_window)
+
+171         366 KW_NAMES                14
+            368 PRECALL                  3
+            372 CALL                     3
+            382 STORE_FAST               2 (report)
+
+176         384 LOAD_GLOBAL             13 (NULL + Path)
+            396 LOAD_FAST                1 (args)
+            398 LOAD_ATTR               10 (output)
+            408 PRECALL                  1
+            412 CALL                     1
+            422 LOAD_METHOD             11 (write_text)
+            444 LOAD_GLOBAL             25 (NULL + json)
+            456 LOAD_ATTR               13 (dumps)
+            466 LOAD_FAST                2 (report)
+            468 LOAD_CONST              15 (2)
+            470 KW_NAMES                16
+            472 PRECALL                  2
+            476 CALL                     2
+            486 LOAD_CONST              17 ('utf-8')
+            488 KW_NAMES                18
+            490 PRECALL                  2
+            494 CALL                     2
+            504 POP_TOP
+
+178         506 LOAD_GLOBAL             29 (NULL + print)
+            518 LOAD_CONST              19 ('wrote ')
+            520 LOAD_FAST                1 (args)
+            522 LOAD_ATTR               10 (output)
+            532 FORMAT_VALUE             0
+            534 BUILD_STRING             2
+            536 PRECALL                  1
+            540 CALL                     1
+            550 POP_TOP
+
+179         552 LOAD_GLOBAL             29 (NULL + print)
+            564 LOAD_CONST              20 ('entry_counts=')
+            566 LOAD_FAST                2 (report)
+            568 LOAD_CONST              21 ('entry_counts')
+            570 BINARY_SUBSCR
+            580 FORMAT_VALUE             0
+            582 BUILD_STRING             2
+            584 PRECALL                  1
+            588 CALL                     1
+            598 POP_TOP
+
+180         600 LOAD_GLOBAL             29 (NULL + print)
+            612 LOAD_CONST              22 ('mspade_kids=')
+            614 LOAD_FAST                2 (report)
+            616 LOAD_CONST              23 ('mspade_kids')
+            618 BINARY_SUBSCR
+            628 FORMAT_VALUE             0
+            630 LOAD_CONST              24 (' keybox_kids=')
+            632 LOAD_FAST                2 (report)
+            634 LOAD_CONST              25 ('keybox_kids')
+            636 BINARY_SUBSCR
+            646 FORMAT_VALUE             0
+            648 BUILD_STRING             4
+            650 PRECALL                  1
+            654 CALL                     1
+            664 POP_TOP
+
+181         666 LOAD_FAST                2 (report)
+            668 LOAD_CONST              26 ('joined')
+            670 BINARY_SUBSCR
+            680 GET_ITER
+        >>  682 FOR_ITER                88 (to 860)
+            684 STORE_FAST               3 (item)
+
+182         686 LOAD_FAST                3 (item)
+            688 LOAD_CONST              27 ('keys')
+            690 BINARY_SUBSCR
+            700 POP_JUMP_FORWARD_IF_FALSE    78 (to 858)
+
+183         702 LOAD_FAST                3 (item)
+            704 LOAD_CONST              27 ('keys')
+            706 BINARY_SUBSCR
+            716 LOAD_CONST              28 (0)
+            718 BINARY_SUBSCR
+            728 STORE_FAST               4 (key)
+
+184         730 LOAD_GLOBAL             29 (NULL + print)
+
+185         742 LOAD_CONST              29 ('kid=')
+            744 LOAD_FAST                3 (item)
+            746 LOAD_CONST              30 ('kid')
+            748 BINARY_SUBSCR
+            758 FORMAT_VALUE             0
+            760 LOAD_CONST              31 (' key=')
+            762 LOAD_FAST                4 (key)
+            764 LOAD_CONST              32 ('key')
+            766 BINARY_SUBSCR
+            776 FORMAT_VALUE             0
+            778 LOAD_CONST              33 (' votes=')
+            780 LOAD_FAST                4 (key)
+            782 LOAD_CONST              34 ('votes')
+            784 BINARY_SUBSCR
+            794 FORMAT_VALUE             0
+            796 LOAD_CONST              35 (' spade_count=')
+
+186         798 LOAD_GLOBAL             31 (NULL + len)
+            810 LOAD_FAST                3 (item)
+            812 LOAD_CONST              36 ('spade_a')
+            814 BINARY_SUBSCR
+            824 PRECALL                  1
+            828 CALL                     1
+
+185         838 FORMAT_VALUE             0
+            840 BUILD_STRING             8
+
+184         842 PRECALL                  1
+            846 CALL                     1
+            856 POP_TOP
+        >>  858 JUMP_BACKWARD           89 (to 682)
+
+181     >>  860 LOAD_CONST               0 (None)
+            862 RETURN_VALUE

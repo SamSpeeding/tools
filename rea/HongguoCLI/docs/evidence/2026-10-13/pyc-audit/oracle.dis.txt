@@ -1,0 +1,2541 @@
+  0           0 RESUME                   0
+
+  2           2 NOP
+
+ 10           4 LOAD_CONST               0 (0)
+              6 LOAD_CONST               1 (None)
+              8 IMPORT_NAME              0 (argparse)
+             10 STORE_NAME               0 (argparse)
+             12 LOAD_CONST               0 (0)
+             14 LOAD_CONST               1 (None)
+             16 IMPORT_NAME              1 (os)
+             18 STORE_NAME               1 (os)
+             20 LOAD_CONST               0 (0)
+             22 LOAD_CONST               1 (None)
+             24 IMPORT_NAME              2 (re)
+             26 STORE_NAME               2 (re)
+             28 LOAD_CONST               0 (0)
+             30 LOAD_CONST               1 (None)
+             32 IMPORT_NAME              3 (subprocess)
+             34 STORE_NAME               3 (subprocess)
+             36 LOAD_CONST               0 (0)
+             38 LOAD_CONST               1 (None)
+             40 IMPORT_NAME              4 (sys)
+             42 STORE_NAME               4 (sys)
+             44 LOAD_CONST               0 (0)
+             46 LOAD_CONST               1 (None)
+             48 IMPORT_NAME              5 (time)
+             50 STORE_NAME               5 (time)
+             52 LOAD_CONST               0 (0)
+             54 LOAD_CONST               1 (None)
+             56 IMPORT_NAME              6 (gzip)
+             58 STORE_NAME               6 (gzip)
+             60 LOAD_CONST               0 (0)
+             62 LOAD_CONST               1 (None)
+             64 IMPORT_NAME              7 (shutil)
+             66 STORE_NAME               7 (shutil)
+             68 LOAD_CONST               0 (0)
+             70 LOAD_CONST               1 (None)
+             72 IMPORT_NAME              8 (struct)
+             74 STORE_NAME               8 (struct)
+
+ 11          76 LOAD_NAME                4 (sys)
+             78 LOAD_ATTR                9 (path)
+             88 LOAD_METHOD             10 (insert)
+            110 LOAD_CONST               0 (0)
+            112 LOAD_NAME                1 (os)
+            114 LOAD_ATTR                9 (path)
+            124 LOAD_METHOD             11 (dirname)
+            146 LOAD_NAME                1 (os)
+            148 LOAD_ATTR                9 (path)
+            158 LOAD_METHOD             12 (abspath)
+            180 LOAD_NAME               13 (__file__)
+            182 PRECALL                  1
+            186 CALL                     1
+            196 PRECALL                  1
+            200 CALL                     1
+            210 PRECALL                  2
+            214 CALL                     2
+            224 POP_TOP
+
+ 12         226 LOAD_CONST               0 (0)
+            228 LOAD_CONST               2 (('build_report',))
+            230 IMPORT_NAME             14 (extract_keybox_pairs)
+            232 IMPORT_FROM             15 (build_report)
+            234 STORE_NAME              15 (build_report)
+            236 POP_TOP
+
+ 13         238 LOAD_CONST               0 (0)
+            240 LOAD_CONST               3 (('Path',))
+            242 IMPORT_NAME             16 (pathlib)
+            244 IMPORT_FROM             17 (Path)
+            246 STORE_NAME              17 (Path)
+            248 POP_TOP
+
+ 16         250 LOAD_CONST               4 (<code object _ib at 0x10acd8c30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 16>)
+            252 MAKE_FUNCTION            0
+            254 STORE_NAME              18 (_ib)
+
+ 23         256 LOAD_CONST              28 ((0, None))
+            258 LOAD_CONST               5 (<code object _find at 0x10ab37b40, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 23>)
+            260 MAKE_FUNCTION            1 (defaults)
+            262 STORE_NAME              19 (_find)
+
+ 27         264 LOAD_CONST               6 (<code object _u32 at 0x10ade0030, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 27>)
+            266 MAKE_FUNCTION            0
+            268 STORE_NAME              20 (_u32)
+
+ 28         270 LOAD_CONST              29 ((b'vide',))
+            272 LOAD_CONST               8 (<code object parse_track_samples at 0x9c4e01c00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 28>)
+            274 MAKE_FUNCTION            1 (defaults)
+            276 STORE_NAME              21 (parse_track_samples)
+
+ 55         278 LOAD_CONST               9 (<code object parse_video_samples at 0x10ad32170, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 55>)
+            280 MAKE_FUNCTION            0
+            282 STORE_NAME              22 (parse_video_samples)
+
+ 59         284 LOAD_CONST              10 (<code object _nal_ok at 0x10ad98db0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 59>)
+            286 MAKE_FUNCTION            0
+            288 STORE_NAME              23 (_nal_ok)
+
+ 66         290 LOAD_CONST              11 (<code object verify_key_iv at 0x9c51f8000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 66>)
+            292 MAKE_FUNCTION            0
+            294 STORE_NAME              24 (verify_key_iv)
+
+100         296 LOAD_CONST              12 (<code object all_key_candidates at 0x9c4e07480, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 100>)
+            298 MAKE_FUNCTION            0
+            300 STORE_NAME              25 (all_key_candidates)
+
+115         302 LOAD_CONST              13 ('D:\\Program Files\\Netease\\MuMu Player 12\\shell\\adb.exe')
+            304 STORE_NAME              26 (ADB)
+
+116         306 LOAD_CONST              14 ('127.0.0.1:16384')
+            308 STORE_NAME              27 (DEV)
+
+117         310 BUILD_LIST               0
+            312 LOAD_CONST              15 (('dalvik', '.art]', '.vdex', '.oat', '.odex', 'gralloc', 'Ashmem', 'ashmem', 'jit-cache', 'boot-', 'framework', '/dev/', 'mali', 'kgsl', 'dmabuf', '.jar', '.apk', '[stack', 'linker', '[vdso', '[vvar'))
+            314 LIST_EXTEND              1
+            316 STORE_NAME              28 (EXCL)
+
+121         318 LOAD_CONST              16 (True)
+            320 LOAD_CONST              17 (600)
+            322 LOAD_CONST              18 (('capture', 'timeout'))
+            324 BUILD_CONST_KEY_MAP      2
+            326 LOAD_CONST              19 (<code object adb at 0x10ad32500, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 121>)
+            328 MAKE_FUNCTION            2 (kwdefaults)
+            330 STORE_NAME              29 (adb)
+
+125         332 LOAD_CONST              20 (<code object adb_su at 0x10adb08a0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 125>)
+            334 MAKE_FUNCTION            0
+            336 STORE_NAME              30 (adb_su)
+
+129         338 LOAD_CONST              21 (<code object get_pid at 0x10ad69730, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 129>)
+            340 MAKE_FUNCTION            0
+            342 STORE_NAME              31 (get_pid)
+
+134         344 LOAD_CONST              22 (<code object build_dumplist at 0x9c51cf000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 134>)
+            346 MAKE_FUNCTION            0
+            348 STORE_NAME              32 (build_dumplist)
+
+154         350 LOAD_CONST              23 (<code object do_dump at 0x9c51f8a00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 154>)
+            352 MAKE_FUNCTION            0
+            354 STORE_NAME              33 (do_dump)
+
+177         356 LOAD_CONST              24 (<code object report at 0x9c51cf400, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 177>)
+            358 MAKE_FUNCTION            0
+            360 STORE_NAME              34 (report)
+
+200         362 LOAD_CONST              25 (<code object collect_keys_ivs at 0x9c51d1200, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 200>)
+            364 MAKE_FUNCTION            0
+            366 STORE_NAME              35 (collect_keys_ivs)
+
+217         368 LOAD_CONST              26 (<code object main at 0x9c4e0aa00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 217>)
+            370 MAKE_FUNCTION            0
+            372 STORE_NAME              36 (main)
+
+242         374 LOAD_NAME               37 (__name__)
+            376 LOAD_CONST              27 ('__main__')
+            378 COMPARE_OP               2 (==)
+            384 POP_JUMP_FORWARD_IF_FALSE    12 (to 410)
+
+243         386 PUSH_NULL
+            388 LOAD_NAME               36 (main)
+            390 PRECALL                  0
+            394 CALL                     0
+            404 POP_TOP
+            406 LOAD_CONST               1 (None)
+            408 RETURN_VALUE
+
+242     >>  410 LOAD_CONST               1 (None)
+            412 RETURN_VALUE
+
+Disassembly of <code object _ib at 0x10acd8c30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 16>:
+ 16           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+
+ 17           6 LOAD_FAST                1 (s)
+              8 STORE_FAST               3 (o)
+
+ 18          10 LOAD_FAST                3 (o)
+             12 LOAD_CONST               1 (8)
+             14 BINARY_OP                0 (+)
+             18 LOAD_FAST                2 (e)
+             20 COMPARE_OP               1 (<=)
+             26 POP_JUMP_FORWARD_IF_FALSE   141 (to 310)
+
+ 19     >>   28 LOAD_GLOBAL              1 (NULL + struct)
+             40 LOAD_ATTR                1 (unpack)
+             50 LOAD_CONST               2 ('>I')
+             52 LOAD_FAST                0 (d)
+             54 LOAD_FAST                3 (o)
+             56 LOAD_FAST                3 (o)
+             58 LOAD_CONST               3 (4)
+             60 BINARY_OP                0 (+)
+             64 BUILD_SLICE              2
+             66 BINARY_SUBSCR
+             76 PRECALL                  2
+             80 CALL                     2
+             90 LOAD_CONST               4 (0)
+             92 BINARY_SUBSCR
+            102 STORE_FAST               4 (sz)
+            104 LOAD_FAST                0 (d)
+            106 LOAD_FAST                3 (o)
+            108 LOAD_CONST               3 (4)
+            110 BINARY_OP                0 (+)
+            114 LOAD_FAST                3 (o)
+            116 LOAD_CONST               1 (8)
+            118 BINARY_OP                0 (+)
+            122 BUILD_SLICE              2
+            124 BINARY_SUBSCR
+            134 STORE_FAST               5 (t)
+            136 LOAD_CONST               1 (8)
+            138 STORE_FAST               6 (hs)
+
+ 20         140 LOAD_FAST                4 (sz)
+            142 LOAD_CONST               5 (1)
+            144 COMPARE_OP               2 (==)
+            150 POP_JUMP_FORWARD_IF_FALSE    44 (to 240)
+            152 LOAD_GLOBAL              1 (NULL + struct)
+            164 LOAD_ATTR                1 (unpack)
+            174 LOAD_CONST               6 ('>Q')
+            176 LOAD_FAST                0 (d)
+            178 LOAD_FAST                3 (o)
+            180 LOAD_CONST               1 (8)
+            182 BINARY_OP                0 (+)
+            186 LOAD_FAST                3 (o)
+            188 LOAD_CONST               7 (16)
+            190 BINARY_OP                0 (+)
+            194 BUILD_SLICE              2
+            196 BINARY_SUBSCR
+            206 PRECALL                  2
+            210 CALL                     2
+            220 LOAD_CONST               4 (0)
+            222 BINARY_SUBSCR
+            232 STORE_FAST               4 (sz)
+            234 LOAD_CONST               7 (16)
+            236 STORE_FAST               6 (hs)
+            238 JUMP_FORWARD            11 (to 262)
+
+ 21     >>  240 LOAD_FAST                4 (sz)
+            242 LOAD_CONST               4 (0)
+            244 COMPARE_OP               2 (==)
+            250 POP_JUMP_FORWARD_IF_FALSE     5 (to 262)
+            252 LOAD_FAST                2 (e)
+            254 LOAD_FAST                3 (o)
+            256 BINARY_OP               10 (-)
+            260 STORE_FAST               4 (sz)
+
+ 22     >>  262 LOAD_FAST                5 (t)
+            264 LOAD_FAST                3 (o)
+            266 LOAD_FAST                4 (sz)
+            268 LOAD_FAST                6 (hs)
+            270 BUILD_TUPLE              4
+            272 YIELD_VALUE
+            274 RESUME                   1
+            276 POP_TOP
+            278 LOAD_FAST                3 (o)
+            280 LOAD_FAST                4 (sz)
+            282 BINARY_OP               13 (+=)
+            286 STORE_FAST               3 (o)
+
+ 18         288 LOAD_FAST                3 (o)
+            290 LOAD_CONST               1 (8)
+            292 BINARY_OP                0 (+)
+            296 LOAD_FAST                2 (e)
+            298 COMPARE_OP               1 (<=)
+            304 POP_JUMP_BACKWARD_IF_TRUE   139 (to 28)
+            306 LOAD_CONST               0 (None)
+            308 RETURN_VALUE
+        >>  310 LOAD_CONST               0 (None)
+            312 RETURN_VALUE
+
+Disassembly of <code object _find at 0x10ab37b40, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 23>:
+ 23           0 RESUME                   0
+
+ 24           2 LOAD_FAST                3 (e)
+              4 POP_JUMP_FORWARD_IF_NOT_NONE    15 (to 36)
+              6 LOAD_GLOBAL              1 (NULL + len)
+             18 LOAD_FAST                0 (d)
+             20 PRECALL                  1
+             24 CALL                     1
+             34 STORE_FAST               3 (e)
+
+ 25     >>   36 LOAD_GLOBAL              3 (NULL + _ib)
+             48 LOAD_FAST                0 (d)
+             50 LOAD_FAST                2 (s)
+             52 LOAD_FAST                3 (e)
+             54 PRECALL                  3
+             58 CALL                     3
+             68 GET_ITER
+        >>   70 FOR_ITER                82 (to 236)
+             72 UNPACK_SEQUENCE          4
+             76 STORE_FAST               4 (t)
+             78 STORE_FAST               5 (o)
+             80 STORE_FAST               6 (sz)
+             82 STORE_FAST               7 (hs)
+
+ 26          84 LOAD_FAST                4 (t)
+             86 LOAD_FAST                1 (p)
+             88 LOAD_CONST               1 (0)
+             90 BINARY_SUBSCR
+            100 COMPARE_OP               2 (==)
+            106 POP_JUMP_FORWARD_IF_FALSE    63 (to 234)
+            108 LOAD_GLOBAL              1 (NULL + len)
+            120 LOAD_FAST                1 (p)
+            122 PRECALL                  1
+            126 CALL                     1
+            136 LOAD_CONST               2 (1)
+            138 COMPARE_OP               2 (==)
+            144 POP_JUMP_FORWARD_IF_FALSE    10 (to 166)
+            146 LOAD_FAST                5 (o)
+            148 LOAD_FAST                7 (hs)
+            150 BINARY_OP                0 (+)
+            154 LOAD_FAST                5 (o)
+            156 LOAD_FAST                6 (sz)
+            158 BINARY_OP                0 (+)
+            162 BUILD_TUPLE              2
+            164 JUMP_FORWARD            31 (to 228)
+        >>  166 LOAD_GLOBAL              5 (NULL + _find)
+            178 LOAD_FAST                0 (d)
+            180 LOAD_FAST                1 (p)
+            182 LOAD_CONST               2 (1)
+            184 LOAD_CONST               0 (None)
+            186 BUILD_SLICE              2
+            188 BINARY_SUBSCR
+            198 LOAD_FAST                5 (o)
+            200 LOAD_FAST                7 (hs)
+            202 BINARY_OP                0 (+)
+            206 LOAD_FAST                5 (o)
+            208 LOAD_FAST                6 (sz)
+            210 BINARY_OP                0 (+)
+            214 PRECALL                  4
+            218 CALL                     4
+        >>  228 SWAP                     2
+            230 POP_TOP
+            232 RETURN_VALUE
+        >>  234 JUMP_BACKWARD           83 (to 70)
+
+ 25     >>  236 LOAD_CONST               0 (None)
+            238 RETURN_VALUE
+
+Disassembly of <code object _u32 at 0x10ade0030, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 27>:
+ 27           0 RESUME                   0
+              2 LOAD_GLOBAL              1 (NULL + struct)
+             14 LOAD_ATTR                1 (unpack)
+             24 LOAD_CONST               1 ('>I')
+             26 LOAD_FAST                0 (d)
+             28 LOAD_FAST                1 (o)
+             30 LOAD_FAST                1 (o)
+             32 LOAD_CONST               2 (4)
+             34 BINARY_OP                0 (+)
+             38 BUILD_SLICE              2
+             40 BINARY_SUBSCR
+             50 PRECALL                  2
+             54 CALL                     2
+             64 LOAD_CONST               3 (0)
+             66 BINARY_SUBSCR
+             76 RETURN_VALUE
+
+Disassembly of <code object parse_track_samples at 0x9c4e01c00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 28>:
+              0 MAKE_CELL                0 (d)
+              2 MAKE_CELL                1 (handler)
+              4 MAKE_CELL               25 (co64)
+              6 MAKE_CELL               26 (hdlr)
+              8 MAKE_CELL               27 (stco)
+             10 MAKE_CELL               28 (stsc)
+             12 MAKE_CELL               29 (stsz)
+
+ 28          14 RESUME                   0
+
+ 29          16 NOP
+
+ 31          18 LOAD_GLOBAL              1 (NULL + _find)
+             30 LOAD_DEREF               0 (d)
+             32 LOAD_CONST               1 (b'moov')
+             34 BUILD_LIST               1
+             36 PRECALL                  2
+             40 CALL                     2
+             50 STORE_FAST               2 (mv)
+
+ 32          52 LOAD_FAST                2 (mv)
+             54 POP_JUMP_FORWARD_IF_TRUE     4 (to 64)
+             56 BUILD_LIST               0
+             58 BUILD_LIST               0
+             60 BUILD_TUPLE              2
+             62 RETURN_VALUE
+
+ 33     >>   64 LOAD_CONST               2 (<code object <listcomp> at 0x10ad4b960, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 33>)
+             66 MAKE_FUNCTION            0
+             68 LOAD_GLOBAL              3 (NULL + _ib)
+             80 LOAD_DEREF               0 (d)
+             82 BUILD_LIST               1
+             84 LOAD_FAST                2 (mv)
+             86 LIST_EXTEND              1
+             88 LIST_TO_TUPLE
+             90 CALL_FUNCTION_EX         0
+             92 GET_ITER
+             94 PRECALL                  0
+             98 CALL                     0
+            108 STORE_FAST               3 (traks)
+
+ 34         110 LOAD_CLOSURE             0 (d)
+            112 BUILD_TUPLE              1
+            114 LOAD_CONST               3 (<code object hdlr at 0x10ad229d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 34>)
+            116 MAKE_FUNCTION            8 (closure)
+            118 STORE_DEREF             26 (hdlr)
+
+ 35         120 LOAD_CLOSURE             1 (handler)
+            122 LOAD_CLOSURE            26 (hdlr)
+            124 BUILD_TUPLE              2
+            126 LOAD_CONST               4 (<code object <listcomp> at 0x10adb05d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 35>)
+            128 MAKE_FUNCTION            8 (closure)
+            130 LOAD_FAST                3 (traks)
+            132 GET_ITER
+            134 PRECALL                  0
+            138 CALL                     0
+            148 STORE_FAST               4 (want)
+
+ 36         150 LOAD_FAST                4 (want)
+            152 POP_JUMP_FORWARD_IF_TRUE     4 (to 162)
+            154 BUILD_LIST               0
+            156 BUILD_LIST               0
+            158 BUILD_TUPLE              2
+            160 RETURN_VALUE
+
+ 37     >>  162 LOAD_GLOBAL              1 (NULL + _find)
+            174 LOAD_DEREF               0 (d)
+            176 BUILD_LIST               0
+            178 LOAD_CONST               5 ((b'mdia', b'minf', b'stbl'))
+            180 LIST_EXTEND              1
+            182 BUILD_LIST               2
+            184 LOAD_FAST                4 (want)
+            186 LOAD_CONST               6 (0)
+            188 BINARY_SUBSCR
+            198 LIST_EXTEND              1
+            200 LIST_TO_TUPLE
+            202 CALL_FUNCTION_EX         0
+            204 UNPACK_SEQUENCE          2
+            208 STORE_FAST               5 (s)
+            210 STORE_FAST               6 (e)
+
+ 38         212 LOAD_GLOBAL              1 (NULL + _find)
+            224 LOAD_DEREF               0 (d)
+            226 LOAD_CONST               7 (b'stsz')
+            228 BUILD_LIST               1
+            230 LOAD_FAST                5 (s)
+            232 LOAD_FAST                6 (e)
+            234 PRECALL                  4
+            238 CALL                     4
+            248 STORE_DEREF             29 (stsz)
+            250 LOAD_GLOBAL              1 (NULL + _find)
+            262 LOAD_DEREF               0 (d)
+            264 LOAD_CONST               8 (b'stco')
+            266 BUILD_LIST               1
+            268 LOAD_FAST                5 (s)
+            270 LOAD_FAST                6 (e)
+            272 PRECALL                  4
+            276 CALL                     4
+            286 STORE_DEREF             27 (stco)
+            288 LOAD_GLOBAL              1 (NULL + _find)
+            300 LOAD_DEREF               0 (d)
+            302 LOAD_CONST               9 (b'co64')
+            304 BUILD_LIST               1
+            306 LOAD_FAST                5 (s)
+            308 LOAD_FAST                6 (e)
+            310 PRECALL                  4
+            314 CALL                     4
+            324 STORE_DEREF             25 (co64)
+            326 LOAD_GLOBAL              1 (NULL + _find)
+            338 LOAD_DEREF               0 (d)
+            340 LOAD_CONST              10 (b'stsc')
+            342 BUILD_LIST               1
+            344 LOAD_FAST                5 (s)
+            346 LOAD_FAST                6 (e)
+            348 PRECALL                  4
+            352 CALL                     4
+            362 STORE_DEREF             28 (stsc)
+
+ 39         364 LOAD_GLOBAL              5 (NULL + _u32)
+            376 LOAD_DEREF               0 (d)
+            378 LOAD_DEREF              29 (stsz)
+            380 LOAD_CONST               6 (0)
+            382 BINARY_SUBSCR
+            392 LOAD_CONST              11 (4)
+            394 BINARY_OP                0 (+)
+            398 PRECALL                  2
+            402 CALL                     2
+            412 STORE_FAST               7 (ss)
+            414 LOAD_GLOBAL              5 (NULL + _u32)
+            426 LOAD_DEREF               0 (d)
+            428 LOAD_DEREF              29 (stsz)
+            430 LOAD_CONST               6 (0)
+            432 BINARY_SUBSCR
+            442 LOAD_CONST              12 (8)
+            444 BINARY_OP                0 (+)
+            448 PRECALL                  2
+            452 CALL                     2
+            462 STORE_FAST               8 (cnt)
+
+ 40         464 LOAD_FAST                7 (ss)
+            466 POP_JUMP_FORWARD_IF_FALSE     6 (to 480)
+            468 LOAD_FAST                7 (ss)
+            470 BUILD_LIST               1
+            472 LOAD_FAST                8 (cnt)
+            474 BINARY_OP                5 (*)
+            478 JUMP_FORWARD            27 (to 534)
+        >>  480 LOAD_CLOSURE             0 (d)
+            482 LOAD_CLOSURE            29 (stsz)
+            484 BUILD_TUPLE              2
+            486 LOAD_CONST              13 (<code object <listcomp> at 0x10ade0140, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 40>)
+            488 MAKE_FUNCTION            8 (closure)
+            490 LOAD_GLOBAL              7 (NULL + range)
+            502 LOAD_FAST                8 (cnt)
+            504 PRECALL                  1
+            508 CALL                     1
+            518 GET_ITER
+            520 PRECALL                  0
+            524 CALL                     0
+        >>  534 STORE_FAST               9 (sizes)
+
+ 41         536 LOAD_DEREF              27 (stco)
+            538 POP_JUMP_FORWARD_IF_FALSE    54 (to 648)
+            540 LOAD_GLOBAL              5 (NULL + _u32)
+            552 LOAD_DEREF               0 (d)
+            554 LOAD_DEREF              27 (stco)
+            556 LOAD_CONST               6 (0)
+            558 BINARY_SUBSCR
+            568 LOAD_CONST              11 (4)
+            570 BINARY_OP                0 (+)
+            574 PRECALL                  2
+            578 CALL                     2
+            588 STORE_FAST              10 (n)
+            590 LOAD_CLOSURE             0 (d)
+            592 LOAD_CLOSURE            27 (stco)
+            594 BUILD_TUPLE              2
+            596 LOAD_CONST              14 (<code object <listcomp> at 0x10ade0250, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 41>)
+            598 MAKE_FUNCTION            8 (closure)
+            600 LOAD_GLOBAL              7 (NULL + range)
+            612 LOAD_FAST               10 (n)
+            614 PRECALL                  1
+            618 CALL                     1
+            628 GET_ITER
+            630 PRECALL                  0
+            634 CALL                     0
+            644 STORE_FAST              11 (ch)
+            646 JUMP_FORWARD            53 (to 754)
+
+ 42     >>  648 LOAD_GLOBAL              5 (NULL + _u32)
+            660 LOAD_DEREF               0 (d)
+            662 LOAD_DEREF              25 (co64)
+            664 LOAD_CONST               6 (0)
+            666 BINARY_SUBSCR
+            676 LOAD_CONST              11 (4)
+            678 BINARY_OP                0 (+)
+            682 PRECALL                  2
+            686 CALL                     2
+            696 STORE_FAST              10 (n)
+            698 LOAD_CLOSURE            25 (co64)
+            700 LOAD_CLOSURE             0 (d)
+            702 BUILD_TUPLE              2
+            704 LOAD_CONST              15 (<code object <listcomp> at 0x10ad35920, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 42>)
+            706 MAKE_FUNCTION            8 (closure)
+            708 LOAD_GLOBAL              7 (NULL + range)
+            720 LOAD_FAST               10 (n)
+            722 PRECALL                  1
+            726 CALL                     1
+            736 GET_ITER
+            738 PRECALL                  0
+            742 CALL                     0
+            752 STORE_FAST              11 (ch)
+
+ 43     >>  754 LOAD_GLOBAL              5 (NULL + _u32)
+            766 LOAD_DEREF               0 (d)
+            768 LOAD_DEREF              28 (stsc)
+            770 LOAD_CONST               6 (0)
+            772 BINARY_SUBSCR
+            782 LOAD_CONST              11 (4)
+            784 BINARY_OP                0 (+)
+            788 PRECALL                  2
+            792 CALL                     2
+            802 STORE_FAST              12 (ne)
+            804 LOAD_CLOSURE             0 (d)
+            806 LOAD_CLOSURE            28 (stsc)
+            808 BUILD_TUPLE              2
+            810 LOAD_CONST              16 (<code object <listcomp> at 0x10ad98ab0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 43>)
+            812 MAKE_FUNCTION            8 (closure)
+            814 LOAD_GLOBAL              7 (NULL + range)
+            826 LOAD_FAST               12 (ne)
+            828 PRECALL                  1
+            832 CALL                     1
+            842 GET_ITER
+            844 PRECALL                  0
+            848 CALL                     0
+            858 STORE_FAST              13 (runs)
+            860 LOAD_CONST               6 (0)
+            862 BUILD_LIST               1
+            864 LOAD_GLOBAL              9 (NULL + len)
+            876 LOAD_FAST               11 (ch)
+            878 PRECALL                  1
+            882 CALL                     1
+            892 BINARY_OP                5 (*)
+            896 STORE_FAST              14 (spc)
+
+ 44         898 LOAD_GLOBAL             11 (NULL + enumerate)
+            910 LOAD_FAST               13 (runs)
+            912 PRECALL                  1
+            916 CALL                     1
+            926 GET_ITER
+        >>  928 FOR_ITER               125 (to 1180)
+            930 UNPACK_SEQUENCE          2
+            934 STORE_FAST              15 (i)
+            936 UNPACK_SEQUENCE          3
+            940 STORE_FAST              16 (fc)
+            942 STORE_FAST              17 (sp)
+            944 STORE_FAST              18 (sd)
+
+ 45         946 LOAD_FAST               15 (i)
+            948 LOAD_CONST              17 (1)
+            950 BINARY_OP                0 (+)
+            954 LOAD_GLOBAL              9 (NULL + len)
+            966 LOAD_FAST               13 (runs)
+            968 PRECALL                  1
+            972 CALL                     1
+            982 COMPARE_OP               0 (<)
+            988 POP_JUMP_FORWARD_IF_FALSE    20 (to 1030)
+            990 LOAD_FAST               13 (runs)
+            992 LOAD_FAST               15 (i)
+            994 LOAD_CONST              17 (1)
+            996 BINARY_OP                0 (+)
+           1000 BINARY_SUBSCR
+           1010 LOAD_CONST               6 (0)
+           1012 BINARY_SUBSCR
+           1022 LOAD_CONST              17 (1)
+           1024 BINARY_OP               10 (-)
+           1028 JUMP_FORWARD            14 (to 1058)
+        >> 1030 LOAD_GLOBAL              9 (NULL + len)
+           1042 LOAD_FAST               11 (ch)
+           1044 PRECALL                  1
+           1048 CALL                     1
+        >> 1058 STORE_FAST              19 (last)
+
+ 46        1060 LOAD_GLOBAL              7 (NULL + range)
+           1072 LOAD_FAST               16 (fc)
+           1074 LOAD_FAST               19 (last)
+           1076 LOAD_CONST              17 (1)
+           1078 BINARY_OP                0 (+)
+           1082 PRECALL                  2
+           1086 CALL                     2
+           1096 GET_ITER
+        >> 1098 FOR_ITER                39 (to 1178)
+           1100 STORE_FAST              20 (c)
+
+ 47        1102 LOAD_CONST              17 (1)
+           1104 LOAD_FAST               20 (c)
+           1106 SWAP                     2
+           1108 COPY                     2
+           1110 COMPARE_OP               1 (<=)
+           1116 POP_JUMP_FORWARD_IF_FALSE    19 (to 1156)
+           1118 LOAD_GLOBAL              9 (NULL + len)
+           1130 LOAD_FAST               11 (ch)
+           1132 PRECALL                  1
+           1136 CALL                     1
+           1146 COMPARE_OP               1 (<=)
+           1152 POP_JUMP_FORWARD_IF_FALSE    11 (to 1176)
+           1154 JUMP_FORWARD             2 (to 1160)
+        >> 1156 POP_TOP
+           1158 JUMP_BACKWARD           31 (to 1098)
+        >> 1160 LOAD_FAST               17 (sp)
+           1162 LOAD_FAST               14 (spc)
+           1164 LOAD_FAST               20 (c)
+           1166 LOAD_CONST              17 (1)
+           1168 BINARY_OP               10 (-)
+           1172 STORE_SUBSCR
+        >> 1176 JUMP_BACKWARD           40 (to 1098)
+
+ 46     >> 1178 JUMP_BACKWARD          126 (to 928)
+
+ 48     >> 1180 BUILD_LIST               0
+           1182 STORE_FAST              21 (offs)
+           1184 LOAD_CONST               6 (0)
+           1186 STORE_FAST              22 (si)
+
+ 49        1188 LOAD_GLOBAL              7 (NULL + range)
+           1200 LOAD_GLOBAL              9 (NULL + len)
+           1212 LOAD_FAST               11 (ch)
+           1214 PRECALL                  1
+           1218 CALL                     1
+           1228 PRECALL                  1
+           1232 CALL                     1
+           1242 GET_ITER
+        >> 1244 FOR_ITER                79 (to 1404)
+           1246 STORE_FAST              20 (c)
+
+ 50        1248 LOAD_FAST               11 (ch)
+           1250 LOAD_FAST               20 (c)
+           1252 BINARY_SUBSCR
+           1262 STORE_FAST              23 (off)
+
+ 51        1264 LOAD_GLOBAL              7 (NULL + range)
+           1276 LOAD_FAST               14 (spc)
+           1278 LOAD_FAST               20 (c)
+           1280 BINARY_SUBSCR
+           1290 PRECALL                  1
+           1294 CALL                     1
+           1304 GET_ITER
+        >> 1306 FOR_ITER                47 (to 1402)
+           1308 STORE_FAST              24 (_)
+
+ 52        1310 LOAD_FAST               22 (si)
+           1312 LOAD_FAST                8 (cnt)
+           1314 COMPARE_OP               5 (>=)
+           1320 POP_JUMP_FORWARD_IF_FALSE     2 (to 1326)
+           1322 POP_TOP
+           1324 JUMP_FORWARD            38 (to 1402)
+
+ 53     >> 1326 LOAD_FAST               21 (offs)
+           1328 LOAD_METHOD              6 (append)
+           1350 LOAD_FAST               23 (off)
+           1352 PRECALL                  1
+           1356 CALL                     1
+           1366 POP_TOP
+           1368 LOAD_FAST               23 (off)
+           1370 LOAD_FAST                9 (sizes)
+           1372 LOAD_FAST               22 (si)
+           1374 BINARY_SUBSCR
+           1384 BINARY_OP               13 (+=)
+           1388 STORE_FAST              23 (off)
+           1390 LOAD_FAST               22 (si)
+           1392 LOAD_CONST              17 (1)
+           1394 BINARY_OP               13 (+=)
+           1398 STORE_FAST              22 (si)
+           1400 JUMP_BACKWARD           48 (to 1306)
+        >> 1402 JUMP_BACKWARD           80 (to 1244)
+
+ 54     >> 1404 LOAD_FAST                9 (sizes)
+           1406 LOAD_FAST               21 (offs)
+           1408 BUILD_TUPLE              2
+           1410 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10ad4b960, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 33>:
+ 33           0 RESUME                   0
+              2 BUILD_LIST               0
+              4 LOAD_FAST                0 (.0)
+        >>    6 FOR_ITER                23 (to 54)
+              8 UNPACK_SEQUENCE          4
+             12 STORE_FAST               1 (t)
+             14 STORE_FAST               2 (o)
+             16 STORE_FAST               3 (sz)
+             18 STORE_FAST               4 (hs)
+             20 LOAD_FAST                1 (t)
+             22 LOAD_CONST               0 (b'trak')
+             24 COMPARE_OP               2 (==)
+             30 POP_JUMP_BACKWARD_IF_FALSE    13 (to 6)
+             32 LOAD_FAST                2 (o)
+             34 LOAD_FAST                4 (hs)
+             36 BINARY_OP                0 (+)
+             40 LOAD_FAST                2 (o)
+             42 LOAD_FAST                3 (sz)
+             44 BINARY_OP                0 (+)
+             48 BUILD_TUPLE              2
+             50 LIST_APPEND              2
+             52 JUMP_BACKWARD           24 (to 6)
+        >>   54 RETURN_VALUE
+
+Disassembly of <code object hdlr at 0x10ad229d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 34>:
+              0 COPY_FREE_VARS           1
+
+ 34           2 RESUME                   0
+              4 LOAD_GLOBAL              1 (NULL + _find)
+             16 LOAD_DEREF               2 (d)
+             18 LOAD_CONST               1 (b'mdia')
+             20 LOAD_CONST               2 (b'hdlr')
+             22 BUILD_LIST               2
+             24 BUILD_LIST               2
+             26 LOAD_FAST                0 (tr)
+             28 LIST_EXTEND              1
+             30 LIST_TO_TUPLE
+             32 CALL_FUNCTION_EX         0
+             34 STORE_FAST               1 (h)
+             36 LOAD_FAST                1 (h)
+             38 POP_JUMP_FORWARD_IF_FALSE    28 (to 96)
+             40 LOAD_DEREF               2 (d)
+             42 LOAD_FAST                1 (h)
+             44 LOAD_CONST               3 (0)
+             46 BINARY_SUBSCR
+             56 LOAD_CONST               4 (8)
+             58 BINARY_OP                0 (+)
+             62 LOAD_FAST                1 (h)
+             64 LOAD_CONST               3 (0)
+             66 BINARY_SUBSCR
+             76 LOAD_CONST               5 (12)
+             78 BINARY_OP                0 (+)
+             82 BUILD_SLICE              2
+             84 BINARY_SUBSCR
+             94 JUMP_FORWARD             1 (to 98)
+        >>   96 LOAD_CONST               0 (None)
+        >>   98 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10adb05d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 35>:
+              0 COPY_FREE_VARS           2
+
+ 35           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                19 (to 48)
+             10 STORE_FAST               1 (t)
+             12 PUSH_NULL
+             14 LOAD_DEREF               3 (hdlr)
+             16 LOAD_FAST                1 (t)
+             18 PRECALL                  1
+             22 CALL                     1
+             32 LOAD_DEREF               2 (handler)
+             34 COMPARE_OP               2 (==)
+             40 POP_JUMP_BACKWARD_IF_FALSE    17 (to 8)
+             42 LOAD_FAST                1 (t)
+             44 LIST_APPEND              2
+             46 JUMP_BACKWARD           20 (to 8)
+        >>   48 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10ade0140, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 40>:
+              0 COPY_FREE_VARS           2
+
+ 40           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                33 (to 76)
+             10 STORE_FAST               1 (i)
+             12 LOAD_GLOBAL              1 (NULL + _u32)
+             24 LOAD_DEREF               2 (d)
+             26 LOAD_DEREF               3 (stsz)
+             28 LOAD_CONST               0 (0)
+             30 BINARY_SUBSCR
+             40 LOAD_CONST               1 (12)
+             42 BINARY_OP                0 (+)
+             46 LOAD_CONST               2 (4)
+             48 LOAD_FAST                1 (i)
+             50 BINARY_OP                5 (*)
+             54 BINARY_OP                0 (+)
+             58 PRECALL                  2
+             62 CALL                     2
+             72 LIST_APPEND              2
+             74 JUMP_BACKWARD           34 (to 8)
+        >>   76 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10ade0250, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 41>:
+              0 COPY_FREE_VARS           2
+
+ 41           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                33 (to 76)
+             10 STORE_FAST               1 (i)
+             12 LOAD_GLOBAL              1 (NULL + _u32)
+             24 LOAD_DEREF               2 (d)
+             26 LOAD_DEREF               3 (stco)
+             28 LOAD_CONST               0 (0)
+             30 BINARY_SUBSCR
+             40 LOAD_CONST               1 (8)
+             42 BINARY_OP                0 (+)
+             46 LOAD_CONST               2 (4)
+             48 LOAD_FAST                1 (i)
+             50 BINARY_OP                5 (*)
+             54 BINARY_OP                0 (+)
+             58 PRECALL                  2
+             62 CALL                     2
+             72 LIST_APPEND              2
+             74 JUMP_BACKWARD           34 (to 8)
+        >>   76 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10ad35920, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 42>:
+              0 COPY_FREE_VARS           2
+
+ 42           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                67 (to 144)
+             10 STORE_FAST               1 (i)
+             12 LOAD_GLOBAL              1 (NULL + struct)
+             24 LOAD_ATTR                1 (unpack)
+             34 LOAD_CONST               0 ('>Q')
+             36 LOAD_DEREF               3 (d)
+             38 LOAD_DEREF               2 (co64)
+             40 LOAD_CONST               1 (0)
+             42 BINARY_SUBSCR
+             52 LOAD_CONST               2 (8)
+             54 BINARY_OP                0 (+)
+             58 LOAD_CONST               2 (8)
+             60 LOAD_FAST                1 (i)
+             62 BINARY_OP                5 (*)
+             66 BINARY_OP                0 (+)
+             70 LOAD_DEREF               2 (co64)
+             72 LOAD_CONST               1 (0)
+             74 BINARY_SUBSCR
+             84 LOAD_CONST               3 (16)
+             86 BINARY_OP                0 (+)
+             90 LOAD_CONST               2 (8)
+             92 LOAD_FAST                1 (i)
+             94 BINARY_OP                5 (*)
+             98 BINARY_OP                0 (+)
+            102 BUILD_SLICE              2
+            104 BINARY_SUBSCR
+            114 PRECALL                  2
+            118 CALL                     2
+            128 LOAD_CONST               1 (0)
+            130 BINARY_SUBSCR
+            140 LIST_APPEND              2
+            142 JUMP_BACKWARD           68 (to 8)
+        >>  144 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10ad98ab0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 43>:
+              0 COPY_FREE_VARS           2
+
+ 43           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                94 (to 198)
+             10 STORE_FAST               1 (i)
+             12 LOAD_GLOBAL              1 (NULL + _u32)
+             24 LOAD_DEREF               2 (d)
+             26 LOAD_DEREF               3 (stsc)
+             28 LOAD_CONST               0 (0)
+             30 BINARY_SUBSCR
+             40 LOAD_CONST               1 (8)
+             42 BINARY_OP                0 (+)
+             46 LOAD_CONST               2 (12)
+             48 LOAD_FAST                1 (i)
+             50 BINARY_OP                5 (*)
+             54 BINARY_OP                0 (+)
+             58 PRECALL                  2
+             62 CALL                     2
+             72 LOAD_GLOBAL              1 (NULL + _u32)
+             84 LOAD_DEREF               2 (d)
+             86 LOAD_DEREF               3 (stsc)
+             88 LOAD_CONST               0 (0)
+             90 BINARY_SUBSCR
+            100 LOAD_CONST               2 (12)
+            102 BINARY_OP                0 (+)
+            106 LOAD_CONST               2 (12)
+            108 LOAD_FAST                1 (i)
+            110 BINARY_OP                5 (*)
+            114 BINARY_OP                0 (+)
+            118 PRECALL                  2
+            122 CALL                     2
+            132 LOAD_GLOBAL              1 (NULL + _u32)
+            144 LOAD_DEREF               2 (d)
+            146 LOAD_DEREF               3 (stsc)
+            148 LOAD_CONST               0 (0)
+            150 BINARY_SUBSCR
+            160 LOAD_CONST               3 (16)
+            162 BINARY_OP                0 (+)
+            166 LOAD_CONST               2 (12)
+            168 LOAD_FAST                1 (i)
+            170 BINARY_OP                5 (*)
+            174 BINARY_OP                0 (+)
+            178 PRECALL                  2
+            182 CALL                     2
+            192 BUILD_TUPLE              3
+            194 LIST_APPEND              2
+            196 JUMP_BACKWARD           95 (to 8)
+        >>  198 RETURN_VALUE
+
+Disassembly of <code object parse_video_samples at 0x10ad32170, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 55>:
+ 55           0 RESUME                   0
+
+ 56           2 LOAD_GLOBAL              1 (NULL + open)
+             14 LOAD_FAST                0 (path)
+             16 LOAD_CONST               1 ('rb')
+             18 PRECALL                  2
+             22 CALL                     2
+             32 LOAD_METHOD              1 (read)
+             54 PRECALL                  0
+             58 CALL                     0
+             68 STORE_FAST               1 (d)
+
+ 57          70 LOAD_GLOBAL              5 (NULL + parse_track_samples)
+             82 LOAD_FAST                1 (d)
+             84 LOAD_CONST               2 (b'vide')
+             86 PRECALL                  2
+             90 CALL                     2
+            100 UNPACK_SEQUENCE          2
+            104 STORE_FAST               2 (sizes)
+            106 STORE_FAST               3 (offs)
+
+ 58         108 LOAD_FAST                1 (d)
+            110 LOAD_FAST                2 (sizes)
+            112 LOAD_FAST                3 (offs)
+            114 BUILD_TUPLE              3
+            116 RETURN_VALUE
+
+Disassembly of <code object _nal_ok at 0x10ad98db0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 59>:
+ 59           0 RESUME                   0
+
+ 60           2 LOAD_CONST               1 (0)
+              4 STORE_FAST               2 (p)
+
+ 61           6 LOAD_FAST                2 (p)
+              8 LOAD_CONST               2 (4)
+             10 BINARY_OP                0 (+)
+             14 LOAD_FAST                1 (sz)
+             16 COMPARE_OP               1 (<=)
+             22 POP_JUMP_FORWARD_IF_FALSE    75 (to 174)
+
+ 62     >>   24 LOAD_GLOBAL              1 (NULL + struct)
+             36 LOAD_ATTR                1 (unpack)
+             46 LOAD_CONST               3 ('>I')
+             48 LOAD_FAST                0 (pt)
+             50 LOAD_FAST                2 (p)
+             52 LOAD_FAST                2 (p)
+             54 LOAD_CONST               2 (4)
+             56 BINARY_OP                0 (+)
+             60 BUILD_SLICE              2
+             62 BINARY_SUBSCR
+             72 PRECALL                  2
+             76 CALL                     2
+             86 LOAD_CONST               1 (0)
+             88 BINARY_SUBSCR
+             98 STORE_FAST               3 (ln)
+
+ 63         100 LOAD_FAST                3 (ln)
+            102 LOAD_CONST               1 (0)
+            104 COMPARE_OP               2 (==)
+            110 POP_JUMP_FORWARD_IF_TRUE    12 (to 136)
+            112 LOAD_FAST                2 (p)
+            114 LOAD_CONST               2 (4)
+            116 BINARY_OP                0 (+)
+            120 LOAD_FAST                3 (ln)
+            122 BINARY_OP                0 (+)
+            126 LOAD_FAST                1 (sz)
+            128 COMPARE_OP               4 (>)
+            134 POP_JUMP_FORWARD_IF_FALSE     2 (to 140)
+        >>  136 LOAD_CONST               4 (False)
+            138 RETURN_VALUE
+
+ 64     >>  140 LOAD_FAST                2 (p)
+            142 LOAD_CONST               2 (4)
+            144 LOAD_FAST                3 (ln)
+            146 BINARY_OP                0 (+)
+            150 BINARY_OP               13 (+=)
+            154 STORE_FAST               2 (p)
+
+ 61         156 LOAD_FAST                2 (p)
+            158 LOAD_CONST               2 (4)
+            160 BINARY_OP                0 (+)
+            164 LOAD_FAST                1 (sz)
+            166 COMPARE_OP               1 (<=)
+            172 POP_JUMP_BACKWARD_IF_TRUE    75 (to 24)
+
+ 65     >>  174 LOAD_FAST                2 (p)
+            176 LOAD_FAST                1 (sz)
+            178 COMPARE_OP               2 (==)
+            184 RETURN_VALUE
+
+Disassembly of <code object verify_key_iv at 0x9c51f8000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 66>:
+ 66           0 RESUME                   0
+
+ 67           2 NOP
+
+ 69           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               2 (('AES',))
+              8 IMPORT_NAME              0 (Crypto.Cipher)
+             10 IMPORT_FROM              1 (AES)
+             12 STORE_FAST               3 (AES)
+             14 POP_TOP
+
+ 70          16 LOAD_CONST               1 (0)
+             18 LOAD_CONST               3 (('Counter',))
+             20 IMPORT_NAME              2 (Crypto.Util)
+             22 IMPORT_FROM              3 (Counter)
+             24 STORE_FAST               4 (Counter)
+             26 POP_TOP
+
+ 71          28 LOAD_GLOBAL              9 (NULL + parse_video_samples)
+             40 LOAD_FAST                0 (ct_path)
+             42 PRECALL                  1
+             46 CALL                     1
+             56 UNPACK_SEQUENCE          3
+             60 STORE_FAST               5 (d)
+             62 STORE_FAST               6 (sizes)
+             64 STORE_FAST               7 (offs)
+
+ 72          66 LOAD_FAST                6 (sizes)
+             68 POP_JUMP_FORWARD_IF_TRUE     2 (to 74)
+
+ 73          70 LOAD_CONST               4 ((None, None))
+             72 RETURN_VALUE
+
+ 74     >>   74 LOAD_FAST                7 (offs)
+             76 LOAD_CONST               1 (0)
+             78 BINARY_SUBSCR
+             88 LOAD_FAST                6 (sizes)
+             90 LOAD_CONST               1 (0)
+             92 BINARY_SUBSCR
+            102 STORE_FAST               9 (sz0)
+            104 STORE_FAST               8 (co0)
+
+ 75         106 LOAD_FAST                5 (d)
+            108 LOAD_FAST                8 (co0)
+            110 LOAD_FAST                8 (co0)
+            112 LOAD_CONST               5 (16)
+            114 BINARY_OP                0 (+)
+            118 BUILD_SLICE              2
+            120 BINARY_SUBSCR
+            130 STORE_FAST              10 (blk0)
+
+ 76         132 LOAD_GLOBAL             11 (NULL + print)
+            144 LOAD_CONST               6 ('  密文视频样本=')
+            146 LOAD_GLOBAL             13 (NULL + len)
+            158 LOAD_FAST                6 (sizes)
+            160 PRECALL                  1
+            164 CALL                     1
+            174 FORMAT_VALUE             0
+            176 LOAD_CONST               7 ('; 试 ')
+            178 LOAD_GLOBAL             13 (NULL + len)
+            190 LOAD_FAST                1 (keys)
+            192 PRECALL                  1
+            196 CALL                     1
+            206 FORMAT_VALUE             0
+            208 LOAD_CONST               8 (' key × ')
+            210 LOAD_GLOBAL             13 (NULL + len)
+            222 LOAD_FAST                2 (iv8s)
+            224 PRECALL                  1
+            228 CALL                     1
+            238 FORMAT_VALUE             0
+            240 LOAD_CONST               9 (' base_iv (首块快筛) ...')
+            242 BUILD_STRING             7
+            244 LOAD_CONST              10 (True)
+            246 KW_NAMES                11
+            248 PRECALL                  2
+            252 CALL                     2
+            262 POP_TOP
+
+ 77         264 LOAD_FAST                1 (keys)
+            266 GET_ITER
+        >>  268 EXTENDED_ARG             1
+            270 FOR_ITER               384 (to 1040)
+            272 STORE_FAST              11 (kh)
+
+ 78         274 LOAD_GLOBAL             14 (bytes)
+            286 LOAD_METHOD              8 (fromhex)
+            308 LOAD_FAST               11 (kh)
+            310 PRECALL                  1
+            314 CALL                     1
+            324 STORE_FAST              12 (K)
+
+ 79         326 LOAD_GLOBAL             13 (NULL + len)
+            338 LOAD_FAST               12 (K)
+            340 PRECALL                  1
+            344 CALL                     1
+            354 LOAD_CONST               5 (16)
+            356 COMPARE_OP               3 (!=)
+            362 POP_JUMP_FORWARD_IF_FALSE     1 (to 366)
+            364 JUMP_BACKWARD           49 (to 268)
+
+ 80     >>  366 BUILD_MAP                0
+            368 STORE_FAST              13 (ec)
+
+ 81         370 LOAD_FAST                2 (iv8s)
+            372 GET_ITER
+        >>  374 EXTENDED_ARG             1
+            376 FOR_ITER               329 (to 1036)
+            378 STORE_FAST              14 (ivh)
+
+ 82         380 LOAD_GLOBAL             19 (NULL + int)
+            392 LOAD_FAST               14 (ivh)
+            394 LOAD_CONST               5 (16)
+            396 PRECALL                  2
+            400 CALL                     2
+            410 STORE_FAST              15 (biv)
+
+ 84         412 LOAD_FAST                3 (AES)
+            414 LOAD_METHOD             10 (new)
+            436 LOAD_FAST               12 (K)
+            438 LOAD_FAST                3 (AES)
+            440 LOAD_ATTR               11 (MODE_CTR)
+            450 LOAD_FAST                4 (Counter)
+            452 LOAD_METHOD             10 (new)
+            474 LOAD_CONST              12 (128)
+            476 LOAD_FAST               15 (biv)
+            478 LOAD_CONST              13 (64)
+            480 BINARY_OP                3 (<<)
+            484 KW_NAMES                14
+            486 PRECALL                  2
+            490 CALL                     2
+            500 KW_NAMES                15
+            502 PRECALL                  3
+            506 CALL                     3
+            516 LOAD_METHOD             12 (decrypt)
+            538 LOAD_FAST               10 (blk0)
+            540 PRECALL                  1
+            544 CALL                     1
+            554 STORE_FAST              16 (pt0)
+
+ 85         556 LOAD_GLOBAL             27 (NULL + struct)
+            568 LOAD_ATTR               14 (unpack)
+            578 LOAD_CONST              16 ('>I')
+            580 LOAD_FAST               16 (pt0)
+            582 LOAD_CONST               0 (None)
+            584 LOAD_CONST              17 (4)
+            586 BUILD_SLICE              2
+            588 BINARY_SUBSCR
+            598 PRECALL                  2
+            602 CALL                     2
+            612 LOAD_CONST               1 (0)
+            614 BINARY_SUBSCR
+            624 STORE_FAST              17 (L)
+
+ 86         626 LOAD_CONST               1 (0)
+            628 LOAD_FAST               17 (L)
+            630 SWAP                     2
+            632 COPY                     2
+            634 COMPARE_OP               0 (<)
+            640 POP_JUMP_FORWARD_IF_FALSE     6 (to 654)
+            642 LOAD_FAST                9 (sz0)
+            644 COMPARE_OP               0 (<)
+            650 POP_JUMP_FORWARD_IF_TRUE     3 (to 658)
+            652 JUMP_FORWARD             1 (to 656)
+        >>  654 POP_TOP
+
+ 87     >>  656 JUMP_BACKWARD          142 (to 374)
+
+ 89     >>  658 LOAD_CONST               1 (0)
+            660 STORE_FAST              18 (ok)
+
+ 90         662 LOAD_GLOBAL             31 (NULL + range)
+            674 LOAD_GLOBAL             33 (NULL + min)
+            686 LOAD_CONST              18 (2)
+            688 LOAD_GLOBAL             13 (NULL + len)
+            700 LOAD_FAST                6 (sizes)
+            702 PRECALL                  1
+            706 CALL                     1
+            716 PRECALL                  2
+            720 CALL                     2
+            730 PRECALL                  1
+            734 CALL                     1
+            744 GET_ITER
+        >>  746 FOR_ITER               128 (to 1004)
+            748 STORE_FAST              19 (idx)
+
+ 91         750 LOAD_FAST                7 (offs)
+            752 LOAD_FAST               19 (idx)
+            754 BINARY_SUBSCR
+            764 LOAD_FAST                6 (sizes)
+            766 LOAD_FAST               19 (idx)
+            768 BINARY_SUBSCR
+            778 STORE_FAST              21 (sz)
+            780 STORE_FAST              20 (co)
+            782 LOAD_FAST               15 (biv)
+            784 LOAD_FAST               19 (idx)
+            786 BINARY_OP                0 (+)
+            790 LOAD_CONST              13 (64)
+            792 BINARY_OP                3 (<<)
+            796 STORE_FAST              22 (iv)
+
+ 92         798 LOAD_FAST                3 (AES)
+            800 LOAD_METHOD             10 (new)
+            822 LOAD_FAST               12 (K)
+            824 LOAD_FAST                3 (AES)
+            826 LOAD_ATTR               11 (MODE_CTR)
+            836 LOAD_FAST                4 (Counter)
+            838 LOAD_METHOD             10 (new)
+            860 LOAD_CONST              12 (128)
+            862 LOAD_FAST               22 (iv)
+            864 KW_NAMES                14
+            866 PRECALL                  2
+            870 CALL                     2
+            880 KW_NAMES                15
+            882 PRECALL                  3
+            886 CALL                     3
+            896 LOAD_METHOD             12 (decrypt)
+            918 LOAD_FAST                5 (d)
+            920 LOAD_FAST               20 (co)
+            922 LOAD_FAST               20 (co)
+            924 LOAD_FAST               21 (sz)
+            926 BINARY_OP                0 (+)
+            930 BUILD_SLICE              2
+            932 BINARY_SUBSCR
+            942 PRECALL                  1
+            946 CALL                     1
+            956 STORE_FAST              23 (pt)
+
+ 93         958 LOAD_GLOBAL             35 (NULL + _nal_ok)
+            970 LOAD_FAST               23 (pt)
+            972 LOAD_FAST               21 (sz)
+            974 PRECALL                  2
+            978 CALL                     2
+            988 POP_JUMP_FORWARD_IF_FALSE     6 (to 1002)
+            990 LOAD_FAST               18 (ok)
+            992 LOAD_CONST              19 (1)
+            994 BINARY_OP               13 (+=)
+            998 STORE_FAST              18 (ok)
+           1000 JUMP_BACKWARD          128 (to 746)
+
+ 94     >> 1002 POP_TOP
+
+ 95     >> 1004 LOAD_FAST               18 (ok)
+           1006 LOAD_CONST              18 (2)
+           1008 COMPARE_OP               5 (>=)
+           1014 POP_JUMP_FORWARD_IF_FALSE     8 (to 1032)
+
+ 96        1016 LOAD_FAST               11 (kh)
+           1018 LOAD_FAST               14 (ivh)
+           1020 BUILD_TUPLE              2
+           1022 SWAP                     2
+           1024 POP_TOP
+           1026 SWAP                     2
+           1028 POP_TOP
+           1030 RETURN_VALUE
+
+ 95     >> 1032 EXTENDED_ARG             1
+           1034 JUMP_BACKWARD          331 (to 374)
+
+ 81     >> 1036 EXTENDED_ARG             1
+           1038 JUMP_BACKWARD          386 (to 268)
+
+ 97     >> 1040 LOAD_CONST               4 ((None, None))
+           1042 RETURN_VALUE
+
+Disassembly of <code object all_key_candidates at 0x9c4e07480, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 100>:
+100           0 RESUME                   0
+
+101           2 NOP
+
+102           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               0 (None)
+              8 IMPORT_NAME              0 (mmap)
+             10 STORE_FAST               1 (mmap)
+
+103          12 LOAD_CONST               1 (0)
+             14 LOAD_CONST               2 (('iter_keybox_entries',))
+             16 IMPORT_NAME              1 (extract_keybox_pairs)
+             18 IMPORT_FROM              2 (iter_keybox_entries)
+             20 STORE_FAST               2 (iter_keybox_entries)
+             22 POP_TOP
+
+104          24 BUILD_LIST               0
+             26 STORE_FAST               3 (keys)
+
+105          28 LOAD_GLOBAL              7 (NULL + set)
+             40 PRECALL                  0
+             44 CALL                     0
+             54 STORE_FAST               4 (seen)
+
+106          56 LOAD_GLOBAL              9 (NULL + open)
+             68 LOAD_FAST                0 (dump_path)
+             70 LOAD_CONST               3 ('rb')
+             72 PRECALL                  2
+             76 CALL                     2
+             86 BEFORE_WITH
+             88 STORE_FAST               5 (f)
+
+107          90 LOAD_FAST                1 (mmap)
+             92 LOAD_METHOD              0 (mmap)
+            114 LOAD_FAST                5 (f)
+            116 LOAD_METHOD              5 (fileno)
+            138 PRECALL                  0
+            142 CALL                     0
+            152 LOAD_CONST               1 (0)
+            154 LOAD_FAST                1 (mmap)
+            156 LOAD_ATTR                6 (ACCESS_READ)
+            166 KW_NAMES                 4
+            168 PRECALL                  3
+            172 CALL                     3
+            182 STORE_FAST               6 (mm)
+
+108         184 PUSH_NULL
+            186 LOAD_FAST                2 (iter_keybox_entries)
+            188 LOAD_FAST                6 (mm)
+            190 PRECALL                  1
+            194 CALL                     1
+            204 GET_ITER
+        >>  206 FOR_ITER                86 (to 380)
+            208 STORE_FAST               7 (e)
+
+109         210 LOAD_FAST                7 (e)
+            212 LOAD_CONST               5 ('kind')
+            214 BINARY_SUBSCR
+            224 LOAD_CONST               6 ('key')
+            226 COMPARE_OP               2 (==)
+            232 POP_JUMP_FORWARD_IF_FALSE    72 (to 378)
+
+110         234 LOAD_FAST                7 (e)
+            236 LOAD_CONST               7 ('value')
+            238 BINARY_SUBSCR
+            248 LOAD_METHOD              7 (hex)
+            270 PRECALL                  0
+            274 CALL                     0
+            284 STORE_FAST               8 (h)
+
+111         286 LOAD_FAST                8 (h)
+            288 LOAD_FAST                4 (seen)
+            290 CONTAINS_OP              1
+            292 POP_JUMP_FORWARD_IF_FALSE    42 (to 378)
+
+112         294 LOAD_FAST                4 (seen)
+            296 LOAD_METHOD              8 (add)
+            318 LOAD_FAST                8 (h)
+            320 PRECALL                  1
+            324 CALL                     1
+            334 POP_TOP
+            336 LOAD_FAST                3 (keys)
+            338 LOAD_METHOD              9 (append)
+            360 LOAD_FAST                8 (h)
+            362 PRECALL                  1
+            366 CALL                     1
+            376 POP_TOP
+        >>  378 JUMP_BACKWARD           87 (to 206)
+
+108     >>  380 NOP
+
+106         382 LOAD_CONST               0 (None)
+            384 LOAD_CONST               0 (None)
+            386 LOAD_CONST               0 (None)
+            388 PRECALL                  2
+            392 CALL                     2
+            402 POP_TOP
+            404 JUMP_FORWARD            11 (to 428)
+        >>  406 PUSH_EXC_INFO
+            408 WITH_EXCEPT_START
+            410 POP_JUMP_FORWARD_IF_TRUE     4 (to 420)
+            412 RERAISE                  2
+        >>  414 COPY                     3
+            416 POP_EXCEPT
+            418 RERAISE                  1
+        >>  420 POP_TOP
+            422 POP_EXCEPT
+            424 POP_TOP
+            426 POP_TOP
+
+113     >>  428 LOAD_FAST                3 (keys)
+            430 RETURN_VALUE
+ExceptionTable:
+  88 to 378 -> 406 [1] lasti
+  406 to 412 -> 414 [3] lasti
+  420 to 420 -> 414 [3] lasti
+
+Disassembly of <code object adb at 0x10ad32500, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 121>:
+121           0 RESUME                   0
+
+122           2 LOAD_GLOBAL              0 (ADB)
+             14 LOAD_CONST               1 ('-s')
+             16 LOAD_GLOBAL              2 (DEV)
+             28 BUILD_LIST               3
+             30 LOAD_GLOBAL              5 (NULL + list)
+             42 LOAD_FAST                2 (args)
+             44 PRECALL                  1
+             48 CALL                     1
+             58 BINARY_OP                0 (+)
+             62 STORE_FAST               3 (cmd)
+
+123          64 LOAD_GLOBAL              7 (NULL + subprocess)
+             76 LOAD_ATTR                4 (run)
+             86 LOAD_FAST                3 (cmd)
+             88 LOAD_FAST                0 (capture)
+             90 LOAD_CONST               2 (False)
+             92 LOAD_FAST                1 (timeout)
+             94 KW_NAMES                 3
+             96 PRECALL                  4
+            100 CALL                     4
+            110 RETURN_VALUE
+
+Disassembly of <code object adb_su at 0x10adb08a0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 125>:
+125           0 RESUME                   0
+
+127           2 LOAD_GLOBAL              1 (NULL + adb)
+             14 LOAD_CONST               1 ('shell')
+             16 LOAD_CONST               2 ("su -c '")
+             18 LOAD_FAST                0 (cmd)
+             20 BINARY_OP                0 (+)
+             24 LOAD_CONST               3 ("'")
+             26 BINARY_OP                0 (+)
+             30 BUILD_TUPLE              2
+             32 BUILD_MAP                0
+             34 LOAD_FAST                1 (kw)
+             36 DICT_MERGE               1
+             38 CALL_FUNCTION_EX         1
+             40 RETURN_VALUE
+
+Disassembly of <code object get_pid at 0x10ad69730, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 129>:
+129           0 RESUME                   0
+
+130           2 LOAD_GLOBAL              1 (NULL + adb_su)
+             14 LOAD_CONST               1 ('pidof com.phoenix.read')
+             16 PRECALL                  1
+             20 CALL                     1
+             30 STORE_FAST               0 (r)
+
+131          32 LOAD_FAST                0 (r)
+             34 LOAD_ATTR                1 (stdout)
+             44 LOAD_METHOD              2 (decode)
+             66 LOAD_CONST               2 ('ignore')
+             68 KW_NAMES                 3
+             70 PRECALL                  1
+             74 CALL                     1
+             84 LOAD_METHOD              3 (strip)
+            106 PRECALL                  0
+            110 CALL                     0
+            120 LOAD_METHOD              4 (split)
+            142 PRECALL                  0
+            146 CALL                     0
+            156 STORE_FAST               1 (pid)
+
+132         158 LOAD_FAST                1 (pid)
+            160 POP_JUMP_FORWARD_IF_FALSE     8 (to 178)
+            162 LOAD_FAST                1 (pid)
+            164 LOAD_CONST               4 (0)
+            166 BINARY_SUBSCR
+            176 JUMP_FORWARD             1 (to 180)
+        >>  178 LOAD_CONST               0 (None)
+        >>  180 RETURN_VALUE
+
+Disassembly of <code object build_dumplist at 0x9c51cf000, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 134>:
+134           0 RESUME                   0
+
+135           2 BUILD_LIST               0
+              4 STORE_FAST               1 (regions)
+              6 LOAD_CONST               0 (None)
+              8 STORE_FAST               2 (cur)
+
+136          10 LOAD_FAST                0 (smaps_text)
+             12 LOAD_METHOD              0 (splitlines)
+             34 PRECALL                  0
+             38 CALL                     0
+             48 GET_ITER
+        >>   50 FOR_ITER               239 (to 530)
+             52 STORE_FAST               3 (line)
+
+137          54 LOAD_GLOBAL              3 (NULL + re)
+             66 LOAD_ATTR                2 (match)
+             76 LOAD_CONST               1 ('^([0-9a-f]+)-([0-9a-f]+)\\s+(\\S{4})\\s+\\S+\\s+\\S+\\s+\\S+\\s*(.*)$')
+             78 LOAD_FAST                3 (line)
+             80 PRECALL                  2
+             84 CALL                     2
+             94 STORE_FAST               4 (m)
+
+138          96 LOAD_FAST                4 (m)
+             98 POP_JUMP_FORWARD_IF_FALSE   152 (to 404)
+
+139         100 LOAD_GLOBAL              7 (NULL + int)
+            112 LOAD_FAST                4 (m)
+            114 LOAD_METHOD              4 (group)
+            136 LOAD_CONST               2 (1)
+            138 PRECALL                  1
+            142 CALL                     1
+            152 LOAD_CONST               3 (16)
+            154 PRECALL                  2
+            158 CALL                     2
+            168 LOAD_GLOBAL              7 (NULL + int)
+            180 LOAD_FAST                4 (m)
+            182 LOAD_METHOD              4 (group)
+            204 LOAD_CONST               4 (2)
+            206 PRECALL                  1
+            210 CALL                     1
+            220 LOAD_CONST               3 (16)
+            222 PRECALL                  2
+            226 CALL                     2
+
+140         236 LOAD_FAST                4 (m)
+            238 LOAD_METHOD              4 (group)
+            260 LOAD_CONST               5 (3)
+            262 PRECALL                  1
+            266 CALL                     1
+            276 LOAD_FAST                4 (m)
+            278 LOAD_METHOD              4 (group)
+            300 LOAD_CONST               6 (4)
+            302 PRECALL                  1
+            306 CALL                     1
+            316 LOAD_METHOD              5 (strip)
+            338 PRECALL                  0
+            342 CALL                     0
+            352 LOAD_CONST               7 (0)
+
+139         354 LOAD_CONST               8 (('s', 'e', 'perm', 'path', 'rss'))
+            356 BUILD_CONST_KEY_MAP      5
+            358 STORE_FAST               2 (cur)
+
+141         360 LOAD_FAST                1 (regions)
+            362 LOAD_METHOD              6 (append)
+            384 LOAD_FAST                2 (cur)
+            386 PRECALL                  1
+            390 CALL                     1
+            400 POP_TOP
+            402 JUMP_BACKWARD          177 (to 50)
+
+143     >>  404 LOAD_GLOBAL              3 (NULL + re)
+            416 LOAD_ATTR                2 (match)
+            426 LOAD_CONST               9 ('^Rss:\\s+(\\d+)\\s*kB')
+            428 LOAD_FAST                3 (line)
+            430 PRECALL                  2
+            434 CALL                     2
+            444 STORE_FAST               5 (mm)
+
+144         446 LOAD_FAST                5 (mm)
+            448 POP_JUMP_FORWARD_IF_FALSE    39 (to 528)
+            450 LOAD_FAST                2 (cur)
+            452 POP_JUMP_FORWARD_IF_FALSE    37 (to 528)
+            454 LOAD_GLOBAL              7 (NULL + int)
+            466 LOAD_FAST                5 (mm)
+            468 LOAD_METHOD              4 (group)
+            490 LOAD_CONST               2 (1)
+            492 PRECALL                  1
+            496 CALL                     1
+            506 PRECALL                  1
+            510 CALL                     1
+            520 LOAD_FAST                2 (cur)
+            522 LOAD_CONST              10 ('rss')
+            524 STORE_SUBSCR
+        >>  528 JUMP_BACKWARD          240 (to 50)
+
+145     >>  530 LOAD_CONST              11 (<code object <listcomp> at 0x10ad69a10, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 145>)
+            532 MAKE_FUNCTION            0
+            534 LOAD_FAST                1 (regions)
+            536 GET_ITER
+            538 PRECALL                  0
+            542 CALL                     0
+            552 STORE_FAST               6 (rw)
+
+147         554 LOAD_GLOBAL             15 (NULL + sum)
+            566 LOAD_CONST              12 (<code object <genexpr> at 0x10acef3d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 147>)
+            568 MAKE_FUNCTION            0
+            570 LOAD_FAST                6 (rw)
+            572 GET_ITER
+            574 PRECALL                  0
+            578 CALL                     0
+            588 PRECALL                  1
+            592 CALL                     1
+            602 STORE_FAST               7 (tot)
+
+148         604 BUILD_LIST               0
+            606 STORE_FAST               8 (lines)
+
+149         608 LOAD_FAST                6 (rw)
+            610 GET_ITER
+        >>  612 FOR_ITER                63 (to 740)
+            614 STORE_FAST               9 (r)
+
+150         616 LOAD_FAST                9 (r)
+            618 LOAD_CONST              13 ('e')
+            620 BINARY_SUBSCR
+            630 LOAD_FAST                9 (r)
+            632 LOAD_CONST              14 ('s')
+            634 BINARY_SUBSCR
+            644 BINARY_OP               10 (-)
+            648 LOAD_CONST              15 (4096)
+            650 BINARY_OP                2 (//)
+            654 STORE_FAST              10 (sz)
+
+151         656 LOAD_FAST               10 (sz)
+            658 LOAD_CONST               7 (0)
+            660 COMPARE_OP               4 (>)
+            666 POP_JUMP_FORWARD_IF_FALSE    35 (to 738)
+            668 LOAD_FAST                8 (lines)
+            670 LOAD_METHOD              6 (append)
+            692 LOAD_FAST                9 (r)
+            694 LOAD_CONST              14 ('s')
+            696 BINARY_SUBSCR
+            706 LOAD_CONST              15 (4096)
+            708 BINARY_OP                2 (//)
+            712 FORMAT_VALUE             0
+            714 LOAD_CONST              16 (' ')
+            716 LOAD_FAST               10 (sz)
+            718 FORMAT_VALUE             0
+            720 BUILD_STRING             3
+            722 PRECALL                  1
+            726 CALL                     1
+            736 POP_TOP
+        >>  738 JUMP_BACKWARD           64 (to 612)
+
+152     >>  740 LOAD_CONST              17 ('\n')
+            742 LOAD_METHOD              8 (join)
+            764 LOAD_FAST                8 (lines)
+            766 PRECALL                  1
+            770 CALL                     1
+            780 LOAD_CONST              17 ('\n')
+            782 BINARY_OP                0 (+)
+            786 LOAD_FAST                7 (tot)
+            788 LOAD_GLOBAL             19 (NULL + len)
+            800 LOAD_FAST                6 (rw)
+            802 PRECALL                  1
+            806 CALL                     1
+            816 BUILD_TUPLE              3
+            818 RETURN_VALUE
+
+Disassembly of <code object <listcomp> at 0x10ad69a10, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 145>:
+              0 MAKE_CELL                1 (r)
+
+145           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                84 (to 178)
+             10 STORE_DEREF              1 (r)
+             12 LOAD_DEREF               1 (r)
+             14 LOAD_CONST               0 ('perm')
+             16 BINARY_SUBSCR
+             26 LOAD_CONST               1 (0)
+             28 BINARY_SUBSCR
+             38 LOAD_CONST               2 ('r')
+             40 COMPARE_OP               2 (==)
+             46 POP_JUMP_FORWARD_IF_FALSE    64 (to 176)
+             48 LOAD_DEREF               1 (r)
+             50 LOAD_CONST               0 ('perm')
+             52 BINARY_SUBSCR
+             62 LOAD_CONST               3 (1)
+             64 BINARY_SUBSCR
+             74 LOAD_CONST               4 ('w')
+             76 COMPARE_OP               2 (==)
+             82 POP_JUMP_FORWARD_IF_FALSE    46 (to 176)
+
+146          84 LOAD_DEREF               1 (r)
+             86 LOAD_CONST               5 ('rss')
+             88 BINARY_SUBSCR
+             98 LOAD_CONST               1 (0)
+            100 COMPARE_OP               4 (>)
+            106 POP_JUMP_BACKWARD_IF_FALSE    50 (to 8)
+            108 LOAD_GLOBAL              1 (NULL + any)
+            120 LOAD_CLOSURE             1 (r)
+            122 BUILD_TUPLE              1
+            124 LOAD_CONST               6 (<code object <genexpr> at 0x10adb0990, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 146>)
+            126 MAKE_FUNCTION            8 (closure)
+            128 LOAD_GLOBAL              2 (EXCL)
+            140 GET_ITER
+            142 PRECALL                  0
+            146 CALL                     0
+            156 PRECALL                  1
+            160 CALL                     1
+            170 POP_JUMP_BACKWARD_IF_TRUE    82 (to 8)
+
+145         172 LOAD_DEREF               1 (r)
+
+146         174 LIST_APPEND              2
+        >>  176 JUMP_BACKWARD           85 (to 8)
+        >>  178 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10adb0990, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 146>:
+              0 COPY_FREE_VARS           1
+
+146           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                14 (to 40)
+             12 STORE_FAST               1 (x)
+             14 LOAD_FAST                1 (x)
+             16 LOAD_DEREF               2 (r)
+             18 LOAD_CONST               0 ('path')
+             20 BINARY_SUBSCR
+             30 CONTAINS_OP              0
+             32 YIELD_VALUE
+             34 RESUME                   1
+             36 POP_TOP
+             38 JUMP_BACKWARD           15 (to 10)
+        >>   40 LOAD_CONST               1 (None)
+             42 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10acef3d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 147>:
+147           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                12 (to 34)
+             10 STORE_FAST               1 (r)
+             12 LOAD_FAST                1 (r)
+             14 LOAD_CONST               0 ('rss')
+             16 BINARY_SUBSCR
+             26 YIELD_VALUE
+             28 RESUME                   1
+             30 POP_TOP
+             32 JUMP_BACKWARD           13 (to 8)
+        >>   34 LOAD_CONST               1 (None)
+             36 RETURN_VALUE
+
+Disassembly of <code object do_dump at 0x9c51f8a00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 154>:
+154           0 RESUME                   0
+
+155           2 LOAD_GLOBAL              1 (NULL + os)
+             14 LOAD_ATTR                1 (makedirs)
+             24 LOAD_CONST               1 ('capture')
+             26 LOAD_CONST               2 (True)
+             28 KW_NAMES                 3
+             30 PRECALL                  2
+             34 CALL                     2
+             44 POP_TOP
+
+156          46 LOAD_GLOBAL              5 (NULL + print)
+             58 LOAD_CONST               4 ('[1/5] pid=')
+             60 LOAD_FAST                0 (pid)
+             62 FORMAT_VALUE             0
+             64 LOAD_CONST               5 (' 拉 smaps ...')
+             66 BUILD_STRING             3
+             68 LOAD_CONST               2 (True)
+             70 KW_NAMES                 6
+             72 PRECALL                  2
+             76 CALL                     2
+             86 POP_TOP
+
+157          88 LOAD_GLOBAL              7 (NULL + adb_su)
+            100 LOAD_CONST               7 ('cat /proc/')
+            102 LOAD_FAST                0 (pid)
+            104 FORMAT_VALUE             0
+            106 LOAD_CONST               8 ('/smaps')
+            108 BUILD_STRING             3
+            110 PRECALL                  1
+            114 CALL                     1
+            124 LOAD_ATTR                4 (stdout)
+            134 LOAD_METHOD              5 (decode)
+            156 LOAD_CONST               9 ('ignore')
+            158 KW_NAMES                10
+            160 PRECALL                  1
+            164 CALL                     1
+            174 STORE_FAST               1 (smaps)
+
+158         176 LOAD_GLOBAL             13 (NULL + build_dumplist)
+            188 LOAD_FAST                1 (smaps)
+            190 PRECALL                  1
+            194 CALL                     1
+            204 UNPACK_SEQUENCE          3
+            208 STORE_FAST               2 (dumplist)
+            210 STORE_FAST               3 (tot)
+            212 STORE_FAST               4 (n)
+
+159         214 LOAD_GLOBAL              5 (NULL + print)
+            226 LOAD_CONST              11 ('      native rw 驻留 ')
+            228 LOAD_FAST                3 (tot)
+            230 LOAD_CONST              12 (1024)
+            232 BINARY_OP               11 (/)
+            236 LOAD_CONST              13 ('.0f')
+            238 FORMAT_VALUE             4 (with format)
+            240 LOAD_CONST              14 ('MB, ')
+            242 LOAD_FAST                4 (n)
+            244 FORMAT_VALUE             0
+            246 LOAD_CONST              15 (' 段')
+            248 BUILD_STRING             5
+            250 PRECALL                  1
+            254 CALL                     1
+            264 POP_TOP
+
+160         266 LOAD_GLOBAL             15 (NULL + open)
+            278 LOAD_CONST              16 ('capture/dumplist_live.txt')
+            280 LOAD_CONST              17 ('w')
+            282 LOAD_CONST              18 ('\n')
+            284 KW_NAMES                19
+            286 PRECALL                  3
+            290 CALL                     3
+            300 LOAD_METHOD              8 (write)
+            322 LOAD_FAST                2 (dumplist)
+            324 PRECALL                  1
+            328 CALL                     1
+            338 POP_TOP
+
+161         340 LOAD_GLOBAL              5 (NULL + print)
+            352 LOAD_CONST              20 ('[2/5] 推送 dumplist ...')
+            354 LOAD_CONST               2 (True)
+            356 KW_NAMES                 6
+            358 PRECALL                  2
+            362 CALL                     2
+            372 POP_TOP
+
+162         374 LOAD_GLOBAL             19 (NULL + adb)
+            386 LOAD_CONST              21 ('push')
+            388 LOAD_CONST              16 ('capture/dumplist_live.txt')
+            390 LOAD_CONST              22 ('/data/local/tmp/dumplist.txt')
+            392 PRECALL                  3
+            396 CALL                     3
+            406 POP_TOP
+
+163         408 LOAD_GLOBAL              5 (NULL + print)
+            420 LOAD_CONST              23 ('[3/5] 设备端 dd+gzip dump (耗时取决于驻留大小) ...')
+            422 LOAD_CONST               2 (True)
+            424 KW_NAMES                 6
+            426 PRECALL                  2
+            430 CALL                     2
+            440 POP_TOP
+
+164         442 LOAD_GLOBAL             21 (NULL + time)
+            454 LOAD_ATTR               10 (time)
+            464 PRECALL                  0
+            468 CALL                     0
+            478 STORE_FAST               5 (t0)
+
+165         480 LOAD_GLOBAL              7 (NULL + adb_su)
+            492 LOAD_CONST              24 ('while read s c; do dd if=/proc/')
+            494 LOAD_FAST                0 (pid)
+            496 FORMAT_VALUE             0
+            498 LOAD_CONST              25 ('/mem bs=4096 skip=$s count=$c conv=noerror,sync 2>/dev/null; done < /data/local/tmp/dumplist.txt | gzip -1 > /data/local/tmp/oracle_dump.gz')
+            500 BUILD_STRING             3
+
+167         502 LOAD_CONST              26 (900)
+
+165         504 KW_NAMES                27
+            506 PRECALL                  2
+            510 CALL                     2
+            520 POP_TOP
+
+168         522 LOAD_GLOBAL              5 (NULL + print)
+            534 LOAD_CONST              28 ('      dump 完成 ')
+            536 LOAD_GLOBAL             21 (NULL + time)
+            548 LOAD_ATTR               10 (time)
+            558 PRECALL                  0
+            562 CALL                     0
+            572 LOAD_FAST                5 (t0)
+            574 BINARY_OP               10 (-)
+            578 LOAD_CONST              13 ('.0f')
+            580 FORMAT_VALUE             4 (with format)
+            582 LOAD_CONST              29 ('s')
+            584 BUILD_STRING             3
+            586 PRECALL                  1
+            590 CALL                     1
+            600 POP_TOP
+
+169         602 LOAD_GLOBAL              5 (NULL + print)
+            614 LOAD_CONST              30 ('[4/5] 拉回 + 解压 ...')
+            616 LOAD_CONST               2 (True)
+            618 KW_NAMES                 6
+            620 PRECALL                  2
+            624 CALL                     2
+            634 POP_TOP
+
+170         636 LOAD_GLOBAL             19 (NULL + adb)
+            648 LOAD_CONST              31 ('pull')
+            650 LOAD_CONST              32 ('/data/local/tmp/oracle_dump.gz')
+            652 LOAD_CONST              33 ('capture/oracle_dump.gz')
+            654 PRECALL                  3
+            658 CALL                     3
+            668 POP_TOP
+
+171         670 LOAD_GLOBAL             23 (NULL + gzip)
+            682 LOAD_ATTR                7 (open)
+            692 LOAD_CONST              33 ('capture/oracle_dump.gz')
+            694 LOAD_CONST              34 ('rb')
+            696 PRECALL                  2
+            700 CALL                     2
+            710 BEFORE_WITH
+            712 STORE_FAST               6 (fi)
+            714 LOAD_GLOBAL             15 (NULL + open)
+            726 LOAD_CONST              35 ('capture/oracle_dump.bin')
+            728 LOAD_CONST              36 ('wb')
+            730 PRECALL                  2
+            734 CALL                     2
+            744 BEFORE_WITH
+            746 STORE_FAST               7 (fo)
+
+172         748 LOAD_GLOBAL             25 (NULL + shutil)
+            760 LOAD_ATTR               13 (copyfileobj)
+            770 LOAD_FAST                6 (fi)
+            772 LOAD_FAST                7 (fo)
+            774 PRECALL                  2
+            778 CALL                     2
+            788 POP_TOP
+
+171         790 LOAD_CONST               0 (None)
+            792 LOAD_CONST               0 (None)
+            794 LOAD_CONST               0 (None)
+            796 PRECALL                  2
+            800 CALL                     2
+            810 POP_TOP
+            812 JUMP_FORWARD            11 (to 836)
+        >>  814 PUSH_EXC_INFO
+            816 WITH_EXCEPT_START
+            818 POP_JUMP_FORWARD_IF_TRUE     4 (to 828)
+            820 RERAISE                  2
+        >>  822 COPY                     3
+            824 POP_EXCEPT
+            826 RERAISE                  1
+        >>  828 POP_TOP
+            830 POP_EXCEPT
+            832 POP_TOP
+            834 POP_TOP
+        >>  836 LOAD_CONST               0 (None)
+            838 LOAD_CONST               0 (None)
+            840 LOAD_CONST               0 (None)
+            842 PRECALL                  2
+            846 CALL                     2
+            856 POP_TOP
+            858 JUMP_FORWARD            11 (to 882)
+        >>  860 PUSH_EXC_INFO
+            862 WITH_EXCEPT_START
+            864 POP_JUMP_FORWARD_IF_TRUE     4 (to 874)
+            866 RERAISE                  2
+        >>  868 COPY                     3
+            870 POP_EXCEPT
+            872 RERAISE                  1
+        >>  874 POP_TOP
+            876 POP_EXCEPT
+            878 POP_TOP
+            880 POP_TOP
+
+173     >>  882 LOAD_GLOBAL              0 (os)
+            894 LOAD_ATTR               14 (path)
+            904 LOAD_METHOD             15 (getsize)
+            926 LOAD_CONST              35 ('capture/oracle_dump.bin')
+            928 PRECALL                  1
+            932 CALL                     1
+            942 STORE_FAST               8 (sz)
+
+174         944 LOAD_GLOBAL              5 (NULL + print)
+            956 LOAD_CONST              37 ('      capture/oracle_dump.bin ')
+            958 LOAD_FAST                8 (sz)
+            960 LOAD_CONST              38 (1048576)
+            962 BINARY_OP                2 (//)
+            966 FORMAT_VALUE             0
+            968 LOAD_CONST              39 ('MB')
+            970 BUILD_STRING             3
+            972 PRECALL                  1
+            976 CALL                     1
+            986 POP_TOP
+
+175         988 LOAD_CONST              35 ('capture/oracle_dump.bin')
+            990 RETURN_VALUE
+ExceptionTable:
+  712 to 744 -> 860 [1] lasti
+  746 to 788 -> 814 [2] lasti
+  790 to 812 -> 860 [1] lasti
+  814 to 820 -> 822 [4] lasti
+  822 to 826 -> 860 [1] lasti
+  828 to 828 -> 822 [4] lasti
+  830 to 834 -> 860 [1] lasti
+  860 to 866 -> 868 [3] lasti
+  874 to 874 -> 868 [3] lasti
+
+Disassembly of <code object report at 0x9c51cf400, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 177>:
+177           0 RESUME                   0
+
+178           2 LOAD_GLOBAL              1 (NULL + print)
+             14 LOAD_CONST               1 ('[5/5] 提取密钥盒 kid->key->base_iv ...')
+             16 LOAD_CONST               2 (True)
+             18 KW_NAMES                 3
+             20 PRECALL                  2
+             24 CALL                     2
+             34 POP_TOP
+
+179          36 LOAD_GLOBAL              3 (NULL + build_report)
+             48 LOAD_GLOBAL              5 (NULL + __import__)
+             60 LOAD_CONST               4 ('pathlib')
+             62 PRECALL                  1
+             66 CALL                     1
+             76 LOAD_METHOD              3 (Path)
+             98 LOAD_FAST                0 (dump)
+            100 PRECALL                  1
+            104 CALL                     1
+            114 LOAD_CONST               5 (256)
+            116 LOAD_CONST               6 (512)
+            118 KW_NAMES                 7
+            120 PRECALL                  3
+            124 CALL                     3
+            134 STORE_FAST               1 (rep)
+
+180         136 LOAD_GLOBAL              1 (NULL + print)
+            148 LOAD_CONST               8 ('\n entry_counts=')
+            150 LOAD_FAST                1 (rep)
+            152 LOAD_CONST               9 ('entry_counts')
+            154 BINARY_SUBSCR
+            164 FORMAT_VALUE             0
+            166 LOAD_CONST              10 ('  mspade_kids=')
+            168 LOAD_FAST                1 (rep)
+            170 LOAD_CONST              11 ('mspade_kids')
+            172 BINARY_SUBSCR
+            182 FORMAT_VALUE             0
+            184 LOAD_CONST              12 (' keybox_kids=')
+            186 LOAD_FAST                1 (rep)
+            188 LOAD_CONST              13 ('keybox_kids')
+            190 BINARY_SUBSCR
+            200 FORMAT_VALUE             0
+            202 BUILD_STRING             6
+            204 PRECALL                  1
+            208 CALL                     1
+            218 POP_TOP
+
+181         220 LOAD_GLOBAL              1 (NULL + print)
+            232 LOAD_CONST              14 ('\n===== 正在解码视频的 (kid, key, base_iv64) =====')
+            234 PRECALL                  1
+            238 CALL                     1
+            248 POP_TOP
+
+182         250 LOAD_CONST              15 (0)
+            252 STORE_FAST               2 (found)
+
+183         254 LOAD_FAST                1 (rep)
+            256 LOAD_CONST              16 ('joined')
+            258 BINARY_SUBSCR
+            268 GET_ITER
+        >>  270 FOR_ITER               221 (to 714)
+            272 STORE_FAST               3 (it)
+
+184         274 LOAD_FAST                3 (it)
+            276 LOAD_CONST              17 ('keys')
+            278 BINARY_SUBSCR
+            288 POP_JUMP_FORWARD_IF_TRUE     1 (to 292)
+
+185         290 JUMP_BACKWARD           11 (to 270)
+
+186     >>  292 LOAD_FAST                3 (it)
+            294 LOAD_CONST              17 ('keys')
+            296 BINARY_SUBSCR
+            306 LOAD_CONST              15 (0)
+            308 BINARY_SUBSCR
+            318 LOAD_CONST              18 ('key')
+            320 BINARY_SUBSCR
+            330 STORE_FAST               4 (key)
+
+187         332 LOAD_FAST                3 (it)
+            334 LOAD_METHOD              4 (get)
+            356 LOAD_CONST              19 ('iv8_candidates')
+            358 BUILD_LIST               0
+            360 PRECALL                  2
+            364 CALL                     2
+            374 STORE_FAST               5 (ivs)
+
+188         376 LOAD_FAST                3 (it)
+            378 LOAD_METHOD              4 (get)
+            400 LOAD_CONST              20 ('base_iv64')
+            402 PRECALL                  1
+            406 CALL                     1
+            416 STORE_FAST               6 (base_iv)
+
+189         418 LOAD_FAST                3 (it)
+            420 LOAD_CONST              21 ('spade_a')
+            422 BINARY_SUBSCR
+            432 POP_JUMP_FORWARD_IF_FALSE    14 (to 462)
+            434 LOAD_FAST                3 (it)
+            436 LOAD_CONST              21 ('spade_a')
+            438 BINARY_SUBSCR
+            448 LOAD_CONST              15 (0)
+            450 BINARY_SUBSCR
+            460 JUMP_FORWARD             1 (to 464)
+        >>  462 LOAD_CONST              22 ('(无spade,可能离线)')
+        >>  464 STORE_FAST               7 (spade)
+
+190         466 LOAD_GLOBAL              1 (NULL + print)
+            478 LOAD_CONST              23 ('  kid     = ')
+            480 LOAD_FAST                3 (it)
+            482 LOAD_CONST              24 ('kid')
+            484 BINARY_SUBSCR
+            494 FORMAT_VALUE             0
+            496 BUILD_STRING             2
+            498 PRECALL                  1
+            502 CALL                     1
+            512 POP_TOP
+
+191         514 LOAD_GLOBAL              1 (NULL + print)
+            526 LOAD_CONST              25 ('  key     = ')
+            528 LOAD_FAST                4 (key)
+            530 FORMAT_VALUE             0
+            532 LOAD_CONST              26 ('  (votes=')
+            534 LOAD_FAST                3 (it)
+            536 LOAD_CONST              17 ('keys')
+            538 BINARY_SUBSCR
+            548 LOAD_CONST              15 (0)
+            550 BINARY_SUBSCR
+            560 LOAD_CONST              27 ('votes')
+            562 BINARY_SUBSCR
+            572 FORMAT_VALUE             0
+            574 LOAD_CONST              28 (')')
+            576 BUILD_STRING             5
+            578 PRECALL                  1
+            582 CALL                     1
+            592 POP_TOP
+
+192         594 LOAD_GLOBAL              1 (NULL + print)
+            606 LOAD_CONST              29 ('  base_iv = ')
+            608 LOAD_FAST                6 (base_iv)
+            610 FORMAT_VALUE             0
+            612 LOAD_CONST              30 ('   (iv候选')
+            614 LOAD_GLOBAL             11 (NULL + len)
+            626 LOAD_FAST                5 (ivs)
+            628 PRECALL                  1
+            632 CALL                     1
+            642 FORMAT_VALUE             0
+            644 LOAD_CONST              31 ('个)')
+            646 BUILD_STRING             5
+            648 PRECALL                  1
+            652 CALL                     1
+            662 POP_TOP
+
+193         664 LOAD_GLOBAL              1 (NULL + print)
+            676 LOAD_CONST              32 ('  spade_a = ')
+            678 LOAD_FAST                7 (spade)
+            680 FORMAT_VALUE             0
+            682 LOAD_CONST              33 ('\n')
+            684 BUILD_STRING             3
+            686 PRECALL                  1
+            690 CALL                     1
+            700 POP_TOP
+
+194         702 LOAD_FAST                2 (found)
+            704 LOAD_CONST              34 (1)
+            706 BINARY_OP               13 (+=)
+            710 STORE_FAST               2 (found)
+            712 JUMP_BACKWARD          222 (to 270)
+
+195     >>  714 LOAD_FAST                2 (found)
+            716 POP_JUMP_FORWARD_IF_TRUE    30 (to 778)
+
+196         718 LOAD_GLOBAL              1 (NULL + print)
+            730 LOAD_CONST              35 ('  ⚠ 未发现带 key 的 kid。确认: 正在【在线流】播放且画面在动(解码中)。')
+            732 PRECALL                  1
+            736 CALL                     1
+            746 POP_TOP
+
+197         748 LOAD_GLOBAL              1 (NULL + print)
+            760 LOAD_CONST              36 ('    缓存/下载视频走离线安全路径, 密钥盒里没有 key。')
+            762 PRECALL                  1
+            766 CALL                     1
+            776 POP_TOP
+
+198     >>  778 LOAD_FAST                1 (rep)
+            780 RETURN_VALUE
+
+Disassembly of <code object collect_keys_ivs at 0x9c51d1200, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 200>:
+              0 MAKE_CELL               11 (seen)
+
+200           2 RESUME                   0
+
+201           4 LOAD_CONST               1 (0)
+              6 LOAD_CONST               0 (None)
+              8 IMPORT_NAME              0 (mmap)
+             10 STORE_FAST               2 (mmap)
+
+202          12 LOAD_CONST               1 (0)
+             14 LOAD_CONST               2 (('iter_keybox_entries',))
+             16 IMPORT_NAME              1 (extract_keybox_pairs)
+             18 IMPORT_FROM              2 (iter_keybox_entries)
+             20 STORE_FAST               3 (iter_keybox_entries)
+             22 POP_TOP
+
+203          24 BUILD_LIST               0
+             26 STORE_FAST               4 (keys)
+
+204          28 LOAD_FAST                0 (rep)
+             30 LOAD_CONST               3 ('joined')
+             32 BINARY_SUBSCR
+             42 GET_ITER
+        >>   44 FOR_ITER                40 (to 126)
+             46 STORE_FAST               5 (it)
+
+205          48 LOAD_FAST                5 (it)
+             50 LOAD_CONST               4 ('keys')
+             52 BINARY_SUBSCR
+             62 GET_ITER
+        >>   64 FOR_ITER                29 (to 124)
+             66 STORE_FAST               6 (k)
+
+206          68 LOAD_FAST                4 (keys)
+             70 LOAD_METHOD              3 (append)
+             92 LOAD_FAST                6 (k)
+             94 LOAD_CONST               5 ('key')
+             96 BINARY_SUBSCR
+            106 PRECALL                  1
+            110 CALL                     1
+            120 POP_TOP
+            122 JUMP_BACKWARD           30 (to 64)
+
+205     >>  124 JUMP_BACKWARD           41 (to 44)
+
+207     >>  126 LOAD_GLOBAL              9 (NULL + set)
+            138 PRECALL                  0
+            142 CALL                     0
+            152 STORE_DEREF             11 (seen)
+            154 LOAD_CLOSURE            11 (seen)
+            156 BUILD_TUPLE              1
+            158 LOAD_CONST               6 (<code object <listcomp> at 0x10acf6e30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 207>)
+            160 MAKE_FUNCTION            8 (closure)
+            162 LOAD_FAST                4 (keys)
+            164 GET_ITER
+            166 PRECALL                  0
+            170 CALL                     0
+            180 STORE_FAST               4 (keys)
+
+209         182 LOAD_GLOBAL              9 (NULL + set)
+            194 PRECALL                  0
+            198 CALL                     0
+            208 STORE_FAST               7 (iv8s)
+
+210         210 LOAD_GLOBAL             11 (NULL + open)
+            222 LOAD_FAST                1 (dump_path)
+            224 LOAD_CONST               7 ('rb')
+            226 PRECALL                  2
+            230 CALL                     2
+            240 BEFORE_WITH
+            242 STORE_FAST               8 (f)
+
+211         244 LOAD_FAST                2 (mmap)
+            246 LOAD_METHOD              0 (mmap)
+            268 LOAD_FAST                8 (f)
+            270 LOAD_METHOD              6 (fileno)
+            292 PRECALL                  0
+            296 CALL                     0
+            306 LOAD_CONST               1 (0)
+            308 LOAD_FAST                2 (mmap)
+            310 LOAD_ATTR                7 (ACCESS_READ)
+            320 KW_NAMES                 8
+            322 PRECALL                  3
+            326 CALL                     3
+            336 STORE_FAST               9 (mm)
+
+212         338 PUSH_NULL
+            340 LOAD_FAST                3 (iter_keybox_entries)
+            342 LOAD_FAST                9 (mm)
+            344 PRECALL                  1
+            348 CALL                     1
+            358 GET_ITER
+        >>  360 FOR_ITER                67 (to 496)
+            362 STORE_FAST              10 (e)
+
+213         364 LOAD_FAST               10 (e)
+            366 LOAD_CONST               9 ('kind')
+            368 BINARY_SUBSCR
+            378 LOAD_CONST              10 ('iv')
+            380 COMPARE_OP               2 (==)
+            386 POP_JUMP_FORWARD_IF_FALSE    53 (to 494)
+
+214         388 LOAD_FAST                7 (iv8s)
+            390 LOAD_METHOD              8 (add)
+            412 LOAD_FAST               10 (e)
+            414 LOAD_CONST              11 ('value')
+            416 BINARY_SUBSCR
+            426 LOAD_CONST               0 (None)
+            428 LOAD_CONST              12 (8)
+            430 BUILD_SLICE              2
+            432 BINARY_SUBSCR
+            442 LOAD_METHOD              9 (hex)
+            464 PRECALL                  0
+            468 CALL                     0
+            478 PRECALL                  1
+            482 CALL                     1
+            492 POP_TOP
+        >>  494 JUMP_BACKWARD           68 (to 360)
+
+212     >>  496 NOP
+
+210         498 LOAD_CONST               0 (None)
+            500 LOAD_CONST               0 (None)
+            502 LOAD_CONST               0 (None)
+            504 PRECALL                  2
+            508 CALL                     2
+            518 POP_TOP
+            520 JUMP_FORWARD            11 (to 544)
+        >>  522 PUSH_EXC_INFO
+            524 WITH_EXCEPT_START
+            526 POP_JUMP_FORWARD_IF_TRUE     4 (to 536)
+            528 RERAISE                  2
+        >>  530 COPY                     3
+            532 POP_EXCEPT
+            534 RERAISE                  1
+        >>  536 POP_TOP
+            538 POP_EXCEPT
+            540 POP_TOP
+            542 POP_TOP
+
+215     >>  544 LOAD_FAST                4 (keys)
+            546 LOAD_GLOBAL             21 (NULL + sorted)
+            558 LOAD_FAST                7 (iv8s)
+            560 PRECALL                  1
+            564 CALL                     1
+            574 BUILD_TUPLE              2
+            576 RETURN_VALUE
+ExceptionTable:
+  242 to 494 -> 522 [1] lasti
+  522 to 528 -> 530 [3] lasti
+  536 to 536 -> 530 [3] lasti
+
+Disassembly of <code object <listcomp> at 0x10acf6e30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 207>:
+              0 COPY_FREE_VARS           1
+
+207           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                29 (to 68)
+             10 STORE_FAST               1 (k)
+             12 LOAD_FAST                1 (k)
+             14 LOAD_DEREF               2 (seen)
+             16 CONTAINS_OP              0
+             18 POP_JUMP_BACKWARD_IF_TRUE     6 (to 8)
+             20 LOAD_DEREF               2 (seen)
+             22 LOAD_METHOD              0 (add)
+             44 LOAD_FAST                1 (k)
+             46 PRECALL                  1
+             50 CALL                     1
+             60 POP_JUMP_BACKWARD_IF_TRUE    27 (to 8)
+             62 LOAD_FAST                1 (k)
+             64 LIST_APPEND              2
+             66 JUMP_BACKWARD           30 (to 8)
+        >>   68 RETURN_VALUE
+
+Disassembly of <code object main at 0x9c4e0aa00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\oracle.py", line 217>:
+217           0 RESUME                   0
+
+218           2 LOAD_GLOBAL              1 (NULL + argparse)
+             14 LOAD_ATTR                1 (ArgumentParser)
+             24 PRECALL                  0
+             28 CALL                     0
+             38 STORE_FAST               0 (ap)
+
+219          40 LOAD_FAST                0 (ap)
+             42 LOAD_METHOD              2 (add_argument)
+             64 LOAD_CONST               1 ('--reuse')
+             66 LOAD_CONST               2 ('跳过dump,直接分析已有dump文件')
+             68 KW_NAMES                 3
+             70 PRECALL                  2
+             74 CALL                     2
+             84 POP_TOP
+
+220          86 LOAD_FAST                0 (ap)
+             88 LOAD_METHOD              2 (add_argument)
+            110 LOAD_CONST               4 ('--verify')
+            112 LOAD_CONST               5 ('给定下载的密文mp4, 自动从dump的key×base_iv里试解出正确组合')
+            114 KW_NAMES                 3
+            116 PRECALL                  2
+            120 CALL                     2
+            130 POP_TOP
+
+221         132 LOAD_FAST                0 (ap)
+            134 LOAD_METHOD              3 (parse_args)
+            156 PRECALL                  0
+            160 CALL                     0
+            170 STORE_FAST               1 (args)
+
+222         172 LOAD_FAST                1 (args)
+            174 LOAD_ATTR                4 (reuse)
+            184 POP_JUMP_FORWARD_IF_FALSE     8 (to 202)
+
+223         186 LOAD_FAST                1 (args)
+            188 LOAD_ATTR                4 (reuse)
+            198 STORE_FAST               2 (dump)
+            200 JUMP_FORWARD           101 (to 404)
+
+225     >>  202 LOAD_GLOBAL             11 (NULL + subprocess)
+            214 LOAD_ATTR                6 (run)
+            224 LOAD_GLOBAL             14 (ADB)
+            236 LOAD_CONST               6 ('connect')
+            238 LOAD_GLOBAL             16 (DEV)
+            250 BUILD_LIST               3
+            252 LOAD_CONST               7 (True)
+            254 KW_NAMES                 8
+            256 PRECALL                  2
+            260 CALL                     2
+            270 POP_TOP
+
+226         272 LOAD_GLOBAL             19 (NULL + get_pid)
+            284 PRECALL                  0
+            288 CALL                     0
+            298 STORE_FAST               3 (pid)
+
+227         300 LOAD_FAST                3 (pid)
+            302 POP_JUMP_FORWARD_IF_TRUE    35 (to 374)
+
+228         304 LOAD_GLOBAL             21 (NULL + print)
+            316 LOAD_CONST               9 ('✗ app 未运行 (com.phoenix.read)。先启动 app 并播放在线视频。')
+            318 PRECALL                  1
+            322 CALL                     1
+            332 POP_TOP
+
+229         334 LOAD_GLOBAL             23 (NULL + sys)
+            346 LOAD_ATTR               12 (exit)
+            356 LOAD_CONST              10 (1)
+            358 PRECALL                  1
+            362 CALL                     1
+            372 POP_TOP
+
+230     >>  374 LOAD_GLOBAL             27 (NULL + do_dump)
+            386 LOAD_FAST                3 (pid)
+            388 PRECALL                  1
+            392 CALL                     1
+            402 STORE_FAST               2 (dump)
+
+231     >>  404 LOAD_GLOBAL             29 (NULL + report)
+            416 LOAD_FAST                2 (dump)
+            418 PRECALL                  1
+            422 CALL                     1
+            432 STORE_FAST               4 (rep)
+
+232         434 LOAD_FAST                1 (args)
+            436 LOAD_ATTR               15 (verify)
+            446 POP_JUMP_FORWARD_IF_FALSE   129 (to 706)
+
+233         448 LOAD_GLOBAL             21 (NULL + print)
+            460 LOAD_CONST              11 ('\n===== 用密文 ')
+            462 LOAD_FAST                1 (args)
+            464 LOAD_ATTR               15 (verify)
+            474 FORMAT_VALUE             0
+            476 LOAD_CONST              12 (' 自动验证 key/base_iv =====')
+            478 BUILD_STRING             3
+            480 PRECALL                  1
+            484 CALL                     1
+            494 POP_TOP
+
+234         496 LOAD_GLOBAL             33 (NULL + collect_keys_ivs)
+            508 LOAD_FAST                4 (rep)
+            510 LOAD_FAST                2 (dump)
+            512 PRECALL                  2
+            516 CALL                     2
+            526 UNPACK_SEQUENCE          2
+            530 STORE_FAST               5 (keys)
+            532 STORE_FAST               6 (iv8s)
+
+235         534 LOAD_GLOBAL             35 (NULL + verify_key_iv)
+            546 LOAD_FAST                1 (args)
+            548 LOAD_ATTR               15 (verify)
+            558 LOAD_FAST                5 (keys)
+            560 LOAD_FAST                6 (iv8s)
+            562 PRECALL                  3
+            566 CALL                     3
+            576 UNPACK_SEQUENCE          2
+            580 STORE_FAST               7 (kh)
+            582 STORE_FAST               8 (ivh)
+
+236         584 LOAD_FAST                7 (kh)
+            586 POP_JUMP_FORWARD_IF_FALSE    42 (to 672)
+
+237         588 LOAD_GLOBAL             21 (NULL + print)
+            600 LOAD_CONST              13 ('  [OK] 验证通过! key=')
+            602 LOAD_FAST                7 (kh)
+            604 FORMAT_VALUE             0
+            606 LOAD_CONST              14 ('  base_iv64=')
+            608 LOAD_FAST                8 (ivh)
+            610 FORMAT_VALUE             0
+            612 BUILD_STRING             4
+            614 PRECALL                  1
+            618 CALL                     1
+            628 POP_TOP
+
+238         630 LOAD_GLOBAL             21 (NULL + print)
+            642 LOAD_CONST              15 ('  -> 解密: AES-128-CTR, IV=((0x')
+            644 LOAD_FAST                8 (ivh)
+            646 FORMAT_VALUE             0
+            648 LOAD_CONST              16 ('+sample_idx)<<64), 用 decrypt_full.py')
+            650 BUILD_STRING             3
+            652 PRECALL                  1
+            656 CALL                     1
+            666 POP_TOP
+            668 LOAD_CONST               0 (None)
+            670 RETURN_VALUE
+
+240     >>  672 LOAD_GLOBAL             21 (NULL + print)
+            684 LOAD_CONST              17 ('  [X] 没有 key x base_iv 组合能解密该密文。可能: dump与密文非同一视频/清晰度, 或key未在内存。')
+            686 PRECALL                  1
+            690 CALL                     1
+            700 POP_TOP
+            702 LOAD_CONST               0 (None)
+            704 RETURN_VALUE
+
+232     >>  706 LOAD_CONST               0 (None)
+            708 RETURN_VALUE

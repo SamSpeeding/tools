@@ -1,0 +1,50 @@
+[
+  {
+    "path": "sign/unidbg-sign.jar",
+    "sha256": "bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b"
+  },
+  {
+    "path": "capture/fq_oversea/libmetasec_ml.so",
+    "sha256": "20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d"
+  },
+  {
+    "path": "capture/fq_oversea/libc++_shared.so",
+    "sha256": "e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0"
+  },
+  {
+    "path": "capture/fq_oversea/ms_16777218.bin",
+    "sha256": "c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c"
+  },
+  {
+    "path": "decrypt/unwrap_spade.pyc",
+    "sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7"
+  },
+  {
+    "path": "decrypt/oracle.pyc",
+    "sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471"
+  },
+  {
+    "path": "decrypt/extract_keybox_pairs.pyc",
+    "sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a"
+  },
+  {
+    "path": "decrypt/decutil.pyc",
+    "sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7"
+  },
+  {
+    "path": "decrypt/unwrap_spade.py",
+    "sha256": "8e9d804f4a62d8da63b533175396b4ccb22cff0ae32276b66c70fa403cab1a4b"
+  },
+  {
+    "path": "decrypt/oracle.py",
+    "sha256": "2b9fdd196357443660e592076253ba479b6ebab24c801080c14ca7b44c61bacc"
+  },
+  {
+    "path": "decrypt/decutil.py",
+    "sha256": "e5781d94d804b6a04621d1ca059e1bbc26b3e7b524c5d3a4328b6399581e033d"
+  },
+  {
+    "path": "decrypt/extract_keybox_pairs.py",
+    "sha256": "151b4c1f0089e9a3c6688cf0adab2705f993c62155e7e1300406e8bb16ba6bd7"
+  }
+]

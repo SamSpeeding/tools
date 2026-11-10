@@ -1,0 +1,1267 @@
+Compiled from "FqTrace.java"
+public class com.hongguo.sign.FqTrace extends com.github.unidbg.linux.android.dvm.AbstractJni implements com.github.unidbg.file.IOResolver<com.github.unidbg.file.linux.AndroidFileIO> {
+  static final java.lang.String PKG;
+
+  static final java.lang.String FILES;
+
+  static final long SIGN;
+
+  static final java.lang.String DIR;
+
+  private final com.github.unidbg.AndroidEmulator emulator;
+
+  private final com.github.unidbg.linux.android.dvm.VM vm;
+
+  private final com.github.unidbg.Module module;
+
+  private final com.github.unidbg.memory.Memory memory;
+
+  private final java.io.File soMeta;
+
+  private final java.io.File cert;
+
+  static final java.util.Map<java.lang.Long, java.lang.Integer> READS;
+
+  private long modBase;
+
+  private long modSize;
+
+  public com.hongguo.sign.FqTrace();
+    Code:
+         0: aload_0
+         1: invokespecial #1                  // Method com/github/unidbg/linux/android/dvm/AbstractJni."<init>":()V
+         4: aload_0
+         5: new           #7                  // class java/io/File
+         8: dup
+         9: ldc           #11                 // String ../capture/fq_oversea/libmetasec_ml.so
+        11: invokespecial #13                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+        14: putfield      #16                 // Field soMeta:Ljava/io/File;
+        17: aload_0
+        18: new           #7                  // class java/io/File
+        21: dup
+        22: ldc           #20                 // String ../capture/fq_oversea/ms_16777218.bin
+        24: invokespecial #13                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+        27: putfield      #22                 // Field cert:Ljava/io/File;
+        30: aload_0
+        31: invokestatic  #25                 // Method com/github/unidbg/linux/android/AndroidEmulatorBuilder.for64Bit:()Lcom/github/unidbg/linux/android/AndroidEmulatorBuilder;
+        34: new           #31                 // class com/github/unidbg/arm/backend/Unicorn2Factory
+        37: dup
+        38: iconst_1
+        39: invokespecial #33                 // Method com/github/unidbg/arm/backend/Unicorn2Factory."<init>":(Z)V
+        42: invokevirtual #36                 // Method com/github/unidbg/linux/android/AndroidEmulatorBuilder.addBackendFactory:(Lcom/github/unidbg/arm/backend/BackendFactory;)Lcom/github/unidbg/EmulatorBuilder;
+        45: ldc           #40                 // String com.dragon.read.oversea.gp
+        47: invokevirtual #42                 // Method com/github/unidbg/EmulatorBuilder.setProcessName:(Ljava/lang/String;)Lcom/github/unidbg/EmulatorBuilder;
+        50: invokevirtual #48                 // Method com/github/unidbg/EmulatorBuilder.build:()Lcom/github/unidbg/arm/ARMEmulator;
+        53: checkcast     #52                 // class com/github/unidbg/AndroidEmulator
+        56: putfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+        59: aload_0
+        60: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+        63: invokeinterface #58,  1           // InterfaceMethod com/github/unidbg/AndroidEmulator.getSyscallHandler:()Lcom/github/unidbg/spi/SyscallHandler;
+        68: iconst_0
+        69: invokeinterface #62,  2           // InterfaceMethod com/github/unidbg/spi/SyscallHandler.setVerbose:(Z)V
+        74: aload_0
+        75: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+        78: invokeinterface #58,  1           // InterfaceMethod com/github/unidbg/AndroidEmulator.getSyscallHandler:()Lcom/github/unidbg/spi/SyscallHandler;
+        83: aload_0
+        84: invokeinterface #67,  2           // InterfaceMethod com/github/unidbg/spi/SyscallHandler.addIOResolver:(Lcom/github/unidbg/file/IOResolver;)V
+        89: new           #71                 // class java/util/HashMap
+        92: dup
+        93: invokespecial #73                 // Method java/util/HashMap."<init>":()V
+        96: astore_1
+        97: aload_1
+        98: ldc           #74                 // String /data/user/0/com.dragon.read.oversea.gp
+       100: ldc           #76                 // int 655781
+       102: invokestatic  #77                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       105: invokeinterface #83,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       110: pop
+       111: aload_1
+       112: ldc           #89                 // String /data/user/0/com.dragon.read.oversea.gp/files
+       114: ldc           #91                 // int 655864
+       116: invokestatic  #77                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       119: invokeinterface #83,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       124: pop
+       125: aload_0
+       126: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       129: ldc           #92                 // String inode
+       131: aload_1
+       132: invokeinterface #94,  3           // InterfaceMethod com/github/unidbg/AndroidEmulator.set:(Ljava/lang/String;Ljava/lang/Object;)V
+       137: aload_0
+       138: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       141: ldc           #98                 // String uid
+       143: sipush        10074
+       146: invokestatic  #77                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       149: invokeinterface #94,  3           // InterfaceMethod com/github/unidbg/AndroidEmulator.set:(Ljava/lang/String;Ljava/lang/Object;)V
+       154: aload_0
+       155: aload_0
+       156: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       159: invokeinterface #100,  1          // InterfaceMethod com/github/unidbg/AndroidEmulator.getMemory:()Lcom/github/unidbg/memory/Memory;
+       164: putfield      #104                // Field memory:Lcom/github/unidbg/memory/Memory;
+       167: aload_0
+       168: getfield      #104                // Field memory:Lcom/github/unidbg/memory/Memory;
+       171: new           #108                // class com/github/unidbg/linux/android/AndroidResolver
+       174: dup
+       175: bipush        23
+       177: iconst_0
+       178: anewarray     #110                // class java/lang/String
+       181: invokespecial #112                // Method com/github/unidbg/linux/android/AndroidResolver."<init>":(I[Ljava/lang/String;)V
+       184: invokeinterface #115,  2          // InterfaceMethod com/github/unidbg/memory/Memory.setLibraryResolver:(Lcom/github/unidbg/LibraryResolver;)V
+       189: aload_0
+       190: aload_0
+       191: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       194: invokeinterface #121,  1          // InterfaceMethod com/github/unidbg/AndroidEmulator.createDalvikVM:()Lcom/github/unidbg/linux/android/dvm/VM;
+       199: putfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       202: aload_0
+       203: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       206: aload_0
+       207: invokeinterface #129,  2          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.setJni:(Lcom/github/unidbg/linux/android/dvm/Jni;)V
+       212: aload_0
+       213: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       216: iconst_0
+       217: invokeinterface #135,  2          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.setVerbose:(Z)V
+       222: new           #136                // class com/github/unidbg/virtualmodule/android/AndroidModule
+       225: dup
+       226: aload_0
+       227: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       230: aload_0
+       231: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       234: invokespecial #138                // Method com/github/unidbg/virtualmodule/android/AndroidModule."<init>":(Lcom/github/unidbg/Emulator;Lcom/github/unidbg/linux/android/dvm/VM;)V
+       237: aload_0
+       238: getfield      #104                // Field memory:Lcom/github/unidbg/memory/Memory;
+       241: invokevirtual #141                // Method com/github/unidbg/virtualmodule/android/AndroidModule.register:(Lcom/github/unidbg/memory/Memory;)Lcom/github/unidbg/Module;
+       244: pop
+       245: new           #145                // class com/github/unidbg/virtualmodule/android/JniGraphics
+       248: dup
+       249: aload_0
+       250: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       253: aload_0
+       254: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       257: invokespecial #147                // Method com/github/unidbg/virtualmodule/android/JniGraphics."<init>":(Lcom/github/unidbg/Emulator;Lcom/github/unidbg/linux/android/dvm/VM;)V
+       260: aload_0
+       261: getfield      #104                // Field memory:Lcom/github/unidbg/memory/Memory;
+       264: invokevirtual #148                // Method com/github/unidbg/virtualmodule/android/JniGraphics.register:(Lcom/github/unidbg/memory/Memory;)Lcom/github/unidbg/Module;
+       267: pop
+       268: new           #7                  // class java/io/File
+       271: dup
+       272: ldc           #149                // String ../capture/fq_oversea/libc++_shared.so
+       274: invokespecial #13                 // Method java/io/File."<init>":(Ljava/lang/String;)V
+       277: astore_2
+       278: aload_2
+       279: invokevirtual #151                // Method java/io/File.exists:()Z
+       282: ifeq          297
+       285: aload_0
+       286: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       289: aload_2
+       290: iconst_0
+       291: invokeinterface #155,  3          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.loadLibrary:(Ljava/io/File;Z)Lcom/github/unidbg/linux/android/dvm/DalvikModule;
+       296: pop
+       297: aload_0
+       298: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       301: ldc           #159                // String ms/bd/c/m
+       303: iconst_0
+       304: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+       307: invokeinterface #163,  3          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+       312: astore_3
+       313: aload_0
+       314: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       317: ldc           #167                // String ms/bd/c/a4$a
+       319: iconst_1
+       320: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+       323: dup
+       324: iconst_0
+       325: aload_3
+       326: aastore
+       327: invokeinterface #163,  3          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+       332: astore        4
+       334: aload_0
+       335: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       338: ldc           #169                // String com/bytedance/mobsec/metasec/ml/MS
+       340: iconst_1
+       341: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+       344: dup
+       345: iconst_0
+       346: aload         4
+       348: aastore
+       349: invokeinterface #163,  3          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+       354: pop
+       355: aload_0
+       356: getfield      #125                // Field vm:Lcom/github/unidbg/linux/android/dvm/VM;
+       359: aload_0
+       360: getfield      #16                 // Field soMeta:Ljava/io/File;
+       363: iconst_1
+       364: invokeinterface #155,  3          // InterfaceMethod com/github/unidbg/linux/android/dvm/VM.loadLibrary:(Ljava/io/File;Z)Lcom/github/unidbg/linux/android/dvm/DalvikModule;
+       369: astore        5
+       371: aload_0
+       372: aload         5
+       374: invokevirtual #171                // Method com/github/unidbg/linux/android/dvm/DalvikModule.getModule:()Lcom/github/unidbg/Module;
+       377: putfield      #177                // Field module:Lcom/github/unidbg/Module;
+       380: aload         5
+       382: aload_0
+       383: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+       386: invokevirtual #181                // Method com/github/unidbg/linux/android/dvm/DalvikModule.callJNI_OnLoad:(Lcom/github/unidbg/Emulator;)V
+       389: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       392: aload_0
+       393: getfield      #177                // Field module:Lcom/github/unidbg/Module;
+       396: getfield      #191                // Field com/github/unidbg/Module.base:J
+       399: invokestatic  #197                // Method java/lang/Long.toHexString:(J)Ljava/lang/String;
+       402: invokedynamic #203,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       407: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       410: return
+
+  private void enableReadTrace();
+    Code:
+         0: aload_0
+         1: aload_0
+         2: getfield      #177                // Field module:Lcom/github/unidbg/Module;
+         5: getfield      #191                // Field com/github/unidbg/Module.base:J
+         8: putfield      #212                // Field modBase:J
+        11: aload_0
+        12: aload_0
+        13: getfield      #177                // Field module:Lcom/github/unidbg/Module;
+        16: getfield      #215                // Field com/github/unidbg/Module.size:J
+        19: putfield      #218                // Field modSize:J
+        22: aload_0
+        23: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+        26: invokeinterface #221,  1          // InterfaceMethod com/github/unidbg/AndroidEmulator.getBackend:()Lcom/github/unidbg/arm/backend/Backend;
+        31: new           #225                // class com/hongguo/sign/FqTrace$1
+        34: dup
+        35: aload_0
+        36: invokespecial #227                // Method com/hongguo/sign/FqTrace$1."<init>":(Lcom/hongguo/sign/FqTrace;)V
+        39: aload_0
+        40: getfield      #212                // Field modBase:J
+        43: aload_0
+        44: getfield      #212                // Field modBase:J
+        47: aload_0
+        48: getfield      #218                // Field modSize:J
+        51: ladd
+        52: aconst_null
+        53: invokeinterface #230,  7          // InterfaceMethod com/github/unidbg/arm/backend/Backend.hook_add_new:(Lcom/github/unidbg/arm/backend/ReadHook;JJLjava/lang/Object;)V
+        58: return
+
+  public java.lang.String sign(java.lang.String, java.lang.String);
+    Code:
+         0: aload_0
+         1: getfield      #177                // Field module:Lcom/github/unidbg/Module;
+         4: aload_0
+         5: getfield      #54                 // Field emulator:Lcom/github/unidbg/AndroidEmulator;
+         8: ldc2_w        #236                // long 1477760l
+        11: iconst_2
+        12: anewarray     #238                // class java/lang/Object
+        15: dup
+        16: iconst_0
+        17: aload_1
+        18: aastore
+        19: dup
+        20: iconst_1
+        21: aload_2
+        22: aastore
+        23: invokevirtual #240                // Method com/github/unidbg/Module.callFunction:(Lcom/github/unidbg/Emulator;J[Ljava/lang/Object;)Ljava/lang/Number;
+        26: astore_3
+        27: aload_3
+        28: ifnonnull     33
+        31: aconst_null
+        32: areturn
+        33: aload_0
+        34: getfield      #104                // Field memory:Lcom/github/unidbg/memory/Memory;
+        37: aload_3
+        38: invokevirtual #244                // Method java/lang/Number.longValue:()J
+        41: invokeinterface #250,  3          // InterfaceMethod com/github/unidbg/memory/Memory.pointer:(J)Lcom/github/unidbg/pointer/UnidbgPointer;
+        46: astore        4
+        48: aload         4
+        50: ifnonnull     57
+        53: aconst_null
+        54: goto          63
+        57: aload         4
+        59: lconst_0
+        60: invokevirtual #254                // Method com/github/unidbg/pointer/UnidbgPointer.getString:(J)Ljava/lang/String;
+        63: areturn
+
+  public void reportHotReads(int);
+    Code:
+         0: new           #259                // class java/util/ArrayList
+         3: dup
+         4: getstatic     #261                // Field READS:Ljava/util/Map;
+         7: invokeinterface #265,  1          // InterfaceMethod java/util/Map.entrySet:()Ljava/util/Set;
+        12: invokespecial #269                // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+        15: astore_2
+        16: aload_2
+        17: invokedynamic #272,  0            // InvokeDynamic #1:compare:()Ljava/util/Comparator;
+        22: invokeinterface #276,  2          // InterfaceMethod java/util/List.sort:(Ljava/util/Comparator;)V
+        27: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+        30: iload_1
+        31: invokedynamic #282,  0            // InvokeDynamic #2:makeConcatWithConstants:(I)Ljava/lang/String;
+        36: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        39: iconst_0
+        40: istore_3
+        41: iload_3
+        42: iload_1
+        43: aload_2
+        44: invokeinterface #285,  1          // InterfaceMethod java/util/List.size:()I
+        49: invokestatic  #288                // Method java/lang/Math.min:(II)I
+        52: if_icmpge     125
+        55: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+        58: ldc_w         #294                // String     +0x%-8x cnt=%d%n
+        61: iconst_2
+        62: anewarray     #238                // class java/lang/Object
+        65: dup
+        66: iconst_0
+        67: aload_2
+        68: iload_3
+        69: invokeinterface #296,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        74: checkcast     #300                // class java/util/Map$Entry
+        77: invokeinterface #302,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+        82: checkcast     #198                // class java/lang/Long
+        85: invokevirtual #306                // Method java/lang/Long.longValue:()J
+        88: aload_0
+        89: getfield      #212                // Field modBase:J
+        92: lsub
+        93: invokestatic  #307                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+        96: aastore
+        97: dup
+        98: iconst_1
+        99: aload_2
+       100: iload_3
+       101: invokeinterface #296,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+       106: checkcast     #300                // class java/util/Map$Entry
+       109: invokeinterface #310,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       114: aastore
+       115: invokevirtual #313                // Method java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
+       118: pop
+       119: iinc          3, 1
+       122: goto          41
+       125: aload_2
+       126: invokestatic  #317                // InterfaceMethod java/util/Map$Entry.comparingByKey:()Ljava/util/Comparator;
+       129: invokeinterface #276,  2          // InterfaceMethod java/util/List.sort:(Ljava/util/Comparator;)V
+       134: ldc2_w        #320                // long -1l
+       137: lstore_3
+       138: ldc2_w        #320                // long -1l
+       141: lstore        5
+       143: iconst_0
+       144: istore        7
+       146: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       149: ldc_w         #322                // String [*] 热读连续区(疑似表, off 范围):
+       152: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       155: aload_2
+       156: invokeinterface #324,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+       161: astore        8
+       163: aload         8
+       165: invokeinterface #328,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       170: ifeq          323
+       173: aload         8
+       175: invokeinterface #333,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       180: checkcast     #300                // class java/util/Map$Entry
+       183: astore        9
+       185: aload         9
+       187: invokeinterface #310,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       192: checkcast     #78                 // class java/lang/Integer
+       195: invokevirtual #336                // Method java/lang/Integer.intValue:()I
+       198: bipush        10
+       200: if_icmpge     206
+       203: goto          163
+       206: aload         9
+       208: invokeinterface #302,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+       213: checkcast     #198                // class java/lang/Long
+       216: invokevirtual #306                // Method java/lang/Long.longValue:()J
+       219: aload_0
+       220: getfield      #212                // Field modBase:J
+       223: lsub
+       224: lstore        10
+       226: lload_3
+       227: lconst_0
+       228: lcmp
+       229: ifge          245
+       232: lload         10
+       234: lstore_3
+       235: lload         10
+       237: lstore        5
+       239: iconst_1
+       240: istore        7
+       242: goto          320
+       245: lload         10
+       247: lload         5
+       249: lsub
+       250: ldc2_w        #339                // long 64l
+       253: lcmp
+       254: ifgt          267
+       257: lload         10
+       259: lstore        5
+       261: iinc          7, 1
+       264: goto          320
+       267: iload         7
+       269: iconst_4
+       270: if_icmplt     310
+       273: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       276: ldc_w         #341                // String     +0x%x .. +0x%x (%d点)%n
+       279: iconst_3
+       280: anewarray     #238                // class java/lang/Object
+       283: dup
+       284: iconst_0
+       285: lload_3
+       286: invokestatic  #307                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       289: aastore
+       290: dup
+       291: iconst_1
+       292: lload         5
+       294: invokestatic  #307                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       297: aastore
+       298: dup
+       299: iconst_2
+       300: iload         7
+       302: invokestatic  #77                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       305: aastore
+       306: invokevirtual #313                // Method java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
+       309: pop
+       310: lload         10
+       312: lstore_3
+       313: lload         10
+       315: lstore        5
+       317: iconst_1
+       318: istore        7
+       320: goto          163
+       323: iload         7
+       325: iconst_4
+       326: if_icmplt     366
+       329: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       332: ldc_w         #341                // String     +0x%x .. +0x%x (%d点)%n
+       335: iconst_3
+       336: anewarray     #238                // class java/lang/Object
+       339: dup
+       340: iconst_0
+       341: lload_3
+       342: invokestatic  #307                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       345: aastore
+       346: dup
+       347: iconst_1
+       348: lload         5
+       350: invokestatic  #307                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       353: aastore
+       354: dup
+       355: iconst_2
+       356: iload         7
+       358: invokestatic  #77                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       361: aastore
+       362: invokevirtual #313                // Method java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;
+       365: pop
+       366: return
+
+  private com.github.unidbg.linux.android.dvm.DvmObject<?> handleMS(com.github.unidbg.linux.android.dvm.BaseVM, int);
+    Code:
+         0: iload_2
+         1: lookupswitch  { // 7
+                   65539: 68
+                16777218: 119
+                16777232: 86
+                16777233: 107
+                33554433: 80
+                33554434: 80
+               268435470: 154
+                 default: 175
+            }
+        68: new           #343                // class com/github/unidbg/linux/android/dvm/StringObject
+        71: dup
+        72: aload_1
+        73: ldc_w         #345                // String /data/user/0/com.dragon.read.oversea.gp/files/.msdata
+        76: invokespecial #347                // Method com/github/unidbg/linux/android/dvm/StringObject."<init>":(Lcom/github/unidbg/linux/android/dvm/VM;Ljava/lang/String;)V
+        79: areturn
+        80: aload_1
+        81: iconst_1
+        82: invokestatic  #350                // Method com/github/unidbg/linux/android/dvm/wrapper/DvmBoolean.valueOf:(Lcom/github/unidbg/linux/android/dvm/VM;Z)Lcom/github/unidbg/linux/android/dvm/wrapper/DvmBoolean;
+        85: areturn
+        86: aload_1
+        87: ldc_w         #355                // String java/lang/Integer
+        90: iconst_0
+        91: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+        94: invokevirtual #356                // Method com/github/unidbg/linux/android/dvm/BaseVM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+        97: ldc_w         #359                // int 68132
+       100: invokestatic  #77                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       103: invokevirtual #360                // Method com/github/unidbg/linux/android/dvm/DvmClass.newObject:(Ljava/lang/Object;)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+       106: areturn
+       107: new           #343                // class com/github/unidbg/linux/android/dvm/StringObject
+       110: dup
+       111: aload_1
+       112: ldc_w         #364                // String 6.8.1.32
+       115: invokespecial #347                // Method com/github/unidbg/linux/android/dvm/StringObject."<init>":(Lcom/github/unidbg/linux/android/dvm/VM;Ljava/lang/String;)V
+       118: areturn
+       119: aload_0
+       120: getfield      #22                 // Field cert:Ljava/io/File;
+       123: invokevirtual #151                // Method java/io/File.exists:()Z
+       126: ifeq          148
+       129: new           #366                // class com/github/unidbg/linux/android/dvm/array/ByteArray
+       132: dup
+       133: aload_1
+       134: aload_0
+       135: getfield      #22                 // Field cert:Ljava/io/File;
+       138: invokevirtual #368                // Method java/io/File.toPath:()Ljava/nio/file/Path;
+       141: invokestatic  #372                // Method java/nio/file/Files.readAllBytes:(Ljava/nio/file/Path;)[B
+       144: invokespecial #378                // Method com/github/unidbg/linux/android/dvm/array/ByteArray."<init>":(Lcom/github/unidbg/linux/android/dvm/VM;[B)V
+       147: areturn
+       148: goto          152
+       151: astore_3
+       152: aconst_null
+       153: areturn
+       154: aload_1
+       155: ldc_w         #383                // String java/lang/Long
+       158: iconst_0
+       159: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+       162: invokevirtual #356                // Method com/github/unidbg/linux/android/dvm/BaseVM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+       165: invokestatic  #384                // Method java/lang/System.currentTimeMillis:()J
+       168: invokestatic  #307                // Method java/lang/Long.valueOf:(J)Ljava/lang/Long;
+       171: invokevirtual #360                // Method com/github/unidbg/linux/android/dvm/DvmClass.newObject:(Ljava/lang/Object;)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+       174: areturn
+       175: aconst_null
+       176: areturn
+      Exception table:
+         from    to  target type
+           119   147   151   Class java/lang/Exception
+
+  public com.github.unidbg.linux.android.dvm.DvmObject<?> callStaticObjectMethodV(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmClass, java.lang.String, com.github.unidbg.linux.android.dvm.VaList);
+    Code:
+         0: aload_3
+         1: ldc_w         #387                // String com/bytedance/mobsec/metasec/ml/MS->b(
+         4: invokevirtual #389                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+         7: ifeq          22
+        10: aload_0
+        11: aload_1
+        12: aload         4
+        14: iconst_0
+        15: invokevirtual #393                // Method com/github/unidbg/linux/android/dvm/VaList.getIntArg:(I)I
+        18: invokevirtual #399                // Method handleMS:(Lcom/github/unidbg/linux/android/dvm/BaseVM;I)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+        21: areturn
+        22: aload_3
+        23: ldc_w         #403                // String java/lang/Thread->currentThread()Ljava/lang/Thread;
+        26: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        29: ifeq          50
+        32: aload_1
+        33: ldc_w         #409                // String java/lang/Thread
+        36: iconst_0
+        37: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+        40: invokevirtual #356                // Method com/github/unidbg/linux/android/dvm/BaseVM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+        43: invokestatic  #411                // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+        46: invokevirtual #360                // Method com/github/unidbg/linux/android/dvm/DvmClass.newObject:(Ljava/lang/Object;)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+        49: areturn
+        50: aload_0
+        51: aload_1
+        52: aload_2
+        53: aload_3
+        54: aload         4
+        56: invokespecial #416                // Method com/github/unidbg/linux/android/dvm/AbstractJni.callStaticObjectMethodV:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmClass;Ljava/lang/String;Lcom/github/unidbg/linux/android/dvm/VaList;)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+        59: areturn
+
+  public com.github.unidbg.linux.android.dvm.DvmObject<?> callObjectMethodV(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmObject<?>, java.lang.String, com.github.unidbg.linux.android.dvm.VaList);
+    Code:
+         0: aload_3
+         1: astore        5
+         3: iconst_m1
+         4: istore        6
+         6: aload         5
+         8: invokevirtual #420                // Method java/lang/String.hashCode:()I
+        11: lookupswitch  { // 4
+             -2001193167: 86
+             -1247332794: 52
+               619974356: 69
+              2004407970: 103
+                 default: 117
+            }
+        52: aload         5
+        54: ldc_w         #423                // String java/lang/Thread->getStackTrace()[Ljava/lang/StackTraceElement;
+        57: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        60: ifeq          117
+        63: iconst_0
+        64: istore        6
+        66: goto          117
+        69: aload         5
+        71: ldc_w         #425                // String java/lang/StackTraceElement->getClassName()Ljava/lang/String;
+        74: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        77: ifeq          117
+        80: iconst_1
+        81: istore        6
+        83: goto          117
+        86: aload         5
+        88: ldc_w         #427                // String java/lang/StackTraceElement->getMethodName()Ljava/lang/String;
+        91: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        94: ifeq          117
+        97: iconst_2
+        98: istore        6
+       100: goto          117
+       103: aload         5
+       105: ldc_w         #429                // String java/lang/Thread->getBytes(Ljava/lang/String;)[B
+       108: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       111: ifeq          117
+       114: iconst_3
+       115: istore        6
+       117: iload         6
+       119: tableswitch   { // 0 to 3
+                       0: 148
+                       1: 215
+                       2: 234
+                       3: 253
+                 default: 280
+            }
+       148: invokestatic  #411                // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+       151: invokevirtual #431                // Method java/lang/Thread.getStackTrace:()[Ljava/lang/StackTraceElement;
+       154: astore        7
+       156: aload         7
+       158: arraylength
+       159: anewarray     #435                // class com/github/unidbg/linux/android/dvm/DvmObject
+       162: astore        8
+       164: iconst_0
+       165: istore        9
+       167: iload         9
+       169: aload         7
+       171: arraylength
+       172: if_icmpge     205
+       175: aload         8
+       177: iload         9
+       179: aload_1
+       180: ldc_w         #437                // String java/lang/StackTraceElement
+       183: iconst_0
+       184: anewarray     #161                // class com/github/unidbg/linux/android/dvm/DvmClass
+       187: invokevirtual #356                // Method com/github/unidbg/linux/android/dvm/BaseVM.resolveClass:(Ljava/lang/String;[Lcom/github/unidbg/linux/android/dvm/DvmClass;)Lcom/github/unidbg/linux/android/dvm/DvmClass;
+       190: aload         7
+       192: iload         9
+       194: aaload
+       195: invokevirtual #360                // Method com/github/unidbg/linux/android/dvm/DvmClass.newObject:(Ljava/lang/Object;)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+       198: aastore
+       199: iinc          9, 1
+       202: goto          167
+       205: new           #439                // class com/github/unidbg/linux/android/dvm/array/ArrayObject
+       208: dup
+       209: aload         8
+       211: invokespecial #441                // Method com/github/unidbg/linux/android/dvm/array/ArrayObject."<init>":([Lcom/github/unidbg/linux/android/dvm/DvmObject;)V
+       214: areturn
+       215: new           #343                // class com/github/unidbg/linux/android/dvm/StringObject
+       218: dup
+       219: aload_1
+       220: aload_2
+       221: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+       224: checkcast     #445                // class java/lang/StackTraceElement
+       227: invokevirtual #446                // Method java/lang/StackTraceElement.getClassName:()Ljava/lang/String;
+       230: invokespecial #347                // Method com/github/unidbg/linux/android/dvm/StringObject."<init>":(Lcom/github/unidbg/linux/android/dvm/VM;Ljava/lang/String;)V
+       233: areturn
+       234: new           #343                // class com/github/unidbg/linux/android/dvm/StringObject
+       237: dup
+       238: aload_1
+       239: aload_2
+       240: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+       243: checkcast     #445                // class java/lang/StackTraceElement
+       246: invokevirtual #450                // Method java/lang/StackTraceElement.getMethodName:()Ljava/lang/String;
+       249: invokespecial #347                // Method com/github/unidbg/linux/android/dvm/StringObject."<init>":(Lcom/github/unidbg/linux/android/dvm/VM;Ljava/lang/String;)V
+       252: areturn
+       253: new           #366                // class com/github/unidbg/linux/android/dvm/array/ByteArray
+       256: dup
+       257: aload_1
+       258: aload         4
+       260: iconst_0
+       261: invokevirtual #453                // Method com/github/unidbg/linux/android/dvm/VaList.getObjectArg:(I)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+       264: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+       267: checkcast     #110                // class java/lang/String
+       270: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+       273: invokevirtual #463                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+       276: invokespecial #378                // Method com/github/unidbg/linux/android/dvm/array/ByteArray."<init>":(Lcom/github/unidbg/linux/android/dvm/VM;[B)V
+       279: areturn
+       280: aload_0
+       281: aload_1
+       282: aload_2
+       283: aload_3
+       284: aload         4
+       286: invokespecial #467                // Method com/github/unidbg/linux/android/dvm/AbstractJni.callObjectMethodV:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmObject;Ljava/lang/String;Lcom/github/unidbg/linux/android/dvm/VaList;)Lcom/github/unidbg/linux/android/dvm/DvmObject;
+       289: areturn
+
+  public long callLongMethodV(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmObject<?>, java.lang.String, com.github.unidbg.linux.android.dvm.VaList);
+    Code:
+         0: ldc_w         #471                // String java/lang/Long->longValue()J
+         3: aload_3
+         4: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+         7: ifeq          31
+        10: aload_2
+        11: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+        14: instanceof    #198                // class java/lang/Long
+        17: ifeq          31
+        20: aload_2
+        21: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+        24: checkcast     #198                // class java/lang/Long
+        27: invokevirtual #306                // Method java/lang/Long.longValue:()J
+        30: lreturn
+        31: aload_0
+        32: aload_1
+        33: aload_2
+        34: aload_3
+        35: aload         4
+        37: invokespecial #473                // Method com/github/unidbg/linux/android/dvm/AbstractJni.callLongMethodV:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmObject;Ljava/lang/String;Lcom/github/unidbg/linux/android/dvm/VaList;)J
+        40: lreturn
+
+  public int callIntMethodV(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmObject<?>, java.lang.String, com.github.unidbg.linux.android.dvm.VaList);
+    Code:
+         0: ldc_w         #477                // String java/lang/Integer->intValue()I
+         3: aload_3
+         4: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+         7: ifeq          31
+        10: aload_2
+        11: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+        14: instanceof    #78                 // class java/lang/Integer
+        17: ifeq          31
+        20: aload_2
+        21: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+        24: checkcast     #78                 // class java/lang/Integer
+        27: invokevirtual #336                // Method java/lang/Integer.intValue:()I
+        30: ireturn
+        31: aload_0
+        32: aload_1
+        33: aload_2
+        34: aload_3
+        35: aload         4
+        37: invokespecial #479                // Method com/github/unidbg/linux/android/dvm/AbstractJni.callIntMethodV:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmObject;Ljava/lang/String;Lcom/github/unidbg/linux/android/dvm/VaList;)I
+        40: ireturn
+
+  public boolean callBooleanMethodV(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmObject<?>, java.lang.String, com.github.unidbg.linux.android.dvm.VaList);
+    Code:
+         0: ldc_w         #483                // String java/lang/Boolean->booleanValue()Z
+         3: aload_3
+         4: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+         7: ifeq          31
+        10: aload_2
+        11: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+        14: instanceof    #485                // class java/lang/Boolean
+        17: ifeq          31
+        20: aload_2
+        21: invokevirtual #444                // Method com/github/unidbg/linux/android/dvm/DvmObject.getValue:()Ljava/lang/Object;
+        24: checkcast     #485                // class java/lang/Boolean
+        27: invokevirtual #487                // Method java/lang/Boolean.booleanValue:()Z
+        30: ireturn
+        31: aload_0
+        32: aload_1
+        33: aload_2
+        34: aload_3
+        35: aload         4
+        37: invokespecial #490                // Method com/github/unidbg/linux/android/dvm/AbstractJni.callBooleanMethodV:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmObject;Ljava/lang/String;Lcom/github/unidbg/linux/android/dvm/VaList;)Z
+        40: ireturn
+
+  public int getStaticIntField(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmClass, java.lang.String);
+    Code:
+         0: ldc_w         #494                // String com/bytedance/mobsec/metasec/ml/MS->a()V
+         3: aload_3
+         4: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+         7: ifeq          13
+        10: bipush        64
+        12: ireturn
+        13: aload_0
+        14: aload_1
+        15: aload_2
+        16: aload_3
+        17: invokespecial #496                // Method com/github/unidbg/linux/android/dvm/AbstractJni.getStaticIntField:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmClass;Ljava/lang/String;)I
+        20: ireturn
+
+  public void callVoidMethod(com.github.unidbg.linux.android.dvm.BaseVM, com.github.unidbg.linux.android.dvm.DvmObject<?>, java.lang.String, com.github.unidbg.linux.android.dvm.VarArg);
+    Code:
+         0: ldc_w         #494                // String com/bytedance/mobsec/metasec/ml/MS->a()V
+         3: aload_3
+         4: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+         7: ifeq          11
+        10: return
+        11: aload_0
+        12: aload_1
+        13: aload_2
+        14: aload_3
+        15: aload         4
+        17: invokespecial #500                // Method com/github/unidbg/linux/android/dvm/AbstractJni.callVoidMethod:(Lcom/github/unidbg/linux/android/dvm/BaseVM;Lcom/github/unidbg/linux/android/dvm/DvmObject;Ljava/lang/String;Lcom/github/unidbg/linux/android/dvm/VarArg;)V
+        20: return
+
+  public com.github.unidbg.file.FileResult resolve(com.github.unidbg.Emulator, java.lang.String, int);
+    Code:
+         0: aload_2
+         1: ldc_w         #504                // String libmetasec_ml.so
+         4: invokevirtual #506                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+         7: ifeq          27
+        10: new           #510                // class com/github/unidbg/linux/file/SimpleFileIO
+        13: dup
+        14: iload_3
+        15: aload_0
+        16: getfield      #16                 // Field soMeta:Ljava/io/File;
+        19: aload_2
+        20: invokespecial #512                // Method com/github/unidbg/linux/file/SimpleFileIO."<init>":(ILjava/io/File;Ljava/lang/String;)V
+        23: invokestatic  #515                // Method com/github/unidbg/file/FileResult.success:(Lcom/github/unidbg/file/NewFileIO;)Lcom/github/unidbg/file/FileResult;
+        26: areturn
+        27: aconst_null
+        28: areturn
+
+  public java.util.Map<java.lang.String, java.lang.String> signMap(java.lang.String, java.lang.String);
+    Code:
+         0: new           #521                // class java/util/LinkedHashMap
+         3: dup
+         4: invokespecial #523                // Method java/util/LinkedHashMap."<init>":()V
+         7: astore_3
+         8: aload_0
+         9: aload_1
+        10: aload_2
+        11: invokevirtual #524                // Method sign:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        14: astore        4
+        16: aload         4
+        18: ifnonnull     23
+        21: aload_3
+        22: areturn
+        23: aload         4
+        25: ldc_w         #528                // String \n
+        28: invokevirtual #530                // Method java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+        31: astore        5
+        33: iconst_0
+        34: istore        6
+        36: iload         6
+        38: iconst_1
+        39: iadd
+        40: aload         5
+        42: arraylength
+        43: if_icmpge     89
+        46: aload         5
+        48: iload         6
+        50: aaload
+        51: ldc_w         #534                // String X-
+        54: invokevirtual #389                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+        57: ifeq          83
+        60: aload_3
+        61: aload         5
+        63: iload         6
+        65: aaload
+        66: invokevirtual #536                // Method java/lang/String.trim:()Ljava/lang/String;
+        69: aload         5
+        71: iload         6
+        73: iconst_1
+        74: iadd
+        75: aaload
+        76: invokevirtual #536                // Method java/lang/String.trim:()Ljava/lang/String;
+        79: invokevirtual #539                // Method java/util/LinkedHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        82: pop
+        83: iinc          6, 2
+        86: goto          36
+        89: aload_3
+        90: areturn
+
+  static void serveStatic(int) throws java.lang.Exception;
+    Code:
+         0: ldc_w         #540                // String HG_SIGN_TOKEN
+         3: invokestatic  #542                // Method java/lang/System.getenv:(Ljava/lang/String;)Ljava/lang/String;
+         6: astore_1
+         7: aload_1
+         8: ifnull        22
+        11: aload_1
+        12: invokevirtual #545                // Method java/lang/String.isEmpty:()Z
+        15: ifne          22
+        18: iconst_1
+        19: goto          23
+        22: iconst_0
+        23: istore_2
+        24: new           #548                // class java/util/concurrent/LinkedBlockingQueue
+        27: dup
+        28: invokespecial #550                // Method java/util/concurrent/LinkedBlockingQueue."<init>":()V
+        31: astore_3
+        32: new           #412                // class java/lang/Thread
+        35: dup
+        36: aload_3
+        37: invokedynamic #551,  0            // InvokeDynamic #3:run:(Ljava/util/concurrent/BlockingQueue;)Ljava/lang/Runnable;
+        42: ldc_w         #555                // String fqtrace-signer
+        45: invokespecial #557                // Method java/lang/Thread."<init>":(Ljava/lang/Runnable;Ljava/lang/String;)V
+        48: astore        4
+        50: aload         4
+        52: iconst_1
+        53: invokevirtual #560                // Method java/lang/Thread.setDaemon:(Z)V
+        56: aload         4
+        58: invokevirtual #563                // Method java/lang/Thread.start:()V
+        61: invokestatic  #566                // Method java/lang/System.getenv:()Ljava/util/Map;
+        64: ldc_w         #569                // String BIND_HOST
+        67: ldc_w         #571                // String 127.0.0.1
+        70: invokeinterface #573,  3          // InterfaceMethod java/util/Map.getOrDefault:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        75: checkcast     #110                // class java/lang/String
+        78: astore        5
+        80: new           #576                // class java/net/InetSocketAddress
+        83: dup
+        84: aload         5
+        86: iload_0
+        87: invokespecial #578                // Method java/net/InetSocketAddress."<init>":(Ljava/lang/String;I)V
+        90: iconst_0
+        91: invokestatic  #581                // Method com/sun/net/httpserver/HttpServer.create:(Ljava/net/InetSocketAddress;I)Lcom/sun/net/httpserver/HttpServer;
+        94: astore        6
+        96: aload         6
+        98: ldc_w         #587                // String /sign
+       101: iload_2
+       102: aload_1
+       103: aload_3
+       104: invokedynamic #589,  0            // InvokeDynamic #4:handle:(ZLjava/lang/String;Ljava/util/concurrent/BlockingQueue;)Lcom/sun/net/httpserver/HttpHandler;
+       109: invokevirtual #593                // Method com/sun/net/httpserver/HttpServer.createContext:(Ljava/lang/String;Lcom/sun/net/httpserver/HttpHandler;)Lcom/sun/net/httpserver/HttpContext;
+       112: pop
+       113: aload         6
+       115: bipush        16
+       117: invokestatic  #597                // Method java/util/concurrent/Executors.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService;
+       120: invokevirtual #603                // Method com/sun/net/httpserver/HttpServer.setExecutor:(Ljava/util/concurrent/Executor;)V
+       123: aload         6
+       125: invokevirtual #607                // Method com/sun/net/httpserver/HttpServer.start:()V
+       128: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       131: aload         5
+       133: iload_0
+       134: iload_2
+       135: ifeq          144
+       138: ldc_w         #608                // String on
+       141: goto          147
+       144: ldc_w         #610                // String off
+       147: invokedynamic #612,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+       152: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       155: return
+
+  static boolean tokenEquals(java.lang.String, java.lang.String);
+    Code:
+         0: aload_0
+         1: ifnull        8
+         4: aload_1
+         5: ifnonnull     10
+         8: iconst_0
+         9: ireturn
+        10: aload_0
+        11: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        14: invokevirtual #463                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+        17: aload_1
+        18: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        21: invokevirtual #463                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+        24: invokestatic  #615                // Method java/security/MessageDigest.isEqual:([B[B)Z
+        27: ireturn
+
+  private static byte[] readAll(java.io.InputStream) throws java.io.IOException;
+    Code:
+         0: new           #621                // class java/io/ByteArrayOutputStream
+         3: dup
+         4: invokespecial #623                // Method java/io/ByteArrayOutputStream."<init>":()V
+         7: astore_1
+         8: sipush        4096
+        11: newarray       byte
+        13: astore_2
+        14: aload_0
+        15: aload_2
+        16: invokevirtual #624                // Method java/io/InputStream.read:([B)I
+        19: dup
+        20: istore_3
+        21: ifle          34
+        24: aload_1
+        25: aload_2
+        26: iconst_0
+        27: iload_3
+        28: invokevirtual #630                // Method java/io/ByteArrayOutputStream.write:([BII)V
+        31: goto          14
+        34: aload_1
+        35: invokevirtual #634                // Method java/io/ByteArrayOutputStream.toByteArray:()[B
+        38: areturn
+
+  public static void main(java.lang.String[]) throws java.lang.Exception;
+    Code:
+         0: aload_0
+         1: arraylength
+         2: iconst_1
+         3: if_icmplt     48
+         6: aload_0
+         7: iconst_0
+         8: aaload
+         9: ldc_w         #638                // String serve
+        12: invokevirtual #405                // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+        15: ifeq          48
+        18: aload_0
+        19: arraylength
+        20: iconst_2
+        21: if_icmplt     33
+        24: aload_0
+        25: iconst_1
+        26: aaload
+        27: invokestatic  #640                // Method java/lang/Integer.parseInt:(Ljava/lang/String;)I
+        30: goto          36
+        33: sipush        9090
+        36: istore_1
+        37: iload_1
+        38: invokestatic  #644                // Method serveStatic:(I)V
+        41: invokestatic  #411                // Method java/lang/Thread.currentThread:()Ljava/lang/Thread;
+        44: invokevirtual #648                // Method java/lang/Thread.join:()V
+        47: return
+        48: new           #9                  // class com/hongguo/sign/FqTrace
+        51: dup
+        52: invokespecial #651                // Method "<init>":()V
+        55: astore_1
+        56: aload_0
+        57: arraylength
+        58: iconst_1
+        59: if_icmplt     126
+        62: aload_0
+        63: iconst_0
+        64: aaload
+        65: astore_2
+        66: aload_0
+        67: arraylength
+        68: iconst_2
+        69: if_icmplt     87
+        72: aload_0
+        73: iconst_1
+        74: aaload
+        75: ldc_w         #652                // String \\r\\n
+        78: ldc_w         #654                // String \r\n
+        81: invokevirtual #656                // Method java/lang/String.replace:(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+        84: goto          90
+        87: ldc_w         #660                // String
+        90: astore_3
+        91: aload_1
+        92: aload_2
+        93: aload_3
+        94: invokevirtual #524                // Method sign:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+        97: astore        4
+        99: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       102: ldc_w         #662                // String ===SIG_START===
+       105: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       108: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       111: aload         4
+       113: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       116: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       119: ldc_w         #664                // String ===SIG_END===
+       122: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       125: return
+       126: aload_1
+       127: invokevirtual #666                // Method enableReadTrace:()V
+       130: ldc_w         #669                // String https://api5-normal-sinfonlinec.fqnovel.com/reading/bookapi/search/tab/v?aid=1967&device_id=4223674528607515&iid=4223674528611611&version_code=68132&query=test
+       133: astore_2
+       134: ldc_w         #671                // String x-ss-req-ticket\r\n1754299673613\r\ncontent-type\r\napplication/json
+       137: astore_3
+       138: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       141: ldc_w         #673                // String [*] 番茄海外 试签名(带读trace)...
+       144: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       147: aload_1
+       148: aload_2
+       149: aload_3
+       150: invokevirtual #524                // Method sign:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+       153: astore        4
+       155: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+       158: aload         4
+       160: ifnull        180
+       163: aload         4
+       165: ldc_w         #675                // String X-Gorgon
+       168: invokevirtual #506                // Method java/lang/String.contains:(Ljava/lang/CharSequence;)Z
+       171: ifeq          180
+       174: ldc_w         #677                // String 有
+       177: goto          183
+       180: ldc_w         #679                // String 无
+       183: invokedynamic #681,  0            // InvokeDynamic #6:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       188: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       191: aload_1
+       192: bipush        30
+       194: invokevirtual #682                // Method reportHotReads:(I)V
+       197: return
+
+  private static void lambda$serveStatic$2(boolean, java.lang.String, java.util.concurrent.BlockingQueue, com.sun.net.httpserver.HttpExchange) throws java.io.IOException;
+    Code:
+         0: iload_0
+         1: ifeq          70
+         4: aload_3
+         5: invokevirtual #685                // Method com/sun/net/httpserver/HttpExchange.getRequestHeaders:()Lcom/sun/net/httpserver/Headers;
+         8: ldc_w         #691                // String X-Sign-Token
+        11: invokevirtual #693                // Method com/sun/net/httpserver/Headers.getFirst:(Ljava/lang/String;)Ljava/lang/String;
+        14: aload_1
+        15: invokestatic  #698                // Method tokenEquals:(Ljava/lang/String;Ljava/lang/String;)Z
+        18: ifne          70
+        21: ldc_w         #702                // String {\"error\":\"unauthorized\"}
+        24: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        27: invokevirtual #463                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+        30: astore        5
+        32: aload_3
+        33: invokevirtual #704                // Method com/sun/net/httpserver/HttpExchange.getResponseHeaders:()Lcom/sun/net/httpserver/Headers;
+        36: ldc_w         #707                // String Content-Type
+        39: ldc_w         #709                // String application/json
+        42: invokevirtual #711                // Method com/sun/net/httpserver/Headers.add:(Ljava/lang/String;Ljava/lang/String;)V
+        45: aload_3
+        46: sipush        401
+        49: aload         5
+        51: arraylength
+        52: i2l
+        53: invokevirtual #715                // Method com/sun/net/httpserver/HttpExchange.sendResponseHeaders:(IJ)V
+        56: aload_3
+        57: invokevirtual #719                // Method com/sun/net/httpserver/HttpExchange.getResponseBody:()Ljava/io/OutputStream;
+        60: aload         5
+        62: invokevirtual #723                // Method java/io/OutputStream.write:([B)V
+        65: aload_3
+        66: invokevirtual #728                // Method com/sun/net/httpserver/HttpExchange.close:()V
+        69: return
+        70: aload_3
+        71: invokevirtual #731                // Method com/sun/net/httpserver/HttpExchange.getRequestBody:()Ljava/io/InputStream;
+        74: invokestatic  #735                // Method readAll:(Ljava/io/InputStream;)[B
+        77: astore        5
+        79: new           #110                // class java/lang/String
+        82: dup
+        83: aload         5
+        85: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+        88: invokespecial #739                // Method java/lang/String."<init>":([BLjava/nio/charset/Charset;)V
+        91: invokestatic  #742                // Method com/alibaba/fastjson/JSON.parseObject:(Ljava/lang/String;)Lcom/alibaba/fastjson/JSONObject;
+        94: astore        6
+        96: aload         6
+        98: ldc_w         #748                // String url
+       101: invokevirtual #750                // Method com/alibaba/fastjson/JSONObject.getString:(Ljava/lang/String;)Ljava/lang/String;
+       104: astore        7
+       106: aload         6
+       108: ldc_w         #754                // String headers
+       111: invokevirtual #756                // Method com/alibaba/fastjson/JSONObject.getJSONObject:(Ljava/lang/String;)Lcom/alibaba/fastjson/JSONObject;
+       114: astore        8
+       116: new           #759                // class java/lang/StringBuilder
+       119: dup
+       120: invokespecial #761                // Method java/lang/StringBuilder."<init>":()V
+       123: astore        9
+       125: aload         8
+       127: ifnull        208
+       130: aload         8
+       132: invokevirtual #762                // Method com/alibaba/fastjson/JSONObject.keySet:()Ljava/util/Set;
+       135: invokeinterface #765,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+       140: astore        10
+       142: aload         10
+       144: invokeinterface #328,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+       149: ifeq          208
+       152: aload         10
+       154: invokeinterface #333,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       159: checkcast     #110                // class java/lang/String
+       162: astore        11
+       164: aload         9
+       166: invokevirtual #768                // Method java/lang/StringBuilder.length:()I
+       169: ifle          181
+       172: aload         9
+       174: ldc_w         #654                // String \r\n
+       177: invokevirtual #771                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       180: pop
+       181: aload         9
+       183: aload         11
+       185: invokevirtual #771                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       188: ldc_w         #654                // String \r\n
+       191: invokevirtual #771                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       194: aload         8
+       196: aload         11
+       198: invokevirtual #750                // Method com/alibaba/fastjson/JSONObject.getString:(Ljava/lang/String;)Ljava/lang/String;
+       201: invokevirtual #771                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       204: pop
+       205: goto          142
+       208: new           #775                // class java/util/concurrent/CompletableFuture
+       211: dup
+       212: invokespecial #777                // Method java/util/concurrent/CompletableFuture."<init>":()V
+       215: astore        10
+       217: aload_2
+       218: iconst_3
+       219: anewarray     #238                // class java/lang/Object
+       222: dup
+       223: iconst_0
+       224: aload         7
+       226: aastore
+       227: dup
+       228: iconst_1
+       229: aload         9
+       231: invokevirtual #778                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       234: aastore
+       235: dup
+       236: iconst_2
+       237: aload         10
+       239: aastore
+       240: invokeinterface #781,  2          // InterfaceMethod java/util/concurrent/BlockingQueue.add:(Ljava/lang/Object;)Z
+       245: pop
+       246: aload         10
+       248: invokevirtual #785                // Method java/util/concurrent/CompletableFuture.get:()Ljava/lang/Object;
+       251: checkcast     #84                 // class java/util/Map
+       254: astore        11
+       256: aload         11
+       258: invokestatic  #787                // Method com/alibaba/fastjson/JSON.toJSONString:(Ljava/lang/Object;)Ljava/lang/String;
+       261: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+       264: invokevirtual #463                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+       267: astore        4
+       269: goto          302
+       272: astore        5
+       274: aload         5
+       276: invokevirtual #793                // Method java/lang/Throwable.getMessage:()Ljava/lang/String;
+       279: invokestatic  #796                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+       282: bipush        34
+       284: bipush        39
+       286: invokevirtual #798                // Method java/lang/String.replace:(CC)Ljava/lang/String;
+       289: invokedynamic #801,  0            // InvokeDynamic #7:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+       294: getstatic     #457                // Field java/nio/charset/StandardCharsets.UTF_8:Ljava/nio/charset/Charset;
+       297: invokevirtual #463                // Method java/lang/String.getBytes:(Ljava/nio/charset/Charset;)[B
+       300: astore        4
+       302: aload_3
+       303: invokevirtual #704                // Method com/sun/net/httpserver/HttpExchange.getResponseHeaders:()Lcom/sun/net/httpserver/Headers;
+       306: ldc_w         #707                // String Content-Type
+       309: ldc_w         #709                // String application/json
+       312: invokevirtual #711                // Method com/sun/net/httpserver/Headers.add:(Ljava/lang/String;Ljava/lang/String;)V
+       315: aload_3
+       316: sipush        200
+       319: aload         4
+       321: arraylength
+       322: i2l
+       323: invokevirtual #715                // Method com/sun/net/httpserver/HttpExchange.sendResponseHeaders:(IJ)V
+       326: aload_3
+       327: invokevirtual #719                // Method com/sun/net/httpserver/HttpExchange.getResponseBody:()Ljava/io/OutputStream;
+       330: aload         4
+       332: invokevirtual #723                // Method java/io/OutputStream.write:([B)V
+       335: aload_3
+       336: invokevirtual #728                // Method com/sun/net/httpserver/HttpExchange.close:()V
+       339: return
+      Exception table:
+         from    to  target type
+             0    69   272   Class java/lang/Throwable
+            70   269   272   Class java/lang/Throwable
+
+  private static void lambda$serveStatic$1(java.util.concurrent.BlockingQueue);
+    Code:
+         0: new           #9                  // class com/hongguo/sign/FqTrace
+         3: dup
+         4: invokespecial #651                // Method "<init>":()V
+         7: astore_1
+         8: getstatic     #185                // Field java/lang/System.out:Ljava/io/PrintStream;
+        11: ldc_w         #802                // String [*] 签名工作线程就绪(模拟器本线程持有)
+        14: invokevirtual #207                // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        17: aload_0
+        18: invokeinterface #804,  1          // InterfaceMethod java/util/concurrent/BlockingQueue.take:()Ljava/lang/Object;
+        23: checkcast     #807                // class "[Ljava/lang/Object;"
+        26: astore_2
+        27: goto          32
+        30: astore_3
+        31: return
+        32: aload_2
+        33: iconst_2
+        34: aaload
+        35: checkcast     #775                // class java/util/concurrent/CompletableFuture
+        38: astore_3
+        39: aload_3
+        40: aload_1
+        41: aload_2
+        42: iconst_0
+        43: aaload
+        44: checkcast     #110                // class java/lang/String
+        47: aload_2
+        48: iconst_1
+        49: aaload
+        50: checkcast     #110                // class java/lang/String
+        53: invokevirtual #811                // Method signMap:(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+        56: invokevirtual #815                // Method java/util/concurrent/CompletableFuture.complete:(Ljava/lang/Object;)Z
+        59: pop
+        60: goto          72
+        63: astore        4
+        65: aload_3
+        66: aload         4
+        68: invokevirtual #818                // Method java/util/concurrent/CompletableFuture.completeExceptionally:(Ljava/lang/Throwable;)Z
+        71: pop
+        72: goto          17
+      Exception table:
+         from    to  target type
+            17    27    30   Class java/lang/InterruptedException
+            39    60    63   Class java/lang/Throwable
+
+  private static int lambda$reportHotReads$0(java.util.Map$Entry, java.util.Map$Entry);
+    Code:
+         0: aload_1
+         1: invokeinterface #310,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+         6: checkcast     #78                 // class java/lang/Integer
+         9: invokevirtual #336                // Method java/lang/Integer.intValue:()I
+        12: aload_0
+        13: invokeinterface #310,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+        18: checkcast     #78                 // class java/lang/Integer
+        21: invokevirtual #336                // Method java/lang/Integer.intValue:()I
+        24: isub
+        25: ireturn
+
+  static {};
+    Code:
+         0: new           #71                 // class java/util/HashMap
+         3: dup
+         4: invokespecial #73                 // Method java/util/HashMap."<init>":()V
+         7: putstatic     #261                // Field READS:Ljava/util/Map;
+        10: return
+}

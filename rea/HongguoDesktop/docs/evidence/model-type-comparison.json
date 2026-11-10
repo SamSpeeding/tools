@@ -1,0 +1,88 @@
+{
+  "time": "2026-10-13T18:50:43.723626+08:00",
+  "vid": "7689903116275174462",
+  "device_index": 0,
+  "controls": "Original app config/device/signing/transport; only mixed_video_id_map key changes within each host. Every URL/body is signed anew.",
+  "results": [
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 3.538
+    },
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1004",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 1.473
+    },
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 0.334
+    },
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1004",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 0.428
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 0.501
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1004",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 0.915
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 0.328
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "type_key": "1004",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "code": 110001,
+      "http_status": 200,
+      "seconds": 0.928
+    }
+  ]
+}

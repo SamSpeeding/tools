@@ -1,0 +1,103 @@
+新 GET 批量与旧 POST 批量：固定设备在线对照测试
+日期：2026-10-16，Asia/Shanghai
+窗口：17:23:09–17:26:22，共 193 秒
+
+结论
+----
+新 GET 批量在本轮短时重复测试全部成功。
+旧 POST 批量使用我们目前的混合签名也全部成功；切回纯原 JAR 签名仍报 110001。
+因此能确认“旧接口在我们现有修复方案下仍可用”，不能说“纯原 JAR 的旧接口已恢复”。
+新 GET 对纯原 JAR 签名同样成功，为新版作者优先选择该入口提供了线上旁证。
+不能由此推断具体服务端校验规则，也未验证作者 Windows GUI。
+
+结果表
+------
+签名方案                              新 GET                   旧 POST
+项目当前：JAR 其他头 + 本地 H/M v3     12/12 成功，36/36 模型   12/12 成功，36/36 模型
+对照：全部保留原 JAR 输出              4/4 成功，12/12 模型     0/4 成功，均 Code=110001
+
+全部 32 次 HTTP 都为 200，业务成功必须同时满足 code/BaseResp、请求 VID 覆盖、
+可解析 video_model、非空 video_list、有效 HTTP(S) 地址等条件，不能只看 HTTP 200。
+所有成功模型均返回 360p、480p、540p、720p、1080p 共 5 档。
+当前签名下，两接口的 12 组配对结果（共36个配对模型），视频时长、各清晰度的
+file_hash、size、codec_type 完全一致。这里只比响应元数据，没有抓取 CDN 媒体。
+
+API 网络阶段耗时（不含本地签名、请求间隔）：
+当前签名 + 新 GET：0.179–0.398 秒，中位 0.272 秒。
+当前签名 + 旧 POST：0.140–0.253 秒，中位 0.186 秒。
+纯 JAR + 新 GET：0.166–0.761 秒，中位 0.301 秒。
+样本不足以推导普遍性能排序。
+
+固定条件与覆盖
+--------------
+设备：现有 HongguoDesktop/config/devices.json 第0条，全程同一 DID/IID/CDID。
+App 版本/基础 query/headers：原项目 config 与设备覆盖逻辑，没有另换配置。
+请求构建与传输：原项目 HongguoAPI.build_url、_req_headers、_api_once，
+curl_cffi impersonate=chrome；平台路径直连，不经过作者服务。
+域名全程：api5-normal-sinfonlinec.fqnovel.com，未切换备用 b 域名。
+每次重新生成 _rticket、JAR 签名和当前方案的 H/M；不重放过期签名。
+
+2 部已有剧、8 个不同 VID，三个间隔轮次：
+ A 单集：7689903030619081790
+ A 五集：7689903030619081790,7689903116275174462,7689903075380694078,
+         7689903137095699518,7689903130258983998
+ 跨剧五集：7689903116275174462,7689903082863348798,7689903130258983998,
+           7694949024280874009,7694949018303990809
+ B 单集：7694949018303990809
+
+每轮四组输入都交替测试两个接口；第二轮反转多 VID 顺序并调整接口先后。
+请求完成后间隔至少2.5秒，轮次之间暂停45秒；纯 JAR 对照在第一、第三轮。
+无自动重试、无回退、无模型缓存，失败不会由其他接口成功覆盖。
+无设备注册/轮换，不获取媒体，不测试超过新版5个VID的分组上限。
+
+请求契约
+--------
+GET /reading/bookapi/video_tab/multi_video_model/v1/
+extra_query：
+  video_id=vid1,vid2,...
+  video_platform=1024
+  need_all_video_definition=true
+  device_level=3
+  detail_page_version=0
+无 body，无 x-ss-stub；逗号按原 URL 编码器处理。
+读取 data.video_model_data[vid].video_model。
+
+POST /novel/player/multi_video_model/v1/
+body：biz_param 原九项 + mixed_video_id_map:{"1":[vid,...]}。
+未改成 "1004"。body MD5 与 x-ss-stub 在发送前断言相等。
+读取 data[vid].video_model。
+
+签名对照如何实现
+----------------
+复用现有生产 hongguo_hm.model_headers，并保留原 JAR 的其他签名头及 x-khronos。
+现有生产代码尚未把新 GET 加入 H/M 覆盖路径，因此实验子类仅在内存发送边界
+为新 GET 调用同一个 model_headers。没有修改生产路径列表或函数实现。
+旧 POST 当前方案直接走现有 _api_once 的 H/M 覆盖。
+纯 JAR 对照在实验发送边界保留/恢复原 JAR 全部输出。
+检查发送URL就是签名URL、使用同一固定设备、其他 JAR 头逐项不变、H/M v3
+时间戳与 JAR x-khronos 一致，确保比较的是明确的签名组合。
+
+文件与进程保护
+--------------
+354 个项目/配置/逆向文件前后哈希相同，没有修改 HongguoDesktop、HongguoCLI、
+HongguoPHP 或 analysis 的纳入校验文件；清单在 before-hashes.json。
+排除 node_modules、.runtime/.venv、target、dist/release、outputs/downloads、
+experiments、__pycache__、.DS_Store 等，不把有限校验声称为整个磁盘未变。
+使用 Python -B；签名器四个原始依赖先复制到研究目录再启动，避免在项目目录
+生成运行状态。测试结束已停止签名进程、清理成功日志与重复的运行依赖副本。
+所有新实验材料仅存于 research/get-batch-live-20261016。
+
+证据与复现
+----------
+probe.py：完整有限实验流程（再次执行需使用新结果目录，不覆盖本次记录）。
+run.log：按真实调用次序的输出；results.json：逐次请求摘要与源文件保护结果。
+summary.json：统计、耗时、VID覆盖、两接口媒体元数据对照。
+summarize.py：只读取已记录结果，不发网络请求。
+private/：完整请求URL、headers、body、响应，目录0700、文件0600；不要公开，
+其中包含设备信息、签名、短期媒体地址与解密材料。公开摘要不复制这些值。
+
+结论边界
+--------
+这次证明同一设备在约3分13秒内、跨剧/多VID/重复及反序请求中保持成功。
+它不是长期稳定性、其他设备/网络、无限请求频率或服务端根因的证明。
+没有下载、解密或播放这次新得到的媒体地址；成功指模型接口及地址结构可用。

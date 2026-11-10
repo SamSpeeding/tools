@@ -1,0 +1,157 @@
+{
+  "started_at": "2026-10-13T10:25:37.677514+00:00",
+  "purpose": "Original primary vs API_HOST_B; direct endpoint calls, no model fallback",
+  "original_backup_evidence": "analysis/evidence/hongguo.dis.txt:1366,6244-6267",
+  "device_index": 0,
+  "vid": "7689903116275174462",
+  "config_hashes_before": {
+    "config.json": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+    "devices.json": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd"
+  },
+  "request_controls": "Same device, client session, signer, business body; each host URL signed anew",
+  "results": [
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "started_at": "2026-10-13T10:25:37.940578+00:00",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "stage": "api",
+      "http_status": 200,
+      "response_keys": [
+        "Code",
+        "Message",
+        "BaseResp"
+      ],
+      "Code": 110001,
+      "Message": "未知异常",
+      "BaseResp": {
+        "StatusCode": 110001,
+        "StatusMessage": "unknown error"
+      },
+      "seconds": 1.544
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "started_at": "2026-10-13T10:25:39.485045+00:00",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "stage": "api",
+      "http_status": 200,
+      "response_keys": [
+        "Code",
+        "Message",
+        "BaseResp"
+      ],
+      "Code": 110001,
+      "Message": "未知异常",
+      "BaseResp": {
+        "StatusCode": 110001,
+        "StatusMessage": "unknown error"
+      },
+      "seconds": 0.366
+    },
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/video_model/v1/",
+      "method": "POST",
+      "body_sha256": "6e5d18106ef7aae88ac439e6a0b77848ea9fe6559992bcb563d6142dd5ab60db",
+      "started_at": "2026-10-13T10:25:39.851769+00:00",
+      "outcome": "usable_model",
+      "track_count": 5,
+      "definitions": [
+        "360p",
+        "480p",
+        "540p",
+        "720p",
+        "1080p"
+      ],
+      "tracks_with_urls": 5,
+      "http_status": 200,
+      "response_keys": [
+        "BaseResp",
+        "code",
+        "data",
+        "debug_info",
+        "log_id",
+        "message"
+      ],
+      "code": 0,
+      "message": "请求成功",
+      "BaseResp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "seconds": 0.406
+    },
+    {
+      "host": "api5-normal-sinfonlineb.fqnovel.com",
+      "path": "/novel/player/video_model/v1/",
+      "method": "POST",
+      "body_sha256": "6e5d18106ef7aae88ac439e6a0b77848ea9fe6559992bcb563d6142dd5ab60db",
+      "started_at": "2026-10-13T10:25:40.258338+00:00",
+      "outcome": "usable_model",
+      "track_count": 5,
+      "definitions": [
+        "360p",
+        "480p",
+        "540p",
+        "720p",
+        "1080p"
+      ],
+      "tracks_with_urls": 5,
+      "http_status": 200,
+      "response_keys": [
+        "BaseResp",
+        "code",
+        "data",
+        "debug_info",
+        "log_id",
+        "message"
+      ],
+      "code": 0,
+      "message": "请求成功",
+      "BaseResp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "seconds": 0.434
+    },
+    {
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "started_at": "2026-10-13T10:25:40.692976+00:00",
+      "outcome": "failed",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "stage": "api",
+      "http_status": 200,
+      "response_keys": [
+        "Code",
+        "Message",
+        "BaseResp"
+      ],
+      "Code": 110001,
+      "Message": "未知异常",
+      "BaseResp": {
+        "StatusCode": 110001,
+        "StatusMessage": "unknown error"
+      },
+      "seconds": 0.262
+    }
+  ],
+  "configured_host": "api5-normal-sinfonlinec.fqnovel.com",
+  "aid": "8662",
+  "config_hashes_after": {
+    "config.json": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+    "devices.json": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd"
+  },
+  "config_unchanged": true,
+  "finished_at": "2026-10-13T10:25:41.300373+00:00"
+}

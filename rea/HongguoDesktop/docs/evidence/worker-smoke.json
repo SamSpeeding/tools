@@ -1,0 +1,273 @@
+{
+  "search_rebirth": {
+    "first": 16,
+    "second": 8,
+    "cursor": {
+      "offset": 6,
+      "passback": "5",
+      "search_id": "####11@20261013165800FC2EFF9D54A909108ACB"
+    },
+    "first_id": "7680410161940286526"
+  },
+  "rank_all_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_all_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_all_new": {
+    "count": 10,
+    "more": true
+  },
+  "rank_human_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_human_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_human_new": {
+    "count": 10,
+    "more": true
+  },
+  "rank_comic_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_comic_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_comic_new": {
+    "count": 10,
+    "more": true
+  },
+  "rank_ai_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_ai_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_ai_new": {
+    "count": 10,
+    "more": true
+  },
+  "filters_short_play": [
+    {
+      "type": "genre",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "category_dim_theme",
+      "selection_type": 2,
+      "count": 29
+    },
+    {
+      "type": "category_dim_role",
+      "selection_type": 2,
+      "count": 42
+    },
+    {
+      "type": "category_dim_epoch",
+      "selection_type": 2,
+      "count": 11
+    },
+    {
+      "type": "sort",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "gender",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "online_time",
+      "selection_type": 2,
+      "count": 4
+    }
+  ],
+  "filtered_short_play": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7663064768961334297"
+  },
+  "latest_short_play": {
+    "first": 15,
+    "second": 18,
+    "cursor": {
+      "offset": 15
+    },
+    "first_id": "7694947161145871384"
+  },
+  "filters_comic_series": [
+    {
+      "type": "genre",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "category_dim_theme",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_role",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_epoch",
+      "selection_type": 2,
+      "count": 9
+    },
+    {
+      "type": "sort",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "gender",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "creation_status",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "online_time",
+      "selection_type": 2,
+      "count": 4
+    }
+  ],
+  "filtered_comic_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7694930158012075033"
+  },
+  "latest_comic_series": {
+    "first": 17,
+    "second": 18,
+    "cursor": {
+      "offset": 17
+    },
+    "first_id": "7696060442451397656"
+  },
+  "filters_ai_series": [
+    {
+      "type": "genre",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "category_dim_theme",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_role",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_epoch",
+      "selection_type": 2,
+      "count": 9
+    },
+    {
+      "type": "sort",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "gender",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "online_time",
+      "selection_type": 2,
+      "count": 4
+    }
+  ],
+  "filtered_ai_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7695652256015715353"
+  },
+  "latest_ai_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7696061970285333529"
+  },
+  "detail": {
+    "title": "坠崖捡个参娃娃",
+    "episodes": 74,
+    "complete": true
+  },
+  "duplicate": {
+    "single_task": true
+  },
+  "browse_during_download": {
+    "items": 10,
+    "seconds": 1.04
+  },
+  "download": {
+    "file": "/Users/tt/Desktop/rea/HongguoDesktop/docs/evidence/downloads/坠崖捡个参娃娃_7689863296106646590/第002集_1080p.mp4",
+    "bytes": 4480838,
+    "sha256": "ffbfcfb34273e650cc4c02a2221959a69a33b8cc46685a62dec352edafdad794",
+    "full_decode_validated": true,
+    "media": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "nb_frames": "1872"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "1348"
+        }
+      ],
+      "format": {
+        "duration": "62.415011",
+        "size": "4480838"
+      }
+    },
+    "states": [
+      "completed",
+      "decrypting",
+      "downloading",
+      "preparing",
+      "queued",
+      "verifying"
+    ]
+  },
+  "result": "passed"
+}

@@ -1,0 +1,4486 @@
+[
+  {
+    "method": "GET",
+    "path": "/",
+    "handler": "index",
+    "source_line": 726,
+    "classification": "page_or_asset",
+    "disassembly_line": 7292,
+    "parameters": [],
+    "constants": [
+      null,
+      "红果短剧API",
+      "/ui",
+      [
+        "/search?q=",
+        "/rank?board=recommend|hot|new&limit=",
+        "/latest?genre=short_play|comic_series|ai_series&only_today=true",
+        "/filters?genre=comic_series",
+        "/browse?genre=ai_series&theme=玄幻&sort=hot_score&days=7",
+        "/episodes?series_id=",
+        "/play?series_id=&ep=1-10",
+        "/download?series_id=&ep=1-10",
+        "/download/status?task_id=",
+        "/stream?series_id=&ep=1 (解密可播)",
+        "/stream?vid=&quality=1080p",
+        "/stats"
+      ],
+      [
+        "service",
+        "ui",
+        "endpoints"
+      ]
+    ],
+    "names": [],
+    "auth": "API key 豁免；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{service, ui, endpoints}`，旧 API 索引。",
+    "error_note": "无专门业务错误分支。",
+    "side_effect_note": "只读。"
+  },
+  {
+    "method": "GET",
+    "path": "/stats",
+    "handler": "stats",
+    "source_line": 737,
+    "classification": "admin",
+    "disassembly_line": 7320,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      401,
+      "需要 admin_token",
+      0,
+      "start",
+      "/",
+      5,
+      [
+        "timeout"
+      ],
+      "ready",
+      "pid",
+      [
+        "url",
+        "ready",
+        "pid"
+      ],
+      false,
+      [
+        "url",
+        "ready",
+        "error"
+      ],
+      "uptime_s",
+      {
+        "code": "<dictcomp>",
+        "line": 751
+      },
+      [
+        "requests",
+        "errors",
+        "risk",
+        "auth_fail"
+      ],
+      "redis",
+      "memory",
+      [
+        "cache_backend",
+        "sign_backends",
+        "download_tasks"
+      ]
+    ],
+    "names": [
+      "_check_admin",
+      "HTTPException",
+      "safeguards",
+      "int",
+      "time",
+      "_stats",
+      "H",
+      "SIGN_SERVERS",
+      "requests",
+      "get",
+      "rstrip",
+      "json",
+      "append",
+      "Exception",
+      "str",
+      "_redis",
+      "len",
+      "manager",
+      "status"
+    ],
+    "auth": "ADMIN：x-admin-token 或 query admin_token；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{uptime_s, requests, errors, risk, auth_fail, cache_backend, sign_backends, download_tasks}`；每个签名后端含 `{url, ready, pid}` 或 `{url, ready:false, error}`。",
+    "error_note": "管理 token 无效：HTTP 401 `需要 admin_token`。",
+    "side_effect_note": "读取统计，向每个签名后端 `/` 发健康 GET。"
+  },
+  {
+    "method": "GET",
+    "path": "/ui",
+    "handler": "ui",
+    "source_line": 757,
+    "classification": "page_or_asset",
+    "disassembly_line": 7539,
+    "parameters": [],
+    "constants": [
+      null,
+      0,
+      [
+        "FileResponse"
+      ],
+      "web",
+      "index.html"
+    ],
+    "names": [
+      "fastapi.responses",
+      "FileResponse",
+      "os",
+      "path",
+      "join",
+      "dirname",
+      "abspath",
+      "__file__"
+    ],
+    "auth": "API key 豁免；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "HTML：`web/index.html`。",
+    "error_note": "文件缺失为框架/文件层错误。",
+    "side_effect_note": "只读旧网页。"
+  },
+  {
+    "method": "GET",
+    "path": "/img",
+    "handler": "api_img",
+    "source_line": 763,
+    "classification": "page_or_asset",
+    "disassembly_line": 7602,
+    "parameters": [
+      {
+        "name": "url",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      0,
+      [
+        "urlparse"
+      ],
+      "",
+      400,
+      "图片域名不允许",
+      "image/jpeg",
+      [
+        "media_type",
+        "headers"
+      ],
+      "User-Agent",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+      "byteimg.com",
+      "https://hongguoduanju.com/",
+      "Referer",
+      4,
+      [
+        301,
+        302,
+        303,
+        307,
+        308
+      ],
+      "location",
+      404,
+      "图片读取失败: redirect off the allowed cover hosts",
+      "图片读取失败: too many redirects",
+      "content-type",
+      "heic",
+      ".heic",
+      [
+        "RGB",
+        "L"
+      ],
+      "RGB",
+      "JPEG",
+      88,
+      true,
+      [
+        "format",
+        "quality",
+        "optimize"
+      ],
+      ";",
+      1,
+      "图片读取失败: "
+    ],
+    "names": [
+      "urllib.parse",
+      "urlparse",
+      "strip",
+      "_img_fetch_url",
+      "HTTPException",
+      "hostname",
+      "_img_cache",
+      "get",
+      "Response",
+      "_IMG_RESP_HDRS",
+      "_img_session",
+      "range",
+      "_img_get",
+      "status_code",
+      "requests",
+      "compat",
+      "urljoin",
+      "headers",
+      "close",
+      "raise_for_status",
+      "lower",
+      "content",
+      "_IMG_OK",
+      "path",
+      "endswith",
+      "Image",
+      "open",
+      "io",
+      "BytesIO",
+      "mode",
+      "convert",
+      "save",
+      "getvalue",
+      "_img_cache_put",
+      "split",
+      "_IMG_RASTER_TYPES",
+      "Exception",
+      "H",
+      "scrub_urls"
+    ],
+    "auth": "不需 API key/UI token；仍受 Host/跨站和图片白名单限制。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "图片二进制；保留允许的 raster Content-Type，HEIC 可转 JPEG；带 Cache-Control、nosniff、CSP。",
+    "error_note": "HTTP 400 `图片域名不允许`；HTTP 404 `图片读取失败`（含重定向离开白名单、跳转过多、网络/格式错误）。",
+    "side_effect_note": "访问白名单图片源并缓存；最多 4 轮跳转检查。"
+  },
+  {
+    "method": "GET",
+    "path": "/admin",
+    "handler": "admin_page",
+    "source_line": 827,
+    "classification": "admin",
+    "disassembly_line": 8103,
+    "parameters": [],
+    "constants": [
+      null,
+      0,
+      [
+        "FileResponse"
+      ],
+      "web",
+      "admin.html"
+    ],
+    "names": [
+      "fastapi.responses",
+      "FileResponse",
+      "os",
+      "path",
+      "join",
+      "dirname",
+      "abspath",
+      "__file__"
+    ],
+    "auth": "页面本身不校验管理 token；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "HTML：`web/admin.html`。",
+    "error_note": "页面本身没有 `_check_admin`；管理操作另行鉴权。",
+    "side_effect_note": "只读管理网页。"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/keys",
+    "handler": "admin_list_keys",
+    "source_line": 833,
+    "classification": "admin",
+    "disassembly_line": 8166,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      401,
+      "admin_token 无效",
+      [
+        "keys",
+        "enabled_count"
+      ]
+    ],
+    "names": [
+      "_check_admin",
+      "HTTPException",
+      "_keys",
+      "list",
+      "count_enabled"
+    ],
+    "auth": "ADMIN：x-admin-token 或 query admin_token；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{keys, enabled_count}`；keys 为 KeyStore.list() 的透传列表，内部字段未在 handler 中固定。",
+    "error_note": "HTTP 401 `admin_token 无效`。",
+    "side_effect_note": "只读本地 API key 存储。"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/keys",
+    "handler": "admin_gen_key",
+    "source_line": 840,
+    "classification": "admin",
+    "disassembly_line": 8219,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "note",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      }
+    ],
+    "constants": [
+      null,
+      401,
+      "admin_token 无效",
+      true,
+      [
+        "ok",
+        "key",
+        "note"
+      ]
+    ],
+    "names": [
+      "_check_admin",
+      "HTTPException",
+      "_keys",
+      "generate"
+    ],
+    "auth": "ADMIN：x-admin-token 或 query admin_token；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{ok:true, key, note}`。",
+    "error_note": "HTTP 401 `admin_token 无效`。",
+    "side_effect_note": "**生成并持久化本地 API key**。`note` 是 query，不是 JSON body。"
+  },
+  {
+    "method": "POST",
+    "path": "/admin/keys/revoke",
+    "handler": "admin_revoke_key",
+    "source_line": 848,
+    "classification": "admin",
+    "disassembly_line": 8276,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "key",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "enable",
+        "type": "bool",
+        "location": "query",
+        "required": false,
+        "default": false,
+        "validation": {},
+        "declaration": false
+      }
+    ],
+    "constants": [
+      null,
+      401,
+      "admin_token 无效",
+      "ok",
+      [
+        "enabled"
+      ]
+    ],
+    "names": [
+      "_check_admin",
+      "HTTPException",
+      "_keys",
+      "revoke"
+    ],
+    "auth": "ADMIN：x-admin-token 或 query admin_token；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{ok: KeyStore.revoke(...) 的结果}`。",
+    "error_note": "HTTP 401 `admin_token 无效`。",
+    "side_effect_note": "**修改指定 key 的 enabled 状态**；`enable=false` 撤销，`true` 恢复。参数为 query。"
+  },
+  {
+    "method": "DELETE",
+    "path": "/admin/keys",
+    "handler": "admin_delete_key",
+    "source_line": 855,
+    "classification": "admin",
+    "disassembly_line": 8328,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "key",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      401,
+      "admin_token 无效",
+      "ok"
+    ],
+    "names": [
+      "_check_admin",
+      "HTTPException",
+      "_keys",
+      "delete"
+    ],
+    "auth": "ADMIN：x-admin-token 或 query admin_token；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{ok: KeyStore.delete(...) 的结果}`。",
+    "error_note": "HTTP 401 `admin_token 无效`。",
+    "side_effect_note": "**删除本地 API key**。参数为 query。"
+  },
+  {
+    "method": "GET",
+    "path": "/search",
+    "handler": "api_search",
+    "source_line": 862,
+    "classification": "content_api",
+    "disassembly_line": 8377,
+    "parameters": [
+      {
+        "name": "q",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {
+          "description": "剧名"
+        },
+        "declaration": {
+          "factory": "Query",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {
+            "description": "剧名"
+          }
+        }
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {
+          "ge": 1,
+          "le": 40,
+          "description": "结果上限(越小越快; 默认走 HG_SEARCH_MAX_ITEMS=20)"
+        },
+        "declaration": {
+          "factory": "Query",
+          "args": [
+            null
+          ],
+          "kwargs": {
+            "ge": 1,
+            "le": 40,
+            "description": "结果上限(越小越快; 默认走 HG_SEARCH_MAX_ITEMS=20)"
+          }
+        }
+      }
+    ],
+    "constants": [
+      null,
+      [
+        "max_items"
+      ],
+      [
+        "query",
+        "results"
+      ],
+      500,
+      "search失败: "
+    ],
+    "names": [
+      "H",
+      "search",
+      "Exception",
+      "HTTPException"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{query, results}`，条目字段见 REQUEST_CHAIN。",
+    "error_note": "HTTP 500 `search失败: ...`。",
+    "side_effect_note": "调用签名 APP 搜索/缓存。limit 未提供时由 H.search 的环境设置决定，通常 20。"
+  },
+  {
+    "method": "GET",
+    "path": "/rank",
+    "handler": "api_rank",
+    "source_line": 871,
+    "classification": "content_api",
+    "disassembly_line": 8451,
+    "parameters": [
+      {
+        "name": "board",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "recommend",
+        "validation": {},
+        "declaration": "recommend"
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 30,
+        "validation": {},
+        "declaration": 30
+      }
+    ],
+    "constants": [
+      null,
+      400,
+      "board必须是 ",
+      [
+        "board",
+        "name",
+        "items"
+      ],
+      500,
+      "rank失败: "
+    ],
+    "names": [
+      "H",
+      "RANK_BOARDS",
+      "HTTPException",
+      "list",
+      "RANK_NAMES",
+      "get",
+      "rank",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{board, name, items}`。",
+    "error_note": "未知 board：HTTP 400；上游异常：HTTP 500 `rank失败: ...`。",
+    "side_effect_note": "读取平台榜单。合法 board 以 H.RANK_BOARDS 为准，索引示例 recommend/hot/new。"
+  },
+  {
+    "method": "GET",
+    "path": "/latest",
+    "handler": "api_latest",
+    "source_line": 881,
+    "classification": "content_api",
+    "disassembly_line": 8555,
+    "parameters": [
+      {
+        "name": "genre",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "short_play",
+        "validation": {},
+        "declaration": "short_play"
+      },
+      {
+        "name": "only_today",
+        "type": "bool",
+        "location": "query",
+        "required": false,
+        "default": true,
+        "validation": {},
+        "declaration": true
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 120,
+        "validation": {},
+        "declaration": 120
+      },
+      {
+        "name": "refresh",
+        "type": "bool",
+        "location": "query",
+        "required": false,
+        "default": false,
+        "validation": {},
+        "declaration": false
+      },
+      {
+        "name": "no_cache",
+        "type": "bool",
+        "location": "query",
+        "required": false,
+        "default": false,
+        "validation": {},
+        "declaration": false
+      }
+    ],
+    "constants": [
+      null,
+      400,
+      "genre必须是 ",
+      [
+        "only_today",
+        "max_items",
+        "refresh"
+      ],
+      "short_play",
+      "今日上新",
+      "最新上架",
+      "7天内上新·最新上架",
+      [
+        "genre",
+        "name",
+        "mode",
+        "only_today",
+        "count",
+        "items"
+      ],
+      500,
+      "latest失败: "
+    ],
+    "names": [
+      "H",
+      "GENRES",
+      "HTTPException",
+      "list",
+      "latest",
+      "GENRE_NAMES",
+      "get",
+      "len",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{genre, name, mode, only_today, count, items}`；mode 区分今日上新/最新上架等。",
+    "error_note": "未知 genre：HTTP 400；HTTP 500 `latest失败: ...`。",
+    "side_effect_note": "读取平台最新剧列表；refresh/no_cache 参与刷新选择。genre 常见 short_play/comic_series/ai_series。"
+  },
+  {
+    "method": "GET",
+    "path": "/filters",
+    "handler": "api_filters",
+    "source_line": 900,
+    "classification": "content_api",
+    "disassembly_line": 8701,
+    "parameters": [
+      {
+        "name": "genre",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "short_play",
+        "validation": {},
+        "declaration": "short_play"
+      }
+    ],
+    "constants": [
+      null,
+      400,
+      "genre必须是 ",
+      [
+        "genre",
+        "name",
+        "rows"
+      ],
+      500,
+      "filters失败: "
+    ],
+    "names": [
+      "H",
+      "GENRES",
+      "HTTPException",
+      "list",
+      "GENRE_NAMES",
+      "get",
+      "filters",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{genre, name, rows}`。",
+    "error_note": "未知 genre：HTTP 400；HTTP 500 `filters失败: ...`。",
+    "side_effect_note": "读取平台分类筛选项。"
+  },
+  {
+    "method": "GET",
+    "path": "/browse",
+    "handler": "api_browse",
+    "source_line": 912,
+    "classification": "content_api",
+    "disassembly_line": 8806,
+    "parameters": [
+      {
+        "name": "genre",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "ai_series",
+        "validation": {},
+        "declaration": "ai_series"
+      },
+      {
+        "name": "theme",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "setting",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "background",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "sort",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "online_time",
+        "validation": {},
+        "declaration": "online_time"
+      },
+      {
+        "name": "gender",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "days",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "status",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "limit",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 60,
+        "validation": {},
+        "declaration": 60
+      }
+    ],
+    "constants": [
+      null,
+      400,
+      "genre必须是 ",
+      {
+        "code": "_csv",
+        "line": 920
+      },
+      [
+        "theme",
+        "setting",
+        "background",
+        "sort",
+        "gender",
+        "days",
+        "status",
+        "max_items"
+      ],
+      "series_id",
+      "vid",
+      "/stream?vid=",
+      "/stream?series_id=",
+      "&ep=1",
+      "stream_url",
+      "/episodes?series_id=",
+      "episodes_url",
+      "stream_url=播第1集; 其它集用 episodes_url 取集号后 /stream?series_id=&ep=N",
+      [
+        "genre",
+        "name",
+        "count",
+        "note",
+        "items"
+      ],
+      500,
+      "browse失败: "
+    ],
+    "names": [
+      "H",
+      "GENRES",
+      "HTTPException",
+      "list",
+      "browse",
+      "get",
+      "GENRE_NAMES",
+      "len",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{genre, name, count, note, items}`；每条补 `stream_url` 和 `episodes_url`。",
+    "error_note": "未知 genre：HTTP 400；HTTP 500 `browse失败: ...`。",
+    "side_effect_note": "读取平台筛选目录。theme/setting/background 可为逗号分隔文本，经本地 `_csv` 处理。"
+  },
+  {
+    "method": "GET",
+    "path": "/episodes",
+    "handler": "api_episodes",
+    "source_line": 937,
+    "classification": "content_api",
+    "disassembly_line": 9007,
+    "parameters": [
+      {
+        "name": "series_id",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      [
+        "meta",
+        "episodes"
+      ],
+      500,
+      "episodes失败: "
+    ],
+    "names": [
+      "H",
+      "get_episodes",
+      "Exception",
+      "HTTPException"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{meta, episodes}`，完整剧信息与每集模型，见 REQUEST_CHAIN。",
+    "error_note": "HTTP 500 `episodes失败: ...`。",
+    "side_effect_note": "读取 APP 剧详情/缓存。"
+  },
+  {
+    "method": "POST",
+    "path": "/metrics/batch",
+    "handler": "api_metrics_batch",
+    "source_line": 946,
+    "classification": "content_api",
+    "disassembly_line": 9085,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "series_ids",
+      "series_id",
+      {
+        "code": "<listcomp>",
+        "line": 951
+      },
+      ",",
+      {
+        "code": "<listcomp>",
+        "line": 953
+      },
+      400,
+      "series_ids不能为空",
+      200,
+      "series_ids最多200个",
+      "batch_size",
+      20,
+      [
+        "batch_size"
+      ],
+      {
+        "code": "<listcomp>",
+        "line": 961
+      },
+      1,
+      [
+        "count",
+        "items",
+        "failed",
+        "batch_size"
+      ],
+      500,
+      "metrics batch失败: "
+    ],
+    "names": [
+      "get",
+      "isinstance",
+      "str",
+      "split",
+      "HTTPException",
+      "len",
+      "int",
+      "H",
+      "get_episodes_batch",
+      "max",
+      "min",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "`series_ids: list 或逗号分隔 str`；也兼容 `series_id`；必需得到非空 ID 集合，最多 200。`batch_size: 可转 int=20`，有效批大小限制 1–20。",
+    "response_note": "`{count, items, failed, batch_size}`。",
+    "error_note": "空 ID 或超过 200：HTTP 400；平台查询异常：HTTP 500 `metrics batch失败`。body 内类型不受 Pydantic 字段模型约束，转换失败可能成为 500。",
+    "side_effect_note": "批量读取剧详情指标。"
+  },
+  {
+    "method": "GET",
+    "path": "/play",
+    "handler": "api_play",
+    "source_line": 967,
+    "classification": "content_api",
+    "disassembly_line": 9298,
+    "parameters": [
+      {
+        "name": "series_id",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "ep",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "all",
+        "validation": {},
+        "declaration": "all"
+      }
+    ],
+    "constants": [
+      null,
+      {
+        "code": "<listcomp>",
+        "line": 973
+      },
+      {
+        "code": "<listcomp>",
+        "line": 974
+      },
+      "vid",
+      "index",
+      "title",
+      "duration",
+      "url",
+      "backup",
+      "size",
+      "definition",
+      "/stream?vid=",
+      [
+        "index",
+        "vid",
+        "title",
+        "duration",
+        "encrypted_url",
+        "backup",
+        "size",
+        "definition",
+        "stream_url"
+      ],
+      "encrypted_url 为CENC密文直链; 可播放用 stream_url(服务端纯离线解密)",
+      [
+        "series_id",
+        "title",
+        "note",
+        "episodes"
+      ],
+      500,
+      "play失败: "
+    ],
+    "names": [
+      "H",
+      "get_episodes",
+      "set",
+      "parse_range",
+      "len",
+      "get_video_urls",
+      "get",
+      "append",
+      "Exception",
+      "HTTPException"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{series_id, title, note, episodes}`；集条目 `{index, vid, title, duration, encrypted_url, backup, size, definition, stream_url}`。note 明示 encrypted_url 是 CENC 密文地址。",
+    "error_note": "HTTP 500 `play失败: ...`。",
+    "side_effect_note": "查询详情与视频模型；ep 支持 all 或集数范围。返回可播放路径 `/stream?vid=...` 与远端密文 URL，不在本接口写媒体。"
+  },
+  {
+    "method": "GET",
+    "path": "/download",
+    "handler": "api_download",
+    "source_line": 990,
+    "classification": "content_api",
+    "disassembly_line": 9515,
+    "parameters": [
+      {
+        "name": "series_id",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "ep",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "all",
+        "validation": {},
+        "declaration": "all"
+      },
+      {
+        "name": "ep_covers",
+        "type": "bool",
+        "location": "query",
+        "required": false,
+        "default": false,
+        "validation": {},
+        "declaration": false
+      }
+    ],
+    "constants": [
+      null,
+      "/download/status?task_id=",
+      [
+        "task_id",
+        "status_url"
+      ],
+      500,
+      "download失败: "
+    ],
+    "names": [
+      "H",
+      "manager",
+      "submit",
+      "Exception",
+      "HTTPException"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{task_id, status_url}`。",
+    "error_note": "HTTP 500 `download失败: ...`。",
+    "side_effect_note": "**即使是 GET 也会提交下载任务并写文件**；`ep` 支持 all/范围，`ep_covers` 控制集封面。"
+  },
+  {
+    "method": "GET",
+    "path": "/download/status",
+    "handler": "api_download_status",
+    "source_line": 1000,
+    "classification": "content_api",
+    "disassembly_line": 9602,
+    "parameters": [
+      {
+        "name": "task_id",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null
+    ],
+    "names": [
+      "H",
+      "manager",
+      "status"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "H.manager().status(task_id) 的透传结果；具体任务状态 schema 未在 handler 定义。",
+    "error_note": "未在 handler 显式捕获错误。",
+    "side_effect_note": "只读任务状态。"
+  },
+  {
+    "method": "GET",
+    "path": "/video_url",
+    "handler": "api_video_url",
+    "source_line": 1005,
+    "classification": "content_api",
+    "disassembly_line": 9635,
+    "parameters": [
+      {
+        "name": "vid",
+        "type": "str",
+        "location": "query",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      "url",
+      404,
+      "无直链",
+      "backup",
+      "size",
+      "definition",
+      [
+        "vid",
+        "url",
+        "backup",
+        "size",
+        "definition"
+      ],
+      500,
+      "video_url失败: "
+    ],
+    "names": [
+      "H",
+      "get_video_urls",
+      "get",
+      "str",
+      "HTTPException",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`{vid, url, backup, size, definition}`。",
+    "error_note": "没有 URL：HTTP 404 `无直链`；其它异常：HTTP 500 `video_url失败`。",
+    "side_effect_note": "查询视频模型/缓存，URL 可能是加密媒体，不等于可直接播放文件。"
+  },
+  {
+    "method": "GET",
+    "path": "/stream",
+    "handler": "api_stream",
+    "source_line": 1021,
+    "classification": "content_api",
+    "disassembly_line": 9776,
+    "parameters": [
+      {
+        "name": "series_id",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "ep",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "1",
+        "validation": {},
+        "declaration": "1"
+      },
+      {
+        "name": "vid",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      },
+      {
+        "name": "quality",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "best",
+        "validation": {},
+        "declaration": "best"
+      }
+    ],
+    "constants": [
+      null,
+      400,
+      "需 series_id+ep 或 vid",
+      1,
+      {
+        "code": "<genexpr>",
+        "line": 1034
+      },
+      404,
+      "集号不存在",
+      "vid",
+      "title",
+      "_第",
+      "03d",
+      "集.mp4",
+      ".mp4",
+      0,
+      [
+        "quote"
+      ],
+      "inline; filename=\"",
+      ".mp4\"; filename*=UTF-8''",
+      "video/mp4",
+      "Content-Disposition",
+      [
+        "media_type",
+        "headers"
+      ],
+      500,
+      "stream失败: "
+    ],
+    "names": [
+      "HTTPException",
+      "H",
+      "get_episodes",
+      "str",
+      "isdigit",
+      "int",
+      "next",
+      "sanitize",
+      "_ensure_decrypted",
+      "urllib.parse",
+      "quote",
+      "FileResponse",
+      "Exception"
+    ],
+    "auth": "API：x-api-key 或 query api_key，有效 key 并限流；安装版先被 404 隔离。",
+    "packaged_allowed": false,
+    "body_fields_note": "",
+    "response_note": "`video/mp4` FileResponse；Content-Disposition inline，UTF-8 文件名。",
+    "error_note": "缺 series_id 和 vid：HTTP 400；找不到集号：HTTP 404；其它：HTTP 500 `stream失败`。",
+    "side_effect_note": "**GET 会按需下载、生成解密缓存，再读本地文件**。vid 优先；否则用 series_id+ep；非数字 ep 回退第 1 集。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/submit",
+    "handler": "dl_submit",
+    "source_line": 1204,
+    "classification": "desktop_ui",
+    "disassembly_line": 11345,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "text",
+      "",
+      {
+        "code": "<listcomp>",
+        "line": 1207
+      },
+      "series_ids",
+      {
+        "code": "<listcomp>",
+        "line": 1208
+      },
+      {
+        "code": "<dictcomp>",
+        "line": 1210
+      },
+      "ranges",
+      {
+        "code": "<dictcomp>",
+        "line": 1211
+      },
+      "scores",
+      false,
+      "queue is empty",
+      [
+        "ok",
+        "error"
+      ],
+      "allowed",
+      "free_limit",
+      "free_used",
+      [
+        "ok",
+        "reason",
+        "blocked",
+        "free_limit",
+        "free_used"
+      ],
+      "running",
+      "a download is already running; wait for it to finish",
+      true,
+      "download",
+      [
+        "running",
+        "log",
+        "series",
+        "started",
+        "mode",
+        "settings"
+      ],
+      [
+        "target",
+        "args",
+        "daemon"
+      ],
+      [
+        "ok",
+        "settings"
+      ],
+      [
+        "blocked",
+        "need_license",
+        "free_limit",
+        "free_used"
+      ]
+    ],
+    "names": [
+      "get",
+      "_dl_settings",
+      "items",
+      "strip",
+      "LIC",
+      "check_download",
+      "append",
+      "usage",
+      "_dl_lock",
+      "_dl_state",
+      "update",
+      "int",
+      "time",
+      "ODL",
+      "live_clear",
+      "CANCEL",
+      "clear",
+      "threading",
+      "Thread",
+      "_dl_worker",
+      "start"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`text: str=\"\"`；`series_ids: list=[]`；`ranges: object={}`；`scores: object={}`；下载设置见公共 body 说明。",
+    "response_note": "成功 `{ok:true, settings}`；部分许可受限另加 `blocked, need_license, free_limit, free_used`；全部受限 `{ok:false, reason, blocked, free_limit, free_used}`。",
+    "error_note": "业务 JSON `{ok:false,error}`：queue is empty、已有下载运行；许可失败由 reason/blocked 表示。",
+    "side_effect_note": "**启动后台下载/写文件**，清理 live 状态、取消标记，执行许可检查。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/search",
+    "handler": "dl_search",
+    "source_line": 1286,
+    "classification": "desktop_ui",
+    "disassembly_line": 12031,
+    "parameters": [
+      {
+        "name": "q",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      },
+      {
+        "name": "cursor",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      },
+      {
+        "name": "again",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 0,
+        "validation": {},
+        "declaration": 0
+      }
+    ],
+    "constants": [
+      null,
+      "",
+      "results",
+      "Search text is too long: try the title only.",
+      [
+        "query",
+        "results",
+        "error"
+      ],
+      true,
+      [
+        "query",
+        "results",
+        "cursor",
+        "expired"
+      ],
+      [
+        "cursor"
+      ],
+      "cursor",
+      "expired",
+      false,
+      1,
+      [
+        "seasons",
+        "again"
+      ],
+      "pending",
+      "backup",
+      [
+        "down",
+        "slow"
+      ],
+      "slow",
+      [
+        "query",
+        "results",
+        "cursor",
+        "pending",
+        "backup",
+        "slow"
+      ],
+      "error",
+      300,
+      [
+        "results",
+        "error"
+      ]
+    ],
+    "names": [
+      "strip",
+      "len",
+      "H",
+      "SEARCH_Q_MAX",
+      "_CURSOR_RE",
+      "fullmatch",
+      "search_series",
+      "_search_items",
+      "get",
+      "dict",
+      "_search_strip",
+      "str",
+      "Exception",
+      "scrub_urls"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "空 q：`{results:[]}`；正常 `{query, results, cursor, pending, backup, slow}` 并合并系列条带字段；分页 `{query,results,cursor,expired}`。",
+    "error_note": "过长搜索 `{query,results:[],error}`；无效游标 `expired:true`；异常 `{results:[],error}`，业务失败一般仍 HTTP 200。",
+    "side_effect_note": "异步远端搜索、缓存及网页回退；again=1 表示重新询问任务。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/search/seasons",
+    "handler": "dl_search_seasons",
+    "source_line": 1318,
+    "classification": "desktop_ui",
+    "disassembly_line": 12321,
+    "parameters": [
+      {
+        "name": "q",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      }
+    ],
+    "constants": [
+      null,
+      "",
+      true,
+      [
+        "series",
+        "related",
+        "complete",
+        "extra"
+      ],
+      "extra",
+      "backup",
+      [
+        "down",
+        "slow"
+      ],
+      false,
+      [
+        "query",
+        "extra",
+        "backup"
+      ],
+      300,
+      [
+        "series",
+        "related",
+        "complete",
+        "extra",
+        "error"
+      ]
+    ],
+    "names": [
+      "strip",
+      "len",
+      "H",
+      "SEARCH_Q_MAX",
+      "search_series",
+      "dict",
+      "_search_strip",
+      "_search_items",
+      "get",
+      "Exception",
+      "scrub_urls",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{series, related, complete, extra}`，可附 query、backup；具体条带字段来自 `_search_strip`。",
+    "error_note": "异常在上述结构附 `error`，complete=false；空/过长 q 返回空结果。",
+    "side_effect_note": "查询/补全搜索关联续季信息。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/rank",
+    "handler": "dl_rank",
+    "source_line": 1335,
+    "classification": "desktop_ui",
+    "disassembly_line": 12486,
+    "parameters": [
+      {
+        "name": "board",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "recommend",
+        "validation": {},
+        "declaration": "recommend"
+      },
+      {
+        "name": "category",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "all",
+        "validation": {},
+        "declaration": "all"
+      },
+      {
+        "name": "offset",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 0,
+        "validation": {},
+        "declaration": 0
+      },
+      {
+        "name": "size",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 100,
+        "validation": {},
+        "declaration": 100
+      }
+    ],
+    "constants": [
+      null,
+      [
+        "ai",
+        "human",
+        "comic"
+      ],
+      "ai",
+      {
+        "code": "<listcomp>",
+        "line": 1343
+      },
+      false,
+      0,
+      [
+        "results",
+        "has_more",
+        "next_offset"
+      ],
+      [
+        "results",
+        "has_more",
+        "next_offset",
+        "error"
+      ]
+    ],
+    "names": [
+      "ODL",
+      "hgdj_rank",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{results,has_more:false,next_offset:0}`。",
+    "error_note": "异常同结构附 `error`。",
+    "side_effect_note": "读取 ODL.hgdj_rank(category) 的网页榜单；category 仅 ai/human/comic，非法值回退 ai。**board/offset/size 虽声明但此 handler 不使用**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/rank-episodes",
+    "handler": "dl_rank_episodes",
+    "source_line": 1351,
+    "classification": "desktop_ui",
+    "disassembly_line": 12596,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "series_ids",
+      "eps",
+      {
+        "code": "<listcomp>",
+        "line": 1359
+      },
+      120,
+      [
+        "eps",
+        "error"
+      ]
+    ],
+    "names": [
+      "get",
+      "isinstance",
+      "list",
+      "ODL",
+      "hgdj_episodes",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`series_ids: list=[]`；不是 list 则按空列表处理，最多传前 120 个。",
+    "response_note": "`{eps: ODL.hgdj_episodes(...) 的结果}`。",
+    "error_note": "异常 `{eps:{},error}`。",
+    "side_effect_note": "读取网页集数信息。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/preview",
+    "handler": "dl_preview",
+    "source_line": 1364,
+    "classification": "desktop_ui",
+    "disassembly_line": 12709,
+    "parameters": [
+      {
+        "name": "series_id",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      },
+      {
+        "name": "ep",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 1,
+        "validation": {},
+        "declaration": 1
+      },
+      {
+        "name": "fresh",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 0,
+        "validation": {},
+        "declaration": 0
+      }
+    ],
+    "constants": [
+      null,
+      [
+        "fresh"
+      ],
+      false,
+      "network",
+      [
+        "ok",
+        "error"
+      ]
+    ],
+    "names": [
+      "ODL",
+      "hgdj_preview",
+      "bool",
+      "Exception"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "透传 ODL.hgdj_preview：成功 `{ok,series_id,title,episode_cnt,free,ep,url,poster,duration,width,height}`；具体字段随返回分支。",
+    "error_note": "`{ok:false,error}`，可为 network/unavailable/locked。",
+    "side_effect_note": "只查询公开网页预览地址；受 accessible_episode_cnt 限制。fresh 被转为 bool。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/explorer",
+    "handler": "dl_explorer",
+    "source_line": 1408,
+    "classification": "desktop_ui",
+    "disassembly_line": 13045,
+    "parameters": [
+      {
+        "name": "page",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 1,
+        "validation": {},
+        "declaration": 1
+      },
+      {
+        "name": "size",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 18,
+        "validation": {},
+        "declaration": 18
+      }
+    ],
+    "constants": [
+      null,
+      1,
+      18,
+      60,
+      0,
+      {
+        "code": "<listcomp>",
+        "line": 1419
+      },
+      [
+        "results",
+        "page",
+        "pages",
+        "total",
+        "size"
+      ]
+    ],
+    "names": [
+      "_explorer_catalog",
+      "len",
+      "max",
+      "min",
+      "int"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{results,page,pages,total,size}`。",
+    "error_note": "未显式捕获转换异常；内部目录不可用行为由 `_explorer_catalog` 决定。",
+    "side_effect_note": "读取/缓存 explorer 目录，page 至少 1，size 1–60，默认 18。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/episodes",
+    "handler": "dl_episodes",
+    "source_line": 1437,
+    "classification": "desktop_ui",
+    "disassembly_line": 13278,
+    "parameters": [
+      {
+        "name": "series_id",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      }
+    ],
+    "constants": [
+      null,
+      "",
+      "no series_id",
+      [
+        "episodes",
+        "error"
+      ],
+      {
+        "code": "<setcomp>",
+        "line": 1445
+      },
+      {
+        "code": "<genexpr>",
+        "line": 1445
+      },
+      "title",
+      "cover",
+      [
+        "series_id",
+        "title",
+        "cover",
+        "total",
+        "episodes"
+      ]
+    ],
+    "names": [
+      "strip",
+      "H",
+      "get_episodes",
+      "sorted",
+      "get",
+      "len",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{series_id,title,cover,total,episodes}`，episodes 是排序去重的集序号，不是完整集对象。",
+    "error_note": "缺 ID `{episodes:[],error:\"no series_id\"}`；异常 `{episodes:[],error}`。",
+    "side_effect_note": "查询剧详情/缓存。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/resolve",
+    "handler": "dl_resolve",
+    "source_line": 1452,
+    "classification": "desktop_ui",
+    "disassembly_line": 13425,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "text",
+      "",
+      {
+        "code": "_resolve_one",
+        "line": 1458
+      },
+      0,
+      [
+        "ThreadPoolExecutor"
+      ],
+      8,
+      [
+        "max_workers"
+      ],
+      "resolved"
+    ],
+    "names": [
+      "get",
+      "ODL",
+      "_parse_share_links",
+      "concurrent.futures",
+      "ThreadPoolExecutor",
+      "min",
+      "len",
+      "map",
+      "extend"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`text: str=\"\"`，分享链接或多行分享文本。",
+    "response_note": "`{resolved:[...]}`；成功条目 `{series_id,title,total,cover}`；busy 条目含 `error,busy`；不可用条目含 `hg_id,error,unavailable`；未识别含 `error:\"unresolved\"`。",
+    "error_note": "单个解析错误放在 resolved 条目；handler 自身未统一 catch。",
+    "side_effect_note": "并发解析分享链接/榜单，最多 8 worker；可能访问远端网页。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/status",
+    "handler": "dl_status",
+    "source_line": 1506,
+    "classification": "desktop_ui",
+    "disassembly_line": 13572,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      "running",
+      {
+        "code": "<dictcomp>",
+        "line": 1529
+      },
+      [
+        "rate",
+        "bytes",
+        "bytes_total",
+        "active",
+        "eps_done",
+        "eps_need"
+      ],
+      "settings",
+      "source",
+      "mode",
+      "backup",
+      "paused",
+      "",
+      "library",
+      "started",
+      "phase",
+      "checked",
+      "to_check",
+      "found",
+      "unread",
+      0,
+      "series",
+      "seasons",
+      "log",
+      -60,
+      [
+        "running",
+        "started",
+        "mode",
+        "phase",
+        "checked",
+        "to_check",
+        "found",
+        "unread",
+        "series",
+        "seasons",
+        "log"
+      ],
+      {
+        "code": "<dictcomp>",
+        "line": 1542
+      },
+      "total",
+      "done",
+      [
+        "rate",
+        "bytes",
+        "bytes_total",
+        "active",
+        "dl_done",
+        "need"
+      ],
+      "status",
+      "unavailable",
+      "unconfirmed",
+      "recheck",
+      "state",
+      "waiting",
+      [
+        "done",
+        "cancelled"
+      ],
+      "cancelled",
+      "stopped",
+      "incomplete",
+      "downloading",
+      [
+        "downloading",
+        "queued",
+        "recheck",
+        "waiting"
+      ],
+      "queued",
+      {
+        "code": "<listcomp>",
+        "line": 1584
+      },
+      [
+        "running",
+        "started",
+        "mode",
+        "series",
+        "log"
+      ]
+    ],
+    "names": [
+      "_ui_token_ok",
+      "bool",
+      "_dl_state",
+      "get",
+      "_dl_lock",
+      "ODL",
+      "live_snapshot",
+      "_dl_settings",
+      "H",
+      "source_health",
+      "items",
+      "str",
+      "int",
+      "min",
+      "CANCEL",
+      "is_set",
+      "Exception"
+    ],
+    "auth": "UI token 可选；无 token 仅返回 running。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "没有 UI token 仅 `{running:bool}`。有 token 返回 `{running,started,mode,series,log}` 加速率/字节/活动数/集计数/settings/source；library 模式还含 phase/checked/to_check/found/unread/seasons。",
+    "error_note": "本接口是 UI token 豁免项，未授权不会收到完整日志/路径。",
+    "side_effect_note": "只读任务与实时进度，部分异常回退快照。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/signhealth",
+    "handler": "dl_signhealth",
+    "source_line": 1588,
+    "classification": "desktop_ui",
+    "disassembly_line": 14172,
+    "parameters": [],
+    "constants": [
+      null,
+      [
+        "ok",
+        "fail"
+      ]
+    ],
+    "names": [
+      "H",
+      "sign_stats"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok,fail}`，H.sign_stats()。",
+    "error_note": "无专门捕获分支。",
+    "side_effect_note": "只读签名成功/失败计数。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/signer-restarted",
+    "handler": "dl_signer_restarted",
+    "source_line": 1598,
+    "classification": "desktop_ui",
+    "disassembly_line": 14212,
+    "parameters": [],
+    "constants": [
+      null,
+      "ok",
+      true
+    ],
+    "names": [
+      "H",
+      "mark_signer_cold",
+      "_start_warm_signer"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok:true}`。",
+    "error_note": "无专门捕获分支。",
+    "side_effect_note": "**改变签名器冷启动状态并启动后台预热**。此接口是“通知已重启”，不是直接杀进程。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/diag",
+    "handler": "dl_diag",
+    "source_line": 1608,
+    "classification": "desktop_ui",
+    "disassembly_line": 14251,
+    "parameters": [],
+    "constants": [
+      null,
+      0,
+      [
+        false,
+        ""
+      ],
+      true,
+      [
+        "exist_ok"
+      ],
+      ".hg_write_test",
+      "w",
+      "utf-8",
+      [
+        "encoding"
+      ],
+      "ok",
+      "SIGN_SERVER",
+      "",
+      false,
+      "https://api5-normal-sinfonlinec.fqnovel.com/reading/bookapi/search/page/v/?query=probe&aid=8662",
+      "error",
+      "app.log",
+      "ignore",
+      [
+        "encoding",
+        "errors"
+      ],
+      -45,
+      "pid",
+      "web_port",
+      "PORT",
+      "bind_host",
+      "BIND_HOST",
+      "sign_server",
+      "signer_healthy",
+      "output_dir",
+      "output_writable",
+      "output_write_error",
+      "state_dir",
+      "data_dir",
+      "python",
+      "tls_trust",
+      "TRUST_SOURCE",
+      "?",
+      "running",
+      "mode",
+      "app_log",
+      {
+        "code": "<listcomp>",
+        "line": 1654
+      },
+      "dl_log",
+      "log"
+    ],
+    "names": [
+      "platform",
+      "urllib.request",
+      "ODL",
+      "OUT",
+      "os",
+      "makedirs",
+      "path",
+      "join",
+      "open",
+      "write",
+      "remove",
+      "Exception",
+      "str",
+      "environ",
+      "get",
+      "H",
+      "sign",
+      "isinstance",
+      "dict",
+      "_data_dir",
+      "exists",
+      "read",
+      "splitlines",
+      "getpid",
+      "STATE_DIR",
+      "python_version",
+      "getattr",
+      "_dl_state"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{pid,web_port,bind_host,sign_server,signer_healthy,output_dir,output_writable,output_write_error,state_dir,data_dir,python,tls_trust,running,mode,app_log,dl_log}`。",
+    "error_note": "可写测试错误写入 output_write_error；签名测试异常写为不健康。",
+    "side_effect_note": "**GET 也会创建输出目录、写入并删除 .hg_write_test、调用签名探测**；读取日志。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/config",
+    "handler": "dl_config_get",
+    "source_line": 1727,
+    "classification": "desktop_ui",
+    "disassembly_line": 15273,
+    "parameters": [],
+    "constants": [
+      null,
+      "output_dir"
+    ],
+    "names": [
+      "ODL",
+      "OUT"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{output_dir}`。",
+    "error_note": "无专门捕获分支。",
+    "side_effect_note": "只读下载输出目录。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/config",
+    "handler": "dl_config_set",
+    "source_line": 1732,
+    "classification": "desktop_ui",
+    "disassembly_line": 15298,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "output_dir",
+      "",
+      true,
+      [
+        "ok",
+        "output_dir"
+      ],
+      false,
+      [
+        "ok",
+        "error",
+        "output_dir"
+      ]
+    ],
+    "names": [
+      "get",
+      "ODL",
+      "set_output_dir",
+      "_save_dlcfg",
+      "Exception",
+      "str",
+      "OUT"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`output_dir: str=\"\"`。",
+    "response_note": "成功 `{ok:true,output_dir}`。",
+    "error_note": "失败 `{ok:false,error,output_dir}`。",
+    "side_effect_note": "**修改下载输出目录并持久化 dlconfig.json**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/open",
+    "handler": "dl_open",
+    "source_line": 2204,
+    "classification": "desktop_ui",
+    "disassembly_line": 18487,
+    "parameters": [],
+    "constants": [
+      null,
+      "",
+      true,
+      [
+        "exist_ok"
+      ],
+      [
+        "ok",
+        "output_dir"
+      ],
+      false,
+      [
+        "ok",
+        "error",
+        "output_dir"
+      ]
+    ],
+    "names": [
+      "ODL",
+      "OUT",
+      "os",
+      "makedirs",
+      "_reveal_folder",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok:true,output_dir}`。",
+    "error_note": "`{ok:false,error,output_dir}`。",
+    "side_effect_note": "**创建输出目录并打开系统文件管理器**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/bugreport",
+    "handler": "dl_bugreport",
+    "source_line": 2245,
+    "classification": "desktop_ui",
+    "disassembly_line": 18849,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      0,
+      "logs",
+      true,
+      "screenshot",
+      false,
+      "bugreports",
+      [
+        "exist_ok"
+      ],
+      "%Y%m%d-%H%M%S",
+      "bugreport-%s.zip",
+      "w",
+      "version.txt",
+      "?",
+      "about.txt",
+      "Hongguo Downloader bug report\ncreated: ",
+      "\nversion: ",
+      "\n",
+      "app-log.txt",
+      "app.log",
+      [
+        "ImageGrab"
+      ],
+      "PNG",
+      [
+        "format"
+      ],
+      "screenshot.png",
+      "screenshot-FAILED.txt",
+      "could not capture screenshot: %s",
+      [
+        "select"
+      ],
+      [
+        "ok",
+        "path",
+        "included"
+      ],
+      [
+        "ok",
+        "error"
+      ]
+    ],
+    "names": [
+      "zipfile",
+      "subprocess",
+      "sys",
+      "bool",
+      "get",
+      "_data_dir",
+      "os",
+      "path",
+      "join",
+      "makedirs",
+      "time",
+      "strftime",
+      "ZipFile",
+      "ZIP_DEFLATED",
+      "open",
+      "dirname",
+      "abspath",
+      "__file__",
+      "read",
+      "strip",
+      "Exception",
+      "writestr",
+      "_redacted_log_tail",
+      "append",
+      "PIL",
+      "ImageGrab",
+      "io",
+      "BytesIO",
+      "grab",
+      "save",
+      "getvalue",
+      "_reveal_folder",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`logs: bool=true`，`screenshot: bool=false`，均经 bool()。",
+    "response_note": "`{ok:true,path,included}`，本地 bugreport ZIP。",
+    "error_note": "`{ok:false,error}`；截图失败可写入 ZIP 内 screenshot-FAILED.txt。",
+    "side_effect_note": "**写日志 ZIP，可截图并打开文件管理器定位文件**；该 handler 没有自动上传报告。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/pick",
+    "handler": "dl_pick",
+    "source_line": 2576,
+    "classification": "desktop_ui",
+    "disassembly_line": 20727,
+    "parameters": [],
+    "constants": [
+      null,
+      0,
+      "win",
+      false,
+      "folder picker is Windows-only here — type the path instead",
+      [
+        "ok",
+        "error"
+      ],
+      ""
+    ],
+    "names": [
+      "sys",
+      "platform",
+      "startswith",
+      "_pick_folder",
+      "ODL",
+      "OUT"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "Windows 原生目录选择器结果（通常 `{ok,path}`，其它错误键来自 `_pick_folder`）。",
+    "error_note": "非 Windows `{ok:false,error:\"folder picker is Windows-only here — type the path instead\"}`。",
+    "side_effect_note": "**打开系统选目录对话框/子进程**；不自动提交配置。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/library",
+    "handler": "dl_library",
+    "source_line": 2586,
+    "classification": "library",
+    "disassembly_line": 20789,
+    "parameters": [],
+    "constants": [
+      null,
+      [
+        "items",
+        "error"
+      ]
+    ],
+    "names": [
+      "ODL",
+      "library_scan",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{items,root}`；item 含 `{name,series_id,title,local,total,new,fresh,score,updated,size,poster,cover,h264}`。底层证据 `offline_dl.dis.txt:18670`。",
+    "error_note": "扫描异常 `{items:[],error}`。",
+    "side_effect_note": "**扫描本地下载库，seen_at 尚无有效值时可写入已看时间基线**；不发起媒体下载。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/library/episodes",
+    "handler": "dl_library_episodes",
+    "source_line": 2594,
+    "classification": "library",
+    "disassembly_line": 20857,
+    "parameters": [
+      {
+        "name": "name",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      }
+    ],
+    "constants": [
+      null,
+      404,
+      "series not found"
+    ],
+    "names": [
+      "_safe_series_name",
+      "HTTPException",
+      "ODL",
+      "library_episodes"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{name,title,total,downloaded,fresh,episodes,h264}`；episodes 条目为 `{index,fresh}`。底层证据 `offline_dl.dis.txt:19081`（源行 2119、2132）。",
+    "error_note": "不安全/空目录名，或目录不存在：HTTP 404 `series not found`。",
+    "side_effect_note": "只读本地剧目录。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/seen",
+    "handler": "dl_library_seen",
+    "source_line": 2606,
+    "classification": "library",
+    "disassembly_line": 20924,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "names",
+      0,
+      1,
+      [
+        "ok",
+        "count"
+      ],
+      "name",
+      "",
+      "ok"
+    ],
+    "names": [
+      "get",
+      "isinstance",
+      "list",
+      "_safe_series_name",
+      "ODL",
+      "library_mark_seen",
+      "bool"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`names: list` 可批量；否则 `name: str=\"\"`。",
+    "response_note": "批量 `{ok:true,count}`；单项 `{ok:bool}`。",
+    "error_note": "无效名不标记；未设置统一异常捕获。",
+    "side_effect_note": "**持久化已看/已知状态**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/delete",
+    "handler": "dl_library_delete",
+    "source_line": 2623,
+    "classification": "library",
+    "disassembly_line": 21048,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "names",
+      {
+        "code": "<listcomp>",
+        "line": 2629
+      },
+      {
+        "code": "<genexpr>",
+        "line": 2629
+      },
+      false,
+      "*",
+      [
+        "ok",
+        "moved",
+        "errors"
+      ],
+      {
+        "code": "<listcomp>",
+        "line": 2639
+      },
+      "moved",
+      "token",
+      "",
+      "ok",
+      "not the series asked for (left in place)",
+      "errors",
+      "name",
+      0
+    ],
+    "names": [
+      "get",
+      "isinstance",
+      "list",
+      "ODL",
+      "library_delete",
+      "Exception",
+      "str",
+      "set",
+      "library_restore",
+      "remove",
+      "setdefault",
+      "len"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`names: list=[]`，逐个名称清理/校验。",
+    "response_note": "ODL.library_delete 结果，含 `{ok,moved,errors}`；moved 条目含恢复 token。",
+    "error_note": "异常 `{ok:false,moved:[],errors:{\"*\":错误}}`；如果移动结果不属于用户请求，自动恢复并记 `not the series asked for (left in place)`。",
+    "side_effect_note": "**将所选库目录移入可恢复位置**；接口名 delete 不等于立即永久擦除。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/restore",
+    "handler": "dl_library_restore",
+    "source_line": 2649,
+    "classification": "library",
+    "disassembly_line": 21296,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "token",
+      "",
+      false,
+      [
+        "ok",
+        "error"
+      ]
+    ],
+    "names": [
+      "ODL",
+      "library_restore",
+      "get",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`token: str=\"\"`，由 delete 返回。",
+    "response_note": "`{ok:true,name}`，透传 ODL.library_restore。底层证据 `offline_dl.dis.txt:19873`。",
+    "error_note": "`{ok:false,error}`：not in trash、已有同名剧目录、文件操作失败。",
+    "side_effect_note": "**将 .trash 下之前移走的库目录恢复到输出根目录**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/merge",
+    "handler": "dl_library_merge",
+    "source_line": 2663,
+    "classification": "library",
+    "disassembly_line": 21380,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "name",
+      "",
+      "variant",
+      "original",
+      [
+        "original",
+        "h264"
+      ],
+      false,
+      "no series",
+      [
+        "ok",
+        "error"
+      ],
+      "running",
+      true,
+      "a merge is already running (%s)",
+      [
+        "ok",
+        "busy",
+        "error"
+      ],
+      0,
+      [
+        "running",
+        "name",
+        "pct",
+        "file",
+        "error",
+        "done",
+        "variant"
+      ],
+      {
+        "code": "_work",
+        "line": 2679
+      },
+      [
+        "target",
+        "daemon"
+      ],
+      [
+        "ok",
+        "started"
+      ]
+    ],
+    "names": [
+      "_safe_series_name",
+      "get",
+      "str",
+      "lower",
+      "_merge_lock",
+      "_merge_state",
+      "update",
+      "threading",
+      "Thread",
+      "start"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`name: str=\"\"`；`variant: str=\"original\"`，只允许 original/h264，否则回退 original。",
+    "response_note": "`{ok:true,started:true}`；进度另查 merge-status。",
+    "error_note": "无名称 `{ok:false,error:\"no series\"}`；已有任务 `{ok:false,busy:true,error}`。",
+    "side_effect_note": "**后台合并剧集并写合并媒体**，状态含 variant。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/library/merge-status",
+    "handler": "dl_library_merge_status",
+    "source_line": 2693,
+    "classification": "library",
+    "disassembly_line": 21577,
+    "parameters": [],
+    "constants": [
+      null
+    ],
+    "names": [
+      "dict",
+      "_merge_state"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{running,name,pct,file,error,done,variant}`，合并状态副本。",
+    "error_note": "无专门错误分支。",
+    "side_effect_note": "只读。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/convert",
+    "handler": "dl_library_convert",
+    "source_line": 2706,
+    "classification": "library",
+    "disassembly_line": 21603,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "names",
+      "name",
+      {
+        "code": "<listcomp>",
+        "line": 2714
+      },
+      {
+        "code": "<genexpr>",
+        "line": 2714
+      },
+      "keep_original",
+      true,
+      "mode",
+      "auto",
+      [
+        "auto",
+        "gpu",
+        "cpu"
+      ],
+      "speed",
+      "quality",
+      [
+        "quality",
+        "balanced",
+        "fast"
+      ],
+      0,
+      64,
+      "threads",
+      false,
+      "no series",
+      [
+        "ok",
+        "error"
+      ],
+      "running",
+      "a convert is already running (%s)",
+      [
+        "ok",
+        "busy",
+        "error"
+      ],
+      "",
+      [
+        "running",
+        "name",
+        "pct",
+        "encoder",
+        "mode",
+        "speed",
+        "total",
+        "series_done",
+        "converted",
+        "skipped",
+        "failed",
+        "error",
+        "done"
+      ],
+      {
+        "code": "_work",
+        "line": 2735
+      },
+      [
+        "target",
+        "daemon"
+      ],
+      [
+        "ok",
+        "started"
+      ]
+    ],
+    "names": [
+      "get",
+      "bool",
+      "str",
+      "lower",
+      "max",
+      "min",
+      "int",
+      "Exception",
+      "_convert_lock",
+      "_convert_state",
+      "update",
+      "len",
+      "threading",
+      "Thread",
+      "start"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`names: list` 或 `name`；`keep_original: bool=true`；`mode: str=\"auto\"`（auto/gpu/cpu）；`speed: str=\"quality\"`（quality/balanced/fast）；`threads: 可转int=0`，限制 0–64。",
+    "response_note": "`{ok:true,started:true}`；进度另查 convert-status。",
+    "error_note": "无剧名 `{ok:false,error:\"no series\"}`；已有任务 `{ok:false,busy:true,error}`；无效 mode/speed 回退默认。",
+    "side_effect_note": "**后台转码写 H264 文件**；keep_original 传入转换流程，涉及原文件保留策略。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/convert-cancel",
+    "handler": "dl_library_convert_cancel",
+    "source_line": 2759,
+    "classification": "library",
+    "disassembly_line": 21942,
+    "parameters": [],
+    "constants": [
+      null,
+      "ok",
+      true,
+      false,
+      [
+        "ok",
+        "error"
+      ]
+    ],
+    "names": [
+      "ODL",
+      "cancel_convert",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok:true}`。",
+    "error_note": "异常 `{ok:false,error}`。",
+    "side_effect_note": "**请求取消转码**。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/library/convert-status",
+    "handler": "dl_library_convert_status",
+    "source_line": 2769,
+    "classification": "library",
+    "disassembly_line": 22020,
+    "parameters": [],
+    "constants": [
+      null
+    ],
+    "names": [
+      "dict",
+      "_convert_state"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{running,name,pct,encoder,mode,speed,total,series_done,converted,skipped,failed,error,done}`。",
+    "error_note": "无专门错误分支。",
+    "side_effect_note": "只读转码状态。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/poster",
+    "handler": "dl_poster",
+    "source_line": 2775,
+    "classification": "library",
+    "disassembly_line": 22046,
+    "parameters": [
+      {
+        "name": "name",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      }
+    ],
+    "constants": [
+      null,
+      "poster.jpg",
+      "image/jpeg",
+      "Cache-Control",
+      "max-age=3600",
+      [
+        "media_type",
+        "headers"
+      ],
+      404,
+      "no poster"
+    ],
+    "names": [
+      "_safe_series_name",
+      "os",
+      "path",
+      "join",
+      "ODL",
+      "OUT",
+      "exists",
+      "FileResponse",
+      "HTTPException"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`image/jpeg` FileResponse，读取所选目录 poster.jpg，Cache-Control max-age=3600。",
+    "error_note": "HTTP 404 `no poster`。",
+    "side_effect_note": "只读本地海报。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/open",
+    "handler": "dl_library_open",
+    "source_line": 2785,
+    "classification": "library",
+    "disassembly_line": 22132,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      0,
+      "name",
+      "",
+      "sub",
+      false,
+      "no converted files yet",
+      "folder not found",
+      [
+        "ok",
+        "error"
+      ],
+      "ok",
+      true
+    ],
+    "names": [
+      "subprocess",
+      "sys",
+      "_safe_series_name",
+      "get",
+      "os",
+      "path",
+      "join",
+      "ODL",
+      "OUT",
+      "isdir",
+      "_reveal_folder",
+      "Exception",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`name: str=\"\"`；`sub: str=\"\"`（如 H264），经 `_safe_series_name` 校验。",
+    "response_note": "`{ok:true}`。",
+    "error_note": "`{ok:false,error}`：folder not found/no converted files yet/系统异常。",
+    "side_effect_note": "**打开所选剧目录或子目录**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/play",
+    "handler": "dl_library_play",
+    "source_line": 2803,
+    "classification": "library",
+    "disassembly_line": 22309,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      0,
+      "name",
+      "",
+      false,
+      "folder not found",
+      [
+        "ok",
+        "error"
+      ],
+      ".mp4",
+      "(\\d+)",
+      1,
+      "no episodes downloaded yet",
+      "ep",
+      {
+        "code": "<genexpr>",
+        "line": 2824
+      },
+      "win",
+      "darwin",
+      "open",
+      "xdg-open",
+      true,
+      [
+        "ok",
+        "file"
+      ]
+    ],
+    "names": [
+      "subprocess",
+      "sys",
+      "re",
+      "_safe_series_name",
+      "get",
+      "os",
+      "path",
+      "join",
+      "ODL",
+      "OUT",
+      "isdir",
+      "listdir",
+      "lower",
+      "endswith",
+      "search",
+      "append",
+      "int",
+      "group",
+      "sort",
+      "next",
+      "Exception",
+      "platform",
+      "startswith",
+      "startfile",
+      "Popen",
+      "str"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`name: str=\"\"`；`ep: 可转int/未提供=null`，内部从本地 MP4 文件名解析序号；省略、无法转 int 或未找到集号时，回退到按序号排序的第一个本地 MP4。",
+    "response_note": "`{ok:true,file}`。",
+    "error_note": "`{ok:false,error}`：folder not found/no episodes downloaded yet/系统异常。",
+    "side_effect_note": "**在系统默认播放器打开本地集文件**；Windows startfile，macOS open，其它 xdg-open。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/library/file",
+    "handler": "dl_library_file",
+    "source_line": 2842,
+    "classification": "library",
+    "disassembly_line": 22670,
+    "parameters": [
+      {
+        "name": "name",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      },
+      {
+        "name": "ep",
+        "type": "int",
+        "location": "query",
+        "required": false,
+        "default": 0,
+        "validation": {},
+        "declaration": 0
+      }
+    ],
+    "constants": [
+      null,
+      0,
+      404,
+      "series not found",
+      "第%03d集.mp4",
+      "",
+      ".mp4",
+      "(\\d+)",
+      1,
+      "episode not found",
+      "video/mp4",
+      "Cache-Control",
+      "no-store",
+      [
+        "media_type",
+        "headers"
+      ]
+    ],
+    "names": [
+      "re",
+      "_safe_series_name",
+      "os",
+      "path",
+      "join",
+      "ODL",
+      "OUT",
+      "isdir",
+      "HTTPException",
+      "int",
+      "exists",
+      "listdir",
+      "lower",
+      "endswith",
+      "search",
+      "group",
+      "FileResponse"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`video/mp4` FileResponse，Cache-Control no-store；优先找 第NNN集.mp4，随后按 MP4 文件名内数字匹配。",
+    "error_note": "HTTP 404 `series not found` / `episode not found`。",
+    "side_effect_note": "只读取所选库内媒体，安全名称校验。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/update",
+    "handler": "dl_library_update",
+    "source_line": 2879,
+    "classification": "library",
+    "disassembly_line": 23075,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      {
+        "code": "<listcomp>",
+        "line": 2883
+      },
+      "names",
+      {
+        "code": "<listcomp>",
+        "line": 2886
+      },
+      {
+        "code": "<genexpr>",
+        "line": 2886
+      },
+      false,
+      "invalid series name(s)",
+      [
+        "ok",
+        "error"
+      ],
+      "running",
+      "a download/update is already running; wait for it to finish",
+      true,
+      "library",
+      [
+        "running",
+        "log",
+        "series",
+        "started",
+        "mode",
+        "settings"
+      ],
+      [
+        "target",
+        "args",
+        "daemon"
+      ],
+      [
+        "ok",
+        "settings"
+      ]
+    ],
+    "names": [
+      "get",
+      "_dl_settings",
+      "_dl_lock",
+      "_dl_state",
+      "update",
+      "int",
+      "time",
+      "ODL",
+      "live_clear",
+      "CANCEL",
+      "clear",
+      "threading",
+      "Thread",
+      "_lib_worker",
+      "start"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`names: list/未提供`；下载设置见公共 body；未提供名称时可交底层进行库更新，明确给出的名称需合法。",
+    "response_note": "`{ok:true,settings}`。",
+    "error_note": "`{ok:false,error}`：invalid series name(s)、已有 download/update 运行。",
+    "side_effect_note": "**后台检查库更新并下载缺集，写文件**，与主下载队列互斥。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/library/seasons/decline",
+    "handler": "dl_library_seasons_decline",
+    "source_line": 2901,
+    "classification": "library",
+    "disassembly_line": 23278,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "series_ids",
+      200,
+      false,
+      "no series ids",
+      [
+        "ok",
+        "error"
+      ],
+      true,
+      [
+        "ok",
+        "declined"
+      ]
+    ],
+    "names": [
+      "get",
+      "isinstance",
+      "list",
+      "str",
+      "strip",
+      "_SID_RE",
+      "fullmatch",
+      "append",
+      "ODL",
+      "season_decline"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`series_ids: list=[]`，最多检查前 200 个，ID 必须匹配 15–20 位十进制。",
+    "response_note": "`{ok:true,declined}`。",
+    "error_note": "`{ok:false,error:\"no series ids\"}`。",
+    "side_effect_note": "**记录拒绝的续季提示状态**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/cancel",
+    "handler": "dl_cancel",
+    "source_line": 2918,
+    "classification": "desktop_ui",
+    "disassembly_line": 23398,
+    "parameters": [],
+    "constants": [
+      null,
+      "cancel requested — finishing in-flight episodes, no new ones will start",
+      "ok",
+      true
+    ],
+    "names": [
+      "ODL",
+      "CANCEL",
+      "set",
+      "_dl_log"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok:true}`。",
+    "error_note": "无专门错误分支。",
+    "side_effect_note": "**设置取消下载标志**；日志说明完成已在途集，不再启动新集。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl",
+    "handler": "dl_page",
+    "source_line": 2925,
+    "classification": "desktop_ui",
+    "disassembly_line": 23439,
+    "parameters": [
+      {
+        "name": "request",
+        "type": "Request",
+        "location": "injected",
+        "required": false,
+        "default": null,
+        "validation": {},
+        "declaration": null
+      }
+    ],
+    "constants": [
+      null,
+      "k",
+      "",
+      "/dl",
+      303,
+      [
+        "url",
+        "status_code"
+      ],
+      true,
+      "strict",
+      [
+        "path",
+        "httponly",
+        "samesite"
+      ],
+      "web",
+      "downloader.html",
+      "Cache-Control",
+      "no-store, must-revalidate",
+      [
+        "headers"
+      ]
+    ],
+    "names": [
+      "_UI_TOKEN",
+      "query_params",
+      "get",
+      "_consteq",
+      "RedirectResponse",
+      "set_cookie",
+      "_UI_COOKIE",
+      "FileResponse",
+      "os",
+      "path",
+      "join",
+      "dirname",
+      "abspath",
+      "__file__"
+    ],
+    "auth": "UI bootstrap；不要求已有 UI token。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "若 query `k` 与 HG_UI_TOKEN 匹配：303 跳转 `/dl` 并设置 token cookie；否则返回 web/downloader.html，Cache-Control no-store。",
+    "error_note": "token 不匹配不会建立会话；页面可显示，受保护 API 仍拒绝。",
+    "side_effect_note": "成功 bootstrap 时**设置 HttpOnly、SameSite=strict、path=/dl 的 UI cookie**。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/license/status",
+    "handler": "dl_license_status",
+    "source_line": 2945,
+    "classification": "license",
+    "disassembly_line": 23561,
+    "parameters": [],
+    "constants": [
+      null
+    ],
+    "names": [
+      "LIC",
+      "status"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "LIC.status() 透传对象；handler 未声明固定 schema（许可模块接口参见远端 API 文档）。",
+    "error_note": "未统一捕获 LIC.status 异常。",
+    "side_effect_note": "读取许可状态，底层可能刷新缓存。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/license/activate",
+    "handler": "dl_license_activate",
+    "source_line": 2950,
+    "classification": "license",
+    "disassembly_line": 23585,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "key",
+      ""
+    ],
+    "names": [
+      "LIC",
+      "activate",
+      "get"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`key: str=\"\"`。",
+    "response_note": "LIC.activate(key) 透传许可结果；字段由许可模块决定。",
+    "error_note": "失败 reason/错误由 LIC.activate 决定；handler 无统一 catch。",
+    "side_effect_note": "**尝试激活许可并更新本机许可状态**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/license/deactivate",
+    "handler": "dl_license_deactivate",
+    "source_line": 2955,
+    "classification": "license",
+    "disassembly_line": 23624,
+    "parameters": [],
+    "constants": [
+      null
+    ],
+    "names": [
+      "LIC",
+      "deactivate"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "LIC.deactivate() 透传结果。",
+    "error_note": "错误由许可模块决定。",
+    "side_effect_note": "**解绑/停用本机许可**。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/license/reactivate",
+    "handler": "dl_license_reactivate",
+    "source_line": 2960,
+    "classification": "license",
+    "disassembly_line": 23648,
+    "parameters": [],
+    "constants": [
+      null,
+      false,
+      "no_key",
+      [
+        "ok",
+        "reason"
+      ]
+    ],
+    "names": [
+      "LIC",
+      "current_key",
+      "activate"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "有 current_key 时透传 LIC.activate(current_key)。",
+    "error_note": "无 key：`{ok:false,reason:\"no_key\"}`。",
+    "side_effect_note": "**使用已保存 key 重新激活**。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/license/usage",
+    "handler": "dl_license_usage",
+    "source_line": 2970,
+    "classification": "license",
+    "disassembly_line": 23698,
+    "parameters": [],
+    "constants": [
+      null
+    ],
+    "names": [
+      "LIC",
+      "usage"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "LIC.usage() 透传统计；handler 未固定字段。",
+    "error_note": "错误由许可模块决定。",
+    "side_effect_note": "读取许可用量。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/license/plans",
+    "handler": "dl_license_plans",
+    "source_line": 3022,
+    "classification": "license",
+    "disassembly_line": 24002,
+    "parameters": [],
+    "constants": [
+      null,
+      "data",
+      "at",
+      600,
+      "GET",
+      "/plans",
+      8,
+      [
+        "timeout"
+      ],
+      "unavailable",
+      [
+        "plans",
+        "error"
+      ]
+    ],
+    "names": [
+      "time",
+      "_plans_cache",
+      "_https_req",
+      "PAY_URL",
+      "raise_for_status",
+      "json",
+      "Exception"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "支付服务 GET /plans 的 JSON 透传，缓存 600 秒。",
+    "error_note": "`{plans:[],error:\"unavailable\"}`。",
+    "side_effect_note": "网络读取方案/更新缓存。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/license/buy",
+    "handler": "dl_license_buy",
+    "source_line": 3040,
+    "classification": "license",
+    "disassembly_line": 24137,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      "plan",
+      "",
+      [
+        "month",
+        "year",
+        "life"
+      ],
+      false,
+      "bad_plan",
+      [
+        "ok",
+        "reason"
+      ],
+      "POST",
+      "/create-checkout",
+      10,
+      [
+        "json",
+        "timeout"
+      ],
+      "network",
+      200,
+      [
+        "ok",
+        "reason",
+        "detail"
+      ],
+      "url",
+      "session_id",
+      "no_session",
+      "bad_checkout_url",
+      0,
+      2,
+      [
+        "new"
+      ],
+      true,
+      [
+        "ok",
+        "session_id",
+        "url"
+      ]
+    ],
+    "names": [
+      "get",
+      "strip",
+      "_https_req",
+      "PAY_URL",
+      "raise_for_status",
+      "json",
+      "Exception",
+      "str",
+      "_safe_pay_url",
+      "webbrowser",
+      "open"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`plan: str=\"\"`，只允许 month/year/life。",
+    "response_note": "`{ok:true,session_id,url}`。",
+    "error_note": "`{ok:false,reason}`：bad_plan/no_session/bad_checkout_url；网络失败另有 detail（截断 200 字）。",
+    "side_effect_note": "**创建结账会话并打开浏览器支付页**；不是已完成付款。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/license/purchase-poll",
+    "handler": "dl_license_purchase_poll",
+    "source_line": 3067,
+    "classification": "license",
+    "disassembly_line": 24374,
+    "parameters": [
+      {
+        "name": "session_id",
+        "type": "str",
+        "location": "query",
+        "required": false,
+        "default": "",
+        "validation": {},
+        "declaration": ""
+      }
+    ],
+    "constants": [
+      null,
+      "",
+      false,
+      "no_session",
+      [
+        "pending",
+        "ok",
+        "reason"
+      ],
+      "GET",
+      "/key",
+      "session_id",
+      8,
+      [
+        "params",
+        "timeout"
+      ],
+      true,
+      "network",
+      [
+        "pending",
+        "reason"
+      ],
+      "key",
+      "reason",
+      "not_ready",
+      "ok",
+      "active",
+      [
+        "pending",
+        "ok",
+        "activated",
+        "reason",
+        "usage"
+      ]
+    ],
+    "names": [
+      "strip",
+      "_https_req",
+      "PAY_URL",
+      "content",
+      "json",
+      "Exception",
+      "get",
+      "LIC",
+      "activate",
+      "bool",
+      "usage"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "pending 分支 `{pending:true,reason}`；拿到 key 后返回 `{pending:false,ok,activated,reason,usage}`。",
+    "error_note": "缺 session `{pending:false,ok:false,reason:\"no_session\"}`；网络 pending=true,reason=network；未就绪 reason=not_ready 或服务端 reason。",
+    "side_effect_note": "**GET 若取回 key 会自动调用 LIC.activate**，并非严格只读。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/license/manage",
+    "handler": "dl_license_manage",
+    "source_line": 3088,
+    "classification": "license",
+    "disassembly_line": 24562,
+    "parameters": [],
+    "constants": [
+      null,
+      "",
+      false,
+      "no_key",
+      [
+        "ok",
+        "reason"
+      ],
+      "POST",
+      "/portal",
+      [
+        "key",
+        "device"
+      ],
+      10,
+      [
+        "json",
+        "timeout"
+      ],
+      "network",
+      200,
+      [
+        "ok",
+        "reason",
+        "detail"
+      ],
+      "url",
+      "ok",
+      "reason",
+      "unavailable",
+      "bad_portal_url",
+      0,
+      2,
+      [
+        "new"
+      ],
+      true,
+      [
+        "ok",
+        "url"
+      ]
+    ],
+    "names": [
+      "LIC",
+      "current_key",
+      "device_id",
+      "Exception",
+      "_https_req",
+      "PAY_URL",
+      "content",
+      "json",
+      "str",
+      "get",
+      "_safe_pay_url",
+      "webbrowser",
+      "open"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok:true,url}`。",
+    "error_note": "`{ok:false,reason}`：no_key/unavailable/bad_portal_url；网络失败附 detail。",
+    "side_effect_note": "**用当前 key/device 创建管理门户并打开浏览器**。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/update-check",
+    "handler": "dl_update_check",
+    "source_line": 3121,
+    "classification": "update",
+    "disassembly_line": 24822,
+    "parameters": [],
+    "constants": [
+      null,
+      "data",
+      "at",
+      1800,
+      "application/vnd.github+json",
+      "HongguoDownloader",
+      [
+        "Accept",
+        "User-Agent"
+      ],
+      "Bearer ",
+      "Authorization",
+      "GET",
+      6,
+      [
+        "timeout",
+        "headers"
+      ],
+      [
+        "at",
+        "data"
+      ],
+      false,
+      [
+        "ok",
+        "current",
+        "update"
+      ],
+      "tag_name",
+      "version",
+      "",
+      "html_url",
+      "url",
+      "assets",
+      "name",
+      ".exe",
+      "browser_download_url",
+      "body",
+      "notes",
+      "\r\n",
+      "\n",
+      800,
+      797,
+      "...",
+      true,
+      [
+        "ok",
+        "current",
+        "latest",
+        "update",
+        "url",
+        "page",
+        "name",
+        "notes"
+      ]
+    ],
+    "names": [
+      "time",
+      "APP_VERSION",
+      "_update_cache",
+      "GITHUB_TOKEN",
+      "_https_req",
+      "UPDATE_API_URL",
+      "raise_for_status",
+      "json",
+      "update",
+      "Exception",
+      "str",
+      "get",
+      "strip",
+      "lower",
+      "endswith",
+      "replace",
+      "len",
+      "rstrip",
+      "bool",
+      "_ver_tuple"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok,current,latest,update,url,page,name,notes}`；失败/无可用结果 `{ok:false,current,update:false}`。",
+    "error_note": "网络等异常转上述失败结构；说明 notes 最多 800 字。",
+    "side_effect_note": "GET GitHub latest release，缓存 1800 秒；不下载安装包。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/update-download",
+    "handler": "dl_update_download",
+    "source_line": 3161,
+    "classification": "update",
+    "disassembly_line": 25200,
+    "parameters": [],
+    "constants": [
+      null,
+      0,
+      [
+        "urlparse"
+      ],
+      false,
+      [
+        "blocking"
+      ],
+      true,
+      "a download is already in progress",
+      [
+        "ok",
+        "busy",
+        "error"
+      ],
+      "starting",
+      "",
+      [
+        "state",
+        "pct",
+        "downloaded",
+        "total",
+        "error"
+      ],
+      "url",
+      "update",
+      ".exe",
+      "error",
+      "no installer to download",
+      [
+        "state",
+        "error"
+      ],
+      "no verifiable installer to download",
+      [
+        "ok",
+        "error"
+      ],
+      [
+        "exist_ok"
+      ],
+      "HongguoDownloader-Setup.exe",
+      "downloading",
+      [
+        "state"
+      ],
+      "GET",
+      180,
+      [
+        "timeout",
+        "stream"
+      ],
+      "Content-Length",
+      "total",
+      "wb",
+      65536,
+      "downloaded",
+      99,
+      100,
+      "pct",
+      "download failed",
+      "download failed: %s",
+      "verifying",
+      [
+        "state",
+        "pct"
+      ],
+      "'",
+      "''",
+      "$ErrorActionPreference='SilentlyContinue'; $s=Get-AuthenticodeSignature -LiteralPath '%s'; Write-Output $s.Status; Write-Output $s.SignerCertificate.Subject",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      40,
+      134217728,
+      [
+        "capture_output",
+        "text",
+        "timeout",
+        "creationflags"
+      ],
+      {
+        "code": "<listcomp>",
+        "line": 3222
+      },
+      1,
+      "NotSigned",
+      "Valid",
+      "HG_PUBLISHER",
+      "done",
+      [
+        "path",
+        "sha256",
+        "trusted"
+      ],
+      [
+        "ok",
+        "path",
+        "name",
+        "sha256",
+        "signed",
+        "valid",
+        "publisher",
+        "expected_publisher",
+        "trusted"
+      ]
+    ],
+    "names": [
+      "subprocess",
+      "hashlib",
+      "urllib.parse",
+      "urlparse",
+      "_update_lock",
+      "acquire",
+      "_update_progress",
+      "update",
+      "dl_update_check",
+      "str",
+      "get",
+      "startswith",
+      "_UPDATE_ASSET_PREFIX",
+      "lower",
+      "endswith",
+      "release",
+      "os",
+      "path",
+      "join",
+      "_data_dir",
+      "makedirs",
+      "Exception",
+      "basename",
+      "_https_req",
+      "raise_for_status",
+      "int",
+      "headers",
+      "sha256",
+      "open",
+      "iter_content",
+      "write",
+      "len",
+      "min",
+      "hexdigest",
+      "replace",
+      "run",
+      "_POWERSHELL",
+      "stdout",
+      "splitlines",
+      "bool",
+      "EXPECTED_PUBLISHER",
+      "environ",
+      "strip",
+      "_last_download",
+      "abspath"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok,path,name,sha256,signed,valid,publisher,expected_publisher,trusted}`。",
+    "error_note": "busy `{ok:false,busy:true,error}`；无可信下载 URL/下载失败 `{ok:false,error}`。",
+    "side_effect_note": "**下载 exe 到本地 update 目录、计算 SHA-256、调用 PowerShell Authenticode 检验**；仅允许预期 GitHub release 路径，不在此 handler 执行。"
+  },
+  {
+    "method": "GET",
+    "path": "/dl/update-progress",
+    "handler": "dl_update_progress",
+    "source_line": 3239,
+    "classification": "update",
+    "disassembly_line": 25972,
+    "parameters": [],
+    "constants": [
+      null,
+      "ok",
+      true
+    ],
+    "names": [
+      "dict",
+      "_update_progress"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "",
+    "response_note": "`{ok:true,state,pct,downloaded,total,error}`。state 可 idle/starting/downloading/verifying/done/error。",
+    "error_note": "无专门错误分支。",
+    "side_effect_note": "只读更新下载进度。"
+  },
+  {
+    "method": "POST",
+    "path": "/dl/update-run",
+    "handler": "dl_update_run",
+    "source_line": 3245,
+    "classification": "update",
+    "disassembly_line": 26004,
+    "parameters": [
+      {
+        "name": "payload",
+        "type": "dict",
+        "location": "body",
+        "required": true,
+        "default": null,
+        "validation": {},
+        "declaration": {
+          "factory": "Body",
+          "args": [
+            {
+              "required": true
+            }
+          ],
+          "kwargs": {}
+        }
+      }
+    ],
+    "constants": [
+      null,
+      0,
+      "path",
+      "",
+      "update",
+      false,
+      "unknown download",
+      [
+        "ok",
+        "error"
+      ],
+      ".exe",
+      "refusing to launch a non-.exe file",
+      "sha256",
+      "no verified download for this file — download it again",
+      "rb",
+      {
+        "code": "<lambda>",
+        "line": 3266
+      },
+      "b''",
+      "the installer changed since it was verified — download it again",
+      "could not verify the installer: %s",
+      "trusted",
+      "installer is not signed by the expected publisher — refusing to run it",
+      "ok",
+      true
+    ],
+    "names": [
+      "hashlib",
+      "str",
+      "get",
+      "os",
+      "path",
+      "abspath",
+      "join",
+      "_data_dir",
+      "Exception",
+      "dict",
+      "_last_download",
+      "startswith",
+      "sep",
+      "exists",
+      "lower",
+      "endswith",
+      "normcase",
+      "sha256",
+      "open",
+      "iter",
+      "update",
+      "hexdigest",
+      "EXPECTED_PUBLISHER",
+      "startfile"
+    ],
+    "auth": "UI：设置 HG_UI_TOKEN 时需 cookie 或 x-hg-token；公共 Host/跨站校验。",
+    "packaged_allowed": true,
+    "body_fields_note": "`path: str=\"\"`，必须是本进程已下载记录对应 exe。",
+    "response_note": "`{ok:true}`。",
+    "error_note": "`{ok:false,error}`：unknown download、非 exe、无校验记录、SHA-256 改变、无法验签、预期发布者校验未通过。",
+    "side_effect_note": "**经路径/记录/hash/发布者检查后使用 os.startfile 执行安装程序**。"
+  }
+]

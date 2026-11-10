@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-13 15:15:51 +0800",
+  "client": "original unchanged HongguoCLI/hongguo_api.py",
+  "endpoint": "https://api5-normal-sinfonlinec.fqnovel.com/novel/player/multi_video_model/v1/",
+  "models_returned": 0,
+  "response": [
+    {
+      "vids": [
+        "7689903116275174462"
+      ],
+      "response": {
+        "Code": 110001,
+        "Message": "未知异常",
+        "BaseResp": {
+          "StatusMessage": "unknown error",
+          "StatusCode": 110001
+        }
+      }
+    }
+  ],
+  "desktop_comparisons": {
+    "dramas_tested": [
+      "7689863296106646590",
+      "7692043430955863102",
+      "7695313611605937214"
+    ],
+    "transports": [
+      "curl_cffi chrome",
+      "requests"
+    ],
+    "devices": [
+      "config original",
+      "device 0",
+      "device 1"
+    ],
+    "minimal_biz_param_result": "Code 110001"
+  },
+  "conclusion": "Current requests fail at the official video-model endpoint; source unchanged CLI also reproduces. Cause within platform is not established."
+}

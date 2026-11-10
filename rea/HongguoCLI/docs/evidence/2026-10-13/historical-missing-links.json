@@ -1,0 +1,47 @@
+[
+  {
+    "document": "analysis/VIDEO_ENCRYPTION.md",
+    "line": 9,
+    "target": "../outputs/decrypted-sample/坠崖捡个参娃娃_第01集_1080p.mp4"
+  },
+  {
+    "document": "analysis/VIDEO_ENCRYPTION.md",
+    "line": 17,
+    "target": "../outputs/decrypted-sample/decryption-verification.json"
+  },
+  {
+    "document": "analysis/REQUEST_CHAIN.md",
+    "line": 227,
+    "target": "../outputs/逆袭111集.json"
+  },
+  {
+    "document": "analysis/REQUEST_CHAIN.md",
+    "line": 227,
+    "target": "../outputs/逆袭111集.txt"
+  },
+  {
+    "document": "analysis/REQUEST_CHAIN.md",
+    "line": 227,
+    "target": "../outputs/requests.jsonl"
+  },
+  {
+    "document": "analysis/API文档.md",
+    "line": 29,
+    "target": "../outputs/requests.jsonl"
+  },
+  {
+    "document": "analysis/API文档.md",
+    "line": 29,
+    "target": "../outputs/逆袭111集.json"
+  },
+  {
+    "document": "analysis/API文档.md",
+    "line": 2359,
+    "target": "../outputs/decrypted-sample/坠崖捡个参娃娃_第01集_1080p.mp4"
+  },
+  {
+    "document": "analysis/API文档.md",
+    "line": 2367,
+    "target": "../outputs/decrypted-sample/decryption-verification.json"
+  }
+]

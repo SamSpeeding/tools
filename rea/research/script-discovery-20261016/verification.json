@@ -1,0 +1,371 @@
+{
+  "verification": "Independent offline audit of 48 original HTTP requests/responses; no new network calls",
+  "requests": 48,
+  "success": 48,
+  "kinds": {
+    "search": 6,
+    "rank": 15,
+    "filters": 5,
+    "category": 8,
+    "latest": 6,
+    "detail": 3,
+    "model": 2,
+    "category-filtered": 3
+  },
+  "paths": {
+    "/reading/bookapi/search/tab/v": 6,
+    "/reading/bookapi/bookmall/cell/change/v": 15,
+    "/reading/distribution/category/landpage/v": 22,
+    "/novel/player/multi_video_detail/v1/": 3,
+    "/novel/player/video_model/v1/": 2
+  },
+  "gorgon_golden_vectors_passed": 5,
+  "fixed_original_device_base_query": true,
+  "all_http200_business_code0": true,
+  "all_lists_nonempty_ids_exist_in_response_including_embedded_JSON": true,
+  "all_body_md5_stubs_match": true,
+  "gorgon_recomputed_from_actual_query_body_every_request": true,
+  "helios_recomputed_from_nonce_every_request": true,
+  "medusa_envelope_version_magic_timestamp_verified": true,
+  "medusa_ciphertext_full_reconstruction": false,
+  "medusa_versions": [
+    3
+  ],
+  "argus_ladon_timestamp_encodings_verified": true,
+  "neptune_soter_cookie_token_absent": true,
+  "all_medusa_values_unique": true,
+  "one_local_signer_stage_one_remote_call_each": true,
+  "no_LocalSigner_or_Java_constructed_in_research_code": true,
+  "subprocess_original_signer_ctypes_audit_guard_present": true,
+  "transport": "unchanged curl_cffi with normal native dependencies",
+  "media_requests": 0,
+  "all_stage_preservation_checks_passed": true,
+  "real_anomalies": [],
+  "pagination": [
+    {
+      "id": "coverage-search-重生-p2",
+      "new_series_ids": 7,
+      "actual_cursor_verified": true
+    },
+    {
+      "id": "coverage-search-总裁-p2",
+      "new_series_ids": 7,
+      "actual_cursor_verified": true
+    },
+    {
+      "id": "coverage-rank-all-hot-p2",
+      "new_series_ids": 10,
+      "actual_cursor_verified": true
+    },
+    {
+      "id": "coverage-category-short_play-p2",
+      "new_series_ids": 15,
+      "actual_cursor_verified": true
+    },
+    {
+      "id": "coverage-latest-short_play-p2",
+      "new_series_ids": 15,
+      "actual_cursor_verified": true
+    },
+    {
+      "id": "coverage-category-comic_series-p2",
+      "new_series_ids": 18,
+      "actual_cursor_verified": true
+    },
+    {
+      "id": "coverage-category-ai_series-p2",
+      "new_series_ids": 18,
+      "actual_cursor_verified": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "smoke-search",
+      "kind": "search",
+      "independently_verified": true,
+      "raw_sha256": "839e2a8035f928d60055f7db71a2398ef89abd3143bd35691759dd05fdc14724"
+    },
+    {
+      "id": "smoke-rank",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "2cd5c82ba53479723d695af9b6c4dbbfe0e6f17adab4022d978c4259f2e258b6"
+    },
+    {
+      "id": "smoke-filters",
+      "kind": "filters",
+      "independently_verified": true,
+      "raw_sha256": "113ff1804d763154187d8943df758f2a24f5483f2dfebbcd0fdff20f90bb554d"
+    },
+    {
+      "id": "smoke-category",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "6403bd0182f0b7420b992f3c1b1c35e41cc3ad2bc5ceed4e0185f84b3e8e72f9"
+    },
+    {
+      "id": "smoke-latest",
+      "kind": "latest",
+      "independently_verified": true,
+      "raw_sha256": "02e0ed08abeb38a05de498fe49254016bd2f6c64f8e87de28a7086015e06c873"
+    },
+    {
+      "id": "smoke-detail",
+      "kind": "detail",
+      "independently_verified": true,
+      "raw_sha256": "0f6ff956ae85eadc14284b5ed77305b1ec427d1163330a7494c127fcaa78a780"
+    },
+    {
+      "id": "smoke-single-control",
+      "kind": "model",
+      "independently_verified": true,
+      "raw_sha256": "94d9d2f31b490fbf4b8575b41ac881e1fc39b8ccb826d206959e20ea2d074f90"
+    },
+    {
+      "id": "coverage-search-重生",
+      "kind": "search",
+      "independently_verified": true,
+      "raw_sha256": "3d69848d12bd6a334b9ee6b2186170a7309aa465ad8e7372517ed836da670ae0"
+    },
+    {
+      "id": "coverage-search-重生-p2",
+      "kind": "search",
+      "independently_verified": true,
+      "raw_sha256": "7a96ed036c71915ce240a0bad751b5cfd501f61bfc4452dfde04f8d0bfb807f5"
+    },
+    {
+      "id": "coverage-search-总裁",
+      "kind": "search",
+      "independently_verified": true,
+      "raw_sha256": "be761177ecc0e7c2533f0ddf676d2febc2b944f0ffbe89b219e9a2a632dd2b43"
+    },
+    {
+      "id": "coverage-search-总裁-p2",
+      "kind": "search",
+      "independently_verified": true,
+      "raw_sha256": "1f754a4703a5dfaf48f80f64669a6bb75906f6e5f8d3b10d3b1f272242a0427c"
+    },
+    {
+      "id": "coverage-rank-all-recommend",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "640bde8615c295316f2197fa285ab1abe7822a526c3a99191de0d9d263af30bc"
+    },
+    {
+      "id": "coverage-rank-all-hot",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "9981bdfd3241187756fcb1af637ce1360fe769a5da78a4a129827217c53c90ec"
+    },
+    {
+      "id": "coverage-rank-all-hot-p2",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "ad5f93c4698f3183d5bfa8a4f1aa7a0a9b5cee55d85141c0bff410d292883083"
+    },
+    {
+      "id": "coverage-rank-all-new",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "931ad89d9dff218c6e6c800396a009808fbe9b230f1423adc82941b5225756b2"
+    },
+    {
+      "id": "coverage-rank-human-recommend",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "0d9be0772bcdc6d1696568fd252db0605e5ddb32ebd0b6901fbf74c571db9a15"
+    },
+    {
+      "id": "coverage-rank-human-hot",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "84cc61a7733193be07fa87c9bacca889891123f95d856ae2fb7cba86cbff72dc"
+    },
+    {
+      "id": "coverage-rank-human-new",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "06a4637d374fcf66dba5297dc61ce4ce7a2f64ef4a2ed6fe273bb85ccb09d6c3"
+    },
+    {
+      "id": "coverage-rank-comic-recommend",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "4af457c8d2d966812a0f48a3e97d8c58c478627ee18e842445cc65fdaecf884d"
+    },
+    {
+      "id": "coverage-rank-comic-hot",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "c7dc15b29279292c4c6aa4b5fa9f348aa1a264e21d2457c5f2851a3bf6efcc93"
+    },
+    {
+      "id": "coverage-rank-comic-new",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "400f42c6326b7b23aa6fe05f9cd5f98605c2bb8304af6fc52942ade188ed710e"
+    },
+    {
+      "id": "coverage-rank-ai-recommend",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "c9fdc48742b1832d316a4fccfe25fe57cac4633c55df59dafa20acefb892645d"
+    },
+    {
+      "id": "coverage-rank-ai-hot",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "e8bb2fc8a59612bb53c1895ed9032c59651a6781a2e0c975d4fdbd20ea56378a"
+    },
+    {
+      "id": "coverage-rank-ai-new",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "fe70dc433fffd94be68257a81235f23b0c9e4ab0d56d44d2bebd9db8e6397250"
+    },
+    {
+      "id": "coverage-filters-short_play",
+      "kind": "filters",
+      "independently_verified": true,
+      "raw_sha256": "b0384e8595ac18d105b7df8e64f39e4c33d681a995d28db38810ac4c3c404840"
+    },
+    {
+      "id": "coverage-category-short_play",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "09924e0d9bb1047560e0d5dbe262e772c91460a4565a538cee3c374cfa596318"
+    },
+    {
+      "id": "coverage-category-short_play-p2",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "48e8d9eebb4a2a505bcf6357b1a0d3de2573b152c93aabf29aa0463860239ba1"
+    },
+    {
+      "id": "coverage-latest-short_play",
+      "kind": "latest",
+      "independently_verified": true,
+      "raw_sha256": "c80a0f3499fc2d05f6e93b6dcb1e90eefc6ac1cc0e5a7fbd79e4dfcc088141e3"
+    },
+    {
+      "id": "coverage-latest-short_play-p2",
+      "kind": "latest",
+      "independently_verified": true,
+      "raw_sha256": "8791e6f7377765f8ce799e025775429fd081308b5d22b0b88a3f7e5453e81f1e"
+    },
+    {
+      "id": "coverage-selected-short_play",
+      "kind": "category-filtered",
+      "independently_verified": true,
+      "raw_sha256": "46353c77f0027885d0d6a60de377f9e59d0e14b323ae2d47c0cef41027ac01d3"
+    },
+    {
+      "id": "coverage-filters-comic_series",
+      "kind": "filters",
+      "independently_verified": true,
+      "raw_sha256": "15fbb11aafa44b76855c28af037686493cea31ec0f1ff907e0feed15918be732"
+    },
+    {
+      "id": "coverage-category-comic_series",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "b249387d3c3244136f1cfa49d99eb9b75128848ea9cdfa8c5011138d393100d0"
+    },
+    {
+      "id": "coverage-category-comic_series-p2",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "5a90ebaf03b810c7423fe56318799e09413a134bbda8d84ad1a280fa7541bac8"
+    },
+    {
+      "id": "coverage-latest-comic_series",
+      "kind": "latest",
+      "independently_verified": true,
+      "raw_sha256": "4928beb1c9ce2881eebb742800274451534ec9866ff89b9a4c53f03907973def"
+    },
+    {
+      "id": "coverage-selected-comic_series",
+      "kind": "category-filtered",
+      "independently_verified": true,
+      "raw_sha256": "7f56ae30c511277281790d349c873ab6411a6fa074122e0da30b4d70ed8c6260"
+    },
+    {
+      "id": "coverage-filters-ai_series",
+      "kind": "filters",
+      "independently_verified": true,
+      "raw_sha256": "7ccfeaf5d21e89e6cecb4475579e94931a09ae8dd9033a39cbe40919c6f6d9d0"
+    },
+    {
+      "id": "coverage-category-ai_series",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "cfa28a90acf4dc9f966c43385b33c9c548ac28d6b58289cb18603cc530b7ce0d"
+    },
+    {
+      "id": "coverage-category-ai_series-p2",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "d59795d3d4d06fcad2dd28bcedecd7de6379491fbd599c81d0e5c9b05aa44eaf"
+    },
+    {
+      "id": "coverage-latest-ai_series",
+      "kind": "latest",
+      "independently_verified": true,
+      "raw_sha256": "f737e17c2943370481d2ca47ef88dc6a7d8f2608612666d57b9450034a94a16c"
+    },
+    {
+      "id": "coverage-selected-ai_series",
+      "kind": "category-filtered",
+      "independently_verified": true,
+      "raw_sha256": "2aedb9ddaa45f7c21034304c5284d97c08af5558f56268a7b96a7817e321c6c7"
+    },
+    {
+      "id": "coverage-detail-b",
+      "kind": "detail",
+      "independently_verified": true,
+      "raw_sha256": "0e922ef9195f83f4936c88604795ee5783a483681d077b9b4f65231c76afecfd"
+    },
+    {
+      "id": "repeat-search",
+      "kind": "search",
+      "independently_verified": true,
+      "raw_sha256": "75c77bc5eabecee71d2ebe65fcec70012e6be607cef2ac4bf2e43150ab9bd349"
+    },
+    {
+      "id": "repeat-rank",
+      "kind": "rank",
+      "independently_verified": true,
+      "raw_sha256": "965474d013c417077ef3630413e0036d58c88fb953c673318dc52c3a56cdd989"
+    },
+    {
+      "id": "repeat-filters",
+      "kind": "filters",
+      "independently_verified": true,
+      "raw_sha256": "1819d8464ea21dbf13363541581278e2b64a350cbf2ee457fcab06973e6c0bef"
+    },
+    {
+      "id": "repeat-category",
+      "kind": "category",
+      "independently_verified": true,
+      "raw_sha256": "6df603210694574303523ef9535b7f4adac0c0c165d5dd097cce254c027556e0"
+    },
+    {
+      "id": "repeat-latest",
+      "kind": "latest",
+      "independently_verified": true,
+      "raw_sha256": "b6c1f45e548409b0dd19e799c8cf9ab211df6be01c26834c10fe821b0659667a"
+    },
+    {
+      "id": "repeat-detail",
+      "kind": "detail",
+      "independently_verified": true,
+      "raw_sha256": "cbea082e66d5840afa10669387d3dd22995ff816d639b667c8e3807e0891149a"
+    },
+    {
+      "id": "repeat-single-control",
+      "kind": "model",
+      "independently_verified": true,
+      "raw_sha256": "94039b0fc70d265b3c0c9282475ade2d7fcbd48d74833b84666360f35f3912e5"
+    }
+  ]
+}

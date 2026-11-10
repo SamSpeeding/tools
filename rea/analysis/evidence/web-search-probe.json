@@ -1,0 +1,1117 @@
+{
+  "req": {
+    "webID": "20261012182952A18746B16FD837196554",
+    "userAgent": "curl/8.7.1",
+    "hostname": "100.96.5.42",
+    "isSSRPage": true,
+    "isEnableCache": false,
+    "domain": "https://hongguoduanju.com",
+    "reqName": "www.hongguoduanju.com",
+    "isInside": false,
+    "uuid": "7695726561536181822",
+    "semDeliveryConfig": {
+      "version": 2,
+      "items": [
+        {
+          "configKey": "hg_sem_baidu_conf",
+          "enterFrom": "baidu_sem",
+          "version": 2,
+          "default": {
+            "name": "百度兜底",
+            "ios": {
+              "link": "https://novel8662.ugurl.cn/N3XUB",
+              "fallback": "https://novel8662.ugurl.cn/N3XUB",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_73619091a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "73619090a"
+              }
+            },
+            "android": {
+              "link": "https://novel8662.ugurl.cn/NukPJ",
+              "fallback": "https://novel8662.ugurl.cn/NukPJ",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_71853859a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "71853858a"
+              }
+            },
+            "page_overrides": {
+              "player": {
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                },
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73621177a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73621179a"
+                  }
+                }
+              }
+            }
+          },
+          "rules": [
+            {
+              "id": "baidu_sem_new1",
+              "name": "百度搜索新官网投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FXq6s",
+                  "fallback": "https://novel8662.ugurl.cn/FXq6s",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_75576243a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75576243a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "baidu_sem_new2",
+              "name": "百度搜索新官网投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FxQ5p",
+                  "fallback": "https://novel8662.ugurl.cn/FxQ5p",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_75578468a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75578468a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "baidu_sem_new3",
+              "name": "百度搜索新官网投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FX8MS",
+                  "fallback": "https://novel8662.ugurl.cn/FX8MS",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_75577073a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75577073a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "baidu_sem_2345_new",
+              "name": "2345导流拉新",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/Fmopg",
+                  "fallback": "https://novel8662.ugurl.cn/Fmopg",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76185835a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76185834a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/Fmopg",
+                  "fallback": "https://novel8662.ugurl.cn/Fmopg",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76185831a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76185833a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "baidu_sem_cl_1",
+              "name": "百度扣量账户1",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FqrcR",
+                  "fallback": "https://novel8662.ugurl.cn/FqrcR",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76982269a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76982268a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "baidu_sem_cl_2",
+              "name": "百度扣量账户2",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FPqKu",
+                  "fallback": "https://novel8662.ugurl.cn/FPqKu",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76982468a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76982469a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "baidu_sem_cl_3",
+              "name": "百度扣量账户3",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/F4LUg",
+                  "fallback": "https://novel8662.ugurl.cn/F4LUg",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76982749a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76982750a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "uc",
+              "name": "uc投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FujH3",
+                  "fallback": "https://novel8662.ugurl.cn/FujH3",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77228509a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77228510a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/Fkq7V",
+                  "fallback": "https://novel8662.ugurl.cn/Fkq7V",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77228512a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77228511a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "uc_new",
+              "name": "uc其他账户投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FxWw1",
+                  "fallback": "https://novel8662.ugurl.cn/FxWw1",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77228650a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77228649a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/F4Gx4",
+                  "fallback": "https://novel8662.ugurl.cn/F4Gx4",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77228651a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77228652a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "shenma_1",
+              "name": "神马搜索投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FyQdK",
+                  "fallback": "https://novel8662.ugurl.cn/FyQdK",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77327205a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77327206a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/FxveM",
+                  "fallback": "https://novel8662.ugurl.cn/FxveM",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77329934a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77329935a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "shenma_2",
+              "name": "神马搜索投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FCY47",
+                  "fallback": "https://novel8662.ugurl.cn/FCY47",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77329325a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77329327a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/Fm9Ru",
+                  "fallback": "https://novel8662.ugurl.cn/Fm9Ru",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77330361a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77330362a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "gdt1",
+              "name": "广点通搜索QQ浏览器投放",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FxYvn",
+                  "fallback": "https://novel8662.ugurl.cn/FxYvn",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77639988a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77639987a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "gdt2",
+              "name": "广点通搜索优量汇",
+              "targets": {
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/Frb7M",
+                  "fallback": "https://novel8662.ugurl.cn/Frb7M",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_77641618a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "77641617a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "gdt_qq",
+              "name": "广点通QQ浏览器投放",
+              "targets": {
+                "android": {
+                  "link": "https://applink.novelquickapp.com/FK6cu",
+                  "fallback": "https://applink.novelquickapp.com/FK6cu",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_78104023a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "78105987a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "gdt_ylh",
+              "name": "广点通优量汇投放",
+              "targets": {
+                "android": {
+                  "link": "https://applink.novelquickapp.com/FoVwB",
+                  "fallback": "https://applink.novelquickapp.com/FoVwB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_78106303a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "78104218a"
+                  }
+                },
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N3XUB",
+                  "fallback": "https://novel8662.ugurl.cn/N3XUB",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_73619091a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "73619090a"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "configKey": "hg_sem_google_conf",
+          "enterFrom": "google_sem",
+          "version": 2,
+          "default": {
+            "name": "Google兜底",
+            "ios": {
+              "link": "https://novel8662.ugurl.cn/F2fHD",
+              "fallback": "https://novel8662.ugurl.cn/F2fHD",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_73514056a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "73514061a"
+              }
+            },
+            "android": {
+              "link": "https://novel8662.ugurl.cn/F2fHD",
+              "fallback": "https://novel8662.ugurl.cn/F2fHD",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_73514060a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "73514057a"
+              }
+            }
+          },
+          "rules": []
+        },
+        {
+          "configKey": "hg_sem_bing_conf",
+          "enterFrom": "bing_sem",
+          "version": 2,
+          "default": {
+            "name": "Bing兜底",
+            "ios": {
+              "link": "https://novel8662.ugurl.cn/NEFJn",
+              "fallback": "https://novel8662.ugurl.cn/NEFJn",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_74639668a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "74639667a"
+              }
+            },
+            "android": {
+              "link": "https://novel8662.ugurl.cn/FMXby",
+              "fallback": "https://novel8662.ugurl.cn/FMXby",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_74639644a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "74639645a"
+              }
+            },
+            "pc_ios": {
+              "link": "https://novel8662.ugurl.cn/FxALn",
+              "fallback": "https://novel8662.ugurl.cn/FxALn",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_76218853a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "76218852a"
+              }
+            },
+            "pc_and": {
+              "link": "https://novel8662.ugurl.cn/FxALn",
+              "fallback": "https://novel8662.ugurl.cn/FxALn",
+              "scheme_params": {
+                "gd_label": "click_schema_lhft_76218855a",
+                "needlaunchlog": 1,
+                "ug_attr_lxft": "76218854a"
+              }
+            }
+          },
+          "rules": [
+            {
+              "id": "bing_generic",
+              "name": "通用词",
+              "targets": {
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/No8XA",
+                  "fallback": "https://novel8662.ugurl.cn/No8XA",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_74639668a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75191466a"
+                  }
+                },
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/Fjgdb",
+                  "fallback": "https://novel8662.ugurl.cn/Fjgdb",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_74639644a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75193696a"
+                  }
+                },
+                "pc_ios": {
+                  "link": "https://novel8662.ugurl.cn/FrhQ3",
+                  "fallback": "https://novel8662.ugurl.cn/FrhQ3",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76221292a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76221293a"
+                  }
+                },
+                "pc_and": {
+                  "link": "https://novel8662.ugurl.cn/FrhQ3",
+                  "fallback": "https://novel8662.ugurl.cn/FrhQ3",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76221294a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76221295a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "bing_competitor",
+              "name": "竞品词",
+              "targets": {
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/N7Q2p",
+                  "fallback": "https://novel8662.ugurl.cn/N7Q2p",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_74639668a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75194521a"
+                  }
+                },
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/FennC",
+                  "fallback": "https://novel8662.ugurl.cn/FennC",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_74639644a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75197586a"
+                  }
+                },
+                "pc_ios": {
+                  "link": "https://novel8662.ugurl.cn/FrRfm",
+                  "fallback": "https://novel8662.ugurl.cn/FrRfm",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76220019a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76220018a"
+                  }
+                },
+                "pc_and": {
+                  "link": "https://novel8662.ugurl.cn/FrRfm",
+                  "fallback": "https://novel8662.ugurl.cn/FrRfm",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76220020a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76220021a"
+                  }
+                }
+              }
+            },
+            {
+              "id": "bing_short_drama",
+              "name": "短剧词",
+              "targets": {
+                "ios": {
+                  "link": "https://novel8662.ugurl.cn/NtxWs",
+                  "fallback": "https://novel8662.ugurl.cn/NtxWs",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_74639668a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75198209a"
+                  }
+                },
+                "android": {
+                  "link": "https://novel8662.ugurl.cn/F1Lc5",
+                  "fallback": "https://novel8662.ugurl.cn/F1Lc5",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_74639644a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "75198724a"
+                  }
+                },
+                "pc_ios": {
+                  "link": "https://novel8662.ugurl.cn/FSd87",
+                  "fallback": "https://novel8662.ugurl.cn/FSd87",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76221147a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76221146a"
+                  }
+                },
+                "pc_and": {
+                  "link": "https://novel8662.ugurl.cn/FSd87",
+                  "fallback": "https://novel8662.ugurl.cn/FSd87",
+                  "scheme_params": {
+                    "gd_label": "click_schema_lhft_76221149a",
+                    "needlaunchlog": 1,
+                    "ug_attr_lxft": "76221148a"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "libraConfig": {
+      "m_dialog_type": {
+        "val": "normal"
+      },
+      "m_dialog_showtime": {
+        "val": "after"
+      },
+      "is_need_report_fuzzy_guanwang": {}
+    },
+    "isSuccess": true
+  },
+  "query": "逆袭",
+  "isSuccess": true,
+  "searchList": [
+    {
+      "doc_type": 23,
+      "name": "逆袭之实习教出金牌班，家长要换班主任",
+      "keyword": "7689391720735181848",
+      "video_data": {
+        "series_id": "7689391720735181848",
+        "episode_cnt": 111,
+        "create_time": "1790326023",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "逆袭之实习教出金牌班，家长要换班主任",
+        "series_intro": "实习老师陆谦觉醒最强教师系统，接手全校垫底班。他点醒一众问题学生，仅半年就将班级打造成全市金牌班，成绩大幅跃升。庆功宴风光之际，家长却抢功联名逼他离职，想换名师接手。陆谦直接收回系统卡牌，金牌班成绩断崖式下跌，课堂失控。他转而接管全是刺头的25班，重铸系统卡牌，把一众顽劣学生培养成尖子生，班级冲进全市前列。原班家长懊悔求他回归，陆谦只道晚了。",
+        "series_cover": "https://p3-novel.byteimg.com/novel-pic/0fa13033c4f2d43f73d5f891301a9834~tplv-shrink:640:0.image",
+        "episode_right_text": "全111集",
+        "vid_list": [
+          "7689428455435291673",
+          "7689428599497051161",
+          "7689428432576318489"
+        ],
+        "hot_score_data": {
+          "score": 48726960,
+          "text": "4872万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "755",
+            "name": "脑洞"
+          },
+          {
+            "category_id": "19",
+            "name": "系统"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          },
+          {
+            "category_id": "4",
+            "name": "校园"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "27.2万收藏",
+        "like_text": "46.5万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "烟尘映初心",
+      "keyword": "7690130812250885145",
+      "video_data": {
+        "series_id": "7690130812250885145",
+        "episode_cnt": 51,
+        "create_time": "1790498106",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "烟尘映初心",
+        "series_intro": "机修工张振东告别消耗型婚姻，遭黑心经理孙志强偷换配件甩锅后毅然维权。他与挚友创立“振兴机修”，凭精湛手艺与良心服务立足。面对对手恶意抹黑与以次充好的工程陷阱，张振东用过硬技术排险，以如山铁证戳穿骗局，令恶徒身败名裂自食恶果。他不仅洗雪冤屈、讨回公道，更凭实干打拼出一番事业并收获真爱，谱写了劳动者恪守诚信、自强不息的奋斗赞歌",
+        "series_cover": "https://p6-novel.byteimg.com/novel-pic/3feee6b788c7f49b9f9b3f3cac479114~tplv-shrink:640:0.image",
+        "episode_right_text": "全51集",
+        "vid_list": [
+          "7690160438922710078",
+          "7690160408690166846",
+          "7690160391292210238"
+        ],
+        "hot_score_data": {
+          "score": 46222504,
+          "text": "4622万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "316",
+            "name": "剧情"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "5.3万收藏",
+        "like_text": "7.2万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "逆袭：我觉醒了返利系统第一季2",
+      "keyword": "7693560241761307710",
+      "video_data": {
+        "series_id": "7693560241761307710",
+        "episode_cnt": 147,
+        "create_time": "1791296583",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "逆袭：我觉醒了返利系统第一季2",
+        "series_intro": "平凡女大学生苏晴，长期活在原生家庭重男轻女的压力下，还在感情里一味付出讨好他人。偶然绑定特殊系统，优质男性对她进行馈赠或消费，她就能获得对应收益，积累好感还可得到基因改造药剂，逐步提升外在条件。幡然醒悟的苏晴放下恋爱脑，专注自我成长。她应对人际风波，挣脱家庭束缚，理智面对几段不同的缘分，拒绝被世俗定义，一步步摆脱自卑，活出独立耀眼的全新人生。",
+        "series_cover": "https://p3-novel.byteimg.com/novel-pic/556061e28967e3ee36ea3738cd1786d0~tplv-shrink:640:0.image",
+        "episode_right_text": "全147集",
+        "vid_list": [
+          "7693595149355453464",
+          "7693595028320422936",
+          "7693595172109552664"
+        ],
+        "hot_score_data": {
+          "score": 45154113,
+          "text": "4515万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "755",
+            "name": "脑洞"
+          },
+          {
+            "category_id": "19",
+            "name": "系统"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "3.8万收藏",
+        "like_text": "6.3万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "逆袭：我觉醒了返利系统第一季",
+      "keyword": "7689377801345977369",
+      "video_data": {
+        "series_id": "7689377801345977369",
+        "episode_cnt": 129,
+        "create_time": "1790322782",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "逆袭：我觉醒了返利系统第一季",
+        "series_intro": "苏晴意外获得消费返现系统，每收下他人符合条件的赠与、消费都能获得返现，人生迎来转机。遭遇前男友林风纠缠、被陈倩偷拍造谣网暴后，她收集证据勇敢维权，不再一味退让。周旋于邻居萧澈、性格温柔的沈修尘之间，认清感情边界，理智对待亲密关系。面对原生家庭的索取与催婚压力，她守住自我底线，努力积攒经济底气。在经历测试误会、感情结束之后，苏晴不断成长，学会拒绝越界的追求者，清醒独立地掌控属于自己的人生。",
+        "series_cover": "https://p3-novel.byteimg.com/novel-pic/3955e145c1e5686067e155ce7b38cdef~tplv-shrink:640:0.image",
+        "episode_right_text": "全129集",
+        "vid_list": [
+          "7689398341628611646",
+          "7689398354643536958",
+          "7689398292928547902"
+        ],
+        "hot_score_data": {
+          "score": 46144912,
+          "text": "4614万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "755",
+            "name": "脑洞"
+          },
+          {
+            "category_id": "19",
+            "name": "系统"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "34.6万收藏",
+        "like_text": "70.3万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "千万分红被吞，我反手就赚两个亿",
+      "keyword": "7694217416988953662",
+      "video_data": {
+        "series_id": "7694217416988953662",
+        "episode_cnt": 96,
+        "create_time": "1791449593",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "千万分红被吞，我反手就赚两个亿",
+        "series_intro": "年终分红时，决策组的五个人决定将沈牧移出决策群并排除分红。沈牧辞职，恒达的贺明远表示只认沈牧。三天后，原公司项目终止、股价跌停。沈牧创办新公司并与恒达签约；原公司老板谢鸿图免去五人组中林绍峰职务，苏晨光辞职，决策组内部瓦解。其后恒达的裴子昂借三期招标发难，贺明远女儿贺思宁作为公司审计查出裴子昂涉及违规造假，裴子昂被处理。沈牧拿下三期，新公司站稳。",
+        "series_cover": "https://p3-novel.byteimg.com/novel-pic/4f39e6617570c1f4effbb493b0e0fc60~tplv-shrink:640:0.image",
+        "episode_right_text": "全96集",
+        "vid_list": [
+          "7694258401592757273",
+          "7694258329626889241",
+          "7694258469653711897"
+        ],
+        "hot_score_data": {
+          "score": 39387517,
+          "text": "3938万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "316",
+            "name": "剧情"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "2957收藏",
+        "like_text": "1.5万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "坠崖捡个参娃娃",
+      "keyword": "7689863296106646590",
+      "video_data": {
+        "series_id": "7689863296106646590",
+        "episode_cnt": 74,
+        "create_time": "1790435820",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "坠崖捡个参娃娃",
+        "series_intro": "青年陆青山遭二叔陆大勇谋害坠崖，机缘救下参灵芽芽，获得感知山中万物的能力。返乡后他夺回自家山场，救下被养父母逼婚的苏半夏。面对反派的算计与刁难，陆青山依靠芽芽的特殊能力发掘山中资源，带领乡亲发展生态农庄，惩办贪婪作恶之人。历经凶险磨难，众人坚守善良本心，守护山林与家园，收获温暖圆满的生活。",
+        "series_cover": "https://p6-novel.byteimg.com/novel-pic/52f4ec134b28b10c7d703d82cc3d9df8~tplv-shrink:640:0.image",
+        "episode_right_text": "全74集",
+        "vid_list": [
+          "7689903030619081790",
+          "7689903116275174462",
+          "7689903075380694078"
+        ],
+        "hot_score_data": {
+          "score": 46423093,
+          "text": "4642万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "23",
+            "name": "种田"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "11",
+            "name": "乡村"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "7.9万收藏",
+        "like_text": "17.3万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "我李长生重回八零，赶山狩猎养妻女",
+      "keyword": "7686008653844859966",
+      "video_data": {
+        "series_id": "7686008653844859966",
+        "episode_cnt": 168,
+        "create_time": "1789538342",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "我李长生重回八零，赶山狩猎养妻女",
+        "series_intro": "李长生重生回到八十年，醒来便撞上妻女被逼绝境。前世的悔恨让他这一世发誓护妻疼女、绝不再窝囊。靠着多年赶山打猎的本事，他猎野猪、寻山参、斗偷猎者，一步步撑起这个家。可随着老熊岭深处的古墓、神秘宝藏接连浮出水面，境外佣兵、憋宝人也纷纷盯上靠山屯。为了家人和这片山，李长生只能提枪进山，杀出一条活路。",
+        "series_cover": "https://p3-novel.byteimg.com/novel-pic/54118617735f6d19d12f9e93d1f9b9ee~tplv-shrink:640:0.image",
+        "episode_right_text": "全168集",
+        "vid_list": [
+          "7686010748832582681",
+          "7686010714443484185",
+          "7686010735343717401"
+        ],
+        "hot_score_data": {
+          "score": 57526340,
+          "text": "5752万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "23",
+            "name": "种田"
+          },
+          {
+            "category_id": "36",
+            "name": "重生"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "79",
+            "name": "年代"
+          },
+          {
+            "category_id": "11",
+            "name": "乡村"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "104.7万收藏",
+        "like_text": "203.6万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "股东名单没我名字，我果断抛售71%股权",
+      "keyword": "7684184173661129752",
+      "video_data": {
+        "series_id": "7684184173661129752",
+        "episode_cnt": 58,
+        "create_time": "1789113547",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "股东名单没我名字，我果断抛售71%股权",
+        "series_intro": "徐陈用八年写下瀚海星辰的每一行核心代码，把公司从两千万做到二十亿。母亲病重，他将一切托付给合伙人和妻子。三个月后归来，股东名册上十二个名字，没有一个是他的。陈凯持股三十五，妻子江瑶十五，连她还在读书的弟弟都占了五。他站在会议室门口，手里的文件袋很轻，里面装着北斗科技的全部专利，和一个谁也想不到的决定。",
+        "series_cover": "https://p6-novel.byteimg.com/novel-pic/c5fbef35b5a930fadd06eb54c826b4f4~tplv-shrink:640:0.image",
+        "episode_right_text": "全58集",
+        "vid_list": [
+          "7684197441410698264",
+          "7684197515431791640",
+          "7684197487157988376"
+        ],
+        "hot_score_data": {
+          "score": 40719409,
+          "text": "4071万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "29",
+            "name": "总裁"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "3.7万收藏",
+        "like_text": "13.7万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "海风送来小福星",
+      "keyword": "7692757772621859864",
+      "video_data": {
+        "series_id": "7692757772621859864",
+        "episode_cnt": 71,
+        "create_time": "1791109743",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "海风送来小福星",
+        "series_intro": "渔民陈凡分家后分到一条老旧木船，偶然救下拥有听懂海洋生灵声音天赋的孤女朵朵。父女二人扎根海边，依靠朵朵的特殊能力发现潮沟海产资源。面对同行恶意打压，他们坚守渔业底线，拒绝竭泽而渔，联合乡亲修复废弃盐场发展生态养殖。众人对抗资本无序捕捞，守护近海海洋生态，靠勤劳与良知，在海边收获安稳幸福的生活。",
+        "series_cover": "https://p6-novel.byteimg.com/novel-pic/61d9d514e8775a0cbd308ba0413fec14~tplv-shrink:640:0.image",
+        "episode_right_text": "全71集",
+        "vid_list": [
+          "7692763647646370840",
+          "7692763695566294040",
+          "7692763733784808472"
+        ],
+        "hot_score_data": {
+          "score": 45614822,
+          "text": "4561万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "28",
+            "name": "萌宝"
+          },
+          {
+            "category_id": "598",
+            "name": "异能"
+          },
+          {
+            "category_id": "739",
+            "name": "逆袭"
+          },
+          {
+            "category_id": "11",
+            "name": "乡村"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "4.9万收藏",
+        "like_text": "6万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    },
+    {
+      "doc_type": 23,
+      "name": "神医下山：一针定乾坤",
+      "keyword": "7681557181392505880",
+      "video_data": {
+        "series_id": "7681557181392505880",
+        "episode_cnt": 43,
+        "create_time": "1788501902",
+        "series_status": 1,
+        "pay_type": 0,
+        "series_title": "神医下山：一针定乾坤",
+        "series_intro": "隐世医者沈砚奉师命下山历练，恰逢顾家千金身染奇症，名医束手无策。他以针法化解危机，赢得信任。陆家家主病重，医疗集团施压，沈砚坚持医者仁心，查明病因救治患者。面对挑战，他与医者切磋互鉴，守护生命，弘扬传统医道。国际医学交流中，沈砚凭借医术与判断挽救患者，让众人看见医学温度与希望，在成长中懂得责任传承。",
+        "series_cover": "https://p3-novel.byteimg.com/novel-pic/c169680fe3d89422ec95461e4ef9404e~tplv-shrink:640:0.image",
+        "episode_right_text": "全43集",
+        "vid_list": [
+          "7681565672781909017",
+          "7681565665458670617",
+          "7681565680855960601"
+        ],
+        "hot_score_data": {
+          "score": 37581497,
+          "text": "3758万热度"
+        },
+        "category_list": [
+          {
+            "category_id": "755",
+            "name": "脑洞"
+          },
+          {
+            "category_id": "936",
+            "name": "豪门"
+          },
+          {
+            "category_id": "1",
+            "name": "都市"
+          }
+        ],
+        "celebrities": [],
+        "genre": "205",
+        "favorite_text": "2.8万收藏",
+        "like_text": "2.2万点赞"
+      },
+      "user_info": {},
+      "video_list": []
+    }
+  ],
+  "totalCount": "204",
+  "accessibleEpisodeCnt": 3
+}

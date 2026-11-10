@@ -1,0 +1,93 @@
+1.0.0.77 对 1.0.0.76：签名、设备、通用请求专项静态对比
+日期：2026-10-26
+
+结论
+这次没有替换 JAR/SO 签名算法，也没有更新设备池或设备注册/刷新逻辑。
+但新增 GET 批量的调用方式发生了重要变化：显式 signed=False，停止对该
+端点调用本地签名器。旧 POST 批量/单个模型仍保留默认 signed=True。
+这是“选择不签名”，不能表述为“修好了 JAR 的 Helios/Medusa 算法”。
+
+关键证据
+1. hongguo._vm_tab_pass 源行 2093，偏移 154 LOAD_CONST False；偏移158
+   KW_NAMES ('extra_query','signed','max_retries')。请求为：
+   api('GET', _VM_TAB, extra_query=_vm_tab_query(chunk), signed=False, max_retries=2)
+   旧版源行2083未显式传 signed，走默认 True。
+2. hongguo._vm_alive 第一个 lambda 源行2180，偏移60 False，偏移66
+   KW_NAMES ('extra_query','signed','max_retries','timeout')。恢复探测的GET
+   同样改为 signed=False；第二个 POST 批量 lambda 未改，仍默认签名。
+3. api 函数本身完全相同（忽略源码路径与行位置），签名默认 True，模块
+   默认元组偏移1832为 (None,None,3,True,30,12)。_api_once 默认签名也为True。
+4. _api_once 源行510，偏移240读取signed，242为
+   POP_JUMP_FORWARD_IF_FALSE 582。False时跳过244–580整块：
+   _signer_warm、signer_reachable、sign(url,headers,timeout=sign_timeout)
+   以及把签名返回字典合并到headers，随后仍经 http_request 发出请求。
+5. _req_headers 源行494无变化。它复制session_headers，用当前池的UA覆盖，
+   在启用池时删除cookie/x-tt-token；设置content-type；只有body非None才计算
+   x-ss-stub。新GET无body，包内session_headers也没有预置签名头，因此正常
+   默认配置下，此GET不会由该分支附加x-helios/x-medusa等签名。
+6. signed=False 也沿用已有 api 分支：不将GET的RiskControlError或模型空
+   ValueError按signed路径累计risk/empty strike；连接故障的network处理仍存在。
+   这是传参变化触发的既有行为，不是这版重写通用重试算法。
+
+签名资源与调用
+unidbg-sign.jar、libmetasec_ml.so、libc++_shared.so、ms_16777218.bin均字节相同。
+_sign_post_once(源行355)、sign(375)、refresh_session(437)、build_url(482)、
+_req_headers(494)、_api_once(510)、api(547)规范化代码完全相同。
+app._start_signer(源行954)及整个app.pyc也完全相同；仍保留Java启动签名器。
+因此不能说这版整个程序去掉了签名/JAR/Java，仅GET批量及其探测显式不签名。
+
+设备与配置
+config.json只变更base_query.device_id、iid、cdid；api_host、所有其他base_query
+和session_headers相同。aid仍8662，version_name仍7.2.9.32。
+devices.json仍69项，内容和hash相同。devicepool.pyc整个模块规范化代码相同。
+load_pool(源行98)优先读取devices.json，DEVICE_POOL环境变量可控制session模式；
+DevicePool.__init__选择会话设备的方式未变；没有新增平台设备注册接口。
+模块初始化偏移918–960仍 _pool=devicepool.load_pool(CFG['base_query'])。
+build_url(源行482)偏移56–168仍在池存在时以current()['query']覆盖base_query，
+所以不能把config中的3个默认ID变化解释为默认请求设备全部换新。
+gen_device(源行39)仍本地随机数字device_id/iid + uuid4 cdid；load_pool的随机生成
+后备流程也未变。refresh_session仍从签名器/grab读取现成请求会话数据，没有新增注册。
+
+Host与网络
+默认HOST仍取config api_host：api5-normal-sinfonlinec.fqnovel.com。
+API_HOST_B仍api5-normal-sinfonlineb.fqnovel.com（新模块偏移1916–1918）。
+api偏移848–1046仍只在_conn_failure判定连接故障时切备用host。
+nettls.pyc、downloader.pyc、safeguards.pyc整个模块规范化代码相同。
+没有发现这版修改TLS指纹、请求传输、设备刷新或baseUrl作为批量修复。
+
+覆盖与限制
+证据：sign-device-evidence.json，包括实际文件SHA256、完整选定函数旧/新字节码、
+模块规范化等价结果、配置变更键、默认参数和host的模块级指令窗口。
+只做静态marshal/dis解析，未执行模块顶层、未启动签名器、未请求平台。
+这里只能确认作者把GET批量改为不签名；是否在当下平台可用，需要独立线上实测。
+批量调度、下载故障门控变化由主报告另述。
+
+app/sign/unidbg-sign.jar
+  old bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b
+  new bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b
+  byte_equal=True
+
+app/capture/fq_oversea/libmetasec_ml.so
+  old 20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d
+  new 20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d
+  byte_equal=True
+
+app/capture/fq_oversea/libc++_shared.so
+  old e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0
+  new e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0
+  byte_equal=True
+
+app/capture/fq_oversea/ms_16777218.bin
+  old c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c
+  new c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c
+  byte_equal=True
+
+app/devices.json
+  old eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd
+  new eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd
+  byte_equal=True
+
+app/config.json
+  old 28a00926cd46c68762c705755f9fa97ee94b0e054675f2462a4da651ab7c9b48
+  new c062b7c9c32b8c77073f61bde9ebd8a37226377e985a0ab08b88c87972ebddc3
+  byte_equal=False

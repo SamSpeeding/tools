@@ -1,0 +1,129 @@
+{
+  "started": "2026-10-16T18:34:04+08:00",
+  "finished": "2026-10-16T18:37:11+08:00",
+  "wall_seconds": 187,
+  "cases": 48,
+  "remote_requests": 48,
+  "local_signature_stage_calls": 48,
+  "success": 48,
+  "failed_cases": [],
+  "by_kind": {
+    "search": {
+      "calls": 6,
+      "success": 6,
+      "empty_list_cases": []
+    },
+    "rank": {
+      "calls": 15,
+      "success": 15,
+      "empty_list_cases": []
+    },
+    "filters": {
+      "calls": 5,
+      "success": 5,
+      "empty_list_cases": []
+    },
+    "category": {
+      "calls": 8,
+      "success": 8,
+      "empty_list_cases": []
+    },
+    "latest": {
+      "calls": 6,
+      "success": 6,
+      "empty_list_cases": []
+    },
+    "detail": {
+      "calls": 3,
+      "success": 3,
+      "empty_list_cases": []
+    },
+    "model": {
+      "calls": 2,
+      "success": 2,
+      "empty_list_cases": []
+    },
+    "category-filtered": {
+      "calls": 3,
+      "success": 3,
+      "empty_list_cases": []
+    }
+  },
+  "by_path": {
+    "/reading/bookapi/search/tab/v": {
+      "calls": 6,
+      "success": 6
+    },
+    "/reading/bookapi/bookmall/cell/change/v": {
+      "calls": 15,
+      "success": 15
+    },
+    "/reading/distribution/category/landpage/v": {
+      "calls": 22,
+      "success": 22
+    },
+    "/novel/player/multi_video_detail/v1/": {
+      "calls": 3,
+      "success": 3
+    },
+    "/novel/player/video_model/v1/": {
+      "calls": 2,
+      "success": 2
+    }
+  },
+  "pagination": [
+    {
+      "id": "coverage-search-重生-p2",
+      "prior_count": 15,
+      "new_series_ids": 7,
+      "cursor_advanced": true
+    },
+    {
+      "id": "coverage-search-总裁-p2",
+      "prior_count": 4,
+      "new_series_ids": 7,
+      "cursor_advanced": true
+    },
+    {
+      "id": "coverage-rank-all-hot-p2",
+      "prior_count": 10,
+      "new_series_ids": 10,
+      "cursor_advanced": true
+    },
+    {
+      "id": "coverage-category-short_play-p2",
+      "prior_count": 15,
+      "new_series_ids": 15,
+      "cursor_advanced": true
+    },
+    {
+      "id": "coverage-latest-short_play-p2",
+      "prior_count": 15,
+      "new_series_ids": 15,
+      "cursor_advanced": true
+    },
+    {
+      "id": "coverage-category-comic_series-p2",
+      "prior_count": 18,
+      "new_series_ids": 18,
+      "cursor_advanced": true
+    },
+    {
+      "id": "coverage-category-ai_series-p2",
+      "prior_count": 18,
+      "new_series_ids": 18,
+      "cursor_advanced": true
+    }
+  ],
+  "same_fixed_identity": true,
+  "hosts": [
+    "api5-normal-sinfonlinec.fqnovel.com"
+  ],
+  "protected_files": 354,
+  "changed_protected_files": [],
+  "private_directory_mode": "0o700",
+  "raw_file_count": 48,
+  "raw_file_modes": [
+    "0o600"
+  ]
+}

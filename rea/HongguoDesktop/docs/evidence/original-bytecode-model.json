@@ -1,0 +1,512 @@
+{
+  "recorded_at_utc": "2026-10-13T08:54:09.872075+00:00",
+  "mode": "controlled replay of original code objects with live official API; not full original Windows app",
+  "environment": {
+    "python": "3.11.17",
+    "platform": "macOS-26.7.1-arm64-arm-64bit",
+    "curl_cffi": "0.16.3",
+    "impersonate": "chrome"
+  },
+  "artifacts": [
+    {
+      "file": "/Users/tt/Desktop/rea/analysis/extracted/app/hongguo.pyc",
+      "sha256": "42d0c2bcfffc346afe5b3b75d259261b787daf8f144298ceaa1bfa4897ad1312"
+    },
+    {
+      "file": "/Users/tt/Desktop/rea/analysis/extracted/app/safeguards.pyc",
+      "sha256": "2fe27f2c9a95acb871c05fe0dd8b20844342ea7990853b9cad755a8ed28e3a9c"
+    },
+    {
+      "file": "/Users/tt/Desktop/rea/analysis/extracted/app/devicepool.pyc",
+      "sha256": "85299d65916515c032b8e5c4b7920e4f52149099b23d74042aaa878a43c245ba"
+    }
+  ],
+  "config_sha256": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+  "devices_sha256": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd",
+  "device_count": 69,
+  "network_scope": {
+    "official_host": "api5-normal-sinfonlinec.fqnovel.com",
+    "allowed_paths": [
+      "/novel/player/multi_video_model/v1/",
+      "/novel/player/multi_video_detail/v1/"
+    ],
+    "redirects": "disabled by probe guard",
+    "external_request_limit": 4
+  },
+  "substitutes_and_boundaries": [
+    "No original module top-level execution, Windows GUI, licensing/payment or updater.",
+    "Original DevicePool methods; deterministic _pin set to selected existing device indices instead of random startup choice.",
+    "Original sign(), _sign_post_once(), _sign_auth_headers(), _sign_session(); one local bundled JAR server. Semaphore/health/statistics use single-thread probe state.",
+    "Original _ext_session()/http_request(); preseeded curl_cffi Session subclass adds host/path limits, disables redirects, records response metadata.",
+    "Original safeguards.check_response; original cache functions disabled (force=True) with no Redis; throttle replaced by fixed 0.25s delay for serialized requests.",
+    "Background retester/source-status/UI priority hooks only record calls; no background network.",
+    "refresh_session replaced by a raising boundary hook to prohibit config mutation; occurrence is counted. rotate_device remains original.",
+    "TLS/curl/Python/OS runtime differs from packaged Windows environment. Existing device pool tested only at indices 0 and 34."
+  ],
+  "cases": [
+    {
+      "device_index": 0,
+      "kind": "detail_control",
+      "requests": [
+        {
+          "method": "POST",
+          "base_url": "https://api5-normal-sinfonlinec.fqnovel.com",
+          "path": "/novel/player/multi_video_detail/v1/",
+          "query_keys": [
+            "_rticket",
+            "ac",
+            "aid",
+            "app_name",
+            "cdid",
+            "channel",
+            "compliance_status",
+            "device_brand",
+            "device_id",
+            "device_platform",
+            "device_type",
+            "dpi",
+            "dragon_device_type",
+            "host_abi",
+            "iid",
+            "is_android_pad_screen",
+            "language",
+            "manifest_version_code",
+            "need_personal_recommend",
+            "os",
+            "os_api",
+            "os_version",
+            "player_so_load",
+            "pv_player",
+            "resolution",
+            "rom_version",
+            "ssmix",
+            "update_version_code",
+            "version_code",
+            "version_name"
+          ],
+          "application_identity": {
+            "aid": [
+              "8662"
+            ],
+            "app_name": [
+              "novelread"
+            ],
+            "version_code": [
+              "72932"
+            ],
+            "version_name": [
+              "7.2.9.32"
+            ]
+          },
+          "device_identity_sha256": "738acd14cf556c722fd8fd898173a85b0f714c3c64662782c08e651723ad1f19",
+          "body_bytes": 438,
+          "body_sha256": "6a0c915036c63ddc799173745628a0e62d2407ff5f1760d1123345ba559158d6",
+          "stub_matches_body": true,
+          "signature_lengths": {
+            "x-argus": 240,
+            "x-gorgon": 52,
+            "x-khronos": 10,
+            "x-ladon": 48
+          },
+          "has_cookie": false,
+          "has_x_tt_token": false,
+          "http_status": 200,
+          "seconds": 0.378,
+          "response_sha256": "994b7393b6c4eb7fe1c8db1eda2acf97a48e793239701ba1d2c9d24beb743856",
+          "response_headers": {
+            "date": "Tue, 13 Oct 2026 08:54:12 GMT",
+            "server": "volc-dcdn",
+            "content-type": "application/json",
+            "x-tt-logid": "2026101316541147DCEDB36C50520DFAE7"
+          },
+          "response_summary": {
+            "code": 0,
+            "episode_count": 74,
+            "returned_episodes": 74
+          }
+        }
+      ],
+      "returned_data_keys": 1,
+      "exception": null,
+      "original_function_calls": {
+        "hongguo._episodes_body": 1,
+        "hongguo.api": 1,
+        "hongguo._api_once": 1,
+        "hongguo.build_url": 1,
+        "devicepool.DevicePool.__len__": 2,
+        "devicepool.DevicePool.current": 2,
+        "hongguo._req_headers": 1,
+        "hongguo._signer_warm": 1,
+        "hongguo.sign": 1,
+        "hongguo._sign_post_once": 1,
+        "hongguo._sign_session": 1,
+        "hongguo._sign_auth_headers": 1,
+        "hongguo.http_request": 1,
+        "hongguo._ext_session": 1,
+        "safeguards.check_response": 1
+      }
+    },
+    {
+      "device_index": 0,
+      "kind": "video_model",
+      "requests": [
+        {
+          "method": "POST",
+          "base_url": "https://api5-normal-sinfonlinec.fqnovel.com",
+          "path": "/novel/player/multi_video_model/v1/",
+          "query_keys": [
+            "_rticket",
+            "ac",
+            "aid",
+            "app_name",
+            "cdid",
+            "channel",
+            "compliance_status",
+            "device_brand",
+            "device_id",
+            "device_platform",
+            "device_type",
+            "dpi",
+            "dragon_device_type",
+            "host_abi",
+            "iid",
+            "is_android_pad_screen",
+            "language",
+            "manifest_version_code",
+            "need_personal_recommend",
+            "os",
+            "os_api",
+            "os_version",
+            "player_so_load",
+            "pv_player",
+            "resolution",
+            "rom_version",
+            "ssmix",
+            "update_version_code",
+            "version_code",
+            "version_name"
+          ],
+          "application_identity": {
+            "aid": [
+              "8662"
+            ],
+            "app_name": [
+              "novelread"
+            ],
+            "version_code": [
+              "72932"
+            ],
+            "version_name": [
+              "7.2.9.32"
+            ]
+          },
+          "device_identity_sha256": "738acd14cf556c722fd8fd898173a85b0f714c3c64662782c08e651723ad1f19",
+          "body_bytes": 290,
+          "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+          "stub_matches_body": true,
+          "signature_lengths": {
+            "x-argus": 240,
+            "x-gorgon": 52,
+            "x-khronos": 10,
+            "x-ladon": 48
+          },
+          "has_cookie": false,
+          "has_x_tt_token": false,
+          "http_status": 200,
+          "seconds": 0.075,
+          "response_sha256": "99ccbc0f6e704e5c39e0568f4b570a03440aefff9bae34715d7ec2ecc4f12b7b",
+          "response_headers": {
+            "date": "Tue, 13 Oct 2026 08:54:12 GMT",
+            "server": "volc-dcdn",
+            "content-type": "application/json",
+            "x-tt-logid": "20261013165412F921C00F2B84420CB18F"
+          },
+          "response": {
+            "Code": 110001,
+            "Message": "未知异常",
+            "BaseResp": {
+              "StatusMessage": "unknown error",
+              "StatusCode": 110001
+            }
+          }
+        }
+      ],
+      "returned_track_map": {},
+      "usable_tracks": 0,
+      "exception": null,
+      "original_function_calls": {
+        "hongguo.api": 1,
+        "hongguo._api_once": 1,
+        "hongguo.build_url": 1,
+        "devicepool.DevicePool.__len__": 2,
+        "devicepool.DevicePool.current": 2,
+        "hongguo._req_headers": 1,
+        "hongguo._signer_warm": 1,
+        "hongguo.sign": 1,
+        "hongguo._sign_post_once": 1,
+        "hongguo._sign_session": 1,
+        "hongguo._sign_auth_headers": 1,
+        "hongguo.http_request": 1,
+        "hongguo._ext_session": 1,
+        "safeguards.check_response": 1,
+        "hongguo.get_video_tracks": 1
+      }
+    },
+    {
+      "device_index": 34,
+      "kind": "video_model",
+      "requests": [
+        {
+          "method": "POST",
+          "base_url": "https://api5-normal-sinfonlinec.fqnovel.com",
+          "path": "/novel/player/multi_video_model/v1/",
+          "query_keys": [
+            "_rticket",
+            "ac",
+            "aid",
+            "app_name",
+            "cdid",
+            "channel",
+            "compliance_status",
+            "device_brand",
+            "device_id",
+            "device_platform",
+            "device_type",
+            "dpi",
+            "dragon_device_type",
+            "host_abi",
+            "iid",
+            "is_android_pad_screen",
+            "language",
+            "manifest_version_code",
+            "need_personal_recommend",
+            "os",
+            "os_api",
+            "os_version",
+            "player_so_load",
+            "pv_player",
+            "resolution",
+            "rom_version",
+            "ssmix",
+            "update_version_code",
+            "version_code",
+            "version_name"
+          ],
+          "application_identity": {
+            "aid": [
+              "8662"
+            ],
+            "app_name": [
+              "novelread"
+            ],
+            "version_code": [
+              "72932"
+            ],
+            "version_name": [
+              "7.2.9.32"
+            ]
+          },
+          "device_identity_sha256": "0b197dba3cd4d549ba96bd1c436060f57ee3d2882ed528a1dc22d2c139f6c5b4",
+          "body_bytes": 290,
+          "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+          "stub_matches_body": true,
+          "signature_lengths": {
+            "x-argus": 240,
+            "x-gorgon": 52,
+            "x-khronos": 10,
+            "x-ladon": 48
+          },
+          "has_cookie": false,
+          "has_x_tt_token": false,
+          "http_status": 200,
+          "seconds": 0.093,
+          "response_sha256": "99ccbc0f6e704e5c39e0568f4b570a03440aefff9bae34715d7ec2ecc4f12b7b",
+          "response_headers": {
+            "date": "Tue, 13 Oct 2026 08:54:13 GMT",
+            "server": "volc-dcdn",
+            "content-type": "application/json",
+            "x-tt-logid": "20261013165413F29153E1C0A4520B83F4"
+          },
+          "response": {
+            "Code": 110001,
+            "Message": "未知异常",
+            "BaseResp": {
+              "StatusMessage": "unknown error",
+              "StatusCode": 110001
+            }
+          }
+        }
+      ],
+      "returned_track_map": {},
+      "usable_tracks": 0,
+      "exception": null,
+      "original_function_calls": {
+        "hongguo.api": 1,
+        "hongguo._api_once": 1,
+        "hongguo.build_url": 1,
+        "devicepool.DevicePool.__len__": 2,
+        "devicepool.DevicePool.current": 2,
+        "hongguo._req_headers": 1,
+        "hongguo._signer_warm": 1,
+        "hongguo.sign": 1,
+        "hongguo._sign_post_once": 1,
+        "hongguo._sign_session": 1,
+        "hongguo._sign_auth_headers": 1,
+        "hongguo.http_request": 1,
+        "hongguo._ext_session": 1,
+        "safeguards.check_response": 1,
+        "hongguo.get_video_tracks": 1
+      }
+    }
+  ],
+  "function_coverage": [
+    {
+      "function": "safeguards.check_response",
+      "original_line": 128,
+      "code_sha256": "9d0707acd2520bdd6f4d8402572eb7d74eaa478c1213489efd4972ecb4b39348",
+      "call_count": 3
+    },
+    {
+      "function": "devicepool.DevicePool.__init__",
+      "original_line": 61,
+      "code_sha256": "8c44b16e12042e0d0246aa5dc5881609453459c4699456332233f3b49b701851",
+      "call_count": 0
+    },
+    {
+      "function": "devicepool.DevicePool._advance",
+      "original_line": 71,
+      "code_sha256": "00fee43f3be40aa7deceb9625fcffd925709a332ef9b7538eade1d0de3cf74f4",
+      "call_count": 0
+    },
+    {
+      "function": "devicepool.DevicePool.current",
+      "original_line": 77,
+      "code_sha256": "2931e3997fe8c3e649c41d8af50d6814a10a29d6733fdb293f1f099e57e3932e",
+      "call_count": 6
+    },
+    {
+      "function": "devicepool.DevicePool.rotate",
+      "original_line": 86,
+      "code_sha256": "26aa7d4ef340581f386c8d99e9583e98823cf908fffd99f54575e12895dab773",
+      "call_count": 0
+    },
+    {
+      "function": "devicepool.DevicePool.__len__",
+      "original_line": 94,
+      "code_sha256": "e1e78e969cd1b13fb191a7054dbbc57f68e78eda6d15c17221d640bbfe9a454d",
+      "call_count": 6
+    },
+    {
+      "function": "hongguo.build_url",
+      "original_line": 482,
+      "code_sha256": "e9e5e3bb004863921acb68785cb5fc5579be864e1906f2e39213c3435433ed00",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._req_headers",
+      "original_line": 494,
+      "code_sha256": "2f8a21433ff17e783a64d066a55af09a55087eee9be5c6120bbbeddfc075138a",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._api_once",
+      "original_line": 510,
+      "code_sha256": "b41b4b523ba511325cb61043c18ebafd37fefae0e8b986388cd7eb447f96eb08",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo.api",
+      "original_line": 543,
+      "code_sha256": "05b8d34b776118edbe6d824dc4d36c29e3f670dbd9665d07179f74f584e0e297",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo.get_video_tracks",
+      "original_line": 2003,
+      "code_sha256": "964e10b34d8fa153b02ea86d4a4b616fbb515e542af3a4be0ff97d133e296812",
+      "call_count": 2
+    },
+    {
+      "function": "hongguo.rotate_device",
+      "original_line": 98,
+      "code_sha256": "b32a83378df499626752c6e03571a4c88168901efe3fb3869d7dc3f8debb2fdd",
+      "call_count": 0
+    },
+    {
+      "function": "hongguo.sign",
+      "original_line": 375,
+      "code_sha256": "d600d1d15dde4fa2266b1df05e4d0d17af115421de045bcb5c72e20cda52dbe5",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._sign_post_once",
+      "original_line": 355,
+      "code_sha256": "a7ab7a1efd05d27b117b71415a3dfc54a5fa9b7aefc82c48d9701e02f3fb0406",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._sign_auth_headers",
+      "original_line": 140,
+      "code_sha256": "f83d7a66cd5cdcaccd0c75282796f55797501feb3fffb24f6913221670224850",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._sign_session",
+      "original_line": 329,
+      "code_sha256": "4d3b272beca63a25a06bb06fce26d16fc1e46ee9f85fa65623d3d98fcdd84578",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._reset_sign_session",
+      "original_line": 340,
+      "code_sha256": "a865a6eee979ff598f1057f5aa54c7b4fab0dfd14b7af123bf1bd70eac3ff577",
+      "call_count": 0
+    },
+    {
+      "function": "hongguo._signer_warm",
+      "original_line": 718,
+      "code_sha256": "accc4a93737280bf66ea128a5a3ac9fd0d71bed6c876256cd6ce09ceb0ed1c59",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._ext_session",
+      "original_line": 62,
+      "code_sha256": "72c42ee321b60b4406a6a8498ae97027fff76d43a5754e66ce15fcf068cf44d8",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo.http_request",
+      "original_line": 73,
+      "code_sha256": "c96d931df811cf0fcaefc105ab0ff2ca0f77271ab10315c36939ac5344d94580",
+      "call_count": 3
+    },
+    {
+      "function": "hongguo._episodes_body",
+      "original_line": 1053,
+      "code_sha256": "272c7119da27269ce72aa1a0963e937f85b2acbadda8641a017e0226dcf0f2dc",
+      "call_count": 1
+    }
+  ],
+  "hook_calls": {
+    "ensure_retester": 3,
+    "signer_reachable": 1,
+    "local_sign_request": 3,
+    "external_request": 3,
+    "source_good": 3
+  },
+  "refresh_called": false,
+  "rotate_called": false,
+  "verdict": {
+    "detail_control_succeeded": true,
+    "usable_model_cases": 0,
+    "tested_model_cases": 2,
+    "not_proven": [
+      "all original versions/devices/networks fail",
+      "exact Windows executable runtime result",
+      "server outage",
+      "device registration is root cause"
+    ]
+  },
+  "config_matches_packaged_original": true,
+  "devices_match_packaged_original": true
+}

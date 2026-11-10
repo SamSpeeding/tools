@@ -1,0 +1,79 @@
+{
+  "endpoint": "https://i.snssdk.com/service/2/device_register/",
+  "certificate_verification": true,
+  "scope": "payload candidates, not a verified aid=8662 registration protocol",
+  "unchanged_configuration": true,
+  "attempts": [
+    {
+      "name": "reference_package_minimal",
+      "package": "com.dragon.read",
+      "declared_aid": null,
+      "body_sha256": "05bd8a55b7225185828784f606f7312b5f6ad710131122881e7e43f92b42ec1d",
+      "http_status": 200,
+      "response_bytes": 287,
+      "content_type": "application/json",
+      "log_id": "2026101316514544CF3CD72F86104D9B6D",
+      "response_keys": [
+        "device_id",
+        "device_id_str",
+        "device_token",
+        "install_id",
+        "install_id_str",
+        "new_user",
+        "server_time"
+      ],
+      "error_fields": {},
+      "device_id_nonzero": true,
+      "install_id_nonzero": true,
+      "paired_identity_received": true,
+      "seconds": 0.55
+    },
+    {
+      "name": "target_package_minimal",
+      "package": "com.phoenix.read.oversea.gp",
+      "declared_aid": null,
+      "body_sha256": "a850b0124d91dcf0861160b5d3a8e6d986c86fa62ee23ce44c3d106d437af5dd",
+      "http_status": 200,
+      "response_bytes": 109,
+      "content_type": "application/json",
+      "log_id": "2026101316514535E5B19B0ABBD935B68D",
+      "response_keys": [
+        "device_id",
+        "device_id_str",
+        "install_id",
+        "install_id_str",
+        "new_user",
+        "server_time"
+      ],
+      "error_fields": {},
+      "device_id_nonzero": false,
+      "install_id_nonzero": false,
+      "paired_identity_received": false,
+      "seconds": 0.17
+    },
+    {
+      "name": "target_app_metadata_candidate",
+      "package": "com.phoenix.read.oversea.gp",
+      "declared_aid": 8662,
+      "body_sha256": "2886d164775e6c7a1145861550abda94ec9af52d3fbcb8cff60aa1ab4e044543",
+      "http_status": 200,
+      "response_bytes": 312,
+      "content_type": "application/json",
+      "log_id": "20261013165145FB69BEBFEE07DD77E320",
+      "response_keys": [
+        "device_id",
+        "device_id_str",
+        "device_token",
+        "install_id",
+        "install_id_str",
+        "new_user",
+        "server_time"
+      ],
+      "error_fields": {},
+      "device_id_nonzero": true,
+      "install_id_nonzero": true,
+      "paired_identity_received": true,
+      "seconds": 0.42
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "date": "2026-10-14",
+  "scope": "Read-only static inspection; no target JAR execution, no network, no full SO analysis. Fresh javap does not initialize target classes. Only this JSON and jar-context.md written.",
+  "assets": {
+    "jar": {
+      "path": "/Users/tt/Desktop/rea/HongguoDesktop/vendor/sign/unidbg-sign.jar",
+      "sha256": "bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b",
+      "size": 32404581
+    },
+    "fq_javap": {
+      "path": "/Users/tt/Desktop/rea/analysis/evidence/FqTrace.javap.txt",
+      "sha256": "69033f2aaf06f5379c1cd754294552347a086d63e78d3d9ab61737bd03c91e3b",
+      "size": 70507
+    },
+    "metasec_javap": {
+      "path": "/Users/tt/Desktop/rea/analysis/evidence/MetasecSign.javap.txt",
+      "sha256": "ed2f2654952df21236150e6b72d35dd9c2b57b039c3b1e39f51702095b5dd9aa",
+      "size": 65167
+    },
+    "launcher": {
+      "path": "/Users/tt/Desktop/rea/HongguoDesktop/backend/hongguo_signer.py",
+      "sha256": "33146c20cd505e36760f4ee85e123f1821be632963b0782a4d3da25e94e5b8b2",
+      "size": 4122
+    },
+    "api": {
+      "path": "/Users/tt/Desktop/rea/HongguoDesktop/backend/hongguo_api.py",
+      "sha256": "9ed6d43376c363f2d3fd5b2614e5452e2e43b07d690cbedb86110bc6853384fa",
+      "size": 23734
+    },
+    "python_script": {
+      "path": "/Users/tt/Downloads/红果短剧.py",
+      "sha256": "bea893bea56a24cee9eadc4c004bf9637b6c2129d08b22c9500c012431edd6f1",
+      "size": 219868
+    },
+    "libmetasec_ml.so": {
+      "path": "/Users/tt/Desktop/rea/HongguoDesktop/vendor/capture/fq_oversea/libmetasec_ml.so",
+      "sha256": "20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d",
+      "size": 3447432
+    },
+    "ms_16777218.bin": {
+      "path": "/Users/tt/Desktop/rea/HongguoDesktop/vendor/capture/fq_oversea/ms_16777218.bin",
+      "sha256": "c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c",
+      "size": 2014
+    }
+  },
+  "manifest": "Manifest-Version: 1.0\r\nCreated-By: Maven Archiver 3.6.0\r\nBuild-Jdk-Spec: 25\r\nMain-Class: com.hongguo.sign.MetasecSign\r\n\r\n",
+  "own_class_hashes": {
+    "com/hongguo/sign/EncryptRun.class": "3d58cf12e38a0947a11660e4544248fa8e42b1827abb625e526d6103c298eede",
+    "com/hongguo/sign/FqTrace$1.class": "55324f1c274decbdf5215e9ef65f0ffac354b5c7aa524928bc8c7127374b4e69",
+    "com/hongguo/sign/MetasecSign.class": "e651a83199a2c1abb90763ddfc424436b897ede420df23615f33617fc0943604",
+    "com/hongguo/sign/FqTrace.class": "e5e8f1b366fefd84e3244da05cd0544a0ae5b2577597067b5f51fd2b6f14a7af"
+  },
+  "fresh_javap_verification": {
+    "FqTrace": {
+      "matches_retained": true,
+      "sha256": "69033f2aaf06f5379c1cd754294552347a086d63e78d3d9ab61737bd03c91e3b"
+    },
+    "MetasecSign": {
+      "matches_retained": true,
+      "sha256": "ed2f2654952df21236150e6b72d35dd9c2b57b039c3b1e39f51702095b5dd9aa"
+    }
+  },
+  "matching_config_classes": [],
+  "config_json_archive_members": [],
+  "findings": [
+    {
+      "id": "JC01",
+      "type": "observation",
+      "claim": "Production launcher explicitly selects FqTrace serve, despite manifest Main-Class MetasecSign.",
+      "evidence": [
+        {
+          "asset": "launcher",
+          "lines": [
+            54,
+            59
+          ]
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            949,
+            976
+          ],
+          "method": "main",
+          "bytecode_offsets": "0..47"
+        }
+      ]
+    },
+    {
+      "id": "JC02",
+      "type": "observation",
+      "claim": "FqTrace constructor fixes package com.dragon.read.oversea.gp, UID 10074, Android resolver API 23, loads fq_oversea SO and calls JNI_OnLoad. It contains no driveInit or native SDK config dispatch.",
+      "evidence": [
+        {
+          "asset": "fq_javap",
+          "lines": [
+            29,
+            208
+          ],
+          "method": "<init>",
+          "bytecode_offsets": "0..410"
+        }
+      ]
+    },
+    {
+      "id": "JC03",
+      "type": "observation",
+      "claim": "FqTrace /sign extracts only url and headers. Header names/values are joined with CRLF; one worker owns one FqTrace and calls signMap with the two strings.",
+      "evidence": [
+        {
+          "asset": "fq_javap",
+          "lines": [
+            1081,
+            1162
+          ],
+          "method": "lambda$serveStatic$2",
+          "bytecode_offsets": "70..258"
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            1201,
+            1241
+          ],
+          "method": "lambda$serveStatic$1",
+          "bytecode_offsets": "0..72"
+        }
+      ]
+    },
+    {
+      "id": "JC04",
+      "type": "observation",
+      "claim": "signMap forwards two arguments to sign unchanged. sign calls native SO offset 0x168c80 (1477760) with only those arguments. signMap only parses returned X- header name/value pairs.",
+      "evidence": [
+        {
+          "asset": "fq_javap",
+          "lines": [
+            240,
+            276
+          ],
+          "method": "sign",
+          "bytecode_offsets": "0..63"
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            786,
+            835
+          ],
+          "method": "signMap",
+          "bytecode_offsets": "0..90"
+        }
+      ]
+    },
+    {
+      "id": "JC05",
+      "type": "bounded_negative_observation",
+      "claim": "No Java-layer URL query parser, separate device/iid/aid setter or Config object is present along active FqTrace constructor -> serve worker -> signMap -> sign. Native code still receives the full URL and may parse it; this static scope cannot determine native consumption.",
+      "evidence": [
+        {
+          "asset": "fq_javap",
+          "lines": [
+            29,
+            208
+          ],
+          "method": "<init>",
+          "bytecode_offsets": "0..410"
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            240,
+            276
+          ],
+          "method": "sign",
+          "bytecode_offsets": "0..63"
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            786,
+            835
+          ],
+          "method": "signMap",
+          "bytecode_offsets": "0..90"
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            1081,
+            1241
+          ],
+          "method": "serve lambdas",
+          "bytecode_offsets": "see JC03"
+        }
+      ]
+    },
+    {
+      "id": "JC06",
+      "type": "observation",
+      "claim": "MS.b JNI callback forwards only first integer operation to handleMS, discarding other callback arguments at Java layer. handleMS returns fixed app version 68132 / 6.8.1.32, fixed data path, raw cert bytes, booleans and current host milliseconds.",
+      "evidence": [
+        {
+          "asset": "fq_javap",
+          "lines": [
+            446,
+            514
+          ],
+          "method": "handleMS",
+          "bytecode_offsets": "0..176"
+        },
+        {
+          "asset": "fq_javap",
+          "lines": [
+            516,
+            547
+          ],
+          "method": "callStaticObjectMethodV",
+          "bytecode_offsets": "0..59"
+        }
+      ]
+    },
+    {
+      "id": "JC07",
+      "type": "observation",
+      "claim": "MetasecSign driveInit exists but belongs to inactive alternate entry point. It reads init_config.json as an opaque string and dispatches native operation 0x4000001; absent file or noinit skips it. No per-request URL/device sync in that Java method.",
+      "evidence": [
+        {
+          "asset": "metasec_javap",
+          "lines": [
+            207,
+            216
+          ],
+          "method": "<init>",
+          "bytecode_offsets": "406..429"
+        },
+        {
+          "asset": "metasec_javap",
+          "lines": [
+            271,
+            384
+          ],
+          "method": "driveInit",
+          "bytecode_offsets": "0..234"
+        }
+      ]
+    },
+    {
+      "id": "JC08",
+      "type": "observation",
+      "claim": "MetasecSign differs in SO offset (0x27d288), six native arguments, fixed tick/counter initialization and increment, package com.phoenix.read and version callbacks 72532 / 7.2.5.32; these must not be attributed to FqTrace.",
+      "evidence": [
+        {
+          "asset": "metasec_javap",
+          "lines": [
+            31,
+            53
+          ],
+          "method": "<init>",
+          "bytecode_offsets": "0..42"
+        },
+        {
+          "asset": "metasec_javap",
+          "lines": [
+            386,
+            455
+          ],
+          "method": "sign",
+          "bytecode_offsets": "0..120"
+        },
+        {
+          "asset": "metasec_javap",
+          "lines": [
+            458,
+            563
+          ],
+          "method": "handleMS",
+          "bytecode_offsets": "0..281"
+        }
+      ]
+    },
+    {
+      "id": "JC09",
+      "type": "observation",
+      "claim": "Python Helios explicitly embeds khronos/license 1588093228/aid 8662. Its key seed includes fixed aid 8662. Medusa explicitly embeds same aid/license plus SDK v04.06.04-ml-android / 67503104.",
+      "evidence": [
+        {
+          "asset": "python_script",
+          "lines": [
+            3165,
+            3194
+          ],
+          "method": "_encrypt_helios"
+        },
+        {
+          "asset": "python_script",
+          "lines": [
+            3238,
+            3249
+          ],
+          "method": "_gen_medusa_proto"
+        }
+      ]
+    },
+    {
+      "id": "JC10",
+      "type": "observation",
+      "claim": "Python Medusa explicitly supplies device ID and version name from devices with URL fallback, model/brand/OS and environment. iid/install_id is not an explicit protobuf field in shown encoder; full query digest nevertheless covers iid when present.",
+      "evidence": [
+        {
+          "asset": "python_script",
+          "lines": [
+            3040,
+            3098
+          ],
+          "method": "_encode_device/_encode_env/_encode_medusa"
+        },
+        {
+          "asset": "python_script",
+          "lines": [
+            3196,
+            3250
+          ],
+          "method": "_gen_medusa_proto"
+        }
+      ]
+    },
+    {
+      "id": "JC11",
+      "type": "observation",
+      "claim": "Application serializes body and computes x-ss-stub before sending signer JSON containing only url and headers; raw body is not separately passed to JAR.",
+      "evidence": [
+        {
+          "asset": "api",
+          "lines": [
+            191,
+            203
+          ],
+          "method": "_req_headers"
+        },
+        {
+          "asset": "api",
+          "lines": [
+            237,
+            256
+          ],
+          "method": "_api_once"
+        }
+      ]
+    },
+    {
+      "id": "JC12",
+      "type": "bounded_negative_observation",
+      "claim": "Among com/hongguo/sign own JAR classes no Config class exists, and no init/config JSON members exist in archive; this does not cover SO-internal config or unrelated dependency class names.",
+      "evidence": [
+        {
+          "asset": "jar",
+          "method": "ZIP member inventory",
+          "entries": [
+            "com/hongguo/sign/EncryptRun.class",
+            "com/hongguo/sign/FqTrace$1.class",
+            "com/hongguo/sign/MetasecSign.class",
+            "com/hongguo/sign/FqTrace.class"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JC13",
+      "type": "observation",
+      "claim": "The callback certificate asset is ASCII hex of an Oplus AndroidTeam X.509 certificate; Java returns raw file bytes. It is not an init JSON file. No static native license derivation determined.",
+      "evidence": [
+        {
+          "asset": "fq_javap",
+          "lines": [
+            484,
+            499
+          ],
+          "method": "handleMS",
+          "bytecode_offsets": "119..153"
+        },
+        {
+          "asset": "ms_16777218.bin",
+          "method": "offline hex decode + openssl x509 parse"
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "Native SO decoded Medusa fields, actual aid/license defaults, and whether URL parameters populate native context.",
+    "Whether fixed app callback versions are consumed on actual sign path; callback definitions alone do not prove invocation.",
+    "Native SDK mutable state and server validation semantics.",
+    "Full SO and inherited AbstractJni/Unidbg default behavior not analyzed."
+  ],
+  "targeted_literal_search": {
+    "kind": "bounded byte sequence search, not native xref/CFG analysis",
+    "checks": [
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "license_jar_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "aid_jar_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "license_python_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "aid_python_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "python_config_key",
+        "offsets": []
+      },
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "python_config_iv",
+        "offsets": []
+      },
+      {
+        "asset": "libmetasec_ml.so",
+        "term": "python_sign_key",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "license_jar_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "aid_jar_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "license_python_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "aid_python_ascii",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "python_config_key",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "python_config_iv",
+        "offsets": []
+      },
+      {
+        "asset": "ms_16777218.bin",
+        "term": "python_sign_key",
+        "offsets": []
+      }
+    ],
+    "caution": "Numeric 3019 and 8662 little-endian 32-bit values occur at unaligned SO offsets; no data-flow link established, not used as evidence of config."
+  },
+  "cert_inspection": {
+    "format": "2014-byte ASCII hex representing 1007-byte X.509 DER",
+    "der_sha256": "fc98dae63ad39626c8c67fbe83f2f06f74932a9cd146b92cecfc6a047a904386",
+    "openssl_exit": 0,
+    "openssl_output": "subject=C=CN, ST=GuangDong, L=DongGuan, O=Oplus, OU=OSTeam, CN=AndroidTeam, emailAddress=oplus@oplus.com\nissuer=C=CN, ST=GuangDong, L=DongGuan, O=Oplus, OU=OSTeam, CN=AndroidTeam, emailAddress=oplus@oplus.com\nnotBefore=Dec  1 10:23:39 2020 GMT\nnotAfter=Apr 18 10:23:39 2048 GMT\nsha256 Fingerprint=FC:98:DA:E6:3A:D3:96:26:C8:C6:7F:BE:83:F2:F0:6F:74:93:2A:9C:D1:46:B9:2C:EC:FC:6A:04:7A:90:43:86\n",
+    "caution": "handleMS passes original ASCII file bytes, not locally decoded DER. X.509 parse does not establish how native uses certificate."
+  }
+}

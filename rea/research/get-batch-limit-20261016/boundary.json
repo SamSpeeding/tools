@@ -1,0 +1,568 @@
+{
+  "started": "2026-10-16T17:41:22+08:00",
+  "label": "boundary",
+  "endpoint": "/reading/bookapi/video_tab/multi_video_model/v1/",
+  "policy": "current",
+  "sizes": [
+    11,
+    10,
+    20
+  ],
+  "reverse": true,
+  "offset": 0,
+  "device": "unchanged production devices.json[0]",
+  "signature_policy": "JAR other headers + unchanged production Python H/M v3",
+  "no_retry_fallback_rotation_cache": true,
+  "media_requests": 0,
+  "max_batch_count": 100,
+  "per_request_gap_seconds": 3,
+  "results": [
+    {
+      "id": "boundary-01-n11",
+      "policy": "current",
+      "endpoint": "new_get",
+      "requested_count": 11,
+      "vids": [
+        "7689903059454938174",
+        "7689903024185019454",
+        "7689903098600377406",
+        "7689903072495029310",
+        "7689903084457184318",
+        "7689903101611871294",
+        "7689903082863348798",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "request_url_bytes": 1024,
+      "request_target_bytes": 981,
+      "started": "2026-10-16T17:41:27+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "32f7e08216f0b8c1d0dd2193d9e70352f557970fa86f9db87245267a74fc5952",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903024185019454",
+        "7689903084457184318",
+        "7689903072495029310",
+        "7689903101611871294",
+        "7689903098600377406",
+        "7689903116275174462",
+        "7689903030619081790",
+        "7689903059454938174",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903137095699518"
+      ],
+      "models": {
+        "7689903059454938174": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903024185019454": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903098600377406": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903072495029310": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903084457184318": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903101611871294": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        },
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165287
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.314,
+      "response_bytes": 258298,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:41:27+08:00",
+      "returned_count": 11,
+      "valid_models": 11,
+      "missing_vids": [],
+      "unexpected_vids": [],
+      "exact_coverage": true
+    },
+    {
+      "id": "boundary-02-n10",
+      "policy": "current",
+      "endpoint": "new_get",
+      "requested_count": 10,
+      "vids": [
+        "7689903024185019454",
+        "7689903098600377406",
+        "7689903072495029310",
+        "7689903084457184318",
+        "7689903101611871294",
+        "7689903082863348798",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "request_url_bytes": 1002,
+      "request_target_bytes": 959,
+      "started": "2026-10-16T17:41:31+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "c40a60d09fc544f9089d4eb0d330742ae36f93a45f61ab09b442e7223ec2c97e",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903137095699518",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903030619081790",
+        "7689903101611871294",
+        "7689903024185019454",
+        "7689903084457184318",
+        "7689903072495029310",
+        "7689903082863348798",
+        "7689903098600377406"
+      ],
+      "models": {
+        "7689903024185019454": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903098600377406": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903072495029310": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903084457184318": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903101611871294": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        },
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792165291
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.367,
+      "response_bytes": 234468,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:41:31+08:00",
+      "returned_count": 10,
+      "valid_models": 10,
+      "missing_vids": [],
+      "unexpected_vids": [],
+      "exact_coverage": true
+    },
+    {
+      "id": "boundary-03-n20",
+      "policy": "current",
+      "endpoint": "new_get",
+      "requested_count": 20,
+      "vids": [
+        "7689903120775662654",
+        "7689903057416506430",
+        "7689903054233029694",
+        "7689903070867639358",
+        "7689903131911539774",
+        "7689903006069836862",
+        "7689903033924193342",
+        "7689903114047982654",
+        "7689903099875445822",
+        "7689903059454938174",
+        "7689903024185019454",
+        "7689903098600377406",
+        "7689903072495029310",
+        "7689903084457184318",
+        "7689903101611871294",
+        "7689903082863348798",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "request_url_bytes": 1222,
+      "request_target_bytes": 1179,
+      "started": "2026-10-16T17:41:34+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "54122871b314c9729ba932ff4493bfd8b4f535ac7de9515ccef4e3d1e5dd961c",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903120775662654": {
+          "error": "missing requested VID"
+        },
+        "7689903057416506430": {
+          "error": "missing requested VID"
+        },
+        "7689903054233029694": {
+          "error": "missing requested VID"
+        },
+        "7689903070867639358": {
+          "error": "missing requested VID"
+        },
+        "7689903131911539774": {
+          "error": "missing requested VID"
+        },
+        "7689903006069836862": {
+          "error": "missing requested VID"
+        },
+        "7689903033924193342": {
+          "error": "missing requested VID"
+        },
+        "7689903114047982654": {
+          "error": "missing requested VID"
+        },
+        "7689903099875445822": {
+          "error": "missing requested VID"
+        },
+        "7689903059454938174": {
+          "error": "missing requested VID"
+        },
+        "7689903024185019454": {
+          "error": "missing requested VID"
+        },
+        "7689903098600377406": {
+          "error": "missing requested VID"
+        },
+        "7689903072495029310": {
+          "error": "missing requested VID"
+        },
+        "7689903084457184318": {
+          "error": "missing requested VID"
+        },
+        "7689903101611871294": {
+          "error": "missing requested VID"
+        },
+        "7689903082863348798": {
+          "error": "missing requested VID"
+        },
+        "7689903137095699518": {
+          "error": "missing requested VID"
+        },
+        "7689903075380694078": {
+          "error": "missing requested VID"
+        },
+        "7689903116275174462": {
+          "error": "missing requested VID"
+        },
+        "7689903030619081790": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.126,
+      "response_bytes": 53,
+      "codes": {
+        "code": 100103
+      },
+      "base_resp": null,
+      "message": "PARAM_INVALID",
+      "finished": "2026-10-16T17:41:34+08:00",
+      "error": "API /reading/bookapi/video_tab/multi_video_model/v1/: code=100103 (PARAM_INVALID)",
+      "returned_count": 0,
+      "valid_models": 0,
+      "missing_vids": [
+        "7689903006069836862",
+        "7689903024185019454",
+        "7689903030619081790",
+        "7689903033924193342",
+        "7689903054233029694",
+        "7689903057416506430",
+        "7689903059454938174",
+        "7689903070867639358",
+        "7689903072495029310",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903084457184318",
+        "7689903098600377406",
+        "7689903099875445822",
+        "7689903101611871294",
+        "7689903114047982654",
+        "7689903116275174462",
+        "7689903120775662654",
+        "7689903131911539774",
+        "7689903137095699518"
+      ],
+      "unexpected_vids": [],
+      "exact_coverage": false
+    }
+  ],
+  "signer_pid": 35121,
+  "finished": "2026-10-16T17:41:35+08:00",
+  "preservation": {
+    "checked_files": 354,
+    "changed": [],
+    "unchanged": true
+  },
+  "runtime_copy_removed": true
+}

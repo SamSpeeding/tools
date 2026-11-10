@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "seconds": 1.76,
+  "errors": [],
+  "model_count": 1,
+  "attempts": [
+    {
+      "vids": [
+        "7689903116275174462"
+      ],
+      "path": "/novel/player/multi_video_model/v1/",
+      "model_api": "multi_video_model",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "stage": "api",
+      "outcome": "failed"
+    },
+    {
+      "vids": [
+        "7689903116275174462"
+      ],
+      "path": "/novel/player/video_model/v1/",
+      "model_api": "video_model",
+      "outcome": "selected"
+    }
+  ],
+  "model_api": "video_model",
+  "model_fallback": true
+}

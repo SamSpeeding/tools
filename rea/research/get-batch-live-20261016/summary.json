@@ -1,0 +1,204 @@
+{
+  "started": "2026-10-16T17:23:09+08:00",
+  "finished": "2026-10-16T17:26:22+08:00",
+  "elapsed_seconds": 193.0,
+  "network_model_requests": 32,
+  "media_requests": 0,
+  "unique_vids": [
+    "7689903030619081790",
+    "7689903075380694078",
+    "7689903082863348798",
+    "7689903116275174462",
+    "7689903130258983998",
+    "7689903137095699518",
+    "7694949018303990809",
+    "7694949024280874009"
+  ],
+  "device_identity_count": 1,
+  "install_identity_count": 1,
+  "hosts": [
+    "api5-normal-sinfonlinec.fqnovel.com"
+  ],
+  "preservation": {
+    "checked_files": 354,
+    "changed": [],
+    "unchanged": true
+  },
+  "groups": [
+    {
+      "policy": "current",
+      "endpoint": "new_get",
+      "success": 12,
+      "total": 12,
+      "requested_models": 36,
+      "valid_models": 36,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "codes": {
+        "{'code': 0}": 12
+      },
+      "definitions": {
+        "1080p,360p,480p,540p,720p": 36
+      },
+      "latency_seconds": {
+        "min": 0.179,
+        "median": 0.272,
+        "max": 0.398
+      },
+      "failed_ids": []
+    },
+    {
+      "policy": "current",
+      "endpoint": "old_post",
+      "success": 12,
+      "total": 12,
+      "requested_models": 36,
+      "valid_models": 36,
+      "rounds": [
+        1,
+        2,
+        3
+      ],
+      "codes": {
+        "{'code': 0}": 12
+      },
+      "definitions": {
+        "1080p,360p,480p,540p,720p": 36
+      },
+      "latency_seconds": {
+        "min": 0.14,
+        "median": 0.186,
+        "max": 0.253
+      },
+      "failed_ids": []
+    },
+    {
+      "policy": "jar_only",
+      "endpoint": "new_get",
+      "success": 4,
+      "total": 4,
+      "requested_models": 12,
+      "valid_models": 12,
+      "rounds": [
+        1,
+        3
+      ],
+      "codes": {
+        "{'code': 0}": 4
+      },
+      "definitions": {
+        "1080p,360p,480p,540p,720p": 12
+      },
+      "latency_seconds": {
+        "min": 0.166,
+        "median": 0.301,
+        "max": 0.761
+      },
+      "failed_ids": []
+    },
+    {
+      "policy": "jar_only",
+      "endpoint": "old_post",
+      "success": 0,
+      "total": 4,
+      "requested_models": 12,
+      "valid_models": 0,
+      "rounds": [
+        1,
+        3
+      ],
+      "codes": {
+        "{'Code': 110001}": 4
+      },
+      "definitions": {},
+      "latency_seconds": {
+        "min": 0.066,
+        "median": 0.073,
+        "max": 0.119
+      },
+      "failed_ids": [
+        "09-r1-jar_only-a_single-post",
+        "11-r1-jar_only-cross_five-post",
+        "30-r3-jar_only-a_single-post",
+        "32-r3-jar_only-cross_five-post"
+      ]
+    }
+  ],
+  "cross_endpoint_metadata_comparisons": [
+    {
+      "round": 1,
+      "group": "a_single",
+      "vid_count": 1,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 1,
+      "group": "a_five",
+      "vid_count": 5,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 1,
+      "group": "cross_five",
+      "vid_count": 5,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 1,
+      "group": "b_single",
+      "vid_count": 1,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 2,
+      "group": "a_single",
+      "vid_count": 1,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 2,
+      "group": "a_five",
+      "vid_count": 5,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 2,
+      "group": "cross_five",
+      "vid_count": 5,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 2,
+      "group": "b_single",
+      "vid_count": 1,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 3,
+      "group": "a_single",
+      "vid_count": 1,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 3,
+      "group": "a_five",
+      "vid_count": 5,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 3,
+      "group": "cross_five",
+      "vid_count": 5,
+      "same_duration_and_track_metadata": true
+    },
+    {
+      "round": 3,
+      "group": "b_single",
+      "vid_count": 1,
+      "same_duration_and_track_metadata": true
+    }
+  ]
+}

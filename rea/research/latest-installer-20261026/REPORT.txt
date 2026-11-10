@@ -1,0 +1,144 @@
+原下载器 1.0.0.76 → 1.0.0.77：批量模型问题适配调查
+日期：2026-10-26，Asia/Shanghai
+
+结论
+----
+有明确的新适配，并已用现有固定设备短时在线验证成功。关键变化是新 GET
+批量接口显式 signed=False，完全跳过本地签名器和签名头生成；配合下载队列
+故障判断调整，签名器故障不再单独阻断可走此 GET 端点的解析任务。
+JAR/SO、设备池、旧 POST 批量和单集接口的签名逻辑没有更新。
+本轮确认的是新 GET 无签名方案可用；没有重测旧 POST，不能宣称它已恢复，
+也不能据约 43 秒的实验声称永久稳定或整个原程序已不需要 Java。
+
+样本与证据身份
+--------------
+用户指定：/Users/tt/Downloads/HongguoDownloader-Setup (3).exe
+版本：1.0.0.77；大小：142030069 字节
+SHA256：d8d75a328c175e294c5b34c3be31481f3ec708a082f4a6260ac9d2a7c5bd70cb
+对照：/Users/tt/Downloads/HongguoDownloader-Setup (2).exe
+版本：1.0.0.76
+SHA256：958d1518d473e4448aa3cf06b4bc4abac0c74e5879c0c925336de985e78e0fe7
+REA 打开用户给出的新包并检查 PE 资源，Evidence：
+ev_9dadbf35191c6a990638476899a7af8fcb063c32a65bdb03ed086b656383e80a
+完整记录：evidence/rea-pe-resources.json。
+Inno 提取及 Python marshal/dis 为辅助证据，不冒称 REA 原生 Python 反编译。
+
+作者如何改
+----------
+1. 新 GET 批量不再签名。
+   URL：https://api5-normal-sinfonlinec.fqnovel.com/reading/bookapi/video_tab/multi_video_model/v1/
+   _vm_tab_pass 源行2093的实际调用等价于：
+     api('GET', _VM_TAB, extra_query=_vm_tab_query(chunk),
+         signed=False, max_retries=2)
+   旧版没有 signed=False，使用 api 的默认 signed=True。
+   _api_once 源行510本身没改；signed=False 在偏移240–242跳过244–580：
+   不检查 _signer_warm/signer_reachable，不调用 sign，不合并其返回的头。
+   因包内 session_headers 也没有预置签名，此请求不带 x-helios、x-medusa、
+   x-gorgon、x-argus、x-ladon、x-khronos 等签名头。
+   仍保留基础 App/device query、UA、区域/SDK 头和当前 _rticket。
+
+2. GET 恢复探测也改成不签名。
+   _vm_alive 内第一条 lambda，源行2180，同样新增 signed=False。
+   旧 POST 批量探测和单集探测仍保留默认签名。
+   signed=False 还触发既有 api 行为：不把这条 GET 的风控/空模型错误按
+   signed 路径计入 risk/empty 故障次数；连接故障的 network 处理仍存在。
+
+3. 让签名器故障不再一律暂停模型解析/下载调度。
+   新增 hongguo.resolve_down，源行739：
+     return _src['down'] and _src['reason'] != 'signer'
+   offline_dl 的 EpisodePool._take、_feed、_episode_task、dl_vid 改用此判断。
+   _feed 仍保留 source_down 用于其他判断，并新增 res_down 控制暂停和取模型；
+   不能描述为所有故障检查均被删除。risk/empty/network 故障仍会暂停。
+   相关细节还有 series_episodes 对 signer 故障下备用元数据设置 web_only，
+   _prepare 对 web_only 跳过封面/元数据保存。这是原程序容错配套，不属于
+   GET 请求参数，也未带入我们限定 App API 的项目。
+
+4. 这些部分没有变。
+   调用顺序仍是 GET 新批量 → POST 旧批量 → POST 单集回退。
+   每组最多5个仍是客户端分组限制，本轮没有重新测试服务端数量上限。
+   GET query仍为：video_id=逗号连接VID、video_platform=1024、
+   need_all_video_definition=true、device_level=3、detail_page_version=0。
+   响应仍取 data.video_model_data[vid].video_model。
+   旧 POST 仍 /novel/player/multi_video_model/v1/，
+   body仍 biz_param + mixed_video_id_map:{"1":[vid,...]}，仍签名。
+   单集仍 /novel/player/video_model/v1/，仍签名。
+   _vm_lookup、_vm_entry、get_video_tracks/urls、缓存和回退算法未发生实质变更。
+   之前发现的“存在条目但空 video_list 返回 None、不会加入回退”边界仍可复现。
+
+签名与设备专项
+--------------
+unidbg-sign.jar、libmetasec_ml.so、libc++_shared.so、ms_16777218.bin 与前版
+字节完全相同。devices.json 69条相同；devicepool.pyc、sign、refresh_session、
+build_url、_req_headers、_api_once、api 均无规范化代码变更。
+config.json仅更换基础 device_id/iid/cdid，正常设备池存在时仍由当前池设备覆盖。
+没有新设备注册/刷新流程；主备host、传输层未改。程序启动签名器的代码未变。
+完整证据：sign-device-report.txt、sign-device-evidence.json。
+
+离线受控回放
+------------
+replay_model_functions.py：24组版本/场景组合通过。执行选定的原始函数代码
+对象，使用合成api/缓存/时钟，不执行目标模块顶层，不发网络。
+涵盖成功、GET失败、两批量均失败、缺VID、坏JSON、空tracks、证书错误、
+过期缓存、签名器不可用及恢复探测。
+模拟签名器不可用、GET正常返回：
+  v76：6个VID得到0个，所有默认签名路径均报错。
+  v77：2次GET覆盖6个VID，get_video_tracks/get_video_urls均成功。
+其余回退次数与上版一致。单独回放 resolve_down 5种状态：只有signer故障
+不再因source_down=True阻断；risk/empty/network仍返回True。
+证据：evidence/model-functions-offline-replay.json、live-verified.json。
+
+在线验证
+--------
+时间：2026-10-26 10:29:07–10:29:50（北京时间）。
+固定使用我们 HongguoDesktop/config/devices.json 第0条，同一DID/IID/CDID。
+使用新版包中的 config 与实际 build_url、_req_headers、_api_once、
+_vm_tab_query、_vm_tab_pass、_vm_entry 字节码构造和解析请求。
+不给目标模块初始化机会；签名相关函数替换成“一调用即失败”的断言，最终
+调用数为0。_src显式设为down=True/reason=signer，unsigned请求仍成功发出。
+传输用本机现有 curl_cffi chrome；TLS验证打开，不跟随重定向。
+为了观察每次原始响应，api代理直接调用 _api_once，无重试、无回退、无缓存；
+没有执行原程序Windows GUI，也没有请求CDN媒体。
+
+结果：8/8请求 HTTP200、业务code=0，24/24请求模型有效；8个不同VID，
+来自2部已有剧。每轮分别单集、同剧5集、跨剧5集、另一剧单集，共2轮，
+第二轮反转多VID顺序。请求间隔2.5秒，轮次间隔20秒。
+返回模型均有非空video_list，5档360p/480p/540p/720p/1080p，主备URL结构有效。
+此处“有效模型”指JSON/VID覆盖/视频轨道/URL结构核验，未下载或播放媒体。
+
+测试记录透明说明：
+最初采集脚本的本地验证器误把已是明文的HTTP URL再当Base64解码，产生了
+UnicodeDecodeError；请求本身均已返回code=0及完整模型。原始live.log和
+live-results.json完整保留该错误，不覆盖伪造成功。validate_captures.py读取
+同一批私有响应，支持明文/Base64两种URL，再调用原始_vm_entry逐一核对，
+得到上述8/8、24/24结论；追加网络请求为0。以live-verified.json为最终结果。
+保存采集时脚本为evidence/probe_unsigned.capture-version.py，probe_unsigned.py
+已修正URL验证并禁止覆盖本轮结果。private/为0700、其中原始请求/响应为0600。
+
+覆盖与保护
+----------
+Inno Setup6.7.0；3966个有效安装清单项：1514个hash改变、2452个相同，无映射
+路径增删。31个选定应用文件提取后逐项与包内SHA256核对，全部一致。
+18个应用pyc递归比较，忽略源路径和行位置后，只有hongguo/offline_dl/_integrity
+3个有差异，其余15个相同。_integrity为模块完整性常量变化。
+复用Inno解析器一条python/pythonw.exe映射不可靠，未纳入比较；Python/Java/
+FFmpeg大部分只比较安装清单，不声称全量依赖审计。
+在线前后357个纳入清单的项目/配置/analysis文件哈希相同，changed=[]。
+排除runtime/venv/node_modules/target/release/outputs/experiments/__pycache__等，
+不把有限校验声称为整个磁盘均未变。本次派生文件都在独立研究目录；
+HongguoDesktop/HongguoCLI/HongguoPHP生产代码没有修改，analysis原记录保留。
+
+问题清单与边界
+--------------
+已回答：新版身份、批量调用方式变化、签名/设备变化、容错调整、短时可用性。
+部分回答：能绕开签名器依赖造成的GET链路失败，但不能确定用户历史上每一次
+失败是否均由同一根因造成；没做本日v76签名GET对照。
+仍未知：长期稳定性、其他设备/网络表现、旧POST当下状态、原版Windows完整
+运行表现、平台为何接受无签名GET的内部规则。均未据本次结果作保证。
+
+复核入口
+--------
+evidence/focused-diff.txt：去除跳转偏移噪音的关键差异。
+evidence/model-functions.txt、sign-device-evidence.json：完整指令和KW_NAMES。
+evidence/bytecode-diff.json：18个应用模块递归比较。
+evidence/installer-diff.json：安装清单与提取校验。
+live-verified.json：最终线上响应核验（不含媒体密钥和完整URL）。

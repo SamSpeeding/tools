@@ -1,0 +1,2372 @@
+{
+  "scope": "Offline parsing only; no HTTP or signer calls. Private decoded identity fields are omitted.",
+  "capture_count": 43,
+  "header_pair_count": 86,
+  "results": [
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_jar_python_argus_ladon_first-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 665
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_jar_python_medusa_first-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 661
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_jar_python_medusa_repeat-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 665
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_python_jar_medusa_first-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 665
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-jar_without_extras_with_python_medusa-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 666
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_argus_ladon-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 666
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_gorgon-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 666
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_helios-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 666
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_neptune_soter-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 666
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_with_python_hm_A_first-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_with_python_hm_A_repeat-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_with_python_hm_B_first-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 709
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-jar_python_hm_stored_first-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 660
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-jar_python_hm_stored_repeat-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_1-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_3-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_38-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_5-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_74-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_five-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_five_repeat-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_five_reverse-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_two-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 704
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_two_repeat-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 663
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_cross_series_five-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_cross_series_five_after_jar-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_cross_series_five_repeat-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_original_baseline-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-correct_hm_after_fields-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-correct_hm_before-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 658
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-correct_hm_final-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-helios_app3019_only-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-helios_jar_app_and_license-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-helios_license1611921764_only-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-jar_medusa_with_correct_python_helios-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 662
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/09-exact-helios-counterfactual-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 658
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-hybrid_tail_five_final-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_1-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 660
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_2-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_3-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_4-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_5-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_6-signature-parts.json",
+      "families": {
+        "jar": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "3019",
+          "helios_license_id_position": "1611921764",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 4,
+            "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+            "envelope_flag": 256,
+            "wire_length": 664
+          }
+        },
+        "python": {
+          "helios_roundtrip": true,
+          "helios_app_id_position": "8662",
+          "helios_license_id_position": "1588093228",
+          "helios_time_matches_header": true,
+          "medusa_envelope": {
+            "version": 3,
+            "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+            "envelope_flag": 256,
+            "wire_length": 705
+          },
+          "medusa_roundtrip": true,
+          "bindings": {
+            "medusa_ms_app_id_equals_url_aid": true,
+            "medusa_device_id_equals_url": true,
+            "nested_device_id_equals_top": true,
+            "device_app_id_equals_top": true,
+            "app_version_equals_url": true,
+            "env_app_version_equals_top": true,
+            "times_equal_khronos": true,
+            "query_sm3_matches": true,
+            "query_body_ts_hash_matches": true,
+            "query_body_hash_sm3_matches": true,
+            "body_md5_matches_header": true
+          },
+          "protobuf_profile": {
+            "version": 3,
+            "ms_app_id": "8662",
+            "license_id": "1588093228",
+            "app_version": "7.2.9.32",
+            "sdk_version_str": "v04.06.04-ml-android",
+            "sdk_version": 67503104,
+            "psk_version": "none",
+            "call_type": 312
+          },
+          "env_version": "v04.06.04.03-bugfix",
+          "nested_device_id_present": true
+        }
+      }
+    }
+  ]
+}

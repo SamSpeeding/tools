@@ -1,0 +1,41 @@
+{
+    "api_host":  "api5-normal-sinfonlinec.fqnovel.com",
+    "base_query":  {
+                       "aid":  "8662",
+                       "compliance_status":  "0",
+                       "is_android_pad_screen":  "0",
+                       "device_brand":  "Samsung",
+                       "cdid":  "d9146186-31d2-4c20-918a-ad0d7c1b1e39",
+                       "iid":  "3709546498427962",
+                       "rom_version":  "V417IR release-keys",
+                       "version_code":  "72932",
+                       "dpi":  "480",
+                       "device_id":  "2924864738605006",
+                       "host_abi":  "arm64-v8a",
+                       "channel":  "googleplay",
+                       "resolution":  "1080*1920",
+                       "os_version":  "15",
+                       "version_name":  "7.2.9.32",
+                       "update_version_code":  "72932",
+                       "language":  "en",
+                       "player_so_load":  "1",
+                       "manifest_version_code":  "72932",
+                       "pv_player":  "72932",
+                       "os":  "android",
+                       "os_api":  "35",
+                       "dragon_device_type":  "phone",
+                       "need_personal_recommend":  "1",
+                       "ac":  "wifi",
+                       "app_name":  "novelread",
+                       "device_type":  "SM-S938U",
+                       "ssmix":  "a",
+                       "device_platform":  "android"
+                   },
+    "session_headers":  {
+                            "user-agent":  "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)",
+                            "passport-sdk-version":  "5051452",
+                            "sdk-version":  "2",
+                            "x-tt-store-region":  "kh",
+                            "x-tt-store-region-src":  "uid"
+                        }
+}

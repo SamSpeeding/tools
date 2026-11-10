@@ -1,0 +1,64 @@
+{
+  "client": "desktop",
+  "started": "2026-10-14 11:06:16 +0800",
+  "signature_policy": "jar + local Helios/Medusa v3",
+  "calls": [
+    {
+      "path": "/novel/player/multi_video_model/v1/",
+      "only_hm_replaced": true,
+      "medusa_version": 3,
+      "exact_url_body_timestamp": true
+    },
+    {
+      "path": "/novel/player/multi_video_model/v1/",
+      "only_hm_replaced": true,
+      "medusa_version": 3,
+      "exact_url_body_timestamp": true
+    },
+    {
+      "path": "/novel/player/multi_video_model/v1/",
+      "only_hm_replaced": true,
+      "medusa_version": 3,
+      "exact_url_body_timestamp": true
+    },
+    {
+      "path": "/novel/player/multi_video_model/v1/",
+      "only_hm_replaced": true,
+      "medusa_version": 3,
+      "exact_url_body_timestamp": true
+    },
+    {
+      "path": "/novel/player/video_model/v1/",
+      "only_hm_replaced": true,
+      "medusa_version": 3,
+      "exact_url_body_timestamp": true
+    }
+  ],
+  "checks": [
+    {
+      "vid_count": 2,
+      "track_counts": [
+        5,
+        5
+      ],
+      "complete": true,
+      "api": "multi_video_model"
+    },
+    {
+      "vid_count": 2,
+      "track_counts": [
+        5,
+        5
+      ],
+      "complete": true,
+      "api": "multi_video_model"
+    },
+    {
+      "vid_count": 1,
+      "complete": true,
+      "api": "video_model"
+    }
+  ],
+  "passed": true,
+  "finished": "2026-10-14 11:06:20 +0800"
+}

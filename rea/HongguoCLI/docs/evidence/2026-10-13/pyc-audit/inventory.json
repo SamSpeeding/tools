@@ -1,0 +1,1339 @@
+[
+  {
+    "file": "HongguoCLI/vendor/decrypt/unwrap_spade.pyc",
+    "size": 5536,
+    "sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7",
+    "code_objects": [
+      {
+        "path": "unwrap_spade",
+        "imports": [
+          "base64",
+          "sys"
+        ],
+        "names": [
+          "base64",
+          "_popcount",
+          "_s8",
+          "_strncmp0",
+          "unwrap_v1",
+          "spade_to_key",
+          "_TRUTH",
+          "_selftest",
+          "__name__",
+          "sys",
+          "len",
+          "argv",
+          "sp",
+          "int",
+          "flag",
+          "all",
+          "key",
+          "Exception",
+          "print"
+        ],
+        "strings": [
+          "__main__"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "unwrap_spade._popcount",
+        "imports": [],
+        "names": [
+          "bin",
+          "count"
+        ],
+        "strings": [
+          "1"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "unwrap_spade._s8",
+        "imports": [],
+        "names": [],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "unwrap_spade._strncmp0",
+        "imports": [],
+        "names": [
+          "range",
+          "len"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "unwrap_spade.unwrap_v1",
+        "imports": [],
+        "names": [
+          "isinstance",
+          "str",
+          "bytes",
+          "fromhex",
+          "len",
+          "bytearray",
+          "range",
+          "_strncmp0",
+          "_popcount",
+          "_s8",
+          "decode"
+        ],
+        "strings": [
+          "latin1",
+          "replace"
+        ],
+        "bytes": [
+          "6170705f7632",
+          "7765625f7632"
+        ]
+      },
+      {
+        "path": "unwrap_spade.spade_to_key",
+        "imports": [],
+        "names": [
+          "unwrap_v1",
+          "base64",
+          "b64decode"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "unwrap_spade._selftest",
+        "imports": [],
+        "names": [
+          "_TRUTH",
+          "unwrap_v1",
+          "print",
+          "len"
+        ],
+        "strings": [
+          "OK ",
+          "FAIL",
+          " ",
+          " == ",
+          "/",
+          " passed"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "unwrap_spade.<genexpr>",
+        "imports": [],
+        "names": [],
+        "strings": [
+          "0123456789abcdefABCDEF"
+        ],
+        "bytes": []
+      }
+    ]
+  },
+  {
+    "file": "HongguoCLI/vendor/decrypt/oracle.pyc",
+    "size": 23487,
+    "sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471",
+    "code_objects": [
+      {
+        "path": "oracle",
+        "imports": [
+          "argparse",
+          "os",
+          "re",
+          "subprocess",
+          "sys",
+          "time",
+          "gzip",
+          "shutil",
+          "struct",
+          "extract_keybox_pairs",
+          "pathlib"
+        ],
+        "names": [
+          "argparse",
+          "os",
+          "re",
+          "subprocess",
+          "sys",
+          "time",
+          "gzip",
+          "shutil",
+          "struct",
+          "path",
+          "insert",
+          "dirname",
+          "abspath",
+          "__file__",
+          "extract_keybox_pairs",
+          "build_report",
+          "pathlib",
+          "Path",
+          "_ib",
+          "_find",
+          "_u32",
+          "parse_track_samples",
+          "parse_video_samples",
+          "_nal_ok",
+          "verify_key_iv",
+          "all_key_candidates",
+          "ADB",
+          "DEV",
+          "EXCL",
+          "adb",
+          "adb_su",
+          "get_pid",
+          "build_dumplist",
+          "do_dump",
+          "report",
+          "collect_keys_ivs",
+          "main",
+          "__name__"
+        ],
+        "strings": [
+          "D:\\Program Files\\Netease\\MuMu Player 12\\shell\\adb.exe",
+          "127.0.0.1:16384",
+          "__main__"
+        ],
+        "bytes": [
+          "76696465"
+        ]
+      },
+      {
+        "path": "oracle._ib",
+        "imports": [],
+        "names": [
+          "struct",
+          "unpack"
+        ],
+        "strings": [
+          ">I",
+          ">Q"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle._find",
+        "imports": [],
+        "names": [
+          "len",
+          "_ib",
+          "_find"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "oracle._u32",
+        "imports": [],
+        "names": [
+          "struct",
+          "unpack"
+        ],
+        "strings": [
+          ">I"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.parse_track_samples",
+        "imports": [],
+        "names": [
+          "_find",
+          "_ib",
+          "_u32",
+          "range",
+          "len",
+          "enumerate",
+          "append"
+        ],
+        "strings": [],
+        "bytes": [
+          "6d6f6f76",
+          "7374737a",
+          "7374636f",
+          "636f3634",
+          "73747363"
+        ]
+      },
+      {
+        "path": "oracle.parse_track_samples.<listcomp>",
+        "imports": [],
+        "names": [],
+        "strings": [],
+        "bytes": [
+          "7472616b"
+        ]
+      },
+      {
+        "path": "oracle.parse_track_samples.hdlr",
+        "imports": [],
+        "names": [
+          "_find"
+        ],
+        "strings": [],
+        "bytes": [
+          "6d646961",
+          "68646c72"
+        ]
+      },
+      {
+        "path": "oracle.parse_track_samples.<listcomp>",
+        "imports": [],
+        "names": [],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "oracle.parse_track_samples.<listcomp>",
+        "imports": [],
+        "names": [
+          "_u32"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "oracle.parse_track_samples.<listcomp>",
+        "imports": [],
+        "names": [
+          "_u32"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "oracle.parse_track_samples.<listcomp>",
+        "imports": [],
+        "names": [
+          "struct",
+          "unpack"
+        ],
+        "strings": [
+          ">Q"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.parse_track_samples.<listcomp>",
+        "imports": [],
+        "names": [
+          "_u32"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "oracle.parse_video_samples",
+        "imports": [],
+        "names": [
+          "open",
+          "read",
+          "parse_track_samples"
+        ],
+        "strings": [
+          "rb"
+        ],
+        "bytes": [
+          "76696465"
+        ]
+      },
+      {
+        "path": "oracle._nal_ok",
+        "imports": [],
+        "names": [
+          "struct",
+          "unpack"
+        ],
+        "strings": [
+          ">I"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.verify_key_iv",
+        "imports": [
+          "Crypto.Cipher",
+          "Crypto.Util"
+        ],
+        "names": [
+          "Crypto.Cipher",
+          "AES",
+          "Crypto.Util",
+          "Counter",
+          "parse_video_samples",
+          "print",
+          "len",
+          "bytes",
+          "fromhex",
+          "int",
+          "new",
+          "MODE_CTR",
+          "decrypt",
+          "struct",
+          "unpack",
+          "range",
+          "min",
+          "_nal_ok"
+        ],
+        "strings": [
+          "  密文视频样本=",
+          "; 试 ",
+          " key × ",
+          " base_iv (首块快筛) ...",
+          ">I"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.all_key_candidates",
+        "imports": [
+          "mmap",
+          "extract_keybox_pairs"
+        ],
+        "names": [
+          "mmap",
+          "extract_keybox_pairs",
+          "iter_keybox_entries",
+          "set",
+          "open",
+          "fileno",
+          "ACCESS_READ",
+          "hex",
+          "add",
+          "append"
+        ],
+        "strings": [
+          "rb",
+          "kind",
+          "key",
+          "value"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.adb",
+        "imports": [],
+        "names": [
+          "ADB",
+          "DEV",
+          "list",
+          "subprocess",
+          "run"
+        ],
+        "strings": [
+          "-s"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.adb_su",
+        "imports": [],
+        "names": [
+          "adb"
+        ],
+        "strings": [
+          "shell",
+          "su -c '",
+          "'"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.get_pid",
+        "imports": [],
+        "names": [
+          "adb_su",
+          "stdout",
+          "decode",
+          "strip",
+          "split"
+        ],
+        "strings": [
+          "pidof com.phoenix.read",
+          "ignore"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.build_dumplist",
+        "imports": [],
+        "names": [
+          "splitlines",
+          "re",
+          "match",
+          "int",
+          "group",
+          "strip",
+          "append",
+          "sum",
+          "join",
+          "len"
+        ],
+        "strings": [
+          "^([0-9a-f]+)-([0-9a-f]+)\\s+(\\S{4})\\s+\\S+\\s+\\S+\\s+\\S+\\s*(.*)$",
+          "^Rss:\\s+(\\d+)\\s*kB",
+          "rss",
+          "e",
+          "s",
+          " ",
+          "\n"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.build_dumplist.<listcomp>",
+        "imports": [],
+        "names": [
+          "any",
+          "EXCL"
+        ],
+        "strings": [
+          "perm",
+          "r",
+          "w",
+          "rss"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.build_dumplist.<listcomp>.<genexpr>",
+        "imports": [],
+        "names": [],
+        "strings": [
+          "path"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.build_dumplist.<genexpr>",
+        "imports": [],
+        "names": [],
+        "strings": [
+          "rss"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.do_dump",
+        "imports": [],
+        "names": [
+          "os",
+          "makedirs",
+          "print",
+          "adb_su",
+          "stdout",
+          "decode",
+          "build_dumplist",
+          "open",
+          "write",
+          "adb",
+          "time",
+          "gzip",
+          "shutil",
+          "copyfileobj",
+          "path",
+          "getsize"
+        ],
+        "strings": [
+          "capture",
+          "[1/5] pid=",
+          " 拉 smaps ...",
+          "cat /proc/",
+          "/smaps",
+          "ignore",
+          "      native rw 驻留 ",
+          ".0f",
+          "MB, ",
+          " 段",
+          "capture/dumplist_live.txt",
+          "w",
+          "\n",
+          "[2/5] 推送 dumplist ...",
+          "push",
+          "/data/local/tmp/dumplist.txt",
+          "[3/5] 设备端 dd+gzip dump (耗时取决于驻留大小) ...",
+          "while read s c; do dd if=/proc/",
+          "/mem bs=4096 skip=$s count=$c conv=noerror,sync 2>/dev/null; done < /data/local/tmp/dumplist.txt | gzip -1 > /data/local/tmp/oracle_dump.gz",
+          "      dump 完成 ",
+          "s",
+          "[4/5] 拉回 + 解压 ...",
+          "pull",
+          "/data/local/tmp/oracle_dump.gz",
+          "capture/oracle_dump.gz",
+          "rb",
+          "capture/oracle_dump.bin",
+          "wb",
+          "      capture/oracle_dump.bin ",
+          "MB"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.report",
+        "imports": [],
+        "names": [
+          "print",
+          "build_report",
+          "__import__",
+          "Path",
+          "get",
+          "len"
+        ],
+        "strings": [
+          "[5/5] 提取密钥盒 kid->key->base_iv ...",
+          "pathlib",
+          "\n entry_counts=",
+          "entry_counts",
+          "  mspade_kids=",
+          "mspade_kids",
+          " keybox_kids=",
+          "keybox_kids",
+          "\n===== 正在解码视频的 (kid, key, base_iv64) =====",
+          "joined",
+          "keys",
+          "key",
+          "iv8_candidates",
+          "base_iv64",
+          "spade_a",
+          "(无spade,可能离线)",
+          "  kid     = ",
+          "kid",
+          "  key     = ",
+          "  (votes=",
+          "votes",
+          ")",
+          "  base_iv = ",
+          "   (iv候选",
+          "个)",
+          "  spade_a = ",
+          "\n",
+          "  ⚠ 未发现带 key 的 kid。确认: 正在【在线流】播放且画面在动(解码中)。",
+          "    缓存/下载视频走离线安全路径, 密钥盒里没有 key。"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.collect_keys_ivs",
+        "imports": [
+          "mmap",
+          "extract_keybox_pairs"
+        ],
+        "names": [
+          "mmap",
+          "extract_keybox_pairs",
+          "iter_keybox_entries",
+          "append",
+          "set",
+          "open",
+          "fileno",
+          "ACCESS_READ",
+          "add",
+          "hex",
+          "sorted"
+        ],
+        "strings": [
+          "joined",
+          "keys",
+          "key",
+          "rb",
+          "kind",
+          "iv",
+          "value"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "oracle.collect_keys_ivs.<listcomp>",
+        "imports": [],
+        "names": [
+          "add"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "oracle.main",
+        "imports": [],
+        "names": [
+          "argparse",
+          "ArgumentParser",
+          "add_argument",
+          "parse_args",
+          "reuse",
+          "subprocess",
+          "run",
+          "ADB",
+          "DEV",
+          "get_pid",
+          "print",
+          "sys",
+          "exit",
+          "do_dump",
+          "report",
+          "verify",
+          "collect_keys_ivs",
+          "verify_key_iv"
+        ],
+        "strings": [
+          "--reuse",
+          "跳过dump,直接分析已有dump文件",
+          "--verify",
+          "给定下载的密文mp4, 自动从dump的key×base_iv里试解出正确组合",
+          "connect",
+          "✗ app 未运行 (com.phoenix.read)。先启动 app 并播放在线视频。",
+          "\n===== 用密文 ",
+          " 自动验证 key/base_iv =====",
+          "  [OK] 验证通过! key=",
+          "  base_iv64=",
+          "  -> 解密: AES-128-CTR, IV=((0x",
+          "+sample_idx)<<64), 用 decrypt_full.py",
+          "  [X] 没有 key x base_iv 组合能解密该密文。可能: dump与密文非同一视频/清晰度, 或key未在内存。"
+        ],
+        "bytes": []
+      }
+    ]
+  },
+  {
+    "file": "HongguoCLI/vendor/decrypt/extract_keybox_pairs.pyc",
+    "size": 11574,
+    "sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a",
+    "code_objects": [
+      {
+        "path": "extract_keybox_pairs",
+        "imports": [
+          "__future__",
+          "argparse",
+          "base64",
+          "json",
+          "mmap",
+          "re",
+          "collections",
+          "pathlib"
+        ],
+        "names": [
+          "__future__",
+          "annotations",
+          "argparse",
+          "base64",
+          "json",
+          "mmap",
+          "re",
+          "collections",
+          "Counter",
+          "defaultdict",
+          "pathlib",
+          "Path",
+          "ENTRY_PREFIX",
+          "ZERO8",
+          "clean_json_escape",
+          "classify_value",
+          "extract_mkid_spade",
+          "iter_keybox_entries",
+          "extract_key_votes",
+          "decoded_spade_hex",
+          "build_report",
+          "main",
+          "__name__"
+        ],
+        "strings": [
+          "value",
+          "str",
+          "return",
+          "bytes",
+          "mm",
+          "mmap.mmap",
+          "back_window",
+          "int",
+          "dict[str, set[str]]",
+          "entries",
+          "list[dict]",
+          "lookahead_bytes",
+          "iv_window",
+          "spade",
+          "str | None",
+          "dump_path",
+          "Path",
+          "dict",
+          "None",
+          "__main__"
+        ],
+        "bytes": [
+          "010d01000000",
+          "0000000000000000"
+        ]
+      },
+      {
+        "path": "extract_keybox_pairs.clean_json_escape",
+        "imports": [],
+        "names": [
+          "replace"
+        ],
+        "strings": [
+          "\\u003d",
+          "=",
+          "\\/",
+          "/"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.classify_value",
+        "imports": [],
+        "names": [
+          "endswith",
+          "ZERO8",
+          "len",
+          "set",
+          "count"
+        ],
+        "strings": [
+          "kid",
+          "iv",
+          "key",
+          "other"
+        ],
+        "bytes": [
+          "ebeb",
+          "00000000000000000000000000000000"
+        ]
+      },
+      {
+        "path": "extract_keybox_pairs.extract_mkid_spade",
+        "imports": [],
+        "names": [
+          "defaultdict",
+          "set",
+          "find",
+          "len",
+          "clean_json_escape",
+          "decode",
+          "max",
+          "re",
+          "findall",
+          "add"
+        ],
+        "strings": [
+          "ascii",
+          "ignore"
+        ],
+        "bytes": [
+          "226d537061646561223a22",
+          "22",
+          "226d4b6964223a22285b302d39612d665d7b33327d2922"
+        ]
+      },
+      {
+        "path": "extract_keybox_pairs.iter_keybox_entries",
+        "imports": [],
+        "names": [
+          "find",
+          "ENTRY_PREFIX",
+          "len",
+          "ZERO8",
+          "bytes",
+          "hex",
+          "classify_value"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.extract_key_votes",
+        "imports": [],
+        "names": [
+          "defaultdict",
+          "Counter",
+          "set",
+          "enumerate",
+          "hex",
+          "add",
+          "max",
+          "abs"
+        ],
+        "strings": [
+          "kind",
+          "kid",
+          "value",
+          "offset",
+          "key",
+          "iv"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.decoded_spade_hex",
+        "imports": [],
+        "names": [
+          "base64",
+          "b64decode",
+          "hex",
+          "Exception"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report",
+        "imports": [],
+        "names": [
+          "open",
+          "mmap",
+          "fileno",
+          "ACCESS_READ",
+          "extract_mkid_spade",
+          "list",
+          "iter_keybox_entries",
+          "extract_key_votes",
+          "sorted",
+          "set",
+          "get",
+          "Counter",
+          "most_common",
+          "append",
+          "min",
+          "str",
+          "dict",
+          "len"
+        ],
+        "strings": [
+          "rb"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report.<listcomp>",
+        "imports": [],
+        "names": [
+          "hex"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report.<genexpr>",
+        "imports": [],
+        "names": [],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report.<genexpr>",
+        "imports": [],
+        "names": [],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report.<listcomp>",
+        "imports": [],
+        "names": [
+          "decoded_spade_hex"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report.<listcomp>",
+        "imports": [],
+        "names": [],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.build_report.<genexpr>",
+        "imports": [],
+        "names": [],
+        "strings": [
+          "kind"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "extract_keybox_pairs.main",
+        "imports": [],
+        "names": [
+          "argparse",
+          "ArgumentParser",
+          "add_argument",
+          "int",
+          "parse_args",
+          "build_report",
+          "Path",
+          "dump",
+          "lookahead_bytes",
+          "iv_window",
+          "output",
+          "write_text",
+          "json",
+          "dumps",
+          "print",
+          "len"
+        ],
+        "strings": [
+          "dump",
+          "?",
+          "capture/e4.bin",
+          "-o",
+          "--output",
+          "capture/spade_key_pairs.auto.json",
+          "--lookahead-bytes",
+          "--iv-window",
+          "utf-8",
+          "wrote ",
+          "entry_counts=",
+          "entry_counts",
+          "mspade_kids=",
+          "mspade_kids",
+          " keybox_kids=",
+          "keybox_kids",
+          "joined",
+          "keys",
+          "kid=",
+          "kid",
+          " key=",
+          "key",
+          " votes=",
+          "votes",
+          " spade_count=",
+          "spade_a"
+        ],
+        "bytes": []
+      }
+    ]
+  },
+  {
+    "file": "HongguoCLI/vendor/decrypt/decutil.pyc",
+    "size": 13672,
+    "sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7",
+    "code_objects": [
+      {
+        "path": "decutil",
+        "imports": [
+          "os",
+          "re",
+          "sys",
+          "shutil",
+          "subprocess",
+          "Crypto.Cipher",
+          "Crypto.Util",
+          "oracle"
+        ],
+        "names": [
+          "os",
+          "re",
+          "sys",
+          "shutil",
+          "subprocess",
+          "Crypto.Cipher",
+          "AES",
+          "Crypto.Util",
+          "Counter",
+          "CTRCounter",
+          "path",
+          "insert",
+          "dirname",
+          "abspath",
+          "__file__",
+          "oracle",
+          "_ff_exe",
+          "senc_iv8",
+          "tenc_kid",
+          "decrypt_full",
+          "_trak_senc_iv8",
+          "_decrypt_track",
+          "decrypt_av",
+          "strip_cenc",
+          "remux_playable"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "decutil._ff_exe",
+        "imports": [],
+        "names": [
+          "os",
+          "name",
+          "path",
+          "dirname",
+          "abspath",
+          "__file__",
+          "range",
+          "join",
+          "isfile",
+          "shutil",
+          "which"
+        ],
+        "strings": [
+          "nt",
+          ".exe",
+          "",
+          "tools",
+          "ffmpeg"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "decutil.senc_iv8",
+        "imports": [],
+        "names": [
+          "open",
+          "read",
+          "re",
+          "finditer",
+          "start",
+          "len",
+          "hex",
+          "append"
+        ],
+        "strings": [
+          "rb"
+        ],
+        "bytes": [
+          "73656e63"
+        ]
+      },
+      {
+        "path": "decutil.tenc_kid",
+        "imports": [],
+        "names": [
+          "open",
+          "read",
+          "re",
+          "search",
+          "start",
+          "len",
+          "hex"
+        ],
+        "strings": [
+          "rb"
+        ],
+        "bytes": [
+          "74656e63"
+        ]
+      },
+      {
+        "path": "decutil.decrypt_full",
+        "imports": [],
+        "names": [
+          "bytes",
+          "fromhex",
+          "int",
+          "oracle",
+          "parse_video_samples",
+          "bytearray",
+          "enumerate",
+          "zip",
+          "AES",
+          "new",
+          "MODE_CTR",
+          "CTRCounter",
+          "decrypt",
+          "_nal_ok",
+          "open",
+          "write",
+          "print",
+          "len"
+        ],
+        "strings": [
+          "wb",
+          "  解密完成: ",
+          "  (视频样本 NAL合法 ",
+          "/",
+          ")"
+        ],
+        "bytes": []
+      },
+      {
+        "path": "decutil._trak_senc_iv8",
+        "imports": [],
+        "names": [
+          "re",
+          "finditer",
+          "start",
+          "len",
+          "hex"
+        ],
+        "strings": [],
+        "bytes": [
+          "73656e63"
+        ]
+      },
+      {
+        "path": "decutil._decrypt_track",
+        "imports": [],
+        "names": [
+          "int",
+          "enumerate",
+          "zip",
+          "AES",
+          "new",
+          "MODE_CTR",
+          "CTRCounter",
+          "decrypt",
+          "bytes"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "decutil.decrypt_av",
+        "imports": [],
+        "names": [
+          "open",
+          "read",
+          "bytearray",
+          "bytes",
+          "fromhex",
+          "oracle",
+          "_find",
+          "RuntimeError",
+          "_ib",
+          "_trak_senc_iv8",
+          "parse_track_samples",
+          "_decrypt_track",
+          "sum",
+          "zip",
+          "len",
+          "write",
+          "get",
+          "append",
+          "print",
+          "join"
+        ],
+        "strings": [
+          "rb",
+          "无 moov",
+          "vide",
+          "soun",
+          "wb",
+          "视频 NAL合法 ",
+          "/",
+          "音频 ",
+          " 样本",
+          "  全轨解密: ",
+          "  (",
+          "; ",
+          ")"
+        ],
+        "bytes": [
+          "6d6f6f76",
+          "7472616b",
+          "6d646961",
+          "68646c72",
+          "76696465"
+        ]
+      },
+      {
+        "path": "decutil.decrypt_av.<genexpr>",
+        "imports": [],
+        "names": [
+          "oracle",
+          "_nal_ok",
+          "bytes"
+        ],
+        "strings": [],
+        "bytes": []
+      },
+      {
+        "path": "decutil.strip_cenc",
+        "imports": [
+          "struct"
+        ],
+        "names": [
+          "struct",
+          "bytearray",
+          "open",
+          "read",
+          "len",
+          "unpack",
+          "bytes",
+          "write"
+        ],
+        "strings": [
+          "rb",
+          ">I",
+          ">Q",
+          "wb"
+        ],
+        "bytes": [
+          "6d6f6f76",
+          "68766331",
+          "6d703461",
+          "66726565"
+        ]
+      },
+      {
+        "path": "decutil.strip_cenc.kids",
+        "imports": [],
+        "names": [
+          "unpack",
+          "find"
+        ],
+        "strings": [
+          ">I"
+        ],
+        "bytes": [
+          "73696e66",
+          "66726565"
+        ]
+      },
+      {
+        "path": "decutil.strip_cenc.walk",
+        "imports": [],
+        "names": [
+          "unpack",
+          "bytes"
+        ],
+        "strings": [
+          ">I",
+          ">Q"
+        ],
+        "bytes": [
+          "73747364",
+          "656e6376",
+          "656e6361"
+        ]
+      },
+      {
+        "path": "decutil.remux_playable",
+        "imports": [],
+        "names": [
+          "_ff_exe",
+          "sys",
+          "platform",
+          "startswith",
+          "subprocess",
+          "run",
+          "returncode",
+          "os",
+          "path",
+          "exists",
+          "print",
+          "stderr",
+          "strip_cenc",
+          "Exception"
+        ],
+        "strings": [
+          "ffmpeg",
+          "win",
+          "-y",
+          "-loglevel",
+          "error",
+          "-i",
+          "-c",
+          "copy",
+          "-tag:v",
+          "hvc1",
+          "  [!] ffmpeg 重封装失败, 改用纯 Python 去 CENC: ",
+          "  [!] strip_cenc 异常: ",
+          "  [i] 已纯 Python 去 CENC(encv→hvc1/enca→mp4a), 视频+音频均可播",
+          "  [!] 去 CENC 失败(无 moov?), 文件残留 encv/enca 盒"
+        ],
+        "bytes": []
+      }
+    ]
+  }
+]

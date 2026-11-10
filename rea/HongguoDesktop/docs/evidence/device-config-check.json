@@ -1,0 +1,142 @@
+{
+  "device_count": 69,
+  "query_key_sets": [
+    "cdid,device_id,iid"
+  ],
+  "all_user_agents_match_base": true,
+  "config_matches_old_CLI": true,
+  "sequence": [
+    {
+      "device_index": 0,
+      "identity_fields_match_selected_record": true,
+      "UA_matches_selected_record": true,
+      "cookie_or_token_header_present": false,
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "episode_vid_matches": true,
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 1.96
+    },
+    {
+      "device_index": 34,
+      "identity_fields_match_selected_record": true,
+      "UA_matches_selected_record": true,
+      "cookie_or_token_header_present": false,
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "episode_vid_matches": true,
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 1.49
+    },
+    {
+      "device_index": 68,
+      "identity_fields_match_selected_record": true,
+      "UA_matches_selected_record": true,
+      "cookie_or_token_header_present": false,
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "episode_vid_matches": true,
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 0.91
+    },
+    {
+      "device_index": 0,
+      "identity_fields_match_selected_record": true,
+      "UA_matches_selected_record": true,
+      "cookie_or_token_header_present": false,
+      "detail": {
+        "complete": true,
+        "episodes": 74
+      },
+      "episode_vid_matches": true,
+      "models": {
+        "complete": false,
+        "count": 0,
+        "errors": [
+          {
+            "vids": [
+              "7689903116275174462"
+            ],
+            "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+            "stage": "api",
+            "raw_response": {
+              "Code": 110001,
+              "Message": "未知异常",
+              "BaseResp": {
+                "StatusMessage": "unknown error",
+                "StatusCode": 110001
+              }
+            }
+          }
+        ]
+      },
+      "seconds": 3.36
+    }
+  ]
+}

@@ -1,0 +1,6506 @@
+{
+  "hongguo._ext_proxies": {
+    "line": 52,
+    "names": [
+      "HONGGUO_PROXY"
+    ],
+    "args": []
+  },
+  "hongguo._ext_session": {
+    "line": 62,
+    "names": [
+      "getattr",
+      "_tls",
+      "_HAS_CFFI",
+      "IMPERSONATE",
+      "_cffi",
+      "Session",
+      "NT",
+      "HttpsOnlySession",
+      "ext"
+    ],
+    "args": []
+  },
+  "hongguo.http_request": {
+    "line": 73,
+    "names": [
+      "HONGGUO_PROXY",
+      "setdefault",
+      "_ext_proxies",
+      "_ext_session",
+      "_HAS_CFFI",
+      "IMPERSONATE",
+      "request"
+    ],
+    "args": [
+      "method",
+      "url"
+    ]
+  },
+  "hongguo.rotate_device": {
+    "line": 98,
+    "names": [
+      "_pool",
+      "rotate"
+    ],
+    "args": []
+  },
+  "hongguo.Oracle": {
+    "line": 109,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__init__",
+      "sign"
+    ],
+    "args": []
+  },
+  "hongguo.oracle": {
+    "line": 126,
+    "names": [
+      "_oracle",
+      "_oracle_lock",
+      "Oracle"
+    ],
+    "args": []
+  },
+  "hongguo.<listcomp>": {
+    "line": 137,
+    "names": [
+      "strip"
+    ],
+    "args": [
+      ".0"
+    ]
+  },
+  "hongguo._sign_auth_headers": {
+    "line": 140,
+    "names": [
+      "os",
+      "environ",
+      "get"
+    ],
+    "args": []
+  },
+  "hongguo._default_sign_cap": {
+    "line": 164,
+    "names": [
+      "os",
+      "environ",
+      "get",
+      "max",
+      "int",
+      "ValueError",
+      "len",
+      "SIGN_SERVERS"
+    ],
+    "args": []
+  },
+  "hongguo._sign_sem_for": {
+    "line": 176,
+    "names": [
+      "_sign_sems",
+      "get",
+      "_sign_sems_lock",
+      "threading",
+      "BoundedSemaphore",
+      "_default_sign_cap"
+    ],
+    "args": [
+      "base"
+    ]
+  },
+  "hongguo._sign_mark": {
+    "line": 202,
+    "names": [
+      "_sign_state_lock",
+      "_sign_warm",
+      "_sign_stats"
+    ],
+    "args": [
+      "base",
+      "ok"
+    ]
+  },
+  "hongguo._sign_mark_cold": {
+    "line": 208,
+    "names": [
+      "_sign_state_lock",
+      "_sign_warm"
+    ],
+    "args": [
+      "base"
+    ]
+  },
+  "hongguo._sign_mark_fail": {
+    "line": 211,
+    "names": [
+      "_sign_state_lock",
+      "_sign_stats"
+    ],
+    "args": []
+  },
+  "hongguo._sign_is_warm": {
+    "line": 214,
+    "names": [
+      "_sign_state_lock",
+      "_sign_warm",
+      "get"
+    ],
+    "args": [
+      "base"
+    ]
+  },
+  "hongguo.sign_stats": {
+    "line": 218,
+    "names": [
+      "_sign_state_lock",
+      "_sign_stats"
+    ],
+    "args": []
+  },
+  "hongguo.mark_signer_cold": {
+    "line": 229,
+    "names": [
+      "time",
+      "monotonic",
+      "float",
+      "_signer_cold_until"
+    ],
+    "args": [
+      "seconds"
+    ]
+  },
+  "hongguo._sign_window": {
+    "line": 248,
+    "names": [
+      "_sign_state_lock",
+      "_sign_win",
+      "max",
+      "time",
+      "monotonic"
+    ],
+    "args": [
+      "d",
+      "since"
+    ]
+  },
+  "hongguo.sign_degraded": {
+    "line": 258,
+    "names": [
+      "_sign_win",
+      "time",
+      "monotonic",
+      "SIGN_SLOW_AFTER_S"
+    ],
+    "args": []
+  },
+  "hongguo._prio_enter": {
+    "line": 275,
+    "names": [
+      "_prio_cv",
+      "_prio"
+    ],
+    "args": []
+  },
+  "hongguo._prio_leave": {
+    "line": 280,
+    "names": [
+      "_prio_cv",
+      "max",
+      "_prio",
+      "notify_all"
+    ],
+    "args": []
+  },
+  "hongguo._prio_wait": {
+    "line": 287,
+    "names": [
+      "_prio_cv",
+      "_prio",
+      "_sign_win",
+      "time",
+      "monotonic",
+      "wait",
+      "min"
+    ],
+    "args": [
+      "end"
+    ]
+  },
+  "hongguo._sign_permit": {
+    "line": 297,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__slots__",
+      "__init__",
+      "__enter__",
+      "__exit__"
+    ],
+    "args": []
+  },
+  "hongguo._next_sign_server": {
+    "line": 322,
+    "names": [
+      "_sign_rr_lock",
+      "_sign_rr",
+      "len",
+      "SIGN_SERVERS",
+      "max"
+    ],
+    "args": []
+  },
+  "hongguo._sign_session": {
+    "line": 329,
+    "names": [
+      "getattr",
+      "_tls",
+      "requests",
+      "Session",
+      "trust_env",
+      "mount",
+      "adapters",
+      "HTTPAdapter",
+      "sign"
+    ],
+    "args": []
+  },
+  "hongguo._reset_sign_session": {
+    "line": 340,
+    "names": [
+      "getattr",
+      "_tls",
+      "sign",
+      "close",
+      "Exception"
+    ],
+    "args": []
+  },
+  "hongguo._sign_post_once": {
+    "line": 355,
+    "names": [
+      "_sign_session",
+      "_sign_permit",
+      "time",
+      "monotonic",
+      "_tls",
+      "sign_t0",
+      "post",
+      "rstrip",
+      "_sign_auth_headers",
+      "raise_for_status",
+      "json",
+      "RuntimeError"
+    ],
+    "args": [
+      "base",
+      "url",
+      "headers",
+      "timeout"
+    ]
+  },
+  "hongguo.sign": {
+    "line": 375,
+    "names": [
+      "SIGN_SERVERS",
+      "_oracle_lock",
+      "oracle",
+      "sign",
+      "time",
+      "monotonic",
+      "_SIGN_CONN_WINDOW",
+      "range",
+      "len",
+      "_next_sign_server",
+      "_sign_is_warm",
+      "_signer_cold_until",
+      "max",
+      "_SIGN_COLD_TIMEOUT",
+      "_sign_post_once",
+      "_sign_mark",
+      "_sign_window",
+      "requests",
+      "exceptions",
+      "ConnectionError",
+      "getattr",
+      "_tls",
+      "_sign_mark_cold",
+      "_reset_sign_session",
+      "append",
+      "Exception",
+      "type",
+      "__name__",
+      "sleep",
+      "min",
+      "_sign_mark_fail",
+      "RuntimeError",
+      "join"
+    ],
+    "args": [
+      "url",
+      "headers",
+      "timeout",
+      "warm"
+    ]
+  },
+  "hongguo.refresh_session": {
+    "line": 437,
+    "names": [
+      "_refresh_lock",
+      "time",
+      "_last_refresh",
+      "SIGN_SERVERS",
+      "_sign_sem_for",
+      "requests",
+      "Session",
+      "trust_env",
+      "get",
+      "rstrip",
+      "_sign_auth_headers",
+      "json",
+      "print",
+      "urllib.parse",
+      "urlparse",
+      "parse_qsl",
+      "dict",
+      "query",
+      "set",
+      "CFG",
+      "keys",
+      "items",
+      "lower",
+      "strip",
+      "dump",
+      "open",
+      "os",
+      "path",
+      "join",
+      "HERE",
+      "Exception",
+      "len"
+    ],
+    "args": []
+  },
+  "hongguo.build_url": {
+    "line": 482,
+    "names": [
+      "dict",
+      "CFG",
+      "_pool",
+      "update",
+      "current",
+      "str",
+      "int",
+      "time",
+      "join",
+      "items",
+      "HOST"
+    ],
+    "args": [
+      "path",
+      "extra",
+      "host"
+    ]
+  },
+  "hongguo._req_headers": {
+    "line": 494,
+    "names": [
+      "dict",
+      "CFG",
+      "_pool",
+      "current",
+      "get",
+      "pop",
+      "hashlib",
+      "md5",
+      "hexdigest",
+      "upper"
+    ],
+    "args": [
+      "data"
+    ]
+  },
+  "hongguo._api_once": {
+    "line": 510,
+    "names": [
+      "getattr",
+      "_tls",
+      "_prio_enter",
+      "build_url",
+      "json",
+      "dumps",
+      "encode",
+      "_req_headers",
+      "_src",
+      "_signer_warm",
+      "signer_reachable",
+      "_source_down",
+      "RuntimeError",
+      "update",
+      "sign",
+      "pop",
+      "SG",
+      "throttle",
+      "wait",
+      "_prio_leave",
+      "http_request",
+      "check_response",
+      "_VM_PATHS",
+      "_vm_dead",
+      "_VmDead"
+    ],
+    "args": [
+      "method",
+      "path",
+      "body",
+      "extra_query",
+      "signed",
+      "timeout",
+      "sign_timeout",
+      "host"
+    ]
+  },
+  "hongguo.api": {
+    "line": 547,
+    "names": [
+      "_ensure_retester",
+      "_api_once",
+      "_source_good",
+      "Exception",
+      "AuthExpiredError",
+      "print",
+      "refresh_session",
+      "time",
+      "sleep",
+      "RiskControlError",
+      "_STRIKE_PATHS",
+      "_risk_reply",
+      "rotate_device",
+      "scrub_urls",
+      "requests",
+      "RequestException",
+      "ValueError",
+      "is_cert_error",
+      "NT",
+      "cert_hint",
+      "_conn_failure",
+      "HOST",
+      "API_HOST_B",
+      "_src",
+      "_source_strike",
+      "RuntimeError"
+    ],
+    "args": [
+      "method",
+      "path",
+      "body",
+      "extra_query",
+      "max_retries",
+      "signed",
+      "timeout",
+      "sign_timeout"
+    ]
+  },
+  "hongguo.warm_up": {
+    "line": 629,
+    "names": [
+      "SIGN_SERVERS",
+      "HONGGUO_PROXY",
+      "socket",
+      "HOST",
+      "API_HOST_B",
+      "getaddrinfo",
+      "SOCK_STREAM",
+      "OSError",
+      "UnicodeError",
+      "_ss_gen",
+      "_WARM_SHAPES",
+      "_prio",
+      "json",
+      "dumps",
+      "_episodes_body",
+      "_WARM_ID",
+      "encode",
+      "sign",
+      "build_url",
+      "_req_headers"
+    ],
+    "args": []
+  },
+  "hongguo._conn_failure": {
+    "line": 691,
+    "names": [
+      "isinstance",
+      "requests",
+      "exceptions",
+      "ConnectionError",
+      "SSLError",
+      "is_cert_error"
+    ],
+    "args": [
+      "e"
+    ]
+  },
+  "hongguo.signer_reachable": {
+    "line": 704,
+    "names": [
+      "SIGN_SERVERS",
+      "time",
+      "monotonic",
+      "tuple",
+      "_signer_seen",
+      "SIGNER_SEEN_S",
+      "socket",
+      "urllib.parse",
+      "urlsplit",
+      "create_connection",
+      "hostname",
+      "port",
+      "scheme",
+      "OSError",
+      "ValueError",
+      "update"
+    ],
+    "args": [
+      "timeout",
+      "fresh"
+    ]
+  },
+  "hongguo._signer_warm": {
+    "line": 728,
+    "names": [
+      "SIGN_SERVERS",
+      "any",
+      "list"
+    ],
+    "args": []
+  },
+  "hongguo.source_down": {
+    "line": 734,
+    "names": [
+      "_src"
+    ],
+    "args": []
+  },
+  "hongguo.source_ok": {
+    "line": 739,
+    "names": [
+      "_src"
+    ],
+    "args": []
+  },
+  "hongguo.source_health": {
+    "line": 745,
+    "names": [
+      "_ensure_retester",
+      "_src_lock",
+      "_src",
+      "max",
+      "int",
+      "_retest_gap",
+      "time",
+      "sign_degraded"
+    ],
+    "args": []
+  },
+  "hongguo._src_log": {
+    "line": 761,
+    "names": [
+      "print",
+      "Exception"
+    ],
+    "args": [
+      "msg"
+    ]
+  },
+  "hongguo._probe_spec": {
+    "line": 769,
+    "names": [
+      "json",
+      "loads",
+      "dumps",
+      "isinstance",
+      "dict"
+    ],
+    "args": [
+      "spec"
+    ]
+  },
+  "hongguo._source_down": {
+    "line": 778,
+    "names": [
+      "_probe_spec",
+      "Exception",
+      "_src_lock",
+      "_src",
+      "time",
+      "update",
+      "_src_log",
+      "_ensure_retester"
+    ],
+    "args": [
+      "reason",
+      "probe"
+    ]
+  },
+  "hongguo._ensure_retester": {
+    "line": 796,
+    "names": [
+      "_src",
+      "_src_lock",
+      "is_alive",
+      "threading",
+      "Thread",
+      "_source_retester",
+      "start",
+      "Exception"
+    ],
+    "args": []
+  },
+  "hongguo._source_up": {
+    "line": 811,
+    "names": [
+      "_src_lock",
+      "_src",
+      "update",
+      "_src_log"
+    ],
+    "args": [
+      "why"
+    ]
+  },
+  "hongguo._source_good": {
+    "line": 819,
+    "names": [
+      "_src",
+      "_src_lock",
+      "_source_up",
+      "_VM_PATHS"
+    ],
+    "args": [
+      "signed",
+      "path"
+    ]
+  },
+  "hongguo._source_strike": {
+    "line": 839,
+    "names": [
+      "time",
+      "_src_lock",
+      "_src",
+      "SOURCE_BAD_N",
+      "len",
+      "_source_down"
+    ],
+    "args": [
+      "kind",
+      "spec"
+    ]
+  },
+  "hongguo._risk_reply": {
+    "line": 851,
+    "names": [
+      "str",
+      "startswith"
+    ],
+    "args": [
+      "e"
+    ]
+  },
+  "hongguo._retest_gap": {
+    "line": 857,
+    "names": [
+      "_src",
+      "SOURCE_PROBE_GAP_S",
+      "time",
+      "SOURCE_LONG_AFTER_S",
+      "SOURCE_RETEST_LONG_S",
+      "SOURCE_RETEST_S"
+    ],
+    "args": []
+  },
+  "hongguo._probe_verdict": {
+    "line": 869,
+    "names": [
+      "is_cert_error",
+      "isinstance",
+      "RiskControlError",
+      "_risk_reply",
+      "AuthExpiredError",
+      "ContentUnavailableError",
+      "requests",
+      "RequestException",
+      "ValueError",
+      "_conn_failure",
+      "RuntimeError"
+    ],
+    "args": [
+      "ex"
+    ]
+  },
+  "hongguo._source_probe": {
+    "line": 886,
+    "names": [
+      "_src",
+      "_source_up",
+      "_PROBE_DEFAULT",
+      "signer_reachable",
+      "time",
+      "_retest_gap",
+      "_src_lock",
+      "_VM_PATHS",
+      "_vm_alive",
+      "api",
+      "Exception",
+      "_probe_verdict",
+      "_src_log",
+      "update"
+    ],
+    "args": []
+  },
+  "hongguo._source_retester": {
+    "line": 928,
+    "names": [
+      "_src",
+      "time",
+      "sleep",
+      "SOURCE_TICK_S",
+      "_source_probe",
+      "Exception"
+    ],
+    "args": []
+  },
+  "hongguo._cover_tags": {
+    "line": 940,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "list",
+      "append",
+      "re",
+      "sub",
+      "str"
+    ],
+    "args": [
+      "d"
+    ]
+  },
+  "hongguo._parse_search_cell": {
+    "line": 954,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "bool",
+      "int",
+      "str",
+      "list",
+      "re",
+      "sub",
+      "next",
+      "_cover_tags"
+    ],
+    "args": [
+      "cell"
+    ]
+  },
+  "hongguo.search": {
+    "line": 1005,
+    "names": [
+      "int",
+      "os",
+      "environ",
+      "get",
+      "max",
+      "min",
+      "SG",
+      "cache_key",
+      "cache_get",
+      "set",
+      "range",
+      "str",
+      "api",
+      "_parse_search_cell",
+      "Exception",
+      "add",
+      "append",
+      "len",
+      "cache_set"
+    ],
+    "args": [
+      "query",
+      "max_items",
+      "max_pages"
+    ]
+  },
+  "hongguo.search_cached": {
+    "line": 1057,
+    "names": [
+      "max",
+      "min",
+      "int",
+      "os",
+      "environ",
+      "get",
+      "SG",
+      "cache_get",
+      "cache_key",
+      "Exception"
+    ],
+    "args": [
+      "query"
+    ]
+  },
+  "hongguo._episodes_body": {
+    "line": 1067,
+    "names": [
+      "IMAGE_SHRINK"
+    ],
+    "args": [
+      "series_id"
+    ]
+  },
+  "hongguo._ep_index": {
+    "line": 1076,
+    "names": [
+      "isinstance",
+      "str",
+      "strip",
+      "len",
+      "isascii",
+      "isdigit",
+      "int",
+      "bool"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "hongguo._plat_id": {
+    "line": 1090,
+    "names": [
+      "isinstance",
+      "bool",
+      "int",
+      "str",
+      "len",
+      "isascii",
+      "isdigit"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "hongguo._cn_int": {
+    "line": 1105,
+    "names": [
+      "isascii",
+      "isdigit",
+      "int",
+      "partition",
+      "_CN_DIGIT",
+      "get",
+      "len"
+    ],
+    "args": [
+      "s"
+    ]
+  },
+  "hongguo._season_no": {
+    "line": 1117,
+    "names": [
+      "isinstance",
+      "list",
+      "dict",
+      "get",
+      "bool",
+      "str",
+      "len",
+      "re",
+      "fullmatch",
+      "strip",
+      "_cn_int",
+      "group"
+    ],
+    "args": [
+      "infos"
+    ]
+  },
+  "hongguo._parse_episode_detail": {
+    "line": 1134,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "list",
+      "_ep_index",
+      "append",
+      "str",
+      "sort",
+      "next",
+      "len",
+      "re",
+      "findall",
+      "_plat_id",
+      "_season_no"
+    ],
+    "args": [
+      "sid",
+      "vd"
+    ]
+  },
+  "hongguo.get_episodes": {
+    "line": 1183,
+    "names": [
+      "str",
+      "SG",
+      "cache_key",
+      "cache_get",
+      "api",
+      "_episodes_body",
+      "get",
+      "isinstance",
+      "dict",
+      "_parse_episode_detail",
+      "cache_set"
+    ],
+    "args": [
+      "series_id",
+      "max_retries",
+      "timeout",
+      "sign_timeout"
+    ]
+  },
+  "hongguo.get_collection": {
+    "line": 1198,
+    "names": [
+      "range",
+      "str",
+      "api",
+      "Exception",
+      "print",
+      "get",
+      "re",
+      "search",
+      "group",
+      "len",
+      "list",
+      "values"
+    ],
+    "args": [
+      "tab_types",
+      "page_limit",
+      "max_pages"
+    ]
+  },
+  "hongguo.get_episodes_batch": {
+    "line": 1231,
+    "names": [
+      "set",
+      "str",
+      "strip",
+      "add",
+      "append",
+      "max",
+      "min",
+      "int",
+      "SG",
+      "cache_get",
+      "cache_key",
+      "range",
+      "len",
+      "api",
+      "_episodes_body",
+      "join",
+      "get",
+      "Exception",
+      "extend",
+      "isinstance",
+      "dict",
+      "_parse_episode_detail",
+      "cache_set"
+    ],
+    "args": [
+      "series_ids",
+      "batch_size"
+    ]
+  },
+  "hongguo.get_episodes_multi": {
+    "line": 1271,
+    "names": [
+      "set",
+      "str",
+      "strip",
+      "add",
+      "append",
+      "max",
+      "min",
+      "int",
+      "SG",
+      "cache_get",
+      "cache_key",
+      "range",
+      "len",
+      "api",
+      "_episodes_body",
+      "join",
+      "get",
+      "Exception",
+      "print",
+      "scrub_urls",
+      "isinstance",
+      "dict",
+      "_parse_episode_detail",
+      "cache_set"
+    ],
+    "args": [
+      "series_ids",
+      "batch_size",
+      "force"
+    ]
+  },
+  "hongguo._season_entry": {
+    "line": 1324,
+    "names": [
+      "_plat_id",
+      "isinstance",
+      "str",
+      "re",
+      "fullmatch",
+      "_ep_index",
+      "float"
+    ],
+    "args": [
+      "sid",
+      "title",
+      "eps",
+      "score"
+    ]
+  },
+  "hongguo.series_plan": {
+    "line": 1337,
+    "names": [
+      "_plat_id",
+      "str",
+      "SG",
+      "cache_key",
+      "cache_get",
+      "api",
+      "isinstance",
+      "dict",
+      "get",
+      "list",
+      "SEASON_LIST_MAX",
+      "_season_entry",
+      "len",
+      "add",
+      "append",
+      "cache_set",
+      "_SEASON_LIST_TTL"
+    ],
+    "args": [
+      "stick_id"
+    ]
+  },
+  "hongguo.suggest": {
+    "line": 1369,
+    "names": [
+      "isinstance",
+      "str",
+      "strip",
+      "len",
+      "SG",
+      "cache_key",
+      "cache_get",
+      "api",
+      "dict",
+      "get",
+      "set",
+      "list",
+      "SEASON_LIST_MAX",
+      "_SUGGEST_KINDS",
+      "_plat_id",
+      "_season_entry",
+      "add",
+      "append",
+      "cache_set",
+      "_SEASON_LIST_TTL"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._Stale": {
+    "line": 1454,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__slots__",
+      "__init__",
+      "is_set"
+    ],
+    "args": []
+  },
+  "hongguo._SearchSlow": {
+    "line": 1466,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "hongguo._search_card": {
+    "line": 1471,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "str",
+      "len",
+      "SEARCH_CARD_MAX",
+      "json",
+      "loads",
+      "ValueError",
+      "RecursionError",
+      "_SEARCH_CARDS",
+      "_SEARCH_CARD_IDS",
+      "set",
+      "list",
+      "SEASON_LIST_MAX",
+      "next",
+      "_season_entry",
+      "int",
+      "bool",
+      "startswith",
+      "add",
+      "append",
+      "urllib.parse",
+      "unquote",
+      "range",
+      "_SEARCH_STICK_RE",
+      "search",
+      "group",
+      "split",
+      "_plat_id"
+    ],
+    "args": [
+      "cell"
+    ]
+  },
+  "hongguo._search_page": {
+    "line": 1530,
+    "names": [
+      "str",
+      "get",
+      "api",
+      "isinstance",
+      "dict",
+      "list",
+      "set",
+      "_search_card",
+      "append",
+      "_parse_search_cell",
+      "Exception",
+      "_plat_id",
+      "add",
+      "SEARCH_PAGES_MAX",
+      "isascii",
+      "isdigit",
+      "len",
+      "int",
+      "bool"
+    ],
+    "args": [
+      "q",
+      "st"
+    ]
+  },
+  "hongguo.episodes_cached": {
+    "line": 1574,
+    "names": [
+      "SG",
+      "cache_get",
+      "cache_key",
+      "str"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "hongguo.suggest_cached": {
+    "line": 1579,
+    "names": [
+      "isinstance",
+      "str",
+      "strip",
+      "bool",
+      "len",
+      "SG",
+      "cache_get",
+      "cache_key"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._ss_flight": {
+    "line": 1585,
+    "names": [
+      "_ss_lock",
+      "_ss_flights",
+      "get",
+      "len",
+      "items",
+      "pop",
+      "threading",
+      "Lock"
+    ],
+    "args": [
+      "kind",
+      "key"
+    ]
+  },
+  "hongguo._ss_page1": {
+    "line": 1598,
+    "names": [
+      "SG",
+      "cache_key",
+      "cache_get",
+      "_ss_flight",
+      "_tls",
+      "prio",
+      "_search_page",
+      "cache_set",
+      "SEARCH_TTL"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._ss_cursor": {
+    "line": 1616,
+    "names": [
+      "secrets",
+      "token_urlsafe",
+      "time",
+      "_ss_lock",
+      "_ss_cursors",
+      "items",
+      "pop",
+      "len",
+      "SEARCH_CURSORS_MAX",
+      "min",
+      "dict",
+      "tuple",
+      "SEARCH_SEEN_MAX"
+    ],
+    "args": [
+      "q",
+      "st",
+      "seen"
+    ]
+  },
+  "hongguo._ss_more": {
+    "line": 1633,
+    "names": [
+      "_ss_lock",
+      "_ss_cursors",
+      "get",
+      "time",
+      "SEARCH_CURSOR_TTL",
+      "_ss_flight",
+      "set",
+      "_ss_web_items",
+      "range",
+      "_search_page",
+      "add",
+      "append",
+      "_ss_cursor",
+      "list"
+    ],
+    "args": [
+      "q",
+      "tok"
+    ]
+  },
+  "hongguo._season_finder": {
+    "line": 1657,
+    "names": [
+      "offline_dl",
+      "search_seasons",
+      "Exception"
+    ],
+    "args": []
+  },
+  "hongguo._ss_executor": {
+    "line": 1667,
+    "names": [
+      "_ss_lock",
+      "_ss_pool",
+      "concurrent.futures",
+      "ThreadPoolExecutor"
+    ],
+    "args": []
+  },
+  "hongguo._ss_site_executor": {
+    "line": 1677,
+    "names": [
+      "_ss_lock",
+      "_ss_site",
+      "concurrent.futures",
+      "ThreadPoolExecutor"
+    ],
+    "args": []
+  },
+  "hongguo._ss_task": {
+    "line": 1688,
+    "names": [
+      "_ss_executor",
+      "time",
+      "_ss_lock",
+      "get",
+      "done",
+      "exception",
+      "result",
+      "SEARCH_TTL",
+      "items",
+      "pop",
+      "len",
+      "min",
+      "submit"
+    ],
+    "args": [
+      "reg",
+      "q",
+      "fn",
+      "pool"
+    ]
+  },
+  "hongguo._ss_web": {
+    "line": 1708,
+    "names": [
+      "_ss_task",
+      "_ss_webs",
+      "_ss_web_run",
+      "_ss_site_executor"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._ss_pre": {
+    "line": 1713,
+    "names": [
+      "_ss_task",
+      "_ss_pres",
+      "_ss_pre_run"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._ss_pre_run": {
+    "line": 1719,
+    "names": [
+      "time",
+      "sleep",
+      "SEARCH_PRE_DELAY",
+      "_Stale",
+      "is_set",
+      "source_down",
+      "offline_dl",
+      "search_prefetch",
+      "Exception",
+      "print",
+      "type",
+      "__name__",
+      "scrub_urls"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._ss_pre_result": {
+    "line": 1733,
+    "names": [
+      "_ss_lock",
+      "_ss_pres",
+      "get",
+      "result",
+      "Exception",
+      "done"
+    ],
+    "args": [
+      "q",
+      "wait"
+    ]
+  },
+  "hongguo._ss_web_run": {
+    "line": 1747,
+    "names": [
+      "offline_dl",
+      "hgdj_search",
+      "Exception",
+      "print",
+      "type",
+      "__name__",
+      "scrub_urls",
+      "is_cert_error"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "hongguo._ss_web_items": {
+    "line": 1761,
+    "names": [
+      "_ss_lock",
+      "_ss_webs",
+      "get",
+      "result",
+      "done",
+      "Exception"
+    ],
+    "args": [
+      "q",
+      "wait"
+    ]
+  },
+  "hongguo._ss_strip": {
+    "line": 1775,
+    "names": [
+      "_season_finder",
+      "Exception",
+      "is_cert_error",
+      "print",
+      "type",
+      "__name__",
+      "scrub_urls"
+    ],
+    "args": [
+      "q",
+      "p1",
+      "lookup",
+      "web",
+      "pre",
+      "stop"
+    ]
+  },
+  "hongguo._ss_strip_full": {
+    "line": 1791,
+    "names": [
+      "SG",
+      "cache_key",
+      "cache_get",
+      "_Stale",
+      "_ss_flight",
+      "is_set",
+      "source_down",
+      "time",
+      "monotonic",
+      "SEARCH_WEB_WAIT",
+      "_ss_strip",
+      "cache_set",
+      "get",
+      "SEARCH_TTL"
+    ],
+    "args": [
+      "q",
+      "p1"
+    ]
+  },
+  "hongguo._ss_p1_fetch": {
+    "line": 1821,
+    "names": [
+      "_ss_executor",
+      "time",
+      "_ss_lock",
+      "_ss_p1s",
+      "get",
+      "done",
+      "_ss_gen",
+      "items",
+      "pop",
+      "len",
+      "min",
+      "submit",
+      "_ss_page1"
+    ],
+    "args": [
+      "q",
+      "again"
+    ]
+  },
+  "hongguo._ss_page1_within": {
+    "line": 1842,
+    "names": [
+      "SG",
+      "cache_get",
+      "cache_key",
+      "_ss_p1_fetch",
+      "_SearchSlow",
+      "concurrent.futures",
+      "TimeoutError",
+      "time",
+      "monotonic",
+      "source_down",
+      "SEARCH_P1_WAIT_SLOW",
+      "sign_degraded",
+      "done",
+      "result",
+      "min"
+    ],
+    "args": [
+      "q",
+      "wait",
+      "again"
+    ]
+  },
+  "hongguo._ss_backup": {
+    "line": 1866,
+    "names": [
+      "_ss_web",
+      "done",
+      "result",
+      "Exception",
+      "is_cert_error",
+      "SG",
+      "cache_get",
+      "cache_key",
+      "get",
+      "SEARCH_BACKUP_WAIT",
+      "type",
+      "__name__",
+      "print"
+    ],
+    "args": [
+      "q",
+      "why"
+    ]
+  },
+  "hongguo._ss_kick": {
+    "line": 1899,
+    "names": [
+      "_ss_lock",
+      "_ss_jobs",
+      "concurrent.futures",
+      "ThreadPoolExecutor",
+      "submit"
+    ],
+    "args": [
+      "q",
+      "p1"
+    ]
+  },
+  "hongguo.search_series": {
+    "line": 1915,
+    "names": [
+      "isinstance",
+      "str",
+      "strip",
+      "len",
+      "SEARCH_Q_MAX",
+      "_ss_more",
+      "bool",
+      "_ss_lock",
+      "_ss_gen",
+      "_ss_web",
+      "source_ok",
+      "_ss_backup",
+      "SG",
+      "cache_key",
+      "cache_get",
+      "_ss_pre",
+      "_ss_page1",
+      "_ss_page1_within",
+      "SEARCH_REASK_WAIT",
+      "SEARCH_P1_WAIT",
+      "_SearchSlow",
+      "source_down",
+      "Exception",
+      "is_cert_error",
+      "_ss_web_items",
+      "SEARCH_WEB_WAIT",
+      "_ss_cursor",
+      "_ss_strip_full",
+      "_Stale",
+      "is_set",
+      "_ss_kick",
+      "_ss_strip",
+      "update",
+      "get",
+      "dict",
+      "_plat_id",
+      "add",
+      "append"
+    ],
+    "args": [
+      "q",
+      "cursor",
+      "seasons",
+      "again"
+    ]
+  },
+  "hongguo._VmDead": {
+    "line": 2016,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "hongguo._vm_dead": {
+    "line": 2021,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "_VM_TAB",
+      "_VM_ONE"
+    ],
+    "args": [
+      "path",
+      "j"
+    ]
+  },
+  "hongguo._vm_tab_query": {
+    "line": 2038,
+    "names": [
+      "join"
+    ],
+    "args": [
+      "vids"
+    ]
+  },
+  "hongguo._vm_body": {
+    "line": 2045,
+    "names": [
+      "dict",
+      "_VM_BIZ",
+      "str"
+    ],
+    "args": [
+      "vids",
+      "vid"
+    ]
+  },
+  "hongguo._vm_entry": {
+    "line": 2051,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "json",
+      "loads",
+      "ValueError",
+      "TypeError",
+      "AttributeError",
+      "_VmDead",
+      "type",
+      "__name__"
+    ],
+    "args": [
+      "e"
+    ]
+  },
+  "hongguo._vm_ttl": {
+    "line": 2065,
+    "names": [
+      "float",
+      "time",
+      "_VM_EXPIRE_MARGIN",
+      "TypeError",
+      "ValueError",
+      "_VM_TTL",
+      "min"
+    ],
+    "args": [
+      "expire_time"
+    ]
+  },
+  "hongguo._vm_kind": {
+    "line": 2073,
+    "names": [
+      "isinstance",
+      "RiskControlError",
+      "_risk_reply",
+      "ValueError",
+      "_conn_failure"
+    ],
+    "args": [
+      "e"
+    ]
+  },
+  "hongguo._vm_tab_pass": {
+    "line": 2083,
+    "names": [
+      "range",
+      "len",
+      "api",
+      "_VM_TAB",
+      "_vm_tab_query",
+      "get",
+      "Exception",
+      "is_cert_error",
+      "append",
+      "_vm_entry",
+      "_VmDead"
+    ],
+    "args": [
+      "vids",
+      "out",
+      "n"
+    ]
+  },
+  "hongguo._vm_lookup": {
+    "line": 2108,
+    "names": [
+      "max",
+      "min",
+      "int",
+      "_VM_BATCH_N",
+      "_vm_tab_pass",
+      "range",
+      "len",
+      "api",
+      "_VM_BATCH",
+      "_vm_body",
+      "Exception",
+      "is_cert_error",
+      "print",
+      "scrub_urls",
+      "append",
+      "_vm_entry",
+      "_VmDead",
+      "_VM_ONE",
+      "ContentUnavailableError",
+      "_vm_kind",
+      "_source_strike"
+    ],
+    "args": [
+      "vids",
+      "batch_size"
+    ]
+  },
+  "hongguo._vm_alive": {
+    "line": 2160,
+    "names": [
+      "str",
+      "get",
+      "split",
+      "Exception",
+      "is_cert_error",
+      "api",
+      "_VM_ONE",
+      "_vm_body"
+    ],
+    "args": [
+      "body",
+      "extra"
+    ]
+  },
+  "hongguo.get_video_urls": {
+    "line": 2181,
+    "names": [
+      "get_video_tracks",
+      "items",
+      "get"
+    ],
+    "args": [
+      "vids",
+      "force"
+    ]
+  },
+  "hongguo.get_video_tracks": {
+    "line": 2198,
+    "names": [
+      "set",
+      "str",
+      "add",
+      "SG",
+      "cache_get",
+      "cache_key",
+      "append",
+      "_vm_lookup",
+      "items",
+      "_vm_ttl",
+      "cache_set"
+    ],
+    "args": [
+      "vids",
+      "force",
+      "batch_size"
+    ]
+  },
+  "hongguo._is_today_ts": {
+    "line": 2230,
+    "names": [
+      "datetime",
+      "utcfromtimestamp",
+      "timedelta",
+      "date",
+      "utcnow"
+    ],
+    "args": [
+      "ts"
+    ]
+  },
+  "hongguo.rank": {
+    "line": 2249,
+    "names": [
+      "SG",
+      "cache_key",
+      "cache_get",
+      "RANK_BOARDS",
+      "get",
+      "str",
+      "uuid",
+      "uuid4",
+      "len",
+      "COMIC_RANK_CELL",
+      "api",
+      "SIGN_LIST",
+      "isinstance",
+      "list",
+      "append",
+      "cache_set"
+    ],
+    "args": [
+      "board",
+      "limit"
+    ]
+  },
+  "hongguo.latest": {
+    "line": 2305,
+    "names": [
+      "GENRES",
+      "ValueError",
+      "list",
+      "len",
+      "join",
+      "api",
+      "SIGN_LIST",
+      "get",
+      "str",
+      "append",
+      "re",
+      "findall",
+      "match"
+    ],
+    "args": [
+      "genre",
+      "only_today",
+      "max_items",
+      "stop_ids",
+      "refresh"
+    ]
+  },
+  "hongguo._ids": {
+    "line": 2400,
+    "names": [
+      "isinstance",
+      "list",
+      "tuple",
+      "str",
+      "strip",
+      "append",
+      "get"
+    ],
+    "args": [
+      "val",
+      "mapping"
+    ]
+  },
+  "hongguo.filters": {
+    "line": 2413,
+    "names": [
+      "GENRES",
+      "get",
+      "api",
+      "SIGN_LIST"
+    ],
+    "args": [
+      "genre"
+    ]
+  },
+  "hongguo.browse": {
+    "line": 2428,
+    "names": [
+      "GENRES",
+      "ValueError",
+      "list",
+      "_ids",
+      "FILTER_CATE",
+      "FILTER_SORT",
+      "FILTER_GENDER",
+      "FILTER_STATUS",
+      "FILTER_DAYS",
+      "len",
+      "join",
+      "api",
+      "SIGN_LIST",
+      "get",
+      "str",
+      "append",
+      "re",
+      "findall",
+      "_cover_tags"
+    ],
+    "args": [
+      "genre",
+      "theme",
+      "setting",
+      "background",
+      "sort",
+      "gender",
+      "days",
+      "status",
+      "max_items"
+    ]
+  },
+  "hongguo.feed_page": {
+    "line": 2490,
+    "names": [
+      "FEED_SORT",
+      "get",
+      "SG",
+      "cache_key",
+      "int",
+      "cache_get",
+      "GENRES",
+      "set",
+      "len",
+      "api",
+      "SIGN_LIST",
+      "str",
+      "add",
+      "re",
+      "findall",
+      "append",
+      "join",
+      "bool",
+      "cache_set"
+    ],
+    "args": [
+      "board",
+      "offset",
+      "size"
+    ]
+  },
+  "hongguo.leaderboard_page": {
+    "line": 2549,
+    "names": [
+      "LB_KEYS",
+      "get",
+      "SG",
+      "cache_key",
+      "int",
+      "cache_get",
+      "str",
+      "uuid",
+      "uuid4",
+      "set",
+      "len",
+      "RANK_CELL",
+      "LB_SEL",
+      "api",
+      "SIGN_LIST",
+      "isinstance",
+      "list",
+      "add",
+      "append",
+      "bool",
+      "cache_set"
+    ],
+    "args": [
+      "category",
+      "board",
+      "offset",
+      "size"
+    ]
+  },
+  "hongguo.sanitize": {
+    "line": 2601,
+    "names": [
+      "re",
+      "sub",
+      "str",
+      "strip",
+      "_RESERVED_NAME",
+      "match"
+    ],
+    "args": [
+      "name",
+      "fallback"
+    ]
+  },
+  "hongguo.img_ext": {
+    "line": 2616,
+    "names": [
+      "split",
+      "lower",
+      "endswith"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "hongguo.download_image": {
+    "line": 2625,
+    "names": [
+      "http_request",
+      "raise_for_status",
+      "open",
+      "write",
+      "content",
+      "Exception",
+      "print",
+      "scrub_urls"
+    ],
+    "args": [
+      "url",
+      "path"
+    ]
+  },
+  "hongguo._url_host": {
+    "line": 2637,
+    "names": [
+      "urllib.parse",
+      "urlsplit",
+      "str",
+      "hostname",
+      "lower",
+      "Exception",
+      "re",
+      "fullmatch"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "hongguo.scrub_urls": {
+    "line": 2651,
+    "names": [
+      "_WITH_URL_RE",
+      "sub",
+      "_URL_PATH_RE",
+      "str",
+      "Exception"
+    ],
+    "args": [
+      "s"
+    ]
+  },
+  "hongguo._cdn_cache": {
+    "line": 2661,
+    "names": [
+      "str",
+      "get",
+      "split",
+      "strip",
+      "re",
+      "search",
+      "group",
+      "join",
+      "sub",
+      "Exception"
+    ],
+    "args": [
+      "headers"
+    ]
+  },
+  "hongguo.download_file": {
+    "line": 2678,
+    "names": [
+      "time",
+      "perf_counter",
+      "http_request",
+      "raise_for_status",
+      "int",
+      "headers",
+      "get",
+      "Exception",
+      "open",
+      "iter_content",
+      "write",
+      "len",
+      "print",
+      "close",
+      "os",
+      "replace",
+      "update",
+      "_url_host",
+      "getattr",
+      "_cdn_cache"
+    ],
+    "args": [
+      "url",
+      "path",
+      "on_bytes",
+      "stats"
+    ]
+  },
+  "hongguo._SplitAbort": {
+    "line": 2828,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "hongguo._PartRefused": {
+    "line": 2832,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "hongguo._PartShort": {
+    "line": 2837,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "hongguo._PartRenew": {
+    "line": 2841,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "hongguo._adl_count": {
+    "line": 2845,
+    "names": [
+      "_ADL_LOCK",
+      "max",
+      "_ADL_OPEN"
+    ],
+    "args": [
+      "d"
+    ]
+  },
+  "hongguo._adl_close": {
+    "line": 2850,
+    "names": [
+      "close",
+      "Exception",
+      "_adl_count"
+    ],
+    "args": [
+      "r"
+    ]
+  },
+  "hongguo._quiet_close": {
+    "line": 2861,
+    "names": [
+      "close",
+      "Exception"
+    ],
+    "args": [
+      "r"
+    ]
+  },
+  "hongguo._adl_streams": {
+    "line": 2868,
+    "names": [
+      "int",
+      "getattr",
+      "Exception",
+      "max",
+      "_ADL_OPEN"
+    ],
+    "args": [
+      "budget"
+    ]
+  },
+  "hongguo._adl_xfer": {
+    "line": 2878,
+    "names": [
+      "_ADL_LOCK",
+      "max",
+      "_ADL_AGG"
+    ],
+    "args": [
+      "d"
+    ]
+  },
+  "hongguo._adl_hdr": {
+    "line": 2885,
+    "names": [
+      "_ADL_LOCK",
+      "max",
+      "_ADL_AGG"
+    ],
+    "args": [
+      "t"
+    ]
+  },
+  "hongguo._adl_lone": {
+    "line": 2892,
+    "names": [
+      "_ADL_AGG"
+    ],
+    "args": []
+  },
+  "hongguo._adl_line": {
+    "line": 2897,
+    "names": [
+      "_ADL_LOCK",
+      "_ADL_AGG",
+      "max",
+      "int",
+      "ADL_JUDGE_S",
+      "pop",
+      "append",
+      "ADL_LINE_HALF_S",
+      "ADL_RAMP_S",
+      "ADL_CLEAN_S",
+      "ADL_LINE_FLOOR",
+      "ADL_LINE_FRAC"
+    ],
+    "args": [
+      "now",
+      "add"
+    ]
+  },
+  "hongguo._adl_recent": {
+    "line": 2926,
+    "names": [
+      "_ADL_LOCK",
+      "_ADL_AGG",
+      "ADL_RECENT_S"
+    ],
+    "args": [
+      "now"
+    ]
+  },
+  "hongguo._cache_cold": {
+    "line": 2936,
+    "names": [
+      "str",
+      "upper"
+    ],
+    "args": [
+      "verdict"
+    ]
+  },
+  "hongguo._cache_memhit": {
+    "line": 2944,
+    "names": [
+      "str",
+      "upper"
+    ],
+    "args": [
+      "verdict"
+    ]
+  },
+  "hongguo._cache_miss": {
+    "line": 2949,
+    "names": [
+      "str",
+      "upper"
+    ],
+    "args": [
+      "verdict"
+    ]
+  },
+  "hongguo._win_rate": {
+    "line": 2957,
+    "names": [
+      "max",
+      "ADL_JUDGE_S",
+      "ADL_RATE_MIN_S"
+    ],
+    "args": [
+      "samp",
+      "pos",
+      "now",
+      "since"
+    ]
+  },
+  "hongguo._cut": {
+    "line": 2968,
+    "names": [
+      "_read_timeout",
+      "ADL_CUT_S"
+    ],
+    "args": [
+      "r"
+    ]
+  },
+  "hongguo._etag": {
+    "line": 2976,
+    "names": [
+      "str",
+      "strip"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "hongguo._fingerprint": {
+    "line": 2981,
+    "names": [
+      "str",
+      "strip",
+      "lower",
+      "_FP_DIFF",
+      "ADL_FP_OFF",
+      "re",
+      "fullmatch"
+    ],
+    "args": [
+      "file_hash"
+    ]
+  },
+  "hongguo._md5_file": {
+    "line": 2990,
+    "names": [
+      "hashlib",
+      "md5",
+      "open",
+      "seek",
+      "iter",
+      "update",
+      "hexdigest"
+    ],
+    "args": [
+      "path",
+      "h",
+      "start"
+    ]
+  },
+  "hongguo._rm": {
+    "line": 3000,
+    "names": [
+      "os",
+      "remove",
+      "OSError"
+    ],
+    "args": [
+      "path"
+    ]
+  },
+  "hongguo._read_timeout": {
+    "line": 3007,
+    "names": [
+      "raw",
+      "_fp",
+      "fp",
+      "_sock",
+      "settimeout",
+      "Exception"
+    ],
+    "args": [
+      "r",
+      "secs"
+    ]
+  },
+  "hongguo._Part": {
+    "line": 3019,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__slots__",
+      "__init__"
+    ],
+    "args": []
+  },
+  "hongguo._Adaptive": {
+    "line": 3062,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__init__",
+      "run",
+      "_start",
+      "_coordinate",
+      "_progress",
+      "_sample",
+      "_judge",
+      "_room",
+      "_split",
+      "_steal",
+      "_can_grow",
+      "_renew",
+      "_rescue",
+      "_settle",
+      "_miss_hold",
+      "_shared_slow",
+      "staticmethod",
+      "_att_verdict",
+      "_audit",
+      "_race_win",
+      "_borrow",
+      "_give",
+      "_backstop",
+      "_range_get",
+      "_part_main"
+    ],
+    "args": []
+  },
+  "hongguo.download_adaptive": {
+    "line": 3859,
+    "names": [
+      "_adl_xfer",
+      "_download_adaptive"
+    ],
+    "args": [
+      "url",
+      "path",
+      "on_bytes",
+      "stats",
+      "budget",
+      "file_hash",
+      "split",
+      "size"
+    ]
+  },
+  "hongguo._want_size": {
+    "line": 3869,
+    "names": [
+      "isinstance",
+      "str",
+      "isascii",
+      "isdigit",
+      "len",
+      "int",
+      "bool"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "hongguo._download_adaptive": {
+    "line": 3876,
+    "names": [
+      "_fingerprint",
+      "re",
+      "fullmatch",
+      "str",
+      "strip",
+      "lower",
+      "time",
+      "perf_counter",
+      "_Adaptive",
+      "ADL_SPLIT",
+      "bool",
+      "run",
+      "_SplitAbort",
+      "OSError",
+      "_rm",
+      "Exception",
+      "type",
+      "__name__",
+      "scrub_urls",
+      "append",
+      "os",
+      "replace",
+      "print",
+      "range",
+      "download_file",
+      "BaseException",
+      "_md5_file",
+      "path",
+      "getsize",
+      "_want_size",
+      "_ADL_LOCK",
+      "_FP_DIFF",
+      "ADL_FP_OFF",
+      "len",
+      "IOError",
+      "update",
+      "int",
+      "get",
+      "max",
+      "host",
+      "cache",
+      "nparts",
+      "retries",
+      "steals",
+      "grows",
+      "races",
+      "race_wins",
+      "stuck"
+    ],
+    "args": [
+      "url",
+      "path",
+      "on_bytes",
+      "stats",
+      "budget",
+      "file_hash",
+      "split",
+      "size"
+    ]
+  },
+  "hongguo.manager": {
+    "line": 3989,
+    "names": [
+      "_dm",
+      "DL",
+      "DownloadManager",
+      "get_episodes",
+      "get_video_urls",
+      "OUT_DIR"
+    ],
+    "args": [
+      "concurrency"
+    ]
+  },
+  "hongguo.cmd_download": {
+    "line": 3996,
+    "names": [
+      "manager",
+      "submit",
+      "status",
+      "get",
+      "print",
+      "startswith",
+      "time",
+      "sleep"
+    ],
+    "args": [
+      "series_id",
+      "rng",
+      "ep_covers"
+    ]
+  },
+  "hongguo.cmd_download_old": {
+    "line": 4013,
+    "names": [
+      "get_episodes",
+      "sanitize",
+      "str",
+      "print",
+      "len",
+      "join",
+      "os",
+      "path",
+      "OUT_DIR",
+      "makedirs",
+      "open",
+      "json",
+      "dump",
+      "get",
+      "img_ext",
+      "exists",
+      "download_image",
+      "re",
+      "match",
+      "int",
+      "group",
+      "isdigit",
+      "get_video_urls",
+      "getsize",
+      "basename",
+      "download_file",
+      "Exception"
+    ],
+    "args": [
+      "series_id",
+      "rng",
+      "ep_covers"
+    ]
+  },
+  "hongguo.main": {
+    "line": 4061,
+    "names": [
+      "sys",
+      "stdout",
+      "reconfigure",
+      "Exception",
+      "len",
+      "argv",
+      "print",
+      "__doc__",
+      "search",
+      "get_episodes",
+      "join",
+      "latest",
+      "GENRE_NAMES",
+      "get",
+      "int",
+      "RANK_NAMES",
+      "rank",
+      "startswith",
+      "cmd_download",
+      "filters",
+      "browse"
+    ],
+    "args": []
+  },
+  "offline_dl.dl_settings": {
+    "line": 74,
+    "names": [
+      "QUALITIES",
+      "QUALITY",
+      "SERIES_AT_ONCE",
+      "min",
+      "EPS_AT_ONCE",
+      "MAX_TOTAL"
+    ],
+    "args": [
+      "quality",
+      "series",
+      "episodes"
+    ]
+  },
+  "offline_dl._Meter": {
+    "line": 96,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__slots__",
+      "__init__",
+      "add",
+      "rate"
+    ],
+    "args": []
+  },
+  "offline_dl._ConnBudget": {
+    "line": 125,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__init__",
+      "take",
+      "give",
+      "reset_peak",
+      "__enter__",
+      "__exit__"
+    ],
+    "args": []
+  },
+  "offline_dl._live_reset": {
+    "line": 177,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "update",
+      "int",
+      "time",
+      "_Meter"
+    ],
+    "args": [
+      "to_check",
+      "phase"
+    ]
+  },
+  "offline_dl._live_finish": {
+    "line": 183,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE"
+    ],
+    "args": [
+      "cancelled"
+    ]
+  },
+  "offline_dl.live_clear": {
+    "line": 189,
+    "names": [
+      "DISK_FULL",
+      "clear",
+      "_LIVE_LOCK",
+      "_LIVE",
+      "update",
+      "int",
+      "time",
+      "_Meter"
+    ],
+    "args": []
+  },
+  "offline_dl._live_running": {
+    "line": 199,
+    "names": [
+      "_LIVE"
+    ],
+    "args": []
+  },
+  "offline_dl._live_series": {
+    "line": 203,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "setdefault",
+      "str",
+      "update"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "offline_dl._live_checked": {
+    "line": 211,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE"
+    ],
+    "args": [
+      "inc",
+      "found",
+      "unread"
+    ]
+  },
+  "offline_dl._live_ep_bytes": {
+    "line": 218,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "get",
+      "str",
+      "setdefault",
+      "int",
+      "time",
+      "monotonic",
+      "_Meter",
+      "add"
+    ],
+    "args": [
+      "sid",
+      "idx",
+      "done",
+      "total"
+    ]
+  },
+  "offline_dl._live_ep_done": {
+    "line": 241,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "get",
+      "str",
+      "int",
+      "pop",
+      "max",
+      "setdefault",
+      "set",
+      "add"
+    ],
+    "args": [
+      "sid",
+      "idx",
+      "ok"
+    ]
+  },
+  "offline_dl._live_queued": {
+    "line": 258,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "setdefault",
+      "str",
+      "set",
+      "update"
+    ],
+    "args": [
+      "sid",
+      "idxs"
+    ]
+  },
+  "offline_dl._live_ep_sizes": {
+    "line": 267,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "get",
+      "str",
+      "setdefault",
+      "update"
+    ],
+    "args": [
+      "sid",
+      "sizes"
+    ]
+  },
+  "offline_dl._live_avg": {
+    "line": 277,
+    "names": [
+      "get",
+      "values",
+      "int",
+      "sum",
+      "len"
+    ],
+    "args": [
+      "s"
+    ]
+  },
+  "offline_dl._live_bytes": {
+    "line": 284,
+    "names": [
+      "get",
+      "int",
+      "_live_avg",
+      "sum",
+      "values",
+      "items",
+      "max"
+    ],
+    "args": [
+      "s",
+      "inflight",
+      "job_avg"
+    ]
+  },
+  "offline_dl.live_snapshot": {
+    "line": 301,
+    "names": [
+      "time",
+      "monotonic",
+      "_LIVE_LOCK",
+      "_LIVE",
+      "values",
+      "get",
+      "int",
+      "sum",
+      "len",
+      "items",
+      "min",
+      "_live_bytes",
+      "append",
+      "bool",
+      "max",
+      "round",
+      "rate",
+      "DISK_FULL",
+      "is_set",
+      "DISK_FULL_MSG"
+    ],
+    "args": []
+  },
+  "offline_dl.set_output_dir": {
+    "line": 352,
+    "names": [
+      "strip",
+      "os",
+      "path",
+      "abspath",
+      "expanduser",
+      "OUT",
+      "makedirs"
+    ],
+    "args": [
+      "path"
+    ]
+  },
+  "offline_dl.log": {
+    "line": 359,
+    "names": [
+      "_plock",
+      "print"
+    ],
+    "args": [
+      "msg"
+    ]
+  },
+  "offline_dl._state_path": {
+    "line": 365,
+    "names": [
+      "str",
+      "re",
+      "fullmatch",
+      "hashlib",
+      "sha1",
+      "encode",
+      "hexdigest",
+      "os",
+      "path",
+      "join",
+      "STATE_DIR"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "offline_dl._load_state": {
+    "line": 375,
+    "names": [
+      "_state_path",
+      "os",
+      "path",
+      "exists",
+      "basename",
+      "join",
+      "OUT",
+      "ROOT",
+      "json",
+      "load",
+      "open",
+      "Exception",
+      "str"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "offline_dl._save_state": {
+    "line": 392,
+    "names": [
+      "os",
+      "makedirs",
+      "STATE_DIR",
+      "_state_lock",
+      "_state_path",
+      "json",
+      "dump",
+      "open",
+      "replace"
+    ],
+    "args": [
+      "sid",
+      "st"
+    ]
+  },
+  "offline_dl._is_done": {
+    "line": 399,
+    "names": [
+      "get",
+      "str",
+      "bool",
+      "os",
+      "path",
+      "exists",
+      "getsize"
+    ],
+    "args": [
+      "st",
+      "idx"
+    ]
+  },
+  "offline_dl._grab_favorites": {
+    "line": 411,
+    "names": [
+      "subprocess",
+      "sqlite3",
+      "os",
+      "environ",
+      "get",
+      "stdout",
+      "splitlines",
+      "RuntimeError",
+      "makedirs",
+      "STATE_DIR",
+      "path",
+      "join",
+      "set",
+      "exists",
+      "connect",
+      "execute",
+      "fetchall",
+      "str",
+      "add",
+      "append",
+      "OperationalError",
+      "close",
+      "remove",
+      "OSError"
+    ],
+    "args": []
+  },
+  "offline_dl._parse_share_links": {
+    "line": 469,
+    "names": [
+      "isinstance",
+      "str",
+      "set",
+      "_PASTE_LINK_RE",
+      "finditer",
+      "group",
+      "lower",
+      "len",
+      "re",
+      "findall",
+      "start",
+      "end",
+      "add",
+      "append"
+    ],
+    "args": [
+      "text"
+    ]
+  },
+  "offline_dl._board_json_titles": {
+    "line": 489,
+    "names": [
+      "re",
+      "search",
+      "escape",
+      "json",
+      "JSONDecoder",
+      "raw_decode",
+      "end",
+      "range",
+      "isinstance",
+      "str",
+      "loads",
+      "ValueError",
+      "RecursionError",
+      "pop",
+      "dict",
+      "get",
+      "next",
+      "int",
+      "bool",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "append",
+      "strip",
+      "extend",
+      "reversed",
+      "list",
+      "values"
+    ],
+    "args": [
+      "t",
+      "marker"
+    ]
+  },
+  "offline_dl._scrape_board": {
+    "line": 519,
+    "names": [
+      "re",
+      "_public_get",
+      "Exception",
+      "text",
+      "url",
+      "range",
+      "replace",
+      "sub",
+      "_board_json_titles",
+      "setdefault",
+      "set",
+      "finditer",
+      "group",
+      "add",
+      "append",
+      "max",
+      "start",
+      "search",
+      "items"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._resolve_share_one": {
+    "line": 569,
+    "names": [
+      "re",
+      "urllib.parse",
+      "unquote",
+      "_public_get",
+      "url",
+      "text",
+      "findall",
+      "append",
+      "Exception",
+      "log",
+      "H",
+      "scrub_urls"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._hgdj_series_id": {
+    "line": 591,
+    "names": [
+      "lower",
+      "re",
+      "search",
+      "group"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._share_link": {
+    "line": 639,
+    "names": [
+      "unicodedata",
+      "isinstance",
+      "str",
+      "strip",
+      "re",
+      "match",
+      "normalize",
+      "end",
+      "isascii",
+      "isalnum",
+      "group",
+      "rstrip",
+      "_SHARE_TRAIL",
+      "_URL_BAD_CHAR_RE",
+      "search",
+      "urllib.parse",
+      "urlsplit",
+      "port",
+      "ValueError",
+      "scheme",
+      "netloc",
+      "hostname",
+      "lower",
+      "_SHARE_CODE_RE",
+      "fullmatch",
+      "path",
+      "_SHARE_HOSTS"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._kylin_brand": {
+    "line": 673,
+    "names": [
+      "unicodedata",
+      "urllib.parse",
+      "unquote",
+      "isinstance",
+      "str",
+      "normalize",
+      "strip",
+      "lower",
+      "replace",
+      "find",
+      "re",
+      "split"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._ipv4_aton": {
+    "line": 699,
+    "names": [
+      "ipaddress",
+      "split",
+      "ValueError",
+      "len",
+      "any",
+      "enumerate",
+      "IPv4Address"
+    ],
+    "args": [
+      "h"
+    ]
+  },
+  "offline_dl._ip_public": {
+    "line": 717,
+    "names": [
+      "version",
+      "teredo",
+      "ipv4_mapped",
+      "sixtofour",
+      "_ip_public",
+      "is_global",
+      "is_private",
+      "is_loopback",
+      "is_link_local",
+      "is_unspecified",
+      "is_multicast",
+      "is_reserved",
+      "is_site_local"
+    ],
+    "args": [
+      "ip"
+    ]
+  },
+  "offline_dl._url_public": {
+    "line": 731,
+    "names": [
+      "ipaddress",
+      "urllib.parse",
+      "urlsplit",
+      "isinstance",
+      "str",
+      "strip",
+      "_URL_BAD_CHAR_RE",
+      "search",
+      "port",
+      "ValueError",
+      "scheme",
+      "lower",
+      "netloc",
+      "isascii",
+      "hostname",
+      "endswith",
+      "len",
+      "startswith",
+      "_ip_public",
+      "IPv6Address",
+      "_LINK_NUM_RE",
+      "fullmatch",
+      "_ipv4_aton",
+      "all",
+      "split",
+      "_LINK_LAN_SUFFIX"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._public_get": {
+    "line": 773,
+    "names": [
+      "nettls",
+      "urllib.parse",
+      "urljoin",
+      "_url_public",
+      "ValueError",
+      "HttpsOnlySession",
+      "get_redirect_target",
+      "get",
+      "_SHARE_UA",
+      "headers",
+      "lower",
+      "any",
+      "_PAGE_TYPES",
+      "iter_content",
+      "append",
+      "len",
+      "_SHARE_PAGE_MAX",
+      "close",
+      "join",
+      "_content",
+      "_content_consumed"
+    ],
+    "args": [
+      "url",
+      "timeout"
+    ]
+  },
+  "offline_dl._share_sid_from_location": {
+    "line": 809,
+    "names": [
+      "_SHARE_HOSTS",
+      "get",
+      "isinstance",
+      "str",
+      "len",
+      "_URL_BAD_CHAR_RE",
+      "search",
+      "urllib.parse",
+      "urlsplit",
+      "urljoin",
+      "parse_qs",
+      "scheme",
+      "hostname",
+      "lower",
+      "netloc",
+      "port",
+      "query",
+      "_SHARE_TYPES",
+      "any",
+      "pop",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "json",
+      "loads",
+      "dict",
+      "Exception"
+    ],
+    "args": [
+      "host",
+      "loc",
+      "base"
+    ]
+  },
+  "offline_dl._share_read": {
+    "line": 853,
+    "names": [
+      "nettls",
+      "HttpsOnlySession",
+      "headers",
+      "clear",
+      "max_redirects",
+      "get_redirect_target",
+      "get",
+      "_SHARE_UA",
+      "status_code",
+      "_share_sid_from_location",
+      "close"
+    ],
+    "args": [
+      "host",
+      "link"
+    ]
+  },
+  "offline_dl._share_series_id": {
+    "line": 875,
+    "names": [
+      "_share_link",
+      "_share_memo",
+      "get",
+      "time",
+      "queue",
+      "nettls",
+      "Queue",
+      "_SHARE_TTL",
+      "monotonic",
+      "_SHARE_HEDGE_S",
+      "_SHARE_WAIT_S",
+      "get_nowait",
+      "Empty",
+      "is_cert_error",
+      "log",
+      "cert_hint",
+      "_SHARE_FINAL",
+      "H",
+      "scrub_urls",
+      "_SHARE_FAIL_TTL",
+      "len",
+      "list",
+      "items",
+      "pop",
+      "clear"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._share_sid_seen": {
+    "line": 947,
+    "names": [
+      "_share_link",
+      "_share_memo",
+      "get"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._share_board_ok": {
+    "line": 956,
+    "names": [
+      "_share_link",
+      "_kylin_brand",
+      "_url_public",
+      "_NQA_HOST",
+      "_share_series_id",
+      "Exception"
+    ],
+    "args": [
+      "url"
+    ]
+  },
+  "offline_dl._title_key": {
+    "line": 974,
+    "names": [
+      "unicodedata",
+      "normalize",
+      "isinstance",
+      "str",
+      "join",
+      "lower"
+    ],
+    "args": [
+      "s"
+    ]
+  },
+  "offline_dl._exact_title_series": {
+    "line": 983,
+    "names": [
+      "_title_key",
+      "H",
+      "source_down",
+      "ServerBusy",
+      "set",
+      "search",
+      "Exception",
+      "is_cert_error",
+      "log",
+      "scrub_urls",
+      "isinstance",
+      "dict",
+      "str",
+      "get",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "add",
+      "get_episodes"
+    ],
+    "args": [
+      "title"
+    ]
+  },
+  "offline_dl._hgdj_session": {
+    "line": 1038,
+    "names": [
+      "_hgdj_sess",
+      "nettls",
+      "HttpsOnlySession",
+      "headers",
+      "update",
+      "_HGDJ_UA"
+    ],
+    "args": []
+  },
+  "offline_dl._hgdj_parse_rank": {
+    "line": 1050,
+    "names": [
+      "re",
+      "sub",
+      "split",
+      "search",
+      "group",
+      "append",
+      "strip"
+    ],
+    "args": [
+      "html"
+    ]
+  },
+  "offline_dl.hgdj_rank": {
+    "line": 1071,
+    "names": [
+      "lower",
+      "_HGDJ_RANK_URLS",
+      "get",
+      "time",
+      "_hgdj_rank_cache",
+      "_HGDJ_RANK_TTL",
+      "_hgdj_rank_part",
+      "_HGDJ_RANK_RETRY",
+      "concurrent.futures",
+      "ThreadPoolExecutor",
+      "_hgdj_session",
+      "max",
+      "min",
+      "dict",
+      "map",
+      "range",
+      "Exception",
+      "log",
+      "H",
+      "scrub_urls",
+      "next",
+      "set",
+      "add",
+      "append",
+      "pop"
+    ],
+    "args": [
+      "category",
+      "pages"
+    ]
+  },
+  "offline_dl.hgdj_episodes": {
+    "line": 1141,
+    "names": [
+      "time",
+      "_hgdj_eps_cache",
+      "get",
+      "_HGDJ_EPS_TTL",
+      "append",
+      "concurrent.futures",
+      "ThreadPoolExecutor",
+      "_hgdj_session",
+      "min",
+      "len",
+      "map"
+    ],
+    "args": [
+      "series_ids"
+    ]
+  },
+  "offline_dl._hgdj_player_data": {
+    "line": 1182,
+    "names": [
+      "_hgdj_loader"
+    ],
+    "args": [
+      "series_id",
+      "vid"
+    ]
+  },
+  "offline_dl._hgdj_loader_session": {
+    "line": 1195,
+    "names": [
+      "_hgdj_ldr",
+      "nettls",
+      "HttpsOnlySession",
+      "headers",
+      "update",
+      "_HGDJ_UA",
+      "max_redirects",
+      "get_redirect_target"
+    ],
+    "args": []
+  },
+  "offline_dl._hgdj_loader": {
+    "line": 1211,
+    "names": [
+      "_hgdj_loader_session",
+      "get",
+      "status_code",
+      "close",
+      "int",
+      "headers",
+      "_HGDJ_PAGE_MAX",
+      "TypeError",
+      "ValueError",
+      "iter_content",
+      "len",
+      "append",
+      "re",
+      "search",
+      "I",
+      "join",
+      "decode",
+      "group",
+      "LookupError",
+      "json",
+      "JSONDecoder",
+      "raw_decode",
+      "lstrip",
+      "RecursionError",
+      "isinstance",
+      "dict"
+    ],
+    "args": [
+      "url",
+      "loader"
+    ]
+  },
+  "offline_dl.hgdj_search": {
+    "line": 1256,
+    "names": [
+      "urllib.parse",
+      "quote",
+      "isinstance",
+      "str",
+      "strip",
+      "len",
+      "_hgdj_loader",
+      "dict",
+      "get",
+      "set",
+      "list",
+      "H",
+      "_plat_id",
+      "next",
+      "add",
+      "append",
+      "_ep_index",
+      "int",
+      "bool",
+      "_search_cover",
+      "_HGDJ_SEARCH_MAX"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "offline_dl._hgdj_listing": {
+    "line": 1306,
+    "names": [
+      "_hgdj_loader",
+      "isinstance",
+      "dict",
+      "get",
+      "H",
+      "_plat_id",
+      "list",
+      "len",
+      "_ep_index",
+      "set",
+      "all",
+      "log",
+      "str",
+      "strip",
+      "_search_cover",
+      "enumerate"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "offline_dl.backup_listings": {
+    "line": 1337,
+    "names": [
+      "dict",
+      "fromkeys",
+      "time",
+      "_hgdj_list_lock",
+      "_hgdj_list_cache",
+      "get",
+      "_HGDJ_LIST_TTL",
+      "append",
+      "ThreadPoolExecutor",
+      "min",
+      "_HGDJ_LIST_CONC",
+      "len",
+      "map",
+      "items",
+      "pop"
+    ],
+    "args": [
+      "sids"
+    ]
+  },
+  "offline_dl.fresh_listings": {
+    "line": 1378,
+    "names": [
+      "H",
+      "source_ok",
+      "get_episodes_multi",
+      "source_down",
+      "backup_listings"
+    ],
+    "args": [
+      "sids"
+    ]
+  },
+  "offline_dl.series_episodes": {
+    "line": 1388,
+    "names": [
+      "str",
+      "H",
+      "source_ok",
+      "episodes_cached",
+      "get_episodes",
+      "Exception",
+      "is_cert_error",
+      "source_down",
+      "backup_listings",
+      "get",
+      "RuntimeError"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "offline_dl._signed_lists": {
+    "line": 1404,
+    "names": [
+      "H",
+      "api",
+      "_episodes_body",
+      "join",
+      "ContentUnavailableError",
+      "len",
+      "_signed_lists",
+      "update",
+      "Exception",
+      "is_cert_error",
+      "nettls",
+      "log",
+      "cert_hint",
+      "type",
+      "__name__",
+      "isinstance",
+      "dict",
+      "get",
+      "_parse_episode_detail",
+      "SG",
+      "cache_set",
+      "cache_key"
+    ],
+    "args": [
+      "sids"
+    ]
+  },
+  "offline_dl.ServerBusy": {
+    "line": 1446,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__"
+    ],
+    "args": []
+  },
+  "offline_dl._backup_resolve": {
+    "line": 1452,
+    "names": [
+      "backup_listings",
+      "get",
+      "ServerBusy"
+    ],
+    "args": [
+      "sid",
+      "title"
+    ]
+  },
+  "offline_dl._hgdj_pv_episode": {
+    "line": 1464,
+    "names": [
+      "get",
+      "isinstance",
+      "dict",
+      "str",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "int",
+      "TypeError",
+      "ValueError",
+      "float",
+      "startswith"
+    ],
+    "args": [
+      "d"
+    ]
+  },
+  "offline_dl.hgdj_preview": {
+    "line": 1489,
+    "names": [
+      "str",
+      "strip",
+      "re",
+      "fullmatch",
+      "max",
+      "int",
+      "TypeError",
+      "ValueError",
+      "_HGDJ_PV_MAX",
+      "time",
+      "_hgdj_pv_cache",
+      "get",
+      "_HGDJ_PV_TTL",
+      "_hgdj_pv_meta",
+      "_hgdj_player_data",
+      "len",
+      "min",
+      "_hgdj_pv_episode",
+      "items",
+      "pop",
+      "Exception",
+      "log",
+      "H",
+      "scrub_urls"
+    ],
+    "args": [
+      "series_id",
+      "ep",
+      "fresh"
+    ]
+  },
+  "offline_dl._resolve_series": {
+    "line": 1557,
+    "names": [
+      "_hgdj_series_id",
+      "H",
+      "source_down",
+      "_backup_resolve",
+      "get_episodes",
+      "get",
+      "log",
+      "ContentUnavailableError",
+      "scrub_urls",
+      "Exception",
+      "is_cert_error",
+      "ServerBusy",
+      "_share_link",
+      "_share_series_id",
+      "_exact_title_series",
+      "_title_key",
+      "str",
+      "_kylin_brand",
+      "_url_public",
+      "_resolve_share_one",
+      "_url_host",
+      "set",
+      "search",
+      "append"
+    ],
+    "args": [
+      "title",
+      "url"
+    ]
+  },
+  "offline_dl._load_favjson": {
+    "line": 1652,
+    "names": [
+      "os",
+      "path",
+      "exists",
+      "FAV_JSON",
+      "json",
+      "load",
+      "open",
+      "Exception"
+    ],
+    "args": []
+  },
+  "offline_dl._save_favjson": {
+    "line": 1658,
+    "names": [
+      "os",
+      "makedirs",
+      "OUT",
+      "int",
+      "time",
+      "FAV_JSON",
+      "json",
+      "dump",
+      "open",
+      "replace"
+    ],
+    "args": [
+      "data"
+    ]
+  },
+  "offline_dl._video_model": {
+    "line": 1667,
+    "names": [
+      "H",
+      "get_video_tracks",
+      "get",
+      "str"
+    ],
+    "args": [
+      "vid"
+    ]
+  },
+  "offline_dl._defn": {
+    "line": 1672,
+    "names": [
+      "get",
+      "lower"
+    ],
+    "args": [
+      "t"
+    ]
+  },
+  "offline_dl._sz": {
+    "line": 1674,
+    "names": [
+      "get"
+    ],
+    "args": [
+      "t"
+    ]
+  },
+  "offline_dl._dnum": {
+    "line": 1676,
+    "names": [
+      "int",
+      "re",
+      "sub",
+      "_defn"
+    ],
+    "args": [
+      "t"
+    ]
+  },
+  "offline_dl._codec": {
+    "line": 1678,
+    "names": [
+      "str",
+      "get",
+      "lower"
+    ],
+    "args": [
+      "t"
+    ]
+  },
+  "offline_dl.list_quals": {
+    "line": 1690,
+    "names": [
+      "get",
+      "append",
+      "_defn",
+      "_sz",
+      "sorted"
+    ],
+    "args": [
+      "vm"
+    ]
+  },
+  "offline_dl._pick_track": {
+    "line": 1699,
+    "names": [
+      "str",
+      "lower",
+      "strip",
+      "max",
+      "_sz",
+      "_defn",
+      "min",
+      "re",
+      "sub",
+      "sorted",
+      "_dnum"
+    ],
+    "args": [
+      "tracks",
+      "quality"
+    ]
+  },
+  "offline_dl._read_app_version": {
+    "line": 1726,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "re",
+      "sub",
+      "open",
+      "ROOT",
+      "read",
+      "strip",
+      "Exception"
+    ],
+    "args": []
+  },
+  "offline_dl._log_speed": {
+    "line": 1741,
+    "names": [
+      "int",
+      "get",
+      "float",
+      "join",
+      "str",
+      "split",
+      "re",
+      "sub",
+      "log",
+      "APP_VERSION",
+      "Exception"
+    ],
+    "args": [
+      "vid",
+      "name",
+      "st"
+    ]
+  },
+  "offline_dl._cdn_get": {
+    "line": 1766,
+    "names": [
+      "CONN",
+      "H",
+      "download_adaptive"
+    ],
+    "args": [
+      "url",
+      "path",
+      "on_bytes",
+      "stats",
+      "file_hash",
+      "size"
+    ]
+  },
+  "offline_dl.dl_vid": {
+    "line": 1784,
+    "names": [
+      "OUT",
+      "H",
+      "sanitize",
+      "str",
+      "os",
+      "makedirs",
+      "OSError",
+      "ValueError",
+      "log",
+      "dl_vid",
+      "last_error",
+      "path",
+      "join",
+      "exists",
+      "getsize",
+      "replace",
+      "splitext",
+      "range",
+      "CANCEL",
+      "is_set",
+      "source_down",
+      "remove",
+      "get_video_tracks",
+      "get",
+      "_pick_track",
+      "_codec",
+      "_INCOMPATIBLE_CODECS",
+      "_cdn_get",
+      "_log_speed",
+      "OD",
+      "offline_decrypt",
+      "Exception",
+      "isinstance",
+      "errno",
+      "ENOSPC",
+      "EROFS",
+      "getattr",
+      "splitdrive",
+      "abspath",
+      "_DISK_LOCK",
+      "DISK_FULL",
+      "DISK_FULL_MSG",
+      "set",
+      "scrub_urls",
+      "time",
+      "sleep"
+    ],
+    "args": [
+      "vid",
+      "name",
+      "retries",
+      "quiet",
+      "quality",
+      "tracks",
+      "outdir",
+      "on_bytes"
+    ]
+  },
+  "offline_dl.SeriesCtx": {
+    "line": 1898,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__init__"
+    ],
+    "args": []
+  },
+  "offline_dl._match_range": {
+    "line": 1910,
+    "names": [
+      "str",
+      "split",
+      "strip",
+      "partition",
+      "int",
+      "ValueError",
+      "isdigit"
+    ],
+    "args": [
+      "rng",
+      "idx"
+    ]
+  },
+  "offline_dl._download_poster": {
+    "line": 1930,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "makedirs",
+      "exists",
+      "getsize",
+      "H",
+      "http_request",
+      "raise_for_status",
+      "content",
+      "PIL",
+      "Image",
+      "io",
+      "pillow_heif",
+      "register_heif_opener",
+      "Exception",
+      "open",
+      "BytesIO",
+      "convert",
+      "save",
+      "img_ext",
+      "write",
+      "log",
+      "basename",
+      "scrub_urls"
+    ],
+    "args": [
+      "folder",
+      "cover_url"
+    ]
+  },
+  "offline_dl._meta_num": {
+    "line": 1959,
+    "names": [
+      "float",
+      "TypeError",
+      "ValueError",
+      "OverflowError",
+      "math",
+      "isfinite"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "offline_dl._meta_id": {
+    "line": 1973,
+    "names": [
+      "isinstance",
+      "bool",
+      "str",
+      "int",
+      "re",
+      "fullmatch"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "offline_dl._meta_season": {
+    "line": 1982,
+    "names": [
+      "isinstance",
+      "int",
+      "bool"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "offline_dl._save_series_meta": {
+    "line": 1987,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "makedirs",
+      "_meta_lock",
+      "json",
+      "load",
+      "open",
+      "Exception",
+      "isinstance",
+      "dict",
+      "get",
+      "str",
+      "max",
+      "min",
+      "int",
+      "CLICK_SCORES",
+      "_meta_num",
+      "time",
+      "_meta_id",
+      "_meta_season",
+      "items",
+      "setdefault",
+      "strip",
+      "pop",
+      "_SCORE_MISS",
+      "dump"
+    ],
+    "args": [
+      "title",
+      "series_id",
+      "meta",
+      "folder"
+    ]
+  },
+  "offline_dl._lib_h264_count": {
+    "line": 2034,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "_H264_SUB",
+      "listdir",
+      "_EP_RE",
+      "match",
+      "getsize",
+      "Exception"
+    ],
+    "args": [
+      "folder"
+    ]
+  },
+  "offline_dl._ep_half": {
+    "line": 2047,
+    "names": [],
+    "args": [
+      "f",
+      "names"
+    ]
+  },
+  "offline_dl._lib_local_eps": {
+    "line": 2055,
+    "names": [
+      "set",
+      "os",
+      "listdir",
+      "_EP_RE",
+      "match",
+      "_ep_half",
+      "path",
+      "getsize",
+      "join",
+      "add",
+      "int",
+      "group",
+      "Exception"
+    ],
+    "args": [
+      "folder"
+    ]
+  },
+  "offline_dl._legacy_folder": {
+    "line": 2068,
+    "names": [
+      "str",
+      "H",
+      "sanitize",
+      "re",
+      "sub",
+      "strip",
+      "rstrip",
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "isdir",
+      "_lib_meta",
+      "get",
+      "Exception"
+    ],
+    "args": [
+      "sid",
+      "title"
+    ]
+  },
+  "offline_dl._other_series": {
+    "line": 2087,
+    "names": [
+      "str",
+      "_lib_meta",
+      "get",
+      "bool"
+    ],
+    "args": [
+      "folder",
+      "sid"
+    ]
+  },
+  "offline_dl._alt_name": {
+    "line": 2093,
+    "names": [],
+    "args": [
+      "name",
+      "sid"
+    ]
+  },
+  "offline_dl._series_folder": {
+    "line": 2099,
+    "names": [
+      "str",
+      "_legacy_folder",
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "H",
+      "sanitize",
+      "_other_series",
+      "_alt_name",
+      "basename",
+      "isdir",
+      "_lib_local_eps",
+      "_scan_series_folder"
+    ],
+    "args": [
+      "sid",
+      "title",
+      "index"
+    ]
+  },
+  "offline_dl._scan_series_folder": {
+    "line": 2117,
+    "names": [
+      "list",
+      "get",
+      "os",
+      "listdir",
+      "OUT",
+      "path",
+      "isdir",
+      "_lib_meta",
+      "isinstance",
+      "dict",
+      "str",
+      "_lib_local_eps",
+      "Exception"
+    ],
+    "args": [
+      "sid",
+      "skip",
+      "index"
+    ]
+  },
+  "offline_dl._folder_index": {
+    "line": 2136,
+    "names": [
+      "os",
+      "listdir",
+      "OUT",
+      "path",
+      "join",
+      "isdir",
+      "str",
+      "_lib_meta",
+      "get",
+      "setdefault",
+      "append",
+      "Exception"
+    ],
+    "args": []
+  },
+  "offline_dl._existing_folder": {
+    "line": 2152,
+    "names": [
+      "str",
+      "_series_folder",
+      "isinstance",
+      "os",
+      "path",
+      "isdir",
+      "_lib_meta",
+      "get",
+      "_lib_local_eps",
+      "append",
+      "list",
+      "listdir",
+      "OUT",
+      "sort",
+      "basename",
+      "max",
+      "Exception"
+    ],
+    "args": [
+      "sid",
+      "title",
+      "index"
+    ]
+  },
+  "offline_dl.disk_done": {
+    "line": 2187,
+    "names": [
+      "_lib_local_eps",
+      "_existing_folder",
+      "_series_folder",
+      "len"
+    ],
+    "args": [
+      "sid",
+      "title",
+      "rng"
+    ]
+  },
+  "offline_dl.prune_orphan_state": {
+    "line": 2197,
+    "names": [
+      "os",
+      "listdir",
+      "STATE_DIR",
+      "startswith",
+      "endswith",
+      "path",
+      "join",
+      "json",
+      "load",
+      "open",
+      "Exception",
+      "get",
+      "len",
+      "_series_folder",
+      "isdir",
+      "_lib_local_eps",
+      "remove"
+    ],
+    "args": []
+  },
+  "offline_dl._lib_eps_mtime": {
+    "line": 2219,
+    "names": [
+      "os",
+      "listdir",
+      "set",
+      "_EP_RE",
+      "match",
+      "_ep_half",
+      "path",
+      "join",
+      "getsize",
+      "getmtime",
+      "int",
+      "group",
+      "Exception"
+    ],
+    "args": [
+      "folder"
+    ]
+  },
+  "offline_dl._lib_meta": {
+    "line": 2235,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "exists",
+      "json",
+      "load",
+      "open",
+      "isinstance",
+      "dict",
+      "Exception"
+    ],
+    "args": [
+      "folder"
+    ]
+  },
+  "offline_dl._lib_write_seen": {
+    "line": 2245,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "_meta_lock",
+      "_lib_meta",
+      "int",
+      "json",
+      "dump",
+      "open",
+      "Exception"
+    ],
+    "args": [
+      "folder",
+      "ts"
+    ]
+  },
+  "offline_dl._lib_size": {
+    "line": 2259,
+    "names": [
+      "os",
+      "listdir",
+      "_EP_RE",
+      "match",
+      "path",
+      "getsize",
+      "join",
+      "Exception"
+    ],
+    "args": [
+      "folder"
+    ]
+  },
+  "offline_dl.library_scan": {
+    "line": 2272,
+    "names": [
+      "OUT",
+      "time",
+      "sorted",
+      "os",
+      "listdir",
+      "Exception",
+      "path",
+      "join",
+      "isdir",
+      "startswith",
+      "_lib_eps_mtime",
+      "len",
+      "_lib_meta",
+      "max",
+      "min",
+      "int",
+      "get",
+      "TypeError",
+      "ValueError",
+      "OverflowError",
+      "_meta_num",
+      "_lib_write_seen",
+      "sum",
+      "values",
+      "append",
+      "str",
+      "isinstance",
+      "_lib_size",
+      "exists",
+      "_lib_h264_count"
+    ],
+    "args": []
+  },
+  "offline_dl.library_episodes": {
+    "line": 2320,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "isdir",
+      "_lib_meta",
+      "_lib_eps_mtime",
+      "_meta_num",
+      "get",
+      "int",
+      "TypeError",
+      "ValueError",
+      "OverflowError",
+      "max",
+      "min",
+      "sorted",
+      "items",
+      "isinstance",
+      "str",
+      "keys",
+      "sum",
+      "_lib_h264_count"
+    ],
+    "args": [
+      "name"
+    ]
+  },
+  "offline_dl.library_mark_seen": {
+    "line": 2344,
+    "names": [
+      "_lib_write_seen",
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "time"
+    ],
+    "args": [
+      "name"
+    ]
+  },
+  "offline_dl._lib_exact_name": {
+    "line": 2349,
+    "names": [
+      "os",
+      "path",
+      "basename",
+      "str",
+      "strip",
+      "realpath",
+      "OUT",
+      "join",
+      "dirname",
+      "isdir",
+      "Exception"
+    ],
+    "args": [
+      "raw",
+      "base"
+    ]
+  },
+  "offline_dl.library_delete": {
+    "line": 2372,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "makedirs",
+      "Exception",
+      "_lib_exact_name",
+      "startswith",
+      "isdir",
+      "str",
+      "int",
+      "time",
+      "rename",
+      "open",
+      "write",
+      "append",
+      "PermissionError",
+      "_LIB_IN_USE",
+      "prune_orphan_state",
+      "len"
+    ],
+    "args": [
+      "names"
+    ]
+  },
+  "offline_dl.library_restore": {
+    "line": 2406,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "_lib_exact_name",
+      "startswith",
+      "isdir",
+      "exists",
+      "open",
+      "read",
+      "rstrip",
+      "Exception",
+      "basename",
+      "rename",
+      "PermissionError",
+      "_LIB_IN_USE",
+      "str",
+      "remove"
+    ],
+    "args": [
+      "token"
+    ]
+  },
+  "offline_dl.ff_exe": {
+    "line": 2436,
+    "names": [
+      "shutil",
+      "os",
+      "name",
+      "path",
+      "dirname",
+      "abspath",
+      "__file__",
+      "range",
+      "join",
+      "isfile",
+      "which"
+    ],
+    "args": [
+      "name"
+    ]
+  },
+  "offline_dl._ep_duration": {
+    "line": 2454,
+    "names": [
+      "subprocess",
+      "run",
+      "_NOWIN",
+      "float",
+      "stdout",
+      "strip",
+      "Exception"
+    ],
+    "args": [
+      "ffprobe",
+      "path"
+    ]
+  },
+  "offline_dl._probe_codec": {
+    "line": 2465,
+    "names": [
+      "subprocess",
+      "run",
+      "_NOWIN",
+      "stdout",
+      "strip",
+      "Exception"
+    ],
+    "args": [
+      "ffprobe",
+      "path",
+      "stream"
+    ]
+  },
+  "offline_dl._enc_works": {
+    "line": 2485,
+    "names": [
+      "subprocess",
+      "run",
+      "_NOWIN",
+      "returncode",
+      "Exception"
+    ],
+    "args": [
+      "ff",
+      "enc"
+    ]
+  },
+  "offline_dl.detect_h264_encoder": {
+    "line": 2499,
+    "names": [
+      "subprocess",
+      "ff_exe",
+      "run",
+      "_NOWIN",
+      "stdout",
+      "Exception",
+      "lower",
+      "_H264_LADDER",
+      "_enc_works"
+    ],
+    "args": [
+      "ff",
+      "mode"
+    ]
+  },
+  "offline_dl._h264_vargs": {
+    "line": 2526,
+    "names": [
+      "lower",
+      "get",
+      "int",
+      "str"
+    ],
+    "args": [
+      "kind",
+      "speed",
+      "threads"
+    ]
+  },
+  "offline_dl.cancel_convert": {
+    "line": 2553,
+    "names": [
+      "_convert_cancel",
+      "set",
+      "_convert_proc_lock",
+      "_convert_proc",
+      "poll",
+      "terminate",
+      "Exception"
+    ],
+    "args": []
+  },
+  "offline_dl._parse_out_time": {
+    "line": 2565,
+    "names": [
+      "split",
+      "strip",
+      "int",
+      "float",
+      "Exception"
+    ],
+    "args": [
+      "line"
+    ]
+  },
+  "offline_dl.convert_one": {
+    "line": 2574,
+    "names": [
+      "subprocess",
+      "_h264_vargs",
+      "Popen",
+      "PIPE",
+      "DEVNULL",
+      "_NOWIN",
+      "Exception",
+      "str",
+      "_convert_proc_lock",
+      "_convert_proc",
+      "stdout",
+      "_convert_cancel",
+      "is_set",
+      "terminate",
+      "strip",
+      "startswith",
+      "_parse_out_time",
+      "max",
+      "min",
+      "wait",
+      "kill",
+      "os",
+      "path",
+      "exists",
+      "remove",
+      "returncode",
+      "getsize",
+      "_probe_codec",
+      "lower",
+      "_ep_duration"
+    ],
+    "args": [
+      "ff",
+      "fp",
+      "src",
+      "out",
+      "kind",
+      "speed",
+      "threads",
+      "dur",
+      "on_pct"
+    ]
+  },
+  "offline_dl.convert_series": {
+    "line": 2626,
+    "names": [
+      "tempfile",
+      "_convert_cancel",
+      "clear",
+      "_lib_exact_name",
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "startswith",
+      "isdir",
+      "ff_exe",
+      "lower",
+      "detect_h264_encoder",
+      "listdir",
+      "_EP_RE",
+      "match",
+      "endswith",
+      "getsize",
+      "append",
+      "int",
+      "group",
+      "Exception",
+      "sort",
+      "_H264_SUB",
+      "makedirs",
+      "str",
+      "len",
+      "enumerate",
+      "is_set",
+      "exists",
+      "_probe_codec",
+      "_ep_duration",
+      "convert_one",
+      "remove"
+    ],
+    "args": [
+      "name",
+      "keep_original",
+      "on_progress",
+      "on_log",
+      "mode",
+      "speed",
+      "threads"
+    ]
+  },
+  "offline_dl.merge_converted_series": {
+    "line": 2740,
+    "names": [
+      "merge_series",
+      "_H264_SUB"
+    ],
+    "args": [
+      "name",
+      "on_progress"
+    ]
+  },
+  "offline_dl.merge_series": {
+    "line": 2746,
+    "names": [
+      "subprocess",
+      "tempfile",
+      "shutil",
+      "_lib_exact_name",
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "basename",
+      "str",
+      "startswith",
+      "isdir",
+      "ff_exe",
+      "listdir",
+      "_EP_RE",
+      "match",
+      "getsize",
+      "append",
+      "int",
+      "group",
+      "Exception",
+      "sort",
+      "len",
+      "sum",
+      "disk_usage",
+      "gettempdir",
+      "free",
+      "isfile",
+      "_probe_codec",
+      "bool",
+      "get",
+      "lower",
+      "splitext",
+      "mkdtemp",
+      "enumerate",
+      "_ep_duration",
+      "run",
+      "_NOWIN",
+      "returncode",
+      "exists",
+      "stderr",
+      "strip",
+      "rmtree",
+      "min",
+      "open",
+      "write",
+      "replace",
+      "zip",
+      "round",
+      "Popen",
+      "PIPE",
+      "stdout",
+      "split",
+      "wait",
+      "read",
+      "OSError",
+      "remove"
+    ],
+    "args": [
+      "name",
+      "on_progress",
+      "subdir",
+      "out_name"
+    ]
+  },
+  "offline_dl.rescan_state": {
+    "line": 2891,
+    "names": [
+      "OUT",
+      "os",
+      "listdir",
+      "Exception",
+      "path",
+      "join",
+      "_lib_meta",
+      "get",
+      "_lib_eps_mtime",
+      "_load_state",
+      "setdefault",
+      "items",
+      "str",
+      "int",
+      "exists",
+      "_save_state"
+    ],
+    "args": [
+      "root"
+    ]
+  },
+  "offline_dl._lib_is_series": {
+    "line": 2935,
+    "names": [
+      "bool",
+      "re",
+      "fullmatch",
+      "str",
+      "_lib_meta",
+      "get",
+      "_lib_local_eps"
+    ],
+    "args": [
+      "folder"
+    ]
+  },
+  "offline_dl._resolve_lib_sid": {
+    "line": 2943,
+    "names": [
+      "_lib_meta",
+      "get",
+      "re",
+      "fullmatch",
+      "str",
+      "_lib_local_eps",
+      "H",
+      "source_down",
+      "os",
+      "path",
+      "basename",
+      "search",
+      "isinstance",
+      "sanitize",
+      "sub",
+      "strip",
+      "rstrip",
+      "Exception"
+    ],
+    "args": [
+      "folder",
+      "title"
+    ]
+  },
+  "offline_dl._backfill_score": {
+    "line": 2967,
+    "names": [
+      "_lib_meta",
+      "str",
+      "get",
+      "strip",
+      "_meta_num",
+      "_SCORE_MISS",
+      "time",
+      "_SCORE_RETRY_S",
+      "H",
+      "search_cached",
+      "search",
+      "os",
+      "path",
+      "join",
+      "_meta_lock",
+      "pop",
+      "int",
+      "json",
+      "dump",
+      "open",
+      "_live_series",
+      "Exception"
+    ],
+    "args": [
+      "folder",
+      "title",
+      "sid"
+    ]
+  },
+  "offline_dl._lib_ctx": {
+    "line": 3013,
+    "names": [
+      "set",
+      "_load_state",
+      "QUALITY",
+      "H",
+      "sanitize",
+      "str",
+      "SeriesCtx",
+      "folder"
+    ],
+    "args": [
+      "sid",
+      "folder",
+      "title",
+      "missing",
+      "eps",
+      "keep",
+      "quality"
+    ]
+  },
+  "offline_dl._nword": {
+    "line": 3106,
+    "names": [],
+    "args": [
+      "n",
+      "word"
+    ]
+  },
+  "offline_dl._seasons_file": {
+    "line": 3111,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "STATE_DIR"
+    ],
+    "args": []
+  },
+  "offline_dl._season_split": {
+    "line": 3117,
+    "names": [
+      "isinstance",
+      "str",
+      "strip",
+      "_SEASON_SFX_RE",
+      "search",
+      "group",
+      "isdigit",
+      "int",
+      "H",
+      "_cn_int",
+      "ValueError",
+      "start"
+    ],
+    "args": [
+      "title"
+    ]
+  },
+  "offline_dl._season_key": {
+    "line": 3133,
+    "names": [
+      "_title_key",
+      "_season_split"
+    ],
+    "args": [
+      "title"
+    ]
+  },
+  "offline_dl._season_of": {
+    "line": 3139,
+    "names": [
+      "isinstance",
+      "int",
+      "bool",
+      "_season_split"
+    ],
+    "args": [
+      "title",
+      "label"
+    ]
+  },
+  "offline_dl._season_stem": {
+    "line": 3146,
+    "names": [
+      "len",
+      "any"
+    ],
+    "args": [
+      "key",
+      "titles"
+    ]
+  },
+  "offline_dl._season_digit": {
+    "line": 3155,
+    "names": [
+      "_title_key",
+      "len",
+      "startswith",
+      "int"
+    ],
+    "args": [
+      "title",
+      "skey"
+    ]
+  },
+  "offline_dl._sorder": {
+    "line": 3163,
+    "names": [
+      "int"
+    ],
+    "args": [
+      "sid"
+    ]
+  },
+  "offline_dl._season_score": {
+    "line": 3169,
+    "names": [
+      "isinstance",
+      "str",
+      "re",
+      "fullmatch",
+      "float"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "offline_dl._season_library": {
+    "line": 3176,
+    "names": [
+      "sorted",
+      "os",
+      "listdir",
+      "OUT",
+      "Exception",
+      "startswith",
+      "path",
+      "join",
+      "isdir",
+      "_lib_meta",
+      "str",
+      "get",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "setdefault",
+      "append",
+      "isinstance",
+      "_meta_id",
+      "_meta_season",
+      "int",
+      "bool",
+      "_season_score"
+    ],
+    "args": [
+      "extra"
+    ]
+  },
+  "offline_dl._season_fact": {
+    "line": 3215,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "int",
+      "bool",
+      "str",
+      "_meta_id",
+      "_meta_season",
+      "_season_score"
+    ],
+    "args": [
+      "f"
+    ]
+  },
+  "offline_dl._season_fact_of": {
+    "line": 3228,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "int",
+      "bool",
+      "_season_fact"
+    ],
+    "args": [
+      "meta",
+      "score"
+    ]
+  },
+  "offline_dl._season_member_fact": {
+    "line": 3239,
+    "names": [
+      "get",
+      "_season_fact"
+    ],
+    "args": [
+      "e",
+      "album"
+    ]
+  },
+  "offline_dl._season_trim": {
+    "line": 3249,
+    "names": [
+      "len",
+      "_SEASON_FACTS_MAX",
+      "sorted"
+    ],
+    "args": [
+      "facts",
+      "album"
+    ]
+  },
+  "offline_dl._season_fresh": {
+    "line": 3257,
+    "names": [
+      "get",
+      "SEASON_TTL_PART",
+      "SEASON_TTL"
+    ],
+    "args": [
+      "e",
+      "now"
+    ]
+  },
+  "offline_dl._season_ids": {
+    "line": 3263,
+    "names": [
+      "isinstance",
+      "dict",
+      "list",
+      "items"
+    ],
+    "args": [
+      "d",
+      "cap"
+    ]
+  },
+  "offline_dl._season_newest": {
+    "line": 3269,
+    "names": [
+      "len",
+      "dict",
+      "sorted",
+      "items"
+    ],
+    "args": [
+      "d",
+      "cap"
+    ]
+  },
+  "offline_dl._season_clean": {
+    "line": 3276,
+    "names": [
+      "isinstance",
+      "dict",
+      "get",
+      "list",
+      "items",
+      "_SEASON_ALBUMS_MAX",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "str",
+      "_SEASON_FACTS_MAX",
+      "_season_fact",
+      "_meta_num",
+      "_season_ids",
+      "_SEASON_LOOKED_MAX",
+      "_SEASON_ROOTS_MAX",
+      "re",
+      "_SEASON_HAD_MAX",
+      "_SEASON_LIST_MAX",
+      "_SEASON_TOP_MAX"
+    ],
+    "args": [
+      "raw"
+    ]
+  },
+  "offline_dl._season_state": {
+    "line": 3307,
+    "names": [
+      "_SEASON_STATE",
+      "_seasons_file",
+      "os",
+      "path",
+      "getsize",
+      "_SEASON_FILE_MAX",
+      "open",
+      "json",
+      "load",
+      "Exception",
+      "_season_clean"
+    ],
+    "args": []
+  },
+  "offline_dl._season_save": {
+    "line": 3324,
+    "names": [
+      "time",
+      "sorted",
+      "items",
+      "_SEASON_ALBUMS_MAX",
+      "_season_newest",
+      "_SEASON_LOOKED_MAX",
+      "_SEASON_ROOTS_MAX",
+      "_SEASON_HAD_MAX",
+      "get",
+      "_SEASON_LIST_MAX",
+      "len",
+      "_SEASON_TOP_MAX",
+      "dict",
+      "list",
+      "_SEASON_FILE_SOFT",
+      "_seasons_file",
+      "os",
+      "makedirs",
+      "path",
+      "dirname",
+      "open",
+      "write",
+      "replace",
+      "Exception"
+    ],
+    "args": [
+      "st"
+    ]
+  },
+  "offline_dl._season_root": {
+    "line": 3362,
+    "names": [
+      "hashlib",
+      "os",
+      "path",
+      "normcase",
+      "abspath",
+      "OUT",
+      "sha1",
+      "encode",
+      "hexdigest"
+    ],
+    "args": []
+  },
+  "offline_dl._season_folder": {
+    "line": 3370,
+    "names": [
+      "setdefault",
+      "_season_root"
+    ],
+    "args": [
+      "st",
+      "now"
+    ]
+  },
+  "offline_dl._season_trash": {
+    "line": 3379,
+    "names": [
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "listdir",
+      "Exception",
+      "items",
+      "get",
+      "_sorder",
+      "sorted",
+      "_SEASON_HAD_MAX",
+      "isdir",
+      "_lib_meta",
+      "_meta_id",
+      "max"
+    ],
+    "args": [
+      "lib"
+    ]
+  },
+  "offline_dl._season_top": {
+    "line": 3425,
+    "names": [
+      "pop",
+      "_sorder"
+    ],
+    "args": [
+      "lb",
+      "album",
+      "sid"
+    ]
+  },
+  "offline_dl._season_mark": {
+    "line": 3432,
+    "names": [
+      "_SEASON_LOCK",
+      "_season_state",
+      "time",
+      "_season_folder",
+      "str",
+      "get",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "int",
+      "_season_top",
+      "_season_save"
+    ],
+    "args": [
+      "entries"
+    ]
+  },
+  "offline_dl._season_offer": {
+    "line": 3452,
+    "names": [
+      "_SEASON_LOCK",
+      "_season_state",
+      "time",
+      "_season_folder",
+      "str",
+      "get",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "int",
+      "_season_save"
+    ],
+    "args": [
+      "entries"
+    ]
+  },
+  "offline_dl.season_decline": {
+    "line": 3468,
+    "names": [
+      "list",
+      "str",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "append",
+      "_SEASON_LOCK",
+      "_season_state",
+      "time",
+      "_season_folder",
+      "int",
+      "pop",
+      "_season_save",
+      "_LIVE_LOCK",
+      "_LIVE",
+      "get",
+      "isinstance",
+      "dict",
+      "set",
+      "len",
+      "sum"
+    ],
+    "args": [
+      "sids"
+    ]
+  },
+  "offline_dl._season_candidates": {
+    "line": 3505,
+    "names": [
+      "CANCEL",
+      "max",
+      "_sorder",
+      "_season_split",
+      "_title_key",
+      "set",
+      "ThreadPoolExecutor",
+      "submit",
+      "H",
+      "series_plan",
+      "len",
+      "suggest",
+      "suggest_cached",
+      "result",
+      "shutdown"
+    ],
+    "args": [
+      "mem",
+      "lib",
+      "scores",
+      "cancel",
+      "seeds",
+      "parallel",
+      "lookups",
+      "pre_wait",
+      "late"
+    ]
+  },
+  "offline_dl._season_verify": {
+    "line": 3634,
+    "names": [
+      "CANCEL",
+      "set",
+      "range",
+      "len",
+      "is_set",
+      "update",
+      "H",
+      "get_episodes_multi",
+      "Exception",
+      "is_cert_error",
+      "items",
+      "isinstance",
+      "tuple",
+      "list",
+      "_season_fact_of",
+      "get"
+    ],
+    "args": [
+      "ver",
+      "scores",
+      "known",
+      "cancel",
+      "force",
+      "metas"
+    ]
+  },
+  "offline_dl._season_classify": {
+    "line": 3663,
+    "names": [
+      "values",
+      "set",
+      "get",
+      "max",
+      "_sorder",
+      "_season_split",
+      "_title_key",
+      "sorted",
+      "items",
+      "_season_stem",
+      "any",
+      "add",
+      "append",
+      "_season_key",
+      "_season_of"
+    ],
+    "args": [
+      "want",
+      "members",
+      "facts",
+      "lib",
+      "had",
+      "declined",
+      "held",
+      "offered"
+    ]
+  },
+  "offline_dl._cn_num": {
+    "line": 3720,
+    "names": [
+      "divmod"
+    ],
+    "args": [
+      "n"
+    ]
+  },
+  "offline_dl._season_nums": {
+    "line": 3729,
+    "names": [
+      "items",
+      "_season_stem",
+      "_title_key",
+      "_season_split",
+      "max",
+      "_sorder",
+      "set",
+      "enumerate",
+      "isinstance",
+      "str",
+      "strip",
+      "_season_key",
+      "add",
+      "_SEASON_SFX_RE",
+      "search",
+      "group",
+      "isdigit",
+      "_season_of",
+      "_season_digit",
+      "len"
+    ],
+    "args": [
+      "a",
+      "mem",
+      "fa",
+      "lib"
+    ]
+  },
+  "offline_dl._season_gaps": {
+    "line": 3768,
+    "names": [
+      "len",
+      "min",
+      "max",
+      "range"
+    ],
+    "args": [
+      "nums",
+      "above"
+    ]
+  },
+  "offline_dl._season_gap_query": {
+    "line": 3779,
+    "names": [
+      "max",
+      "min",
+      "isdigit",
+      "str",
+      "_season_split",
+      "_cn_num",
+      "len"
+    ],
+    "args": [
+      "n",
+      "nums",
+      "style"
+    ]
+  },
+  "offline_dl._season_gap_fill": {
+    "line": 3793,
+    "names": [
+      "_season_nums",
+      "_season_gaps",
+      "items",
+      "update",
+      "max",
+      "SEASON_GAP_CALLS",
+      "CANCEL",
+      "is_set",
+      "add",
+      "_season_gap_query",
+      "H",
+      "suggest",
+      "Exception",
+      "is_cert_error",
+      "str",
+      "get",
+      "_SERIES_ID_RE",
+      "fullmatch",
+      "_season_split",
+      "_season_key",
+      "_title_key",
+      "len",
+      "_season_score",
+      "sorted",
+      "SEASON_GAP_VERIFY_MAX",
+      "_season_verify",
+      "set"
+    ],
+    "args": [
+      "want",
+      "members",
+      "facts",
+      "lib",
+      "scores",
+      "known",
+      "lookup",
+      "failed"
+    ]
+  },
+  "offline_dl._season_ep_bytes": {
+    "line": 3865,
+    "names": [
+      "get",
+      "os",
+      "listdir",
+      "path",
+      "join",
+      "OUT",
+      "_EP_RE",
+      "match",
+      "getsize",
+      "_SEASON_EP_MIN",
+      "Exception",
+      "max",
+      "SEASON_EP_BYTES"
+    ],
+    "args": [
+      "mem",
+      "lib"
+    ]
+  },
+  "offline_dl.find_new_seasons": {
+    "line": 3883,
+    "names": [
+      "_season_library",
+      "get",
+      "str",
+      "append",
+      "len",
+      "items",
+      "time",
+      "_SEASON_LOCK",
+      "_season_root",
+      "_season_state",
+      "_season_trash",
+      "_season_fresh",
+      "update",
+      "dict",
+      "_season_folder",
+      "setdefault",
+      "set",
+      "sorted",
+      "max",
+      "SEASON_ALBUMS_PER_UPDATE",
+      "CANCEL",
+      "is_set",
+      "_season_candidates",
+      "SEASON_VERIFY_MAX",
+      "any",
+      "_season_verify",
+      "_season_gap_fill",
+      "_season_member_fact",
+      "values",
+      "bool",
+      "add",
+      "_sorder",
+      "_season_classify",
+      "int",
+      "pop",
+      "_season_top",
+      "_season_save"
+    ],
+    "args": [
+      "sids",
+      "log_fn"
+    ]
+  },
+  "offline_dl._search_word": {
+    "line": 4039,
+    "names": [],
+    "args": [
+      "status"
+    ]
+  },
+  "offline_dl._search_cover": {
+    "line": 4044,
+    "names": [
+      "isinstance",
+      "str",
+      "startswith",
+      "len"
+    ],
+    "args": [
+      "v"
+    ]
+  },
+  "offline_dl._search_row": {
+    "line": 4049,
+    "names": [
+      "get",
+      "_search_word",
+      "_search_cover",
+      "bool"
+    ],
+    "args": [
+      "x",
+      "metas"
+    ]
+  },
+  "offline_dl._search_number": {
+    "line": 4057,
+    "names": [],
+    "args": [
+      "rows"
+    ]
+  },
+  "offline_dl.search_prefetch": {
+    "line": 4065,
+    "names": [
+      "_season_split",
+      "H",
+      "suggest_cached",
+      "int",
+      "bool",
+      "len",
+      "suggest",
+      "Exception",
+      "log",
+      "type",
+      "__name__",
+      "scrub_urls"
+    ],
+    "args": [
+      "q"
+    ]
+  },
+  "offline_dl.search_seasons": {
+    "line": 4079,
+    "names": [
+      "_season_split",
+      "_title_key",
+      "callable",
+      "bool",
+      "any",
+      "next",
+      "setdefault",
+      "str",
+      "isinstance",
+      "get",
+      "list",
+      "min",
+      "_sorder",
+      "_search_provisional",
+      "threading",
+      "Event",
+      "int",
+      "is_set",
+      "H",
+      "SEARCH_PRE_WAIT",
+      "suggest_cached",
+      "suggest",
+      "Exception",
+      "is_cert_error",
+      "_season_key",
+      "append",
+      "_season_candidates",
+      "max",
+      "sorted",
+      "set",
+      "_season_verify",
+      "SEARCH_VERIFY_MAX",
+      "items",
+      "dict",
+      "fromkeys",
+      "add",
+      "_season_classify",
+      "_season_stem",
+      "_season_of",
+      "_season_digit",
+      "sort",
+      "_search_number",
+      "len",
+      "sum"
+    ],
+    "args": [
+      "q",
+      "results",
+      "cards",
+      "lookup",
+      "web",
+      "pre",
+      "cancel"
+    ]
+  },
+  "offline_dl._search_provisional": {
+    "line": 4263,
+    "names": [
+      "get",
+      "_season_key",
+      "next",
+      "isinstance",
+      "str",
+      "H",
+      "_ep_index",
+      "_season_score",
+      "sorted",
+      "_sorder",
+      "append",
+      "_season_of",
+      "int",
+      "bool",
+      "_search_cover",
+      "_search_number",
+      "_season_split",
+      "sum"
+    ],
+    "args": [
+      "ser",
+      "anchor",
+      "dtitle",
+      "res"
+    ]
+  },
+  "offline_dl._live_seasons": {
+    "line": 4292,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE"
+    ],
+    "args": [
+      "view"
+    ]
+  },
+  "offline_dl._season_start": {
+    "line": 4298,
+    "names": [
+      "_folder_index",
+      "os",
+      "listdir",
+      "OUT",
+      "Exception",
+      "set",
+      "threading",
+      "Lock",
+      "CANCEL",
+      "is_set",
+      "H",
+      "get_episodes",
+      "_meta_id",
+      "get",
+      "ValueError",
+      "append",
+      "dict",
+      "scrub_urls",
+      "bool",
+      "_season_score",
+      "CLICK_SCORES",
+      "_prepare",
+      "quality",
+      "_live_series",
+      "sid",
+      "path",
+      "basename",
+      "folder",
+      "title",
+      "len",
+      "eps",
+      "add",
+      "_nword",
+      "_season_mark"
+    ],
+    "args": [
+      "pool",
+      "newer",
+      "gate",
+      "lg",
+      "view"
+    ]
+  },
+  "offline_dl._season_unprepare": {
+    "line": 4377,
+    "names": [
+      "folder",
+      "os",
+      "path",
+      "normcase",
+      "basename",
+      "dirname",
+      "abspath",
+      "OUT",
+      "listdir",
+      "any",
+      "str",
+      "_lib_meta",
+      "get",
+      "sid",
+      "remove",
+      "join",
+      "rmdir",
+      "Exception"
+    ],
+    "args": [
+      "ctx",
+      "names"
+    ]
+  },
+  "offline_dl._season_unstarted": {
+    "line": 4401,
+    "names": [
+      "_live_series",
+      "sid",
+      "_live_requeue",
+      "_season_unprepare",
+      "len",
+      "_LIVE_LOCK",
+      "_LIVE",
+      "get",
+      "isinstance",
+      "dict",
+      "list",
+      "_nword",
+      "Exception",
+      "H",
+      "scrub_urls"
+    ],
+    "args": [
+      "rec",
+      "lg"
+    ]
+  },
+  "offline_dl._season_step": {
+    "line": 4435,
+    "names": [
+      "_live_seasons",
+      "find_new_seasons",
+      "bool",
+      "get",
+      "_SEASON_VIEW_MAX",
+      "setdefault",
+      "append",
+      "items",
+      "sum",
+      "SEASON_BIG_EPS",
+      "SEASON_EP_BYTES",
+      "SEASON_BIG_BYTES",
+      "extend",
+      "round",
+      "len",
+      "_nword",
+      "_season_offer",
+      "CANCEL",
+      "is_set",
+      "_season_start",
+      "join",
+      "Exception",
+      "H",
+      "scrub_urls"
+    ],
+    "args": [
+      "pool",
+      "sids",
+      "gate",
+      "lg"
+    ]
+  },
+  "offline_dl.library_update": {
+    "line": 4517,
+    "names": [
+      "log",
+      "OUT",
+      "sorted",
+      "os",
+      "listdir",
+      "Exception",
+      "CANCEL",
+      "is_set",
+      "path",
+      "join",
+      "isdir",
+      "_lib_meta",
+      "get",
+      "isinstance",
+      "str",
+      "_resolve_lib_sid",
+      "bool",
+      "append",
+      "setdefault",
+      "len",
+      "values",
+      "_live_reset",
+      "_live_series",
+      "_live_finish",
+      "H",
+      "source_ok",
+      "threading",
+      "Thread",
+      "start",
+      "list",
+      "EpisodePool",
+      "Lock",
+      "SEASONS",
+      "source_down",
+      "_season_step",
+      "scrub_urls",
+      "_season_unstarted",
+      "backup",
+      "sid",
+      "title",
+      "DISK_FULL",
+      "DISK_FULL_MSG"
+    ],
+    "args": [
+      "names",
+      "log_fn",
+      "quality",
+      "ep_conc",
+      "series_at_once",
+      "retry_rounds",
+      "gate"
+    ]
+  },
+  "offline_dl._name_folder": {
+    "line": 4734,
+    "names": [
+      "str",
+      "get",
+      "strip",
+      "os",
+      "path",
+      "basename",
+      "H",
+      "sanitize",
+      "log",
+      "_series_folder",
+      "_legacy_folder",
+      "isdir",
+      "join",
+      "OUT",
+      "any",
+      "_other_series",
+      "_alt_name"
+    ],
+    "args": [
+      "series_id",
+      "meta",
+      "folder"
+    ]
+  },
+  "offline_dl._prepare": {
+    "line": 4769,
+    "names": [
+      "re",
+      "fullmatch",
+      "str",
+      "ValueError",
+      "series_episodes",
+      "get",
+      "strip",
+      "_existing_folder",
+      "_name_folder",
+      "_download_poster",
+      "os",
+      "path",
+      "isfile",
+      "join",
+      "_save_series_meta",
+      "_load_state",
+      "len",
+      "log",
+      "SeriesCtx",
+      "folder",
+      "backup",
+      "_lib_local_eps"
+    ],
+    "args": [
+      "series_id",
+      "rng",
+      "quality",
+      "folder",
+      "index"
+    ]
+  },
+  "offline_dl._episode_task": {
+    "line": 4808,
+    "names": [
+      "CANCEL",
+      "is_set",
+      "folder",
+      "os",
+      "path",
+      "join",
+      "OUT",
+      "title",
+      "_live_running",
+      "dl_vid",
+      "quality",
+      "tracks",
+      "get",
+      "str",
+      "H",
+      "source_down",
+      "_live_ep_done",
+      "sid",
+      "bool",
+      "lock",
+      "state",
+      "setdefault",
+      "int",
+      "time",
+      "pop",
+      "getattr",
+      "_save_state"
+    ],
+    "args": [
+      "ctx",
+      "e"
+    ]
+  },
+  "offline_dl._live_requeue": {
+    "line": 4835,
+    "names": [
+      "_LIVE_LOCK",
+      "_LIVE",
+      "setdefault",
+      "str",
+      "set"
+    ],
+    "args": [
+      "sid",
+      "idxs"
+    ]
+  },
+  "offline_dl._verified_items": {
+    "line": 4844,
+    "names": [
+      "backup",
+      "get",
+      "bool",
+      "str",
+      "sid",
+      "log",
+      "title",
+      "_live_series",
+      "_live_checked",
+      "_live_requeue",
+      "folder",
+      "os",
+      "path",
+      "isdir",
+      "_name_folder",
+      "_existing_folder",
+      "state",
+      "_lib_local_eps",
+      "set",
+      "eps",
+      "strip",
+      "isfile",
+      "join",
+      "_save_series_meta",
+      "_download_poster",
+      "Exception",
+      "basename",
+      "len"
+    ],
+    "args": [
+      "ctx",
+      "got",
+      "note"
+    ]
+  },
+  "offline_dl._track_size": {
+    "line": 4911,
+    "names": [
+      "_pick_track",
+      "max",
+      "int",
+      "_sz",
+      "Exception"
+    ],
+    "args": [
+      "tracks",
+      "quality"
+    ]
+  },
+  "offline_dl._PoolJob": {
+    "line": 4920,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "__slots__",
+      "__init__"
+    ],
+    "args": []
+  },
+  "offline_dl.EpisodePool": {
+    "line": 4939,
+    "names": [
+      "__name__",
+      "__module__",
+      "__qualname__",
+      "GATHER_S",
+      "VERIFY_RETRY_S",
+      "VERIFY_TRIES",
+      "__init__",
+      "add",
+      "close",
+      "join",
+      "_work",
+      "_hold",
+      "_take",
+      "_nap",
+      "_round_end",
+      "_end",
+      "_stop",
+      "_report",
+      "staticmethod",
+      "_call",
+      "_feed",
+      "_verify",
+      "_rebuilt",
+      "_upcoming",
+      "_short",
+      "_next_links"
+    ],
+    "args": []
+  },
+  "offline_dl._summary": {
+    "line": 5411,
+    "names": [
+      "folder",
+      "_lib_local_eps",
+      "sum",
+      "eps",
+      "sorted",
+      "log",
+      "title",
+      "len",
+      "sid"
+    ],
+    "args": [
+      "ctx"
+    ]
+  },
+  "offline_dl.download_series": {
+    "line": 5426,
+    "names": [
+      "items",
+      "str",
+      "strip",
+      "append",
+      "_live_reset",
+      "EpisodePool",
+      "quality",
+      "log",
+      "len",
+      "series_cap",
+      "per_series",
+      "OUT",
+      "_folder_index",
+      "CANCEL",
+      "is_set",
+      "_prepare",
+      "get",
+      "Exception",
+      "H",
+      "scrub_urls",
+      "backup",
+      "_live_series",
+      "sid",
+      "os",
+      "path",
+      "basename",
+      "folder",
+      "title",
+      "eps",
+      "_summary",
+      "add",
+      "join",
+      "sum",
+      "values",
+      "_live_finish"
+    ],
+    "args": [
+      "series_ids",
+      "ranges",
+      "quality",
+      "retry_rounds",
+      "series",
+      "episodes"
+    ]
+  },
+  "offline_dl.dl_series": {
+    "line": 5497,
+    "names": [
+      "download_series",
+      "str",
+      "get"
+    ],
+    "args": [
+      "series_id",
+      "rng",
+      "concurrency",
+      "retry_rounds",
+      "quality"
+    ]
+  },
+  "offline_dl.dl_batch": {
+    "line": 5510,
+    "names": [
+      "download_series"
+    ],
+    "args": [
+      "series_ids",
+      "concurrency",
+      "retry_rounds",
+      "quality",
+      "ranges",
+      "series_at_once"
+    ]
+  },
+  "offline_dl.show_status": {
+    "line": 5521,
+    "names": [
+      "_load_state",
+      "get",
+      "items",
+      "log",
+      "len",
+      "sorted",
+      "str"
+    ],
+    "args": [
+      "series_id"
+    ]
+  },
+  "offline_dl._pop_opts": {
+    "line": 5531,
+    "names": [
+      "len",
+      "max",
+      "int",
+      "append"
+    ],
+    "args": [
+      "args"
+    ]
+  },
+  "offline_dl.main": {
+    "line": 5542,
+    "names": [
+      "len",
+      "sys",
+      "argv",
+      "print",
+      "__doc__",
+      "CANCEL",
+      "clear",
+      "DISK_FULL",
+      "_pop_opts",
+      "H",
+      "search",
+      "get",
+      "rank",
+      "_video_model",
+      "list_quals",
+      "dl_series",
+      "os",
+      "path",
+      "isfile",
+      "open",
+      "read",
+      "log",
+      "join",
+      "_parse_share_links",
+      "set",
+      "_share_board_ok",
+      "_scrape_board",
+      "add",
+      "append",
+      "_resolve_series",
+      "Exception",
+      "scrub_urls",
+      "_share_sid_seen",
+      "POOL_WORKERS",
+      "dl_batch",
+      "bool",
+      "_load_favjson",
+      "_grab_favorites",
+      "setdefault",
+      "int",
+      "time",
+      "pop",
+      "_save_favjson",
+      "items",
+      "_load_state",
+      "sum",
+      "values",
+      "relpath",
+      "FAV_JSON",
+      "ROOT",
+      "glob",
+      "decutil",
+      "strip_cenc",
+      "OUT",
+      "replace",
+      "exists",
+      "remove",
+      "OSError",
+      "show_status",
+      "dl_vid",
+      "get_collection"
+    ],
+    "args": []
+  }
+}

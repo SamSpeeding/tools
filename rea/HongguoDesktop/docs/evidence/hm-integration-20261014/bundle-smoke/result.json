@@ -1,0 +1,30 @@
+{
+  "bundle": "/Users/tt/Desktop/rea/HongguoDesktop/release/HongguoDesktop.app/Contents/Resources",
+  "checks": {
+    "search": {
+      "items": 16
+    },
+    "detail": {
+      "episodes": 74
+    },
+    "playback": {
+      "model_api": "multi_video_model",
+      "model_fallback": false,
+      "initial_bytes": 262144,
+      "total": 4507067
+    },
+    "stream": {
+      "range_matches": true,
+      "full_decode_validated": true,
+      "bytes": 4507067,
+      "sha256": "d41be261a5b7c3e7c2c06c4046e354c0bbc8a7f7b1ead1348f2af4d617b5bc96"
+    },
+    "download": {
+      "model_api": "multi_video_model",
+      "full_decode_validated": true,
+      "bytes": 4480838,
+      "sha256": "ffbfcfb34273e650cc4c02a2221959a69a33b8cc46685a62dec352edafdad794"
+    },
+    "result": "passed"
+  }
+}

@@ -1,0 +1,1282 @@
+{
+  "phase": "07-cross-episode-multivid",
+  "started_at": "2026-10-14T10:34:52.648381+08:00",
+  "updated_at": "2026-10-14T10:35:59.378238+08:00",
+  "scope": "Isolated official detail/model requests only; no fallback, media download, registration or production writes",
+  "original_identity_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+  "source_hashes": {
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/worker.py": "efaad7c7e17f71ae76a1772b50d8e6fbf2a1202e404c7edaeea4f3fc58cfd683",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/playback.py": "07b89f807ab4c1c67b080794b1daf46380a8c8f3ca820c3d98f2c20c491c218a",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/hongguo_signer.py": "33146c20cd505e36760f4ee85e123f1821be632963b0782a4d3da25e94e5b8b2",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/hongguo_download.py": "8d4d48343ed8e4df5bf91a422ad09b5538901f852690a01d138e5551ed0f725c",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/hongguo_api.py": "9ed6d43376c363f2d3fd5b2614e5452e2e43b07d690cbedb86110bc6853384fa",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/jobs.py": "15938029cdf0f71153b8ffd3c29c33787efe0c08aac7f3d85edf07ea4096304a",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/mp4_stream.py": "bcd4a82452bebecda1b0496c19f87062ab8cb01c7ce84d6d700b3c5383f9eb8b",
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/app_api.py": "55f10c9c2fa449bf01be384c6499a8b68845a7c000250c0fa70cc54b0447722c",
+    "/Users/tt/Desktop/rea/HongguoDesktop/src/main.ts": "489354266245e88ac8ea02ebe08c0513729c10a27c3ebcb99f20d2d191883e43",
+    "/Users/tt/Desktop/rea/HongguoDesktop/src/style.css": "a24ed1cb480378db8e068daa9f758282e1ae93bd3ec82210118efec9f9cd183d",
+    "/Users/tt/Desktop/rea/HongguoDesktop/config/config.json": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+    "/Users/tt/Desktop/rea/HongguoDesktop/config/devices.json": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd",
+    "/Users/tt/Downloads/红果短剧.py": "bea893bea56a24cee9eadc4c004bf9637b6c2129d08b22c9500c012431edd6f1",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/decrypt/extract_keybox_pairs.py": "151b4c1f0089e9a3c6688cf0adab2705f993c62155e7e1300406e8bb16ba6bd7",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/decrypt/oracle.py": "2b9fdd196357443660e592076253ba479b6ebab24c801080c14ca7b44c61bacc",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/decrypt/decutil.py": "e5781d94d804b6a04621d1ca059e1bbc26b3e7b524c5d3a4328b6399581e033d",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/decrypt/unwrap_spade.py": "8e9d804f4a62d8da63b533175396b4ccb22cff0ae32276b66c70fa403cab1a4b"
+  },
+  "signer_material_hashes": {
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/sign/unidbg-sign.jar": "bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/capture/fq_oversea/libc++_shared.so": "e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/capture/fq_oversea/libmetasec_ml.so": "20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d",
+    "/Users/tt/Desktop/rea/HongguoDesktop/vendor/capture/fq_oversea/ms_16777218.bin": "c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c"
+  },
+  "protected_files_unchanged": true,
+  "results": [
+    {
+      "label": "detail_series_A",
+      "time": "2026-10-14T10:34:57.306503+08:00",
+      "path": "/novel/player/multi_video_detail/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "jar",
+      "transport": "curl_chrome",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.276,
+      "body_md5": "CBDE753F77D3D4B40FA1B66730753A25",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 880,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "series_id": "7689863296106646590",
+      "episode_count": 74
+    },
+    {
+      "label": "detail_series_B",
+      "time": "2026-10-14T10:35:00.265020+08:00",
+      "path": "/novel/player/multi_video_detail/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "jar",
+      "transport": "curl_chrome",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.184,
+      "body_md5": "D1C195FC33D3976493D9BBCB80A3631A",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 888,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "series_id": "7694947161145871384",
+      "episode_count": 28
+    },
+    {
+      "label": "jar_original_baseline",
+      "time": "2026-10-14T10:35:04.636491+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "jar",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 110001,
+      "message": "未知异常",
+      "seconds": 0.212,
+      "body_md5": "ACE32B089F73E8EB7B8CD139F3D0D82E",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 888,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903116275174462"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903116275174462": {
+          "usable": false,
+          "definitions": []
+        }
+      },
+      "usable_count": 0,
+      "all_usable": false,
+      "returned_data_keys": []
+    },
+    {
+      "label": "hybrid_original_baseline",
+      "time": "2026-10-14T10:35:07.662052+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.19,
+      "body_md5": "ACE32B089F73E8EB7B8CD139F3D0D82E",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903116275174462"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903116275174462"
+      ]
+    },
+    {
+      "label": "hybrid_A_episode_1",
+      "time": "2026-10-14T10:35:10.635014+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.186,
+      "body_md5": "1764455D0B94FCE3EB98DD81516DA34E",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 216,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790"
+      ]
+    },
+    {
+      "label": "hybrid_A_episode_3",
+      "time": "2026-10-14T10:35:13.549457+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.176,
+      "body_md5": "5AEEE531290D6A3AF430923C008F50DB",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903075380694078"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903075380694078"
+      ]
+    },
+    {
+      "label": "hybrid_A_episode_5",
+      "time": "2026-10-14T10:35:16.471248+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.182,
+      "body_md5": "8813FCFD27EA46759BAE1E8CBCC022AB",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903082863348798"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903082863348798": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903082863348798"
+      ]
+    },
+    {
+      "label": "hybrid_A_episode_38",
+      "time": "2026-10-14T10:35:19.490227+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.23,
+      "body_md5": "68079E762948D93EB863DD551B179C60",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903130258983998"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903130258983998": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903130258983998"
+      ]
+    },
+    {
+      "label": "hybrid_A_episode_74",
+      "time": "2026-10-14T10:35:22.463026+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.196,
+      "body_md5": "990A16DF08F9DC37503B04BE8974437D",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7690116941897288729"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7690116941897288729": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7690116941897288729"
+      ]
+    },
+    {
+      "label": "hybrid_A_two",
+      "time": "2026-10-14T10:35:28.662107+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.218,
+      "body_md5": "D39C4B6337504E7EBBF4D24CC72FA7AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462"
+      ],
+      "requested_count": 2,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 2,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903116275174462"
+      ]
+    },
+    {
+      "label": "hybrid_A_two_repeat",
+      "time": "2026-10-14T10:35:31.729011+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.238,
+      "body_md5": "D39C4B6337504E7EBBF4D24CC72FA7AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462"
+      ],
+      "requested_count": 2,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 2,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903116275174462"
+      ]
+    },
+    {
+      "label": "hybrid_A_five",
+      "time": "2026-10-14T10:35:34.774715+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.245,
+      "body_md5": "53F44D13DE7E21B3554256EE09F041A2",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903082863348798"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903137095699518": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903082863348798": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903137095699518"
+      ]
+    },
+    {
+      "label": "hybrid_A_five_repeat",
+      "time": "2026-10-14T10:35:37.923545+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.32,
+      "body_md5": "53F44D13DE7E21B3554256EE09F041A2",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903082863348798"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903137095699518": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903082863348798": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903137095699518"
+      ]
+    },
+    {
+      "label": "hybrid_cross_series_five",
+      "time": "2026-10-14T10:35:41.060948+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.329,
+      "body_md5": "B528CE92A62E626A55A4CC7A3E2845AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949024280874009": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949018303990809": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7694949018303990809",
+        "7694949024280874009"
+      ]
+    },
+    {
+      "label": "hybrid_cross_series_five_repeat",
+      "time": "2026-10-14T10:35:44.167733+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.293,
+      "body_md5": "B528CE92A62E626A55A4CC7A3E2845AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949024280874009": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949018303990809": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7694949018303990809",
+        "7694949024280874009"
+      ]
+    },
+    {
+      "label": "hybrid_A_five_reverse",
+      "time": "2026-10-14T10:35:47.221576+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.271,
+      "body_md5": "B05D687FDCA5889BE33B473B8B36C870",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903082863348798",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903082863348798": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903137095699518": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903137095699518"
+      ]
+    },
+    {
+      "label": "python_cross_series_five",
+      "time": "2026-10-14T10:35:49.990645+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "python",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.232,
+      "body_md5": "B528CE92A62E626A55A4CC7A3E2845AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-ladon": 8,
+        "x-khronos": 10,
+        "x-argus": 8,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-medusa": 940
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949024280874009": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949018303990809": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7694949018303990809",
+        "7694949024280874009"
+      ]
+    },
+    {
+      "label": "jar_cross_series_five_control",
+      "time": "2026-10-14T10:35:53.005573+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "jar",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 110001,
+      "message": "未知异常",
+      "seconds": 0.205,
+      "body_md5": "B528CE92A62E626A55A4CC7A3E2845AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 888,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": false,
+          "definitions": []
+        },
+        "7689903116275174462": {
+          "usable": false,
+          "definitions": []
+        },
+        "7689903075380694078": {
+          "usable": false,
+          "definitions": []
+        },
+        "7694949024280874009": {
+          "usable": false,
+          "definitions": []
+        },
+        "7694949018303990809": {
+          "usable": false,
+          "definitions": []
+        }
+      },
+      "usable_count": 0,
+      "all_usable": false,
+      "returned_data_keys": []
+    },
+    {
+      "label": "hybrid_cross_series_five_after_jar",
+      "time": "2026-10-14T10:35:56.061804+08:00",
+      "path": "/novel/player/multi_video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "hybrid",
+      "transport": "requests",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.256,
+      "body_md5": "B528CE92A62E626A55A4CC7A3E2845AA",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 940,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "requested_count": 5,
+      "models": {
+        "7689903030619081790": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7689903075380694078": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949024280874009": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "7694949018303990809": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 5,
+      "all_usable": true,
+      "returned_data_keys": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7694949018303990809",
+        "7694949024280874009"
+      ]
+    },
+    {
+      "label": "jar_single_final_control",
+      "time": "2026-10-14T10:35:58.984567+08:00",
+      "path": "/novel/player/video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "signing": "jar",
+      "transport": "curl_chrome",
+      "http_status": 200,
+      "code": 0,
+      "message": "请求成功",
+      "seconds": 0.155,
+      "body_md5": "0727A429A965F1ECCC6F1475E0163DB7",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "signature_lengths": {
+        "x-argus": 240,
+        "x-gorgon": 52,
+        "x-helios": 48,
+        "x-khronos": 10,
+        "x-ladon": 48,
+        "x-medusa": 888,
+        "x-neptune": 12,
+        "x-soter": 120
+      },
+      "requested_vids": [
+        "7689903116275174462"
+      ],
+      "requested_count": 1,
+      "models": {
+        "7689903116275174462": {
+          "usable": true,
+          "definitions": [
+            "360p",
+            "480p",
+            "540p",
+            "720p",
+            "1080p"
+          ]
+        }
+      },
+      "usable_count": 1,
+      "all_usable": true,
+      "returned_data_keys": [
+        "expire_time",
+        "video_height",
+        "video_model",
+        "video_width"
+      ]
+    }
+  ]
+}

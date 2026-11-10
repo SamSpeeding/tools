@@ -1,0 +1,11 @@
+node_modules/
+dist/
+src-tauri/target/
+.runtime/
+__pycache__/
+.DS_Store
+docs/evidence/probe-runtime/
+docs/evidence/ui-test-state/
+docs/evidence/*-runtime/
+docs/evidence/downloads/
+release/

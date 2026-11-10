@@ -1,0 +1,54 @@
+{
+  "source": "/Users/tt/Downloads/红果短剧.py",
+  "source_sha256": "bea893bea56a24cee9eadc4c004bf9637b6c2129d08b22c9500c012431edd6f1",
+  "bytes": 219868,
+  "lines": 4165,
+  "imports": [
+    "from __future__ import annotations",
+    "import base64",
+    "import binascii",
+    "import bisect",
+    "import hashlib",
+    "import json",
+    "import os",
+    "import lzma",
+    "import random",
+    "import re",
+    "import struct",
+    "import tempfile",
+    "import concurrent.futures",
+    "import threading",
+    "import time",
+    "from collections.abc import Mapping",
+    "from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer",
+    "from html.parser import HTMLParser",
+    "from typing import Any",
+    "from urllib.parse import parse_qs, quote, urlencode, urlparse",
+    "import requests",
+    "from cryptography.hazmat.primitives import hashes",
+    "from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes",
+    "from Crypto.Cipher import AES as CryptoAES",
+    "from base.spider import Spider as _BaseSpider",
+    "import traceback",
+    "import sys as _sys",
+    "from base.spider import Spider as _BaseSpider"
+  ],
+  "top_level_statements": [
+    {
+      "line": 23,
+      "type": "Try"
+    },
+    {
+      "line": 29,
+      "type": "Try"
+    },
+    {
+      "line": 33,
+      "type": "Try"
+    },
+    {
+      "line": 46,
+      "type": "If"
+    }
+  ]
+}

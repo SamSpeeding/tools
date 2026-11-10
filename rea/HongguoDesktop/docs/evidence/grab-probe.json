@@ -1,0 +1,7 @@
+{
+  "scope": "bundled local Java signer only",
+  "path": "/grab",
+  "http_status": 404,
+  "content_type": "text/html",
+  "json_available": false
+}

@@ -1,0 +1,1437 @@
+FUNCTION <module> ORIGINAL_LINE 1
+  0           0 RESUME                   0
+
+  2           2 NOP
+
+ 15           4 LOAD_CONST               0 (0)
+              6 LOAD_CONST               1 (None)
+              8 IMPORT_NAME              0 (json)
+             10 STORE_NAME               0 (json)
+             12 LOAD_CONST               0 (0)
+             14 LOAD_CONST               1 (None)
+             16 IMPORT_NAME              1 (os)
+             18 STORE_NAME               1 (os)
+             20 LOAD_CONST               0 (0)
+             22 LOAD_CONST               1 (None)
+             24 IMPORT_NAME              2 (random)
+             26 STORE_NAME               2 (random)
+             28 LOAD_CONST               0 (0)
+             30 LOAD_CONST               1 (None)
+             32 IMPORT_NAME              3 (threading)
+             34 STORE_NAME               3 (threading)
+             36 LOAD_CONST               0 (0)
+             38 LOAD_CONST               1 (None)
+             40 IMPORT_NAME              4 (uuid)
+             42 STORE_NAME               4 (uuid)
+
+ 17          44 LOAD_NAME                1 (os)
+             46 LOAD_ATTR                5 (path)
+             56 LOAD_METHOD              6 (dirname)
+             78 LOAD_NAME                1 (os)
+             80 LOAD_ATTR                5 (path)
+             90 LOAD_METHOD              7 (abspath)
+            112 LOAD_NAME                8 (__file__)
+            114 PRECALL                  1
+            118 CALL                     1
+            128 PRECALL                  1
+            132 CALL                     1
+            142 STORE_NAME               9 (HERE)
+
+ 18         144 LOAD_NAME                1 (os)
+            146 LOAD_ATTR               10 (environ)
+            156 LOAD_METHOD             11 (get)
+            178 LOAD_CONST               2 ('DEVICE_POOL')
+            180 LOAD_NAME                1 (os)
+            182 LOAD_ATTR                5 (path)
+            192 LOAD_METHOD             12 (join)
+            214 LOAD_NAME                9 (HERE)
+            216 LOAD_CONST               3 ('devices.json')
+            218 PRECALL                  2
+            222 CALL                     2
+            232 PRECALL                  2
+            236 CALL                     2
+            246 STORE_NAME              13 (POOL_PATH)
+
+ 22         248 LOAD_CONST               4 ('Redmi')
+            250 LOAD_CONST               5 ('22041211AC')
+            252 LOAD_CONST               6 ('TKQ1.220807.001')
+            254 LOAD_CONST               7 ('1080*2400')
+            256 LOAD_CONST               8 ('13')
+            258 LOAD_CONST               9 ('33')
+            260 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            262 BUILD_CONST_KEY_MAP      6
+
+ 23         264 LOAD_CONST               4 ('Redmi')
+            266 LOAD_CONST              11 ('23021RAA2Y')
+            268 LOAD_CONST              12 ('UKQ1.230804.001')
+            270 LOAD_CONST               7 ('1080*2400')
+            272 LOAD_CONST              13 ('14')
+            274 LOAD_CONST              14 ('34')
+            276 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            278 BUILD_CONST_KEY_MAP      6
+
+ 24         280 LOAD_CONST              15 ('HUAWEI')
+            282 LOAD_CONST              16 ('ELS-AN00')
+            284 LOAD_CONST              17 ('HUAWEIELS-AN00')
+            286 LOAD_CONST              18 ('1080*2340')
+            288 LOAD_CONST              19 ('10')
+            290 LOAD_CONST              20 ('29')
+            292 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            294 BUILD_CONST_KEY_MAP      6
+
+ 25         296 LOAD_CONST              21 ('OPPO')
+            298 LOAD_CONST              22 ('PEHM00')
+            300 LOAD_CONST              23 ('TP1A.220905.001')
+            302 LOAD_CONST              24 ('1080*2412')
+            304 LOAD_CONST               8 ('13')
+            306 LOAD_CONST               9 ('33')
+            308 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            310 BUILD_CONST_KEY_MAP      6
+
+ 26         312 LOAD_CONST              25 ('vivo')
+            314 LOAD_CONST              26 ('V2218A')
+            316 LOAD_CONST              27 ('TP1A.220624.014')
+            318 LOAD_CONST               7 ('1080*2400')
+            320 LOAD_CONST               8 ('13')
+            322 LOAD_CONST               9 ('33')
+            324 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            326 BUILD_CONST_KEY_MAP      6
+
+ 27         328 LOAD_CONST              28 ('samsung')
+            330 LOAD_CONST              29 ('SM-G9810')
+            332 LOAD_CONST              30 ('SP1A.210812.016')
+            334 LOAD_CONST               7 ('1080*2400')
+            336 LOAD_CONST              31 ('12')
+            338 LOAD_CONST              32 ('31')
+            340 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            342 BUILD_CONST_KEY_MAP      6
+
+ 28         344 LOAD_CONST              33 ('OnePlus')
+            346 LOAD_CONST              34 ('PHB110')
+            348 LOAD_CONST              35 ('UKQ1.230924.001')
+            350 LOAD_CONST              36 ('1240*2772')
+            352 LOAD_CONST              13 ('14')
+            354 LOAD_CONST              14 ('34')
+            356 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            358 BUILD_CONST_KEY_MAP      6
+
+ 29         360 LOAD_CONST              37 ('HONOR')
+            362 LOAD_CONST              38 ('FNE-AN00')
+            364 LOAD_CONST              39 ('HONORFNE-AN00')
+            366 LOAD_CONST              24 ('1080*2412')
+            368 LOAD_CONST               8 ('13')
+            370 LOAD_CONST               9 ('33')
+            372 LOAD_CONST              10 (('brand', 'model', 'build', 'res', 'os', 'api'))
+            374 BUILD_CONST_KEY_MAP      6
+
+ 21         376 BUILD_LIST               8
+            378 STORE_NAME              14 (PROFILES)
+
+ 31         380 LOAD_CONST              40 ('72232')
+            382 STORE_NAME              15 (APP_VC)
+
+ 32         384 LOAD_CONST              41 ('3.12.13.20')
+            386 STORE_NAME              16 (TTOK)
+
+ 35         388 LOAD_CONST              42 (<code object _digits at 0x106513510, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 35>)
+            390 MAKE_FUNCTION            0
+            392 STORE_NAME              17 (_digits)
+
+ 39         394 LOAD_CONST              43 (<code object gen_device at 0xab1282d00, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 39>)
+            396 MAKE_FUNCTION            0
+            398 STORE_NAME              18 (gen_device)
+
+ 55         400 PUSH_NULL
+            402 LOAD_BUILD_CLASS
+            404 LOAD_CONST              44 (<code object DevicePool at 0x1065a96b0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 55>)
+            406 MAKE_FUNCTION            0
+            408 LOAD_CONST              45 ('DevicePool')
+            410 PRECALL                  2
+            414 CALL                     2
+            424 STORE_NAME              19 (DevicePool)
+
+ 98         426 LOAD_CONST              46 (<code object load_pool at 0xab12b5400, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 98>)
+            428 MAKE_FUNCTION            0
+            430 STORE_NAME              20 (load_pool)
+            432 LOAD_CONST               1 (None)
+            434 RETURN_VALUE
+
+Disassembly of <code object _digits at 0x106513510, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 35>:
+ 35           0 RESUME                   0
+
+ 36           2 LOAD_GLOBAL              1 (NULL + str)
+             14 LOAD_GLOBAL              3 (NULL + random)
+             26 LOAD_ATTR                2 (randint)
+             36 LOAD_CONST               1 (10)
+             38 LOAD_FAST                0 (n)
+             40 LOAD_CONST               2 (1)
+             42 BINARY_OP               10 (-)
+             46 BINARY_OP                8 (**)
+             50 LOAD_CONST               1 (10)
+             52 LOAD_FAST                0 (n)
+             54 BINARY_OP                8 (**)
+             58 LOAD_CONST               2 (1)
+             60 BINARY_OP               10 (-)
+             64 PRECALL                  2
+             68 CALL                     2
+             78 PRECALL                  1
+             82 CALL                     1
+             92 RETURN_VALUE
+
+Disassembly of <code object gen_device at 0xab1282d00, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 39>:
+ 39           0 RESUME                   0
+
+ 40           2 NOP
+
+ 41           4 LOAD_GLOBAL              1 (NULL + random)
+             16 LOAD_ATTR                1 (choice)
+             26 LOAD_GLOBAL              4 (PROFILES)
+             38 PRECALL                  1
+             42 CALL                     1
+             52 STORE_FAST               1 (p)
+
+ 42          54 LOAD_GLOBAL              7 (NULL + _digits)
+             66 LOAD_GLOBAL              9 (NULL + len)
+             78 LOAD_GLOBAL             11 (NULL + str)
+             90 LOAD_FAST                0 (template)
+             92 LOAD_METHOD              6 (get)
+            114 LOAD_CONST               1 ('device_id')
+            116 PRECALL                  1
+            120 CALL                     1
+            130 JUMP_IF_TRUE_OR_POP      1 (to 134)
+            132 LOAD_CONST               2 ('')
+        >>  134 PRECALL                  1
+            138 CALL                     1
+            148 PRECALL                  1
+            152 CALL                     1
+            162 JUMP_IF_TRUE_OR_POP      1 (to 166)
+            164 LOAD_CONST               3 (16)
+        >>  166 PRECALL                  1
+            170 CALL                     1
+            180 STORE_FAST               2 (did)
+
+ 43         182 LOAD_GLOBAL              7 (NULL + _digits)
+            194 LOAD_GLOBAL              9 (NULL + len)
+            206 LOAD_GLOBAL             11 (NULL + str)
+            218 LOAD_FAST                0 (template)
+            220 LOAD_METHOD              6 (get)
+            242 LOAD_CONST               4 ('iid')
+            244 PRECALL                  1
+            248 CALL                     1
+            258 JUMP_IF_TRUE_OR_POP      1 (to 262)
+            260 LOAD_CONST               2 ('')
+        >>  262 PRECALL                  1
+            266 CALL                     1
+            276 PRECALL                  1
+            280 CALL                     1
+            290 JUMP_IF_TRUE_OR_POP      1 (to 294)
+            292 LOAD_CONST               3 (16)
+        >>  294 PRECALL                  1
+            298 CALL                     1
+            308 STORE_FAST               3 (iid)
+
+ 44         310 LOAD_CONST               5 ('com.phoenix.read/')
+            312 LOAD_GLOBAL             14 (APP_VC)
+            324 FORMAT_VALUE             0
+            326 LOAD_CONST               6 (' (Linux; U; Android ')
+            328 LOAD_FAST                1 (p)
+            330 LOAD_CONST               7 ('os')
+            332 BINARY_SUBSCR
+            342 FORMAT_VALUE             0
+            344 LOAD_CONST               8 ('; zh_CN; ')
+
+ 45         346 LOAD_FAST                1 (p)
+            348 LOAD_CONST               9 ('model')
+            350 BINARY_SUBSCR
+
+ 44         360 FORMAT_VALUE             0
+            362 LOAD_CONST              10 ('; Build/')
+
+ 45         364 LOAD_FAST                1 (p)
+            366 LOAD_CONST              11 ('build')
+            368 BINARY_SUBSCR
+
+ 44         378 FORMAT_VALUE             0
+            380 LOAD_CONST              12 (';tt-ok/')
+
+ 45         382 LOAD_GLOBAL             16 (TTOK)
+
+ 44         394 FORMAT_VALUE             0
+            396 LOAD_CONST              13 (')')
+            398 BUILD_STRING            11
+            400 STORE_FAST               4 (ua)
+
+ 47         402 LOAD_FAST                2 (did)
+            404 LOAD_FAST                3 (iid)
+            406 LOAD_GLOBAL             11 (NULL + str)
+            418 LOAD_GLOBAL             19 (NULL + uuid)
+            430 LOAD_ATTR               10 (uuid4)
+            440 PRECALL                  0
+            444 CALL                     0
+            454 PRECALL                  1
+            458 CALL                     1
+
+ 48         468 LOAD_FAST                1 (p)
+            470 LOAD_CONST              14 ('brand')
+            472 BINARY_SUBSCR
+            482 LOAD_FAST                1 (p)
+            484 LOAD_CONST               9 ('model')
+            486 BINARY_SUBSCR
+
+ 49         496 LOAD_FAST                1 (p)
+            498 LOAD_CONST              15 ('res')
+            500 BINARY_SUBSCR
+            510 LOAD_FAST                1 (p)
+            512 LOAD_CONST               7 ('os')
+            514 BINARY_SUBSCR
+            524 LOAD_FAST                1 (p)
+            526 LOAD_CONST              16 ('api')
+            528 BINARY_SUBSCR
+
+ 50         538 LOAD_FAST                1 (p)
+            540 LOAD_CONST              11 ('build')
+            542 BINARY_SUBSCR
+            552 FORMAT_VALUE             0
+            554 LOAD_CONST              17 (' release-keys')
+            556 BUILD_STRING             2
+
+ 46         558 LOAD_CONST              18 (('device_id', 'iid', 'cdid', 'device_brand', 'device_type', 'resolution', 'os_version', 'os_api', 'rom_version'))
+            560 BUILD_CONST_KEY_MAP      9
+            562 STORE_FAST               5 (query)
+
+ 52         564 LOAD_FAST                5 (query)
+            566 LOAD_FAST                4 (ua)
+            568 LOAD_CONST              19 (('query', 'user_agent'))
+            570 BUILD_CONST_KEY_MAP      2
+            572 RETURN_VALUE
+
+Disassembly of <code object DevicePool at 0x1065a96b0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 55>:
+ 55           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('DevicePool')
+              8 STORE_NAME               2 (__qualname__)
+
+ 56          10 NOP
+
+ 61          12 LOAD_CONST               8 ((False,))
+             14 LOAD_CONST               2 (<code object __init__ at 0x1063fbc00, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 61>)
+             16 MAKE_FUNCTION            1 (defaults)
+             18 STORE_NAME               3 (__init__)
+
+ 71          20 LOAD_CONST               3 (<code object _advance at 0x1064f33f0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 71>)
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               4 (_advance)
+
+ 77          26 LOAD_CONST               4 (<code object current at 0x10651b4b0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 77>)
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (current)
+
+ 86          32 LOAD_CONST               5 (<code object rotate at 0x106515550, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 86>)
+             34 MAKE_FUNCTION            0
+             36 STORE_NAME               6 (rotate)
+
+ 94          38 LOAD_CONST               6 (<code object __len__ at 0x1065a84e0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 94>)
+             40 MAKE_FUNCTION            0
+             42 STORE_NAME               7 (__len__)
+             44 LOAD_CONST               7 (None)
+             46 RETURN_VALUE
+
+Disassembly of <code object __init__ at 0x1063fbc00, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 61>:
+ 61           0 RESUME                   0
+
+ 62           2 LOAD_FAST                1 (devices)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (devices)
+
+ 63          16 LOAD_FAST                1 (devices)
+             18 POP_JUMP_FORWARD_IF_FALSE    33 (to 86)
+             20 LOAD_GLOBAL              3 (NULL + random)
+             32 LOAD_ATTR                2 (randrange)
+             42 LOAD_GLOBAL              7 (NULL + len)
+             54 LOAD_FAST                1 (devices)
+             56 PRECALL                  1
+             60 CALL                     1
+             70 PRECALL                  1
+             74 CALL                     1
+             84 JUMP_FORWARD             1 (to 88)
+        >>   86 LOAD_CONST               1 (0)
+        >>   88 LOAD_FAST                0 (self)
+             90 STORE_ATTR               4 (_i)
+
+ 66         100 LOAD_GLOBAL             11 (NULL + threading)
+            112 LOAD_ATTR                6 (RLock)
+            122 PRECALL                  0
+            126 CALL                     0
+            136 LOAD_FAST                0 (self)
+            138 STORE_ATTR               7 (_lock)
+
+ 67         148 LOAD_GLOBAL             11 (NULL + threading)
+            160 LOAD_ATTR                8 (local)
+            170 PRECALL                  0
+            174 CALL                     0
+            184 LOAD_FAST                0 (self)
+            186 STORE_ATTR               9 (_local)
+
+ 68         196 LOAD_FAST                2 (session)
+            198 LOAD_FAST                0 (self)
+            200 STORE_ATTR              10 (_session)
+
+ 69         210 LOAD_FAST                2 (session)
+            212 POP_JUMP_FORWARD_IF_FALSE    22 (to 258)
+            214 LOAD_FAST                1 (devices)
+            216 POP_JUMP_FORWARD_IF_FALSE    20 (to 258)
+            218 LOAD_GLOBAL              3 (NULL + random)
+            230 LOAD_ATTR               11 (choice)
+            240 LOAD_FAST                1 (devices)
+            242 PRECALL                  1
+            246 CALL                     1
+            256 JUMP_FORWARD             1 (to 260)
+        >>  258 LOAD_CONST               0 (None)
+        >>  260 LOAD_FAST                0 (self)
+            262 STORE_ATTR              12 (_pin)
+            272 LOAD_CONST               0 (None)
+            274 RETURN_VALUE
+
+Disassembly of <code object _advance at 0x1064f33f0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 71>:
+ 71           0 RESUME                   0
+
+ 72           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_lock)
+             14 BEFORE_WITH
+             16 POP_TOP
+
+ 73          18 LOAD_FAST                0 (self)
+             20 LOAD_ATTR                1 (devices)
+             30 LOAD_FAST                0 (self)
+             32 LOAD_ATTR                2 (_i)
+             42 LOAD_GLOBAL              7 (NULL + len)
+             54 LOAD_FAST                0 (self)
+             56 LOAD_ATTR                1 (devices)
+             66 PRECALL                  1
+             70 CALL                     1
+             80 BINARY_OP                6 (%)
+             84 BINARY_SUBSCR
+             94 STORE_FAST               1 (d)
+
+ 74          96 LOAD_FAST                0 (self)
+             98 COPY                     1
+            100 LOAD_ATTR                2 (_i)
+            110 LOAD_CONST               1 (1)
+            112 BINARY_OP               13 (+=)
+            116 SWAP                     2
+            118 STORE_ATTR               2 (_i)
+
+ 75         128 LOAD_FAST                1 (d)
+
+ 72         130 SWAP                     2
+            132 LOAD_CONST               0 (None)
+            134 LOAD_CONST               0 (None)
+            136 LOAD_CONST               0 (None)
+            138 PRECALL                  2
+            142 CALL                     2
+            152 POP_TOP
+            154 RETURN_VALUE
+        >>  156 PUSH_EXC_INFO
+            158 WITH_EXCEPT_START
+            160 POP_JUMP_FORWARD_IF_TRUE     4 (to 170)
+            162 RERAISE                  2
+        >>  164 COPY                     3
+            166 POP_EXCEPT
+            168 RERAISE                  1
+        >>  170 POP_TOP
+            172 POP_EXCEPT
+            174 POP_TOP
+            176 POP_TOP
+            178 LOAD_CONST               0 (None)
+            180 RETURN_VALUE
+ExceptionTable:
+  16 to 128 -> 156 [1] lasti
+  156 to 162 -> 164 [3] lasti
+  170 to 170 -> 164 [3] lasti
+
+Disassembly of <code object current at 0x10651b4b0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 77>:
+ 77           0 RESUME                   0
+
+ 78           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_session)
+             14 POP_JUMP_FORWARD_IF_FALSE     7 (to 30)
+
+ 79          16 LOAD_FAST                0 (self)
+             18 LOAD_ATTR                1 (_pin)
+             28 RETURN_VALUE
+
+ 80     >>   30 LOAD_GLOBAL              5 (NULL + getattr)
+             42 LOAD_FAST                0 (self)
+             44 LOAD_ATTR                3 (_local)
+             54 LOAD_CONST               1 ('dev')
+             56 LOAD_CONST               0 (None)
+             58 PRECALL                  3
+             62 CALL                     3
+             72 STORE_FAST               1 (d)
+
+ 81          74 LOAD_FAST                1 (d)
+             76 POP_JUMP_FORWARD_IF_NOT_NONE    32 (to 142)
+
+ 82          78 LOAD_FAST                0 (self)
+             80 LOAD_METHOD              4 (_advance)
+            102 PRECALL                  0
+            106 CALL                     0
+            116 STORE_FAST               1 (d)
+
+ 83         118 LOAD_FAST                1 (d)
+            120 LOAD_FAST                0 (self)
+            122 LOAD_ATTR                3 (_local)
+            132 STORE_ATTR               5 (dev)
+
+ 84     >>  142 LOAD_FAST                1 (d)
+            144 RETURN_VALUE
+
+Disassembly of <code object rotate at 0x106515550, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 86>:
+ 86           0 RESUME                   0
+
+ 87           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (_session)
+             14 POP_JUMP_FORWARD_IF_FALSE    63 (to 142)
+
+ 88          16 LOAD_FAST                0 (self)
+             18 LOAD_ATTR                1 (_lock)
+             28 BEFORE_WITH
+             30 POP_TOP
+
+ 89          32 LOAD_FAST                0 (self)
+             34 LOAD_METHOD              2 (_advance)
+             56 PRECALL                  0
+             60 CALL                     0
+             70 LOAD_FAST                0 (self)
+             72 STORE_ATTR               3 (_pin)
+
+ 88          82 LOAD_CONST               0 (None)
+             84 LOAD_CONST               0 (None)
+             86 LOAD_CONST               0 (None)
+             88 PRECALL                  2
+             92 CALL                     2
+            102 POP_TOP
+            104 JUMP_FORWARD            11 (to 128)
+        >>  106 PUSH_EXC_INFO
+            108 WITH_EXCEPT_START
+            110 POP_JUMP_FORWARD_IF_TRUE     4 (to 120)
+            112 RERAISE                  2
+        >>  114 COPY                     3
+            116 POP_EXCEPT
+            118 RERAISE                  1
+        >>  120 POP_TOP
+            122 POP_EXCEPT
+            124 POP_TOP
+            126 POP_TOP
+
+ 90     >>  128 LOAD_FAST                0 (self)
+            130 LOAD_ATTR                3 (_pin)
+            140 RETURN_VALUE
+
+ 91     >>  142 LOAD_FAST                0 (self)
+            144 LOAD_METHOD              2 (_advance)
+            166 PRECALL                  0
+            170 CALL                     0
+            180 LOAD_FAST                0 (self)
+            182 LOAD_ATTR                4 (_local)
+            192 STORE_ATTR               5 (dev)
+
+ 92         202 LOAD_FAST                0 (self)
+            204 LOAD_ATTR                4 (_local)
+            214 LOAD_ATTR                5 (dev)
+            224 RETURN_VALUE
+ExceptionTable:
+  30 to 80 -> 106 [1] lasti
+  106 to 112 -> 114 [3] lasti
+  120 to 120 -> 114 [3] lasti
+
+Disassembly of <code object __len__ at 0x1065a84e0, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 94>:
+ 94           0 RESUME                   0
+
+ 95           2 LOAD_GLOBAL              1 (NULL + len)
+             14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (devices)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 RETURN_VALUE
+
+Disassembly of <code object load_pool at 0xab12b5400, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 98>:
+              0 MAKE_CELL                0 (template)
+
+ 98           2 RESUME                   0
+
+ 99           4 NOP
+
+100           6 LOAD_GLOBAL              0 (os)
+             18 LOAD_ATTR                1 (path)
+             28 LOAD_METHOD              2 (exists)
+             50 LOAD_GLOBAL              6 (POOL_PATH)
+             62 PRECALL                  1
+             66 CALL                     1
+             76 POP_JUMP_FORWARD_IF_FALSE   145 (to 368)
+
+101          78 NOP
+
+102          80 LOAD_GLOBAL              9 (NULL + json)
+             92 LOAD_ATTR                5 (load)
+            102 LOAD_GLOBAL             13 (NULL + open)
+            114 LOAD_GLOBAL              6 (POOL_PATH)
+            126 LOAD_CONST               1 ('utf-8')
+            128 KW_NAMES                 2
+            130 PRECALL                  2
+            134 CALL                     2
+            144 PRECALL                  1
+            148 CALL                     1
+            158 STORE_FAST               1 (devs)
+
+103         160 LOAD_FAST                1 (devs)
+            162 POP_JUMP_FORWARD_IF_FALSE    62 (to 288)
+
+105         164 LOAD_GLOBAL             15 (NULL + bool)
+            176 LOAD_GLOBAL              0 (os)
+            188 LOAD_ATTR                8 (environ)
+            198 LOAD_METHOD              9 (get)
+            220 LOAD_CONST               3 ('DEVICE_POOL')
+            222 PRECALL                  1
+            226 CALL                     1
+            236 PRECALL                  1
+            240 CALL                     1
+            250 UNARY_NOT
+            252 STORE_FAST               2 (session)
+
+106         254 LOAD_GLOBAL             21 (NULL + DevicePool)
+            266 LOAD_FAST                1 (devs)
+            268 LOAD_FAST                2 (session)
+            270 KW_NAMES                 4
+            272 PRECALL                  2
+            276 CALL                     2
+            286 RETURN_VALUE
+
+103     >>  288 JUMP_FORWARD            39 (to 368)
+        >>  290 PUSH_EXC_INFO
+
+107         292 LOAD_GLOBAL             22 (Exception)
+            304 CHECK_EXC_MATCH
+            306 POP_JUMP_FORWARD_IF_FALSE    26 (to 360)
+            308 STORE_FAST               3 (e)
+
+108         310 LOAD_GLOBAL             25 (NULL + print)
+            322 LOAD_CONST               5 ('[devicepool] 加载失败, 忽略:')
+            324 LOAD_FAST                3 (e)
+            326 PRECALL                  2
+            330 CALL                     2
+            340 POP_TOP
+            342 POP_EXCEPT
+            344 LOAD_CONST               0 (None)
+            346 STORE_FAST               3 (e)
+            348 DELETE_FAST              3 (e)
+            350 JUMP_FORWARD             8 (to 368)
+        >>  352 LOAD_CONST               0 (None)
+            354 STORE_FAST               3 (e)
+            356 DELETE_FAST              3 (e)
+            358 RERAISE                  1
+
+107     >>  360 RERAISE                  0
+        >>  362 COPY                     3
+            364 POP_EXCEPT
+            366 RERAISE                  1
+
+109     >>  368 LOAD_GLOBAL             27 (NULL + int)
+            380 LOAD_GLOBAL              0 (os)
+            392 LOAD_ATTR                8 (environ)
+            402 LOAD_METHOD              9 (get)
+            424 LOAD_CONST               6 ('DEVICE_POOL_SIZE')
+            426 LOAD_CONST               7 ('0')
+            428 PRECALL                  2
+            432 CALL                     2
+            442 JUMP_IF_TRUE_OR_POP      1 (to 446)
+            444 LOAD_CONST               7 ('0')
+        >>  446 PRECALL                  1
+            450 CALL                     1
+            460 STORE_FAST               4 (size)
+
+110         462 LOAD_FAST                4 (size)
+            464 LOAD_CONST               8 (0)
+            466 COMPARE_OP               4 (>)
+            472 POP_JUMP_FORWARD_IF_FALSE   154 (to 782)
+
+111         474 LOAD_CLOSURE             0 (template)
+            476 BUILD_TUPLE              1
+            478 LOAD_CONST               9 (<code object <listcomp> at 0x1065a9c50, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 111>)
+            480 MAKE_FUNCTION            8 (closure)
+            482 LOAD_GLOBAL             29 (NULL + range)
+            494 LOAD_FAST                4 (size)
+            496 PRECALL                  1
+            500 CALL                     1
+            510 GET_ITER
+            512 PRECALL                  0
+            516 CALL                     0
+            526 STORE_FAST               1 (devs)
+
+112         528 NOP
+
+113         530 LOAD_GLOBAL              9 (NULL + json)
+            542 LOAD_ATTR               15 (dump)
+            552 LOAD_FAST                1 (devs)
+            554 LOAD_GLOBAL             13 (NULL + open)
+            566 LOAD_GLOBAL              6 (POOL_PATH)
+            578 LOAD_CONST              10 ('w')
+            580 LOAD_CONST               1 ('utf-8')
+            582 KW_NAMES                 2
+            584 PRECALL                  3
+            588 CALL                     3
+            598 LOAD_CONST              11 (False)
+            600 LOAD_CONST              12 (2)
+            602 KW_NAMES                13
+            604 PRECALL                  4
+            608 CALL                     4
+            618 POP_TOP
+
+114         620 LOAD_GLOBAL             25 (NULL + print)
+            632 LOAD_CONST              14 ('[devicepool] 已生成 ')
+            634 LOAD_FAST                4 (size)
+            636 FORMAT_VALUE             0
+            638 LOAD_CONST              15 (' 台设备 → ')
+            640 LOAD_GLOBAL              6 (POOL_PATH)
+            652 FORMAT_VALUE             0
+            654 BUILD_STRING             4
+            656 PRECALL                  1
+            660 CALL                     1
+            670 POP_TOP
+            672 JUMP_FORWARD            39 (to 752)
+        >>  674 PUSH_EXC_INFO
+
+115         676 LOAD_GLOBAL             22 (Exception)
+            688 CHECK_EXC_MATCH
+            690 POP_JUMP_FORWARD_IF_FALSE    26 (to 744)
+            692 STORE_FAST               3 (e)
+
+116         694 LOAD_GLOBAL             25 (NULL + print)
+            706 LOAD_CONST              16 ('[devicepool] 落盘失败(仅内存):')
+            708 LOAD_FAST                3 (e)
+            710 PRECALL                  2
+            714 CALL                     2
+            724 POP_TOP
+            726 POP_EXCEPT
+            728 LOAD_CONST               0 (None)
+            730 STORE_FAST               3 (e)
+            732 DELETE_FAST              3 (e)
+            734 JUMP_FORWARD             8 (to 752)
+        >>  736 LOAD_CONST               0 (None)
+            738 STORE_FAST               3 (e)
+            740 DELETE_FAST              3 (e)
+            742 RERAISE                  1
+
+115     >>  744 RERAISE                  0
+        >>  746 COPY                     3
+            748 POP_EXCEPT
+            750 RERAISE                  1
+
+117     >>  752 LOAD_GLOBAL             21 (NULL + DevicePool)
+            764 LOAD_FAST                1 (devs)
+            766 PRECALL                  1
+            770 CALL                     1
+            780 RETURN_VALUE
+
+118     >>  782 LOAD_CONST               0 (None)
+            784 RETURN_VALUE
+ExceptionTable:
+  80 to 284 -> 290 [0]
+  290 to 308 -> 362 [1] lasti
+  310 to 340 -> 352 [1] lasti
+  352 to 360 -> 362 [1] lasti
+  530 to 670 -> 674 [0]
+  674 to 692 -> 746 [1] lasti
+  694 to 724 -> 736 [1] lasti
+  736 to 744 -> 746 [1] lasti
+
+Disassembly of <code object <listcomp> at 0x1065a9c50, file "D:\code\Hongguo-App\installer\_stage_172g\app\devicepool.py", line 111>:
+              0 COPY_FREE_VARS           1
+
+111           2 RESUME                   0
+              4 BUILD_LIST               0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                17 (to 44)
+             10 STORE_FAST               1 (_)
+             12 LOAD_GLOBAL              1 (NULL + gen_device)
+             24 LOAD_DEREF               2 (template)
+             26 PRECALL                  1
+             30 CALL                     1
+             40 LIST_APPEND              2
+             42 JUMP_BACKWARD           18 (to 8)
+        >>   44 RETURN_VALUE
+FUNCTION check_response ORIGINAL_LINE 128
+              0 MAKE_CELL                2 (ml)
+              2 MAKE_CELL                3 (msg)
+
+128           4 RESUME                   0
+
+129           6 NOP
+
+130           8 LOAD_GLOBAL              1 (NULL + isinstance)
+             20 LOAD_FAST                0 (j)
+             22 LOAD_GLOBAL              2 (dict)
+             34 PRECALL                  2
+             38 CALL                     2
+             48 POP_JUMP_FORWARD_IF_TRUE     2 (to 54)
+
+131          50 LOAD_CONST               0 (None)
+             52 RETURN_VALUE
+
+132     >>   54 LOAD_FAST                0 (j)
+             56 LOAD_METHOD              2 (get)
+             78 LOAD_CONST               1 ('code')
+             80 PRECALL                  1
+             84 CALL                     1
+             94 STORE_FAST               1 (code)
+
+133          96 LOAD_FAST                0 (j)
+             98 LOAD_METHOD              2 (get)
+            120 LOAD_CONST               2 ('message')
+            122 PRECALL                  1
+            126 CALL                     1
+            136 JUMP_IF_TRUE_OR_POP      1 (to 140)
+            138 LOAD_CONST               3 ('')
+        >>  140 LOAD_GLOBAL              1 (NULL + isinstance)
+            152 LOAD_FAST                0 (j)
+            154 LOAD_METHOD              2 (get)
+            176 LOAD_CONST               4 ('BaseResp')
+            178 PRECALL                  1
+            182 CALL                     1
+            192 LOAD_GLOBAL              2 (dict)
+            204 PRECALL                  2
+            208 CALL                     2
+            218 POP_JUMP_FORWARD_IF_FALSE    42 (to 304)
+            220 LOAD_FAST                0 (j)
+            222 LOAD_METHOD              2 (get)
+            244 LOAD_CONST               4 ('BaseResp')
+            246 BUILD_MAP                0
+            248 PRECALL                  2
+            252 CALL                     2
+            262 LOAD_METHOD              2 (get)
+            284 LOAD_CONST               5 ('StatusMessage')
+            286 LOAD_CONST               3 ('')
+            288 PRECALL                  2
+            292 CALL                     2
+            302 JUMP_FORWARD             1 (to 306)
+        >>  304 LOAD_CONST               3 ('')
+        >>  306 BINARY_OP                0 (+)
+            310 STORE_DEREF              3 (msg)
+
+134         312 LOAD_DEREF               3 (msg)
+            314 LOAD_METHOD              3 (lower)
+            336 PRECALL                  0
+            340 CALL                     0
+            350 STORE_DEREF              2 (ml)
+
+135         352 LOAD_FAST                1 (code)
+            354 LOAD_CONST               6 ((0, None))
+            356 CONTAINS_OP              0
+            358 POP_JUMP_FORWARD_IF_FALSE    52 (to 464)
+
+136         360 LOAD_GLOBAL              9 (NULL + any)
+            372 LOAD_CLOSURE             2 (ml)
+            374 BUILD_TUPLE              1
+            376 LOAD_CONST               7 (<code object <genexpr> at 0x1065cabf0, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 136>)
+            378 MAKE_FUNCTION            8 (closure)
+            380 LOAD_GLOBAL             10 (RISK_KEYWORDS)
+            392 GET_ITER
+            394 PRECALL                  0
+            398 CALL                     0
+            408 PRECALL                  1
+            412 CALL                     1
+            422 POP_JUMP_FORWARD_IF_FALSE    18 (to 460)
+
+137         424 LOAD_GLOBAL             13 (NULL + RiskControlError)
+            436 LOAD_CONST               8 ('疑似风控: ')
+            438 LOAD_DEREF               3 (msg)
+            440 FORMAT_VALUE             0
+            442 BUILD_STRING             2
+            444 PRECALL                  1
+            448 CALL                     1
+            458 RAISE_VARARGS            1
+
+138     >>  460 LOAD_CONST               0 (None)
+            462 RETURN_VALUE
+
+139     >>  464 LOAD_FAST                1 (code)
+            466 LOAD_GLOBAL             14 (GONE_CODES)
+            478 CONTAINS_OP              0
+            480 POP_JUMP_FORWARD_IF_TRUE    32 (to 546)
+            482 LOAD_GLOBAL              9 (NULL + any)
+            494 LOAD_CLOSURE             3 (msg)
+            496 BUILD_TUPLE              1
+            498 LOAD_CONST               9 (<code object <genexpr> at 0x1065cb210, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 139>)
+            500 MAKE_FUNCTION            8 (closure)
+            502 LOAD_GLOBAL             16 (GONE_KEYWORDS)
+            514 GET_ITER
+            516 PRECALL                  0
+            520 CALL                     0
+            530 PRECALL                  1
+            534 CALL                     1
+            544 POP_JUMP_FORWARD_IF_FALSE    21 (to 588)
+
+140     >>  546 LOAD_GLOBAL             19 (NULL + ContentUnavailableError)
+            558 LOAD_CONST              10 ('内容已下架/不存在 code=')
+            560 LOAD_FAST                1 (code)
+            562 FORMAT_VALUE             0
+            564 LOAD_CONST              11 (' msg=')
+            566 LOAD_DEREF               3 (msg)
+            568 FORMAT_VALUE             0
+            570 BUILD_STRING             4
+            572 PRECALL                  1
+            576 CALL                     1
+            586 RAISE_VARARGS            1
+
+141     >>  588 LOAD_FAST                1 (code)
+            590 LOAD_GLOBAL             20 (AUTH_CODES)
+            602 CONTAINS_OP              0
+            604 POP_JUMP_FORWARD_IF_TRUE    32 (to 670)
+            606 LOAD_GLOBAL              9 (NULL + any)
+            618 LOAD_CLOSURE             2 (ml)
+            620 BUILD_TUPLE              1
+            622 LOAD_CONST              12 (<code object <genexpr> at 0x1065cb2f0, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 141>)
+            624 MAKE_FUNCTION            8 (closure)
+            626 LOAD_GLOBAL             22 (AUTH_KEYWORDS)
+            638 GET_ITER
+            640 PRECALL                  0
+            644 CALL                     0
+            654 PRECALL                  1
+            658 CALL                     1
+            668 POP_JUMP_FORWARD_IF_FALSE    21 (to 712)
+
+142     >>  670 LOAD_GLOBAL             25 (NULL + AuthExpiredError)
+            682 LOAD_CONST              13 ('登录态失效 code=')
+            684 LOAD_FAST                1 (code)
+            686 FORMAT_VALUE             0
+            688 LOAD_CONST              11 (' msg=')
+            690 LOAD_DEREF               3 (msg)
+            692 FORMAT_VALUE             0
+            694 BUILD_STRING             4
+            696 PRECALL                  1
+            700 CALL                     1
+            710 RAISE_VARARGS            1
+
+143     >>  712 LOAD_FAST                1 (code)
+            714 LOAD_GLOBAL             26 (RISK_CODES)
+            726 CONTAINS_OP              0
+            728 POP_JUMP_FORWARD_IF_TRUE    32 (to 794)
+            730 LOAD_GLOBAL              9 (NULL + any)
+            742 LOAD_CLOSURE             2 (ml)
+            744 BUILD_TUPLE              1
+            746 LOAD_CONST              14 (<code object <genexpr> at 0x1065cb3d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 143>)
+            748 MAKE_FUNCTION            8 (closure)
+            750 LOAD_GLOBAL             10 (RISK_KEYWORDS)
+            762 GET_ITER
+            764 PRECALL                  0
+            768 CALL                     0
+            778 PRECALL                  1
+            782 CALL                     1
+            792 POP_JUMP_FORWARD_IF_FALSE    21 (to 836)
+
+144     >>  794 LOAD_GLOBAL             13 (NULL + RiskControlError)
+            806 LOAD_CONST              15 ('风控触发 code=')
+            808 LOAD_FAST                1 (code)
+            810 FORMAT_VALUE             0
+            812 LOAD_CONST              11 (' msg=')
+            814 LOAD_DEREF               3 (msg)
+            816 FORMAT_VALUE             0
+            818 BUILD_STRING             4
+            820 PRECALL                  1
+            824 CALL                     1
+            834 RAISE_VARARGS            1
+
+145     >>  836 LOAD_GLOBAL             13 (NULL + RiskControlError)
+            848 LOAD_CONST              16 ('接口返回异常 code=')
+            850 LOAD_FAST                1 (code)
+            852 FORMAT_VALUE             0
+            854 LOAD_CONST              11 (' msg=')
+            856 LOAD_DEREF               3 (msg)
+            858 FORMAT_VALUE             0
+            860 BUILD_STRING             4
+            862 PRECALL                  1
+            866 CALL                     1
+            876 RAISE_VARARGS            1
+
+Disassembly of <code object <genexpr> at 0x1065cabf0, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 136>:
+              0 COPY_FREE_VARS           1
+
+136           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                 8 (to 28)
+             12 STORE_FAST               1 (k)
+             14 LOAD_FAST                1 (k)
+             16 LOAD_DEREF               2 (ml)
+             18 CONTAINS_OP              0
+             20 YIELD_VALUE
+             22 RESUME                   1
+             24 POP_TOP
+             26 JUMP_BACKWARD            9 (to 10)
+        >>   28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x1065cb210, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 139>:
+              0 COPY_FREE_VARS           1
+
+139           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                 8 (to 28)
+             12 STORE_FAST               1 (k)
+             14 LOAD_FAST                1 (k)
+             16 LOAD_DEREF               2 (msg)
+             18 CONTAINS_OP              0
+             20 YIELD_VALUE
+             22 RESUME                   1
+             24 POP_TOP
+             26 JUMP_BACKWARD            9 (to 10)
+        >>   28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x1065cb2f0, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 141>:
+              0 COPY_FREE_VARS           1
+
+141           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                 8 (to 28)
+             12 STORE_FAST               1 (k)
+             14 LOAD_FAST                1 (k)
+             16 LOAD_DEREF               2 (ml)
+             18 CONTAINS_OP              0
+             20 YIELD_VALUE
+             22 RESUME                   1
+             24 POP_TOP
+             26 JUMP_BACKWARD            9 (to 10)
+        >>   28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x1065cb3d0, file "D:\code\Hongguo-App\installer\_stage_172g\app\safeguards.py", line 143>:
+              0 COPY_FREE_VARS           1
+
+143           2 RETURN_GENERATOR
+              4 POP_TOP
+              6 RESUME                   0
+              8 LOAD_FAST                0 (.0)
+        >>   10 FOR_ITER                 8 (to 28)
+             12 STORE_FAST               1 (k)
+             14 LOAD_FAST                1 (k)
+             16 LOAD_DEREF               2 (ml)
+             18 CONTAINS_OP              0
+             20 YIELD_VALUE
+             22 RESUME                   1
+             24 POP_TOP
+             26 JUMP_BACKWARD            9 (to 10)
+        >>   28 LOAD_CONST               0 (None)
+             30 RETURN_VALUE
+FUNCTION refresh_session ORIGINAL_LINE 437
+437           0 RESUME                   0
+
+438           2 NOP
+
+440           4 LOAD_GLOBAL              0 (_refresh_lock)
+             16 BEFORE_WITH
+             18 POP_TOP
+
+441          20 LOAD_GLOBAL              3 (NULL + time)
+             32 LOAD_ATTR                1 (time)
+             42 PRECALL                  0
+             46 CALL                     0
+             56 LOAD_GLOBAL              4 (_last_refresh)
+             68 BINARY_OP               10 (-)
+             72 LOAD_CONST               1 (20)
+             74 COMPARE_OP               0 (<)
+             80 POP_JUMP_FORWARD_IF_FALSE    14 (to 110)
+
+442          82 NOP
+
+440          84 LOAD_CONST               0 (None)
+             86 LOAD_CONST               0 (None)
+             88 LOAD_CONST               0 (None)
+             90 PRECALL                  2
+             94 CALL                     2
+            104 POP_TOP
+            106 LOAD_CONST               0 (None)
+            108 RETURN_VALUE
+
+443     >>  110 LOAD_GLOBAL              6 (SIGN_SERVERS)
+            122 POP_JUMP_FORWARD_IF_TRUE    14 (to 152)
+
+444         124 NOP
+
+440         126 LOAD_CONST               0 (None)
+            128 LOAD_CONST               0 (None)
+            130 LOAD_CONST               0 (None)
+            132 PRECALL                  2
+            136 CALL                     2
+            146 POP_TOP
+            148 LOAD_CONST               0 (None)
+            150 RETURN_VALUE
+
+445     >>  152 NOP
+
+451         154 LOAD_GLOBAL              6 (SIGN_SERVERS)
+            166 LOAD_CONST               2 (0)
+            168 BINARY_SUBSCR
+            178 STORE_FAST               0 (_grab_base)
+
+452         180 LOAD_GLOBAL              9 (NULL + _sign_sem_for)
+            192 LOAD_FAST                0 (_grab_base)
+            194 PRECALL                  1
+            198 CALL                     1
+            208 BEFORE_WITH
+            210 POP_TOP
+            212 LOAD_GLOBAL             11 (NULL + requests)
+            224 LOAD_ATTR                6 (Session)
+            234 PRECALL                  0
+            238 CALL                     0
+            248 BEFORE_WITH
+            250 STORE_FAST               1 (_gs)
+
+453         252 LOAD_CONST               3 (False)
+            254 LOAD_FAST                1 (_gs)
+            256 STORE_ATTR               7 (trust_env)
+
+454         266 LOAD_FAST                1 (_gs)
+            268 LOAD_METHOD              8 (get)
+            290 LOAD_FAST                0 (_grab_base)
+            292 LOAD_METHOD              9 (rstrip)
+            314 LOAD_CONST               4 ('/')
+            316 PRECALL                  1
+            320 CALL                     1
+            330 LOAD_CONST               5 ('/grab')
+            332 BINARY_OP                0 (+)
+            336 LOAD_CONST               6 (30)
+
+455         338 LOAD_GLOBAL             21 (NULL + _sign_auth_headers)
+            350 PRECALL                  0
+            354 CALL                     0
+
+454         364 KW_NAMES                 7
+            366 PRECALL                  3
+            370 CALL                     3
+            380 STORE_FAST               2 (r)
+
+452         382 LOAD_CONST               0 (None)
+            384 LOAD_CONST               0 (None)
+            386 LOAD_CONST               0 (None)
+            388 PRECALL                  2
+            392 CALL                     2
+            402 POP_TOP
+            404 JUMP_FORWARD            11 (to 428)
+        >>  406 PUSH_EXC_INFO
+            408 WITH_EXCEPT_START
+            410 POP_JUMP_FORWARD_IF_TRUE     4 (to 420)
+            412 RERAISE                  2
+        >>  414 COPY                     3
+            416 POP_EXCEPT
+            418 RERAISE                  1
+        >>  420 POP_TOP
+            422 POP_EXCEPT
+            424 POP_TOP
+            426 POP_TOP
+        >>  428 LOAD_CONST               0 (None)
+            430 LOAD_CONST               0 (None)
+            432 LOAD_CONST               0 (None)
+            434 PRECALL                  2
+            438 CALL                     2
+            448 POP_TOP
+            450 JUMP_FORWARD            11 (to 474)
+        >>  452 PUSH_EXC_INFO
+            454 WITH_EXCEPT_START
+            456 POP_JUMP_FORWARD_IF_TRUE     4 (to 466)
+            458 RERAISE                  2
+        >>  460 COPY                     3
+            462 POP_EXCEPT
+            464 RERAISE                  1
+        >>  466 POP_TOP
+            468 POP_EXCEPT
+            470 POP_TOP
+            472 POP_TOP
+
+456     >>  474 LOAD_FAST                2 (r)
+            476 LOAD_METHOD             11 (json)
+            498 PRECALL                  0
+            502 CALL                     0
+            512 STORE_FAST               3 (data)
+
+457         514 LOAD_CONST               8 ('error')
+            516 LOAD_FAST                3 (data)
+            518 CONTAINS_OP              0
+            520 POP_JUMP_FORWARD_IF_FALSE    35 (to 592)
+
+458         522 LOAD_GLOBAL             25 (NULL + print)
+            534 LOAD_CONST               9 ('[refresh] grab失败:')
+            536 LOAD_FAST                3 (data)
+            538 LOAD_CONST               8 ('error')
+            540 BINARY_SUBSCR
+            550 PRECALL                  2
+            554 CALL                     2
+            564 POP_TOP
+
+440         566 LOAD_CONST               0 (None)
+            568 LOAD_CONST               0 (None)
+            570 LOAD_CONST               0 (None)
+            572 PRECALL                  2
+            576 CALL                     2
+            586 POP_TOP
+            588 LOAD_CONST               0 (None)
+            590 RETURN_VALUE
+
+459     >>  592 LOAD_CONST               2 (0)
+            594 LOAD_CONST              10 (('urlparse', 'parse_qsl'))
+            596 IMPORT_NAME             13 (urllib.parse)
+            598 IMPORT_FROM             14 (urlparse)
+            600 STORE_FAST               4 (urlparse)
+            602 IMPORT_FROM             15 (parse_qsl)
+            604 STORE_FAST               5 (parse_qsl)
+            606 POP_TOP
+
+460         608 LOAD_GLOBAL             33 (NULL + dict)
+            620 PUSH_NULL
+            622 LOAD_FAST                5 (parse_qsl)
+            624 PUSH_NULL
+            626 LOAD_FAST                4 (urlparse)
+            628 LOAD_FAST                3 (data)
+            630 LOAD_CONST              11 ('url')
+            632 BINARY_SUBSCR
+            642 PRECALL                  1
+            646 CALL                     1
+            656 LOAD_ATTR               17 (query)
+            666 PRECALL                  1
+            670 CALL                     1
+            680 PRECALL                  1
+            684 CALL                     1
+            694 STORE_FAST               6 (q)
+
+461         696 LOAD_GLOBAL             37 (NULL + set)
+            708 LOAD_GLOBAL             38 (CFG)
+            720 LOAD_CONST              12 ('base_query')
+            722 BINARY_SUBSCR
+            732 LOAD_METHOD             20 (keys)
+            754 PRECALL                  0
+            758 CALL                     0
+            768 PRECALL                  1
+            772 CALL                     1
+            782 BUILD_SET                0
+            784 LOAD_CONST              13 (frozenset({'iid', 'update_version_code', 'device_id', 'klink_egdi', 'channel', 'cdid'}))
+            786 SET_UPDATE               1
+            788 BINARY_OP                7 (|)
+            792 STORE_FAST               7 (DEVICE_KEYS)
+
+463         794 LOAD_FAST                7 (DEVICE_KEYS)
+            796 GET_ITER
+        >>  798 FOR_ITER                36 (to 872)
+            800 STORE_FAST               8 (k)
+
+464         802 LOAD_FAST                8 (k)
+            804 LOAD_FAST                6 (q)
+            806 CONTAINS_OP              0
+            808 POP_JUMP_FORWARD_IF_FALSE    30 (to 870)
+            810 LOAD_FAST                6 (q)
+            812 LOAD_FAST                8 (k)
+            814 BINARY_SUBSCR
+            824 POP_JUMP_FORWARD_IF_FALSE    22 (to 870)
+
+465         826 LOAD_FAST                6 (q)
+            828 LOAD_FAST                8 (k)
+            830 BINARY_SUBSCR
+            840 LOAD_GLOBAL             38 (CFG)
+            852 LOAD_CONST              12 ('base_query')
+            854 BINARY_SUBSCR
+            864 LOAD_FAST                8 (k)
+            866 STORE_SUBSCR
+        >>  870 JUMP_BACKWARD           37 (to 798)
+
+466     >>  872 LOAD_FAST                3 (data)
+            874 LOAD_METHOD              8 (get)
+            896 LOAD_CONST              14 ('headers')
+            898 PRECALL                  1
+            902 CALL                     1
+            912 JUMP_IF_TRUE_OR_POP      1 (to 916)
+            914 BUILD_MAP                0
+        >>  916 LOAD_METHOD             21 (items)
+            938 PRECALL                  0
+            942 CALL                     0
+            952 GET_ITER
+        >>  954 FOR_ITER                66 (to 1088)
+            956 UNPACK_SEQUENCE          2
+            960 STORE_FAST               8 (k)
+            962 STORE_FAST               9 (v)
+
+467         964 LOAD_FAST                8 (k)
+            966 LOAD_METHOD             22 (lower)
+            988 PRECALL                  0
+            992 CALL                     0
+           1002 STORE_FAST              10 (kl)
+
+468        1004 LOAD_FAST               10 (kl)
+           1006 LOAD_CONST              15 (('cookie', 'x-tt-token', 'x-tt-store-region', 'x-tt-store-region-src'))
+           1008 CONTAINS_OP              0
+           1010 POP_JUMP_FORWARD_IF_FALSE    37 (to 1086)
+           1012 LOAD_FAST                9 (v)
+           1014 POP_JUMP_FORWARD_IF_FALSE    35 (to 1086)
+
+469        1016 LOAD_FAST                9 (v)
+           1018 LOAD_METHOD             23 (strip)
+           1040 LOAD_CONST              16 ('[]')
+           1042 PRECALL                  1
+           1046 CALL                     1
+           1056 LOAD_GLOBAL             38 (CFG)
+           1068 LOAD_CONST              17 ('session_headers')
+           1070 BINARY_SUBSCR
+           1080 LOAD_FAST               10 (kl)
+           1082 STORE_SUBSCR
+        >> 1086 JUMP_BACKWARD           67 (to 954)
+
+470     >> 1088 LOAD_GLOBAL              3 (NULL + time)
+           1100 LOAD_ATTR                1 (time)
+           1110 PRECALL                  0
+           1114 CALL                     0
+           1124 STORE_GLOBAL             2 (_last_refresh)
+
+472        1126 NOP
+
+473        1128 LOAD_GLOBAL             23 (NULL + json)
+           1140 LOAD_ATTR               24 (dump)
+           1150 LOAD_GLOBAL             38 (CFG)
+           1162 LOAD_GLOBAL             51 (NULL + open)
+           1174 LOAD_GLOBAL             52 (os)
+           1186 LOAD_ATTR               27 (path)
+           1196 LOAD_METHOD             28 (join)
+           1218 LOAD_GLOBAL             58 (HERE)
+           1230 LOAD_CONST              18 ('config.json')
+           1232 PRECALL                  2
+           1236 CALL                     2
+           1246 LOAD_CONST              19 ('w')
+           1248 LOAD_CONST              20 ('utf-8')
+           1250 KW_NAMES                21
+           1252 PRECALL                  3
+           1256 CALL                     3
+
+474        1266 LOAD_CONST               3 (False)
+           1268 LOAD_CONST              22 (2)
+
+473        1270 KW_NAMES                23
+           1272 PRECALL                  4
+           1276 CALL                     4
+           1286 POP_TOP
+           1288 JUMP_FORWARD            16 (to 1322)
+        >> 1290 PUSH_EXC_INFO
+
+475        1292 LOAD_GLOBAL             60 (Exception)
+           1304 CHECK_EXC_MATCH
+           1306 POP_JUMP_FORWARD_IF_FALSE     3 (to 1314)
+           1308 POP_TOP
+
+476        1310 POP_EXCEPT
+           1312 JUMP_FORWARD             4 (to 1322)
+
+475     >> 1314 RERAISE                  0
+        >> 1316 COPY                     3
+           1318 POP_EXCEPT
+           1320 RERAISE                  1
+
+477     >> 1322 LOAD_GLOBAL             25 (NULL + print)
+           1334 LOAD_CONST              24 ('[refresh] 登录态已刷新, token长度=%d')
+           1336 LOAD_GLOBAL             63 (NULL + len)
+           1348 LOAD_GLOBAL             38 (CFG)
+           1360 LOAD_CONST              17 ('session_headers')
+           1362 BINARY_SUBSCR
+           1372 LOAD_METHOD              8 (get)
+           1394 LOAD_CONST              25 ('x-tt-token')
+           1396 LOAD_CONST              26 ('')
+           1398 PRECALL                  2
+           1402 CALL                     2
+           1412 PRECALL                  1
+           1416 CALL                     1
+           1426 BINARY_OP                6 (%)
+           1430 PRECALL                  1
+           1434 CALL                     1
+           1444 POP_TOP
+           1446 JUMP_FORWARD            39 (to 1526)
+        >> 1448 PUSH_EXC_INFO
+
+478        1450 LOAD_GLOBAL             60 (Exception)
+           1462 CHECK_EXC_MATCH
+           1464 POP_JUMP_FORWARD_IF_FALSE    26 (to 1518)
+           1466 STORE_FAST              11 (e)
+
+479        1468 LOAD_GLOBAL             25 (NULL + print)
+           1480 LOAD_CONST              27 ('[refresh] 异常:')
+           1482 LOAD_FAST               11 (e)
+           1484 PRECALL                  2
+           1488 CALL                     2
+           1498 POP_TOP
+           1500 POP_EXCEPT
+           1502 LOAD_CONST               0 (None)
+           1504 STORE_FAST              11 (e)
+           1506 DELETE_FAST             11 (e)
+           1508 JUMP_FORWARD             8 (to 1526)
+        >> 1510 LOAD_CONST               0 (None)
+           1512 STORE_FAST              11 (e)
+           1514 DELETE_FAST             11 (e)
+           1516 RERAISE                  1
+
+478     >> 1518 RERAISE                  0
+        >> 1520 COPY                     3
+           1522 POP_EXCEPT
+           1524 RERAISE                  1
+
+440     >> 1526 LOAD_CONST               0 (None)
+           1528 LOAD_CONST               0 (None)
+           1530 LOAD_CONST               0 (None)
+           1532 PRECALL                  2
+           1536 CALL                     2
+           1546 POP_TOP
+           1548 LOAD_CONST               0 (None)
+           1550 RETURN_VALUE
+        >> 1552 PUSH_EXC_INFO
+           1554 WITH_EXCEPT_START
+           1556 POP_JUMP_FORWARD_IF_TRUE     4 (to 1566)
+           1558 RERAISE                  2
+        >> 1560 COPY                     3
+           1562 POP_EXCEPT
+           1564 RERAISE                  1
+        >> 1566 POP_TOP
+           1568 POP_EXCEPT
+           1570 POP_TOP
+           1572 POP_TOP
+           1574 LOAD_CONST               0 (None)
+           1576 RETURN_VALUE
+ExceptionTable:
+  18 to 82 -> 1552 [1] lasti
+  110 to 124 -> 1552 [1] lasti
+  154 to 208 -> 1448 [1]
+  210 to 248 -> 452 [2] lasti
+  250 to 380 -> 406 [3] lasti
+  382 to 404 -> 452 [2] lasti
+  406 to 412 -> 414 [5] lasti
+  414 to 418 -> 452 [2] lasti
+  420 to 420 -> 414 [5] lasti
+  422 to 426 -> 452 [2] lasti
+  428 to 450 -> 1448 [1]
+  452 to 458 -> 460 [4] lasti
+  460 to 464 -> 1448 [1]
+  466 to 466 -> 460 [4] lasti
+  468 to 564 -> 1448 [1]
+  592 to 1124 -> 1448 [1]
+  1128 to 1286 -> 1290 [1]
+  1288 to 1288 -> 1448 [1]
+  1290 to 1308 -> 1316 [2] lasti
+  1310 to 1312 -> 1448 [1]
+  1314 to 1314 -> 1316 [2] lasti
+  1316 to 1444 -> 1448 [1]
+  1446 to 1446 -> 1552 [1] lasti
+  1448 to 1466 -> 1520 [2] lasti
+  1468 to 1498 -> 1510 [2] lasti
+  1500 to 1508 -> 1552 [1] lasti
+  1510 to 1518 -> 1520 [2] lasti
+  1520 to 1524 -> 1552 [1] lasti
+  1552 to 1558 -> 1560 [3] lasti
+  1566 to 1566 -> 1560 [3] lasti

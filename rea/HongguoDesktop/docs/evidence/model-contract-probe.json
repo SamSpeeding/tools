@@ -1,0 +1,74 @@
+{
+  "aid": "8662",
+  "scope": "reference shapes, one change per adjacent request",
+  "runs": [
+    {
+      "name": "original_batch",
+      "path": "/novel/player/multi_video_model/v1/",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "response": {
+        "Code": 110001,
+        "Message": "未知异常",
+        "BaseResp": {
+          "StatusMessage": "unknown error",
+          "StatusCode": 110001
+        }
+      },
+      "seconds": 2.84
+    },
+    {
+      "name": "same_path_video_id",
+      "path": "/novel/player/multi_video_model/v1/",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "response": {
+        "Code": 110001,
+        "Message": "未知异常",
+        "BaseResp": {
+          "StatusMessage": "unknown error",
+          "StatusCode": 110001
+        }
+      },
+      "seconds": 0.31
+    },
+    {
+      "name": "single_path_video_id",
+      "path": "/novel/player/video_model/v1/",
+      "response_keys": [
+        "BaseResp",
+        "code",
+        "data",
+        "debug_info",
+        "log_id",
+        "message"
+      ],
+      "models": [
+        {
+          "track_shape": "list",
+          "tracks": 5,
+          "with_addresses": 5
+        }
+      ],
+      "seconds": 0.41
+    },
+    {
+      "name": "single_path_platform_3",
+      "path": "/novel/player/video_model/v1/",
+      "response_keys": [
+        "BaseResp",
+        "code",
+        "data",
+        "debug_info",
+        "log_id",
+        "message"
+      ],
+      "models": [
+        {
+          "track_shape": "list",
+          "tracks": 5,
+          "with_addresses": 5
+        }
+      ],
+      "seconds": 0.36
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "time": "2026-10-13T18:56:04.598730+08:00",
+  "vid": "7682654592135334937",
+  "controls": "Same Python process and module, endpoint, headers, app version, body and vid. Device identifiers changed as labelled; time and signature regenerated normally. No production config changes.",
+  "results": [
+    {
+      "case": "A_first",
+      "device_id_group": "A",
+      "install_id_group": "A",
+      "tracks": 5,
+      "http_status": 200,
+      "code": 0
+    },
+    {
+      "case": "A_repeat",
+      "device_id_group": "A",
+      "install_id_group": "A",
+      "error": "video_model 为空",
+      "http_status": 200,
+      "code": 110001
+    },
+    {
+      "case": "only_device_id",
+      "device_id_group": "B",
+      "install_id_group": "A",
+      "tracks": 5,
+      "http_status": 200,
+      "code": 0
+    },
+    {
+      "case": "only_install_id",
+      "device_id_group": "A",
+      "install_id_group": "B",
+      "error": "video_model 为空",
+      "http_status": 200,
+      "code": 110001
+    },
+    {
+      "case": "both_B",
+      "device_id_group": "B",
+      "install_id_group": "B",
+      "error": "video_model 为空",
+      "http_status": 200,
+      "code": 110001
+    },
+    {
+      "case": "restore_A",
+      "device_id_group": "A",
+      "install_id_group": "A",
+      "error": "video_model 为空",
+      "http_status": 200,
+      "code": 110001
+    },
+    {
+      "case": "repeat_B",
+      "device_id_group": "B",
+      "install_id_group": "B",
+      "error": "video_model 为空",
+      "http_status": 200,
+      "code": 110001
+    }
+  ]
+}

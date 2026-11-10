@@ -1,0 +1,393 @@
+[
+  {
+    "case": "index",
+    "status": 200,
+    "default_links": 33,
+    "input_fields": 0
+  },
+  {
+    "case": "search",
+    "action": "search",
+    "status": 200,
+    "bytes": 14478,
+    "items": 15,
+    "has_more": true
+  },
+  {
+    "case": "search",
+    "action": "search",
+    "status": 200,
+    "bytes": 4191,
+    "items": 4,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 7700,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 9257,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8558,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 9064,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 9628,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 9361,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 7306,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8403,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8656,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8591,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8794,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8606,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "rank",
+    "action": "rank",
+    "status": 200,
+    "bytes": 8705,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "filters",
+    "action": "filters",
+    "status": 200,
+    "bytes": 15618,
+    "rows": 7
+  },
+  {
+    "case": "filters",
+    "action": "filters",
+    "status": 200,
+    "bytes": 7042,
+    "rows": 8
+  },
+  {
+    "case": "filters",
+    "action": "filters",
+    "status": 200,
+    "bytes": 6600,
+    "rows": 7
+  },
+  {
+    "case": "category",
+    "action": "category",
+    "status": 200,
+    "bytes": 13380,
+    "items": 14,
+    "has_more": true
+  },
+  {
+    "case": "category",
+    "action": "category",
+    "status": 200,
+    "bytes": 17150,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "category",
+    "action": "category",
+    "status": 200,
+    "bytes": 17308,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "category",
+    "action": "category",
+    "status": 200,
+    "bytes": 16467,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "category",
+    "action": "category",
+    "status": 200,
+    "bytes": 16601,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "latest",
+    "action": "latest",
+    "status": 200,
+    "bytes": 13384,
+    "items": 14,
+    "has_more": true
+  },
+  {
+    "case": "latest",
+    "action": "latest",
+    "status": 200,
+    "bytes": 17143,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "latest",
+    "action": "latest",
+    "status": 200,
+    "bytes": 17292,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "detail",
+    "action": "detail",
+    "status": 200,
+    "bytes": 92198,
+    "episodes": 74
+  },
+  {
+    "case": "episodes",
+    "action": "episodes",
+    "status": 200,
+    "bytes": 87709,
+    "episodes": 74
+  },
+  {
+    "case": "detail",
+    "action": "detail",
+    "status": 200,
+    "bytes": 38530,
+    "episodes": 28
+  },
+  {
+    "case": "video",
+    "action": "video",
+    "status": 200,
+    "bytes": 20874,
+    "tracks": 5
+  },
+  {
+    "case": "search-next-url",
+    "action": "search",
+    "status": 200,
+    "bytes": 7215,
+    "items": 7,
+    "has_more": true
+  },
+  {
+    "case": "rank-next-url",
+    "action": "rank",
+    "status": 200,
+    "bytes": 7949,
+    "items": 10,
+    "has_more": true
+  },
+  {
+    "case": "category-next-url",
+    "action": "category",
+    "status": 200,
+    "bytes": 16560,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "latest-next-url",
+    "action": "latest",
+    "status": 200,
+    "bytes": 16574,
+    "items": 18,
+    "has_more": true
+  },
+  {
+    "case": "legacy-video",
+    "action": "video",
+    "status": 200,
+    "bytes": 21012,
+    "tracks": 5
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/api.php",
+    "status": 400
+  },
+  {
+    "case": "invalid-input",
+    "path": "/common.php",
+    "status": 404
+  },
+  {
+    "case": "method-search",
+    "status": 405
+  },
+  {
+    "case": "method-play",
+    "status": 405
+  },
+  {
+    "case": "method-download",
+    "status": 405
+  },
+  {
+    "case": "method-video",
+    "status": 405
+  },
+  {
+    "case": "unified-download",
+    "status": 200,
+    "bytes": 4507067,
+    "sha256": "d41be261a5b7c3e7c2c06c4046e354c0bbc8a7f7b1ead1348f2af4d617b5bc96",
+    "full_video_audio_decode": true,
+    "before_body_bytes": 262144
+  },
+  {
+    "case": "unified-play-range",
+    "range": "bytes=0-1",
+    "status": 206,
+    "byte_exact": true
+  },
+  {
+    "case": "unified-play-range",
+    "range": "bytes=262137-524300",
+    "status": 206,
+    "byte_exact": true
+  },
+  {
+    "case": "play-head-720p",
+    "status": 200
+  },
+  {
+    "case": "download-head-720p",
+    "status": 200
+  },
+  {
+    "case": "invalid-range",
+    "status": 416
+  },
+  {
+    "case": "legacy-play-range",
+    "status": 206,
+    "byte_exact": true
+  }
+]

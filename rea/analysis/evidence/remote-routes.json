@@ -1,0 +1,1387 @@
+{
+  "schema_version": 1,
+  "title": "Hongguo Downloader shipped-client outbound HTTP route inventory",
+  "date": "2026-10-12",
+  "scope": "指定安装器提取出的业务pyc与web前端；静态调用端合约，非远端服务完整OpenAPI。没有为这份文档调用新接口。",
+  "routes": [
+    {
+      "id": "official.search",
+      "group": "红果 App API",
+      "method": "GET",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/search/tab/v",
+      "name": "搜索与搜索翻页",
+      "query": {
+        "query": "关键词 string",
+        "tab_name": "feed",
+        "search_source": "1",
+        "offset": "0 或上页 next_offset",
+        "count": "0",
+        "use_correct": "true",
+        "passback": "上页非空 passback 时带入",
+        "search_id": "上页非空 search_id 时带入"
+      },
+      "body": null,
+      "response_consumed_by_client": "code/message；search_tabs[0].data[] 搜索卡片，book_id/search_result_id；video_data 可为 list 或 object，内有 video_detail；next_offset/passback/search_id/has_more 控制翻页。",
+      "auth": "official_signed：通用设备 query/session_headers + 签名器返回 headers；非 POST 不添加 body MD5。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 9139,
+          "function": "search",
+          "original_source_line": 991
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 13452,
+          "function": "_search_page",
+          "original_source_line": 1515
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 search() 原版最多12页/40条，分页 _search_page 另外支持 cursor。并非所有卡片都是剧集。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.suggest",
+      "group": "红果 App API",
+      "method": "GET",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/search/suggest/v",
+      "name": "搜索建议与系列匹配",
+      "query": {
+        "q": "关键词 string（suggest() 限制长度≤60）",
+        "count": "20",
+        "search_source": "1",
+        "tab_type": "11"
+      },
+      "body": null,
+      "response_consumed_by_client": "data.query_result_v2[]；消费 word_type_str、keyword、video_data.series_id/name/title/episode_cnt/score。",
+      "auth": "official_signed：通用设备 query/session_headers + 签名器返回 headers；非 POST 不添加 body MD5。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 12380,
+          "function": "suggest",
+          "original_source_line": 1355
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 同时用于服务恢复探测，不是另一条接口。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.plan",
+      "group": "红果 App API",
+      "method": "GET",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/plan/v",
+      "name": "同 IP 系列/季/版本计划",
+      "query": {
+        "scene": "10",
+        "from": "same_ip_same_series_land_page",
+        "stick_ids": "series_id string",
+        "offset": "0",
+        "session_id": ""
+      },
+      "body": null,
+      "response_consumed_by_client": "data[] block → cell_data[] → video_data[]；消费 series_id/title/episode_cnt/score，组装同系列条目。",
+      "auth": "official_signed：通用设备 query/session_headers + 签名器返回 headers；非 POST 不添加 body MD5。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 12025,
+          "function": "series_plan",
+          "original_source_line": 1323
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.detail",
+      "group": "红果 App API",
+      "method": "POST",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_detail/v1/",
+      "name": "整剧详情与分集目录",
+      "query": {},
+      "body": {
+        "biz_param": {
+          "detail_page_version": 0,
+          "disable_digg_stat": false,
+          "disable_video_relate_book": false,
+          "image_shrink_datas_str": "<IMAGE_SHRINK：下方公共协议给出解码后的 JSON>",
+          "need_all_video_definition": false,
+          "need_mp4_align": false,
+          "screen_width_px": "900",
+          "source": 7,
+          "use_os_player": false,
+          "use_server_dns": false
+        },
+        "series_id": "单个 series_id，批量时以英文逗号 join 多个 ID"
+      },
+      "response_consumed_by_client": "data[series_id].video_data：series_title/series_intro/episode_cnt/series_status/series_play_cnt/followed_cnt/create_time/series_cover/score/douban_score/rating/category_schema/celebrities/related_album_id/secondary_infos/related_novel_book_id；video_list[] 内有 vid_index/vid/title/duration/episode_cover/cover/comment_count/digged_count。",
+      "auth": "official_signed：通用设备 query/session_headers + 签名器返回 headers；非 POST 不添加 body MD5。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 9620,
+          "function": "_episodes_body",
+          "original_source_line": 1053
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 10641,
+          "function": "get_episodes",
+          "original_source_line": 1169
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 11113,
+          "function": "get_episodes_batch",
+          "original_source_line": 1217
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 11519,
+          "function": "get_episodes_multi",
+          "original_source_line": 1257
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 11380,
+          "function": "_signed_lists",
+          "original_source_line": 1278
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 data 的 key 是每部剧 ID；不是以 ID 列表另开 endpoint。响应缺集必须单独处理。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.models",
+      "group": "红果 App API",
+      "method": "POST",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "name": "每集全部播放/下载码率模型",
+      "query": {},
+      "body": {
+        "biz_param": {
+          "detail_page_version": 0,
+          "device_level": 3,
+          "disable_digg_stat": false,
+          "disable_video_relate_book": false,
+          "need_all_video_definition": true,
+          "need_mp4_align": false,
+          "use_os_player": false,
+          "use_server_dns": false,
+          "video_platform": 1024
+        },
+        "mixed_video_id_map": {
+          "1": [
+            "<vid1>",
+            "<vid2>"
+          ]
+        }
+      },
+      "response_consumed_by_client": "data[vid].video_model 是 JSON 字符串；json.loads 后 video_list[] 含 main_url、backup_url、video_meta（definition/size/bitrate/width/height/codec 等服务器字段）。原模型还可能包含加密标记、过期参数等；客户端不能将所有资源假设为未加密 MP4。",
+      "auth": "official_signed：通用设备 query/session_headers + 签名器返回 headers；非 POST 不添加 body MD5。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 17484,
+          "function": "get_video_urls",
+          "original_source_line": 1964
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 17799,
+          "function": "get_video_tracks",
+          "original_source_line": 2003
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 13543,
+          "function": "_video_model",
+          "original_source_line": 1516
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 批量 helpers 最多每批5个 ID；get_video_urls 只挑最大 size，get_video_tracks 保留全部 tracks。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.collection",
+      "group": "红果 App API",
+      "method": "GET",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/user/subscribe/list/v0",
+      "name": "当前身份的收藏/追剧列表",
+      "query": {
+        "subscribe_order_type": "0",
+        "swipe_type": "0",
+        "subscribe_offset": "offset string",
+        "offset": "初始0，随后 next_offset",
+        "tab_type": "默认逐个请求2/5/8",
+        "limit": "page_limit，默认50",
+        "is_online": "false",
+        "need_calendar_schema": "false"
+      },
+      "body": null,
+      "response_consumed_by_client": "data.subscribe_items[]：detail_schema 中解析 series_id，回退 item_id；name/item_type；data.has_more/next_offset。",
+      "auth": "official_signed：通用设备 query/session_headers + 签名器返回 headers；非 POST 不添加 body MD5。 有效会话可影响返回内容；设备池模式会去除原 cookie/x-tt-token。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 10796,
+          "function": "get_collection",
+          "original_source_line": 1184
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 这是读收藏，不是收藏/取消收藏写接口。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.rank",
+      "group": "红果 App API",
+      "method": "GET",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/bookmall/cell/change/v",
+      "name": "榜单、漫剧榜单与分页",
+      "query": {
+        "cell_id": "7470092475068071998",
+        "tab_type": "26",
+        "client_req_type": "2",
+        "client_template": "2",
+        "screen_width_px": "1350",
+        "session_uuid": "uuid4 string",
+        "selected_items": "all | human | comic_series_rank | ai_playlet",
+        "sub_selected_items": "榜单映射，见下方",
+        "offset": "非0时添加分页 offset"
+      },
+      "body": null,
+      "response_consumed_by_client": "data.cell_view.cell_data[]，每个 cell.video_data；series_id 或 book_id，title/episode_cnt/score/play_cnt/cover 等；cell_view.has_more/next_offset。",
+      "auth": "official_optional_signature：通用 query/session_headers；signed=SIGN_LIST，HG_SIGN_LIST 缺省为 false，可由环境设为 true。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 18165,
+          "function": "rank",
+          "original_source_line": 2062
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 20212,
+          "function": "leaderboard_page",
+          "original_source_line": 2362
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 rank() 固定 selected_items=comic_series_rank；leaderboard_page 支持 all/human/comic/ai。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "official.category",
+      "group": "红果 App API",
+      "method": "POST",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/distribution/category/landpage/v",
+      "name": "新剧、分类筛选面板、浏览流",
+      "query": {},
+      "body": {
+        "filter_ids": "已展示 series_id 用英文逗号 join；feed_page 固定空串",
+        "req_scene": "default | comic_series | ai_series",
+        "offset": "integer，初始0，客户端按返回记录推进",
+        "need_selector_panel": false,
+        "limit": 18,
+        "select_items": {
+          "genre": [
+            "short_play | comic_series | ai_series"
+          ],
+          "category_dim_theme": [],
+          "category_dim_role": [],
+          "category_dim_epoch": [],
+          "sort": [
+            "online_time | hot_score | hot_collect"
+          ],
+          "gender": [],
+          "creation_status": [],
+          "online_time": []
+        },
+        "session_id": "",
+        "req_type": "only_content",
+        "client_req_type": 3
+      },
+      "response_consumed_by_client": "data.video_data[]（series_id/title/episode_cnt/score/play_cnt/cover/category_schema/video_desc/sub_title_list/vid 等）及 has_more；筛选面板模式消费 data.selector_rows[]。",
+      "auth": "official_optional_signature：通用 query/session_headers；signed=SIGN_LIST，HG_SIGN_LIST 缺省为 false，可由环境设为 true。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 18549,
+          "function": "latest",
+          "original_source_line": 2118
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 19185,
+          "function": "filters",
+          "original_source_line": 2226
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 19299,
+          "function": "browse",
+          "original_source_line": 2241
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 19758,
+          "function": "feed_page",
+          "original_source_line": 2303
+        }
+      ],
+      "notes": "叠加 official_common_query（见公共协议）；以下只列业务附加字段。 4种调用变体：latest limit=18、sort=[online_time]，非短剧可 online_time=[days_7]；browse limit=18，8个 select_items 维度；feed_page limit=30；filters offset=0/limit=1/need_selector_panel=true/req_type=default，select_items 没有 creation_status，除 genre 外各项为空。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.search",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/search/{urlencoded_keyword}",
+      "name": "公开站搜索 SSR loader",
+      "query": {
+        "__loader": "search_(keyword)/page",
+        "__ssrDirect": "true"
+      },
+      "body": null,
+      "response_consumed_by_client": "首段 JSON object 的 searchList[]；video_data、series_id/keyword/series_title/name/series_status/episode_cnt/series_cover。",
+      "auth": "未显式设置账号/token；网站 UA 为 Mozilla/5.0 (Linux; Android 12)。HTTPS 校验开启。SSR loader 禁止重定向，timeout=15 秒。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 10125,
+          "function": "hgdj_search",
+          "original_source_line": 1130
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9768,
+          "function": "_hgdj_loader",
+          "original_source_line": 1085
+        }
+      ],
+      "notes": "关键词长度1–100，按 quote(..., safe=\"\") 编码；客户端只 raw_decode 第一个 JSON 对象，后面可有 deferred 数据。",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.player",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/player/{series_id}",
+      "name": "剧目录及默认预览页 SSR loader",
+      "query": {
+        "__loader": "player_(series_id)/page",
+        "__ssrDirect": "true"
+      },
+      "body": null,
+      "response_consumed_by_client": "seriesDetail：series_id/series_name/series_intro/series_cover/episode_cnt/accessible_episode_cnt/vid_list 等；预览消费 video_player_info.main_url/poster_url/duration/width/height（在返回对象内查找）。",
+      "auth": "未显式设置账号/token；网站 UA 为 Mozilla/5.0 (Linux; Android 12)。HTTPS 校验开启。SSR loader 禁止重定向，timeout=15 秒。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9632,
+          "function": "_hgdj_player_data",
+          "original_source_line": 1056
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 10462,
+          "function": "_hgdj_listing",
+          "original_source_line": 1180
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 12068,
+          "function": "hgdj_preview",
+          "original_source_line": 1355
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 11866,
+          "function": "_hgdj_pv_episode",
+          "original_source_line": 1336
+        }
+      ],
+      "notes": "网页目录可列出全部 vid，但预览会检查 accessible_episode_cnt。不能由目录数量推断每集已取得可播放 URL。",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.episode_player",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/player/{series_id}/{vid}",
+      "name": "指定剧集预览页 SSR loader",
+      "query": {
+        "__loader": "player_(series_id)/(vid)/page",
+        "__ssrDirect": "true"
+      },
+      "body": null,
+      "response_consumed_by_client": "seriesDetail：series_id/series_name/series_intro/series_cover/episode_cnt/accessible_episode_cnt/vid_list 等；预览消费 video_player_info.main_url/poster_url/duration/width/height（在返回对象内查找）。",
+      "auth": "未显式设置账号/token；网站 UA 为 Mozilla/5.0 (Linux; Android 12)。HTTPS 校验开启。SSR loader 禁止重定向，timeout=15 秒。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9632,
+          "function": "_hgdj_player_data",
+          "original_source_line": 1056
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 10462,
+          "function": "_hgdj_listing",
+          "original_source_line": 1180
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 12068,
+          "function": "hgdj_preview",
+          "original_source_line": 1355
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 11866,
+          "function": "_hgdj_pv_episode",
+          "original_source_line": 1336
+        }
+      ],
+      "notes": "网页目录可列出全部 vid，但预览会检查 accessible_episode_cnt。不能由目录数量推断每集已取得可播放 URL。",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.detail",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/detail",
+      "name": "网页详情补充总集数",
+      "query": {
+        "series_id": "series_id"
+      },
+      "body": null,
+      "response_consumed_by_client": "HTML 文本，以“共 N 集”“全 N 集”“N 集全”正则提取数量；不是 JSON 业务 API。",
+      "auth": "未显式设置账号/token；使用 _hgdj_session，网站 UA；timeout=15。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9418,
+          "function": "hgdj_episodes",
+          "original_source_line": 1015
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 45471,
+          "function": "_one",
+          "original_source_line": 1032
+        }
+      ],
+      "notes": "",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.rank.ai",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/rank/hot-ai-drama",
+      "name": "AI网页榜单",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "HTML 中 series_id、标题和封面等；_hgdj_parse_rank 解析为剧列表。",
+      "auth": "未显式设置账号/token；_hgdj_session 网站 UA。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9074,
+          "function": "hgdj_rank",
+          "original_source_line": 971
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 45306,
+          "function": "_get",
+          "original_source_line": 988
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 8867,
+          "function": "_hgdj_parse_rank",
+          "original_source_line": 951
+        }
+      ],
+      "notes": "",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.rank.human",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/rank/hot-real-drama",
+      "name": "真人网页榜单",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "HTML 中 series_id、标题和封面等；_hgdj_parse_rank 解析为剧列表。",
+      "auth": "未显式设置账号/token；_hgdj_session 网站 UA。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9074,
+          "function": "hgdj_rank",
+          "original_source_line": 971
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 45306,
+          "function": "_get",
+          "original_source_line": 988
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 8867,
+          "function": "_hgdj_parse_rank",
+          "original_source_line": 951
+        }
+      ],
+      "notes": "",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "web.rank.comic",
+      "group": "公开网站备用与预览",
+      "method": "GET",
+      "host": "hongguoduanju.com",
+      "path": "/rank/hot-comic-drama",
+      "name": "漫剧网页榜单",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "HTML 中 series_id、标题和封面等；_hgdj_parse_rank 解析为剧列表。",
+      "auth": "未显式设置账号/token；_hgdj_session 网站 UA。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 9074,
+          "function": "hgdj_rank",
+          "original_source_line": 971
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 45306,
+          "function": "_get",
+          "original_source_line": 988
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 8867,
+          "function": "_hgdj_parse_rank",
+          "original_source_line": 951
+        }
+      ],
+      "notes": "",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "share.short",
+      "group": "分享链接解析",
+      "method": "GET",
+      "host": "kylin.hainanyuyue.com | novelquickapp.com",
+      "path": "/s/{code}",
+      "name": "严格分享短链解析",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "只读取状态码及 301/302/303/307/308 的 Location，解析 share 参数里的 series_id；不自动跟随此模式的跳转。",
+      "auth": "无账号/token；User-Agent: Mozilla/5.0 (Linux; Android 12)。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 6092,
+          "function": "_share_link",
+          "original_source_line": 571
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 7571,
+          "function": "_share_read",
+          "original_source_line": 756
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 7230,
+          "function": "_share_sid_from_location",
+          "original_source_line": 722
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 7739,
+          "function": "_share_series_id",
+          "original_source_line": 778
+        }
+      ],
+      "notes": "code 满足 [A-Za-z0-9_-]{4,32}。输入只接受这两个规范 host；Location 的品牌域规则另外涉及 hainanyuyue.com / applink.novelquickapp.com。该规则来自客户端静态代码，未抓取链接。",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "share.public",
+      "group": "分享链接解析",
+      "method": "GET",
+      "host": "{user_supplied_public_host}",
+      "path": "{user_supplied_path_and_query}",
+      "name": "其他公开分享页/分享榜单解析",
+      "query": {
+        "dynamic": "原输入 URL 的查询参数，不添加固定 API 参数"
+      },
+      "body": null,
+      "response_consumed_by_client": "HTML 或重定向最终 URL；_resolve_share_one 从 URL/前8000字符查找 video_series_id/video_id/series_id/book_id/material_id/content_id/vid；_scrape_board 从 window._SSR_DATA/_ROUTER_DATA 等解析系列。",
+      "auth": "无账号/token；Android UA；HttpsOnlySession，原 URL 和每次跳转均需公开 host 检查。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 7093,
+          "function": "_public_get",
+          "original_source_line": 700
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 5803,
+          "function": "_resolve_share_one",
+          "original_source_line": 502
+        },
+        {
+          "file": "analysis/evidence/offline_dl.dis.txt",
+          "disassembly_line": 5511,
+          "function": "_scrape_board",
+          "original_source_line": 464
+        }
+      ],
+      "notes": "动态资源读取模板，不是发现了无限个固定业务 endpoint。不能把 HTML 内所有URL字符串都计为应用调用。",
+      "kind": "public_document_endpoint",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "catalog.genres",
+      "group": "第三方 Catalog",
+      "method": "GET",
+      "host": "explorer.hongguodownloader.com",
+      "path": "/genres",
+      "name": "目录分类标签",
+      "query": {
+        "limit": 22
+      },
+      "body": null,
+      "response_consumed_by_client": "genres[]，每项至少 genre；检查 r.ok/j.error/genres 是否数组。",
+      "auth": "前端 fetch 未加认证头或 credentials；cache=no-store。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/downloader.inline.js",
+          "line": 305,
+          "source": "analysis/extracted/app/web/downloader.html"
+        },
+        {
+          "file": "analysis/evidence/downloader.inline.js",
+          "line": 308,
+          "source": "analysis/extracted/app/web/downloader.html"
+        }
+      ],
+      "notes": "",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "catalog.explorer",
+      "group": "第三方 Catalog",
+      "method": "GET",
+      "host": "explorer.hongguodownloader.com",
+      "path": "/explorer",
+      "name": "全量目录分页/搜索/筛选",
+      "query": {
+        "page": "从1开始，默认1",
+        "size": 100,
+        "sort": "newest | popular | eps",
+        "genre": "可选非空分类",
+        "status": "可选 completed | ongoing",
+        "q": "可选关键词"
+      },
+      "body": null,
+      "response_consumed_by_client": "items[]、count、page、pages；items 交由 resultCards 使用 series_id/title/episode_cnt/score/cover/avail 等；HTTP429 或 error=rate_limited 单独提示繁忙。",
+      "auth": "前端 fetch 未加认证头或 credentials；cache=no-store。",
+      "side_effects": "读取数据；客户端会缓存或用于展示，没有观察到此请求主动修改用户收藏/点赞。服务端内部统计副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/downloader.inline.js",
+          "line": 321,
+          "source": "analysis/extracted/app/web/downloader.html"
+        },
+        {
+          "file": "analysis/evidence/downloader.inline.js",
+          "line": 332,
+          "source": "analysis/extracted/app/web/downloader.html"
+        },
+        {
+          "file": "analysis/evidence/downloader.inline.js",
+          "line": 336,
+          "source": "analysis/extracted/app/web/downloader.html"
+        }
+      ],
+      "notes": "前端注释称 Cloudflare Worker/D1，但未检查服务端实现。后端 /dl/explorer 的 _explorer_catalog 是打包 explorer.json.gz 本地目录，不是该网络请求。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "license.validate",
+      "group": "许可服务（Supabase RPC 形状）",
+      "method": "POST",
+      "host": "api.hongguodownloader.com",
+      "path": "/rest/v1/rpc/validate_key",
+      "name": "验证许可",
+      "query": {},
+      "body": {
+        "p_key": "<license_key>",
+        "p_device": "<device_id>",
+        "p_secure": true,
+        "p_secret": "<device_secret_or_empty>"
+      },
+      "response_consumed_by_client": "ok/reason/expires_at；_apply_result 也处理 device_secret（若有）。active 是客户端由 ok 派生的本地状态。",
+      "auth": "license_rpc：Content-Type=application/json，X-HG-Nonce=16随机字节的小写十六进制；若配置 anon key 则同时发 apikey 与 Authorization: Bearer <anon>。body 含 p_secure=true、p_secret=<当前设备 secret 或空值>。所有敏感值省略。",
+      "side_effects": "验证并刷新本地许可状态/离线宽限缓存；若 reason=needs_reactivate，客户端会再调用 activate_key，故整条刷新流程可能导致远端激活。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 4023,
+          "function": "_refresh",
+          "original_source_line": 586
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2438,
+          "function": "_rpc_raw",
+          "original_source_line": 358
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2117,
+          "function": "_secure_args",
+          "original_source_line": 316
+        }
+      ],
+      "notes": "默认打包 host 固定为 api.hongguodownloader.com；开发模式才允许 SUPABASE_URL / supabase.json.url 覆盖。响应认证公共说明见下方。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "license.activate",
+      "group": "许可服务（Supabase RPC 形状）",
+      "method": "POST",
+      "host": "api.hongguodownloader.com",
+      "path": "/rest/v1/rpc/activate_key",
+      "name": "激活/重新绑定许可",
+      "query": {},
+      "body": {
+        "p_key": "<license_key>",
+        "p_device": "<device_id>",
+        "p_device_label": "<用户计算机标识>",
+        "p_secure": true,
+        "p_secret": "<device_secret_or_empty>"
+      },
+      "response_consumed_by_client": "ok/reason/expires_at/device_secret；响应经签名验证后应用；secret保存到本地受保护存储，不返回给UI。UI active 字段由客户端计算。",
+      "auth": "license_rpc：Content-Type=application/json，X-HG-Nonce=16随机字节的小写十六进制；若配置 anon key 则同时发 apikey 与 Authorization: Bearer <anon>。body 含 p_secure=true、p_secret=<当前设备 secret 或空值>。所有敏感值省略。",
+      "side_effects": "修改远端许可证设备绑定；保存/更新本地许可密钥和设备secret；本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 4407,
+          "function": "activate",
+          "original_source_line": 634
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2438,
+          "function": "_rpc_raw",
+          "original_source_line": 358
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2117,
+          "function": "_secure_args",
+          "original_source_line": 316
+        }
+      ],
+      "notes": "默认打包 host 固定为 api.hongguodownloader.com；开发模式才允许 SUPABASE_URL / supabase.json.url 覆盖。响应认证公共说明见下方。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "license.deactivate",
+      "group": "许可服务（Supabase RPC 形状）",
+      "method": "POST",
+      "host": "api.hongguodownloader.com",
+      "path": "/rest/v1/rpc/deactivate_key",
+      "name": "停用本机许可",
+      "query": {},
+      "body": {
+        "p_key": "<license_key>",
+        "p_device": "<device_id>",
+        "p_secure": true,
+        "p_secret": "<device_secret_or_empty>"
+      },
+      "response_consumed_by_client": "ok/reason/next_move_allowed_at/cooldown_until 等；not_found/not_bound_here/revoked 也可触发本地清理。",
+      "auth": "license_rpc：Content-Type=application/json，X-HG-Nonce=16随机字节的小写十六进制；若配置 anon key 则同时发 apikey 与 Authorization: Bearer <anon>。body 含 p_secure=true、p_secret=<当前设备 secret 或空值>。所有敏感值省略。",
+      "side_effects": "解除或修改远端设备绑定并清理本地许可/secret/宽限状态；本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 4617,
+          "function": "deactivate",
+          "original_source_line": 660
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2438,
+          "function": "_rpc_raw",
+          "original_source_line": 358
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2117,
+          "function": "_secure_args",
+          "original_source_line": 316
+        }
+      ],
+      "notes": "默认打包 host 固定为 api.hongguodownloader.com；开发模式才允许 SUPABASE_URL / supabase.json.url 覆盖。响应认证公共说明见下方。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "license.download_check",
+      "group": "许可服务（Supabase RPC 形状）",
+      "method": "POST",
+      "host": "api.hongguodownloader.com",
+      "path": "/rest/v1/rpc/check_download",
+      "name": "免费额度/下载准入",
+      "query": {},
+      "body": {
+        "p_device": "<device_id>",
+        "p_series": "series_id string",
+        "p_secure": true,
+        "p_secret": "<device_secret_or_empty>"
+      },
+      "response_consumed_by_client": "allowed/licensed/unlimited/reason/free_limit/free_used/remaining 等（按使用方消费）。",
+      "auth": "license_rpc：Content-Type=application/json，X-HG-Nonce=16随机字节的小写十六进制；若配置 anon key 则同时发 apikey 与 Authorization: Bearer <anon>。body 含 p_secure=true、p_secret=<当前设备 secret 或空值>。所有敏感值省略。",
+      "side_effects": "下载前的计数/准入RPC，可能登记剧或消耗免费额度，不能当成无副作用探测；服务端计数实现未知，本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 5029,
+          "function": "check_download",
+          "original_source_line": 706
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2438,
+          "function": "_rpc_raw",
+          "original_source_line": 358
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2117,
+          "function": "_secure_args",
+          "original_source_line": 316
+        }
+      ],
+      "notes": "默认打包 host 固定为 api.hongguodownloader.com；开发模式才允许 SUPABASE_URL / supabase.json.url 覆盖。响应认证公共说明见下方。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "license.usage",
+      "group": "许可服务（Supabase RPC 形状）",
+      "method": "POST",
+      "host": "api.hongguodownloader.com",
+      "path": "/rest/v1/rpc/usage_status",
+      "name": "额度与订阅状态",
+      "query": {},
+      "body": {
+        "p_device": "<device_id>",
+        "p_key": "<license_key，仅本地已有key时添加>",
+        "p_secure": true,
+        "p_secret": "<device_secret_or_empty>"
+      },
+      "response_consumed_by_client": "licensed/free_limit/free_used/remaining/plan/expires_at/max_devices/devices_used/device_count/has_key/reason/blocked_reason。",
+      "auth": "license_rpc：Content-Type=application/json，X-HG-Nonce=16随机字节的小写十六进制；若配置 anon key 则同时发 apikey 与 Authorization: Bearer <anon>。body 含 p_secure=true、p_secret=<当前设备 secret 或空值>。所有敏感值省略。",
+      "side_effects": "查询额度并刷新本地usage缓存；服务端内部副作用未知。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 5474,
+          "function": "_fetch_usage",
+          "original_source_line": 761
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2438,
+          "function": "_rpc_raw",
+          "original_source_line": 358
+        },
+        {
+          "file": "analysis/evidence/licensing.dis.txt",
+          "disassembly_line": 2117,
+          "function": "_secure_args",
+          "original_source_line": 316
+        }
+      ],
+      "notes": "默认打包 host 固定为 api.hongguodownloader.com；开发模式才允许 SUPABASE_URL / supabase.json.url 覆盖。响应认证公共说明见下方。",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "pay.plans",
+      "group": "支付与账单",
+      "method": "GET",
+      "host": "pay.hongguodownloader.com",
+      "path": "/plans",
+      "name": "购买套餐列表",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "返回 JSON；UI消费 plans[]，id/title/usd/interval/blurb/badge；失败回退缓存/空plans。",
+      "auth": "调用端未添加特殊 auth header；HTTPS-only session。打包版本固定 host，开发模式 HG_PAY_URL 可覆盖。",
+      "side_effects": "读取套餐；缓存600秒。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 24002,
+          "function": "dl_license_plans",
+          "original_source_line": 3022
+        }
+      ],
+      "notes": "",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "pay.checkout",
+      "group": "支付与账单",
+      "method": "POST",
+      "host": "pay.hongguodownloader.com",
+      "path": "/create-checkout",
+      "name": "创建结账会话",
+      "query": {},
+      "body": {
+        "plan": "month | year | life"
+      },
+      "response_consumed_by_client": "url、session_id；缺失会话或不安全url被拒绝。",
+      "auth": "调用端未添加特殊 auth header；HTTPS-only session。打包版本固定 host，开发模式 HG_PAY_URL 可覆盖。",
+      "side_effects": "创建远端结账会话；客户端会打开返回的支付页面。可能进入付费流程，本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 24137,
+          "function": "dl_license_buy",
+          "original_source_line": 3040
+        }
+      ],
+      "notes": "",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "pay.key",
+      "group": "支付与账单",
+      "method": "GET",
+      "host": "pay.hongguodownloader.com",
+      "path": "/key",
+      "name": "查询购买结果并取许可密钥",
+      "query": {
+        "session_id": "<checkout_session_id>"
+      },
+      "body": null,
+      "response_consumed_by_client": "未就绪时 reason；就绪时 key=<license_key>。本地处理随后调用 LIC.activate(key)，并生成 pending/ok/activated/reason/usage 的UI响应。",
+      "auth": "调用端未添加特殊 auth header；HTTPS-only session。打包版本固定 host，开发模式 HG_PAY_URL 可覆盖。 session_id 是结果查询凭据。",
+      "side_effects": "取回新购许可；客户端收到 key 会自动触发 activate_key，整条调用链含设备绑定副作用。本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 24374,
+          "function": "dl_license_purchase_poll",
+          "original_source_line": 3067
+        }
+      ],
+      "notes": "",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "pay.portal",
+      "group": "支付与账单",
+      "method": "POST",
+      "host": "pay.hongguodownloader.com",
+      "path": "/portal",
+      "name": "账单管理入口",
+      "query": {},
+      "body": {
+        "key": "<license_key>",
+        "device": "<device_id>"
+      },
+      "response_consumed_by_client": "ok/url/reason；无url或ok=false时拒绝。",
+      "auth": "调用端未添加特殊 auth header；HTTPS-only session。打包版本固定 host，开发模式 HG_PAY_URL 可覆盖。 body中的许可key/device用于查找归属。",
+      "side_effects": "创建或获取账单管理会话，随后浏览器打开返回URL；后续用户操作可影响订阅。本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 24562,
+          "function": "dl_license_manage",
+          "original_source_line": 3088
+        }
+      ],
+      "notes": "",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "update.release",
+      "group": "版本更新",
+      "method": "GET",
+      "host": "api.github.com",
+      "path": "/repos/M4St3r0/hongguo-downloader/releases/latest",
+      "name": "最新版本元数据",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "tag_name（回退version）、html_url（回退url）、assets[].name/browser_download_url、body（回退notes）。选择首个.exe附件；版本比较后生成UI update结果。",
+      "auth": "Accept: application/vnd.github+json；User-Agent: HongguoDownloader；若HG_GITHUB_TOKEN非空，附 Authorization: Bearer <token>。",
+      "side_effects": "读取版本，缓存1800秒。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 24822,
+          "function": "dl_update_check",
+          "original_source_line": 3121
+        }
+      ],
+      "notes": "",
+      "kind": "business_api",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "update.installer",
+      "group": "版本更新",
+      "method": "GET",
+      "host": "github.com",
+      "path": "/M4St3r0/hongguo-downloader/releases/download/{tag}/{installer_name.exe}",
+      "name": "下载更新安装包",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "二进制安装文件，Content-Length可用于进度；客户端计算SHA-256并通过Windows Authenticode检查签名/发布者。",
+      "auth": "HttpsOnlySession；此下载调用没有复用GitHub API的Bearer头。",
+      "side_effects": "写入本地 update/HongguoDownloader-Setup.exe；此请求本身不执行安装，/dl/update-run另行触发本地执行。本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 25200,
+          "function": "dl_update_download",
+          "original_source_line": 3161
+        }
+      ],
+      "notes": "URL来自release assets并通过固定github.com仓库前缀与.exe检查；服务端可能重定向到动态下载资源，不从字符串猜测新API。",
+      "kind": "binary_resource_template",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "signer.grab",
+      "group": "可配置签名辅助服务",
+      "method": "GET",
+      "host": "{SIGN_SERVER_base}",
+      "path": "/grab",
+      "name": "刷新抓取到的App会话",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "url 与 headers，或 error。解析 URL query：仅更新config已有且不在DEVICE_KEYS集合内的字段；headers只提取cookie/x-tt-token/x-tt-store-region/x-tt-store-region-src。",
+      "auth": "可选 X-Sign-Token: <HG_SIGN_TOKEN>。",
+      "side_effects": "可能触发签名服务端抓取会话，随后修改本地config.json；仅第一个SIGN_SERVER，20秒刷新节流。本次未调用。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 4955,
+          "function": "refresh_session",
+          "original_source_line": 437
+        }
+      ],
+      "notes": "base来自逗号分隔SIGN_SERVER环境变量，可能是127.0.0.1，也可能用户配置远端；不是固定外部域名。Jar是否实现/grab须看签名器文档。",
+      "kind": "configurable_auxiliary",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "signer.health",
+      "group": "可配置签名辅助服务",
+      "method": "GET",
+      "host": "{SIGN_SERVER_base}",
+      "path": "/",
+      "name": "签名后端状态汇总",
+      "query": {},
+      "body": null,
+      "response_consumed_by_client": "ready、pid；请求失败汇总error。",
+      "auth": "此stats()调用未附加X-Sign-Token；入口本地/stats先检查admin_token。",
+      "side_effects": "读取签名服务状态。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/server.dis.txt",
+          "disassembly_line": 7320,
+          "function": "stats",
+          "original_source_line": 737
+        }
+      ],
+      "notes": "host是否外部由SIGN_SERVER配置决定；/sign协议另见主API文档。",
+      "kind": "configurable_auxiliary",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    },
+    {
+      "id": "media.video",
+      "group": "媒体传输（非业务 JSON API）",
+      "method": "GET",
+      "host": "{host_from_main_url_or_backup_url}",
+      "path": "{path_and_query_from_video_model}",
+      "name": "视频资源下载与Range续传",
+      "query": {
+        "dynamic": "完整保留模型main_url/backup_url的签名和有效期参数"
+      },
+      "body": null,
+      "response_consumed_by_client": "200全文件或206分段；Content-Length/Content-Range/ETag/Accept-Ranges；响应为媒体字节而非JSON。",
+      "auth": "模型返回URL可自带临时签名；视频传输不重新附加业务API签名。支持 Range: bytes=0-0 探测、Range: bytes={start}-{end} 分段/续传。",
+      "side_effects": "拉取媒体字节并写本地文件；有流量消耗。",
+      "evidence": [
+        {
+          "file": "analysis/evidence/downloader.dis.txt",
+          "disassembly_line": 399,
+          "function": "_probe",
+          "original_source_line": 41
+        },
+        {
+          "file": "analysis/evidence/downloader.dis.txt",
+          "disassembly_line": 597,
+          "function": "_download_segmented",
+          "original_source_line": 57
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 21311,
+          "function": "download_file",
+          "original_source_line": 2491
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 28866,
+          "function": "run",
+          "original_source_line": 2905
+        },
+        {
+          "file": "analysis/evidence/hongguo.dis.txt",
+          "disassembly_line": 34325,
+          "function": "_range_get",
+          "original_source_line": 3514
+        }
+      ],
+      "notes": "不把封面/图片CDN地址当API；此项仅为搜索→最终视频资源传输链的动态模板。",
+      "kind": "binary_resource_template",
+      "evidence_type": "static",
+      "newly_called_for_documentation": false
+    }
+  ],
+  "official_common": {
+    "primary_host": "api5-normal-sinfonlinec.fqnovel.com",
+    "fallback_host": "api5-normal-sinfonlineb.fqnovel.com",
+    "query": {
+      "aid": "8662",
+      "compliance_status": "0",
+      "is_android_pad_screen": "0",
+      "device_brand": "Samsung",
+      "cdid": "<device identifier>",
+      "iid": "<device identifier>",
+      "rom_version": "V417IR release-keys",
+      "version_code": "72932",
+      "dpi": "480",
+      "device_id": "<device identifier>",
+      "host_abi": "arm64-v8a",
+      "channel": "googleplay",
+      "resolution": "1080*1920",
+      "os_version": "15",
+      "version_name": "7.2.9.32",
+      "update_version_code": "72932",
+      "language": "en",
+      "player_so_load": "1",
+      "manifest_version_code": "72932",
+      "pv_player": "72932",
+      "os": "android",
+      "os_api": "35",
+      "dragon_device_type": "phone",
+      "need_personal_recommend": "1",
+      "ac": "wifi",
+      "app_name": "novelread",
+      "device_type": "SM-S938U",
+      "ssmix": "a",
+      "device_platform": "android"
+    },
+    "query_merge_order": [
+      "config.base_query",
+      "devicepool.current().query",
+      "business extra query",
+      "_rticket=current milliseconds"
+    ],
+    "header_merge_order": [
+      "config.session_headers",
+      "device user-agent override; remove cookie/x-tt-token when pool active",
+      "content-type and body MD5",
+      "signer response"
+    ],
+    "signed_default": true,
+    "list_signed_default": false,
+    "transport": "curl_cffi impersonate=chrome when available; requests fallback; verify=true; configurable HONGGUO_PROXY"
+  },
+  "excluded": [
+    {
+      "item": "/reading/bookapi/search/page/v/?query=probe&aid=8662",
+      "reason": "在app._sign_probe_once/server.dl_diag仅作为签名输入，未找到对该URL的HTTP请求"
+    },
+    {
+      "item": "/dl/bugreport",
+      "reason": "本地ZIP创建，不上传；Telegram为浏览器导航"
+    },
+    {
+      "item": "/dl/explorer / web/explorer.json.gz",
+      "reason": "本地API/本地数据文件；不同于前端直接请求Catalog服务"
+    },
+    {
+      "item": "cover/poster/avatar等CDN URL",
+      "reason": "图片资源，不作为业务API列举"
+    },
+    {
+      "item": "Stripe checkout/billing动态页面",
+      "reason": "浏览器打开返回的受限HTTPS URL；安装包无直接Stripe REST SDK/API调用证据"
+    },
+    {
+      "item": "app.pyc/launcher.pyc localhost probes",
+      "reason": "本地控制面；另见本地API文档"
+    },
+    {
+      "item": "SIGN_SERVER /sign",
+      "reason": "本地签名器协议另由主文档覆盖；远端部署也是同一可配置协议"
+    }
+  ],
+  "reviewed_artifacts": [
+    {
+      "path": "analysis/extracted/app/hongguo.pyc",
+      "sha256": "42d0c2bcfffc346afe5b3b75d259261b787daf8f144298ceaa1bfa4897ad1312"
+    },
+    {
+      "path": "analysis/extracted/app/offline_dl.pyc",
+      "sha256": "5baef36f42386837def6afb6de7f66730538294e6d27995cb5deb6317151bbd2"
+    },
+    {
+      "path": "analysis/extracted/app/licensing.pyc",
+      "sha256": "5bb605d3a10b56585342fa217eedc3d7f29689f185634af9d9b95363120db53f"
+    },
+    {
+      "path": "analysis/extracted/app/apikeys.pyc",
+      "sha256": "d795f03648aaccfb5481eca6697ede686c61831461bd294bce8b791810cda862"
+    },
+    {
+      "path": "analysis/extracted/app/devicepool.pyc",
+      "sha256": "85299d65916515c032b8e5c4b7920e4f52149099b23d74042aaa878a43c245ba"
+    },
+    {
+      "path": "analysis/extracted/app/nettls.pyc",
+      "sha256": "08cd78be74d262714d63855c2b0899ee71322d5bca14f1f37bb7e9c726f8eb13"
+    },
+    {
+      "path": "analysis/extracted/app/downloader.pyc",
+      "sha256": "6f104e671184ace99a5b88d9e969139ead60ea08dce5f256eb44466a471c5bed"
+    },
+    {
+      "path": "analysis/extracted/app/server.pyc",
+      "sha256": "55118631849817f20088c30894d94a7c84bff79d03eebe7af4b545c478ee5b0c"
+    },
+    {
+      "path": "analysis/extracted/app.pyc",
+      "sha256": "f8ccf3d849c0ee570b3bea96bdfb7a118da9e4f2e7ea27a5a72b2aa27377c990"
+    },
+    {
+      "path": "analysis/extracted/launcher.pyc",
+      "sha256": "0a8e89dc6c96d219e310ffd572f63b68720a68125f3b9a852ab00b0afdf3c29e"
+    },
+    {
+      "path": "analysis/extracted/app/web/downloader.html",
+      "sha256": "8055cc51f641353250083230fb621901045b1ed1f1549f624afe411acda8b015"
+    }
+  ]
+}

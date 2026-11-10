@@ -1,0 +1,32 @@
+{
+  "scanned_python_modules": 13,
+  "matches": [
+    {
+      "file": "analysis/extracted/app/devicepool.pyc",
+      "function": "<module>",
+      "line": 1,
+      "matched_strings": [
+        "DEVICE_POOL",
+        "devices.json"
+      ]
+    },
+    {
+      "file": "analysis/extracted/app/devicepool.pyc",
+      "function": "load_pool",
+      "line": 98,
+      "matched_strings": [
+        "DEVICE_POOL",
+        "DEVICE_POOL_SIZE"
+      ]
+    },
+    {
+      "file": "analysis/extracted/app/hongguo.pyc",
+      "function": "refresh_session",
+      "line": 437,
+      "matched_strings": [
+        "/grab"
+      ]
+    }
+  ],
+  "limit": "Exact literal matches in these packaged Python modules only; native libraries and externally supplied services are outside this scan."
+}

@@ -1,0 +1,41 @@
+{
+  "source_sha256": "bea893bea56a24cee9eadc4c004bf9637b6c2129d08b22c9500c012431edd6f1",
+  "scope": "synthetic offline fixed nonce",
+  "cases": [
+    {
+      "query": "aid=8662&device_id=1000000000000000001&note=%E6%B5%8B%E8%AF%95%20test",
+      "body": "",
+      "ts": 1791944700,
+      "nonce": 0,
+      "expected": "8404000040012333c9a05f71ffb8deec244161d94dbb7a410985"
+    },
+    {
+      "query": "aid=8662&device_id=1000000000000000001&note=%E6%B5%8B%E8%AF%95%20test",
+      "body": "{\"video_id\":\"1000000000000000002\"}",
+      "ts": 1791944701,
+      "nonce": 1,
+      "expected": "840401004001a0ced4b5e3a1020332ddde70b55729354055d07c"
+    },
+    {
+      "query": "aid=8662&device_id=1000000000000000001&note=%E6%B5%8B%E8%AF%95%20test",
+      "body": "{\"video_id\":\"1000000000000000002\"}",
+      "ts": 1791944702,
+      "nonce": 320,
+      "expected": "8404400140011c661b3d80c4df1cedaf01db456cf4e5b28687b4"
+    },
+    {
+      "query": "aid=8662&device_id=1000000000000000001&note=%E6%B5%8B%E8%AF%95%20test",
+      "body": "{\"video_id\":\"1000000000000000002\"}",
+      "ts": 1791944703,
+      "nonce": 32768,
+      "expected": "8404008040016925536703d72287fc37255d1e8680351a4c1c7b"
+    },
+    {
+      "query": "aid=8662&device_id=1000000000000000001&note=%E6%B5%8B%E8%AF%95%20test",
+      "body": "{\"video_id\":\"1000000000000000002\"}",
+      "ts": 1791944704,
+      "nonce": 65535,
+      "expected": "8404ffff400194c89ed518fb17725e23b16f83ef493451343df3"
+    }
+  ]
+}

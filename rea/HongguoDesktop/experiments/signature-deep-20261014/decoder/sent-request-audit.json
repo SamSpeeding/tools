@@ -1,0 +1,2553 @@
+{
+  "scope": "Actual transmitted model-request headers, separate from candidate signatures.",
+  "source_script_sha256": "bea893bea56a24cee9eadc4c004bf9637b6c2129d08b22c9500c012431edd6f1",
+  "request_count": 83,
+  "results": [
+    {
+      "capture": "batch-model-20261014/private/01-baseline-our_original_batch.json",
+      "request_url_sha256": "8420fbcfe3ad010c7faea0ae730dc8f67d2206c6421b3b8037af7f42401b99d6",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 660
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/01-baseline-our_original_single_control.json",
+      "request_url_sha256": "ee22fee903722fe957c962812508fe3a4916c6bc2956c190dbcc0a68bf925f65",
+      "request_body_sha256": "6e5d18106ef7aae88ac439e6a0b77848ea9fe6559992bcb563d6142dd5ab60db",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 664
+      },
+      "response_code": 0
+    },
+    {
+      "capture": "batch-model-20261014/private/01-baseline-script_A_first.json",
+      "request_url_sha256": "e2500ce423d29cfa9893ecc3a1bca3d181e1d3bda4d0b3ec157dcaa285ec86f8",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 708
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/01-baseline-script_A_repeat.json",
+      "request_url_sha256": "b64ea4330fb689c9e19455f606e404e711b2b312d759da8ef29081b4fffc30a6",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 708
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/01-baseline-script_B_first.json",
+      "request_url_sha256": "c09acc15bec3844c14247fac759c32c71d9684e47228faf4ec2c3dadc70410b7",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 708
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-ours_jar_first_jar.json",
+      "request_url_sha256": "45ececf0e8bb22022b62ccd73c523c3fc432baf79143135368e86ca79a98e84e",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 665
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-ours_jar_first_python.json",
+      "request_url_sha256": "4b6501f53d4ba467bbf617219d36faf1be18237b510c4d58b403ac91a7ebc9e8",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-ours_python_first_jar.json",
+      "request_url_sha256": "1c8dfd964f7375fdb53306626306d1754cd3f5fca9e40d6d8e5bd7d158ff31e1",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 665
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-ours_python_first_python.json",
+      "request_url_sha256": "a80ce498f28b16c978ef12e1fa4e183a5e858eb2e66a8ca403de7fdea784aa53",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-script_jar_first_jar.json",
+      "request_url_sha256": "7b5ca0d733168c2e9ef8aa0e6e98a95d79869203ef479700eef11c7aa7fe5694",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 661
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-script_jar_first_python.json",
+      "request_url_sha256": "6eb6daaf8e21f08620fcdf635d0263cbe5dce21e32cb361881d90f7e5a2e7b8c",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 708
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-script_python_first_jar.json",
+      "request_url_sha256": "61a90596bb3ef9ff35f2f37d25b12262751e95754af4dedd44fd14cf72bdbbca",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 665
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/02-signature-crossover-script_python_first_python.json",
+      "request_url_sha256": "d7d3cc19c41eea61e47d8230dee3fa82cac377dc24b4eb95b27be14d8be4fca6",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 708
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_jar_python_argus_ladon_first.json",
+      "request_url_sha256": "001b9f9578b8b2cde5c9f1b18a9d351f3c41bcd6107cdd599f5f82faca366713",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 665
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_jar_python_medusa_first.json",
+      "request_url_sha256": "314a57b462654b318f558995265cbbe096d07c962ceb6e9d65c589cce2e4f33f",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_jar_python_medusa_repeat.json",
+      "request_url_sha256": "fe013c6b85706b9468946ac66195d314d5969d84f8a3c70eca6b408a3ffb46dc",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_python_16_first.json",
+      "request_url_sha256": "276799e489e0525c4ca137f55ddec2ea5c062024895927c1733818f562fb4257",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_python_16_repeat.json",
+      "request_url_sha256": "09d949f8d028d6d4f2cfd0efebcea69ff99efc598ea20446dad9d419910fabc5",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_python_curl_18_first.json",
+      "request_url_sha256": "08f32ac2f7f4688eb25d930b1cba4dca41df16cfc414050b2f2f1fae1388af8c",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/03-factors-ours_python_jar_medusa_first.json",
+      "request_url_sha256": "24e4e4a49723449be59485192f6ad67c04b174187402236b361772c1b17cc473",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 665
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-jar_without_extras_with_python_medusa.json",
+      "request_url_sha256": "e6c8be5be88c47a99a02f08e00d42e29cbff0b93a2d21a7f20428152243e4b39",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-jar_without_neptune_soter.json",
+      "request_url_sha256": "fa2e3324b72c9af9987fc86cd87858549effaba81deb5bf7d4f3de58c51c3c93",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 662
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-our_original_single_end_control.json",
+      "request_url_sha256": "33342898ede828c77f800fabd47406f6654e68c1b1e96b47e513dcacc9093286",
+      "request_body_sha256": "6e5d18106ef7aae88ac439e6a0b77848ea9fe6559992bcb563d6142dd5ab60db",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 666
+      },
+      "response_code": 0
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_fresh_end_control.json",
+      "request_url_sha256": "18bf7bf8f3246f45bfec10967bf827409c557fea648ddde4d7489e2d1e924c1e",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_original_stored_ids.json",
+      "request_url_sha256": "e7d1f3b5bdda90efcaa890321f42e9c37c735d06300d53499165fa2957857f82",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_stable_pid_launch_first.json",
+      "request_url_sha256": "ce1021e39fbbe17c4451fee53b1d4ac458fda202fc993ba4f59ce9049a5f1d64",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_stable_pid_launch_repeat.json",
+      "request_url_sha256": "f1727b8dbc34bc7488650352f366f5154690e5b537418951d4980a32103e2b86",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_argus_ladon.json",
+      "request_url_sha256": "c4a073e0d206add9c4945e8886ac986a78e2653466d65925cc0bbca35dc44e23",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_gorgon.json",
+      "request_url_sha256": "a8b480ef13a0b7d2b7d498f0e6871819d3814051289402838ece72b206bf05c5",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_helios.json",
+      "request_url_sha256": "6f87cd3cceb0e6853a7b407692506a9c7dd5a800f58104d4904027b6c9c99428",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-python_with_jar_neptune_soter.json",
+      "request_url_sha256": "dd736be1d3db0d7d5c1487743f10b604a965f4b934e9492c1144acd02a0aae65",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/04-context-and-reuse-script_baseline_A_after_interval.json",
+      "request_url_sha256": "6c66fa3364beff01c272d2e8d7cbb052e81b3266d0e9c9eb55076f5a9fc7df14",
+      "request_body_sha256": "d0d60ce7b52b9286c93e7fc286c563c582c4948b2a9b71e911cceae372eb8a77",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 708
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_original_stored_ids_end_control.json",
+      "request_url_sha256": "ccb73feb6cb1ba8d7358af2501711437cad15a2789bf9a3c3e99fab3a472b19e",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 662
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_with_python_hm_A_first.json",
+      "request_url_sha256": "1c55b62117a7a7ff79b93f7ac9ea77f46fabe0a11aff14b3280f4202fcf4c693",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_with_python_hm_A_repeat.json",
+      "request_url_sha256": "780e9c9895a64520f9f9813fd88641f972e6d611a8ce5273a189b73e75d3de75",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-jar_with_python_hm_B_first.json",
+      "request_url_sha256": "0f43b6fb816990b0f253ffd78b0efc890e1efb6726b64d74cb163be17371718f",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-python_fresh_end_control.json",
+      "request_url_sha256": "67ba7306c9f3a3a0edaf636d2c2901420567849223c5df50dc9a57158222f497",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 709
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/05-helios-medusa-pair-python_original_stored_ids_revisit.json",
+      "request_url_sha256": "f1a3a5ed2af63c745d466014bd361defaaef310bb7bcb7cc21fd7c29e0120b72",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-jar_python_hm_stored_first.json",
+      "request_url_sha256": "21457b4d7155431fb9497553ee801395f1be9d44416c8a34a195eb9311306ff1",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-jar_python_hm_stored_repeat.json",
+      "request_url_sha256": "b8c944841e756d9f89eb19750c0819068ae60d461bf0ebb9c44c326d8152f9e5",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-jar_stored_single_final_control.json",
+      "request_url_sha256": "34b95f70342e7a942230aaa15fd56a2a2b73044d9e05685f61218f8f4586d468",
+      "request_body_sha256": "6e5d18106ef7aae88ac439e6a0b77848ea9fe6559992bcb563d6142dd5ab60db",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 664
+      },
+      "response_code": 0
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-python_stored_curl.json",
+      "request_url_sha256": "091923a6112315adb896daa0504f3e469e8ee5a6286965c41f8c5df62b6e743f",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-python_stored_first.json",
+      "request_url_sha256": "8ec9b569728fe423feaebc18c0f2ee2d3761f9fbc8eaba1a60b104cbb89913c5",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "batch-model-20261014/private/06-stored-identity-repeat-python_stored_repeat.json",
+      "request_url_sha256": "5f17a2a8bc50e10fd3b314fadd7a29761070305a1fbe68912a57328b94be7edd",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_1.json",
+      "request_url_sha256": "ad8e6c139b3eb20d8236ef42593f9697deb698f53654ec34b30653b97d037001",
+      "request_body_sha256": "f5d5004880396e6b503694b4294cc8ab44e888868dbf1a165e5f73ebdf71ca90",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_3.json",
+      "request_url_sha256": "a46c1412538384669d239106f40ca8b2358f1807e5bf0fab25bd1f19cd66b4e7",
+      "request_body_sha256": "9e7cb4f5893516087b408d30b3c34b25adb7299ac8aee8d6650071900db6a281",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_38.json",
+      "request_url_sha256": "8143464a47f939a389dc6becb696d066e3c060c232c0af761916686b9787199d",
+      "request_body_sha256": "1e8cf0ca90a9dade987e7f73df3117b9df6039caf422cf4e7d016604a49f1962",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_5.json",
+      "request_url_sha256": "96e93bee73b2ebdf4296599505fe9568eab9bf6df0970fd2e3772e59d0a4d42a",
+      "request_body_sha256": "6276049640cc2fd022bdc622bf3e4bfb804eeab0ec0d395f146b2b6d3f09bfa2",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_episode_74.json",
+      "request_url_sha256": "db43ae5406b7d14f6e674d594404b003d7b9a056236356d4b076e3218e3655a0",
+      "request_body_sha256": "d12b2bf3eccf16123d7c2064e797b538c63f6966eae676094e04019dc5730c13",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_five.json",
+      "request_url_sha256": "dbf8ab2cb931261d7b2e59a6372a6d57b75053e887ad5ecef9b0bd29576db4b7",
+      "request_body_sha256": "c3b19119232cf1e46cb718de0b40ca3582d322d850715fbf1f3b58ed236d50ae",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_five_repeat.json",
+      "request_url_sha256": "33130c16abf416de1ecedcc514f1e3dd7cae99d66fe8e544165ce7a59d3e323b",
+      "request_body_sha256": "c3b19119232cf1e46cb718de0b40ca3582d322d850715fbf1f3b58ed236d50ae",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_five_reverse.json",
+      "request_url_sha256": "520a464d469155dc490c3e1c43e01a08f5ae6d25d98a09cf77922e5bbd751186",
+      "request_body_sha256": "649fd41738df50848e97649e68f171117c0ce0170b16791a629e609f9c57f43e",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_two.json",
+      "request_url_sha256": "7daa022f671bd60996ef4b256543b7f48ec1c8320c8aa12fcda11afb26eac9af",
+      "request_body_sha256": "e4d50bdb265de7b4ced3b092262b4b0f97e39d53f4ce50364683a684e1cde3b3",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 704
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_A_two_repeat.json",
+      "request_url_sha256": "778d0bf2931f7a1f78083f6fb1542c43c327f5b52fbb8081d1e28e6aa379bd33",
+      "request_body_sha256": "e4d50bdb265de7b4ced3b092262b4b0f97e39d53f4ce50364683a684e1cde3b3",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_cross_series_five.json",
+      "request_url_sha256": "5408314de0cc4744037c55bd4dc724ea41cd17dcedb160d0617b8b13be8fc5e9",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_cross_series_five_after_jar.json",
+      "request_url_sha256": "ad20da2370195cf01d195fd726ba57cefa9213386c2435e4333f82fa0b40e024",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_cross_series_five_repeat.json",
+      "request_url_sha256": "1e0bff50675e8e9a20faffdb55870647a79cd80cc31efdd761235c64e1675cc3",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-hybrid_original_baseline.json",
+      "request_url_sha256": "9ebce0960708ee3831a30975cdf7cbeafa65e78d192027ae4a84d9ce36e69a25",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-jar_cross_series_five_control.json",
+      "request_url_sha256": "79a1e85edb9a503c93ee6453976feb350b8f2b936a60ae6a0ea38fbfb30d39a2",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 664
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-jar_original_baseline.json",
+      "request_url_sha256": "2169680871c5df4d1fc98e26517dc485ff1acd5d489ae68bc484efe409427186",
+      "request_body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 664
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-jar_single_final_control.json",
+      "request_url_sha256": "3f8b20661e5c40a0d4dd9bfbb577025540fed15842a1568d22a04e7d10d31498",
+      "request_body_sha256": "6e5d18106ef7aae88ac439e6a0b77848ea9fe6559992bcb563d6142dd5ab60db",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 664
+      },
+      "response_code": 0
+    },
+    {
+      "capture": "signature-deep-20261014/private/07-cross-episode-multivid-python_cross_series_five.json",
+      "request_url_sha256": "bb6eaece6f2736887a7fa38f1f1c99ac9420b7e20bcb63f21d626f0eaf837ee9",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-correct_hm_after_fields.json",
+      "request_url_sha256": "315035f1b701ae6523ec3c3b1de9ce376e8f377fa8e94ca82e9309a7319f6933",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-correct_hm_before.json",
+      "request_url_sha256": "e356a9b972b0c7322f7476fc955cde2f5f0dd09a5fffe38ce8911929ab41774e",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-correct_hm_final.json",
+      "request_url_sha256": "0d95de1bf145e7f05ce55356a48bb95759cdcab07f2e56f1d0d207aa0cf27ddd",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-helios_app3019_only.json",
+      "request_url_sha256": "a2978fd8af29e7e828ac7763a2ccf732515b219c0ac34f2491012a2660484dfb",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-helios_jar_app_and_license.json",
+      "request_url_sha256": "83b95f73a1b7290c18f5c8e85bd9f7726561afacf7ace9452ca98189ba3d0154",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-helios_license1611921764_only.json",
+      "request_url_sha256": "bb0d63b7c168c9f31031b3a42db67146859272b9e74a924d93f1c824f5a73f9e",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/08-helios-field-isolation-jar_medusa_with_correct_python_helios.json",
+      "request_url_sha256": "907ced53bcda10f630580ff1ed0ccfe696dd813f581f036579babc71284b5a5f",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 662
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "signature-deep-20261014/private/09-exact-helios-counterfactual-app_id_only.json",
+      "request_url_sha256": "4ab4c4f70484271f8129c7ff68a270aae3076c824f373b16d097657251f97c13",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      },
+      "counterfactual_against_original_valid": {
+        "same_url": true,
+        "same_body": true,
+        "same_other_headers": true,
+        "same_helios_random": true,
+        "same_helios_khronos": true,
+        "same_helios_app_id": false,
+        "same_helios_license_id": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/09-exact-helios-counterfactual-jar_license_and_app.json",
+      "request_url_sha256": "4ab4c4f70484271f8129c7ff68a270aae3076c824f373b16d097657251f97c13",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      },
+      "counterfactual_against_original_valid": {
+        "same_url": true,
+        "same_body": true,
+        "same_other_headers": true,
+        "same_helios_random": true,
+        "same_helios_khronos": true,
+        "same_helios_app_id": false,
+        "same_helios_license_id": false
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/09-exact-helios-counterfactual-license_only_first.json",
+      "request_url_sha256": "4ab4c4f70484271f8129c7ff68a270aae3076c824f373b16d097657251f97c13",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 110001,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      },
+      "counterfactual_against_original_valid": {
+        "same_url": true,
+        "same_body": true,
+        "same_other_headers": true,
+        "same_helios_random": true,
+        "same_helios_khronos": true,
+        "same_helios_app_id": true,
+        "same_helios_license_id": false
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/09-exact-helios-counterfactual-original_valid.json",
+      "request_url_sha256": "4ab4c4f70484271f8129c7ff68a270aae3076c824f373b16d097657251f97c13",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      },
+      "counterfactual_against_original_valid": {
+        "same_url": true,
+        "same_body": true,
+        "same_other_headers": true,
+        "same_helios_random": true,
+        "same_helios_khronos": true,
+        "same_helios_app_id": true,
+        "same_helios_license_id": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/09-exact-helios-counterfactual-original_valid_replay.json",
+      "request_url_sha256": "4ab4c4f70484271f8129c7ff68a270aae3076c824f373b16d097657251f97c13",
+      "request_body_sha256": "e27f01a7f7455d2e370376caeb0e4e2929785b91a92ca4e5490617e4fcb9b747",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      },
+      "counterfactual_against_original_valid": {
+        "same_url": true,
+        "same_body": true,
+        "same_other_headers": true,
+        "same_helios_random": true,
+        "same_helios_khronos": true,
+        "same_helios_app_id": true,
+        "same_helios_license_id": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-hybrid_tail_five_final.json",
+      "request_url_sha256": "0a49c02e6262e710596a391330e772c35420587bb1e619f7ea906e57adae4fd7",
+      "request_body_sha256": "820af070a285b229d45d9571173a4c69f076126d3ba0b84d693eec0224fbf9b6",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-jar_tail_five_control.json",
+      "request_url_sha256": "6a6448362944f308757c880075b148aa96aeed4dd55bd4f5ea90a16b309b3a87",
+      "request_body_sha256": "820af070a285b229d45d9571173a4c69f076126d3ba0b84d693eec0224fbf9b6",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "3019",
+        "license_id": "1611921764"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 4,
+        "magic_hex": "126f8075e685b236b8eb84ca22cb43e8",
+        "envelope_flag": 256,
+        "wire_length": 664
+      },
+      "response_code": 110001
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-python_tail_five_curl.json",
+      "request_url_sha256": "64b8e3fefd810344d033bab3027796ebfa8b9c6f894bb9e032c45ea0e244b006",
+      "request_body_sha256": "820af070a285b229d45d9571173a4c69f076126d3ba0b84d693eec0224fbf9b6",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_1.json",
+      "request_url_sha256": "6f3929c4df7c9b8372ccff1af0357b2990a6cbcd49027a40234a1e60a2bbb435",
+      "request_body_sha256": "7aebdd850f304cb8175dbdd963864b21ed4cdc780ce7f5a03ed530531cefca9c",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_2.json",
+      "request_url_sha256": "023738f7f3c2f78d55b46197ace82123f0c04366bd38cc6eaec7a715730b90e6",
+      "request_body_sha256": "820af070a285b229d45d9571173a4c69f076126d3ba0b84d693eec0224fbf9b6",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_3.json",
+      "request_url_sha256": "29c937cb77d4f11abfea40ecb8c43d643f18cbe7145c110a0b1683247f9ee4a9",
+      "request_body_sha256": "7aebdd850f304cb8175dbdd963864b21ed4cdc780ce7f5a03ed530531cefca9c",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_4.json",
+      "request_url_sha256": "8a8bfa179823593f0c79ec769ab31a1f7319aefb29f333c5d0ba50bf9cc4c46a",
+      "request_body_sha256": "820af070a285b229d45d9571173a4c69f076126d3ba0b84d693eec0224fbf9b6",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_5.json",
+      "request_url_sha256": "21aac9292bd6b4c293e062a3a4b9b526c5b01eed99dbdb3337cb407460a36a60",
+      "request_body_sha256": "7aebdd850f304cb8175dbdd963864b21ed4cdc780ce7f5a03ed530531cefca9c",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    },
+    {
+      "capture": "signature-deep-20261014/private/10-persisted-repeat-window-repeat_round_6.json",
+      "request_url_sha256": "6446c46566e7b4d56d79005aab4a76b676afa3c0917e6611d29f783999e094f0",
+      "request_body_sha256": "820af070a285b229d45d9571173a4c69f076126d3ba0b84d693eec0224fbf9b6",
+      "helios": {
+        "roundtrip": true,
+        "app_id": "8662",
+        "license_id": "1588093228"
+      },
+      "helios_time_matches_header": true,
+      "sent_signatures_match_captured_headers": true,
+      "medusa_envelope": {
+        "version": 3,
+        "magic_hex": "f7e85ffad7d7dc3bd62ac87057cf6118",
+        "envelope_flag": 256,
+        "wire_length": 705
+      },
+      "response_code": 0,
+      "medusa_roundtrip": true,
+      "bindings": {
+        "medusa_ms_app_id_equals_url_aid": true,
+        "medusa_device_id_equals_url": true,
+        "nested_device_id_equals_top": true,
+        "device_app_id_equals_top": true,
+        "app_version_equals_url": true,
+        "env_app_version_equals_top": true,
+        "times_equal_khronos": true,
+        "query_sm3_matches": true,
+        "query_body_ts_hash_matches": true,
+        "query_body_hash_sm3_matches": true,
+        "body_md5_matches_header": true
+      }
+    }
+  ]
+}

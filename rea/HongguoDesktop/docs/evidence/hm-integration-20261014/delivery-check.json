@@ -1,0 +1,47 @@
+{
+  "preserved_files_checked": 125,
+  "preexisting_changed_files": [
+    "/Users/tt/Desktop/rea/HongguoDesktop/backend/hongguo_api.py",
+    "/Users/tt/Desktop/rea/HongguoCLI/hongguo_api.py"
+  ],
+  "analysis_config_vendor_reference_unchanged": true,
+  "all_backend_files_match_final_bundle": true,
+  "copies": [
+    {
+      "file": "_primitives.py",
+      "bytes": 23571,
+      "sha256": "601fe618601baaa922f8c3db5f8be3e4922b8c1831977faa934a21c501e18308",
+      "cli_and_bundle_identical": true
+    },
+    {
+      "file": "medusa-v3-table.bin",
+      "bytes": 81936,
+      "sha256": "239ddf955d14a008311b8c3adcf05713b858954068fff02ab19c2ba81e31d1d3",
+      "cli_and_bundle_identical": true
+    },
+    {
+      "file": "__init__.py",
+      "bytes": 10834,
+      "sha256": "ba4f8e7e15349f48c406ecce54d29e7ab502df33157dd29d1640a2c5a7d53208",
+      "cli_and_bundle_identical": true
+    }
+  ],
+  "test_and_document_copies_match": true,
+  "module_imports": [
+    "._primitives",
+    "__future__",
+    "base64",
+    "dataclasses",
+    "functools",
+    "hashlib",
+    "pathlib",
+    "secrets",
+    "struct",
+    "urllib.parse"
+  ],
+  "cli_download": {
+    "bytes": 4480838,
+    "sha256": "ffbfcfb34273e650cc4c02a2221959a69a33b8cc46685a62dec352edafdad794",
+    "full_decode_validated": true
+  }
+}

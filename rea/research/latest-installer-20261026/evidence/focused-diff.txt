@@ -1,0 +1,222 @@
+
+=== hongguo.resolve_down old_line=None new_line=739 ===
+--- 
++++ 
+@@ -0,0 +1,12 @@
++RESUME                           0
++NOP                              None
++LOAD_GLOBAL                      '_src'
++LOAD_CONST                       'down'
++BINARY_SUBSCR                    None
++JUMP_IF_FALSE_OR_POP             '<target>'
++LOAD_GLOBAL                      '_src'
++LOAD_CONST                       'reason'
++BINARY_SUBSCR                    None
++LOAD_CONST                       'signer'
++COMPARE_OP                       '!='
++RETURN_VALUE                     None
+
+=== hongguo._vm_tab_pass old_line=2083 new_line=2093 ===
+--- 
++++ 
+@@ -28,14 +28,15 @@
+ LOAD_GLOBAL                      '_VM_TAB'
+ LOAD_GLOBAL                      '_vm_tab_query'
+ LOAD_FAST                        'chunk'
+ PRECALL                          1
+ CALL                             1
++LOAD_CONST                       False
+ LOAD_CONST                       2
+-KW_NAMES                         ('extra_query', 'max_retries')
+-PRECALL                          4
+-CALL                             4
++KW_NAMES                         ('extra_query', 'signed', 'max_retries')
++PRECALL                          5
++CALL                             5
+ LOAD_METHOD                      'get'
+ LOAD_CONST                       'data'
+ PRECALL                          1
+ CALL                             1
+ JUMP_IF_TRUE_OR_POP              '<target>'
+
+=== hongguo._vm_alive.<locals>.<lambda> old_line=2171 new_line=2181 ===
+
+=== offline_dl.EpisodePool._feed old_line=5219 new_line=5230 ===
+--- 
++++ 
+@@ -152,18 +152,23 @@
+ LOAD_GLOBAL                      'H'
+ LOAD_ATTR                        'source_down'
+ PRECALL                          0
+ CALL                             0
+ STORE_FAST                       'down'
+-LOAD_FAST                        'down'
++LOAD_GLOBAL                      'H'
++LOAD_ATTR                        'resolve_down'
++PRECALL                          0
++CALL                             0
++STORE_FAST                       'res_down'
++LOAD_FAST                        'res_down'
+ LOAD_FAST                        'paused'
+ COMPARE_OP                       '!='
+ POP_JUMP_FORWARD_IF_FALSE        '<target>'
+-LOAD_FAST                        'down'
++LOAD_FAST                        'res_down'
+ STORE_FAST                       'paused'
+ LOAD_GLOBAL                      'log'
+-LOAD_FAST                        'down'
++LOAD_FAST                        'res_down'
+ POP_JUMP_FORWARD_IF_FALSE        '<target>'
+ LOAD_CONST                       '  下载暂停: the download server is busy -- retrying automatically (nothing is lost)'
+ JUMP_FORWARD                     '<target>'
+ LOAD_CONST                       '  下载继续: the download server answers again'
+ PRECALL                          1
+@@ -196,11 +201,11 @@
+ LOAD_FAST                        'self'
+ LOAD_METHOD                      '_short'
+ PRECALL                          0
+ CALL                             0
+ POP_JUMP_FORWARD_IF_FALSE        '<target>'
+-LOAD_FAST                        'down'
++LOAD_FAST                        'res_down'
+ POP_JUMP_FORWARD_IF_TRUE         '<target>'
+ LOAD_GLOBAL                      'time'
+ LOAD_ATTR                        'monotonic'
+ PRECALL                          0
+ CALL                             0
+@@ -407,11 +412,11 @@
+ STORE_ATTR                       'batches'
+ LOAD_FAST                        'got'
+ UNARY_NOT                        None
+ JUMP_IF_FALSE_OR_POP             '<target>'
+ LOAD_GLOBAL                      'H'
+-LOAD_ATTR                        'source_down'
++LOAD_ATTR                        'resolve_down'
+ PRECALL                          0
+ CALL                             0
+ STORE_FAST                       'held'
+ LOAD_FAST                        'batch'
+ GET_ITER                         None
+
+=== offline_dl.EpisodePool._take old_line=5111 new_line=5122 ===
+--- 
++++ 
+@@ -15,11 +15,11 @@
+ LOAD_ATTR                        'monotonic'
+ PRECALL                          0
+ CALL                             0
+ STORE_DEREF                      'now'
+ LOAD_GLOBAL                      'H'
+-LOAD_ATTR                        'source_down'
++LOAD_ATTR                        'resolve_down'
+ PRECALL                          0
+ CALL                             0
+ STORE_DEREF                      'down'
+ LOAD_CLOSURE                     'down'
+ LOAD_CLOSURE                     'now'
+
+=== offline_dl._episode_task old_line=4808 new_line=4818 ===
+--- 
++++ 
+@@ -75,11 +75,11 @@
+ LOAD_METHOD                      'is_set'
+ PRECALL                          0
+ CALL                             0
+ POP_JUMP_FORWARD_IF_TRUE         '<target>'
+ LOAD_GLOBAL                      'H'
+-LOAD_ATTR                        'source_down'
++LOAD_ATTR                        'resolve_down'
+ PRECALL                          0
+ CALL                             0
+ POP_JUMP_FORWARD_IF_FALSE        '<target>'
+ LOAD_GLOBAL                      '_live_ep_done'
+ LOAD_DEREF                       'ctx'
+
+=== offline_dl._prepare old_line=4769 new_line=4779 ===
+--- 
++++ 
+@@ -74,10 +74,16 @@
+ LOAD_METHOD                      'get'
+ LOAD_CONST                       'backup'
+ PRECALL                          1
+ CALL                             1
+ POP_JUMP_FORWARD_IF_TRUE         '<target>'
++LOAD_FAST                        'meta'
++LOAD_METHOD                      'get'
++LOAD_CONST                       'web_only'
++PRECALL                          1
++CALL                             1
++POP_JUMP_FORWARD_IF_TRUE         '<target>'
+ LOAD_GLOBAL                      '_download_poster'
+ LOAD_FAST                        'folder'
+ LOAD_FAST                        'meta'
+ LOAD_METHOD                      'get'
+ LOAD_CONST                       'cover'
+
+=== offline_dl.dl_vid old_line=1784 new_line=1793 ===
+--- 
++++ 
+@@ -223,11 +223,11 @@
+ LOAD_FAST                        'attempt'
+ LOAD_CONST                       0
+ COMPARE_OP                       '=='
+ POP_JUMP_FORWARD_IF_TRUE         '<target>'
+ LOAD_GLOBAL                      'H'
+-LOAD_ATTR                        'source_down'
++LOAD_ATTR                        'resolve_down'
+ PRECALL                          0
+ CALL                             0
+ POP_JUMP_FORWARD_IF_FALSE        '<target>'
+ LOAD_FAST                        'ct'
+ LOAD_FAST                        'tmp'
+
+=== offline_dl.series_episodes old_line=1388 new_line=1388 ===
+--- 
++++ 
+@@ -64,10 +64,46 @@
+ CALL                             1
+ STORE_FAST                       'got'
+ LOAD_FAST                        'got'
+ POP_JUMP_FORWARD_IF_FALSE        '<target>'
+ LOAD_FAST                        'got'
++UNPACK_SEQUENCE                  2
++STORE_FAST                       'meta'
++STORE_FAST                       'eps'
++LOAD_GLOBAL                      'H'
++LOAD_ATTR                        '_src'
++LOAD_METHOD                      'get'
++LOAD_CONST                       'reason'
++PRECALL                          1
++CALL                             1
++LOAD_CONST                       'signer'
++COMPARE_OP                       '=='
++POP_JUMP_FORWARD_IF_FALSE        '<target>'
++LOAD_FAST                        'meta'
++LOAD_METHOD                      'get'
++LOAD_CONST                       'backup'
++PRECALL                          1
++CALL                             1
++POP_JUMP_FORWARD_IF_FALSE        '<target>'
++LOAD_GLOBAL                      'dict'
++LOAD_FAST                        'meta'
++PRECALL                          1
++CALL                             1
++STORE_FAST                       'meta'
++LOAD_CONST                       False
++LOAD_FAST                        'meta'
++LOAD_CONST                       'backup'
++STORE_SUBSCR                     None
++LOAD_CONST                       True
++LOAD_FAST                        'meta'
++LOAD_CONST                       'web_only'
++STORE_SUBSCR                     None
++LOAD_FAST                        'meta'
++LOAD_FAST                        'eps'
++BUILD_TUPLE                      2
++STORE_FAST                       'got'
++LOAD_FAST                        'got'
+ RETURN_VALUE                     None
+ LOAD_GLOBAL                      'RuntimeError'
+ LOAD_CONST                       'its episode list is unavailable right now (the download server is busy)'
+ PRECALL                          1
+ CALL                             1

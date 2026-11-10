@@ -1,0 +1,18 @@
+# Local copies of installers and extracted research inputs.
+/HongguoDownloader-Setup.exe
+/analysis/extracted/
+/research/latest-installer-*/extracted/
+
+# Generated research output and local samples.
+/analysis/evidence/*.dis.txt
+/analysis/evidence/*.raw
+/analysis/evidence/inno-header*.bin
+/analysis/evidence/rea-evidence.json
+/research/latest-installer-*/evidence/bytecode/
+/research/*/private/
+/红果短剧研究-*/model.private.json
+/红果短剧研究-*/sample.mp4
+*.log
+
+.DS_Store
+__pycache__/

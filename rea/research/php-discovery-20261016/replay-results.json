@@ -1,0 +1,190 @@
+{
+    "passed": true,
+    "replayed_requests": 46,
+    "checks": [
+        {
+            "id": "smoke-search",
+            "passed": true
+        },
+        {
+            "id": "smoke-rank",
+            "passed": true
+        },
+        {
+            "id": "smoke-filters",
+            "passed": true
+        },
+        {
+            "id": "smoke-category",
+            "passed": true
+        },
+        {
+            "id": "smoke-latest",
+            "passed": true
+        },
+        {
+            "id": "smoke-detail",
+            "passed": true
+        },
+        {
+            "id": "coverage-search-重生",
+            "passed": true
+        },
+        {
+            "id": "coverage-search-重生-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-search-总裁",
+            "passed": true
+        },
+        {
+            "id": "coverage-search-总裁-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-all-recommend",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-all-hot",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-all-hot-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-all-new",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-human-recommend",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-human-hot",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-human-new",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-comic-recommend",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-comic-hot",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-comic-new",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-ai-recommend",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-ai-hot",
+            "passed": true
+        },
+        {
+            "id": "coverage-rank-ai-new",
+            "passed": true
+        },
+        {
+            "id": "coverage-filters-short_play",
+            "passed": true
+        },
+        {
+            "id": "coverage-category-short_play",
+            "passed": true
+        },
+        {
+            "id": "coverage-category-short_play-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-latest-short_play",
+            "passed": true
+        },
+        {
+            "id": "coverage-latest-short_play-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-selected-short_play",
+            "passed": true
+        },
+        {
+            "id": "coverage-filters-comic_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-category-comic_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-category-comic_series-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-latest-comic_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-selected-comic_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-filters-ai_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-category-ai_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-category-ai_series-p2",
+            "passed": true
+        },
+        {
+            "id": "coverage-latest-ai_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-selected-ai_series",
+            "passed": true
+        },
+        {
+            "id": "coverage-detail-b",
+            "passed": true
+        },
+        {
+            "id": "repeat-search",
+            "passed": true
+        },
+        {
+            "id": "repeat-rank",
+            "passed": true
+        },
+        {
+            "id": "repeat-filters",
+            "passed": true
+        },
+        {
+            "id": "repeat-category",
+            "passed": true
+        },
+        {
+            "id": "repeat-latest",
+            "passed": true
+        },
+        {
+            "id": "repeat-detail",
+            "passed": true
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "case": "fresh_original_localProxy",
+      "result": {
+        "status": 200,
+        "bytes": 8412310,
+        "matches_decoded_sample": true,
+        "error": null
+      },
+      "seconds": 2.115
+    },
+    {
+      "case": "fresh_original_stream_HEAD",
+      "result": {
+        "status": 200,
+        "length": "8412310",
+        "ranges": "bytes"
+      },
+      "seconds": 1.028
+    },
+    {
+      "case": "original_stream_mid_Range",
+      "result": {
+        "status": 206,
+        "bytes": 65509,
+        "matches_decoded_sample": true
+      },
+      "seconds": 0.299
+    },
+    {
+      "case": "original_stream_full_GET",
+      "result": {
+        "status": 200,
+        "bytes": 8412310,
+        "sha256": "8f25e6af2b6e5cfb8b679bc0be760f1376d9901e8503540edac07a004245003d",
+        "matches_decoded_sample": true
+      },
+      "seconds": 4.314
+    }
+  ],
+  "model_requests": [
+    {
+      "status": 200,
+      "code": 0
+    },
+    {
+      "status": 200,
+      "code": 0
+    }
+  ],
+  "scope": "Fresh original Spider per playback path, no model injection"
+}

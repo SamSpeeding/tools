@@ -1,0 +1,89 @@
+{
+  "time": "2026-10-13T19:00:43.171807+08:00",
+  "vid": "7689903116275174462",
+  "type_key": "1",
+  "device_index": 0,
+  "changed_field": "device.query.device_id",
+  "controls": "Original production config, same iid/install_id and other device fields, body, signer and client. Each request signed anew. No registration.",
+  "config_hashes_before": {
+    "config.json": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+    "devices.json": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd"
+  },
+  "results": [
+    {
+      "device_group": "original",
+      "changed_query_keys": [],
+      "device_id_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "outcome": "failed",
+      "code": 110001,
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "http_status": 200,
+      "seconds": 3.35
+    },
+    {
+      "device_group": "new_B",
+      "changed_query_keys": [
+        "device_id"
+      ],
+      "device_id_sha256": "d2eb6e7d858da8c0c40c7d716befe3a7ba500998061e5f4a8be0d04d5bffca96",
+      "outcome": "failed",
+      "code": 110001,
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "http_status": 200,
+      "seconds": 0.959
+    },
+    {
+      "device_group": "new_B",
+      "changed_query_keys": [
+        "device_id"
+      ],
+      "device_id_sha256": "d2eb6e7d858da8c0c40c7d716befe3a7ba500998061e5f4a8be0d04d5bffca96",
+      "outcome": "failed",
+      "code": 110001,
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "http_status": 200,
+      "seconds": 0.383
+    },
+    {
+      "device_group": "original",
+      "changed_query_keys": [],
+      "device_id_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "outcome": "failed",
+      "code": 110001,
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "http_status": 200,
+      "seconds": 0.443
+    },
+    {
+      "device_group": "new_C",
+      "changed_query_keys": [
+        "device_id"
+      ],
+      "device_id_sha256": "750ad5a6cdc6b8a1911235b9a423854818633e2e659f5b3591a648612f67cf4d",
+      "outcome": "failed",
+      "code": 110001,
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "http_status": 200,
+      "seconds": 0.324
+    },
+    {
+      "device_group": "new_C",
+      "changed_query_keys": [
+        "device_id"
+      ],
+      "device_id_sha256": "750ad5a6cdc6b8a1911235b9a423854818633e2e659f5b3591a648612f67cf4d",
+      "outcome": "failed",
+      "code": 110001,
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "http_status": 200,
+      "seconds": 0.435
+    }
+  ],
+  "host": "api5-normal-sinfonlinec.fqnovel.com",
+  "version": "7.2.9.32",
+  "config_hashes_after": {
+    "config.json": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+    "devices.json": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd"
+  },
+  "config_unchanged": true
+}

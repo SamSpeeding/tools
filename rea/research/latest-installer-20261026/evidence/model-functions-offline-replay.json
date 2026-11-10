@@ -1,0 +1,1869 @@
+{
+  "authority": "controlled-replay",
+  "network_requests": 0,
+  "passed": true,
+  "scenarios": 24,
+  "scope": "Actual selected shipped function bytecode, synthetic api/cache/clock. Does not execute module top-level or platform requests; retries and platform behavior not tested.",
+  "results": [
+    {
+      "scenario": "success",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 2,
+      "repeat_call_count": 0,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "tab_fail",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "105"
+              ]
+            }
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "both_batch_fail",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 9,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "100"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "101"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "102"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "103"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "104"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "105"
+          }
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [
+        "[api] 批量直链失败, 改用单集接口: synthetic old batch failure"
+      ],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "tab_partial",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 3,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "105"
+              ]
+            }
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "101",
+        "102",
+        "103",
+        "104",
+        "100",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "tab_bad_json",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "105"
+              ]
+            }
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "tab_empty_tracks",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 2,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "all_fail",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "100"
+          }
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [
+        "[api] 批量直链失败, 改用单集接口: synthetic old batch failure"
+      ],
+      "source_strikes": [
+        [
+          "empty",
+          [
+            "POST",
+            "/novel/player/multi_video_model/v1/",
+            {
+              "biz_param": {
+                "detail_page_version": 0,
+                "device_level": 3,
+                "disable_digg_stat": false,
+                "disable_video_relate_book": false,
+                "need_all_video_definition": true,
+                "need_mp4_align": false,
+                "use_os_player": false,
+                "use_server_dns": false,
+                "video_platform": 1024
+              },
+              "mixed_video_id_map": {
+                "1": [
+                  "100"
+                ]
+              }
+            },
+            null,
+            true
+          ]
+        ]
+      ],
+      "error": {
+        "type": "VmDead",
+        "message": "synthetic single failure"
+      },
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "cert_error",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 1,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [],
+      "source_strikes": [],
+      "error": {
+        "type": "CertError",
+        "message": "synthetic certificate failure"
+      },
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "expired",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 2,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "signer_unavailable",
+      "function": "get_video_tracks",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "100"
+          }
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [
+        "[api] 批量直链失败, 改用单集接口: synthetic signer unavailable"
+      ],
+      "source_strikes": [],
+      "error": {
+        "type": "RuntimeError",
+        "message": "synthetic signer unavailable"
+      },
+      "version": "1.0.0.76"
+    },
+    {
+      "scenario": "signer_unavailable",
+      "function": "get_video_urls",
+      "source_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "100"
+          }
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [
+        "[api] 批量直链失败, 改用单集接口: synthetic signer unavailable"
+      ],
+      "source_strikes": [],
+      "error": {
+        "type": "RuntimeError",
+        "message": "synthetic signer unavailable"
+      },
+      "version": "1.0.0.76"
+    },
+    {
+      "version": "1.0.0.76",
+      "scenario": "health_probe",
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "max_retries": 1,
+          "timeout": 15
+        }
+      ]
+    },
+    {
+      "scenario": "success",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 2,
+      "repeat_call_count": 0,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "tab_fail",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "105"
+              ]
+            }
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "both_batch_fail",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 9,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "100"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "101"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "102"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "103"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "104"
+          }
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "105"
+          }
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [
+        "[api] 批量直链失败, 改用单集接口: synthetic old batch failure"
+      ],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "tab_partial",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 3,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "105"
+              ]
+            }
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "101",
+        "102",
+        "103",
+        "104",
+        "100",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "tab_bad_json",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "105"
+              ]
+            }
+          },
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "tab_empty_tracks",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 2,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "all_fail",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 4,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/multi_video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "mixed_video_id_map": {
+              "1": [
+                "100",
+                "101",
+                "102",
+                "103",
+                "104"
+              ]
+            }
+          },
+          "max_retries": 2
+        },
+        {
+          "method": "POST",
+          "path": "/novel/player/video_model/v1/",
+          "body": {
+            "biz_param": {
+              "detail_page_version": 0,
+              "device_level": 3,
+              "disable_digg_stat": false,
+              "disable_video_relate_book": false,
+              "need_all_video_definition": true,
+              "need_mp4_align": false,
+              "use_os_player": false,
+              "use_server_dns": false,
+              "video_platform": 1024
+            },
+            "video_id": "100"
+          }
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [
+        "[api] 批量直链失败, 改用单集接口: synthetic old batch failure"
+      ],
+      "source_strikes": [
+        [
+          "empty",
+          [
+            "POST",
+            "/novel/player/multi_video_model/v1/",
+            {
+              "biz_param": {
+                "detail_page_version": 0,
+                "device_level": 3,
+                "disable_digg_stat": false,
+                "disable_video_relate_book": false,
+                "need_all_video_definition": true,
+                "need_mp4_align": false,
+                "use_os_player": false,
+                "use_server_dns": false,
+                "video_platform": 1024
+              },
+              "mixed_video_id_map": {
+                "1": [
+                  "100"
+                ]
+              }
+            },
+            null,
+            true
+          ]
+        ]
+      ],
+      "error": {
+        "type": "VmDead",
+        "message": "synthetic single failure"
+      },
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "cert_error",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 1,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [],
+      "cache_ttls": [],
+      "messages": [],
+      "source_strikes": [],
+      "error": {
+        "type": "CertError",
+        "message": "synthetic certificate failure"
+      },
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "expired",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 2,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "signer_unavailable",
+      "function": "get_video_tracks",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 2,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "scenario": "signer_unavailable",
+      "function": "get_video_urls",
+      "source_sha256": "1e31f90cb656dec89b40f3460e46f668520bc3a9ea281f5b3a506ee8de148cc2",
+      "first_call_count": 2,
+      "repeat_call_count": null,
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100,101,102,103,104",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        },
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "105",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 2
+        }
+      ],
+      "result_vids": [
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105"
+      ],
+      "cache_ttls": [
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0,
+        3000.0
+      ],
+      "messages": [],
+      "source_strikes": [],
+      "error": null,
+      "version": "1.0.0.77"
+    },
+    {
+      "version": "1.0.0.77",
+      "scenario": "health_probe",
+      "calls": [
+        {
+          "method": "GET",
+          "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+          "extra_query": {
+            "video_id": "100",
+            "video_platform": "1024",
+            "need_all_video_definition": "true",
+            "device_level": "3",
+            "detail_page_version": "0"
+          },
+          "signed": false,
+          "max_retries": 1,
+          "timeout": 15
+        }
+      ]
+    }
+  ]
+}

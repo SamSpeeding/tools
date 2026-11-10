@@ -1,0 +1,39 @@
+{
+  "route_count": 33,
+  "groups": {
+    "红果 App API": 8,
+    "公开网站备用与预览": 7,
+    "分享链接解析": 2,
+    "第三方 Catalog": 2,
+    "许可服务（Supabase RPC 形状）": 5,
+    "支付与账单": 4,
+    "版本更新": 2,
+    "可配置签名辅助服务": 2,
+    "媒体传输（非业务 JSON API）": 1
+  },
+  "official_paths_static": [
+    "/novel/player/multi_video_detail/v1/",
+    "/novel/player/multi_video_model/v1/",
+    "/reading/bookapi/bookmall/cell/change/v",
+    "/reading/bookapi/plan/v",
+    "/reading/bookapi/search/suggest/v",
+    "/reading/bookapi/search/tab/v",
+    "/reading/distribution/category/landpage/v",
+    "/reading/user/subscribe/list/v0"
+  ],
+  "official_paths_documented": [
+    "/novel/player/multi_video_detail/v1/",
+    "/novel/player/multi_video_model/v1/",
+    "/reading/bookapi/bookmall/cell/change/v",
+    "/reading/bookapi/plan/v",
+    "/reading/bookapi/search/suggest/v",
+    "/reading/bookapi/search/tab/v",
+    "/reading/distribution/category/landpage/v",
+    "/reading/user/subscribe/list/v0"
+  ],
+  "fixed_official_path_difference": 0,
+  "evidence_locations_checked": 80,
+  "issues": [],
+  "credential_values_excluded": true,
+  "new_network_calls": false
+}

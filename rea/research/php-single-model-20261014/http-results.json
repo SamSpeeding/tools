@@ -1,0 +1,133 @@
+[
+  {
+    "kind": "model",
+    "vid": "7689903116275174462",
+    "status": 200,
+    "tracks": 5,
+    "seconds": 0.214
+  },
+  {
+    "kind": "model",
+    "vid": "7689903030619081790",
+    "status": 200,
+    "tracks": 5,
+    "seconds": 0.217
+  },
+  {
+    "kind": "model",
+    "vid": "7689903075380694078",
+    "status": 200,
+    "tracks": 5,
+    "seconds": 0.173
+  },
+  {
+    "kind": "model",
+    "vid": "7694949024280874009",
+    "status": 200,
+    "tracks": 5,
+    "seconds": 0.17
+  },
+  {
+    "kind": "model",
+    "vid": "7689903116275174462",
+    "status": 200,
+    "tracks": 5,
+    "seconds": 0.184
+  },
+  {
+    "kind": "full_download",
+    "bytes": 4507067,
+    "upstream_bytes_before_body": 262144,
+    "sha256": "d41be261a5b7c3e7c2c06c4046e354c0bbc8a7f7b1ead1348f2af4d617b5bc96",
+    "seconds": 3.39,
+    "decode": "all_video_audio_passed",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "codec_type": "video"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio"
+        }
+      ],
+      "format": {
+        "duration": "62.415011",
+        "size": "4507067"
+      }
+    }
+  },
+  {
+    "kind": "range",
+    "range": "bytes=0-1",
+    "bytes": 2,
+    "matches_full": true
+  },
+  {
+    "kind": "range",
+    "range": "bytes=12345-42345",
+    "bytes": 30001,
+    "matches_full": true
+  },
+  {
+    "kind": "range",
+    "range": "bytes=262137-524300",
+    "bytes": 262164,
+    "matches_full": true
+  },
+  {
+    "kind": "range",
+    "range": "bytes=-4096",
+    "bytes": 4096,
+    "matches_full": true
+  },
+  {
+    "kind": "range",
+    "range": "bytes=4000000-",
+    "bytes": 507067,
+    "matches_full": true
+  },
+  {
+    "kind": "head",
+    "status": 200,
+    "content_length": 4507067
+  },
+  {
+    "kind": "invalid_range",
+    "range": "bytes=0-1,10-20",
+    "status": 416
+  },
+  {
+    "kind": "invalid_range",
+    "range": "bytes=4507067-",
+    "status": 416
+  },
+  {
+    "kind": "invalid_range",
+    "range": "bytes=-0",
+    "status": 416
+  },
+  {
+    "kind": "invalid_input",
+    "status": 400
+  },
+  {
+    "kind": "invalid_input",
+    "status": 400
+  },
+  {
+    "kind": "invalid_input",
+    "status": 400
+  },
+  {
+    "kind": "invalid_input",
+    "status": 400
+  },
+  {
+    "kind": "method",
+    "status": 405
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "changed_existing_files": [
+    "HongguoPHP/video.php",
+    "HongguoPHP/play.php"
+  ],
+  "new_php_files": [
+    "HongguoPHP/common.php",
+    "HongguoPHP/api.php",
+    "HongguoPHP/index.php"
+  ],
+  "other_baseline_files_unchanged": 352,
+  "crypto_device_profile_extracted_byte_identically": true,
+  "crypto_profile_sha256": "69592a5be0a4493419656d66eae209bd1dc6e2cd63a8e16a2c3a28d347ea1d4e",
+  "offline_crypto_media_checks": 124,
+  "captured_request_replays": 46,
+  "http_checks": 59,
+  "index_default_links": 33,
+  "full_mp4_ffmpeg_decode_passed": true,
+  "server_mp4_files": [],
+  "client_capture_removed": true,
+  "preview_url": "http://127.0.0.1:8080/",
+  "browser_note": "Documentation layout inspected and screenshot saved. In-app browser direct JSON navigation returned ERR_BLOCKED_BY_CLIENT; all default JSON links verified over HTTP."
+}

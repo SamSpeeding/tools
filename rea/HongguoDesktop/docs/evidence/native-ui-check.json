@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-13",
+  "app": "release/HongguoDesktop.app",
+  "finder_double_click": "passed",
+  "live_category_filters_and_posters": "passed",
+  "latest_load_more": {
+    "first": 16,
+    "after_more": 32
+  },
+  "second_page_detail": {
+    "series_id": "7694937113879383064",
+    "episodes": 79
+  },
+  "back_preserves_loaded_list": 32,
+  "cmd_q_and_window_close_pending_task_confirmation": "passed",
+  "confirmed_exit_cleans_python_java": "passed",
+  "platform_video_download": {
+    "status": "passed",
+    "interaction": "Retried known test episode in final packaged app; AX shows 已完成 and 打开文件夹",
+    "file": "/Users/tt/Downloads/HongguoDesktop/坠崖捡个参娃娃_7689863296106646590/第002集_1080p.mp4",
+    "quality": "1080p",
+    "task_status": "completed",
+    "mac_publish": "renamex_np RENAME_EXCL",
+    "validation": "Worker marks completed only after download hash, decryption, full FFmpeg decode and publishing. Independent re-reading of Downloads from terminal stalled and was cancelled; native-file hash is not separately asserted here."
+  },
+  "progress_ui": {
+    "status": "passed",
+    "app": "release/HongguoDesktop.app",
+    "case": "Retry existing failed job for 我救的山鸡，竟是三足金乌 episode 1, 1080p",
+    "observed_states": [
+      "获取视频",
+      "解密中",
+      "已完成"
+    ],
+    "stable_ax_elements": {
+      "drawer": 70,
+      "task_card": 88,
+      "status_text": 92,
+      "action_button": 93
+    },
+    "result": "Panel and existing cards retained across state updates; action changes from cancel to open folder. Download completed. Fine-grained percentage stability separately covered by test_progress_ui.mjs."
+  },
+  "model_api_fallback": {
+    "status": "completed",
+    "series_id": "7689863296106646590",
+    "index": 3,
+    "quality": "1080p",
+    "file": "/Users/tt/Downloads/HongguoDesktop/坠崖捡个参娃娃_7689863296106646590/第003集_1080p.mp4",
+    "model_api": "video_model",
+    "model_api_state": "selected",
+    "model_fallback": true,
+    "model_fallback_reason": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+    "visible_states": [
+      "获取视频 multi_video_model · 请求中",
+      "校验音视频 video_model · 已回退",
+      "已完成 video_model · 已回退"
+    ],
+    "stable_task_ax_node": 164,
+    "stable_status_ax_node": 168,
+    "note": "Final packaged app; source metadata persists in tasks.json. Downloads sidecar not independently reopened from terminal."
+  },
+  "streaming_playback": {
+    "date": "2026-10-13",
+    "status": "passed",
+    "app": "release/HongguoDesktop.app",
+    "series_id": "7689863296106646590",
+    "title": "坠崖捡个参娃娃",
+    "episode_2_1080p": {
+      "visible_video": true,
+      "elapsed_observed_seconds": [
+        4,
+        9,
+        20
+      ],
+      "paused": true,
+      "seek_via_native_progress_control_seconds": 31,
+      "resumed_after_seek": true,
+      "duration_seconds_displayed": 62
+    },
+    "next_episode_3_1080p": {
+      "elapsed_observed_seconds": [
+        9,
+        10
+      ],
+      "duration_seconds_displayed": 50
+    },
+    "switch_episode_3_to_720p": {
+      "visible_video": true,
+      "elapsed_observed_seconds": 12
+    },
+    "visible_model_source": "video_model · 已回退",
+    "close_returns_to_detail": true,
+    "active_download_badge_before_after": [
+      0,
+      0
+    ],
+    "closed_session_head_status": {
+      "episode_2": 404,
+      "episode_3_1080p": 404,
+      "episode_3_720p": 404
+    },
+    "method": "CUA native accessibility tree and screenshots; localhost HEAD after closing",
+    "scope": "Visible frames and time progression, pause, seek, episode and quality changes. Full audio/video decode separately verified by playback-smoke.json; no claim of a manual audio listening test."
+  },
+  "playback_seek_flicker_fix": {
+    "date": "2026-10-14",
+    "status": "passed",
+    "app": "release/HongguoDesktop.app",
+    "series_id": "7689863296106646590",
+    "index": 2,
+    "quality": "1080p",
+    "paused_before_seek_seconds": 42,
+    "native_progress_click_seconds": 31,
+    "resumed_elapsed_seconds": 48,
+    "startup_overlay_after_seek": false,
+    "video_container_and_url_unchanged": true,
+    "player_panel_stable": true,
+    "final_screen": "detail, player closed, active download count 0",
+    "scope": "CUA native progress click and before/after screenshots; rapid loading-state transitions independently covered by production-handler regression tests.",
+    "ui_tests": "8 passed; playback-seek-ui-tests.log",
+    "build": "TypeScript, Vite, Rust release, macOS app passed; playback-seek-build.log",
+    "frontend_sha256": "489354266245e88ac8ea02ebe08c0513729c10a27c3ebcb99f20d2d191883e43"
+  }
+}

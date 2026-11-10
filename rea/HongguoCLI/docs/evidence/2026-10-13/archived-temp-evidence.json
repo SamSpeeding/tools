@@ -1,0 +1,27 @@
+[
+  {
+    "source": "/private/tmp/hongguo-pyc-audit-odbcj2pb/inventory.json",
+    "destination": "HongguoCLI/docs/evidence/2026-10-13/pyc-audit/inventory.json",
+    "sha256": "8a7d62d5b0e9f550125f721cb2a7684042464c0270e74fbad9e2d7da30a31999"
+  },
+  {
+    "source": "/private/tmp/hongguo-pyc-audit-odbcj2pb/unwrap_spade.dis.txt",
+    "destination": "HongguoCLI/docs/evidence/2026-10-13/pyc-audit/unwrap_spade.dis.txt",
+    "sha256": "3baa1cde91be600cf7743700f97d5f44a0a3246a11f2d7acbc33dc96eff95cd6"
+  },
+  {
+    "source": "/private/tmp/hongguo-pyc-audit-odbcj2pb/oracle.dis.txt",
+    "destination": "HongguoCLI/docs/evidence/2026-10-13/pyc-audit/oracle.dis.txt",
+    "sha256": "07ca657e99eb8fd0101cdf62a92bef54379d5ac9b8bc9ec49ff3621edd9d616a"
+  },
+  {
+    "source": "/private/tmp/hongguo-pyc-audit-odbcj2pb/extract_keybox_pairs.dis.txt",
+    "destination": "HongguoCLI/docs/evidence/2026-10-13/pyc-audit/extract_keybox_pairs.dis.txt",
+    "sha256": "52851a15ee9f9350ca3f1ecb9c536721d5d42ab7c96286944d980d9b57ea1af1"
+  },
+  {
+    "source": "/private/tmp/hongguo-pyc-audit-odbcj2pb/decutil.dis.txt",
+    "destination": "HongguoCLI/docs/evidence/2026-10-13/pyc-audit/decutil.dis.txt",
+    "sha256": "0544f21320bf6762e9249d74f29bb779ee181dcd497681d17af7212a79c4dae8"
+  }
+]

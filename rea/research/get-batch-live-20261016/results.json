@@ -1,0 +1,2520 @@
+{
+  "started": "2026-10-16T17:23:09+08:00",
+  "scope": "32 direct model requests, 3 rounds, 8 distinct existing episode IDs from 2 series",
+  "signature_policy": "current = unchanged JAR other headers plus production local H/M; jar_only = unchanged original JAR",
+  "transport": "production curl_cffi chrome; same default host; fixed devices.json[0]",
+  "no_retries_or_fallback": true,
+  "media_requests": 0,
+  "round_gap_seconds": 45,
+  "per_request_gap_seconds": 2.5,
+  "results": [
+    {
+      "id": "01-r1-current-a_single-get",
+      "round": 1,
+      "policy": "current",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:23:13+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "95373b8f8a0a056b630c71b69bf5850dbd33432abb9ab0e28b46371e947d80a3",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164193
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.304,
+      "response_bytes": 23530,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:23:13+08:00"
+    },
+    {
+      "id": "02-r1-current-a_single-post",
+      "round": 1,
+      "policy": "current",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:23:16+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "6fd980ad8ebcc60d049cb5ac2c6d5dfabe07e99506b0aa9cbe4301d514721660",
+      "body_md5": "1764455d0b94fce3eb98dd81516da34e",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164196
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.149,
+      "response_bytes": 25416,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:23:16+08:00"
+    },
+    {
+      "id": "03-r1-current-a_five-post",
+      "round": 1,
+      "policy": "current",
+      "group": "a_five",
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:23:19+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "50e1bf27f3ab0128e4f73a4531287cee920fee9eba1c0474e98acecae85430e6",
+      "body_md5": "fc6d165e8dec410b4d7a78c218eeedf1",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903130258983998",
+        "7689903137095699518"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164199
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164199
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164199
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164199
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164199
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.206,
+      "response_bytes": 125452,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:23:19+08:00"
+    },
+    {
+      "id": "04-r1-current-a_five-get",
+      "round": 1,
+      "policy": "current",
+      "group": "a_five",
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:23:22+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "9334e0250dde96e9ec19879f2898b6bc7a963831016abc3847f72078ae678705",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903137095699518",
+        "7689903130258983998",
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164202
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164202
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164202
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164202
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164202
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.294,
+      "response_bytes": 116797,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:23:22+08:00"
+    },
+    {
+      "id": "05-r1-current-cross_five-get",
+      "round": 1,
+      "policy": "current",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:23:25+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "cd751951c1292acd9d0e71b5e7049077e25f6e85742409aa7b71b36262d3d207",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949024280874009",
+        "7694949018303990809",
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164206
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164206
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164206
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164206
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164206
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.398,
+      "response_bytes": 113800,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:23:26+08:00"
+    },
+    {
+      "id": "06-r1-current-cross_five-post",
+      "round": 1,
+      "policy": "current",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:23:28+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "4ebb77202e95c83cca10a042ae96d925cfd8fcaa751b0eaf6d8d6c57f429d0fa",
+      "body_md5": "93822843a437cdb9d53c5e26b70ac7bc",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903130258983998",
+        "7694949018303990809",
+        "7694949024280874009"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164209
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164209
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164209
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164209
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164209
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.235,
+      "response_bytes": 122514,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:23:29+08:00"
+    },
+    {
+      "id": "07-r1-current-b_single-post",
+      "round": 1,
+      "policy": "current",
+      "group": "b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:23:33+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "6575b5a5bdd0c21dbd8dd62fb1fae238243bd407d6bb74e9c34053b73a3b2e56",
+      "body_md5": "9b7b5ef5a6fbe1ae048367306ca3c008",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164213
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.148,
+      "response_bytes": 23129,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:23:33+08:00"
+    },
+    {
+      "id": "08-r1-current-b_single-get",
+      "round": 1,
+      "policy": "current",
+      "group": "b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:23:37+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "a825ff9c29e4dc709acf6cc24b22fea2996dac0ba840f661f53479068622a3e9",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164217
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.23,
+      "response_bytes": 21238,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:23:37+08:00"
+    },
+    {
+      "id": "09-r1-jar_only-a_single-post",
+      "round": 1,
+      "policy": "jar_only",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:23:40+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "5f1f7b17764ed01aefce75e3d15dc2331e25ad70b6dc359d2322bd094c863697",
+      "body_md5": "1764455d0b94fce3eb98dd81516da34e",
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903030619081790": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.073,
+      "response_bytes": 125,
+      "codes": {
+        "Code": 110001
+      },
+      "base_resp": {
+        "StatusMessage": "unknown error",
+        "StatusCode": 110001
+      },
+      "message": "未知异常",
+      "finished": "2026-10-16T17:23:40+08:00",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)"
+    },
+    {
+      "id": "10-r1-jar_only-a_single-get",
+      "round": 1,
+      "policy": "jar_only",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:23:43+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "6d571e2820070abf0379b6e43b2c24f707f679bf8435b46bff92504d47132899",
+      "body_md5": null,
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164223
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.202,
+      "response_bytes": 23531,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:23:43+08:00"
+    },
+    {
+      "id": "11-r1-jar_only-cross_five-post",
+      "round": 1,
+      "policy": "jar_only",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:23:46+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "aece69ef88210bece389058d67e450493536b8cd9ba69736162f90cd88ac0ee7",
+      "body_md5": "93822843a437cdb9d53c5e26b70ac7bc",
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903116275174462": {
+          "error": "missing requested VID"
+        },
+        "7689903082863348798": {
+          "error": "missing requested VID"
+        },
+        "7689903130258983998": {
+          "error": "missing requested VID"
+        },
+        "7694949024280874009": {
+          "error": "missing requested VID"
+        },
+        "7694949018303990809": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.074,
+      "response_bytes": 125,
+      "codes": {
+        "Code": 110001
+      },
+      "base_resp": {
+        "StatusMessage": "unknown error",
+        "StatusCode": 110001
+      },
+      "message": "未知异常",
+      "finished": "2026-10-16T17:23:46+08:00",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)"
+    },
+    {
+      "id": "12-r1-jar_only-cross_five-get",
+      "round": 1,
+      "policy": "jar_only",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:23:49+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "5400ca39ce8d9af78e1dab28dbca8857175e37e13dd8e4298b978f1cf14e3604",
+      "body_md5": null,
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809",
+        "7689903116275174462"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164229
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164229
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164229
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164229
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164229
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.401,
+      "response_bytes": 114107,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:23:49+08:00"
+    },
+    {
+      "id": "13-r2-current-a_single-post",
+      "round": 2,
+      "policy": "current",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:24:37+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "d4a9698ba9a0545eeb331c557793bbaad035b033f0442b47d65ecd0d34b4bcf9",
+      "body_md5": "1764455d0b94fce3eb98dd81516da34e",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164277
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.144,
+      "response_bytes": 25398,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:24:37+08:00"
+    },
+    {
+      "id": "14-r2-current-a_single-get",
+      "round": 2,
+      "policy": "current",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:24:40+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "c24e72442fa4665ff250d80c1e8b293a4d7be541ac1855162ca11ccd3f3ca4dc",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164280
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.179,
+      "response_bytes": 23525,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:24:40+08:00"
+    },
+    {
+      "id": "15-r2-current-a_five-get",
+      "round": 2,
+      "policy": "current",
+      "group": "a_five",
+      "vids": [
+        "7689903130258983998",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:24:43+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "68bfa0f09e90b05f178c5e82a02353fa136c6a74ef3b1457e39c1c7b97b09c88",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903130258983998",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164283
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164283
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164283
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164283
+        },
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164283
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.294,
+      "response_bytes": 116717,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:24:43+08:00"
+    },
+    {
+      "id": "16-r2-current-a_five-post",
+      "round": 2,
+      "policy": "current",
+      "group": "a_five",
+      "vids": [
+        "7689903130258983998",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:24:46+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "757b07900bac39432bddf686347df5337b82f9a11452b6550e04c86c97a8412f",
+      "body_md5": "f2671762e172c20d24af009a055ec6fe",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903130258983998",
+        "7689903137095699518"
+      ],
+      "models": {
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164286
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164286
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164286
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164286
+        },
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164286
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.253,
+      "response_bytes": 125549,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:24:46+08:00"
+    },
+    {
+      "id": "17-r2-current-cross_five-post",
+      "round": 2,
+      "policy": "current",
+      "group": "cross_five",
+      "vids": [
+        "7694949018303990809",
+        "7694949024280874009",
+        "7689903130258983998",
+        "7689903082863348798",
+        "7689903116275174462"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:24:49+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "7d6df2b6a503fc7473241e4c548faf298f23ea99a2c1a447a04b38d06e6b98ae",
+      "body_md5": "df9ddad140dbfbe763161fae6eaec718",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903130258983998",
+        "7694949018303990809",
+        "7694949024280874009"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164289
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164289
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164289
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164289
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164289
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.233,
+      "response_bytes": 122431,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:24:49+08:00"
+    },
+    {
+      "id": "18-r2-current-cross_five-get",
+      "round": 2,
+      "policy": "current",
+      "group": "cross_five",
+      "vids": [
+        "7694949018303990809",
+        "7694949024280874009",
+        "7689903130258983998",
+        "7689903082863348798",
+        "7689903116275174462"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:24:52+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "6b453208488edafeb76f1381638e5c735ffca0c9e3f6abe0beed27f9638acfdc",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949024280874009",
+        "7689903130258983998",
+        "7689903082863348798",
+        "7689903116275174462",
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164292
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164292
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164292
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164292
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164292
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.328,
+      "response_bytes": 114064,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:24:52+08:00"
+    },
+    {
+      "id": "19-r2-current-b_single-get",
+      "round": 2,
+      "policy": "current",
+      "group": "b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:24:55+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "a822a56b4abd56df4fcedece04d5ac92e42f7881eab82fa6749f6fdcb911235a",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164295
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.25,
+      "response_bytes": 21296,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:24:55+08:00"
+    },
+    {
+      "id": "20-r2-current-b_single-post",
+      "round": 2,
+      "policy": "current",
+      "group": "b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:24:58+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "ef1e88aefef658160b835e13fef48ea5febbc4f5c8e9f1b9dc29ac831646e7ca",
+      "body_md5": "9b7b5ef5a6fbe1ae048367306ca3c008",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164298
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.14,
+      "response_bytes": 23076,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:24:58+08:00"
+    },
+    {
+      "id": "21-r3-current-a_single-get",
+      "round": 3,
+      "policy": "current",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:25:46+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "1ac58a23bce75daf12c82033c6e0a88c731205166cff26b80a7bdc950e9bc1aa",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164346
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.19,
+      "response_bytes": 23503,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:25:46+08:00"
+    },
+    {
+      "id": "22-r3-current-a_single-post",
+      "round": 3,
+      "policy": "current",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:25:49+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "a1f4a86c97157e007ebbacb7cb300a2d6e45f9709c8c65cde748dc7a09f5d185",
+      "body_md5": "1764455d0b94fce3eb98dd81516da34e",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164349
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.17,
+      "response_bytes": 25353,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:25:49+08:00"
+    },
+    {
+      "id": "23-r3-current-a_five-post",
+      "round": 3,
+      "policy": "current",
+      "group": "a_five",
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:25:52+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "d5c693c873b8b1e2eb88f65567cf692cdcedda61fdb62ea6564ff287d2038ef7",
+      "body_md5": "fc6d165e8dec410b4d7a78c218eeedf1",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903130258983998",
+        "7689903137095699518"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164352
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164352
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164352
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164352
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164352
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.225,
+      "response_bytes": 126466,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:25:52+08:00"
+    },
+    {
+      "id": "24-r3-current-a_five-get",
+      "round": 3,
+      "policy": "current",
+      "group": "a_five",
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:25:55+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "89802b48e98d936b9f0e336b334f15165b08c021815c4eb70ba46ae2bad1602d",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164355
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164355
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164355
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164355
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164355
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.225,
+      "response_bytes": 116819,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:25:55+08:00"
+    },
+    {
+      "id": "25-r3-current-cross_five-get",
+      "round": 3,
+      "policy": "current",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:25:58+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "157c14651b1bd4d99b9d8990bfcc2ba7ee1e5148fe0895aaae0849eda4278a34",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809",
+        "7689903116275174462"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164358
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164358
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164358
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164358
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164358
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.367,
+      "response_bytes": 113890,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:25:58+08:00"
+    },
+    {
+      "id": "26-r3-current-cross_five-post",
+      "round": 3,
+      "policy": "current",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:26:01+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "d08fa34c7b4244cc501de7b5a4add610c1e163a7f31e50f754074bb717218dbb",
+      "body_md5": "93822843a437cdb9d53c5e26b70ac7bc",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903082863348798",
+        "7689903116275174462",
+        "7689903130258983998",
+        "7694949018303990809",
+        "7694949024280874009"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164361
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164361
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164361
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164361
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164361
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.203,
+      "response_bytes": 122621,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:26:01+08:00"
+    },
+    {
+      "id": "27-r3-current-b_single-post",
+      "round": 3,
+      "policy": "current",
+      "group": "b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:26:04+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "8c6d90229a1b11eeacd3e4aa7c45e9cb19f3f9aa6a837e7e28e42dac0ba6e931",
+      "body_md5": "9b7b5ef5a6fbe1ae048367306ca3c008",
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164364
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.147,
+      "response_bytes": 23210,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T17:26:04+08:00"
+    },
+    {
+      "id": "28-r3-current-b_single-get",
+      "round": 3,
+      "policy": "current",
+      "group": "b_single",
+      "vids": [
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:26:07+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "b92b572bb9d7a67d8df137984453cf7f17b1ed749112208aff306a3bcd756ae0",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164367
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.226,
+      "response_bytes": 21236,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:26:07+08:00"
+    },
+    {
+      "id": "29-r3-jar_only-a_single-get",
+      "round": 3,
+      "policy": "jar_only",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:26:12+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "b6c14745e750e0974afdf172de8492bf1ed7475c61d5bd5cff7549e73d18ea83",
+      "body_md5": null,
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164372
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.166,
+      "response_bytes": 23505,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:26:12+08:00"
+    },
+    {
+      "id": "30-r3-jar_only-a_single-post",
+      "round": 3,
+      "policy": "jar_only",
+      "group": "a_single",
+      "vids": [
+        "7689903030619081790"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:26:15+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "220aa569d758f3014344c94d81ea4bc7e21559399f5fd25a1172d93f1ce6dc6d",
+      "body_md5": "1764455d0b94fce3eb98dd81516da34e",
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903030619081790": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.066,
+      "response_bytes": 125,
+      "codes": {
+        "Code": 110001
+      },
+      "base_resp": {
+        "StatusMessage": "unknown error",
+        "StatusCode": 110001
+      },
+      "message": "未知异常",
+      "finished": "2026-10-16T17:26:15+08:00",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)"
+    },
+    {
+      "id": "31-r3-jar_only-cross_five-get",
+      "round": 3,
+      "policy": "jar_only",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "new_get",
+      "started": "2026-10-16T17:26:18+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "9de1993839b3cf12ba720f818f79ab931509e2bd90a54d87246667ebce6e7fdf",
+      "body_md5": null,
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164378
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164378
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164378
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164378
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "usable_urls": true,
+          "status": 10,
+          "expire_time": 1792164378
+        }
+      },
+      "success": true,
+      "http_status": 200,
+      "seconds": 0.761,
+      "response_bytes": 113842,
+      "codes": {
+        "code": 0
+      },
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T17:26:18+08:00"
+    },
+    {
+      "id": "32-r3-jar_only-cross_five-post",
+      "round": 3,
+      "policy": "jar_only",
+      "group": "cross_five",
+      "vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "endpoint": "old_post",
+      "started": "2026-10-16T17:26:21+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/novel/player/multi_video_model/v1/",
+      "method": "POST",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "a9adf16f1f04ed3964e6a44d959c09689857838ddb2057cf3d951882a6057ddb",
+      "body_md5": "93822843a437cdb9d53c5e26b70ac7bc",
+      "medusa_version": 4,
+      "only_hm_replaced": false,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903116275174462": {
+          "error": "missing requested VID"
+        },
+        "7689903082863348798": {
+          "error": "missing requested VID"
+        },
+        "7689903130258983998": {
+          "error": "missing requested VID"
+        },
+        "7694949024280874009": {
+          "error": "missing requested VID"
+        },
+        "7694949018303990809": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.119,
+      "response_bytes": 125,
+      "codes": {
+        "Code": 110001
+      },
+      "base_resp": {
+        "StatusMessage": "unknown error",
+        "StatusCode": 110001
+      },
+      "message": "未知异常",
+      "finished": "2026-10-16T17:26:21+08:00",
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)"
+    }
+  ],
+  "finished": "2026-10-16T17:26:22+08:00",
+  "preservation": {
+    "checked_files": 354,
+    "changed": [],
+    "unchanged": true
+  },
+  "summary": {
+    "current/new_get": {
+      "total": 12,
+      "success": 12,
+      "requested_models": 36,
+      "valid_models": 36
+    },
+    "current/old_post": {
+      "total": 12,
+      "success": 12,
+      "requested_models": 36,
+      "valid_models": 36
+    },
+    "jar_only/new_get": {
+      "total": 4,
+      "success": 4,
+      "requested_models": 12,
+      "valid_models": 12
+    },
+    "jar_only/old_post": {
+      "total": 4,
+      "success": 0,
+      "requested_models": 12,
+      "valid_models": 0
+    }
+  }
+}

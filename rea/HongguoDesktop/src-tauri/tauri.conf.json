@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "HongguoDesktop",
+  "version": "0.1.0",
+  "identifier": "local.hongguo.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "红果 · 找剧",
+        "width": 1180,
+        "height": 820,
+        "minWidth": 900,
+        "minHeight": 640,
+        "backgroundColor": "#f6f5f2",
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' data: https:; media-src http://127.0.0.1:*; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["app"],
+    "category": "Entertainment",
+    "shortDescription": "发现好故事，保存每一集。",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "../backend/": "backend/",
+      "../config/": "config/",
+      "../vendor/sign/": "vendor/sign/",
+      "../vendor/capture/": "vendor/capture/",
+      "../vendor/manifest.json": "vendor/manifest.json",
+      "../vendor/decrypt/decutil.py": "vendor/decrypt/decutil.py",
+      "../vendor/decrypt/extract_keybox_pairs.py": "vendor/decrypt/extract_keybox_pairs.py",
+      "../vendor/decrypt/oracle.py": "vendor/decrypt/oracle.py",
+      "../vendor/decrypt/unwrap_spade.py": "vendor/decrypt/unwrap_spade.py",
+      "../.runtime/": "runtime/"
+    },
+    "macOS": { "minimumSystemVersion": "13.0" }
+  }
+}

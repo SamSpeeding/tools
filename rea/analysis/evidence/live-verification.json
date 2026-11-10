@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-12T10:37:50.322135+00:00",
+  "export_file": "/Users/tt/Desktop/rea/outputs/逆袭111集.json",
+  "status": "complete",
+  "episodes": 111,
+  "unique_vids": 111,
+  "unique_primary_urls": 111,
+  "tracks": 555,
+  "samples": [
+    {
+      "episode_index": 1,
+      "http_status": 206,
+      "content_type": "video/mp4",
+      "content_range": "bytes 0-127/11542952",
+      "bytes_read": 128,
+      "prefix_hex": "0000001c6674797069736f6d00000200"
+    },
+    {
+      "episode_index": 56,
+      "http_status": 206,
+      "content_type": "video/mp4",
+      "content_range": "bytes 0-127/6773534",
+      "bytes_read": 128,
+      "prefix_hex": "0000001c6674797069736f6d00000200"
+    },
+    {
+      "episode_index": 111,
+      "http_status": 206,
+      "content_type": "video/mp4",
+      "content_range": "bytes 0-127/5020129",
+      "bytes_read": 128,
+      "prefix_hex": "0000001c6674797069736f6d00000200"
+    }
+  ]
+}

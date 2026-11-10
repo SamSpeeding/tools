@@ -1,0 +1,667 @@
+  0           0 RESUME                   0
+
+  2           2 NOP
+
+ 15           4 LOAD_CONST               0 (0)
+              6 LOAD_CONST               1 (None)
+              8 IMPORT_NAME              0 (base64)
+             10 STORE_NAME               0 (base64)
+
+ 18          12 LOAD_CONST               2 (<code object _popcount at 0x10ad4fee0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 18>)
+             14 MAKE_FUNCTION            0
+             16 STORE_NAME               1 (_popcount)
+
+ 22          18 LOAD_CONST               3 (<code object _s8 at 0x10aceea30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 22>)
+             20 MAKE_FUNCTION            0
+             22 STORE_NAME               2 (_s8)
+
+ 27          24 LOAD_CONST               4 (<code object _strncmp0 at 0x10ac259b0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 27>)
+             26 MAKE_FUNCTION            0
+             28 STORE_NAME               3 (_strncmp0)
+
+ 38          30 LOAD_CONST              13 ((0,))
+             32 LOAD_CONST               5 (<code object unwrap_v1 at 0x9c5194a00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 38>)
+             34 MAKE_FUNCTION            1 (defaults)
+             36 STORE_NAME               4 (unwrap_v1)
+
+ 90          38 LOAD_CONST              13 ((0,))
+             40 LOAD_CONST               6 (<code object spade_to_key at 0x10acf5d30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 90>)
+             42 MAKE_FUNCTION            1 (defaults)
+             44 STORE_NAME               5 (spade_to_key)
+
+ 96          46 BUILD_LIST               0
+             48 LOAD_CONST               7 ((('93bc1df253ba1bf7618b19c448b806f64d810afc45b715fe5eb925f26cbf12f541ba098282', '287216bfa89e662a0f748120c305e199'), ('a1bc2ff164b91df04dbf00f17dba00f47cbb35c27b922aec67a628eb52972fdc7ea036a7a7', 'd742b28967e4e6c92b699f4375add27f'), ('9cbc12fb588721cd69b739f977b70be7429c08e074990ec847843dcc738638cf76b33ebcbc', '113fb30d9767d80e3edbb905b052204f'), ('a3bc2df760ba2bc27b8b34c04a8907f557be19f249be35c748ba03f64fbc1ff161ba29a2a2', 'b5674a8384f25d757585dadf343274d5'), ('9cbc12f45aba11f76fb814f444bd15f459b225cb5e8c15dd459a0fd170ac0ad358aa108b8b', '121846f9d5829130ebc0397023feaf8c')))
+             50 LIST_EXTEND              1
+             52 STORE_NAME               6 (_TRUTH)
+
+105          54 LOAD_CONST               8 (<code object _selftest at 0x10ac3b690, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 105>)
+             56 MAKE_FUNCTION            0
+             58 STORE_NAME               7 (_selftest)
+
+116          60 LOAD_NAME                8 (__name__)
+             62 LOAD_CONST               9 ('__main__')
+             64 COMPARE_OP               2 (==)
+             70 POP_JUMP_FORWARD_IF_FALSE   176 (to 424)
+
+117          72 LOAD_CONST               0 (0)
+             74 LOAD_CONST               1 (None)
+             76 IMPORT_NAME              9 (sys)
+             78 STORE_NAME               9 (sys)
+
+118          80 PUSH_NULL
+             82 LOAD_NAME               10 (len)
+             84 LOAD_NAME                9 (sys)
+             86 LOAD_ATTR               11 (argv)
+             96 PRECALL                  1
+            100 CALL                     1
+            110 LOAD_CONST              10 (1)
+            112 COMPARE_OP               4 (>)
+            118 POP_JUMP_FORWARD_IF_FALSE   140 (to 400)
+
+119         120 LOAD_NAME                9 (sys)
+            122 LOAD_ATTR               11 (argv)
+            132 LOAD_CONST              10 (1)
+            134 BINARY_SUBSCR
+            144 STORE_NAME              12 (sp)
+
+120         146 PUSH_NULL
+            148 LOAD_NAME               10 (len)
+            150 LOAD_NAME                9 (sys)
+            152 LOAD_ATTR               11 (argv)
+            162 PRECALL                  1
+            166 CALL                     1
+            176 LOAD_CONST              11 (2)
+            178 COMPARE_OP               4 (>)
+            184 POP_JUMP_FORWARD_IF_FALSE    22 (to 230)
+            186 PUSH_NULL
+            188 LOAD_NAME               13 (int)
+            190 LOAD_NAME                9 (sys)
+            192 LOAD_ATTR               11 (argv)
+            202 LOAD_CONST              11 (2)
+            204 BINARY_SUBSCR
+            214 PRECALL                  1
+            218 CALL                     1
+            228 JUMP_FORWARD             1 (to 232)
+        >>  230 LOAD_CONST               0 (0)
+        >>  232 STORE_NAME              14 (flag)
+
+122         234 NOP
+
+123         236 PUSH_NULL
+            238 LOAD_NAME               15 (all)
+            240 LOAD_CONST              12 (<code object <genexpr> at 0x10acee790, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 123>)
+            242 MAKE_FUNCTION            0
+            244 LOAD_NAME               12 (sp)
+            246 GET_ITER
+            248 PRECALL                  0
+            252 CALL                     0
+            262 PRECALL                  1
+            266 CALL                     1
+            276 POP_JUMP_FORWARD_IF_TRUE    12 (to 302)
+            278 PUSH_NULL
+            280 LOAD_NAME                5 (spade_to_key)
+            282 LOAD_NAME               12 (sp)
+            284 LOAD_NAME               14 (flag)
+            286 PRECALL                  2
+            290 CALL                     2
+            300 JUMP_FORWARD            11 (to 324)
+        >>  302 PUSH_NULL
+            304 LOAD_NAME                4 (unwrap_v1)
+            306 LOAD_NAME               12 (sp)
+            308 LOAD_NAME               14 (flag)
+            310 PRECALL                  2
+            314 CALL                     2
+        >>  324 STORE_NAME              16 (key)
+            326 JUMP_FORWARD            23 (to 374)
+        >>  328 PUSH_EXC_INFO
+
+124         330 LOAD_NAME               17 (Exception)
+            332 CHECK_EXC_MATCH
+            334 POP_JUMP_FORWARD_IF_FALSE    15 (to 366)
+            336 POP_TOP
+
+125         338 PUSH_NULL
+            340 LOAD_NAME                4 (unwrap_v1)
+            342 LOAD_NAME               12 (sp)
+            344 LOAD_NAME               14 (flag)
+            346 PRECALL                  2
+            350 CALL                     2
+            360 STORE_NAME              16 (key)
+            362 POP_EXCEPT
+            364 JUMP_FORWARD             4 (to 374)
+
+124     >>  366 RERAISE                  0
+        >>  368 COPY                     3
+            370 POP_EXCEPT
+            372 RERAISE                  1
+
+126     >>  374 PUSH_NULL
+            376 LOAD_NAME               18 (print)
+            378 LOAD_NAME               16 (key)
+            380 PRECALL                  1
+            384 CALL                     1
+            394 POP_TOP
+            396 LOAD_CONST               1 (None)
+            398 RETURN_VALUE
+
+128     >>  400 PUSH_NULL
+            402 LOAD_NAME                7 (_selftest)
+            404 PRECALL                  0
+            408 CALL                     0
+            418 POP_TOP
+            420 LOAD_CONST               1 (None)
+            422 RETURN_VALUE
+
+116     >>  424 LOAD_CONST               1 (None)
+            426 RETURN_VALUE
+ExceptionTable:
+  236 to 324 -> 328 [0]
+  328 to 360 -> 368 [1] lasti
+  366 to 366 -> 368 [1] lasti
+
+Disassembly of <code object _popcount at 0x10ad4fee0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 18>:
+ 18           0 RESUME                   0
+
+ 19           2 LOAD_GLOBAL              1 (NULL + bin)
+             14 LOAD_FAST                0 (x)
+             16 LOAD_CONST               1 (4294967295)
+             18 BINARY_OP                1 (&)
+             22 PRECALL                  1
+             26 CALL                     1
+             36 LOAD_METHOD              1 (count)
+             58 LOAD_CONST               2 ('1')
+             60 PRECALL                  1
+             64 CALL                     1
+             74 RETURN_VALUE
+
+Disassembly of <code object _s8 at 0x10aceea30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 22>:
+ 22           0 RESUME                   0
+
+ 23           2 LOAD_FAST                0 (v)
+              4 LOAD_CONST               1 (255)
+              6 BINARY_OP               14 (&=)
+             10 STORE_FAST               0 (v)
+
+ 24          12 LOAD_FAST                0 (v)
+             14 LOAD_CONST               2 (128)
+             16 COMPARE_OP               5 (>=)
+             22 POP_JUMP_FORWARD_IF_FALSE     5 (to 34)
+             24 LOAD_FAST                0 (v)
+             26 LOAD_CONST               3 (256)
+             28 BINARY_OP               10 (-)
+             32 JUMP_FORWARD             1 (to 36)
+        >>   34 LOAD_FAST                0 (v)
+        >>   36 RETURN_VALUE
+
+Disassembly of <code object _strncmp0 at 0x10ac259b0, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 27>:
+ 27           0 RESUME                   0
+
+ 28           2 LOAD_GLOBAL              1 (NULL + range)
+             14 LOAD_FAST                2 (n)
+             16 PRECALL                  1
+             20 CALL                     1
+             30 GET_ITER
+        >>   32 FOR_ITER                78 (to 190)
+             34 STORE_FAST               3 (k)
+
+ 29          36 LOAD_FAST                3 (k)
+             38 LOAD_GLOBAL              3 (NULL + len)
+             50 LOAD_FAST                0 (a)
+             52 PRECALL                  1
+             56 CALL                     1
+             66 COMPARE_OP               0 (<)
+             72 POP_JUMP_FORWARD_IF_FALSE     8 (to 90)
+             74 LOAD_FAST                0 (a)
+             76 LOAD_FAST                3 (k)
+             78 BINARY_SUBSCR
+             88 JUMP_FORWARD             1 (to 92)
+        >>   90 LOAD_CONST               1 (0)
+        >>   92 STORE_FAST               4 (ca)
+
+ 30          94 LOAD_FAST                3 (k)
+             96 LOAD_GLOBAL              3 (NULL + len)
+            108 LOAD_FAST                1 (b)
+            110 PRECALL                  1
+            114 CALL                     1
+            124 COMPARE_OP               0 (<)
+            130 POP_JUMP_FORWARD_IF_FALSE     8 (to 148)
+            132 LOAD_FAST                1 (b)
+            134 LOAD_FAST                3 (k)
+            136 BINARY_SUBSCR
+            146 JUMP_FORWARD             1 (to 150)
+        >>  148 LOAD_CONST               1 (0)
+        >>  150 STORE_FAST               5 (cb)
+
+ 31         152 LOAD_FAST                4 (ca)
+            154 LOAD_FAST                5 (cb)
+            156 COMPARE_OP               3 (!=)
+            162 POP_JUMP_FORWARD_IF_FALSE     3 (to 170)
+
+ 32         164 POP_TOP
+            166 LOAD_CONST               2 (False)
+            168 RETURN_VALUE
+
+ 33     >>  170 LOAD_FAST                4 (ca)
+            172 LOAD_CONST               1 (0)
+            174 COMPARE_OP               2 (==)
+            180 POP_JUMP_FORWARD_IF_FALSE     3 (to 188)
+
+ 34         182 POP_TOP
+            184 LOAD_CONST               3 (True)
+            186 RETURN_VALUE
+
+ 33     >>  188 JUMP_BACKWARD           79 (to 32)
+
+ 35     >>  190 LOAD_CONST               3 (True)
+            192 RETURN_VALUE
+
+Disassembly of <code object unwrap_v1 at 0x9c5194a00, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 38>:
+ 38           0 RESUME                   0
+
+ 39           2 NOP
+
+ 41           4 LOAD_GLOBAL              1 (NULL + isinstance)
+             16 LOAD_FAST                0 (spade)
+             18 LOAD_GLOBAL              2 (str)
+             30 PRECALL                  2
+             34 CALL                     2
+             44 POP_JUMP_FORWARD_IF_FALSE    26 (to 98)
+
+ 42          46 LOAD_GLOBAL              4 (bytes)
+             58 LOAD_METHOD              3 (fromhex)
+             80 LOAD_FAST                0 (spade)
+             82 PRECALL                  1
+             86 CALL                     1
+             96 STORE_FAST               0 (spade)
+
+ 43     >>   98 LOAD_GLOBAL              9 (NULL + len)
+            110 LOAD_FAST                0 (spade)
+            112 PRECALL                  1
+            116 CALL                     1
+            126 STORE_FAST               2 (L)
+
+ 44         128 LOAD_FAST                2 (L)
+            130 LOAD_CONST               1 (3)
+            132 COMPARE_OP               0 (<)
+            138 POP_JUMP_FORWARD_IF_FALSE     2 (to 144)
+
+ 45         140 LOAD_CONST               0 (None)
+            142 RETURN_VALUE
+
+ 46     >>  144 LOAD_FAST                0 (spade)
+            146 LOAD_CONST               2 (0)
+            148 BINARY_SUBSCR
+            158 LOAD_FAST                0 (spade)
+            160 LOAD_CONST               3 (1)
+            162 BINARY_SUBSCR
+            172 BINARY_OP               12 (^)
+            176 LOAD_FAST                0 (spade)
+            178 LOAD_CONST               4 (2)
+            180 BINARY_SUBSCR
+            190 BINARY_OP               12 (^)
+            194 STORE_FAST               3 (bVar5)
+
+ 47         196 LOAD_FAST                3 (bVar5)
+            198 LOAD_CONST               5 (48)
+            200 BINARY_OP               10 (-)
+            204 STORE_FAST               4 (iVar9)
+
+ 48         206 LOAD_FAST                4 (iVar9)
+            208 LOAD_CONST               3 (1)
+            210 COMPARE_OP               0 (<)
+            216 POP_JUMP_FORWARD_IF_FALSE     2 (to 222)
+
+ 49         218 LOAD_CONST               0 (None)
+            220 RETURN_VALUE
+
+ 50     >>  222 LOAD_FAST                2 (L)
+            224 LOAD_FAST                3 (bVar5)
+            226 BINARY_OP               10 (-)
+            230 LOAD_CONST               6 (47)
+            232 BINARY_OP                0 (+)
+            236 STORE_FAST               5 (uVar1)
+
+ 51         238 LOAD_FAST                5 (uVar1)
+            240 LOAD_CONST               3 (1)
+            242 COMPARE_OP               0 (<)
+            248 POP_JUMP_FORWARD_IF_TRUE     9 (to 268)
+            250 LOAD_CONST               3 (1)
+            252 LOAD_FAST                5 (uVar1)
+            254 BINARY_OP                0 (+)
+            258 LOAD_FAST                2 (L)
+            260 COMPARE_OP               4 (>)
+            266 POP_JUMP_FORWARD_IF_FALSE     2 (to 272)
+
+ 52     >>  268 LOAD_CONST               0 (None)
+            270 RETURN_VALUE
+
+ 53     >>  272 LOAD_GLOBAL             11 (NULL + bytearray)
+            284 LOAD_FAST                0 (spade)
+            286 LOAD_CONST               3 (1)
+            288 LOAD_CONST               3 (1)
+            290 LOAD_FAST                5 (uVar1)
+            292 BINARY_OP                0 (+)
+            296 BUILD_SLICE              2
+            298 BINARY_SUBSCR
+            308 PRECALL                  1
+            312 CALL                     1
+            322 STORE_FAST               6 (dest)
+
+ 56         324 LOAD_GLOBAL             11 (NULL + bytearray)
+            336 LOAD_FAST                4 (iVar9)
+            338 PRECALL                  1
+            342 CALL                     1
+            352 STORE_FAST               7 (s1)
+
+ 57         354 LOAD_FAST                0 (spade)
+            356 LOAD_FAST                2 (L)
+            358 LOAD_FAST                4 (iVar9)
+            360 BINARY_OP               10 (-)
+            364 LOAD_CONST               4 (2)
+            366 BINARY_OP               10 (-)
+            370 BINARY_SUBSCR
+            380 STORE_FAST               8 (b16)
+
+ 58         382 LOAD_FAST                0 (spade)
+            384 LOAD_FAST                2 (L)
+            386 LOAD_FAST                4 (iVar9)
+            388 BINARY_OP               10 (-)
+            392 LOAD_CONST               3 (1)
+            394 BINARY_OP               10 (-)
+            398 BINARY_SUBSCR
+            408 STORE_FAST               9 (b14)
+
+ 59         410 LOAD_GLOBAL             13 (NULL + range)
+            422 LOAD_FAST                4 (iVar9)
+            424 PRECALL                  1
+            428 CALL                     1
+            438 GET_ITER
+        >>  440 FOR_ITER                25 (to 492)
+            442 STORE_FAST              10 (i)
+
+ 60         444 LOAD_FAST                9 (b14)
+            446 LOAD_FAST                8 (b16)
+            448 BINARY_OP               12 (^)
+            452 LOAD_FAST                0 (spade)
+            454 LOAD_FAST               10 (i)
+            456 LOAD_FAST                2 (L)
+            458 LOAD_FAST                4 (iVar9)
+            460 BINARY_OP               10 (-)
+            464 BINARY_OP                0 (+)
+            468 BINARY_SUBSCR
+            478 BINARY_OP               12 (^)
+            482 LOAD_FAST                7 (s1)
+            484 LOAD_FAST               10 (i)
+            486 STORE_SUBSCR
+            490 JUMP_BACKWARD           26 (to 440)
+
+ 61     >>  492 LOAD_GLOBAL             15 (NULL + _strncmp0)
+            504 LOAD_FAST                7 (s1)
+            506 LOAD_CONST               7 (b'app_v2')
+            508 LOAD_FAST                4 (iVar9)
+            510 PRECALL                  3
+            514 CALL                     3
+            524 POP_JUMP_FORWARD_IF_TRUE    17 (to 560)
+            526 LOAD_GLOBAL             15 (NULL + _strncmp0)
+            538 LOAD_FAST                7 (s1)
+            540 LOAD_CONST               8 (b'web_v2')
+            542 LOAD_FAST                4 (iVar9)
+            544 PRECALL                  3
+            548 CALL                     3
+            558 POP_JUMP_FORWARD_IF_FALSE     2 (to 564)
+
+ 62     >>  560 LOAD_CONST               0 (None)
+            562 RETURN_VALUE
+
+ 65     >>  564 LOAD_CONST               9 ((85, 250))
+            566 UNPACK_SEQUENCE          2
+            570 STORE_FAST               9 (b14)
+            572 STORE_FAST               8 (b16)
+
+ 66         574 LOAD_GLOBAL             13 (NULL + range)
+            586 LOAD_FAST                5 (uVar1)
+            588 PRECALL                  1
+            592 CALL                     1
+            602 GET_ITER
+        >>  604 FOR_ITER                83 (to 772)
+            606 STORE_FAST              10 (i)
+
+ 67         608 LOAD_FAST                6 (dest)
+            610 LOAD_FAST               10 (i)
+            612 BINARY_SUBSCR
+            622 STORE_FAST              11 (b6)
+
+ 68         624 LOAD_GLOBAL             17 (NULL + _popcount)
+            636 LOAD_FAST               10 (i)
+            638 PRECALL                  1
+            642 CALL                     1
+            652 STORE_FAST              12 (u18)
+
+ 69         654 LOAD_FAST               11 (b6)
+            656 LOAD_FAST                9 (b14)
+            658 STORE_FAST              14 (b7)
+            660 STORE_FAST              13 (b3)
+
+ 70         662 LOAD_FAST               10 (i)
+            664 LOAD_CONST               3 (1)
+            666 BINARY_OP                1 (&)
+            670 POP_JUMP_FORWARD_IF_FALSE     6 (to 684)
+
+ 71         672 LOAD_FAST                8 (b16)
+            674 LOAD_FAST               11 (b6)
+            676 LOAD_FAST                9 (b14)
+            678 STORE_FAST               8 (b16)
+            680 STORE_FAST              14 (b7)
+            682 STORE_FAST              13 (b3)
+
+ 72     >>  684 LOAD_FAST                1 (flag)
+            686 POP_JUMP_FORWARD_IF_FALSE     5 (to 698)
+            688 LOAD_FAST               12 (u18)
+            690 LOAD_CONST              10 (21)
+            692 BINARY_OP                0 (+)
+            696 JUMP_FORWARD            17 (to 732)
+        >>  698 LOAD_GLOBAL             19 (NULL + _s8)
+            710 LOAD_CONST              11 (-21)
+            712 LOAD_FAST               12 (u18)
+            714 BINARY_OP               10 (-)
+            718 PRECALL                  1
+            722 CALL                     1
+        >>  732 STORE_FAST              15 (cVar4)
+
+ 73         734 LOAD_FAST               15 (cVar4)
+            736 LOAD_FAST                8 (b16)
+            738 LOAD_FAST               11 (b6)
+            740 BINARY_OP               12 (^)
+            744 BINARY_OP                0 (+)
+            748 LOAD_CONST              12 (255)
+            750 BINARY_OP                1 (&)
+            754 LOAD_FAST                6 (dest)
+            756 LOAD_FAST               10 (i)
+            758 STORE_SUBSCR
+
+ 74         762 LOAD_FAST               14 (b7)
+            764 LOAD_FAST               13 (b3)
+            766 STORE_FAST               8 (b16)
+            768 STORE_FAST               9 (b14)
+            770 JUMP_BACKWARD           84 (to 604)
+
+ 77     >>  772 LOAD_FAST                6 (dest)
+            774 LOAD_CONST               2 (0)
+            776 BINARY_SUBSCR
+            786 STORE_FAST              16 (b0)
+
+ 78         788 LOAD_CONST               5 (48)
+            790 LOAD_FAST               16 (b0)
+            792 SWAP                     2
+            794 COPY                     2
+            796 COMPARE_OP               1 (<=)
+            802 POP_JUMP_FORWARD_IF_FALSE     6 (to 816)
+            804 LOAD_CONST              13 (57)
+            806 COMPARE_OP               1 (<=)
+            812 POP_JUMP_FORWARD_IF_FALSE     9 (to 832)
+            814 JUMP_FORWARD             2 (to 820)
+        >>  816 POP_TOP
+            818 JUMP_FORWARD             6 (to 832)
+
+ 79     >>  820 LOAD_FAST               16 (b0)
+            822 LOAD_CONST               5 (48)
+            824 BINARY_OP               10 (-)
+            828 STORE_FAST              17 (u11)
+            830 JUMP_FORWARD            24 (to 880)
+
+ 80     >>  832 LOAD_CONST              14 (97)
+            834 LOAD_FAST               16 (b0)
+            836 SWAP                     2
+            838 COPY                     2
+            840 COMPARE_OP               1 (<=)
+            846 POP_JUMP_FORWARD_IF_FALSE     6 (to 860)
+            848 LOAD_CONST              15 (122)
+            850 COMPARE_OP               1 (<=)
+            856 POP_JUMP_FORWARD_IF_FALSE     9 (to 876)
+            858 JUMP_FORWARD             2 (to 864)
+        >>  860 POP_TOP
+            862 JUMP_FORWARD             6 (to 876)
+
+ 81     >>  864 LOAD_FAST               16 (b0)
+            866 LOAD_CONST              16 (87)
+            868 BINARY_OP               10 (-)
+            872 STORE_FAST              17 (u11)
+            874 JUMP_FORWARD             2 (to 880)
+
+ 83     >>  876 LOAD_CONST               0 (None)
+            878 RETURN_VALUE
+
+ 84     >>  880 LOAD_FAST                5 (uVar1)
+            882 LOAD_FAST               17 (u11)
+            884 LOAD_CONST              12 (255)
+            886 BINARY_OP                1 (&)
+            890 BINARY_OP               10 (-)
+            894 STORE_FAST              18 (iv9)
+
+ 85         896 LOAD_FAST               18 (iv9)
+            898 LOAD_CONST               4 (2)
+            900 COMPARE_OP               0 (<)
+            906 POP_JUMP_FORWARD_IF_FALSE     2 (to 912)
+
+ 86         908 LOAD_CONST               0 (None)
+            910 RETURN_VALUE
+
+ 87     >>  912 LOAD_GLOBAL              5 (NULL + bytes)
+            924 LOAD_FAST                6 (dest)
+            926 LOAD_CONST               3 (1)
+            928 LOAD_FAST               18 (iv9)
+            930 BUILD_SLICE              2
+            932 BINARY_SUBSCR
+            942 PRECALL                  1
+            946 CALL                     1
+            956 LOAD_METHOD             10 (decode)
+            978 LOAD_CONST              17 ('latin1')
+            980 LOAD_CONST              18 ('replace')
+            982 PRECALL                  2
+            986 CALL                     2
+            996 RETURN_VALUE
+
+Disassembly of <code object spade_to_key at 0x10acf5d30, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 90>:
+ 90           0 RESUME                   0
+
+ 91           2 NOP
+
+ 92           4 LOAD_GLOBAL              1 (NULL + unwrap_v1)
+             16 LOAD_GLOBAL              3 (NULL + base64)
+             28 LOAD_ATTR                2 (b64decode)
+             38 LOAD_FAST                0 (spade_a_b64)
+             40 PRECALL                  1
+             44 CALL                     1
+             54 LOAD_FAST                1 (flag)
+             56 PRECALL                  2
+             60 CALL                     2
+             70 RETURN_VALUE
+
+Disassembly of <code object _selftest at 0x10ac3b690, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 105>:
+105           0 RESUME                   0
+
+106           2 LOAD_CONST               1 (0)
+              4 STORE_FAST               0 (ok)
+
+107           6 LOAD_GLOBAL              0 (_TRUTH)
+             18 GET_ITER
+        >>   20 FOR_ITER                59 (to 140)
+             22 UNPACK_SEQUENCE          2
+             26 STORE_FAST               1 (sp)
+             28 STORE_FAST               2 (exp)
+
+108          30 LOAD_GLOBAL              3 (NULL + unwrap_v1)
+             42 LOAD_FAST                1 (sp)
+             44 LOAD_CONST               1 (0)
+             46 PRECALL                  2
+             50 CALL                     2
+             60 STORE_FAST               3 (got)
+
+109          62 LOAD_FAST                3 (got)
+             64 LOAD_FAST                2 (exp)
+             66 COMPARE_OP               2 (==)
+             72 STORE_FAST               4 (hit)
+
+110          74 LOAD_FAST                0 (ok)
+             76 LOAD_FAST                4 (hit)
+             78 BINARY_OP               13 (+=)
+             82 STORE_FAST               0 (ok)
+
+111          84 LOAD_GLOBAL              5 (NULL + print)
+             96 LOAD_FAST                4 (hit)
+             98 POP_JUMP_FORWARD_IF_FALSE     2 (to 104)
+            100 LOAD_CONST               2 ('OK ')
+            102 JUMP_FORWARD             1 (to 106)
+        >>  104 LOAD_CONST               3 ('FAIL')
+        >>  106 FORMAT_VALUE             0
+            108 LOAD_CONST               4 (' ')
+            110 LOAD_FAST                3 (got)
+            112 FORMAT_VALUE             0
+            114 LOAD_CONST               5 (' == ')
+            116 LOAD_FAST                2 (exp)
+            118 FORMAT_VALUE             0
+            120 BUILD_STRING             5
+            122 PRECALL                  1
+            126 CALL                     1
+            136 POP_TOP
+            138 JUMP_BACKWARD           60 (to 20)
+
+112     >>  140 LOAD_GLOBAL              5 (NULL + print)
+            152 LOAD_FAST                0 (ok)
+            154 FORMAT_VALUE             0
+            156 LOAD_CONST               6 ('/')
+            158 LOAD_GLOBAL              7 (NULL + len)
+            170 LOAD_GLOBAL              0 (_TRUTH)
+            182 PRECALL                  1
+            186 CALL                     1
+            196 FORMAT_VALUE             0
+            198 LOAD_CONST               7 (' passed')
+            200 BUILD_STRING             4
+            202 PRECALL                  1
+            206 CALL                     1
+            216 POP_TOP
+
+113         218 LOAD_FAST                0 (ok)
+            220 LOAD_GLOBAL              7 (NULL + len)
+            232 LOAD_GLOBAL              0 (_TRUTH)
+            244 PRECALL                  1
+            248 CALL                     1
+            258 COMPARE_OP               2 (==)
+            264 RETURN_VALUE
+
+Disassembly of <code object <genexpr> at 0x10acee790, file "D:\code\Hongguo-App\installer\_stage_172g\app\frida\unwrap_spade.py", line 123>:
+123           0 RETURN_GENERATOR
+              2 POP_TOP
+              4 RESUME                   0
+              6 LOAD_FAST                0 (.0)
+        >>    8 FOR_ITER                 8 (to 26)
+             10 STORE_FAST               1 (c)
+             12 LOAD_FAST                1 (c)
+             14 LOAD_CONST               0 ('0123456789abcdefABCDEF')
+             16 CONTAINS_OP              0
+             18 YIELD_VALUE
+             20 RESUME                   1
+             22 POP_TOP
+             24 JUMP_BACKWARD            9 (to 8)
+        >>   26 LOAD_CONST               1 (None)
+             28 RETURN_VALUE

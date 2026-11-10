@@ -1,0 +1,545 @@
+{
+  "authority": "external-service + offline validation of captured responses",
+  "capture_window": {
+    "started": "2026-10-26T10:29:07+08:00",
+    "finished": "2026-10-26T10:29:50+08:00"
+  },
+  "note": "Raw live-results.json preserves the original post-response URL-normalizer error. Responses were already successful; this separate validation fixes plain/base64 URL handling without repeating network requests.",
+  "additional_network_requests": 0,
+  "requests": 8,
+  "successes": 8,
+  "valid_models": 24,
+  "distinct_vids": 8,
+  "device_profiles": 1,
+  "signer_calls": 0,
+  "media_requests": 0,
+  "resolve_down_replay": [
+    {
+      "source_down": false,
+      "reason": "signer",
+      "resolve_down": false
+    },
+    {
+      "source_down": true,
+      "reason": "signer",
+      "resolve_down": false
+    },
+    {
+      "source_down": true,
+      "reason": "risk",
+      "resolve_down": true
+    },
+    {
+      "source_down": true,
+      "reason": "empty",
+      "resolve_down": true
+    },
+    {
+      "source_down": true,
+      "reason": "network",
+      "resolve_down": true
+    }
+  ],
+  "preservation": {
+    "checked_files": 357,
+    "changed": []
+  },
+  "results": [
+    {
+      "id": "01-r1-a_single",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7689903030619081790"
+      ],
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003350
+        }
+      },
+      "seconds": 0.26,
+      "raw_capture_sha256": "f99d095358d951c145d754d150b521207105a61d4cd73667cc52140c770896b6"
+    },
+    {
+      "id": "02-r1-a_five",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998"
+      ],
+      "returned_vids": [
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903130258983998",
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003353
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003353
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003353
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003353
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003353
+        }
+      },
+      "seconds": 0.353,
+      "raw_capture_sha256": "849c0a1e4c6a719f07f73b1f7a8cad802f3dac8ab6b068af2f43ec9e5614fc35"
+    },
+    {
+      "id": "03-r1-cross_five",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998",
+        "7694949024280874009",
+        "7694949018303990809"
+      ],
+      "returned_vids": [
+        "7694949024280874009",
+        "7694949018303990809",
+        "7689903116275174462",
+        "7689903082863348798",
+        "7689903130258983998"
+      ],
+      "models": {
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003355
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003355
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003355
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003355
+        },
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003355
+        }
+      },
+      "seconds": 0.44,
+      "raw_capture_sha256": "783943bf8bf4db8909aae286f10ef9d8362b8c61b2cce81a218c869ed07f377c"
+    },
+    {
+      "id": "04-r1-b_single",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7694949018303990809"
+      ],
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003358
+        }
+      },
+      "seconds": 0.287,
+      "raw_capture_sha256": "639ea34d64ecc094c047f91c9cba2b3b79a63e93721312d99181e760d786cf4f"
+    },
+    {
+      "id": "05-r2-a_single",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7689903030619081790"
+      ],
+      "returned_vids": [
+        "7689903030619081790"
+      ],
+      "models": {
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003381
+        }
+      },
+      "seconds": 0.185,
+      "raw_capture_sha256": "a1c8491b2e75d64dd469e5dbf1753b14050fe36928feca2206e033b1dbe259a2"
+    },
+    {
+      "id": "06-r2-a_five",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7689903130258983998",
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790"
+      ],
+      "returned_vids": [
+        "7689903137095699518",
+        "7689903075380694078",
+        "7689903116275174462",
+        "7689903030619081790",
+        "7689903130258983998"
+      ],
+      "models": {
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003384
+        },
+        "7689903137095699518": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003384
+        },
+        "7689903075380694078": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003384
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003384
+        },
+        "7689903030619081790": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003384
+        }
+      },
+      "seconds": 0.272,
+      "raw_capture_sha256": "49c5dca181144dc4b4ea2c5a66ab81dfa597c0156737e423e7f7aa6566160682"
+    },
+    {
+      "id": "07-r2-cross_five",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7694949018303990809",
+        "7694949024280874009",
+        "7689903130258983998",
+        "7689903082863348798",
+        "7689903116275174462"
+      ],
+      "returned_vids": [
+        "7694949024280874009",
+        "7689903130258983998",
+        "7689903082863348798",
+        "7689903116275174462",
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003387
+        },
+        "7694949024280874009": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003387
+        },
+        "7689903130258983998": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003387
+        },
+        "7689903082863348798": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003387
+        },
+        "7689903116275174462": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003387
+        }
+      },
+      "seconds": 0.361,
+      "raw_capture_sha256": "4616088ce18a4984685231d3f83ec188f648565ee7db77b18dc1b56e378f8c37"
+    },
+    {
+      "id": "08-r2-b_single",
+      "success": true,
+      "http_status": 200,
+      "code": 0,
+      "requested_vids": [
+        "7694949018303990809"
+      ],
+      "returned_vids": [
+        "7694949018303990809"
+      ],
+      "models": {
+        "7694949018303990809": {
+          "tracks": 5,
+          "definitions": [
+            "1080p",
+            "360p",
+            "480p",
+            "540p",
+            "720p"
+          ],
+          "url_formats": [
+            "plain"
+          ],
+          "expire_time": 1793003390
+        }
+      },
+      "seconds": 0.278,
+      "raw_capture_sha256": "ff70db69db9637b9a57c1d4d93af5c4853ecea5d104495dca51e28ea63f4f5ed"
+    }
+  ]
+}

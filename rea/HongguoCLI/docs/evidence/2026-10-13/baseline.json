@@ -1,0 +1,547 @@
+{
+  "captured_at": "2026-10-13T10:44:02.190120+08:00",
+  "installer": {
+    "path": "HongguoDownloader-Setup.exe",
+    "bytes": 142018614,
+    "sha256": "9d77a2548cc1bde92c4a269a3f482655b4f5fc538421f328af8d959d6739b592",
+    "mtime_ns": 1791800560541022231
+  },
+  "analysis_files": [
+    {
+      "path": "analysis/API文档.md",
+      "bytes": 119415,
+      "sha256": "d27ac3530717c5a59146220376229f9f18d76bb9571e9a7f17982a67674b508a",
+      "mtime_ns": 1791804029025169063
+    },
+    {
+      "path": "analysis/LOCAL_API.md",
+      "bytes": 57325,
+      "sha256": "924b747863c97638a501c45117487710b080f4bfaf5982ef49dccd803fa89a04",
+      "mtime_ns": 1791802190464280385
+    },
+    {
+      "path": "analysis/REMOTE_API.md",
+      "bytes": 46240,
+      "sha256": "c5f1ecedb1b104892e0b3244648dfef67a9c83482999b94029e964724d38886e",
+      "mtime_ns": 1791802217544881984
+    },
+    {
+      "path": "analysis/REQUEST_CHAIN.md",
+      "bytes": 18502,
+      "sha256": "1f4f6cddb813bb3442ecd19b48e1660d9f45d15a0ea1b4bc811b36f39c74fa55",
+      "mtime_ns": 1791802521818635805
+    },
+    {
+      "path": "analysis/SIGNER_API.md",
+      "bytes": 4369,
+      "sha256": "13666c0ebc4a8c18b64f34d2da5cb92b215bf41c450c7d01d2875862da1f1f69",
+      "mtime_ns": 1791801892483903849
+    },
+    {
+      "path": "analysis/VIDEO_ENCRYPTION.md",
+      "bytes": 7759,
+      "sha256": "699a57bc8d2ff1eb53b8218d9b484d8b7ed8cada44025e1e9b1a3df5082d55eb",
+      "mtime_ns": 1791804028948843610
+    },
+    {
+      "path": "analysis/evidence/FqTrace.javap.txt",
+      "bytes": 70507,
+      "sha256": "69033f2aaf06f5379c1cd754294552347a086d63e78d3d9ab61737bd03c91e3b",
+      "mtime_ns": 1791801045858127987
+    },
+    {
+      "path": "analysis/evidence/MetasecSign.javap.txt",
+      "bytes": 65167,
+      "sha256": "ed2f2654952df21236150e6b72d35dd9c2b57b039c3b1e39f51702095b5dd9aa",
+      "mtime_ns": 1791800985836107002
+    },
+    {
+      "path": "analysis/evidence/api-audit.md",
+      "bytes": 9877,
+      "sha256": "7e55274a03b747b6e3fc3fa10235065aed3ea2cd8a0a0770adb4c9b80d99dcaa",
+      "mtime_ns": 1791802073339172780
+    },
+    {
+      "path": "analysis/evidence/apikeys.dis.txt",
+      "bytes": 40803,
+      "sha256": "80799b2b645c35127fca7c893a54a56df97eead4184810a69037ae3649d012c9",
+      "mtime_ns": 1791801683635060435
+    },
+    {
+      "path": "analysis/evidence/app.dis.txt",
+      "bytes": 457179,
+      "sha256": "c744deb2b46419785260754de2123f13fd273a64b5ea2ebf438fdac56a2e15a2",
+      "mtime_ns": 1791800965565556416
+    },
+    {
+      "path": "analysis/evidence/audited-routes.json",
+      "bytes": 32596,
+      "sha256": "4cf56c7389ca6ff3ce2561c7bbc270ca7a37f37b3300de27ce119a60978ed20e",
+      "mtime_ns": 1791801965324632246
+    },
+    {
+      "path": "analysis/evidence/decutil.dis.txt",
+      "bytes": 75278,
+      "sha256": "b6448dab288fa0375cedea8a22bae3a06adee175090a69acaa21c733899eaea1",
+      "mtime_ns": 1791802250627532968
+    },
+    {
+      "path": "analysis/evidence/devicepool.dis.txt",
+      "bytes": 39203,
+      "sha256": "fbc2b75fd413eda79586a44dd561a3f1ae77cbc126f88ebf4a8be4f8671b2906",
+      "mtime_ns": 1791801683645504557
+    },
+    {
+      "path": "analysis/evidence/downloader.dis.txt",
+      "bytes": 114706,
+      "sha256": "7d7a5d49df6f66901af095fc8b0d942e7a245f7d88c753e32744eb2773017e57",
+      "mtime_ns": 1791801683655978554
+    },
+    {
+      "path": "analysis/evidence/downloader.inline.js",
+      "bytes": 170403,
+      "sha256": "714a48899cb51f057df1975a9dd39de57797edc452924f6609b68c3d64788409",
+      "mtime_ns": 1791800893635852809
+    },
+    {
+      "path": "analysis/evidence/framework-routes.json",
+      "bytes": 2279,
+      "sha256": "4d30dbeea6728679da15862d3677d817f9232435c69c19c02716c703f5fdb25e",
+      "mtime_ns": 1791802190464855197
+    },
+    {
+      "path": "analysis/evidence/hongguo.dis.txt",
+      "bytes": 1300296,
+      "sha256": "6d42e28ad5949f6ebfac75cd70b8a3627441523e3a3db43cde55e45ee62208b0",
+      "mtime_ns": 1791800903763761140
+    },
+    {
+      "path": "analysis/evidence/inno-header1.bin",
+      "bytes": 1165909,
+      "sha256": "e037fac8d2abaf028cf2340848e3bd344e385cf6d9ff38d4fd852069822deeb1",
+      "mtime_ns": 1791800764220648496
+    },
+    {
+      "path": "analysis/evidence/inno-header2.bin",
+      "bytes": 352974,
+      "sha256": "9ecb3c4586a8e97a58b804147272e2e0546dd82e049425f39da632950cf644c1",
+      "mtime_ns": 1791800764220814497
+    },
+    {
+      "path": "analysis/evidence/installer-manifest.json",
+      "bytes": 824477,
+      "sha256": "60067413904d353e4b25f8475bf40bf45c1c7006d70f4be45f78f19c47a012b4",
+      "mtime_ns": 1791800807635637663
+    },
+    {
+      "path": "analysis/evidence/launcher.dis.txt",
+      "bytes": 58350,
+      "sha256": "c78595e7ae858441cfcf18befcc3675d7cebd6f2dfb7ae8dd88ee0bc0cae9241",
+      "mtime_ns": 1791800965503785366
+    },
+    {
+      "path": "analysis/evidence/licensing.dis.txt",
+      "bytes": 212151,
+      "sha256": "d59504780c646fa22c9171cfbf3a7addbd7017f19c67c2942cdd127cb05f7862",
+      "mtime_ns": 1791801683663900824
+    },
+    {
+      "path": "analysis/evidence/live-verification.json",
+      "bytes": 935,
+      "sha256": "a11bb16554d6cd64e01521ab2fdac8ea7c34886df00a02d90606cb1dc030d9e2",
+      "mtime_ns": 1791801471184934134
+    },
+    {
+      "path": "analysis/evidence/local-routes.json",
+      "bytes": 104705,
+      "sha256": "e3e4a81793a8a11df9a5d86e9103c597a060ce8dd04a7981ca2dc3a070ee4578",
+      "mtime_ns": 1791802190464755648
+    },
+    {
+      "path": "analysis/evidence/nettls.dis.txt",
+      "bytes": 51666,
+      "sha256": "21483e040ea9c8ba6c2d1cb1deeba52d23d837183aff50675d150e4a7d68e1f3",
+      "mtime_ns": 1791801683646180354
+    },
+    {
+      "path": "analysis/evidence/offline_decrypt.dis.txt",
+      "bytes": 25955,
+      "sha256": "906c0e67446fa38a4995850dc24e26cf1ed0625d0ef8fe89080136bd76ae899c",
+      "mtime_ns": 1791802250594888553
+    },
+    {
+      "path": "analysis/evidence/offline_dl.dis.txt",
+      "bytes": 2158062,
+      "sha256": "fcb6901d1a9d0ce37c14120a1be0d910406fcbca5fc519ee7c66a579768af8e0",
+      "mtime_ns": 1791800965859271947
+    },
+    {
+      "path": "analysis/evidence/oracle.dis.txt",
+      "bytes": 126444,
+      "sha256": "6f25faa80b9d9ee5359b63bdf24887b2384749c92fd55bc7cce692d0a4ed88da",
+      "mtime_ns": 1791802250616469665
+    },
+    {
+      "path": "analysis/evidence/rea-evidence.json",
+      "bytes": 32324584,
+      "sha256": "91950c6bb313173f658dd603d1b862771a43e8665f10cd6c8482eb0ea4f5faf2",
+      "mtime_ns": 1791801543762562998
+    },
+    {
+      "path": "analysis/evidence/remote-routes-audit.json",
+      "bytes": 1235,
+      "sha256": "a282ea4339ef1523a26644f37ee5e21cd822faf579475afb0dda8c665da48774",
+      "mtime_ns": 1791802262106938557
+    },
+    {
+      "path": "analysis/evidence/remote-routes.json",
+      "bytes": 58777,
+      "sha256": "0ec40bcef07abc81d60b5bdcafda70b1317d07b9d4c6936f05e7030109db5314",
+      "mtime_ns": 1791802217510212802
+    },
+    {
+      "path": "analysis/evidence/server.dis.txt",
+      "bytes": 1165945,
+      "sha256": "53df9495226dae58b54f4c274078cde9d18e75de82b89ff0c48737e2c2a54a78",
+      "mtime_ns": 1791800903991972973
+    },
+    {
+      "path": "analysis/evidence/signed-search-probe.json",
+      "bytes": 285498,
+      "sha256": "46eeef5d0f8ebfe04c3cd630cfdbe4b7c7693691bf6e5a3edabfa725aa633c43",
+      "mtime_ns": 1791801245870011704
+    },
+    {
+      "path": "analysis/evidence/unwrap_spade.dis.txt",
+      "bytes": 31255,
+      "sha256": "cda167dc93fdf775b98ef0eb91534a74a54cc2b68fb15b1441fac0088580ed66",
+      "mtime_ns": 1791802453797109477
+    },
+    {
+      "path": "analysis/evidence/video-encryption-observation.json",
+      "bytes": 2286,
+      "sha256": "b7f69b15f749a31352aafe3a3472a7366e12b2b8eb7ccd228d021ba9ed49e3a3",
+      "mtime_ns": 1791802555906650608
+    },
+    {
+      "path": "analysis/evidence/web-detail-probe.raw",
+      "bytes": 93927,
+      "sha256": "b871dadff590473fc338a68f89229577c26eb1d06792be5c344171bed8369356",
+      "mtime_ns": 1791801007313335824
+    },
+    {
+      "path": "analysis/evidence/web-search-probe.json",
+      "bytes": 42035,
+      "sha256": "753d5dda7b84f991e8220b9191d3385ff755c60474b18ecc099efa7154ae0765",
+      "mtime_ns": 1791801000812959623
+    },
+    {
+      "path": "analysis/evidence/web-search-probe.raw",
+      "bytes": 25889,
+      "sha256": "7892eeec33411534a4b5d9db1f0f881e347d4579a1d0c16d59e04885c5a52157",
+      "mtime_ns": 1791800994057457380
+    },
+    {
+      "path": "analysis/extracted/app/_buildinfo.pyc",
+      "bytes": 178,
+      "sha256": "58a0b973341504a68870cd2ad647f3d0e14ba915e5cdc71e83173d7759b70e2f",
+      "mtime_ns": 1791800807600868364
+    },
+    {
+      "path": "analysis/extracted/app/_integrity.pyc",
+      "bytes": 240483,
+      "sha256": "cbb38eb9ee60e407daef5409749ddce72397810d08e0082659cf69ec5b1d2e75",
+      "mtime_ns": 1791800807601064198
+    },
+    {
+      "path": "analysis/extracted/app/apikeys.pyc",
+      "bytes": 7635,
+      "sha256": "d795f03648aaccfb5481eca6697ede686c61831461bd294bce8b791810cda862",
+      "mtime_ns": 1791800807599010602
+    },
+    {
+      "path": "analysis/extracted/app/capture/fq_oversea/libc++_shared.so",
+      "bytes": 911696,
+      "sha256": "e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0",
+      "mtime_ns": 1791800807601760078
+    },
+    {
+      "path": "analysis/extracted/app/capture/fq_oversea/libmetasec_ml.so",
+      "bytes": 3447432,
+      "sha256": "20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d",
+      "mtime_ns": 1791800807603485797
+    },
+    {
+      "path": "analysis/extracted/app/capture/fq_oversea/ms_16777218.bin",
+      "bytes": 2014,
+      "sha256": "c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c",
+      "mtime_ns": 1791800807603620548
+    },
+    {
+      "path": "analysis/extracted/app/config.json",
+      "bytes": 2012,
+      "sha256": "f6304dc2c4633f6182f4e0cd1e198fea3d23c9fb2aaf556b37b8183fdadb68d2",
+      "mtime_ns": 1791800807599111436
+    },
+    {
+      "path": "analysis/extracted/app/devicepool.pyc",
+      "bytes": 7440,
+      "sha256": "85299d65916515c032b8e5c4b7920e4f52149099b23d74042aaa878a43c245ba",
+      "mtime_ns": 1791800807599205979
+    },
+    {
+      "path": "analysis/extracted/app/devices.json",
+      "bytes": 18728,
+      "sha256": "eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd",
+      "mtime_ns": 1791800807599309063
+    },
+    {
+      "path": "analysis/extracted/app/downloader.pyc",
+      "bytes": 21646,
+      "sha256": "6f104e671184ace99a5b88d9e969139ead60ea08dce5f256eb44466a471c5bed",
+      "mtime_ns": 1791800807599453855
+    },
+    {
+      "path": "analysis/extracted/app/frida/decutil.pyc",
+      "bytes": 13672,
+      "sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7",
+      "mtime_ns": 1791800807603738590
+    },
+    {
+      "path": "analysis/extracted/app/frida/extract_keybox_pairs.pyc",
+      "bytes": 11574,
+      "sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a",
+      "mtime_ns": 1791800807603811216
+    },
+    {
+      "path": "analysis/extracted/app/frida/offline_decrypt.pyc",
+      "bytes": 5060,
+      "sha256": "01d164943b8b36481ad4f877305c4721ce3e8b9fbebb4964e0adfe61c3e48263",
+      "mtime_ns": 1791800807603893758
+    },
+    {
+      "path": "analysis/extracted/app/frida/oracle.pyc",
+      "bytes": 23487,
+      "sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471",
+      "mtime_ns": 1791800807603956091
+    },
+    {
+      "path": "analysis/extracted/app/frida/unwrap_spade.pyc",
+      "bytes": 5536,
+      "sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7",
+      "mtime_ns": 1791800807604030092
+    },
+    {
+      "path": "analysis/extracted/app/hongguo.pyc",
+      "bytes": 240174,
+      "sha256": "42d0c2bcfffc346afe5b3b75d259261b787daf8f144298ceaa1bfa4897ad1312",
+      "mtime_ns": 1791800807599673107
+    },
+    {
+      "path": "analysis/extracted/app/licensing.pyc",
+      "bytes": 41094,
+      "sha256": "5bb605d3a10b56585342fa217eedc3d7f29689f185634af9d9b95363120db53f",
+      "mtime_ns": 1791800807599821982
+    },
+    {
+      "path": "analysis/extracted/app/nettls.pyc",
+      "bytes": 9507,
+      "sha256": "08cd78be74d262714d63855c2b0899ee71322d5bca14f1f37bb7e9c726f8eb13",
+      "mtime_ns": 1791800807599945775
+    },
+    {
+      "path": "analysis/extracted/app/offline_dl.pyc",
+      "bytes": 394803,
+      "sha256": "5baef36f42386837def6afb6de7f66730538294e6d27995cb5deb6317151bbd2",
+      "mtime_ns": 1791800807600239860
+    },
+    {
+      "path": "analysis/extracted/app/safeguards.pyc",
+      "bytes": 9233,
+      "sha256": "2fe27f2c9a95acb871c05fe0dd8b20844342ea7990853b9cad755a8ed28e3a9c",
+      "mtime_ns": 1791800807600364569
+    },
+    {
+      "path": "analysis/extracted/app/server.pyc",
+      "bytes": 227842,
+      "sha256": "55118631849817f20088c30894d94a7c84bff79d03eebe7af4b545c478ee5b0c",
+      "mtime_ns": 1791800807600562570
+    },
+    {
+      "path": "analysis/extracted/app/sign/unidbg-sign.jar",
+      "bytes": 32404581,
+      "sha256": "bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b",
+      "mtime_ns": 1791800807621073448
+    },
+    {
+      "path": "analysis/extracted/app/supabase.json",
+      "bytes": 274,
+      "sha256": "9a247f611529a78ef11e50d8f85fd631209b689e94493142513995edc48adbf6",
+      "mtime_ns": 1791800807600681988
+    },
+    {
+      "path": "analysis/extracted/app/version.txt",
+      "bytes": 8,
+      "sha256": "62e5a9003adb7a9f31ae7d66b883defc1804166ed4f8871f044ac15660b3f1a4",
+      "mtime_ns": 1791800807600784739
+    },
+    {
+      "path": "analysis/extracted/app/web/admin.html",
+      "bytes": 4214,
+      "sha256": "15ac2a77fea40185391191c5655848e0a0da921e080dd156c2c858b4d6836346",
+      "mtime_ns": 1791800807623521088
+    },
+    {
+      "path": "analysis/extracted/app/web/downloader.html",
+      "bytes": 336840,
+      "sha256": "8055cc51f641353250083230fb621901045b1ed1f1549f624afe411acda8b015",
+      "mtime_ns": 1791800807623877798
+    },
+    {
+      "path": "analysis/extracted/app/web/index.html",
+      "bytes": 10432,
+      "sha256": "d0b51c2bc80b5b54aad95982159702054955aa3afed33f7e0511ac413e605d80",
+      "mtime_ns": 1791800807624049966
+    },
+    {
+      "path": "analysis/extracted/app.pyc",
+      "bytes": 87838,
+      "sha256": "f8ccf3d849c0ee570b3bea96bdfb7a118da9e4f2e7ea27a5a72b2aa27377c990",
+      "mtime_ns": 1791800807597903596
+    },
+    {
+      "path": "analysis/extracted/icon.ico",
+      "bytes": 203951,
+      "sha256": "0237db9dbe307e79ed11c42fef19c2cd5a6622dad7f62a3cb985d4d8d4b8de36",
+      "mtime_ns": 1791800807598544558
+    },
+    {
+      "path": "analysis/extracted/launcher.pyc",
+      "bytes": 11940,
+      "sha256": "0a8e89dc6c96d219e310ffd572f63b68720a68125f3b9a852ab00b0afdf3c29e",
+      "mtime_ns": 1791800807598834476
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/fastapi/applications.py",
+      "bytes": 183840,
+      "sha256": "38dccb19b2a0b0b984c8d7541263842954a37c087cf96b4463aea17873c6183c",
+      "mtime_ns": 1791801846441746849
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/fastapi/routing.py",
+      "bytes": 255632,
+      "sha256": "7b1ef65fb6b209445dc43be070a23324b7879aef9c6b9f63e6968234b7723b55",
+      "mtime_ns": 1791801846442116810
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/fastapi-0.141.1.dist-info/METADATA",
+      "bytes": 27029,
+      "sha256": "1010c29547b4026bdb3cd1c406e0570b9d79bb448b5a61fa4d5bb5a5eb0b752c",
+      "mtime_ns": 1791801846442324603
+    },
+    {
+      "path": "analysis/extracted/python/Lib/site-packages/starlette/routing.py",
+      "bytes": 30472,
+      "sha256": "15215c88f4187c98cf498e757b188c0e06fbe80d95f78b7630c4e51f92611af4",
+      "mtime_ns": 1791801846442546063
+    },
+    {
+      "path": "analysis/tools/__pycache__/innoextract.cpython-314.pyc",
+      "bytes": 16825,
+      "sha256": "16f27b6793e9d873b06766f17dbb4ec392a4af5366951b58401d0d7b77ffdbe9",
+      "mtime_ns": 1791800764176740723
+    },
+    {
+      "path": "analysis/tools/audit_local_routes.py",
+      "bytes": 5356,
+      "sha256": "1180d4178f6680d17b98ad927ffb2ba110ee84b21515ccc200823d2399346fd9",
+      "mtime_ns": 1791801965168168666
+    },
+    {
+      "path": "analysis/tools/build_api_document.py",
+      "bytes": 5271,
+      "sha256": "7bc84a21eb78b8a17433b45f8404e2764bd573c4725f01f1ba00309eaf63d2a2",
+      "mtime_ns": 1791804028974618717
+    },
+    {
+      "path": "analysis/tools/decrypt_sample.py",
+      "bytes": 3790,
+      "sha256": "67ae75da66eebcca897aa0ea42fa76c2998b8bc654a3a3147c908f175ffb34ac",
+      "mtime_ns": 1791802858013238076
+    },
+    {
+      "path": "analysis/tools/download_sample.py",
+      "bytes": 2408,
+      "sha256": "aed723496c6562bba1029a7d81debbebbb6373976209c0e0895c31b7ebd29eb2",
+      "mtime_ns": 1791802742858978734
+    },
+    {
+      "path": "analysis/tools/extract_local_routes.py",
+      "bytes": 5424,
+      "sha256": "790e77fb207aacfcf3ce1e894d1adde29458e9f6d837eba07ba8f9bb832fafaf",
+      "mtime_ns": 1791801827547486062
+    },
+    {
+      "path": "analysis/tools/extract_selected.py",
+      "bytes": 2158,
+      "sha256": "7ff800691223884c6f1de1ec0e0378f8cd92faecec9b3282178b0be8e4732f92",
+      "mtime_ns": 1791800805441950554
+    },
+    {
+      "path": "analysis/tools/innoextract.py",
+      "bytes": 10757,
+      "sha256": "409c83971e2d1f634f3ea58039e0e66f0a7f1dd973a713a74d1df39ba859f132",
+      "mtime_ns": 1791800747554995065
+    },
+    {
+      "path": "analysis/tools/probe_signer.py",
+      "bytes": 2111,
+      "sha256": "dc3b79896331e3c1c655cb6d6605104c46d4fdb5e289119d1a35cc0ca62541c5",
+      "mtime_ns": 1791801241439268821
+    },
+    {
+      "path": "analysis/tools/render_local_api.py",
+      "bytes": 29410,
+      "sha256": "1f0a223c95979d67544b20f98245c4a98256111012ef1f5e9cd91c561dd480cb",
+      "mtime_ns": 1791802190416896929
+    },
+    {
+      "path": "analysis/tools/verify_export.py",
+      "bytes": 2016,
+      "sha256": "556e311d7ba8016e7279f86372ebc8bb01519cb33140a9688bc9173460b610c5",
+      "mtime_ns": 1791801467238723767
+    },
+    {
+      "path": "analysis/ui/downloader.js",
+      "bytes": 170403,
+      "sha256": "714a48899cb51f057df1975a9dd39de57797edc452924f6609b68c3d64788409",
+      "mtime_ns": 1791800908403167880
+    }
+  ],
+  "original_decrypt_bytecode": [
+    {
+      "path": "HongguoCLI/vendor/decrypt/unwrap_spade.pyc",
+      "bytes": 5536,
+      "sha256": "c56d6071a0d339491499ffa8c1c28f7d166d9961a6aa2252825342643a0345d7",
+      "mtime_ns": 1791800807604030092
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/oracle.pyc",
+      "bytes": 23487,
+      "sha256": "c53b6f033cb89b148d35eda8bc93db9da708e87f98ec11fbd9e6d9802137f471",
+      "mtime_ns": 1791800807603956091
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/decutil.pyc",
+      "bytes": 13672,
+      "sha256": "3422fac49f14f531e1e0d367e0accfa0e221e16ecd3ebbf69ef184e2747a6ba7",
+      "mtime_ns": 1791800807603738590
+    },
+    {
+      "path": "HongguoCLI/vendor/decrypt/extract_keybox_pairs.pyc",
+      "bytes": 11574,
+      "sha256": "c510a62cf432239229c56d54c2bfcabbc297a1f245df431bbdc3463f20bdd35a",
+      "mtime_ns": 1791800807603811216
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "hongguo_api.py_bundle_matches_source": true,
+  "jobs.py_bundle_matches_source": true,
+  "bundle_decrypt_files": [
+    "decutil.py",
+    "extract_keybox_pairs.py",
+    "oracle.py",
+    "unwrap_spade.py"
+  ],
+  "config.json_matches_original_cli": true,
+  "devices.json_matches_original_cli": true,
+  "diagnostic_scripts_syntax": "passed",
+  "backend_sources": {
+    "app_api.py": {
+      "matches": true,
+      "sha256": "55f10c9c2fa449bf01be384c6499a8b68845a7c000250c0fa70cc54b0447722c"
+    },
+    "hongguo_api.py": {
+      "matches": true,
+      "sha256": "9ed6d43376c363f2d3fd5b2614e5452e2e43b07d690cbedb86110bc6853384fa"
+    },
+    "hongguo_download.py": {
+      "matches": true,
+      "sha256": "8d4d48343ed8e4df5bf91a422ad09b5538901f852690a01d138e5551ed0f725c"
+    },
+    "hongguo_signer.py": {
+      "matches": true,
+      "sha256": "33146c20cd505e36760f4ee85e123f1821be632963b0782a4d3da25e94e5b8b2"
+    },
+    "jobs.py": {
+      "matches": true,
+      "sha256": "15938029cdf0f71153b8ffd3c29c33787efe0c08aac7f3d85edf07ea4096304a"
+    },
+    "mp4_stream.py": {
+      "matches": true,
+      "sha256": "bcd4a82452bebecda1b0496c19f87062ab8cb01c7ce84d6d700b3c5383f9eb8b"
+    },
+    "playback.py": {
+      "matches": true,
+      "sha256": "07b89f807ab4c1c67b080794b1daf46380a8c8f3ca820c3d98f2c20c491c218a"
+    },
+    "worker.py": {
+      "matches": true,
+      "sha256": "efaad7c7e17f71ae76a1772b50d8e6fbf2a1202e404c7edaeea4f3fc58cfd683"
+    }
+  },
+  "config.json_bundle_matches_source": true,
+  "devices.json_bundle_matches_source": true,
+  "playback_tests_after_final_range_iteration_change": "4 passed, 2026-10-13"
+}

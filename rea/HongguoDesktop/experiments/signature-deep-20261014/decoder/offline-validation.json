@@ -1,0 +1,21 @@
+{
+  "scope": "Pure local arithmetic; no request or signer process.",
+  "checks": {
+    "aes_block_selector_0": true,
+    "aes_embedded_bits_selector_0": true,
+    "aes_block_selector_1": true,
+    "aes_embedded_bits_selector_1": true,
+    "aes_block_selector_2": true,
+    "aes_embedded_bits_selector_2": true,
+    "aes_block_selector_3": true,
+    "aes_embedded_bits_selector_3": true,
+    "xmxor_32": true,
+    "xmxor_255": true,
+    "xmxor_512": true,
+    "xmxor_661": true,
+    "helios_8662": true,
+    "helios_3019": true
+  },
+  "passed": 14,
+  "total": 14
+}

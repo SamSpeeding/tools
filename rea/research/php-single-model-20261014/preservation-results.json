@@ -1,0 +1,16 @@
+{
+  "checked": 357,
+  "changed": [],
+  "new_project_files": [
+    {
+      "name": "play.php",
+      "bytes": 21277,
+      "sha256": "3a2bad1ac12fdba9bf95bce98761099e7bfeb582ab31ecfda09d21354df0a6db"
+    },
+    {
+      "name": "video.php",
+      "bytes": 130892,
+      "sha256": "99794a98a5188cedc531c01c8221fc79a31d5f9e7cacee273023030fc3a580b6"
+    }
+  ]
+}

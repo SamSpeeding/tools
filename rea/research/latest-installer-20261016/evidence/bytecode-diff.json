@@ -1,0 +1,1374 @@
+[
+  {
+    "path": "app/_buildinfo.pyc",
+    "old_sha256": "0191ee95b60cf6921e8867c66e38bd7584003f4691daadef1395d4620dc93da7",
+    "new_sha256": "273df78fd73059a0ab23996e1dcd7478f1865ee1f33e266c25bd145ac966b2ff",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\_buildinfo.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\_buildinfo.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 1,
+    "new_code_objects": 1,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/_integrity.pyc",
+    "old_sha256": "a03a4034a910c5582136cf8c5d005d315d06349793e9560c89a4181cc13d14ef",
+    "new_sha256": "07d5d3c08cadd59a7bb387e162c7629a2ac7ca8bc402c9465a1481ffe9eed0c3",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\_integrity.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\_integrity.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 1,
+    "new_code_objects": 1,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_consts"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      }
+    ]
+  },
+  {
+    "path": "app/apikeys.pyc",
+    "old_sha256": "5613d5b4f10979cc97fed563e826cbafb02f1a3d702cdfabf8c48612be8c4895",
+    "new_sha256": "5ce06b881e3c6fc0ec78ceca4eba8124b635f451c4c57d37de0cb4f4c98ec496",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\apikeys.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\apikeys.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 16,
+    "new_code_objects": 16,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/devicepool.pyc",
+    "old_sha256": "51724b0fb15fdb89dff204d9e58adf2bd65b44ca40402ada48c1ac6e2a84cf0f",
+    "new_sha256": "34e745351a25e6239cf60243d91a4df2683dbc6397180750c310cb5a40523b4e",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\devicepool.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\devicepool.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 11,
+    "new_code_objects": 11,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/downloader.pyc",
+    "old_sha256": "edbb88c479d1e9199490745b311f4fc29bd8889705243f3884d6677353f0831b",
+    "new_sha256": "23296ebbd84ee77c49342ba2675296648391e72496fa5c2f08e7290b96826769",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\downloader.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\downloader.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 25,
+    "new_code_objects": 25,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/decutil.pyc",
+    "old_sha256": "b6277011e2015886c0dce44c3c8f625b05a5fcbc1f078fffe3b4bdb14822bf0d",
+    "new_sha256": "da915113d383d7db4bfd904f9df1b597364f4bffba3079ba7a4f8f526e6e620c",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\decutil.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\frida\\decutil.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 13,
+    "new_code_objects": 13,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/extract_keybox_pairs.pyc",
+    "old_sha256": "efe86c9e11140681bd88d6c82677374b49d6f175b1313a00581f760bfcebdcb2",
+    "new_sha256": "43c71ee504eb922b9314b1a0089a47ea11f80c953d67d96611cad44832bb0508",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\extract_keybox_pairs.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\frida\\extract_keybox_pairs.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 15,
+    "new_code_objects": 15,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/offline_decrypt.pyc",
+    "old_sha256": "3c628f6fa1ffcd2fd374129e5331c97ce1698c3eda813453dfa783afe86cd457",
+    "new_sha256": "4950dcfc4b7f1018266c9f95ec31dd1aa41e37fe39dfbfd630ead1bd2154e090",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\offline_decrypt.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\frida\\offline_decrypt.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 4,
+    "new_code_objects": 4,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/oracle.pyc",
+    "old_sha256": "0012168e665ef790c2506bef7469dcdc1ad19f6ea95c8524dd3259ea6a0d4796",
+    "new_sha256": "755959d5e475b661037e1b8d2c63ad3ea2b483153cda245a1d3ad45bdcb48f08",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\oracle.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\frida\\oracle.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 28,
+    "new_code_objects": 28,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/frida/unwrap_spade.pyc",
+    "old_sha256": "9b87eb2d77c5949f741ec9590425137e18e10ae6a0f4d5b18af955d2b7efa7b4",
+    "new_sha256": "8f37a14893ba11ec65e2d2996db01c4fb10f7d5336b0d913939f6943442fa41c",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\frida\\unwrap_spade.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\frida\\unwrap_spade.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 8,
+    "new_code_objects": 8,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/hongguo.pyc",
+    "old_sha256": "7a5b66a67dac3629c7d4c92a564ec1b4b90134e020670b1e7d348943b82be479",
+    "new_sha256": "7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\hongguo.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\hongguo.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 239,
+    "new_code_objects": 254,
+    "added": [
+      "_VmDead#1",
+      "_ss_site_executor#1",
+      "_vm_alive#1",
+      "_vm_alive.<locals>.<lambda>#1",
+      "_vm_alive.<locals>.<lambda>#2",
+      "_vm_body#1",
+      "_vm_body.<locals>.<listcomp>#1",
+      "_vm_dead#1",
+      "_vm_entry#1",
+      "_vm_kind#1",
+      "_vm_lookup#1",
+      "_vm_tab_pass#1",
+      "_vm_tab_query#1",
+      "_vm_tab_query.<locals>.<genexpr>#1",
+      "_vm_ttl#1"
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "_api_once#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 510,
+        "new_line": 510
+      },
+      {
+        "function": "_source_good#1",
+        "fields": [
+          "co_code",
+          "co_names"
+        ],
+        "old_line": 809,
+        "new_line": 819
+      },
+      {
+        "function": "_source_probe#1",
+        "fields": [
+          "co_code",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 875,
+        "new_line": 886
+      },
+      {
+        "function": "_ss_task#1",
+        "fields": [
+          "co_argcount",
+          "co_code",
+          "co_exceptiontable"
+        ],
+        "old_line": 1662,
+        "new_line": 1688
+      },
+      {
+        "function": "_ss_web#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_names"
+        ],
+        "old_line": 1681,
+        "new_line": 1708
+      },
+      {
+        "function": "api#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 543,
+        "new_line": 547
+      },
+      {
+        "function": "get_video_tracks#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 2003,
+        "new_line": 2198
+      },
+      {
+        "function": "get_video_urls#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 1964,
+        "new_line": 2181
+      }
+    ]
+  },
+  {
+    "path": "app/licensing.pyc",
+    "old_sha256": "b9ac41e7e4e39f97b7fdeb0d46366ac091c909aa484fa608cbfb84832f5c7657",
+    "new_sha256": "3acfec7638400cf3ace36b66f8a3f4d1616878fe51136e58a489c41c9c529584",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\licensing.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\licensing.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 44,
+    "new_code_objects": 44,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_code",
+          "co_names"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "_apply_result#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 473,
+        "new_line": 500
+      },
+      {
+        "function": "_fetch_usage#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 761,
+        "new_line": 795
+      },
+      {
+        "function": "_load_state#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 241,
+        "new_line": 241
+      },
+      {
+        "function": "_save_state#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 248,
+        "new_line": 255
+      },
+      {
+        "function": "activate#1",
+        "fields": [
+          "co_code",
+          "co_consts"
+        ],
+        "old_line": 634,
+        "new_line": 666
+      },
+      {
+        "function": "deactivate#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 660,
+        "new_line": 693
+      }
+    ]
+  },
+  {
+    "path": "app/nettls.pyc",
+    "old_sha256": "3e741b356ee1521c8a32dc55fdf7beaeb3d315e17dd84ea70722b4201aa83b68",
+    "new_sha256": "f32f43574e9e48fa6f73b2d602c9731d53e4bb92f7114106d330307231b6162f",
+    "header_equal": true,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\nettls.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\nettls.py",
+    "filename_normalized_equal": true,
+    "code_without_source_location_equal": true,
+    "old_code_objects": 19,
+    "new_code_objects": 19,
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  {
+    "path": "app/offline_dl.pyc",
+    "old_sha256": "7e5c35f4713c7f14bc59249a5b380703705a5c3e53a26e4cde1094758942d438",
+    "new_sha256": "dbb3615b4059dd8145b358baecfccc4944c6d963abc0a999f58b6427b9bb9ad8",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\offline_dl.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\offline_dl.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 474,
+    "new_code_objects": 484,
+    "added": [
+      "_board_json_titles#1",
+      "_board_json_titles.<locals>.<genexpr>#1",
+      "_ep_half#1",
+      "_public_get.<locals>.<genexpr>#1",
+      "_share_sid_from_location.<locals>.<setcomp>#1",
+      "hgdj_rank.<locals>.<dictcomp>#1",
+      "hgdj_rank.<locals>.<genexpr>#1",
+      "hgdj_rank.<locals>.<genexpr>.<genexpr>#1",
+      "search_seasons.<locals>.<genexpr>#15",
+      "search_seasons.<locals>.<listcomp>#16",
+      "search_seasons.<locals>.<setcomp>#2",
+      "search_seasons.<locals>.<setcomp>#3"
+    ],
+    "removed": [
+      "_parse_share_links.<locals>.<listcomp>#1",
+      "_parse_share_links.<locals>.<listcomp>#2"
+    ],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "EpisodePool._end#1",
+        "fields": [
+          "co_code",
+          "co_names"
+        ],
+        "old_line": 4925,
+        "new_line": 5163
+      },
+      {
+        "function": "_hgdj_parse_rank#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names"
+        ],
+        "old_line": 951,
+        "new_line": 1050
+      },
+      {
+        "function": "_lib_eps_mtime#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 2031,
+        "new_line": 2219
+      },
+      {
+        "function": "_lib_local_eps#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 1869,
+        "new_line": 2055
+      },
+      {
+        "function": "_parse_share_links#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 453,
+        "new_line": 469
+      },
+      {
+        "function": "_public_get#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_cellvars",
+          "co_exceptiontable"
+        ],
+        "old_line": 700,
+        "new_line": 773
+      },
+      {
+        "function": "_resolve_series#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 1429,
+        "new_line": 1557
+      },
+      {
+        "function": "_scrape_board#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 464,
+        "new_line": 519
+      },
+      {
+        "function": "_season_start#1",
+        "fields": [
+          "co_code"
+        ],
+        "old_line": 4072,
+        "new_line": 4298
+      },
+      {
+        "function": "_season_start.<locals>.<lambda>#2",
+        "fields": [
+          "co_argcount",
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 4134,
+        "new_line": 4360
+      },
+      {
+        "function": "_share_sid_from_location#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 722,
+        "new_line": 809
+      },
+      {
+        "function": "_video_model#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 1522,
+        "new_line": 1667
+      },
+      {
+        "function": "dl_vid#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 1646,
+        "new_line": 1784
+      },
+      {
+        "function": "hgdj_rank#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_cellvars",
+          "co_exceptiontable"
+        ],
+        "old_line": 971,
+        "new_line": 1071
+      },
+      {
+        "function": "hgdj_rank.<locals>._get#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 988,
+        "new_line": 1095
+      },
+      {
+        "function": "library_delete#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 2171,
+        "new_line": 2372
+      },
+      {
+        "function": "library_episodes#1",
+        "fields": [
+          "co_stacksize",
+          "co_code"
+        ],
+        "old_line": 2125,
+        "new_line": 2320
+      },
+      {
+        "function": "library_restore#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 2201,
+        "new_line": 2406
+      },
+      {
+        "function": "library_scan#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 2082,
+        "new_line": 2272
+      },
+      {
+        "function": "library_update#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 4289,
+        "new_line": 4517
+      },
+      {
+        "function": "library_update.<locals>._ended#1",
+        "fields": [
+          "co_argcount",
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 4380,
+        "new_line": 4608
+      },
+      {
+        "function": "library_update.<locals>._queue#1",
+        "fields": [
+          "co_code"
+        ],
+        "old_line": 4388,
+        "new_line": 4623
+      },
+      {
+        "function": "library_update.<locals>._queue.<locals>.<lambda>#2",
+        "fields": [
+          "co_argcount",
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 4397,
+        "new_line": 4632
+      },
+      {
+        "function": "live_clear#1",
+        "fields": [
+          "co_code",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 185,
+        "new_line": 189
+      },
+      {
+        "function": "live_snapshot#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 296,
+        "new_line": 301
+      },
+      {
+        "function": "main#1",
+        "fields": [
+          "co_code",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 5302,
+        "new_line": 5542
+      },
+      {
+        "function": "merge_series#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 2540,
+        "new_line": 2746
+      },
+      {
+        "function": "search_seasons#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_varnames",
+          "co_cellvars",
+          "co_exceptiontable"
+        ],
+        "old_line": 3860,
+        "new_line": 4079
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#10",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 3993,
+        "new_line": 4217
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#11",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_freevars"
+        ],
+        "old_line": 3998,
+        "new_line": 4219
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#12",
+        "fields": [
+          "co_code",
+          "co_freevars"
+        ],
+        "old_line": 4007,
+        "new_line": 4224
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#13",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 4028,
+        "new_line": 4233
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#14",
+        "fields": [
+          "co_code",
+          "co_consts"
+        ],
+        "old_line": 4030,
+        "new_line": 4254
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#5",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3911,
+        "new_line": 4134
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#6",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3915,
+        "new_line": 4137
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#7",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3975,
+        "new_line": 4141
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#8",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3984,
+        "new_line": 4201
+      },
+      {
+        "function": "search_seasons.<locals>.<genexpr>#9",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 3991,
+        "new_line": 4210
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#10",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 4001,
+        "new_line": 4226
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#11",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 4009,
+        "new_line": 4227
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#12",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 4015,
+        "new_line": 4235
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#13",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 4024,
+        "new_line": 4241
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#14",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 4031,
+        "new_line": 4250
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#15",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 4034,
+        "new_line": 4257
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#2",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3937,
+        "new_line": 4133
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#3",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3950,
+        "new_line": 4163
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#5",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_freevars"
+        ],
+        "old_line": 3967,
+        "new_line": 4178
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#6",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 3968,
+        "new_line": 4193
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#7",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 3972,
+        "new_line": 4194
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#8",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_freevars"
+        ],
+        "old_line": 3985,
+        "new_line": 4198
+      },
+      {
+        "function": "search_seasons.<locals>.<listcomp>#9",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_freevars"
+        ],
+        "old_line": 4000,
+        "new_line": 4211
+      },
+      {
+        "function": "search_seasons.<locals>.<setcomp>#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 3990,
+        "new_line": 4131
+      }
+    ]
+  },
+  {
+    "path": "app/safeguards.pyc",
+    "old_sha256": "c53f624343e40a66ec740d9a7bd7d46224e2208b5c9190ed74386ce1befe3d82",
+    "new_sha256": "9dccd7dab9fae770c3342408f2bed83fd1c88708a043b384076c60fb8626527b",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\safeguards.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\safeguards.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 15,
+    "new_code_objects": 16,
+    "added": [
+      "cache_set.<locals>.<listcomp>#1"
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_code",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "cache_set#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_cellvars",
+          "co_exceptiontable"
+        ],
+        "old_line": 38,
+        "new_line": 39
+      }
+    ]
+  },
+  {
+    "path": "app/server.pyc",
+    "old_sha256": "b84e074d9796f139671e82957d46aa745f90c64c4e8df6c1efa05394b21ae9d0",
+    "new_sha256": "45769a33d8f1006082ae98240f9222e939f87ec206a2f7a54ab07ab06bccb224",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app\\server.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app\\server.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 247,
+    "new_code_objects": 248,
+    "added": [
+      "dl_library_delete.<locals>.<listcomp>#3"
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_code",
+          "co_consts"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "_dl_worker#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 1077,
+        "new_line": 1079
+      },
+      {
+        "function": "dl_episodes#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 1437,
+        "new_line": 1466
+      },
+      {
+        "function": "dl_library_convert#1",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 2706,
+        "new_line": 2760
+      },
+      {
+        "function": "dl_library_convert.<locals>._work#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 2735,
+        "new_line": 2789
+      },
+      {
+        "function": "dl_library_delete#1",
+        "fields": [
+          "co_nlocals",
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_cellvars",
+          "co_exceptiontable"
+        ],
+        "old_line": 2623,
+        "new_line": 2656
+      },
+      {
+        "function": "dl_library_delete.<locals>.<listcomp>#2",
+        "fields": [
+          "co_stacksize",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_freevars"
+        ],
+        "old_line": 2639,
+        "new_line": 2678
+      },
+      {
+        "function": "dl_library_play#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 2803,
+        "new_line": 2860
+      },
+      {
+        "function": "dl_library_update#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_exceptiontable"
+        ],
+        "old_line": 2879,
+        "new_line": 2942
+      },
+      {
+        "function": "dl_resolve.<locals>._resolve_one#1",
+        "fields": [
+          "co_code"
+        ],
+        "old_line": 1458,
+        "new_line": 1489
+      },
+      {
+        "function": "dl_status#1",
+        "fields": [
+          "co_consts"
+        ],
+        "old_line": 1506,
+        "new_line": 1537
+      },
+      {
+        "function": "dl_submit#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 1204,
+        "new_line": 1210
+      },
+      {
+        "function": "dl_update_download#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 3161,
+        "new_line": 3224
+      }
+    ]
+  },
+  {
+    "path": "app.pyc",
+    "old_sha256": "3a08a721a3d66553aaf794c3f62ca956c0bf9394e11c8c92cd70714d122be1b3",
+    "new_sha256": "47cd99eef13862864326351a7492371a9c41504db07e0c7b7b4aa3b5bafacdb1",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\app.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\app.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 92,
+    "new_code_objects": 93,
+    "added": [
+      "_can_bind#1"
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "function": "<module>#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 1,
+        "new_line": 1
+      },
+      {
+        "function": "_resolve_port#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 209,
+        "new_line": 222
+      },
+      {
+        "function": "_start_on_port#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 321,
+        "new_line": 340
+      },
+      {
+        "function": "wait_port#1",
+        "fields": [
+          "co_argcount",
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames"
+        ],
+        "old_line": 40,
+        "new_line": 40
+      }
+    ]
+  },
+  {
+    "path": "launcher.pyc",
+    "old_sha256": "2cfda9d434f86dc770ad3baf3af91d355221acf477962d946e1f2920d65a8a57",
+    "new_sha256": "3865c308fb585eaa392b7872f25eec4226a534ae1b354baaddd4313dd7875553",
+    "header_equal": false,
+    "old_filename": "D:\\code\\Hongguo-App\\installer\\_stage\\launcher.py",
+    "new_filename": "D:\\code\\Hongguo-App\\installer\\_stage76\\launcher.py",
+    "filename_normalized_equal": false,
+    "code_without_source_location_equal": false,
+    "old_code_objects": 13,
+    "new_code_objects": 13,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "function": "_free_port#1",
+        "fields": [
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_exceptiontable"
+        ],
+        "old_line": 99,
+        "new_line": 99
+      },
+      {
+        "function": "main#1",
+        "fields": [
+          "co_nlocals",
+          "co_code",
+          "co_consts",
+          "co_names",
+          "co_varnames",
+          "co_exceptiontable"
+        ],
+        "old_line": 108,
+        "new_line": 119
+      }
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "time": "2026-10-14 11:13:46 +0800",
+  "isolated_python": true,
+  "cwd": "/private/tmp",
+  "module": "/Users/tt/Desktop/rea/HongguoDesktop/release/HongguoDesktop.app/Contents/Resources/backend/hongguo_hm/__init__.py",
+  "model_api": "multi_video_model",
+  "model_fallback": false,
+  "track_count": 5
+}

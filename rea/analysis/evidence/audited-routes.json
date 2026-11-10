@@ -1,0 +1,1063 @@
+{
+  "source_sha256": "55118631849817f20088c30894d94a7c84bff79d03eebe7af4b545c478ee5b0c",
+  "analysis_type": "static; target code not imported or executed",
+  "explicit_route_count": 70,
+  "explicit_unique_path_count": 67,
+  "explicit_method_counts": {
+    "GET": 40,
+    "POST": 29,
+    "DELETE": 1
+  },
+  "packaged_middleware_allowed_explicit_routes": 50,
+  "framework_routes": [
+    {
+      "path": "/openapi.json",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "handler": "openapi",
+      "packaged_middleware_allowed": false,
+      "api_key_required_in_nonpackaged_mode": false,
+      "evidence": "analysis/extracted/python/Lib/site-packages/fastapi/applications.py:1105"
+    },
+    {
+      "path": "/docs",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "handler": "swagger_ui_html",
+      "packaged_middleware_allowed": false,
+      "api_key_required_in_nonpackaged_mode": false,
+      "evidence": "analysis/extracted/python/Lib/site-packages/fastapi/applications.py:1105"
+    },
+    {
+      "path": "/docs/oauth2-redirect",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "handler": "swagger_ui_redirect",
+      "packaged_middleware_allowed": false,
+      "api_key_required_in_nonpackaged_mode": true,
+      "evidence": "analysis/extracted/python/Lib/site-packages/fastapi/applications.py:1105"
+    },
+    {
+      "path": "/redoc",
+      "methods": [
+        "GET",
+        "HEAD"
+      ],
+      "handler": "redoc_html",
+      "packaged_middleware_allowed": false,
+      "api_key_required_in_nonpackaged_mode": false,
+      "evidence": "analysis/extracted/python/Lib/site-packages/fastapi/applications.py:1105"
+    }
+  ],
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "index",
+      "source_line": 726,
+      "registration_bytecode_offset": 1832,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "no API-key requirement",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/stats",
+      "handler": "stats",
+      "source_line": 737,
+      "registration_bytecode_offset": 1892,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "admin_token (header x-admin-token or query admin_token)",
+      "handler_argument_names": [
+        "request"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/ui",
+      "handler": "ui",
+      "source_line": 757,
+      "registration_bytecode_offset": 1958,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "no API-key requirement",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/img",
+      "handler": "api_img",
+      "source_line": 763,
+      "registration_bytecode_offset": 2018,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "no API-key requirement",
+      "handler_argument_names": [
+        "url"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/admin",
+      "handler": "admin_page",
+      "source_line": 827,
+      "registration_bytecode_offset": 2100,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "no API-key requirement",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/admin/keys",
+      "handler": "admin_list_keys",
+      "source_line": 833,
+      "registration_bytecode_offset": 2160,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "admin_token (header x-admin-token or query admin_token)",
+      "handler_argument_names": [
+        "request"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/keys",
+      "handler": "admin_gen_key",
+      "source_line": 840,
+      "registration_bytecode_offset": 2226,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "admin_token (header x-admin-token or query admin_token)",
+      "handler_argument_names": [
+        "request",
+        "note"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/admin/keys/revoke",
+      "handler": "admin_revoke_key",
+      "source_line": 848,
+      "registration_bytecode_offset": 2300,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "admin_token (header x-admin-token or query admin_token)",
+      "handler_argument_names": [
+        "request",
+        "key",
+        "enable"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "DELETE",
+      "path": "/admin/keys",
+      "handler": "admin_delete_key",
+      "source_line": 855,
+      "registration_bytecode_offset": 2378,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "admin_token (header x-admin-token or query admin_token)",
+      "handler_argument_names": [
+        "request",
+        "key"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/search",
+      "handler": "api_search",
+      "source_line": 862,
+      "registration_bytecode_offset": 2448,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "q",
+        "limit"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/rank",
+      "handler": "api_rank",
+      "source_line": 871,
+      "registration_bytecode_offset": 2572,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "board",
+        "limit"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/latest",
+      "handler": "api_latest",
+      "source_line": 881,
+      "registration_bytecode_offset": 2646,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "genre",
+        "only_today",
+        "limit",
+        "refresh",
+        "no_cache"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/filters",
+      "handler": "api_filters",
+      "source_line": 900,
+      "registration_bytecode_offset": 2732,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "genre"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/browse",
+      "handler": "api_browse",
+      "source_line": 912,
+      "registration_bytecode_offset": 2802,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "genre",
+        "theme",
+        "setting",
+        "background",
+        "sort",
+        "gender",
+        "days",
+        "status",
+        "limit"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/episodes",
+      "handler": "api_episodes",
+      "source_line": 937,
+      "registration_bytecode_offset": 2910,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "series_id"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/metrics/batch",
+      "handler": "api_metrics_batch",
+      "source_line": 946,
+      "registration_bytecode_offset": 2976,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/play",
+      "handler": "api_play",
+      "source_line": 967,
+      "registration_bytecode_offset": 3064,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "series_id",
+        "ep"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/download",
+      "handler": "api_download",
+      "source_line": 990,
+      "registration_bytecode_offset": 3138,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "series_id",
+        "ep",
+        "ep_covers"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/download/status",
+      "handler": "api_download_status",
+      "source_line": 1000,
+      "registration_bytecode_offset": 3216,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "task_id"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/video_url",
+      "handler": "api_video_url",
+      "source_line": 1005,
+      "registration_bytecode_offset": 3286,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "vid"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/stream",
+      "handler": "api_stream",
+      "source_line": 1021,
+      "registration_bytecode_offset": 3352,
+      "packaged_middleware_allowed": false,
+      "authentication_before_handler": "API key and per-key rate limit",
+      "handler_argument_names": [
+        "series_id",
+        "ep",
+        "vid",
+        "quality"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/submit",
+      "handler": "dl_submit",
+      "source_line": 1204,
+      "registration_bytecode_offset": 3538,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "GET",
+      "path": "/dl/search",
+      "handler": "dl_search",
+      "source_line": 1286,
+      "registration_bytecode_offset": 3670,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "q",
+        "cursor",
+        "again"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/search/seasons",
+      "handler": "dl_search_seasons",
+      "source_line": 1318,
+      "registration_bytecode_offset": 3748,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "q"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/rank",
+      "handler": "dl_rank",
+      "source_line": 1335,
+      "registration_bytecode_offset": 3818,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "board",
+        "category",
+        "offset",
+        "size"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/rank-episodes",
+      "handler": "dl_rank_episodes",
+      "source_line": 1351,
+      "registration_bytecode_offset": 3900,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/preview",
+      "handler": "dl_preview",
+      "source_line": 1364,
+      "registration_bytecode_offset": 3988,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "series_id",
+        "ep",
+        "fresh"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/explorer",
+      "handler": "dl_explorer",
+      "source_line": 1408,
+      "registration_bytecode_offset": 4076,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "page",
+        "size"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/episodes",
+      "handler": "dl_episodes",
+      "source_line": 1437,
+      "registration_bytecode_offset": 4156,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "series_id"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/resolve",
+      "handler": "dl_resolve",
+      "source_line": 1452,
+      "registration_bytecode_offset": 4226,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/status",
+      "handler": "dl_status",
+      "source_line": 1506,
+      "registration_bytecode_offset": 4314,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token for full response; anonymous response only running",
+      "handler_argument_names": [
+        "request"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/signhealth",
+      "handler": "dl_signhealth",
+      "source_line": 1588,
+      "registration_bytecode_offset": 4380,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/signer-restarted",
+      "handler": "dl_signer_restarted",
+      "source_line": 1598,
+      "registration_bytecode_offset": 4440,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/diag",
+      "handler": "dl_diag",
+      "source_line": 1608,
+      "registration_bytecode_offset": 4500,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/config",
+      "handler": "dl_config_get",
+      "source_line": 1727,
+      "registration_bytecode_offset": 4898,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/config",
+      "handler": "dl_config_set",
+      "source_line": 1732,
+      "registration_bytecode_offset": 4958,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/open",
+      "handler": "dl_open",
+      "source_line": 2204,
+      "registration_bytecode_offset": 5444,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/bugreport",
+      "handler": "dl_bugreport",
+      "source_line": 2245,
+      "registration_bytecode_offset": 5520,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/pick",
+      "handler": "dl_pick",
+      "source_line": 2576,
+      "registration_bytecode_offset": 5724,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/library",
+      "handler": "dl_library",
+      "source_line": 2586,
+      "registration_bytecode_offset": 5788,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/library/episodes",
+      "handler": "dl_library_episodes",
+      "source_line": 2594,
+      "registration_bytecode_offset": 5852,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "name"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/seen",
+      "handler": "dl_library_seen",
+      "source_line": 2606,
+      "registration_bytecode_offset": 5928,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/delete",
+      "handler": "dl_library_delete",
+      "source_line": 2623,
+      "registration_bytecode_offset": 6020,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/restore",
+      "handler": "dl_library_restore",
+      "source_line": 2649,
+      "registration_bytecode_offset": 6112,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/merge",
+      "handler": "dl_library_merge",
+      "source_line": 2663,
+      "registration_bytecode_offset": 6258,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/library/merge-status",
+      "handler": "dl_library_merge_status",
+      "source_line": 2693,
+      "registration_bytecode_offset": 6350,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/convert",
+      "handler": "dl_library_convert",
+      "source_line": 2706,
+      "registration_bytecode_offset": 6480,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/convert-cancel",
+      "handler": "dl_library_convert_cancel",
+      "source_line": 2759,
+      "registration_bytecode_offset": 6572,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/library/convert-status",
+      "handler": "dl_library_convert_status",
+      "source_line": 2769,
+      "registration_bytecode_offset": 6636,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/poster",
+      "handler": "dl_poster",
+      "source_line": 2775,
+      "registration_bytecode_offset": 6700,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "name"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/open",
+      "handler": "dl_library_open",
+      "source_line": 2785,
+      "registration_bytecode_offset": 6776,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/play",
+      "handler": "dl_library_play",
+      "source_line": 2803,
+      "registration_bytecode_offset": 6868,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/library/file",
+      "handler": "dl_library_file",
+      "source_line": 2842,
+      "registration_bytecode_offset": 6960,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "name",
+        "ep"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/update",
+      "handler": "dl_library_update",
+      "source_line": 2879,
+      "registration_bytecode_offset": 7052,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/library/seasons/decline",
+      "handler": "dl_library_seasons_decline",
+      "source_line": 2901,
+      "registration_bytecode_offset": 7144,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/cancel",
+      "handler": "dl_cancel",
+      "source_line": 2918,
+      "registration_bytecode_offset": 7236,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl",
+      "handler": "dl_page",
+      "source_line": 2925,
+      "registration_bytecode_offset": 7300,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "anonymous page; valid query k exchanges launch token for UI cookie",
+      "handler_argument_names": [
+        "request"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/license/status",
+      "handler": "dl_license_status",
+      "source_line": 2945,
+      "registration_bytecode_offset": 7370,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "POST",
+      "path": "/dl/license/activate",
+      "handler": "dl_license_activate",
+      "source_line": 2950,
+      "registration_bytecode_offset": 7434,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "POST",
+      "path": "/dl/license/deactivate",
+      "handler": "dl_license_deactivate",
+      "source_line": 2955,
+      "registration_bytecode_offset": 7526,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "POST",
+      "path": "/dl/license/reactivate",
+      "handler": "dl_license_reactivate",
+      "source_line": 2960,
+      "registration_bytecode_offset": 7590,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "GET",
+      "path": "/dl/license/usage",
+      "handler": "dl_license_usage",
+      "source_line": 2970,
+      "registration_bytecode_offset": 7654,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "GET",
+      "path": "/dl/license/plans",
+      "handler": "dl_license_plans",
+      "source_line": 3022,
+      "registration_bytecode_offset": 7874,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/license/buy",
+      "handler": "dl_license_buy",
+      "source_line": 3040,
+      "registration_bytecode_offset": 7940,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/license/purchase-poll",
+      "handler": "dl_license_purchase_poll",
+      "source_line": 3067,
+      "registration_bytecode_offset": 8034,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "session_id"
+      ],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "POST",
+      "path": "/dl/license/manage",
+      "handler": "dl_license_manage",
+      "source_line": 3088,
+      "registration_bytecode_offset": 8112,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": true
+    },
+    {
+      "method": "GET",
+      "path": "/dl/update-check",
+      "handler": "dl_update_check",
+      "source_line": 3121,
+      "registration_bytecode_offset": 8178,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/update-download",
+      "handler": "dl_update_download",
+      "source_line": 3161,
+      "registration_bytecode_offset": 8244,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "GET",
+      "path": "/dl/update-progress",
+      "handler": "dl_update_progress",
+      "source_line": 3239,
+      "registration_bytecode_offset": 8310,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [],
+      "handler_direct_license_calls": false
+    },
+    {
+      "method": "POST",
+      "path": "/dl/update-run",
+      "handler": "dl_update_run",
+      "source_line": 3245,
+      "registration_bytecode_offset": 8376,
+      "packaged_middleware_allowed": true,
+      "authentication_before_handler": "UI token (when HG_UI_TOKEN is configured)",
+      "handler_argument_names": [
+        "payload"
+      ],
+      "handler_direct_license_calls": false
+    }
+  ],
+  "scanned_modules": [
+    {
+      "path": "analysis/extracted/app/_buildinfo.pyc",
+      "code_objects": 1,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/_integrity.pyc",
+      "code_objects": 1,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/apikeys.pyc",
+      "code_objects": 16,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/devicepool.pyc",
+      "code_objects": 11,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/downloader.pyc",
+      "code_objects": 25,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/frida/decutil.pyc",
+      "code_objects": 13,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/frida/extract_keybox_pairs.pyc",
+      "code_objects": 15,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/frida/offline_decrypt.pyc",
+      "code_objects": 4,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/frida/oracle.pyc",
+      "code_objects": 28,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/frida/unwrap_spade.pyc",
+      "code_objects": 8,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/hongguo.pyc",
+      "code_objects": 240,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/licensing.pyc",
+      "code_objects": 44,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/nettls.pyc",
+      "code_objects": 19,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/offline_dl.pyc",
+      "code_objects": 474,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/safeguards.pyc",
+      "code_objects": 15,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/app/server.pyc",
+      "code_objects": 247,
+      "framework_hits": [
+        {
+          "handler": "<module>",
+          "source_line": 1,
+          "names": [
+            "FastAPI",
+            "uvicorn"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "analysis/extracted/app.pyc",
+      "code_objects": 92,
+      "framework_hits": []
+    },
+    {
+      "path": "analysis/extracted/launcher.pyc",
+      "code_objects": 13,
+      "framework_hits": []
+    }
+  ],
+  "absence_scope": "Framework-symbol check across extracted shipped application Python code objects; not a runtime proof or third-party service inventory.",
+  "independent_local_routes_comparison": {
+    "missing_from_local_routes": [],
+    "extra_in_local_routes": []
+  }
+}

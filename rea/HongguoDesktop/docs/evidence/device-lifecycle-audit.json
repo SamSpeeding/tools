@@ -1,0 +1,48 @@
+{
+  "mode": "offline controlled replay; no network",
+  "artifacts": [
+    {
+      "file": "/Users/tt/Desktop/rea/analysis/extracted/app/devicepool.pyc",
+      "sha256": "85299d65916515c032b8e5c4b7920e4f52149099b23d74042aaa878a43c245ba"
+    },
+    {
+      "file": "/Users/tt/Desktop/rea/analysis/extracted/app/hongguo.pyc",
+      "sha256": "42d0c2bcfffc346afe5b3b75d259261b787daf8f144298ceaa1bfa4897ad1312"
+    },
+    {
+      "file": "/Users/tt/Desktop/rea/analysis/extracted/app/safeguards.pyc",
+      "sha256": "2fe27f2c9a95acb871c05fe0dd8b20844342ea7990853b9cad755a8ed28e3a9c"
+    }
+  ],
+  "devicepool_imports": [
+    "json",
+    "os",
+    "random",
+    "threading",
+    "uuid"
+  ],
+  "original_response_classification": {
+    "current_capital_Code": "no exception",
+    "lowercase_same_code": "RiskControlError",
+    "explicit_auth_expired": "AuthExpiredError"
+  },
+  "original_refresh_replay": {
+    "fake_grab_calls": 1,
+    "updated_query_fields": [
+      "cdid",
+      "channel",
+      "device_id",
+      "iid",
+      "klink_egdi",
+      "version_name"
+    ],
+    "unknown_query_ignored": true,
+    "copied_session_header_names": [
+      "cookie",
+      "x-tt-store-region",
+      "x-tt-token"
+    ],
+    "user_agent_unchanged": true,
+    "written_only_to_temporary_config": true
+  }
+}

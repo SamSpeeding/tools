@@ -1,0 +1,243 @@
+{
+  "search_rebirth": {
+    "first": 17,
+    "second": 7,
+    "cursor": {
+      "offset": 6,
+      "passback": "5",
+      "search_id": "####11@20261013150501A2B3AB67BA5D10CD5E54"
+    },
+    "first_id": "7683432711033211928"
+  },
+  "rank_all_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_all_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_all_new": {
+    "count": 10,
+    "more": true
+  },
+  "rank_human_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_human_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_human_new": {
+    "count": 10,
+    "more": true
+  },
+  "rank_comic_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_comic_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_comic_new": {
+    "count": 10,
+    "more": true
+  },
+  "rank_ai_recommend": {
+    "count": 10,
+    "more": true
+  },
+  "rank_ai_hot": {
+    "count": 10,
+    "more": true
+  },
+  "rank_ai_new": {
+    "count": 10,
+    "more": true
+  },
+  "filters_short_play": [
+    {
+      "type": "genre",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "category_dim_theme",
+      "selection_type": 2,
+      "count": 29
+    },
+    {
+      "type": "category_dim_role",
+      "selection_type": 2,
+      "count": 42
+    },
+    {
+      "type": "category_dim_epoch",
+      "selection_type": 2,
+      "count": 11
+    },
+    {
+      "type": "sort",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "gender",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "online_time",
+      "selection_type": 2,
+      "count": 4
+    }
+  ],
+  "filtered_short_play": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7663064768961334297"
+  },
+  "latest_short_play": {
+    "first": 17,
+    "second": 18,
+    "cursor": {
+      "offset": 17
+    },
+    "first_id": "7694947161145871384"
+  },
+  "filters_comic_series": [
+    {
+      "type": "genre",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "category_dim_theme",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_role",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_epoch",
+      "selection_type": 2,
+      "count": 9
+    },
+    {
+      "type": "sort",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "gender",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "creation_status",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "online_time",
+      "selection_type": 2,
+      "count": 4
+    }
+  ],
+  "filtered_comic_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7695087869236350014"
+  },
+  "latest_comic_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7695083238712151064"
+  },
+  "filters_ai_series": [
+    {
+      "type": "genre",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "category_dim_theme",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_role",
+      "selection_type": 2,
+      "count": 8
+    },
+    {
+      "type": "category_dim_epoch",
+      "selection_type": 2,
+      "count": 9
+    },
+    {
+      "type": "sort",
+      "selection_type": 2,
+      "count": 3
+    },
+    {
+      "type": "gender",
+      "selection_type": 2,
+      "count": 2
+    },
+    {
+      "type": "online_time",
+      "selection_type": 2,
+      "count": 4
+    }
+  ],
+  "filtered_ai_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7694919351257795608"
+  },
+  "latest_ai_series": {
+    "first": 18,
+    "second": 18,
+    "cursor": {
+      "offset": 18
+    },
+    "first_id": "7695313611605937214"
+  },
+  "detail": {
+    "title": "坠崖捡个参娃娃",
+    "episodes": 74,
+    "complete": true
+  },
+  "duplicate": {
+    "single_task": true
+  },
+  "browse_during_download": {
+    "items": 10,
+    "seconds": 0.88
+  },
+  "result": {
+    "status": "incomplete",
+    "stage": "video_model",
+    "reason": "未取得视频模型，请稍后重试。",
+    "source": "smoke-runtime/tasks.json and smoke.log; appended from the recorded run, not a new run",
+    "subsequent_diagnostic": "model-repro.json identifies the platform business error Code=110001"
+  }
+}

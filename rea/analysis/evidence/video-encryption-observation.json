@@ -1,0 +1,87 @@
+{
+  "source_export": "outputs/坠崖捡个参娃娃_7689863296106646590.json",
+  "source_sha256": "4429e9bfe6909731c1bef898bc4a5cf1c3a2fb93662146107f1d8caec3a4e912",
+  "episode_index": 1,
+  "tracks": [
+    {
+      "definition": "1080p",
+      "codec": "bytevc1",
+      "encrypt": true,
+      "encryption_method": "cenc-aes-ctr",
+      "has_kid": true,
+      "has_spade_a": true,
+      "spade_a_chars": 52
+    },
+    {
+      "definition": "720p",
+      "codec": "bytevc1",
+      "encrypt": true,
+      "encryption_method": "cenc-aes-ctr",
+      "has_kid": true,
+      "has_spade_a": true,
+      "spade_a_chars": 52
+    },
+    {
+      "definition": "540p",
+      "codec": "bytevc1",
+      "encrypt": true,
+      "encryption_method": "cenc-aes-ctr",
+      "has_kid": true,
+      "has_spade_a": true,
+      "spade_a_chars": 52
+    },
+    {
+      "definition": "480p",
+      "codec": "bytevc1",
+      "encrypt": true,
+      "encryption_method": "cenc-aes-ctr",
+      "has_kid": true,
+      "has_spade_a": true,
+      "spade_a_chars": 52
+    },
+    {
+      "definition": "360p",
+      "codec": "bytevc1",
+      "encrypt": true,
+      "encryption_method": "cenc-aes-ctr",
+      "has_kid": true,
+      "has_spade_a": true,
+      "spade_a_chars": 52
+    }
+  ],
+  "environment": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "python": "3.14.3",
+    "Crypto_available": false,
+    "ffmpeg_path": "/opt/homebrew/bin/ffmpeg",
+    "ffprobe_path": "/opt/homebrew/bin/ffprobe"
+  },
+  "verification_limit": "Read exported metadata and local dependencies only; no video file downloaded or decrypted.",
+  "export_totals": [
+    {
+      "source_export": "outputs/逆袭111集.json",
+      "source_sha256": "938ec4b528dd8a6504f8f017f80ae0832a4f136618c0af253ab85973cdb21373",
+      "episodes": 111,
+      "tracks": 555,
+      "encrypt_flags": {
+        "True": 555
+      },
+      "encryption_methods": {
+        "cenc-aes-ctr": 555
+      }
+    },
+    {
+      "source_export": "outputs/坠崖捡个参娃娃_7689863296106646590.json",
+      "source_sha256": "4429e9bfe6909731c1bef898bc4a5cf1c3a2fb93662146107f1d8caec3a4e912",
+      "episodes": 74,
+      "tracks": 370,
+      "encrypt_flags": {
+        "True": 370
+      },
+      "encryption_methods": {
+        "cenc-aes-ctr": 370
+      }
+    }
+  ]
+}

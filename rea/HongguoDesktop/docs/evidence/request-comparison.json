@@ -1,0 +1,78 @@
+[
+  {
+    "case": "http1",
+    "http_status": 200,
+    "body_size": 290,
+    "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+    "stub_matches": true,
+    "sign_headers": {
+      "x-argus": 240,
+      "x-gorgon": 52,
+      "x-khronos": 10,
+      "x-ladon": 48
+    },
+    "response_headers": {
+      "server": "volc-dcdn",
+      "content-type": "application/json",
+      "date": "Tue, 13 Oct 2026 07:29:21 GMT",
+      "x-tt-logid": "202610131529210466AA6E0111BB8F0B7D",
+      "x-tt-trace-tag": "id=5"
+    },
+    "models": 0,
+    "errors": [
+      {
+        "vids": [
+          "7689903116275174462"
+        ],
+        "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+        "stage": "api",
+        "raw_response": {
+          "Code": 110001,
+          "Message": "未知异常",
+          "BaseResp": {
+            "StatusMessage": "unknown error",
+            "StatusCode": 110001
+          }
+        }
+      }
+    ]
+  },
+  {
+    "case": "http2",
+    "http_status": 200,
+    "body_size": 290,
+    "body_sha256": "2ebd93920501556de911b3d5f89be89e0340191b40690dc89ff6338bf717e048",
+    "stub_matches": true,
+    "sign_headers": {
+      "x-argus": 240,
+      "x-gorgon": 52,
+      "x-khronos": 10,
+      "x-ladon": 48
+    },
+    "response_headers": {
+      "server": "volc-dcdn",
+      "content-type": "application/json",
+      "date": "Tue, 13 Oct 2026 07:29:22 GMT",
+      "x-tt-logid": "20261013152922B0C52A828E3FBCCF7B4E",
+      "x-tt-trace-tag": "id=5"
+    },
+    "models": 0,
+    "errors": [
+      {
+        "vids": [
+          "7689903116275174462"
+        ],
+        "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+        "stage": "api",
+        "raw_response": {
+          "Code": 110001,
+          "Message": "未知异常",
+          "BaseResp": {
+            "StatusMessage": "unknown error",
+            "StatusCode": 110001
+          }
+        }
+      }
+    ]
+  }
+]

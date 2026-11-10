@@ -1,0 +1,554 @@
+[
+ {
+  "query": {
+   "device_id": "3788268572508348",
+   "iid": "3788268572512444",
+   "cdid": "2ba8aa73-ef9e-497f-9150-dea9b1291048"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1694798434797068",
+   "iid": "1694798434801164",
+   "cdid": "2c213ee7-a413-496f-99b8-6c55ceb55a1c"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2750329597214016",
+   "iid": "2750329597463872",
+   "cdid": "dc584deb-6e05-490b-ad49-09c0da68722a"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2363301504224956",
+   "iid": "2363301504229052",
+   "cdid": "c9f1739b-b639-4e7b-8a05-24495077e11e"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "586490713795328",
+   "iid": "586490713799424",
+   "cdid": "86448705-cb8b-45f1-806b-6aad705d3d28"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1114256294833980",
+   "iid": "1114256294838076",
+   "cdid": "2945429e-2009-4dbd-a8b8-1728158c03ea"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4087335737886604",
+   "iid": "4087335737890700",
+   "cdid": "e1ea59ad-fc60-476a-a35d-6bc936e4a6ea"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2029049970176332",
+   "iid": "2029049970458956",
+   "cdid": "a5eeb763-cbf2-45c0-a188-8d87a6a5f91d"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3031804590179472",
+   "iid": "3031804590425232",
+   "cdid": "f0610528-b8b7-4656-a046-3ba89ae5cc30"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "920742264847760",
+   "iid": "920742265097616",
+   "cdid": "d2210b30-cf16-44c5-a769-9c2fded7cdc9"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1747575009210672",
+   "iid": "1747575009444144",
+   "cdid": "b456363c-9f65-4712-a018-3954a91e6e66"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3330871753185356",
+   "iid": "3330871753189452",
+   "cdid": "7684a3bf-49aa-4e5d-89c8-c40f3046a28c"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2204971846600204",
+   "iid": "2204971846604300",
+   "cdid": "73304f04-8fa9-4795-91b3-70bbf5abaeb7"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1536468777183148",
+   "iid": "1536468777187244",
+   "cdid": "58b87e59-fd17-4dc2-8bfc-c19f51005aee"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3929006078434044",
+   "iid": "3929006078438140",
+   "cdid": "88ea8e4f-be0a-46a7-bda7-b092f5982f75"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1677206265267180",
+   "iid": "1677206265271276",
+   "cdid": "07a0c3d1-5e82-4dbf-832b-313d76827903"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3454017056813632",
+   "iid": "3454017057063488",
+   "cdid": "95c322bf-aef6-4e10-bb71-2a4b06e379b1"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2750329614778828",
+   "iid": "2750329614782924",
+   "cdid": "345ea30c-a3e7-4410-8e6b-2afd502ab8d6"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3559570172807260",
+   "iid": "3559570172811356",
+   "cdid": "d536d928-77fd-4329-87d0-0e22fb51e506"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "410568881085836",
+   "iid": "410568881089932",
+   "cdid": "3fab3f08-2f54-4b22-a5f7-53fe1e21db4e"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1149440698898252",
+   "iid": "1149440698902348",
+   "cdid": "022eea02-07f7-4972-8ab5-9fc67c538799"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "692043861201372",
+   "iid": "692043861205468",
+   "cdid": "cbb4de7e-29a8-465b-b41a-7d708cc61451"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "76317352014192",
+   "iid": "2046642189258432",
+   "cdid": "c30a020b-95d4-4a3c-9c86-358d7734b56e"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "23540793609852",
+   "iid": "23540793613948",
+   "cdid": "ed585769-2cd2-4a90-bfb6-8eaf2b91624e"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2416078095663532",
+   "iid": "2416078095667628",
+   "cdid": "fc16cc9d-3c41-4b28-a09f-1434c065dfd8"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2451262468275216",
+   "iid": "2451262468279312",
+   "cdid": "58e3c697-e097-428e-8437-a14fe88d09aa"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "692043863312608",
+   "iid": "692043863316704",
+   "cdid": "47641047-1ea3-4395-8fa5-0d2e2cf3511a"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2943843677010928",
+   "iid": "2943843677506544",
+   "cdid": "2babfeba-bd1a-4940-bc52-c5b62c5b3249"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "568898562570492",
+   "iid": "568898561771788",
+   "cdid": "4e37bf21-0224-49a6-ab88-44adc3c9ea03"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4016967027013152",
+   "iid": "4016967027263008",
+   "cdid": "06cff11a-d28e-43a0-acb2-1636f7098de8"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1448507863997276",
+   "iid": "1448507864001372",
+   "cdid": "c84b6da8-de47-4068-8c48-17b160633956"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1026295399719008",
+   "iid": "1026295399723104",
+   "cdid": "56ff5cca-5494-444c-ae28-9568467564c4"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4122520143015228",
+   "iid": "4122520143019324",
+   "cdid": "6b3849fa-e66e-4e8d-a2a2-0c4448522a03"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3066988980100444",
+   "iid": "3066988980104540",
+   "cdid": "65cab36d-0470-46a3-9c05-0cc911246b2a"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3964190468874812",
+   "iid": "3964190468878908",
+   "cdid": "1bbaac7c-783e-42e3-9235-27ef2eaa25db"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2838290561514960",
+   "iid": "2838290561764816",
+   "cdid": "047d674f-5f3a-48f0-b3db-c4473b04c62b"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "938334469501920",
+   "iid": "938334468965360",
+   "cdid": "56cf938c-7f55-4cc0-b7ee-eb86a2a65fba"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2627184329765280",
+   "iid": "621675120692880",
+   "cdid": "89ad0ab5-270c-480b-8e9d-1f449c0dbb09"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1747575027013104",
+   "iid": "1747575027017200",
+   "cdid": "aabda223-6fcd-4c5b-8e7e-5dc28ce5b141"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "340200143465232",
+   "iid": "340200143469328",
+   "cdid": "a94b25e7-10b7-460b-8de6-3733b390e7d2"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1114256329159436",
+   "iid": "1114256329409292",
+   "cdid": "22a162d2-67f5-4816-b0cd-356511ba292d"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2539223399794336",
+   "iid": "2539223399798432",
+   "cdid": "e0859fef-cedb-42bb-8117-e611b35af517"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3366056143099628",
+   "iid": "3366056143103724",
+   "cdid": "93358814-754d-465c-863c-9c07e891d25b"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4368810748940652",
+   "iid": "4368810748944748",
+   "cdid": "a5855d53-18b2-42cd-b9e5-395898e118d9"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4439179493376320",
+   "iid": "4439179493380416",
+   "cdid": "54a8c921-3e07-403e-952f-678226519e32"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2187379679175484",
+   "iid": "2187379679179580",
+   "cdid": "671ccd2b-d1cf-4154-b339-781646376b01"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1237401632778752",
+   "iid": "1237401632782848",
+   "cdid": "dc366331-a4fc-46f4-8058-34fc13dc7b01"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "955926655832828",
+   "iid": "955926655836924",
+   "cdid": "94733b82-d1eb-4aa6-9bdc-ab51ea322c21"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "93909540154768",
+   "iid": "93909540158864",
+   "cdid": "3002ae97-d9d4-4c6b-ad1e-d0496a99242a"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1501284423203452",
+   "iid": "1501284423453308",
+   "cdid": "19b35b9a-5582-4a83-aea0-11ed3711ba9c"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3190134283967340",
+   "iid": "3190134283971436",
+   "cdid": "66bc501e-7a92-46b2-bb83-5436ecf16305"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "340200144508432",
+   "iid": "340200144512528",
+   "cdid": "8d730d10-a492-45b4-ad78-35c4e3164e6f"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4351218562637632",
+   "iid": "4351218562641728",
+   "cdid": "70fb870e-001c-465c-a7fc-0bc95e35423f"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "5948611237612",
+   "iid": "5948611241708",
+   "cdid": "d7bd4f6f-e7d7-41c6-b7f1-188d4c6fe6d3"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "287423587162112",
+   "iid": "287423587166208",
+   "cdid": "5e31882a-c26b-417f-8c6e-edacd075bc01"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2117010935784876",
+   "iid": "2117010935788972",
+   "cdid": "088f0d59-c8fa-4c0c-914a-d11d4cb4e2a7"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4157704516940204",
+   "iid": "1729982843061248",
+   "cdid": "97909bfc-c757-41c1-8e91-dd9d5186312e"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "41132982803600",
+   "iid": "41132982807696",
+   "cdid": "41c77bf7-8ac9-4b06-802f-f044d0c3578a"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2363301540412636",
+   "iid": "2363301540678876",
+   "cdid": "dd5ee0ef-72b0-4230-8ce3-a07902f03ad7"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1026295401024524",
+   "iid": "1026295401028620",
+   "cdid": "98750dba-f526-4b61-b495-b26b79946f76"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1096664145748352",
+   "iid": "1096664145752448",
+   "cdid": "71862e67-5f64-4898-847b-75ddb1bd587f"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4104927958817916",
+   "iid": "4104927958822012",
+   "cdid": "09dcb7f3-73ec-4dcb-9631-66dde1971242"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2345709354889308",
+   "iid": "2345709355155548",
+   "cdid": "8a466f2c-5272-4577-a663-f1607c8e4b78"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "3999374843318156",
+   "iid": "3999374843322252",
+   "cdid": "3aff67ea-e3ea-4b15-bb68-ccbafa81e0f2"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1184625075950688",
+   "iid": "1184625075954784",
+   "cdid": "03ea3590-75f7-4fb8-96be-9daa06cd4288"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1325362563777936",
+   "iid": "1325362563782032",
+   "cdid": "efe87536-f477-4a83-8b65-8898f2fb7a86"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "2240156238611420",
+   "iid": "2240156238615516",
+   "cdid": "cade4467-90c5-4aef-8802-8dbe99df1a15"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "1395731307957632",
+   "iid": "1395731307961728",
+   "cdid": "eff31fa7-bd03-4e85-a725-dc12f12ebd2b"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ },
+ {
+  "query": {
+   "device_id": "4491956051779808",
+   "iid": "4491956051783904",
+   "cdid": "b4b04123-329b-4712-a71b-5293a65d72a5"
+  },
+  "user_agent": "com.phoenix.read.oversea.gp/72932 (Linux; U; Android 15; en_US; SM-S938U; Build/V417IR;tt-ok/3.12.13.20)"
+ }
+]

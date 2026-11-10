@@ -1,0 +1,76 @@
+1.0.0.76 对 1.0.0.73：设备、签名、请求故障处理静态对比
+日期：2026-10-16
+范围：仅 marshal/dis 静态解析；不导入/执行目标模块，不启动签名器，不请求平台。
+
+结论：这次确实新增了视频模型的空响应识别、跨模型接口恢复/探测配合，但没有修改签名器算法/调用、设备池生成/注册方式，也没有因为旧批量 JSON 空而新增切换 baseUrl 的逻辑。新的模型获取顺序由主报告单独说明。
+
+一、签名与设备未改
+JAR、libmetasec_ml.so、libc++_shared.so、ms_16777218.bin、devices.json 完全相同；devicepool.pyc、nettls.pyc、downloader.pyc 仅源码编译路径/位置等元数据变化，规范化后全部代码对象相同。
+签名仍是 _sign_post_once（hongguo.py 源行355，偏移122–244）POST /sign，提交 url 与 headers；_api_once（源行528，偏移434–506）把 sign 的返回值合并进 headers。_req_headers（源行494）、sign（源行375）、refresh_session（源行437）、build_url（源行482）均未改。app._start_signer（新源行954，偏移4–104）仍用 Java 启动 unidbg-sign.jar / com.hongguo.sign.FqTrace serve。没有在这些调用链加 Python Helios/Medusa 替换。
+config.json 仅 base_query.device_id、iid、cdid 更换；设备值完整保留在提取文件，证据只列变更键和哈希。69项 devices.json 不变。load_pool（源行98，偏移6–286）仍优先载入该池；build_url（源行482，偏移4–168）将当前池设备 query 覆盖 base_query。因此正常存在池时，不能把 config 的三个新ID当作“整个默认设备池更新”。
+gen_device（源行39）仍本地随机数字 DID/IID + uuid4 CDID；并未新增平台注册。refresh_session（源行437，偏移154–380、608–1086）仍向签名服务 /grab 获取现成请求参数/登录头；不是这版新增的设备注册流程。
+
+二、请求异常与恢复的实际变化
+_api_once 新增：SG.check_response 后，对 _VM_PATHS 调 _vm_dead（新源行540–543，偏移884–978）。_VmDead 在模块源行2016、偏移2840–2866 声明继承 ValueError。
+_vm_dead（新源行2021）检查 JSON 对象、code==0、data对象；新的 video_tab 路径要求非空 video_model_data，单个模型要求非空 data。批量 data 中每个 vid 内容的检查另由模型解析函数承担。这使此前被当成正常返回的部分空壳响应进入失败处理。
+api 的修改主要为取消最后一次失败之后的无用 sleep：登录失效源行572–573偏移270–326；风控源行579–584偏移454–670；请求/ValueError 源行600–601偏移1104–1172。只有 attempt+1<max_retries 才等待。换设备调用依然存在，且最后一次也会调用 rotate_device；并不是新加设备轮换。
+api 中备用 host 分支（新源行590–596，偏移848–1046）仍仅 _conn_failure 时触发；备用为 api5-normal-sinfonlineb.fqnovel.com，主为 api5-normal-sinfonlinec.fqnovel.com；非连接错误的模型空响应并不因此换 host。
+
+三、来源失效状态与探测
+_source_good（新源行834–836，偏移326–442）扩大恢复条件：之前失败的路径与本次成功路径都在 _VM_PATHS 时，即使不是同一路径，也认定模型能力恢复。
+_source_probe（新源行904–907，偏移422–516）对模型路径改走 _vm_alive(body,extra)，其余路径仍走 api(...,max_retries=1,timeout=15)。新多路径模型探测由主报告给出顺序。
+_source_strike、_source_down、_probe_verdict、SG.check_response 本身未改。SOURCE_BAD_N/SOURCE_BAD_S 仍为2/60（60秒内两次累计失败），SOURCE_RETEST_S=60、LONG=120、LONG_AFTER=600、TICK=5、PROBE_GAP=10。新模型调度会向这套既有机制汇报失败；不是换了签名规则。
+
+证据与边界
+结构化证据：device-signing-evidence.json，含原/新文件SHA256、规范化代码对比、函数源行及逐条字节码偏移。
+原/新源码文件名分别带 installer\_stage 与 installer\_stage76；不能仅凭 pyc 文件hash不同断言逻辑改变。
+静态证据能确认实现适配，不能确认现网稳定成功；未运行原程序/签名器，未访问平台。平台服务端策略和环境变量覆盖不在本项证据范围。
+
+app/sign/unidbg-sign.jar
+  old bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b
+  new bcbfb6fae0952435bddf286457d785c1a3f9ba67c83503cf3f87cb34cedb252b
+  byte_equal=True
+app/capture/fq_oversea/libmetasec_ml.so
+  old 20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d
+  new 20d3f8dd8d0d47e4e3c0da0f377eaf69e72a72c8d214ca56e6e7493c65a8fc2d
+  byte_equal=True
+app/capture/fq_oversea/libc++_shared.so
+  old e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0
+  new e8373ee43274541efd2d34fe0588d55bf953612e1417ad47cfd2c4bd1aa383d0
+  byte_equal=True
+app/capture/fq_oversea/ms_16777218.bin
+  old c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c
+  new c44b4f1e213490e3518f85fa8dace1e7d52b77d3d360ef06cc27b6562adfb62c
+  byte_equal=True
+app/devices.json
+  old eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd
+  new eb89e95975451ca065346f524bf83d5b708295deb43d43fd9141200961e5c2fd
+  byte_equal=True
+app/config.json
+  old fb3006443b72b07c82393219fa05b51ff90000c73999c3f425f3d1bad380c016
+  new 28a00926cd46c68762c705755f9fa97ee94b0e054675f2462a4da651ab7c9b48
+  byte_equal=False
+app/devicepool.pyc
+  old 51724b0fb15fdb89dff204d9e58adf2bd65b44ca40402ada48c1ac6e2a84cf0f
+  new 34e745351a25e6239cf60243d91a4df2683dbc6397180750c310cb5a40523b4e
+  byte_equal=False normalized_code_equal=True
+app/nettls.pyc
+  old 3e741b356ee1521c8a32dc55fdf7beaeb3d315e17dd84ea70722b4201aa83b68
+  new f32f43574e9e48fa6f73b2d602c9731d53e4bb92f7114106d330307231b6162f
+  byte_equal=False normalized_code_equal=True
+app/downloader.pyc
+  old edbb88c479d1e9199490745b311f4fc29bd8889705243f3884d6677353f0831b
+  new 23296ebbd84ee77c49342ba2675296648391e72496fa5c2f08e7290b96826769
+  byte_equal=False normalized_code_equal=True
+app/hongguo.pyc
+  old 7a5b66a67dac3629c7d4c92a564ec1b4b90134e020670b1e7d348943b82be479
+  new 7b16bd257d40d13de85989326620d64e29e8a3798634a0b4d8f8b3b9c74ee371
+  byte_equal=False normalized_code_equal=False
+app/safeguards.pyc
+  old c53f624343e40a66ec740d9a7bd7d46224e2208b5c9190ed74386ce1befe3d82
+  new 9dccd7dab9fae770c3342408f2bed83fd1c88708a043b384076c60fb8626527b
+  byte_equal=False normalized_code_equal=False
+app.pyc
+  old 3a08a721a3d66553aaf794c3f62ca956c0bf9394e11c8c92cd70714d122be1b3
+  new 47cd99eef13862864326351a7492371a9c41504db07e0c7b7b4aa3b5bafacdb1
+  byte_equal=False normalized_code_equal=False

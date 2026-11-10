@@ -1,0 +1,153 @@
+{
+  "started": "2026-10-16T17:42:32+08:00",
+  "label": "upper",
+  "endpoint": "/reading/bookapi/video_tab/multi_video_model/v1/",
+  "policy": "current",
+  "sizes": [
+    16,
+    17,
+    18,
+    19
+  ],
+  "reverse": false,
+  "offset": 0,
+  "device": "unchanged production devices.json[0]",
+  "signature_policy": "JAR other headers + unchanged production Python H/M v3",
+  "no_retry_fallback_rotation_cache": true,
+  "media_requests": 0,
+  "max_batch_count": 100,
+  "per_request_gap_seconds": 3,
+  "results": [
+    {
+      "id": "upper-01-n16",
+      "policy": "current",
+      "endpoint": "new_get",
+      "requested_count": 16,
+      "vids": [
+        "7689903030619081790",
+        "7689903116275174462",
+        "7689903075380694078",
+        "7689903137095699518",
+        "7689903082863348798",
+        "7689903101611871294",
+        "7689903084457184318",
+        "7689903072495029310",
+        "7689903098600377406",
+        "7689903024185019454",
+        "7689903059454938174",
+        "7689903099875445822",
+        "7689903114047982654",
+        "7689903033924193342",
+        "7689903006069836862",
+        "7689903131911539774"
+      ],
+      "request_url_bytes": 1134,
+      "request_target_bytes": 1091,
+      "started": "2026-10-16T17:42:36+08:00",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "path": "/reading/bookapi/video_tab/multi_video_model/v1/",
+      "method": "GET",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "app_version": "7.2.9.32",
+      "query_sha256": "74b614e70216f3bc9537cd1996f196771394870712f46769271bad01d1364687",
+      "body_md5": null,
+      "medusa_version": 3,
+      "only_hm_replaced": true,
+      "signed_url_and_body_checked": true,
+      "returned_vids": [],
+      "models": {
+        "7689903030619081790": {
+          "error": "missing requested VID"
+        },
+        "7689903116275174462": {
+          "error": "missing requested VID"
+        },
+        "7689903075380694078": {
+          "error": "missing requested VID"
+        },
+        "7689903137095699518": {
+          "error": "missing requested VID"
+        },
+        "7689903082863348798": {
+          "error": "missing requested VID"
+        },
+        "7689903101611871294": {
+          "error": "missing requested VID"
+        },
+        "7689903084457184318": {
+          "error": "missing requested VID"
+        },
+        "7689903072495029310": {
+          "error": "missing requested VID"
+        },
+        "7689903098600377406": {
+          "error": "missing requested VID"
+        },
+        "7689903024185019454": {
+          "error": "missing requested VID"
+        },
+        "7689903059454938174": {
+          "error": "missing requested VID"
+        },
+        "7689903099875445822": {
+          "error": "missing requested VID"
+        },
+        "7689903114047982654": {
+          "error": "missing requested VID"
+        },
+        "7689903033924193342": {
+          "error": "missing requested VID"
+        },
+        "7689903006069836862": {
+          "error": "missing requested VID"
+        },
+        "7689903131911539774": {
+          "error": "missing requested VID"
+        }
+      },
+      "success": false,
+      "http_status": 200,
+      "seconds": 0.245,
+      "response_bytes": 53,
+      "codes": {
+        "code": 100103
+      },
+      "base_resp": null,
+      "message": "PARAM_INVALID",
+      "finished": "2026-10-16T17:42:36+08:00",
+      "error": "API /reading/bookapi/video_tab/multi_video_model/v1/: code=100103 (PARAM_INVALID)",
+      "returned_count": 0,
+      "valid_models": 0,
+      "missing_vids": [
+        "7689903006069836862",
+        "7689903024185019454",
+        "7689903030619081790",
+        "7689903033924193342",
+        "7689903059454938174",
+        "7689903072495029310",
+        "7689903075380694078",
+        "7689903082863348798",
+        "7689903084457184318",
+        "7689903098600377406",
+        "7689903099875445822",
+        "7689903101611871294",
+        "7689903114047982654",
+        "7689903116275174462",
+        "7689903131911539774",
+        "7689903137095699518"
+      ],
+      "unexpected_vids": [],
+      "exact_coverage": false
+    }
+  ],
+  "signer_pid": 35276,
+  "stop_reason": "first incomplete/failure",
+  "finished": "2026-10-16T17:42:36+08:00",
+  "preservation": {
+    "checked_files": 354,
+    "changed": [],
+    "unchanged": true
+  },
+  "runtime_copy_removed": true
+}

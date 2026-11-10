@@ -1,0 +1,210 @@
+{
+  "verification": "Independent read of all 15 actual HTTP request/response records; no network calls",
+  "started": "2026-10-16T17:40:40+08:00",
+  "finished": "2026-10-16T17:44:09+08:00",
+  "stages": [
+    "ladder",
+    "boundary",
+    "narrow",
+    "upper",
+    "cross",
+    "tail",
+    "cross-tail"
+  ],
+  "requests": 15,
+  "successful_requests": 11,
+  "failed_requests": 4,
+  "unique_requested_vids": 40,
+  "valid_model_occurrences": 117,
+  "track_occurrences": 585,
+  "successful_unique_vids": 40,
+  "largest_complete_batch": 15,
+  "smallest_failed_batch": 16,
+  "actual_query_counts_match_summaries": true,
+  "every_request_vid_unique": true,
+  "every_vid_from_saved_catalog": true,
+  "all_success_key_sets_exact": true,
+  "all_success_models_have_five_valid_tracks": true,
+  "all_failed_vids_succeed_in_smaller_batches": true,
+  "same_request_vid_has_consistent_internal_media_id": true,
+  "distinct_internal_media_ids_for_distinct_request_vids": true,
+  "fixed_production_device_and_install_id": true,
+  "independent_signature_values_per_request": true,
+  "hosts": [
+    "api5-normal-sinfonlinec.fqnovel.com"
+  ],
+  "all_http_status_200": true,
+  "no_media_requests": true,
+  "source_files_preservation_all_stages": true,
+  "copied_signer_runtime_removed_all_stages": true,
+  "definitions": {
+    "1080p,360p,480p,540p,720p": 117
+  },
+  "rows": [
+    {
+      "id": "ladder-01-n5",
+      "requested": 5,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 5,
+      "valid_models": 5,
+      "independently_verified_success": true,
+      "tracks": 25,
+      "raw_sha256": "c3356d627dde133847ab96490bdc7abbc206ff3be16d34e53e252dad51800c75"
+    },
+    {
+      "id": "ladder-02-n6",
+      "requested": 6,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 6,
+      "valid_models": 6,
+      "independently_verified_success": true,
+      "tracks": 30,
+      "raw_sha256": "8b4fe55b170fcd17628812a89fdefe7c21bdfc8bd9b1b5cc3117d08665a7946a"
+    },
+    {
+      "id": "ladder-03-n10",
+      "requested": 10,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 10,
+      "valid_models": 10,
+      "independently_verified_success": true,
+      "tracks": 50,
+      "raw_sha256": "38f481f3792c7a969bb155f314a2943d4b5eff5e0528ee0774145a67a4fc0f1e"
+    },
+    {
+      "id": "ladder-04-n20",
+      "requested": 20,
+      "http_status": 200,
+      "business_code": 100103,
+      "returned": 0,
+      "valid_models": 0,
+      "independently_verified_success": false,
+      "tracks": 0,
+      "raw_sha256": "a85816ab92a6e5b974fee512c69ef0515c75cbb3296febc89e0f1831bc66ed2f"
+    },
+    {
+      "id": "boundary-01-n11",
+      "requested": 11,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 11,
+      "valid_models": 11,
+      "independently_verified_success": true,
+      "tracks": 55,
+      "raw_sha256": "375000d88b4cb28551a834245beccaae33efc67f3590eb1fbe4dcec39f6725d9"
+    },
+    {
+      "id": "boundary-02-n10",
+      "requested": 10,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 10,
+      "valid_models": 10,
+      "independently_verified_success": true,
+      "tracks": 50,
+      "raw_sha256": "6e8d4d2b5f4f51122f93174b943c236f0da2e6545e20b1b8c2a8d0e0af0b3aca"
+    },
+    {
+      "id": "boundary-03-n20",
+      "requested": 20,
+      "http_status": 200,
+      "business_code": 100103,
+      "returned": 0,
+      "valid_models": 0,
+      "independently_verified_success": false,
+      "tracks": 0,
+      "raw_sha256": "773c34e4581b625211ce28c606b178657841a5b76c0f26523db483fe5b955fc5"
+    },
+    {
+      "id": "narrow-01-n15",
+      "requested": 15,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 15,
+      "valid_models": 15,
+      "independently_verified_success": true,
+      "tracks": 75,
+      "raw_sha256": "b39110ff10fde5d4894a25a0acfcb261da869226e04fae681e6f0fd92643c858"
+    },
+    {
+      "id": "narrow-02-n13",
+      "requested": 13,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 13,
+      "valid_models": 13,
+      "independently_verified_success": true,
+      "tracks": 65,
+      "raw_sha256": "b2273cd089950cbfa4d6345c6b513a8d558f8a616b27f551a277ffd5ba6aa65d"
+    },
+    {
+      "id": "narrow-03-n12",
+      "requested": 12,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 12,
+      "valid_models": 12,
+      "independently_verified_success": true,
+      "tracks": 60,
+      "raw_sha256": "8164bccd2d838aee5d7374ec828fb93b079f933f9f5b39050b42fcb8bf500f84"
+    },
+    {
+      "id": "upper-01-n16",
+      "requested": 16,
+      "http_status": 200,
+      "business_code": 100103,
+      "returned": 0,
+      "valid_models": 0,
+      "independently_verified_success": false,
+      "tracks": 0,
+      "raw_sha256": "6c74315fa6b57b05b74578bf0997366977c240fc72ee7174c69d364a0d649f05"
+    },
+    {
+      "id": "cross-01-n15",
+      "requested": 15,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 15,
+      "valid_models": 15,
+      "independently_verified_success": true,
+      "tracks": 75,
+      "raw_sha256": "e1042bb52f993ca571f90e0038f2eae5a8f946cc937f11b8cd9c16a85efc2ea3"
+    },
+    {
+      "id": "cross-02-n16",
+      "requested": 16,
+      "http_status": 200,
+      "business_code": 100103,
+      "returned": 0,
+      "valid_models": 0,
+      "independently_verified_success": false,
+      "tracks": 0,
+      "raw_sha256": "bd17b0237f113d060bee032232bd7861b91acc806e520ad2582ba6a64740103d"
+    },
+    {
+      "id": "tail-01-n10",
+      "requested": 10,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 10,
+      "valid_models": 10,
+      "independently_verified_success": true,
+      "tracks": 50,
+      "raw_sha256": "1350f8d5e7395b02f5126e30ec85d587a7b9a0c0937e24be214bc710422d15a2"
+    },
+    {
+      "id": "cross-tail-01-n10",
+      "requested": 10,
+      "http_status": 200,
+      "business_code": 0,
+      "returned": 10,
+      "valid_models": 10,
+      "independently_verified_success": true,
+      "tracks": 50,
+      "raw_sha256": "092b2cff9bb702da7369ab6bb9bdbea9b171ad163619874001ea8ec2c44f6fd1"
+    }
+  ]
+}

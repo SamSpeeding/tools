@@ -1,0 +1,502 @@
+{
+  "started": "2026-10-16T18:36:49+08:00",
+  "phase": "repeat",
+  "signing": "pure Python H/M v3 + Gorgon + reference timestamp Argus/Ladon",
+  "offline_gorgon_vectors": 5,
+  "jar_java_original_so_used": false,
+  "no_fallback_rotation_retry_media": true,
+  "minimum_gap_seconds": 2.5,
+  "transport": "unchanged production curl_cffi Chrome",
+  "results": [
+    {
+      "id": "repeat-search",
+      "kind": "search",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:36:51+08:00",
+      "method": "GET",
+      "path": "/reading/bookapi/search/tab/v",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "request_bytes": 0,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 1.498,
+      "response_bytes": 277941,
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T18:36:53+08:00",
+      "parsed": {
+        "items": 15,
+        "series_ids": [
+          "7682645700781296665",
+          "7680410161940286526",
+          "7673122208184536089",
+          "7543523504755313726",
+          "7553671951680539673",
+          "7606613437807856665",
+          "7604473258473163801",
+          "7611427494041766937",
+          "7654440646689705022",
+          "7652336027125697598",
+          "7666408143328381976",
+          "7598544138262301720",
+          "7530569263346617369",
+          "7683432711033211928",
+          "7694690501928176665"
+        ],
+        "has_more": true,
+        "next_cursor_present": true,
+        "warnings": [],
+        "nonempty": true
+      }
+    },
+    {
+      "id": "repeat-rank",
+      "kind": "rank",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:36:55+08:00",
+      "method": "GET",
+      "path": "/reading/bookapi/bookmall/cell/change/v",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "request_bytes": 0,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 0.59,
+      "response_bytes": 210761,
+      "base_resp": null,
+      "message": "SUCCESS",
+      "finished": "2026-10-16T18:36:56+08:00",
+      "parsed": {
+        "items": 10,
+        "series_ids": [
+          "7692043430955863102",
+          "7695704804978330649",
+          "7692463987333532697",
+          "7690494161551625241",
+          "7691615145977449496",
+          "7693516944581872664",
+          "7693823855940357144",
+          "7688646466708966462",
+          "7686713195246930968",
+          "7691938290202577944"
+        ],
+        "has_more": true,
+        "next_cursor_present": true,
+        "warnings": [],
+        "nonempty": true
+      }
+    },
+    {
+      "id": "repeat-filters",
+      "kind": "filters",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:36:59+08:00",
+      "method": "POST",
+      "path": "/reading/distribution/category/landpage/v",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "44fd24d4c531b00ce2b12b94142dff2ac1ab14b274102c8d3d64d6a0beb33fdc",
+      "request_bytes": 294,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-ss-stub",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 0.811,
+      "response_bytes": 19080,
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "SUCCESS"
+      },
+      "message": "SUCCESS",
+      "finished": "2026-10-16T18:36:59+08:00",
+      "parsed": {
+        "selector_rows": 7,
+        "selector_types": [
+          "genre",
+          "category_dim_theme",
+          "category_dim_role",
+          "category_dim_epoch",
+          "sort",
+          "gender",
+          "online_time"
+        ],
+        "selector_items": 94
+      }
+    },
+    {
+      "id": "repeat-category",
+      "kind": "category",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:37:02+08:00",
+      "method": "POST",
+      "path": "/reading/distribution/category/landpage/v",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "c134167d4f903c2b1d5cc3009562f893654763daa6395592d2049853bdceea2c",
+      "request_bytes": 335,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-ss-stub",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 0.437,
+      "response_bytes": 50821,
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "SUCCESS"
+      },
+      "message": "SUCCESS",
+      "finished": "2026-10-16T18:37:02+08:00",
+      "parsed": {
+        "items": 15,
+        "series_ids": [
+          "7697175476204211224",
+          "7696083093920156697",
+          "7696806196346375193",
+          "7695018030232783934",
+          "7690934287285095449",
+          "7695735721067301913",
+          "7696469641576582206",
+          "7697151768727145534",
+          "7697108989951085593",
+          "7697082704646376472",
+          "7694670651273006142",
+          "7696081290021325886",
+          "7695742932510329881",
+          "7694935307061316633",
+          "7688623257922047001"
+        ],
+        "has_more": true,
+        "next_cursor_present": true,
+        "warnings": [],
+        "nonempty": true
+      }
+    },
+    {
+      "id": "repeat-latest",
+      "kind": "latest",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:37:05+08:00",
+      "method": "POST",
+      "path": "/reading/distribution/category/landpage/v",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "c134167d4f903c2b1d5cc3009562f893654763daa6395592d2049853bdceea2c",
+      "request_bytes": 335,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-ss-stub",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 0.466,
+      "response_bytes": 50837,
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "SUCCESS"
+      },
+      "message": "SUCCESS",
+      "finished": "2026-10-16T18:37:05+08:00",
+      "parsed": {
+        "items": 15,
+        "series_ids": [
+          "7697175476204211224",
+          "7696083093920156697",
+          "7696806196346375193",
+          "7695018030232783934",
+          "7690934287285095449",
+          "7695735721067301913",
+          "7696469641576582206",
+          "7697151768727145534",
+          "7697108989951085593",
+          "7697082704646376472",
+          "7694670651273006142",
+          "7696081290021325886",
+          "7695742932510329881",
+          "7694935307061316633",
+          "7688623257922047001"
+        ],
+        "has_more": true,
+        "next_cursor_present": true,
+        "warnings": [],
+        "nonempty": true
+      }
+    },
+    {
+      "id": "repeat-detail",
+      "kind": "detail",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:37:08+08:00",
+      "method": "POST",
+      "path": "/novel/player/multi_video_detail/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "6a0c915036c63ddc799173745628a0e62d2407ff5f1760d1123345ba559158d6",
+      "request_bytes": 438,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-ss-stub",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 0.217,
+      "response_bytes": 70505,
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T18:37:08+08:00",
+      "parsed": {
+        "series_id": "7689863296106646590",
+        "episodes": 74,
+        "expected_episodes": 74,
+        "complete": true,
+        "title": "坠崖捡个参娃娃"
+      }
+    },
+    {
+      "id": "repeat-single-control",
+      "kind": "model",
+      "signature_calls": 1,
+      "remote_calls": 1,
+      "success": true,
+      "started": "2026-10-16T18:37:11+08:00",
+      "method": "POST",
+      "path": "/novel/player/video_model/v1/",
+      "host": "api5-normal-sinfonlinec.fqnovel.com",
+      "device_sha256": "1d2f52d1595a60f81e0259bbf6e0081f412adf5563eb98872736d46898d1b2af",
+      "iid_sha256": "09317f406a00fb2a90ba52312a3a8c780e8ce6b7f0bf64d3059408f5973331d0",
+      "cdid_sha256": "29db56411cef86db940137f5aeaa998d5fbf5b625de4f777050c92760d30bc87",
+      "app_version": "7.2.9.32",
+      "body_sha256": "b0c0ddb72f18a77d630ba2b65fa8cac4468f61543ca3c8eff6760d596fb7c2fd",
+      "request_bytes": 272,
+      "header_names": [
+        "content-type",
+        "passport-sdk-version",
+        "sdk-version",
+        "user-agent",
+        "x-argus",
+        "x-gorgon",
+        "x-helios",
+        "x-khronos",
+        "x-ladon",
+        "x-medusa",
+        "x-ss-stub",
+        "x-tt-store-region",
+        "x-tt-store-region-src"
+      ],
+      "signature_lengths": {
+        "x-helios": 48,
+        "x-medusa": 940,
+        "x-khronos": 10,
+        "x-gorgon": 52,
+        "x-argus": 8,
+        "x-ladon": 8
+      },
+      "http_status": 200,
+      "codes": {
+        "code": 0
+      },
+      "business_ok": true,
+      "seconds": 0.159,
+      "response_bytes": 25559,
+      "base_resp": {
+        "StatusCode": 0,
+        "StatusMessage": "success"
+      },
+      "message": "请求成功",
+      "finished": "2026-10-16T18:37:11+08:00",
+      "parsed": {
+        "tracks": 5,
+        "definitions": [
+          "360p",
+          "480p",
+          "540p",
+          "720p",
+          "1080p"
+        ]
+      }
+    }
+  ],
+  "finished": "2026-10-16T18:37:11+08:00",
+  "preservation": {
+    "checked_files": 354,
+    "changed": [],
+    "unchanged": true
+  }
+}

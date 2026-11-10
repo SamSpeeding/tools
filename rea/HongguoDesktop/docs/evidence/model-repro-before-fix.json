@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "seconds": 2.12,
+  "errors": [
+    {
+      "vids": [
+        "7689903116275174462"
+      ],
+      "error": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+      "stage": "api",
+      "raw_response": {
+        "Code": 110001,
+        "Message": "未知异常",
+        "BaseResp": {
+          "StatusMessage": "unknown error",
+          "StatusCode": 110001
+        }
+      }
+    }
+  ],
+  "model_count": 0
+}

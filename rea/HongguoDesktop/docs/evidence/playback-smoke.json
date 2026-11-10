@@ -1,0 +1,29 @@
+{
+  "ready": {
+    "series_id": "7689863296106646590",
+    "index": 2,
+    "title": "坠崖捡个参娃娃",
+    "quality": "1080p",
+    "status": "ready",
+    "phase": "就绪",
+    "revision": 6,
+    "error": "",
+    "request_id": "smoke",
+    "model_api": "video_model",
+    "model_fallback": true,
+    "model_fallback_reason": "API /novel/player/multi_video_model/v1/: Code=110001 (未知异常)",
+    "model_api_state": "selected",
+    "total": 4507067,
+    "initial_bytes": 262144
+  },
+  "startup_seconds": 2.846,
+  "media": {
+    "full_decode_validated": true,
+    "bytes": 4507067,
+    "sha256": "d41be261a5b7c3e7c2c06c4046e354c0bbc8a7f7b1ead1348f2af4d617b5bc96",
+    "seek_matches": true
+  },
+  "close": "old playback URL no longer served",
+  "download_jobs_created": 0,
+  "result": "passed"
+}

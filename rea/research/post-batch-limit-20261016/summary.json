@@ -1,0 +1,84 @@
+{
+  "started": "2026-10-16T17:51:23+08:00",
+  "finished": "2026-10-16T17:52:19+08:00",
+  "wall_seconds": 56,
+  "requests": 8,
+  "success": 5,
+  "unique_vids_requested": 40,
+  "unique_vids_returned_valid": 40,
+  "by_batch_size": {
+    "5": {
+      "requests": 1,
+      "success": 1,
+      "codes": [
+        {
+          "code": 0
+        }
+      ]
+    },
+    "10": {
+      "requests": 2,
+      "success": 2,
+      "codes": [
+        {
+          "code": 0
+        },
+        {
+          "code": 0
+        }
+      ]
+    },
+    "15": {
+      "requests": 2,
+      "success": 2,
+      "codes": [
+        {
+          "code": 0
+        },
+        {
+          "code": 0
+        }
+      ]
+    },
+    "16": {
+      "requests": 2,
+      "success": 0,
+      "codes": [
+        {
+          "code": 100001
+        },
+        {
+          "code": 100001
+        }
+      ]
+    },
+    "20": {
+      "requests": 1,
+      "success": 0,
+      "codes": [
+        {
+          "code": 100001
+        }
+      ]
+    }
+  },
+  "largest_fully_successful_batch": 15,
+  "smallest_failed_batch": 16,
+  "failure_vids_not_validated_in_smaller_batches": [],
+  "all_runs_same_device": true,
+  "hosts": [
+    "api5-normal-sinfonlinec.fqnovel.com"
+  ],
+  "medusa_versions": [
+    3
+  ],
+  "protected_files": 354,
+  "changed_protected_files": [],
+  "signer_pids_still_alive": [],
+  "temporary_runtime_removed": true,
+  "private_directory_mode": "0o700",
+  "raw_response_count": 8,
+  "raw_response_modes": [
+    "0o600"
+  ]
+}

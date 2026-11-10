@@ -1,0 +1,20 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"result\":{\"path\":\"/Users/tt/Downloads/HongguoDownloader-Setup (2).exe\",\"format\":\"pe\",\"kind\":\"executable\",\"sha256\":\"958d1518d473e4448aa3cf06b4bc4abac0c74e5879c0c925336de985e78e0fe7\",\"architecture\":\"x86\"}}"
+      }
+    ],
+    "structuredContent": {
+      "result": {
+        "path": "/Users/tt/Downloads/HongguoDownloader-Setup (2).exe",
+        "format": "pe",
+        "kind": "executable",
+        "sha256": "958d1518d473e4448aa3cf06b4bc4abac0c74e5879c0c925336de985e78e0fe7",
+        "architecture": "x86"
+      }
+    }
+  }
+}

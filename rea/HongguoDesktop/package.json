@@ -1,0 +1,22 @@
+{
+  "name": "hongguo-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test:ui": "node --test tests/test_progress_ui.mjs",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "jsdom": "^29.1.1",
+    "prettier": "^3.9.10",
+    "typescript": "^5.7",
+    "vite": "^6.0"
+  }
+}

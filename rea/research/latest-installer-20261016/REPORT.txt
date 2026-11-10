@@ -1,0 +1,141 @@
+原下载器 1.0.0.73 → 1.0.0.76：批量模型适配调查
+日期：2026-10-16
+用户指定输入：/Users/tt/Downloads/HongguoDownloader-Setup (2).exe
+SHA256：958d1518d473e4448aa3cf06b4bc4abac0c74e5879c0c925336de985e78e0fe7
+对照输入：/Users/tt/Downloads/HongguoDownloader-Setup (1).exe
+SHA256：df7cb1fae6f0e8637fb630d85f8205b9d2b3ae59cde7c83bf6e37f67af83612f
+
+结论
+----
+有明确适配。1.0.0.76 不再像 1.0.0.73 那样只调用单集接口；新增优先使用
+reading/video_tab 批量入口，并建立“新批量 → 旧批量 → 单集”的三级选择。
+这是新增接口选择、失败回退、空响应检查、恢复探测及缓存有效期处理。
+签名 JAR、SO、设备池没有更新，不能把这次变化解释为作者修复了旧批量
+接口的 Helios/Medusa 算法；也不能仅凭包内代码断言线上批量已经恢复稳定。
+当前项目和 PHP/CLI/Desktop 没有因为本次调查而修改。
+
+版本与覆盖
+----------
+version.txt 为 1.0.0.76，前次为 1.0.0.73。
+Inno Setup 6.7.0，文件大小 142034700 字节。
+3,966 个有效安装清单条目：1,515 个 hash 改变、2,451 个相同，无映射路径增删。
+选择 31 个应用文件解压并逐项核对安装包内 SHA256，全部匹配。
+18 个应用 pyc 全部递归比较：去除源路径/行位置后 8 个有差异、10 个相同。
+pyc hash 变化不直接代表逻辑变化；大量差异只来自重编译路径。
+复用解析器有一条 python/pythonw.exe 映射不可靠，已排除，不据此做整体等价断言。
+Python/Java/FFmpeg 依赖大部分只比较安装清单 hash，未全量解包审计。
+
+REA 身份/资源证据：
+ev_e81f48160156e4912cc1587c16071352534caf6a4d5018bc61f20cbf6207a516
+保存在 evidence/rea-pe-resources.json；open 身份在 evidence/rea-open.json。
+REA 用于打开原包、验证 PE 资源身份。Inno 提取、Python marshal/dis 及离线
+函数回放为辅助工具证据，不冒称 REA 原生 Python 源码反编译或 Windows 实测。
+
+实际请求顺序（静态确证 + 原字节码离线回放）
+------------------------------------------
+默认 base URL： https://api5-normal-sinfonlinec.fqnovel.com
+通用请求层已有备用 host 行为；本次没有依靠新 host 配置修复。
+
+第 1 层：GET /reading/bookapi/video_tab/multi_video_model/v1/
+  默认/最多一组 5 个 VID；参数放在 URL query：
+    video_id=vid1,vid2,vid3
+    video_platform=1024
+    need_all_video_definition=true
+    device_level=3
+    detail_page_version=0
+  设备与 App 通用 query 仍由原 build_url 合并。
+  响应位置：data.video_model_data[vid].video_model
+  每批 api(..., max_retries=2)。请求异常（证书异常除外）、缺 VID 条目、
+  video_model JSON 解析异常的 VID 进入后续回退。
+  证据：hongguo._vm_tab_query 源行 2038，_vm_tab_pass 源行 2083。
+
+第 2 层：POST /novel/player/multi_video_model/v1/
+  只处理第 1 层遗留 VID，每批最多 5 个。
+  body = {biz_param: 原九项配置, mixed_video_id_map: {"1": [vid1, vid2]}}
+  仍使用 "1"，没有换成 "1004"。
+  响应位置：data[vid].video_model
+  api(..., max_retries=2)。一次旧批量分组抛出异常后，该次 lookup 的后续
+  批次不再重复旧批量入口，直接把剩余 VID 加入单集队列。
+  证据：hongguo._vm_body 源行 2045，_vm_lookup 源行 2108。
+  关键偏移：_vm_lookup 136–168 调新批量；278–340 调旧批量；
+  260–274 在 batch_err 已存在时跳过后续旧批量请求。
+
+第 3 层：POST /novel/player/video_model/v1/
+  对剩余 VID 逐个获取，body = {biz_param: 原九项配置, video_id: vid}。
+  响应位置：data.video_model
+  ContentUnavailableError 记住错误并继续；普通异常会结束剩余单集循环；
+  证书错误直接抛出。不是所有失败类型都会盲目重试全部集数。
+  证据：_vm_lookup 偏移 722–822 调单集，842–1140 错误分支。
+
+统一入口与缓存
+--------------
+get_video_urls 改为复用 get_video_tracks；offline_dl._video_model 也改成
+H.get_video_tracks([vid])，再包回 {video_list: tracks}。
+因此从下载或原有单集播放入口进入，也会走同一批量优先策略，即使只给 1 个 VID。
+get_video_tracks 先去重、查缓存，只对未缓存 VID 调 _vm_lookup。
+批大小限制为 1..5；force=True 绕过缓存读取。
+缓存 TTL 从固定上限延伸为结合条目 expire_time 计算：
+  min(18000 秒, expire_time - 当前时间 - 600 秒)
+缺少/无效 expiry 时回到 18000 秒；计算 TTL <= 0 不写缓存。
+新模型解析同时支持 video_model 已经是对象或 JSON 字符串。
+证据：_vm_entry 2051、_vm_ttl 2065、get_video_tracks 2198；
+offline_dl._video_model 1667。源行来自 pyc，不是恢复的原始源码。
+
+故障响应、恢复与签名
+------------------
+_api_once 在原 SG.check_response 后新增 _vm_dead，检查三类模型响应：
+code 必须为数值 0、data 必须是对象；新 tab 必须有非空 video_model_data；
+单集 data 不能为空。不符合则抛 _VmDead(ValueError)，不能计作正常成功。
+模型路径从通用 _STRIKE_PATHS 分离；旧批量和单集都出现可分类失败时，
+_vm_lookup 才调用 _source_strike，避免旧批量一失败就误判整个取流能力不可用。
+恢复探测 _source_probe 改用 _vm_alive，多入口探测；_source_good 对模型入口
+允许跨路径确认恢复。api 重试最后一轮失败后不再多睡一段退避时间。
+详细函数证据与限制见 device-signing-report.txt / device-signing-evidence.json。
+
+JAR、libmetasec_ml.so、libc++_shared.so、ms_16777218.bin、devices.json
+字节一致；devicepool 与 nettls 没有去除构建信息后的逻辑变化。
+sign、签名请求封装、_req_headers、build_url 与设备刷新核心未更新。
+config.json 只改基础 device_id/iid/cdid；默认设备池会覆盖这三个字段。
+因此没有观察到类似我们项目“替换 Helios/Medusa”的修复。
+
+离线回放结果
+------------
+运行 replay_model_functions.py：仅实例化已审阅的模型函数代码对象，
+不执行目标模块顶层；api、缓存、时钟均为内存假实现，实际网络请求为 0。
+输入 6 个未缓存的合成 VID，以下为逻辑 api() 调用次数，不含通用 API 重试：
+
+  1.0.0.73，成功：单集 6 次；重复调用命中缓存为 0 次。
+  1.0.0.76，新批量成功：新批量 2 次（5+1），返回 6 集；重复 0 次。
+  1.0.0.76，新批量失败、旧批量成功：新批量 2 + 旧批量 2 = 4 次。
+  1.0.0.76，两类批量失败、单集成功：新批量 2 + 旧批量 1 + 单集 6 = 9 次。
+  1.0.0.76，新批量各漏一条：新批量 2 + 旧批量 1，补齐 6 集。
+  1.0.0.76，新批量模型 JSON 损坏：新批量 2 + 旧批量 2，补齐 6 集。
+  1.0.0.76，三路均失败：2 + 1 + 1 = 4 次，调用故障计数后抛出异常。
+  1.0.0.76，证书异常：第 1 次就停止，不掩盖证书问题继续回退。
+  1.0.0.76，过期模型：返回当前取得 tracks，但不写过期缓存。
+
+共 12 组场景/入口组合通过，完整请求及返回摘要在：
+evidence/model-functions-offline-replay.json
+
+边界案例：_vm_entry 对存在条目但缺 video_model/空 video_list 返回 None，
+不会抛 _VmDead。_vm_tab_pass 会把 None 写入 out 而不加入回退队列。
+合成“新批量每个条目都是空 tracks”时，只调用新批量 2 次，最后返回 0 集。
+所以这版增强了适配，但“所有空模型都能继续回退”仍不成立。
+这是有限合成场景的行为观察，不表示平台一定会发出这种响应。
+
+已回答与未验证
+--------------
+已回答：版本差异、优先批量端点、参数和响应结构、分组上限、回退次序、
+统一入口、缓存和故障适配、签名/设备有无变化。
+未验证：新 GET 端点当下在线成功率、长时间稳定性、Windows GUI 安装运行表现、
+平台旧批量内部拒绝原因。没有向平台发请求，不把离线回放当作线上恢复证据。
+其余授权/UI/本地资料库变化只在全模块差异中保留，未作此次专题的全面审计。
+
+复现文件
+--------
+extract_compare.py：Inno 静态提取/哈希验证/与前版清单对比。
+compare_bytecode.py：递归代码对象比较，剔除编译路径与源位置因素。
+inspect_model_functions.py：含新增 _vm_* 的完整重点函数反汇编。
+replay_model_functions.py：12 组无网络受控回放。
+evidence/model-functions.txt：带 pyc 源行、函数内字节码偏移的静态证据。
+所有派生文件写在 research/latest-installer-20261016；analysis 保持不变。
