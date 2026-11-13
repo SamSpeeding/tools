@@ -5,6 +5,8 @@
 ## 首版产物与试装
 
 - 完整的上游源码基线和交叉工具链保存在 [`rt-n56u`](rt-n56u/README.md)。新增源码、上游改动和离线还原步骤见 [`r3p-v1`](r3p-v1/README.md)。
+- [v1.1 固件](firmware/MI-R3P-PB-BOOT-custom-v1.1.trx)使用同一 PB-BOOT 普通版 `kernel0` 布局。「应用 → Mihomo → 代理参数」只需填写核心 HTTPS 地址和 JSON 订阅 HTTPS 地址。可选填 SHA-256 来固定核心版本，或者清除已有的固定值。
+- 已验证核心地址 `https://tools.sangonsek.com/miwifi/mihomo/mihomo-mipsle-softfloat.gz` 可通过 HTTPS 下载。当前文件是 Mihomo v1.19.33 的 MIPS 小端软浮点版，已在 MIPS 模拟环境通过完整订阅配置校验。
 - [首版固件](firmware/MI-R3P-PB-BOOT-custom-v1.trx)为 PB-BOOT 普通版 `kernel0` 布局，与桌面 `路由器Pro R3P/Padavan/R3P 定制首版/` 中的固件一致。整包 13,156,334 字节（12.55 MiB），较留存的普通版小 2.85 MiB（18.5%）。比较使用的是留存成品，纯裁剪版未单独对照构建。
 - SHA-256 为 `8fc1cd455e4c06f659bb730834d900ebbe6b55490976efab4f5a408fc9a135b8`。已校验镜像板型、头部及数据 CRC，并解包核对设备节点、Wi-Fi 驱动、SSH / SFTP、Samba、miniDLNA 和代理模块。
 - 确认目前运行的是 PB-BOOT 普通布局，并备份现有 Padavan 设置。用网线连接，在当前后台的固件升级页上传定制 `.trx`。重启后先验证有线、Wi-Fi 和上网，再在「应用 → Mihomo」填写核心 HTTPS 地址、下载文件的 SHA-256 和 JSON 订阅 HTTPS 地址，保存并手动启用。保留原来的 `.trx` 和本地救砖教程。

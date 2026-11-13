@@ -64,7 +64,8 @@
     link.href = s.DAVURL || '#';
     var params = document.querySelector('[data-action="proxy-save"]');
     fields(params, 'core').placeholder = s.CoreConfigured ? '已保存核心地址' : '';
-    fields(params, 'sha256').placeholder = s.CoreConfigured ? '已保存校验值' : '';
+    fields(params, 'sha256').placeholder = s.CorePinned ? '已保存校验值' : '';
+    document.getElementById('clear-core-sha256').hidden = !s.CorePinned;
     fields(params, 'subscription').placeholder = s.SubscriptionConfigured ? '已保存订阅地址' : '';
     if (!settingsLoaded) {
       fields(dav, 'enabled').checked = s.DAVEnabled;

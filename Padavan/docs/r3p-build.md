@@ -17,6 +17,6 @@ Rosetta 来宾可改用 `fakeroot-tcp`。打包时设备节点的创建和 Squas
 
 镜像生成于 `trunk/images`。当前配置使用 R3P 的 kernel0 普通布局，对应本地归档的 PB-BOOT 普通版。刷机前检查真机引导及 `/proc/mtd`，保留原固件和设置备份。
 
-后台的「应用」页接受返回 Mihomo 原生 JSON 的 HTTPS 订阅，以及 MIPS 小端核心的 HTTPS 地址和下载文件 SHA-256。下载文件可以是 ELF 或 gzip。首次启用和重启补缓存时使用这些地址。后续更新通过「刷新配置」触发。
+后台的「应用」页接受返回 Mihomo 原生 JSON 的 HTTPS 订阅，以及 MIPS 小端软浮点核心的 HTTPS 地址。下载文件可以是 ELF 或 gzip。首次启用和重启补缓存时使用这些地址，后续更新通过「刷新配置」触发。可选填下载文件的 SHA-256 来固定版本。切换核心地址时，原地址的校验值会清除。留空时，路由器按 HTTPS 证书验证下载，并检查核心架构和 Mihomo 配置。
 
 WebDAV 在 LAN IPv4 上提供 HTTP 和 Basic 认证。共享目录须位于已挂载 USB 磁盘下。使用独立账号密码，可开启只读模式。

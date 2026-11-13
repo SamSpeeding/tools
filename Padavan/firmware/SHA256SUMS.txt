@@ -1,1 +1,2 @@
 8fc1cd455e4c06f659bb730834d900ebbe6b55490976efab4f5a408fc9a135b8  MI-R3P-PB-BOOT-custom-v1.trx
+c68bbbec7f563076c2fa33ab99cd1bc8a3021d4f9f078bc7f7b599dabefc2f31  MI-R3P-PB-BOOT-custom-v1.1.trx

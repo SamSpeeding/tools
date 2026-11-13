@@ -142,12 +142,14 @@ func fetch(client *http.Client, url string, max int64, target io.Writer) error {
 	return nil
 }
 
-func installCore(client *http.Client, conf proxySettings) (string, error) {
-	target := filepath.Join(runDir, "core-"+conf.CoreSHA256)
-	if info, err := os.Stat(target); err == nil && info.Mode().IsRegular() {
-		return target, nil
+func installCore(client *http.Client, conf proxySettings, dir string) (string, error) {
+	if conf.CoreSHA256 != "" {
+		target := filepath.Join(dir, "core-"+conf.CoreSHA256)
+		if info, err := os.Stat(target); err == nil && info.Mode().IsRegular() {
+			return target, nil
+		}
 	}
-	archive, err := os.CreateTemp(runDir, "core-download-*")
+	archive, err := os.CreateTemp(dir, "core-download-*")
 	if err != nil {
 		return "", err
 	}
@@ -157,8 +159,13 @@ func installCore(client *http.Client, conf proxySettings) (string, error) {
 	if err := fetch(client, conf.CoreURL, 80<<20, io.MultiWriter(archive, hash)); err != nil {
 		return "", err
 	}
-	if hex.EncodeToString(hash.Sum(nil)) != conf.CoreSHA256 {
+	digest := hex.EncodeToString(hash.Sum(nil))
+	if conf.CoreSHA256 != "" && digest != conf.CoreSHA256 {
 		return "", errors.New("Mihomo 核心 SHA-256 不匹配")
+	}
+	target := filepath.Join(dir, "core-"+digest)
+	if info, err := os.Stat(target); err == nil && info.Mode().IsRegular() {
+		return target, nil
 	}
 	if _, err := archive.Seek(0, io.SeekStart); err != nil {
 		return "", err
@@ -464,9 +471,16 @@ func (s *service) updateProxy(refresh bool) error {
 	}
 	client := downloadClient()
 	defer client.CloseIdleConnections()
-	core, err := installCore(client, conf)
+	core, err := installCore(client, conf, runDir)
 	if err != nil {
 		return err
+	}
+	if conf.CoreSHA256 == "" {
+		defer func() {
+			if s.proxy == nil || s.proxy.cmd.Path != core {
+				os.Remove(core)
+			}
+		}()
 	}
 	dir, err := os.MkdirTemp(runDir, "config-*")
 	if err != nil {

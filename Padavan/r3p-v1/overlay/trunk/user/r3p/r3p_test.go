@@ -2,6 +2,8 @@ package main
 
 import (
 	"context"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
@@ -10,6 +12,29 @@ import (
 	"reflect"
 	"testing"
 )
+
+func TestInstallCoreWithOptionalDigest(t *testing.T) {
+	core := append([]byte("\x7fELF\x01\x01"), make([]byte, 14)...)
+	core[18] = 8
+	server := httptest.NewTLSServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write(core)
+	}))
+	defer server.Close()
+	dir := t.TempDir()
+	conf := proxySettings{CoreURL: server.URL}
+	path, err := installCore(server.Client(), conf, dir)
+	if err != nil {
+		t.Fatal(err)
+	}
+	digest := sha256.Sum256(core)
+	if filepath.Base(path) != "core-"+hex.EncodeToString(digest[:]) {
+		t.Fatalf("unexpected core path %q", path)
+	}
+	conf.CoreSHA256 = hex.EncodeToString(make([]byte, sha256.Size))
+	if _, err := installCore(server.Client(), conf, dir); err == nil {
+		t.Fatal("a configured digest must match the download")
+	}
+}
 
 func TestPrepareConfigPreservesRulesAndAddsDualStackListeners(t *testing.T) {
 	const subscription = `{"mixed-port":7890,"ipv6":false,"external-controller":"0.0.0.0:9090",

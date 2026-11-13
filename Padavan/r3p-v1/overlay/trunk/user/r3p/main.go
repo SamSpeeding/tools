@@ -47,6 +47,7 @@ type settings struct {
 
 type status struct {
 	Busy, ProxyEnabled, ProxyRunning, CoreConfigured, SubscriptionConfigured bool
+	CorePinned                                                               bool
 	DAVEnabled, DAVRunning, DAVReadOnly                                      bool
 	DAVPath, DAVUser, DAVURL                                                 string
 	DAVPort                                                                  int
@@ -140,7 +141,8 @@ func (s *service) publish(msg string, dav bool) {
 	}
 	st.Busy = false
 	st.ProxyEnabled, st.ProxyRunning = s.conf.Proxy.Enabled, s.proxy != nil
-	st.CoreConfigured = s.conf.Proxy.CoreURL != "" && s.conf.Proxy.CoreSHA256 != ""
+	st.CoreConfigured = s.conf.Proxy.CoreURL != ""
+	st.CorePinned = s.conf.Proxy.CoreSHA256 != ""
 	st.SubscriptionConfigured = s.conf.Proxy.ConfigURL != ""
 	st.Block, st.Allow, st.Rules = s.conf.Proxy.Block, s.conf.Proxy.Allow, s.conf.Proxy.Rules
 	st.BypassClients, st.BypassDestinations = s.conf.Proxy.BypassClients, s.conf.Proxy.BypassDestinations
@@ -227,7 +229,13 @@ func (s *service) apply(action string, form url.Values) (string, bool) {
 			if !validHTTPS(value) {
 				return "核心地址须为 HTTPS URL", false
 			}
+			if value != conf.Proxy.CoreURL {
+				conf.Proxy.CoreSHA256 = ""
+			}
 			conf.Proxy.CoreURL = value
+		}
+		if form.Get("clear_sha256") == "1" {
+			conf.Proxy.CoreSHA256 = ""
 		}
 		if value := strings.TrimSpace(form.Get("sha256")); value != "" {
 			if !sha256Pattern.MatchString(value) {
@@ -265,8 +273,8 @@ func (s *service) apply(action string, form url.Values) (string, bool) {
 		if !routerMode() {
 			return "AP 模式保持原网络路径，切换为路由模式后可启用代理", false
 		}
-		if conf.Proxy.CoreURL == "" || conf.Proxy.CoreSHA256 == "" || conf.Proxy.ConfigURL == "" {
-			return "请先保存核心地址、SHA-256 和 JSON 订阅地址", false
+		if conf.Proxy.CoreURL == "" || conf.Proxy.ConfigURL == "" {
+			return "请先保存核心地址和 JSON 订阅地址", false
 		}
 		s.lastProxyTry = time.Now()
 		if err := s.updateProxy(action == "proxy-refresh"); err != nil {

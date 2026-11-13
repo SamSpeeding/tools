@@ -52,9 +52,13 @@
         <summary>代理参数</summary>
         <form data-action="proxy-save">
           <label>核心 HTTPS 地址<input type="url" name="core" maxlength="1024" autocomplete="off"></label>
-          <label>下载文件的 SHA-256<input name="sha256" maxlength="64" spellcheck="false" autocomplete="off"></label>
           <label>JSON 订阅 HTTPS 地址<input type="url" name="subscription" maxlength="1024" autocomplete="off"></label>
-          <small>已有设置时，留空保留原值。</small>
+          <small>地址留空时保留已有设置。</small>
+          <details>
+            <summary>固定核心校验值（选填）</summary>
+            <label>下载文件的 SHA-256<input name="sha256" maxlength="64" spellcheck="false" autocomplete="off"></label>
+            <label class="check" id="clear-core-sha256" hidden><input type="checkbox" name="clear_sha256" value="1">清除已保存的校验值</label>
+          </details>
           <button type="submit">保存地址</button>
         </form>
       </details>
