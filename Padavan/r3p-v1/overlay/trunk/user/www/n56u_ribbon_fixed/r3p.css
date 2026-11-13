@@ -1,0 +1,32 @@
+:root { color-scheme: light; font: 16px system-ui, sans-serif; background: #f2f5f6; color: #1b2b36; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #12617d; text-underline-offset: .2em; }
+.mast { display: flex; gap: 1rem 2rem; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 1rem max(1rem, calc((100% - 66rem) / 2)); background: #142d3a; }
+.mast a { color: #fff; text-decoration: none; }
+.brand { font-weight: 700; white-space: nowrap; }
+nav { display: flex; gap: .25rem; }
+nav a { padding: .45rem .7rem; border-radius: .4rem; }
+nav a[aria-current], nav a:hover { background: #305365; }
+main { width: min(100% - 2rem, 66rem); margin: 2rem auto 4rem; }
+h1 { font-size: 2rem; margin: 0 0 1rem; }
+h2 { font-size: 1.2rem; margin: 0 0 .75rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 1rem; align-items: start; }
+article { background: #fff; border: 1px solid #dbe3e7; border-radius: .8rem; padding: 1.25rem; overflow-wrap: anywhere; }
+article p { margin: .5rem 0; }
+ul { margin: 0; padding-left: 1.2rem; }
+li + li { margin-top: .45rem; }
+form { display: grid; gap: .65rem; margin: .7rem 0 0; }
+label { display: grid; gap: .25rem; font-size: .9rem; }
+label.check { display: flex; align-items: center; }
+input, button, select, textarea { font: inherit; }
+input:not([type=checkbox]), select, textarea { width: 100%; min-width: 0; padding: .55rem; color: inherit; border: 1px solid #9dafb9; border-radius: .35rem; background: #fff; }
+button { padding: .55rem .85rem; justify-self: start; border-radius: .35rem; border: 1px solid #12617d; background: #12617d; color: white; cursor: pointer; }
+button.secondary { background: #fff; color: #12617d; }
+button:disabled { opacity: .45; cursor: default; }
+.actions { display: flex; flex-wrap: wrap; gap: .45rem; margin: .75rem 0; }
+details { margin-top: .75rem; border-top: 1px solid #dbe3e7; padding-top: .75rem; }
+summary { cursor: pointer; }
+.muted, small { color: #475b65; }
+.error { color: #a62b27; }
+[hidden] { display: none !important; }

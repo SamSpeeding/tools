@@ -1,0 +1,964 @@
+diff --git a/trunk/build_firmware_modify b/trunk/build_firmware_modify
+index a18da5916..9eb09cf08 100755
+--- a/trunk/build_firmware_modify
++++ b/trunk/build_firmware_modify
+@@ -117,6 +117,9 @@ echo --------------------------COPY-CONFIG-----------------------------
+ ln -sf vendors/Ralink/config.arch config.arch
+ cp -fL "$kernel_cf" "$kernel_tf"
+ cp -fL "$busybox_cf" "$busybox_tf"
++if [ "$CONFIG_FIRMWARE_R3P_CUSTOM" = "y" ]; then
++	func_disable_busybox_param CONFIG_TELNETD
++fi
+ cp -fL "$board_mk" "$ROOTDIR/user/shared/board.mk"
+ cp -fL "$board_h" "$ROOTDIR/user/shared/include/ralink_board.h"
+ ############################# WI-FI ###################################
+@@ -409,7 +412,9 @@ if [ "$CONFIG_FIRMWARE_INCLUDE_XFRM" != "y" ] ; then
+ 	func_disable_kernel_param "CONFIG_NETFILTER_XT_MATCH_POLICY"
+ 	func_disable_kernel_param "CONFIG_IP_NF_MATCH_AH"
+ 	func_disable_kernel_param "CONFIG_IP6_NF_MATCH_AH"
+-	func_disable_kernel_param "CONFIG_IPV6_MULTIPLE_TABLES"
++	if [ "$CONFIG_FIRMWARE_R3P_CUSTOM" != "y" ]; then
++		func_disable_kernel_param "CONFIG_IPV6_MULTIPLE_TABLES"
++	fi
+ 	func_disable_kernel_param "CONFIG_CRYPTO_AEAD"
+ 	func_disable_kernel_param "CONFIG_CRYPTO_AEAD2"
+ 	func_disable_kernel_param "CONFIG_CRYPTO_AUTHENC"
+@@ -473,7 +478,7 @@ fi
+ #######################################################################
+ if [ "$CONFIG_WITHOUT_KERNEL" != "y" ] ; then
+ echo --------------------------MAKE-DEP--------------------------------
+-make dep
++make dep || exit $?
+ fi
+ if [ "$2" != "kmod" ] ; then
+ echo --------------------------MAKE-ALL--------------------------------
+diff --git a/trunk/configs/boards/MI-R3P/kernel-3.4.x.config b/trunk/configs/boards/MI-R3P/kernel-3.4.x.config
+index 7ff9a46c1..a50722499 100644
+--- a/trunk/configs/boards/MI-R3P/kernel-3.4.x.config
++++ b/trunk/configs/boards/MI-R3P/kernel-3.4.x.config
+@@ -467,7 +467,8 @@ CONFIG_IPV6_SIT=y
+ CONFIG_IPV6_SIT_6RD=y
+ CONFIG_IPV6_NDISC_NODETYPE=y
+ # CONFIG_IPV6_TUNNEL is not set
+-# CONFIG_IPV6_MULTIPLE_TABLES is not set
++CONFIG_IPV6_MULTIPLE_TABLES=y
++# CONFIG_IPV6_SUBTREES is not set
+ CONFIG_IPV6_MROUTE=y
+ # CONFIG_IPV6_MROUTE_MULTIPLE_TABLES is not set
+ # CONFIG_IPV6_PIMSM_V2 is not set
+@@ -548,7 +549,7 @@ CONFIG_NETFILTER_XT_TARGET_TCPMSS=y
+ #
+ # Xtables matches
+ #
+-# CONFIG_NETFILTER_XT_MATCH_ADDRTYPE is not set
++CONFIG_NETFILTER_XT_MATCH_ADDRTYPE=m
+ # CONFIG_NETFILTER_XT_MATCH_CLUSTER is not set
+ CONFIG_NETFILTER_XT_MATCH_COMMENT=m
+ CONFIG_NETFILTER_XT_MATCH_CONNBYTES=m
+@@ -1337,7 +1338,7 @@ CONFIG_USB_XHCI_PLATFORM=y
+ # USB Device Class drivers
+ #
+ CONFIG_USB_ACM=m
+-CONFIG_USB_PRINTER=m
++# CONFIG_USB_PRINTER is not set
+ CONFIG_USB_WDM=m
+ # CONFIG_USB_TMC is not set
+ 
+diff --git a/trunk/configs/templates/MI-R3P.config b/trunk/configs/templates/MI-R3P.config
+index 344dd403a..077137695 100644
+--- a/trunk/configs/templates/MI-R3P.config
++++ b/trunk/configs/templates/MI-R3P.config
+@@ -66,7 +66,7 @@ CONFIG_FIRMWARE_ENABLE_FUSE=y
+ CONFIG_FIRMWARE_ENABLE_SWAP=n
+ 
+ ### Include UVC camera modules. ~0.2MB
+-CONFIG_FIRMWARE_INCLUDE_UVC=y
++CONFIG_FIRMWARE_INCLUDE_UVC=n
+ 
+ ### Include USB-HID modules. ~0.2MB
+ CONFIG_FIRMWARE_INCLUDE_HID=n
+@@ -75,7 +75,7 @@ CONFIG_FIRMWARE_INCLUDE_HID=n
+ CONFIG_FIRMWARE_INCLUDE_SERIAL=y
+ 
+ ### Include USB-Audio modules ~0.46MB
+-CONFIG_FIRMWARE_INCLUDE_AUDIO=y
++CONFIG_FIRMWARE_INCLUDE_AUDIO=n
+ 
+ ### Include XFRM (IPsec) modules & iptables extension ~ 0.2MB
+ CONFIG_FIRMWARE_INCLUDE_XFRM=n
+@@ -124,10 +124,10 @@ CONFIG_FIRMWARE_INCLUDE_LANG_CN=y
+ CONFIG_FIRMWARE_INCLUDE_NTFS_3G=n
+ 
+ ### Include LPR printer daemon. ~0.12MB
+-CONFIG_FIRMWARE_INCLUDE_LPRD=y
++CONFIG_FIRMWARE_INCLUDE_LPRD=n
+ 
+ ### Include USB-over-Ethernet printer daemon. ~0.05MB
+-CONFIG_FIRMWARE_INCLUDE_U2EC=y
++CONFIG_FIRMWARE_INCLUDE_U2EC=n
+ 
+ ### Include "tcpdump" utility. ~0.6MB
+ CONFIG_FIRMWARE_INCLUDE_TCPDUMP=y
+@@ -136,7 +136,7 @@ CONFIG_FIRMWARE_INCLUDE_TCPDUMP=y
+ CONFIG_FIRMWARE_INCLUDE_HDPARM=y
+ 
+ ### Include "parted" utility (allow make GPT partitions). ~0.3MB
+-CONFIG_FIRMWARE_INCLUDE_PARTED=y
++CONFIG_FIRMWARE_INCLUDE_PARTED=n
+ 
+ ### Include SMB (and WINS) server. ~1.5MB
+ CONFIG_FIRMWARE_INCLUDE_SMBD=y
+@@ -151,7 +151,7 @@ CONFIG_FIRMWARE_INCLUDE_WINS=n
+ CONFIG_FIRMWARE_INCLUDE_SMBD_SYSLOG=n
+ 
+ ### Include FTP server. ~0.2MB
+-CONFIG_FIRMWARE_INCLUDE_FTPD=y
++CONFIG_FIRMWARE_INCLUDE_FTPD=n
+ 
+ ### Include alternative L2TP control client RP-L2TP. ~0.1MB
+ CONFIG_FIRMWARE_INCLUDE_RPL2TP=n
+@@ -175,7 +175,7 @@ CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=n
+ CONFIG_FIRMWARE_INCLUDE_OPENSSH=y
+ 
+ ### Include OpenVPN. IPv6 required. openssl ~1.2MB, openvpn ~0.4MB
+-CONFIG_FIRMWARE_INCLUDE_OPENVPN=y
++CONFIG_FIRMWARE_INCLUDE_OPENVPN=n
+ 
+ ### Include StrongSwan. XFRM modules ~0.2MB, strongswan ~0.7MB
+ CONFIG_FIRMWARE_INCLUDE_SSWAN=n
+@@ -187,7 +187,7 @@ CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y
+ CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y
+ 
+ ### Include xUPNPd IPTV mediaserver. ~0.3MB
+-CONFIG_FIRMWARE_INCLUDE_XUPNPD=y
++CONFIG_FIRMWARE_INCLUDE_XUPNPD=n
+ 
+ ### Include Minidlna UPnP mediaserver. ~1.6MB
+ CONFIG_FIRMWARE_INCLUDE_MINIDLNA=y
+@@ -199,16 +199,16 @@ CONFIG_FIRMWARE_INCLUDE_FIREFLY=n
+ CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=y
+ 
+ ### Include Transmission torrent. openssl ~1.2MB, transmission ~1.5MB
+-CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y
++CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=n
+ 
+ ### Include Transmission-Web-Control (advanced WebUI). ~0.8MB
+-CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=y
++CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL=n
+ 
+ ### Include Aria2 download manager. openssl ~1.2MB, aria2 ~3.5MB
+-CONFIG_FIRMWARE_INCLUDE_ARIA=y
++CONFIG_FIRMWARE_INCLUDE_ARIA=n
+ 
+ ### Include Aria2 WEB control. ~0.7MB
+-CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=y
++CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_CURL=y
+ 
+@@ -216,11 +216,11 @@ CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_GDUT_DRCOM=n
+ 
+-CONFIG_FIRMWARE_INCLUDE_DOGCOM=y
++CONFIG_FIRMWARE_INCLUDE_DOGCOM=n
+ 
+-CONFIG_FIRMWARE_INCLUDE_MINIEAP=y
++CONFIG_FIRMWARE_INCLUDE_MINIEAP=n
+ 
+-CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=y
++CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_NAPT66=y
+ 
+@@ -230,11 +230,11 @@ CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD=n
+ 
+-CONFIG_FIRMWARE_INCLUDE_VLMCSD=y
++CONFIG_FIRMWARE_INCLUDE_VLMCSD=n
+ 
+-CONFIG_FIRMWARE_INCLUDE_TTYD=y
++CONFIG_FIRMWARE_INCLUDE_TTYD=n
+ 
+-CONFIG_FIRMWARE_INCLUDE_LRZSZ=y
++CONFIG_FIRMWARE_INCLUDE_LRZSZ=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_HTOP=y
+ 
+@@ -250,7 +250,7 @@ CONFIG_FIRMWARE_INCLUDE_MTR=y
+ 
+ CONFIG_FIRMWARE_INCLUDE_SOCAT=y
+ 
+-CONFIG_FIRMWARE_INCLUDE_SRELAY=y
++CONFIG_FIRMWARE_INCLUDE_SRELAY=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n
+ 
+@@ -260,3 +260,6 @@ CONFIG_FIRMWARE_INCLUDE_FRPS=n
+ 
+ CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n
+ 
++
++# R3P customization profile
++CONFIG_FIRMWARE_R3P_CUSTOM=y
+diff --git a/trunk/user/Makefile b/trunk/user/Makefile
+index 993d667f1..16278cb2a 100644
+--- a/trunk/user/Makefile
++++ b/trunk/user/Makefile
+@@ -99,8 +99,10 @@ dir_y						+= iptables
+ dir_y						+= coremark
+ ifneq ($(CONFIG_WITHOUT_KERNEL),y)
+ dir_$(CONFIG_FIRMWARE_INCLUDE_IPSET)		+= ipset
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= accel-pptpd
+ endif
++endif
+ dir_y						+= ebtables
+ dir_y						+= iproute2
+ dir_y						+= wireless_tools
+@@ -115,12 +117,18 @@ dir_y						+= rc
+ dir_$(CONFIG_FIRMWARE_INCLUDE_ANTFS)		+= antfs
+ dir_$(CONFIG_FIRMWARE_INCLUDE_NAPT66)		+= napt66
+ dir_$(CONFIG_FIRMWARE_INCLUDE_SFE)		+= shortcut-fe
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= infosvr
++endif
+ dir_y						+= inadyn
+ dir_y						+= miniupnpd
+ dir_y						+= dnsmasq
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= igmpproxy
++endif
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= udpxy
++endif
+ dir_y						+= utils
+ dir_y						+= lanauth
+ dir_y						+= 802.1x
+@@ -129,8 +137,11 @@ dir_y						+= pppd
+ dir_y						+= pppoe
+ dir_y						+= xl2tpd
+ dir_$(CONFIG_FIRMWARE_INCLUDE_RPL2TP)		+= rp-l2tp
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= lldt
++endif
+ dir_y						+= scripts
++dir_$(CONFIG_FIRMWARE_R3P_CUSTOM)		+= r3p
+ dir_$(CONFIG_FIRMWARE_INCLUDE_SMARTDNS)	+= smartdns
+ dir_$(OPENSSH_ENABLED)				+= openssh
+ dir_$(DROPBEAR_ENABLED)				+= dropbear
+@@ -183,7 +194,9 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_HDPARM)		+= hdparm
+ endif
+ 
+ ifdef CONFIG_USB_SUPPORT
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= p910nd
++endif
+ dir_y						+= usb-modeswitch
+ dir_y						+= comgt-0.32
+ dir_y						+= uqmi
+@@ -197,7 +210,9 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_NFSD)		+= nfs-utils
+ ifneq (,$(filter y,$(CONFIG_FIRMWARE_INCLUDE_NFSD) $(CONFIG_FIRMWARE_INCLUDE_NFSC)))
+ dir_y						+= rpcbind
+ endif
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= optware
++endif
+ dir_y						+= util-linux
+ dir_$(FS_EXT_ENABLED)				+= e2fsprogs
+ dir_$(FS_FAT_ENABLED)				+= dosfstools
+@@ -212,7 +227,9 @@ endif
+ 
+ ifdef CONFIG_MTD_UBI
+ ifneq ($(STORAGE_ENABLED),y)
++ifneq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
+ dir_y						+= optware
++endif
+ dir_y						+= util-linux
+ endif
+ dir_y						+= mtd-utils
+diff --git a/trunk/user/httpd/httpd.c b/trunk/user/httpd/httpd.c
+index 89446d9c6..c4f2f80e0 100644
+--- a/trunk/user/httpd/httpd.c
++++ b/trunk/user/httpd/httpd.c
+@@ -840,6 +840,9 @@ handle_request(FILE *conn_fp, const conn_item_t *item)
+ 	struct mime_handler *handler;
+ 	struct stat st, *p_st = NULL;
+ 	uaddr conn_ip;
++#if defined(R3P_CUSTOM)
++	int r3p_request, r3p_header = 0;
++#endif
+ 
+ 	/* Initialize the request variables. */
+ 	authorization = boundary = NULL;
+@@ -898,6 +901,12 @@ handle_request(FILE *conn_fp, const conn_item_t *item)
+ 			cp += strspn( cp, " \t" );
+ 			if_modified_since = tdate_parse(cp);
+ 		}
++#if defined(R3P_CUSTOM)
++		else if (strcasecmp(cur, "X-R3P-Request: 1\r\n") == 0 ||
++			 strcasecmp(cur, "X-R3P-Request: 1\n") == 0) {
++			r3p_header = 1;
++		}
++#endif
+ 		else if ((cp = strstr( cur, "boundary=" ))) {
+ 			boundary = cp + 9;
+ 			for ( cp = cp + 9; *cp && *cp != '\r' && *cp != '\n'; cp++ );
+@@ -949,6 +958,19 @@ handle_request(FILE *conn_fp, const conn_item_t *item)
+ 	usockaddr_to_uaddr(&item->usa, &conn_ip);
+ 
+ 	login_state = http_login_check(&conn_ip);
++#if defined(R3P_CUSTOM)
++	r3p_request = (strcmp(file, "r3p-service.cgi") == 0);
++	if (r3p_request) {
++		if (login_state == 0) {
++			send_error(403, "Forbidden", NULL, "Another session is active.", conn_fp);
++			return;
++		}
++		if (method_id != HTTP_METHOD_POST || !r3p_header || query || clen < 1 || clen > 8190) {
++			send_error(400, "Bad Request", NULL, "Invalid service request.", conn_fp);
++			return;
++		}
++	}
++#endif
+ 	
+ 	if (login_state == 0) {
+ 		if (strstr(file, ".htm") != NULL || strstr(file, ".asp") != NULL) {
+@@ -993,6 +1015,12 @@ handle_request(FILE *conn_fp, const conn_item_t *item)
+ 			http_login(&conn_ip);
+ 	}
+ 
++#if defined(R3P_CUSTOM)
++	if (r3p_request && login_state != 1 && !is_safe_ipaddr(&conn_ip)) {
++		send_error(403, "Forbidden", NULL, "Use the local network.", conn_fp);
++		return;
++	}
++#endif
+ 	if (method_id == HTTP_METHOD_POST) {
+ 		if (handler->input)
+ 			handler->input(file, conn_fp, clen, boundary);
+diff --git a/trunk/user/httpd/web_ex.c b/trunk/user/httpd/web_ex.c
+index 5dd10ff9c..09ffa0ab0 100644
+--- a/trunk/user/httpd/web_ex.c
++++ b/trunk/user/httpd/web_ex.c
+@@ -26,6 +26,9 @@
+ #include <sys/stat.h>
+ #include <sys/sysinfo.h>
+ #include <sys/socket.h>
++#if defined(R3P_CUSTOM)
++#include <sys/un.h>
++#endif
+ #include <sys/ioctl.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+@@ -2440,6 +2443,10 @@ ej_firmware_caps_hook(int eid, webs_t wp, int argc, char **argv)
+ 		found_app_mentohust
+ 	);
+ 
++#if defined(R3P_CUSTOM)
++	websWrite(wp, "function r3p_firmware() { return true; }\n");
++#endif
++
+ 	websWrite(wp,
+ 		"function support_ipv6() { return %d;}\n"
+ 		"function support_ipv6_ppe() { return %d;}\n"
+@@ -3792,6 +3799,72 @@ static char mentohust_log_txt[] =
+ 
+ #endif
+ 
++#if defined(R3P_CUSTOM)
++static char r3p_payload[8192];
++
++static void
++r3p_request_post(const char *url, FILE *stream, int clen, char *boundary)
++{
++	r3p_payload[0] = '\0';
++	if (clen > 0 && clen < sizeof(r3p_payload) - 1 &&
++	    fread(r3p_payload, 1, clen, stream) == (size_t)clen &&
++	    memchr(r3p_payload, '\n', clen) == NULL &&
++	    memchr(r3p_payload, '\r', clen) == NULL &&
++	    memchr(r3p_payload, '\0', clen) == NULL) {
++		r3p_payload[clen] = '\n';
++		r3p_payload[clen + 1] = '\0';
++	} else {
++		r3p_payload[0] = '\0';
++	}
++}
++
++static void
++r3p_request_reply(const char *url, FILE *stream)
++{
++	struct sockaddr_un addr;
++	struct timeval timeout = { 4, 0 };
++	char buf[1024];
++	ssize_t n, sent;
++	int fd;
++
++	if (!r3p_payload[0]) {
++		fputs("{\"Error\":\"请求无效\"}", stream);
++		return;
++	}
++
++	fd = socket(AF_UNIX, SOCK_STREAM, 0);
++	if (fd < 0)
++		goto unavailable;
++	memset(&addr, 0, sizeof(addr));
++	addr.sun_family = AF_UNIX;
++	strcpy(addr.sun_path, "/tmp/r3p/control.sock");
++	setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof(timeout));
++	setsockopt(fd, SOL_SOCKET, SO_SNDTIMEO, &timeout, sizeof(timeout));
++	if (connect(fd, (struct sockaddr *)&addr, sizeof(addr)) != 0)
++		goto close_fd;
++	sent = 0;
++	while (r3p_payload[sent]) {
++		n = write(fd, r3p_payload + sent, strlen(r3p_payload + sent));
++		if (n <= 0)
++			goto close_fd;
++		sent += n;
++	}
++	n = read(fd, buf, sizeof(buf));
++	if (n <= 0)
++		goto close_fd;
++	do {
++		fwrite(buf, 1, n, stream);
++	} while ((n = read(fd, buf, sizeof(buf))) > 0);
++	close(fd);
++	return;
++
++close_fd:
++	close(fd);
++unavailable:
++	fputs("{\"Error\":\"路由器服务尚未启动\"}", stream);
++}
++#endif
++
+ struct mime_handler mime_handlers[] = {
+ 	/* cached javascript files w/o translations */
+ 	{ "jquery.js", "text/javascript", NULL, NULL, do_file, 0 }, // 2012.06 Eagle23
+@@ -3844,6 +3917,9 @@ struct mime_handler mime_handlers[] = {
+ #endif
+ 
+ 	/* no-cached POST objects */
++#if defined(R3P_CUSTOM)
++	{ "r3p-service.cgi", "application/json", no_cache_IE, r3p_request_post, r3p_request_reply, 1 },
++#endif
+ 	{ "update.cgi*", "text/javascript", no_cache_IE, do_html_apply_post, do_update_cgi, 1 },
+ 	{ "apply.cgi*", "text/html", no_cache_IE, do_html_apply_post, do_apply_cgi, 1 },
+ 
+diff --git a/trunk/user/rc/Makefile b/trunk/user/rc/Makefile
+index 567043276..a22605515 100644
+--- a/trunk/user/rc/Makefile
++++ b/trunk/user/rc/Makefile
+@@ -93,6 +93,9 @@ romfs:
+ 	cd $(INSTALLDIR)/sbin && ln -sf rc restart_vpn_client
+ 	cd $(INSTALLDIR)/sbin && ln -sf rc run_telnetd
+ 	cd $(INSTALLDIR)/sbin && ln -sf rc restart_firewall
++ifeq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
++	cd $(INSTALLDIR)/sbin && ln -sf rc r3p-net-reload
++endif
+ 	cd $(INSTALLDIR)/sbin && ln -sf rc pids
+ 	cd $(INSTALLDIR)/sbin && ln -sf rc rstats
+ 	cd $(INSTALLDIR)/sbin && ln -sf rc stop_wan
+diff --git a/trunk/user/rc/common_ex.c b/trunk/user/rc/common_ex.c
+index 15af15448..13c3cabde 100644
+--- a/trunk/user/rc/common_ex.c
++++ b/trunk/user/rc/common_ex.c
+@@ -675,7 +675,8 @@ void umount_rwfs_partition(void)
+ 	const char *mp_rwfs = MP_MTD_RWFS;
+ 
+ 	if (check_if_dir_exist(mp_rwfs)) {
+-		doSystem("/usr/bin/opt-umount.sh %s %s", "/dev/ubi", mp_rwfs);
++		if (access("/usr/bin/opt-umount.sh", X_OK) == 0)
++			doSystem("/usr/bin/opt-umount.sh %s %s", "/dev/ubi", mp_rwfs);
+ 		
+ 		if (umount(mp_rwfs) == 0)
+ 			rmdir(mp_rwfs);
+@@ -705,7 +706,8 @@ void start_rwfs_optware(void)
+ 		return;
+ 
+ 	snprintf(dev_ubi, sizeof(dev_ubi), "/dev/ubi%d_0", mtd_rwfs);
+-	doSystem("/usr/bin/opt-mount.sh %s %s &", dev_ubi, mp_rwfs);
++	if (access("/usr/bin/opt-mount.sh", X_OK) == 0)
++		doSystem("/usr/bin/opt-mount.sh %s %s &", dev_ubi, mp_rwfs);
+ }
+ #else
+ inline void mount_rwfs_partition(void) {}
+diff --git a/trunk/user/rc/firewall_ex.c b/trunk/user/rc/firewall_ex.c
+index 75044272b..ca2a3ee31 100644
+--- a/trunk/user/rc/firewall_ex.c
++++ b/trunk/user/rc/firewall_ex.c
+@@ -19,6 +19,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <signal.h>
++#include <unistd.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+@@ -557,8 +558,13 @@ include_lw_filter(FILE *fp, char *wan_if, char *logaccept, char *logdrop)
+ 	icmp_ptr[0] = 0;
+ 	foreach(icmp_ptr, nvram_safe_get("filter_lw_icmp_x"), icmplist) {
+ 		if (*icmp_ptr) {
++#if defined(R3P_CUSTOM)
++			/* The INPUT hook only processes marked TCP and UDP. */
++			fprintf(fp, "-A %s -p icmp --icmp-type %s -j %s\n", dtype, icmp_ptr, ftype);
++#else
+ 			fprintf(fp, "-A %s -o %s -p icmp --icmp-type %s -j %s\n",
+ 				dtype, wan_if, icmp_ptr, ftype);
++#endif
+ 			lw_items++;
+ 		}
+ 	}
+@@ -830,6 +836,7 @@ ipt_filter_rules(char *man_if, char *wan_if, char *lan_if, char *lan_ip,
+ 	// maclist chain
+ 	i_mac_filter = include_mac_filter(fp, i_mac_filter, logdrop);
+ 
++
+ 	// INPUT chain
+ 	dtype = "INPUT";
+ 
+@@ -837,6 +844,18 @@ ipt_filter_rules(char *man_if, char *wan_if, char *lan_if, char *lan_ip,
+ 	if (i_mac_filter > 0 && nvram_match("fw_mac_drop", "1"))
+ 		fprintf(fp, "-A %s -i %s -j %s\n", dtype, lan_if, IPT_CHAIN_NAME_MAC_LIST);
+ 
++#if defined(R3P_CUSTOM)
++	/* Intercepted traffic is routed to INPUT instead of FORWARD. */
++	if (i_mac_filter > 0 && !nvram_match("fw_mac_drop", "1"))
++		fprintf(fp, "-A INPUT -i %s -m mark --mark 0x400000/0x400000 -j %s\n", lan_if, IPT_CHAIN_NAME_MAC_LIST);
++	if (is_lwf_enabled) {
++		timematch[0] = 0;
++		timematch_conv(timematch, "filter_lw_date_x", "filter_lw_time_x");
++		fprintf(fp, "-A INPUT -i %s -m mark --mark 0x400000/0x400000 -m %s NEW%s -j %s\n",
++			lan_if, CT_STATE, timematch, IPT_CHAIN_NAME_LWF_LIST);
++	}
++#endif
++
+ 	/* Accept related connections, skip rest of checks */
+ 	fprintf(fp, "-A %s -m %s %s -j %s\n", dtype, CT_STATE, "ESTABLISHED,RELATED", "ACCEPT");
+ 
+@@ -1402,6 +1421,11 @@ ip6t_filter_rules(char *man_if, char *wan_if, char *lan_if,
+ 	// maclist chain
+ 	i_mac_filter = include_mac_filter(fp, i_mac_filter, logdrop);
+ 
++#if defined(R3P_CUSTOM)
++	if (i_mac_filter > 0 && !nvram_match("fw_mac_drop", "1"))
++		fprintf(fp, "-A INPUT -i %s -m mark --mark 0x400000/0x400000 -j %s\n", lan_if, IPT_CHAIN_NAME_MAC_LIST);
++#endif
++
+ 	// INPUT chain (accept_source_route=0 by default, no needed drop RH0 packet)
+ 	dtype = "INPUT";
+ 
+@@ -2203,6 +2227,11 @@ start_firewall_ex(void)
+ 	if (check_if_file_exist(opt_iptables_script))
+ 		doSystem("%s update", opt_iptables_script);
+ 
++#if defined(R3P_CUSTOM)
++	if (access("/tmp/r3p/proxy.active", F_OK) == 0)
++		eval("/sbin/r3p-firewall.sh");
++#endif
++
+ 	/* enable IPv4 forward */
+ 	set_ipv4_forward(1);
+ 
+diff --git a/trunk/user/rc/net.c b/trunk/user/rc/net.c
+index 1ab2b56c8..8412152f9 100644
+--- a/trunk/user/rc/net.c
++++ b/trunk/user/rc/net.c
+@@ -237,6 +237,9 @@ stop_udpxy(void)
+ void
+ start_udpxy(char *wan_ifname)
+ {
++#if defined(R3P_CUSTOM)
++	return;
++#endif
+ 	if (nvram_get_int("udpxy_enable_x") < 1024)
+ 		return;
+ 
+@@ -396,6 +399,9 @@ stop_igmpproxy(char *wan_ifname)
+ void
+ start_igmpproxy(char *wan_ifname)
+ {
++#if defined(R3P_CUSTOM)
++	return;
++#endif
+ 	FILE *fp;
+ 	char *igmpproxy_conf = "/etc/igmpproxy.conf";
+ 	char *altnet, *altnet_mask, *viptv_iflast;
+@@ -563,6 +569,11 @@ is_hwnat_allow(void)
+ 
+ 	int hw_nat_mode = nvram_get_int("hw_nat_mode");
+ 
++#if defined(R3P_CUSTOM)
++	if (access("/tmp/r3p/proxy.active", F_OK) == 0)
++		return 0;
++#endif
++
+ 	if (sw_mode != 1 && sw_mode != 4)
+ 		return result;
+ 
+@@ -776,6 +787,10 @@ reload_nat_modules(void)
+ #if defined (USE_SFE)
+ 	int sfe_enable = nvram_get_int("sfe_enable");
+ 	int sfe_loaded = is_module_loaded("fast_classifier");
++#if defined(R3P_CUSTOM)
++	if (access("/tmp/r3p/proxy.active", F_OK) == 0)
++		sfe_enable = 0;
++#endif
+ 
+ 	if (sfe_loaded && !sfe_enable) {
+ 		module_smart_unload("fast_classifier", 1);
+diff --git a/trunk/user/rc/net6.c b/trunk/user/rc/net6.c
+index 9f408129f..6bd0c31f7 100644
+--- a/trunk/user/rc/net6.c
++++ b/trunk/user/rc/net6.c
+@@ -58,6 +58,10 @@ void control_if_ipv6_all(int enable)
+ 		for (i=0; if6_off[i] != NULL; i++)
+ 			set_interface_conf_int("ipv6", if6_off[i], "disable_ipv6", 1);
+ 		
++#if defined(R3P_CUSTOM)
++		/* Keep the IPv6 proxy listener available without advertising IPv6 on LAN. */
++		set_interface_conf_int("ipv6", "lo", "disable_ipv6", 0);
++#endif
+ 		for (i=0; rad_off[i] != NULL; i++) {
+ 			set_interface_conf_int("ipv6", rad_off[i], "accept_ra", 0);
+ 			set_interface_conf_int("ipv6", rad_off[i], "accept_ra_pinfo", 0);
+diff --git a/trunk/user/rc/rc.c b/trunk/user/rc/rc.c
+index f7dea7508..8662eacd9 100644
+--- a/trunk/user/rc/rc.c
++++ b/trunk/user/rc/rc.c
+@@ -860,6 +860,21 @@ init_router(void)
+ 	get_eeprom_params();
+ 
+ 	nvram_convert_misc_values();
++#if defined(R3P_CUSTOM)
++	/* Clear options from restored settings for services absent from this image. */
++	{
++		const char *const disabled[] = {
++			"vpnc_enable", "vpns_enable", "url_enable_x", "mr_enable_x",
++			"udpxy_enable_x", "udpxy_wopen", "viptv_mode", "vlan_vid_iptv", "wan_stb_x",
++			"telnetd", "adsc_enable", "lltd_enable", "usb_opt_start",
++			"misc_http_x", "https_wopen", "sshd_wopen", "rstats_stored",
++			NULL
++		};
++		int i;
++		for (i = 0; disabled[i]; i++)
++			nvram_set_int(disabled[i], 0);
++	}
++#endif
+ 
+ 	init_gpio_leds_buttons();
+ 
+@@ -1793,6 +1808,16 @@ main(int argc, char **argv)
+ 	else if (!strcmp(base, "restart_networkmap")) {
+ 		restart_networkmap();
+ 	}
++#if defined(R3P_CUSTOM)
++	else if (!strcmp(base, "r3p-net-reload")) {
++		reload_nat_modules();
++		if (get_ap_mode() || access("/tmp/r3p/proxy.active", F_OK) != 0)
++			eval("/sbin/r3p-firewall.sh");
++		if (!get_ap_mode())
++			restart_firewall();
++		return restart_dhcpd();
++	}
++#endif
+ 	else if (!strcmp(base, "restart_firewall")) {
+ 		restart_firewall();
+ 	}
+diff --git a/trunk/user/rc/services.c b/trunk/user/rc/services.c
+index b3314f8c9..edc010530 100644
+--- a/trunk/user/rc/services.c
++++ b/trunk/user/rc/services.c
+@@ -88,6 +88,9 @@ stop_infosvr(void)
+ int
+ start_infosvr(void)
+ {
++#if defined(R3P_CUSTOM)
++	return 1;
++#endif
+ 	if (nvram_invmatch("adsc_enable", "1"))
+ 		return 1;
+ 
+@@ -170,6 +173,9 @@ stop_telnetd(void)
+ void
+ run_telnetd(void)
+ {
++#if defined(R3P_CUSTOM)
++	return;
++#endif
+ 	stop_telnetd();
+ 
+ 	eval("telnetd");
+@@ -178,6 +184,9 @@ run_telnetd(void)
+ void
+ start_telnetd(void)
+ {
++#if defined(R3P_CUSTOM)
++	return;
++#endif
+ 	if (nvram_match("telnetd", "1"))
+ 		eval("telnetd");
+ }
+@@ -504,6 +513,9 @@ restart_rstats(void)
+ int
+ start_lltd(void)
+ {
++#if defined(R3P_CUSTOM)
++	return 1;
++#endif
+ 	if (nvram_invmatch("lltd_enable", "1"))
+ 		return 1;
+ 
+@@ -576,7 +588,15 @@ start_services_once(int is_ap_mode)
+ 	start_8021x_wl();
+ 	start_8021x_rt();
+ 	start_httpd(0);
++#if defined(R3P_CUSTOM)
++	{
++		pid_t pid;
++		char *const args[] = { "/usr/sbin/r3p-service", NULL };
++		_eval(args, NULL, 0, &pid);
++	}
++#else
+ 	start_telnetd();
++#endif
+ #if defined(APP_SSHD)
+ 	start_sshd();
+ #endif
+@@ -630,7 +650,11 @@ void
+ stop_services(int stopall)
+ {
+ 	if (stopall) {
++#if defined(R3P_CUSTOM)
++		eval("killall", "r3p-service");
++#else
+ 		stop_telnetd();
++#endif
+ #if defined (APP_SSHD)
+ 		stop_sshd();
+ #endif
+diff --git a/trunk/user/rc/services_ex.c b/trunk/user/rc/services_ex.c
+index f5169bf14..a558290eb 100644
+--- a/trunk/user/rc/services_ex.c
++++ b/trunk/user/rc/services_ex.c
+@@ -498,6 +498,13 @@ start_dns_dhcpd(int is_ap_mode)
+ 	fprintf(fp, "tftp-no-fail\n");
+ #endif
+ 
++#if defined(R3P_CUSTOM)
++	if (!is_ap_mode && access("/tmp/r3p/proxy.ready", F_OK) == 0) {
++		fprintf(fp, "no-resolv\nserver=127.0.0.1#17853\n");
++		if (strlen(domain) > 0)
++			fprintf(fp, "local=/%s/\n", domain);
++	}
++#endif
+ 	fprintf(fp, "conf-file=%s/dnsmasq.conf\n", storage_dir);
+ 	fclose(fp);
+ 
+diff --git a/trunk/user/rc/services_stor.c b/trunk/user/rc/services_stor.c
+index db1f557f6..058d55040 100644
+--- a/trunk/user/rc/services_stor.c
++++ b/trunk/user/rc/services_stor.c
+@@ -1289,7 +1289,8 @@ umount_dev(const char *dev_name, int is_root_dev)
+ 			}
+ #endif
+ 			if (is_our_dev) {
+-				eval("/usr/bin/opt-umount.sh", devname, mpname);
++				if (access("/usr/bin/opt-umount.sh", X_OK) == 0)
++					eval("/usr/bin/opt-umount.sh", devname, mpname);
+ 				umount(mpname);
+ 				rmdir(mpname);
+ 				if (!is_root_dev)
+@@ -1357,6 +1358,9 @@ void
+ stop_stor_apps(void)
+ {
+ 	int need_restart_fw = 0;
++#if defined(R3P_CUSTOM)
++	eval("/usr/sbin/r3p-service", "local", "dav-stop");
++#endif
+ 
+ #if defined (APP_NFSD)
+ 	stop_nfsd();
+@@ -1392,6 +1396,9 @@ void
+ start_stor_apps(void)
+ {
+ 	int need_restart_fw = 0;
++#if defined(R3P_CUSTOM)
++	eval("/usr/sbin/r3p-service", "local", "dav-restart");
++#endif
+ 
+ #if defined (APP_FTPD)
+ 	run_ftp();
+@@ -1429,7 +1436,7 @@ try_start_stor_apps(void)
+ 	// start apps if needed
+ 	if (count_stor_mountpoint()) {
+ 		start_stor_apps();
+-		if (nvram_get_int("usb_opt_start"))
++		if (access("/usr/bin/opt-start.sh", X_OK) == 0 && nvram_get_int("usb_opt_start"))
+ 			system("/usr/bin/opt-start.sh &");
+ 	}
+ }
+diff --git a/trunk/user/rc/vpn_client.c b/trunk/user/rc/vpn_client.c
+index 5dcebf26b..252170ee4 100644
+--- a/trunk/user/rc/vpn_client.c
++++ b/trunk/user/rc/vpn_client.c
+@@ -61,6 +61,9 @@ get_xl2tpd_vpnc_active(void)
+ int
+ start_vpn_client(void)
+ {
++#if defined(R3P_CUSTOM)
++	return 1;
++#endif
+ 	FILE *fp;
+ 	int i_type, i_mppe, i_auth;
+ 	char *vpnc_peer, *vpnc_opt, tmp[256];
+diff --git a/trunk/user/rc/vpn_server.c b/trunk/user/rc/vpn_server.c
+index b3ebb1c63..924020f4f 100644
+--- a/trunk/user/rc/vpn_server.c
++++ b/trunk/user/rc/vpn_server.c
+@@ -159,6 +159,9 @@ gen_vpns_pppd_options(int vpns_type)
+ int
+ start_vpn_server(void)
+ {
++#if defined(R3P_CUSTOM)
++	return 1;
++#endif
+ 	FILE *fp;
+ 	int i, i_type, i_vuse;
+ 	char *vpns_cfg = "/etc/pptpd.conf";
+diff --git a/trunk/user/scripts/Makefile b/trunk/user/scripts/Makefile
+index 11b7a9c07..a313d7b72 100644
+--- a/trunk/user/scripts/Makefile
++++ b/trunk/user/scripts/Makefile
+@@ -8,6 +8,9 @@ romfs:
+ 	$(ROMFSINST) /sbin/dev_init.sh
+ 	$(ROMFSINST) /sbin/reset_ss.sh
+ 	$(ROMFSINST) /sbin/mtd_storage.sh
++ifeq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
++	$(ROMFSINST) /sbin/r3p-firewall.sh
++endif
+ ifeq ($(STORAGE_ENABLED),y)
+ 	$(ROMFSINST) /sbin/automount.sh
+ endif
+diff --git a/trunk/user/scripts/automount.sh b/trunk/user/scripts/automount.sh
+index a32fc702e..311ac7ae3 100755
+--- a/trunk/user/scripts/automount.sh
++++ b/trunk/user/scripts/automount.sh
+@@ -158,6 +158,6 @@ if [ -x /sbin/test_share ] ; then
+ fi
+ 
+ # call optware script
+-/usr/bin/opt-mount.sh "$dev_full" "$dev_mount"
++[ ! -x /usr/bin/opt-mount.sh ] || /usr/bin/opt-mount.sh "$dev_full" "$dev_mount"
+ 
+ exit 0
+diff --git a/trunk/user/scripts/dev_init.sh b/trunk/user/scripts/dev_init.sh
+index d174734c1..ee2d83d7f 100755
+--- a/trunk/user/scripts/dev_init.sh
++++ b/trunk/user/scripts/dev_init.sh
+@@ -50,6 +50,10 @@ mkdir -p -m 700 /home/root
+ mkdir -p -m 700 /home/root/.ssh
+ mkdir -p -m 755 /etc/storage
+ mkdir -p -m 755 /etc/ssl
++if [ -f /etc_ro/ssl/certs/ca-certificates.crt ]; then
++	mkdir -p -m 755 /etc/ssl/certs
++	ln -sf /etc_ro/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
++fi
+ mkdir -p -m 755 /etc/Wireless
+ mkdir -p -m 750 /etc/Wireless/RT2860
+ mkdir -p -m 750 /etc/Wireless/iNIC
+diff --git a/trunk/user/shared/cflags.mk b/trunk/user/shared/cflags.mk
+index 7d29e149f..a7d9dec30 100644
+--- a/trunk/user/shared/cflags.mk
++++ b/trunk/user/shared/cflags.mk
+@@ -3,6 +3,10 @@
+ # Linux kernel .config related params
+ ##################################################################
+ 
++ifeq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
++CFLAGS += -DR3P_CUSTOM
++endif
++
+ CFLAGS += $(if $(CONFIG_SMP),-DUSE_SMP,)
+ CFLAGS += $(if $(CONFIG_IPV6),-DUSE_IPV6,)
+ CFLAGS += $(if $(CONFIG_XFRM),-DUSE_XFRM,)
+diff --git a/trunk/user/www/Makefile b/trunk/user/www/Makefile
+index d8b817d3c..77bd53f97 100644
+--- a/trunk/user/www/Makefile
++++ b/trunk/user/www/Makefile
+@@ -24,6 +24,11 @@ romfs:
+ 	echo "Make www romfs"
+ 	rm -Rf $(ROMFS_DIR)/www
+ 	cp -R $(WEBUI_NAME) $(ROMFS_DIR)/www
++ifeq ($(CONFIG_FIRMWARE_R3P_CUSTOM),y)
++	rm -f $(addprefix $(ROMFS_DIR)/www/,Advanced_IPTV_Content.asp Advanced_URLFilter_Content.asp Advanced_AiDisk_ftp.asp Advanced_Printer_others.asp Advanced_Console_Content.asp Main_TrafficMonitor_daily.asp vpncli.asp vpnsrv.asp)
++else
++	rm -f $(addprefix $(ROMFS_DIR)/www/,R3P.asp r3p.css r3p.js)
++endif
+ 	rm -f $(ROMFS_DIR)/www/httpd_check.htm
+ 	echo "ASUSTeK" > $(ROMFS_DIR)/www/httpd_check.htm
+ 	cd $(ROMFS_DIR)/www && ln -sf /opt/share/www/custom custom
+diff --git a/trunk/user/www/n56u_ribbon_fixed/state.js b/trunk/user/www/n56u_ribbon_fixed/state.js
+index 35e60c4a3..5e02e481e 100644
+--- a/trunk/user/www/n56u_ribbon_fixed/state.js
++++ b/trunk/user/www/n56u_ribbon_fixed/state.js
+@@ -473,6 +473,44 @@ menuL1_title = new Array("", "<#menu1#>", "", "", "", "<#menu4#>", "<#menu5_8#>"
+ menuL1_link = new Array("", "index.asp", "", "", "", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
+ menuL1_icon = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-tasks", "icon-random", "icon-wrench");
+ 
++var r3pCustom = (typeof r3p_firmware === "function" && r3p_firmware());
++
++function r3pRemovedPage(link) {
++	return /^(Advanced_(IPTV_Content|URLFilter_Content|AiDisk_ftp|Printer_others|Console_Content)|Main_TrafficMonitor_daily)\.asp$/.test(link);
++}
++
++function r3pNavigation() {
++	var links = [
++		["首页", "index.asp", "icon-home"],
++		["网络", "R3P.asp#network", "icon-globe"],
++		["应用", "R3P.asp#apps", "icon-hdd"],
++		["系统", "R3P.asp#system", "icon-wrench"]
++	];
++	$("mainMenu").innerHTML = links.map(function (entry) {
++		return '<li><a href="/' + entry[1] + '"><i class="' + entry[2] + '"></i>&nbsp;&nbsp;' + entry[0] + '</a></li>';
++	}).join("");
++	$("subMenu").innerHTML = "";
++	var rstatsStorage = document.querySelector('[name="rstats_stored_fake"]');
++	if (rstatsStorage) {
++		rstatsStorage.value = "0";
++		rstatsStorage.closest("tr").style.display = "none";
++	}
++	var hiddenIds = ["telnetd_fake", "lltd_enable_fake", "adsc_enable_fake", "misc_http_x_fake",
++		"https_wopen_fake", "sshd_wopen_fake", "udpxy_wopen_fake"];
++	for (var i = 0; i < hiddenIds.length; i++) {
++		var control = document.getElementById(hiddenIds[i]);
++		if (!control) continue;
++		while (control && control.tagName !== "TR") control = control.parentNode;
++		if (control) control.style.display = "none";
++	}
++	document.querySelectorAll("a[href]").forEach(function (link) {
++		var path = link.pathname.split("/").pop();
++		if (r3pRemovedPage(path) || path === "vpncli.asp" || path === "vpnsrv.asp") {
++			link.style.display = "none";
++		}
++	});
++}
++
+ function show_menu(L1, L2, L3){
+ 	var i;
+ 	var num_ephy = support_num_ephy();
+@@ -587,11 +625,12 @@ function show_menu(L1, L2, L3){
+ 			menu2_code += '<a href="'+menuL2_link[i]+'"><i class="icon-minus"></i>&nbsp;&nbsp;'+menuL2_title[i]+'</a>\n';
+ 	}
+ 	$("subMenu").innerHTML = menu2_code;
++	if (r3pCustom) r3pNavigation();
+ 
+ 	if(L3){
+ 		tab_code = '<ul class="nav nav-tabs" style="margin-bottom: 0px;">\n';
+ 		for(var i = 1; i < tabtitle[L2-1].length; ++i){
+-			if(tabtitle[L2-1][i] == "")
++			if(tabtitle[L2-1][i] == "" || (r3pCustom && r3pRemovedPage(tablink[L2-1][i])))
+ 				continue;
+ 			if(L3 == i){
+ 				tab_ref = "javascript: void(0)";
